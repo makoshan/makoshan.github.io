@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>智能合约交易的漏洞，GNT 差点损失 1000万美元 &mdash; 以太周报</title>
+    <link rel="stylesheet" href="/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="/assets/css/components/collection.css">
+    <link rel="stylesheet" href="/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="/assets/css/globals/common.css">
+    <link rel="stylesheet" href="/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="http://localhost:4000/2015/12/19/vim-markdown-toc/">
+    <link rel="alternate" type="application/atom+xml" title="以太周报" href="/feed.xml">
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <meta property="og:title" content="智能合约交易的漏洞，GNT 差点损失 1000万美元">
+      
+    <meta name="keywords" content="以太坊">
+    <meta name="og:keywords" content="以太坊">
+      
+    <meta name="description" content="两周前，一位Golem爱好者和GNT持有者报告了一个奇怪的GNT交易bug。 在调查了与交易相关的数据后，我们发现在数字货币交易所的数据交换方式出现了问题。 “哦不，”我们想，“这个bug可能会导致清空数字货币交易所里的整个GNT帐号”！而且可怕的是有相当多的代币存储在那里！">
+    <meta name="og:description" content="两周前，一位Golem爱好者和GNT持有者报告了一个奇怪的GNT交易bug。 在调查了与交易相关的数据后，我们发现在数字货币交易所的数据交换方式出现了问题。 “哦不，”我们想，“这个bug可能会导致清空数字货币交易所里的整个GNT帐号”！而且可怕的是有相当多的代币存储在那里！">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="http://localhost:4000/2015/12/19/vim-markdown-toc/">
+    <meta property="og:site_name" content="以太周报">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2015-12-19">
+    
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.js"></script>
+    <script type="text/javascript">
+    function toggleMenu() {
+        var nav = document.getElementsByClassName("site-header-nav")[0];
+        if (nav.style.display == "inline-flex") {
+          nav.style.display = "none";
+        } else {
+          nav.style.display = "inline-flex";
+        }
+    }
+    </script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="/" title="以太周报"><span class="octicon octicon-mark-github"></span> 以太周报</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="/wiki/" class=" site-header-nav-item" target="" title="维基">维基</a>
+                
+                <a href="/links/" class=" site-header-nav-item" target="" title="链接">链接</a>
+                
+                <a href="/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="智能合约交易的漏洞，GNT 差">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">智能合约交易的漏洞，GNT 差点损失 1000万美元</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2015/12/19
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="/categories/#bug" title="bug">bug</a>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+<div class="columns">
+  <div class="column" >
+    <article class="article-content markdown-body">
+    <p>两周前，一位Golem爱好者和GNT持有者报告了一个奇怪的GNT交易bug。 在调查了与交易相关的数据后，我们发现在数字货币交易所的数据交换方式出现了问题。 “哦不，”我们想，“这个bug可能会导致清空数字货币交易所里的整个GNT帐号”！而且可怕的是有相当多的代币存储在那里！</p>
+
+<p>这个bug确实是在数字货币交易所产生的错误，但它也与以太坊智能合约在交易中输入数据的方式，以及Solidity ABI等有关（例如Solidity智能合约的编码方法和解码参数方法）。 所以，它不仅仅适用于GNT，也适用于所有 ERC20 代币以及其他具有转账方法的智能合约。 是的，你没有听错：如果把提款管理方法与GNT管理方法变成一样，那么可能对所有在交易上列出的，和所有基于以太坊的代币都会造成影响。我们们不知道具体事例是不是这样，但很可能是我们猜想的那样。</p>
+
+<h3 id="以太坊智能合约abi">以太坊智能合约ABI</h3>
+<p>原始的以太坊智能合约是没有 <code class="highlighter-rouge">Method</code> 和 <code class="highlighter-rouge">Function</code>。Method 是高级语言（如Solidity）的特征，他们使用智能合约  ABI 来指定智能合约的字节代码将其划分 Method ，以及如何在交易输入数据中编码不同类型的参数。
+<a href="https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI">更多详情请看这里</a>
+要使用GNT智能合约的 transfer(address a, uint v) 方法将1 个 GNT 代币转账到地址0xabcabcabcabcabcabcabcabcabcabcabcabcabcabca，需要包括3条数据：</p>
+<ol>
+  <li>4 bytes 作为方法id：a9059cbb</li>
+  <li>32 bytes，转账地址（20 bytes），其余用零填满：</li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>000000000000000000000000abcabcabcabcabcabcabcabcabcabcabcabcabca
+</code></pre>
+</div>
+<ol>
+  <li>32 bytes 转账代币数量， 1 * 10¹⁸ GNT：00000000000000000000000000000000000000000000000000000de0b6b3a7640000
+因此，完整的交易将如下所示：</li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>a9059cbb000000000000000000000000abcabcabcabcabcabcabcabcabcabcabcabcabca00
+000000000000000000000000000000000000000000000000000de0b6b3a7640000。
+</code></pre>
+</div>
+
+<h3 id="交易中输入数据是无限的">交易中输入数据是无限的</h3>
+<p>这是以太坊虚拟机的更复杂的一个方面，但是完全理解这个问题至关重要。EVM可以使用 CALLDATALOAD 操作码读取任何给定的偏移值的字节。如果交易发起者在交易中未提供偏移值，则EVM 默认设置偏移值为零。同时，合约能够使用 CALLDATASIZE 操作码检查提供的交易 input data 的实际长度。</p>
+
+<h3 id="错误">错误</h3>
+
+<p>准备代币转账的服务器假设用户输入20 bytes 的地址，但是实际上没有检查地址的长度。上述转账操作中，用户填写了一个较短长度的无效地址：79735。由于地址参数占用了14.5 bytes（填充零12 bytes + 4.5 bytes 用户输入字节），所以导致数据格式错误。准确地说，交易数据对于以太坊平台来说是很适用的，因为除了每个字节的费用它不关心交易中包含的数据。</p>
+
+<p>GNT 智能合约没有执行将代币转账的唯一原因是交易中金额非常高（高于总供应量，也高于相关地址的余额）。用户在使用这样一个短字符串的地址中，地址的所有者真的非常幸运：如果有一些坏运气，用户将会顺便清空所有 GNT 的地址，并将它们发送到一些随机地址。这时我们意识到这个问题也可以用于攻击，并且问题非常严重。</p>
+<h3 id="可能的攻击">可能的攻击</h3>
+<p>您可能已经注意到，允许用户输入较短的转账地址会将“要转账的代币数量”值向左移动，从而使该值更大。 在地址结尾的零处找到一个以太坊地址的私钥也很容易，例如。 0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa0000。因此，该地址所有者可以在服务器接口中输入0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa（跳过零）。 然后，攻击者通过服务器转一些代币，把错误地址插入进去。 这实际上会导致一个转账金额偏移 16 bits，即65536倍的转账到攻击者的以太坊帐户！</p>
+<h3 id="我们做了什么">我们做了什么？</h3>
+<p>确定可能的攻击后，我们们联系了数字货币交易所，并通知他们有关该错误。这是一个惊人的困难和烦人的过程;我们的 CEO Julian 打电话给客服，他的代表不想听，并继续大声说，并不是他的业务错误，拒绝听从任何我们的建议。最后，经过几个小时之后，Alex 设法将我们的建议提交到CEO级别的大佬那里，然后我们的建议就通过了。一旦我们听到关于错误已经修复的确切消息，我们就会去其他数字货币交易所。虽然我们没有理由认为交易所是脆弱易受攻击，但我们也没有理由认为他们很强壮能够抵抗攻击。虽然我们不得不承认我们还没有测试过其他数字货币交易所和其他代币，但是我们意识到如果有人利用这个错误应用在多个数字货币交易所的代币上，造成的后果会让我们感到震惊甚至是害怕：整个以太坊代币经济和其生态系统会受到极其大的打击，甚至倒退回多年以前。</p>
+
+<h3 id="以太坊应该做些什么">以太坊应该做些什么？</h3>
+<p>虽然我们认为，以太坊开发人员在教育公众关于以太坊是如何实际工作的方面上很难再加把劲，但我们会建议在以后“Solidity”的版本中增加一些检查功能，例如验证交易输入数据长度是否符合给定智能合约方法的预期数据。</p>
+
+<h3 id="数字货币交易所应该绝对要做的是什么">数字货币交易所应该绝对要做的是什么？</h3>
+<ol>
+  <li>验证用户输入尽可能严格。 只需检查用户提供的地址的长度，就可以保护用户不受以上攻击。 此外，验证可用以太坊地址校验（见EIP55），如果可以甚至只使用校验的接收地址。 这既增加了安全性又增加了用户友好性。</li>
+  <li>确保交易数据已正确编码。</li>
+  <li>生成的交易数据也可能被解析，所以需要根据给定的用户输入进行检查。</li>
+  <li>检查gas，gas price 和生成交易的目的地址等其他参数是否符合预期值。</li>
+</ol>
+
+<p>原文：<a href="https://blog.golemproject.net/how-to-find-10m-by-just-reading-blockchain-6ae9d39fcd95">https://blog.golemproject.net/how-to-find-10m-by-just-reading-blockchain-6ae9d39fcd95</a></p>
+
+    
+
+    </article>
+  
+    <div class="comment">
+      
+  
+      
+        <a href="#" class="show_disqus_comment" onclick="return false;">Show Disqus Comments</a>		
+        <div id="disqus_thread"></div>		
+        <script>		
+        var disqus_config = function () {		
+            this.page.url = 'http://localhost:4000/2015/12/19/vim-markdown-toc/';		
+            this.page.identifier = '/2015/12/19/vim-markdown-toc/';		
+            this.page.title = '智能合约交易的漏洞，GNT 差点损失 1000万美元';		
+        };		
+        var disqus_loaded = false;		
+        $(function() {		
+            $('.show_disqus_comment').on('click', function() { // DON'T EDIT BELOW THIS LINE		
+                $(this).html('加载中...');		
+                var that = this;		
+                if (!disqus_loaded) {		
+                    var d = document, s = d.createElement('script');		
+
+                    s.type = 'text/javascript';		
+                    s.async = true;		
+                    var shortname = 'opencaching';		
+
+                    s.src = '//' + shortname + '.disqus.com/embed.js';		
+
+                    s.setAttribute('data-timestamp', +new Date());		
+                    (d.head || d.body).appendChild(s);		
+
+                    disqus_loaded = true;		
+                }		
+                $(that).remove();		
+            })		
+        })		
+        </script>		
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>		
+      
+      
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+      <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+      <script>
+      var cloudTieConfig = {
+          url: "", 
+          sourceId: "/2015/12/19/vim-markdown-toc/",
+          productKey: "opencaching",
+          target: "cloud-tie-wrapper"
+      };
+      var yunManualLoad = true;
+      Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+      </script>
+    
+  
+
+
+    </div>
+  </div>
+</div>
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2017
+                    <span title="Mako Shan">Mako Shan</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
+            </ul>
+            <a href="http://github.com/makoshan/makoshan.github.io" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="/wiki/" title="维基" target="">维基</a>
+                </li>
+                
+                <li>
+                    <a href="/links/" title="链接" target="">链接</a>
+                </li>
+                
+                <li>
+                    <a href="/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <!-- / footer -->
+    <script src="/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="/assets/js/geopattern.js"></script>
+    <script src="/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+    
+    <div style="display:none">
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'opencaching', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+    
+</body>
+</html>
