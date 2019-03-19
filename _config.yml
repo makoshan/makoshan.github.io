@@ -4,8 +4,8 @@
 baseurl:
 url: http://blog.opencaching.org.cn/
 date_format: "ordinal"
-title: 以太周报
-subtitle: "汇聚每周以太坊社区热点"
+title: 加密游民
+subtitle: "汇聚加密游民社区热点"
 description: "ethweekly"
 keywords: ethweekly, ethereum
 favicon: /favicon.ico
