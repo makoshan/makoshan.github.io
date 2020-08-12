@@ -4,7 +4,7 @@ $(function() {
 });
 
 async function main() {
-    print_warning();
+    // print_warning();
 
 
     const stakingTokenAddr = LINK_TOKEN_ADDR;

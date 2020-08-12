@@ -4,7 +4,7 @@ $(function() {
 });
 
 async function main() {
-    print_warning();
+    // print_warning();
 
     const stakingTokenAddr = YAM_YCRV_UNI_TOKEN_ADDR;
     const stakingTokenTicker = "UNIV2";

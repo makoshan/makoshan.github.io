@@ -4,7 +4,7 @@ $(function() {
 });
 
 async function main() {
-    print_warning();
+    // print_warning();
 
 
     const stakingToken = WETH_TOKEN_ADDR;
