@@ -1,0 +1,97 @@
+<div class="sourceCode" id="cb1"><pre class="sourceCode Haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#!/usr/bin/env runhaskell</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ot">{-# LANGUAGE OverloadedStrings #-}</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- dependencies: libghc-pandoc-dev</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- usage: &#39;lost-columns.hs [file]&#39;; reads a Pandoc Markdown (or Pandoc-generated-HTML) file and looks for &#39;skinny tall&#39; lists which are better rendered</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">-- as multiple columns (supported on gwern.net by special CSS triggered by &#39;&lt;div class=&quot;columns&quot;&gt;&lt;/div&gt;&#39; wrappers).</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">--</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">-- A skinny tall list is defined as a list which is at least 8 items long (so you get at least 2×4 columns—a 2×2 square or 2×3 rectangle looks dumb),</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">-- and where the individual lines are all &lt;75 characters wide (&gt;half the width of a gwern.net line at the utmost).</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">--</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">-- If a file already has the string &#39;&lt;div class=&quot;columns&quot;&#39; in it, it will be presumed to have been manually checked &amp; all skinny lists correctly annotated, and skipped to avoid unnecessary reporting of false-positives.</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> <span class="dt">Columns</span> (listsTooLong, main, simplified, simplifiedDoc) <span class="kw">where</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Text.Pandoc</span> <span class="co">-- (def, nullMeta, queryWith, readerExtensions, readHtml, readMarkdown, runPure,</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                   <span class="co">--  pandocExtensions, writePlain, Block(BulletList, OrderedList), Pandoc(Pandoc))</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Data.List</span> (isSuffixOf)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Data.Text</span> <span class="kw">as</span> <span class="dt">T</span> (isInfixOf, length, unlines, <span class="dt">Text</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Data.Text.IO</span> <span class="kw">as</span> <span class="dt">TIO</span> (readFile, putStrLn)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">System.Environment</span> (getArgs)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Control.Monad</span> (when, unless)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">-- | Map over the filenames</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ot">main ::</span> <span class="dt">IO</span> ()</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>main <span class="ot">=</span> <span class="kw">do</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  fs <span class="ot">&lt;-</span> getArgs</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> printfilenamep <span class="ot">=</span> <span class="fu">head</span> fs <span class="op">==</span> <span class="st">&quot;--print-filenames&quot;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> fs&#39; <span class="ot">=</span> <span class="kw">if</span> printfilenamep <span class="kw">then</span> Prelude.drop <span class="dv">1</span> fs <span class="kw">else</span> fs</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mapM_</span> (printLists printfilenamep) fs&#39;</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ot">printLists ::</span> <span class="dt">Bool</span> <span class="ot">-&gt;</span> <span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> ()</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>printLists printfilenamep file <span class="ot">=</span> <span class="kw">do</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  input <span class="ot">&lt;-</span> TIO.readFile file</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> preexisting <span class="ot">=</span> T.isInfixOf <span class="st">&quot;&lt;div class=\&quot;columns&quot;</span> input</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  unless preexisting <span class="op">$</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="kw">do</span> <span class="kw">let</span> long <span class="ot">=</span> getLongLists (<span class="st">&quot;.html&quot;</span><span class="ot">`isSuffixOf`</span>file) input</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>       unless (<span class="fu">null</span> long) <span class="op">$</span> <span class="kw">do</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>         when printfilenamep <span class="op">$</span> <span class="fu">putStrLn</span> <span class="op">$</span> file <span class="op">++</span> <span class="st">&quot;:&quot;</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>         TIO.putStrLn <span class="op">$</span> T.unlines <span class="op">$</span> <span class="fu">map</span> simplified long</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>listLengthMax,<span class="ot"> sublistsLengthMin ::</span> <span class="dt">Int</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>listLengthMax <span class="ot">=</span> <span class="dv">75</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>sublistsLengthMin <span class="ot">=</span> <span class="dv">8</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ot">getLongLists ::</span> <span class="dt">Bool</span> <span class="ot">-&gt;</span> <span class="dt">T.Text</span> <span class="ot">-&gt;</span> [<span class="dt">Block</span>]</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>getLongLists htmlp txt <span class="ot">=</span> <span class="kw">let</span> parsedEither <span class="ot">=</span> <span class="kw">if</span> htmlp <span class="kw">then</span> runPure <span class="op">$</span> readHtml def{readerExtensions <span class="ot">=</span> pandocExtensions } txt <span class="kw">else</span> runPure <span class="op">$</span> readMarkdown def{readerExtensions <span class="ot">=</span> pandocExtensions } txt</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>                        <span class="co">-- if we don&#39;t explicitly enable footnotes, Pandoc interprets the footnotes as broken links, which throws many spurious warnings to stdout</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>                   <span class="kw">in</span> <span class="kw">case</span> parsedEither <span class="kw">of</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>                              <span class="dt">Left</span> _ <span class="ot">-&gt;</span> []</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>                              <span class="dt">Right</span> (<span class="dt">Pandoc</span> _ pnd) <span class="ot">-&gt;</span> listsTooLong pnd</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ot">listsTooLong ::</span> [<span class="dt">Block</span>] <span class="ot">-&gt;</span> [<span class="dt">Block</span>]</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>listsTooLong ls <span class="ot">=</span> <span class="kw">let</span> lists <span class="ot">=</span> extractLists ls <span class="kw">in</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>                                             <span class="fu">filter</span> (\x <span class="ot">-&gt;</span> listLength x <span class="op">&lt;</span> listLengthMax) lists</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ot">extractLists ::</span> [<span class="dt">Block</span>] <span class="ot">-&gt;</span> [<span class="dt">Block</span>]</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>extractLists <span class="ot">=</span> queryWith extractList</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a> <span class="kw">where</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ot">   extractList ::</span> <span class="dt">Block</span> <span class="ot">-&gt;</span> [<span class="dt">Block</span>]</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>   extractList l<span class="op">@</span>(<span class="dt">OrderedList</span> _ _) <span class="ot">=</span> [l]</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>   extractList l<span class="op">@</span>(<span class="dt">BulletList</span> _) <span class="ot">=</span> [l]</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>   extractList _ <span class="ot">=</span> []</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="co">-- &gt; listLength $ BulletList [[Para [Str &quot;test&quot;]],[Para [Str &quot;test2&quot;],Para [Str &quot;Continuation&quot;]],[Para [Link (&quot;&quot;,[],[]) [Str &quot;WP&quot;] (&quot;https://en.wikipedia.org/wiki/Foo&quot;,&quot;&quot;)]],[Para [Str &quot;Final&quot;,Space,Str &quot;line&quot;]]]</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co">-- → 7</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ot">listLength ::</span> <span class="dt">Block</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>listLength (<span class="dt">OrderedList</span> _ list) <span class="ot">=</span> listLengthAvg list</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>listLength (<span class="dt">BulletList</span>    list) <span class="ot">=</span> listLengthAvg list</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>listLength _                    <span class="ot">=</span> <span class="fu">maxBound</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ot">listLengthAvg ::</span> [[<span class="dt">Block</span>]] <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>listLengthAvg list <span class="ot">=</span> <span class="kw">if</span> <span class="fu">length</span> list <span class="op">&lt;</span> sublistsLengthMin <span class="kw">then</span> <span class="fu">maxBound</span> <span class="kw">else</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>                       <span class="kw">let</span> lengths <span class="ot">=</span> <span class="fu">map</span> listItemLength list <span class="kw">in</span> <span class="fu">maximum</span> lengths</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="co">-- &gt; listItemLength $ [Para [Str &quot;Foo&quot;, Link nullAttr [Str &quot;bar&quot;] (&quot;https://en.wikipedia.org/wiki/Bar&quot;, &quot;Wikipedia link&quot;)], Para [Str &quot;Continued Line&quot;]]</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="co">-- → 15</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="co">-- &gt; listItemLength $ [Para [Str &quot;Foo&quot;, Link nullAttr [Str &quot;bar&quot;] (&quot;https://en.wikipedia.org/wiki/Bar&quot;, &quot;Wikipedia link&quot;)]]</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="co">-- → 7</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="co">-- &gt; listItemLength $ [Para [Str &quot;Continued Line&quot;]]</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="co">-- → 15</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ot">listItemLength ::</span> [<span class="dt">Block</span>] <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>listItemLength is <span class="ot">=</span> <span class="kw">let</span> lengths <span class="ot">=</span> <span class="fu">map</span> listSubItemLength is <span class="kw">in</span> <span class="fu">maximum</span> lengths</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="co">-- &gt; listSubItemLength $ Para [Str &quot;Foo&quot;]</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="co">-- → 4</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="co">-- &gt; listSubItemLength $ Para [Str &quot;Foo&quot;, Link nullAttr [Str &quot;bar&quot;] (&quot;https://en.wikipedia.org/wiki/Bar&quot;, &quot;Wikipedia link&quot;)]</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="co">-- → 7</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ot">listSubItemLength ::</span> <span class="dt">Block</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>listSubItemLength i <span class="ot">=</span> T.length <span class="op">$</span> simplified i</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="ot">simplified ::</span> <span class="dt">Block</span> <span class="ot">-&gt;</span> <span class="dt">T.Text</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>simplified i <span class="ot">=</span> simplifiedDoc (<span class="dt">Pandoc</span> nullMeta [i])</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ot">simplifiedDoc ::</span> <span class="dt">Pandoc</span> <span class="ot">-&gt;</span> <span class="dt">T.Text</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>simplifiedDoc p <span class="ot">=</span> <span class="kw">let</span> md <span class="ot">=</span> runPure <span class="op">$</span> writePlain def{writerColumns<span class="ot">=</span><span class="dv">100000</span>} p <span class="kw">in</span> <span class="co">-- </span><span class="al">NOTE</span><span class="co">: it is important to make columns ultra-wide to avoid formatting-newlines being inserted to break up lines mid-phrase, which would defeat matches in LinkAuto.hs.</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>                         <span class="kw">case</span> md <span class="kw">of</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>                           <span class="dt">Left</span> _ <span class="ot">-&gt;</span> <span class="fu">error</span> <span class="op">$</span> <span class="st">&quot;Failed to render: &quot;</span> <span class="op">++</span> <span class="fu">show</span> md</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>                           <span class="dt">Right</span> md&#39; <span class="ot">-&gt;</span> md&#39;</span></code></pre></div>

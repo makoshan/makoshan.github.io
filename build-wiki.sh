@@ -25,7 +25,7 @@ if ! [[ -n $(command -v ghc) && -n $(command -v git) && -n $(command -v rsync) &
           -n $(command -v tidy) && -n $(command -v linkchecker) && -n $(command -v du) && -n $(command -v rm) && -n $(command -v find) && \
           -n $(command -v fdupes) && -n $(command -v urlencode) && -n $(command -v sed) && -n $(command -v parallel) && -n $(command -v xargs) && \
           -n $(command -v file) && -n $(command -v exiftool) && -n $(command -v identify) && -n $(command -v pdftotext) && \
-          -n $(command -v /root/.nvm/versions/node/v8.11.2/lib/node_modules/mathjax-node-page/bin/mjpage) && -n $(command -v ./link-extractor.hs) && \
+          -n $(command -v /home/firday/.npm-global/lib/node_modules/mathjax-node-page/bin/mjpage) && -n $(command -v ./link-extractor.hs) && \
           -n $(command -v ./anchor-checker.php) && -n $(command -v php) && -n $(command -v ./generateDirectory.hs) && \
           -n $(command -v ./generateBacklinks.hs) ]] && \
        [ -z "$(pgrep hakyll)" ];
@@ -259,8 +259,8 @@ else
 
     # Sync:
     ## make sure nginx user can list all directories (x) and read all files (r)
-    chmod a+x $(find ./ -type d)
-    chmod --recursive a+r ./*
+    chmod a+x $(find ~/wiki/ -type d)
+    chmod --recursive a+r ~/wiki/*
 
     λ(){ find . -xtype l -printf 'Broken symbolic link: %p\n'; }
     wrap λ "Broken symbolic links"
@@ -399,7 +399,7 @@ else
 
     # Testing files, post-sync
     bold "Checking for file anomalies…"
-    λ(){ fdupes --quiet --sameline --size --nohidden $(find ./ -type d | egrep -v -e 'static' -e '.git' -e 'gwern/wiki/$' -e 'docs/www/' -e 'metadata/annotations/backlinks') | fgrep --invert-match -e 'bytes each' -e 'trimfill.png' ; }
+    λ(){ fdupes --quiet --sameline --size --nohidden $(find ~/wiki/ -type d | egrep -v -e 'static' -e '.git' -e 'gwern/wiki/$' -e 'docs/www/' -e 'metadata/annotations/backlinks') | fgrep --invert-match -e 'bytes each' -e 'trimfill.png' ; }
     wrap λ "Duplicate file check"
 
     λ() { find . -perm u=r -path '.git' -prune; }
@@ -488,7 +488,7 @@ else
     if [ $(date +"%d") == "1" ]; then
 
         bold "Checking all MIME types…"
-        PAGES=$(cd ./ && find . -type f -name "*.page" | sed -e 's/\.\///' -e 's/\.page$//' | sort)
+        PAGES=$(cd ~/wiki/ && find . -type f -name "*.page" | sed -e 's/\.\///' -e 's/\.page$//' | sort)
         c() { curl --compressed --silent --output /dev/null --head "$@"; }
         for PAGE in $PAGES; do
             MIME=$(c --max-redirs 0 --write-out '%{content_type}' "https://wiki.v2eth.com/$PAGE")

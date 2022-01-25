@@ -1,0 +1,54 @@
+<div class="sourceCode" id="cb1"><pre class="sourceCode Bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> <span class="at">-ex</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> env.sh</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Cleanup pre:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#rm --recursive --force -- ~/wiki/_cache/ ~/wiki/_site/ ./hakyll ./*.o ./*.hi || true</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Build:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">## gwern.net is big and Hakyll+Pandoc is slow, so it&#39;s worth the hassle of compiling an optimized version to build</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#ghc -Wall -optl-fuse-ld=gold -rtsopts -threaded -O2 --make hakyll.hs</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">#./hakyll build +RTS -N8 -RTS</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ex">cabal</span> v2-build wiki</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ex">cabal</span> v2-run wiki <span class="at">--</span> clean</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ex">cabal</span> v2-run wiki <span class="at">--</span> build</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#rm -f ./hakyll</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#ghc -Wall -optl-fuse-ld=gold -rtsopts -threaded -O2 --make hakyll.hs</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">#./hakyll build +RTS -N8 -RTS --verbose</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">## generate a sitemap file for search engines:</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">## possible alternative implementation in hakyll: https://www.rohanjain.in/hakyll-sitemap/</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ex">./sitemap.sh</span> <span class="op">&gt;</span> ./_site/sitemap.xml</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ./_site/sitemap.xml</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">## generate an rss feed</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ex">./feed.sh</span> <span class="op">&gt;</span> ./_site/feed.rss</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ./_site/feed.rss</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">## convert mathml</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ex">./build-mathjax.sh</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">#rm -- ./hakyll ./*.o ./*.hi || true</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Testing compilation results:</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co">## is there a sane number &amp; size of compiled files?</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co">#[ &quot;$(find ./_site/ -type f | wc --lines)&quot; -ge 10500 ]</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="co">#[ &quot;$(du --summarize --total --bytes ./_site/ | tail -1 | cut --field=1)&quot; -ge 15000000000 ]</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co">## Any stray interwiki links?</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="co">#find ./_site/ -type f -not -name &quot;*.page&quot; -exec grep --quiet -I . {} \; -print0 | xargs -0 -n 5000 fgrep -- &#39;(!Wikipedia)&#39; | sort | fgrep &#39;&lt;/&#39; | grep --color=always Wikipedia || true</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co">## do various files validate as HTML5?</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="co"># tidy -quiet -errors --doctype html5 ./_site/index ./_site/About ./_site/Links ./_site/Coin-flip &amp;&gt;/dev/null # disabled due to slash problem in collapsing code - htmltidy disagrees with the W3C validator. </span><span class="al">TODO</span><span class="co">: file a bug report on tidy?</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> +x<span class="kw">;</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="va">IFS</span><span class="op">=</span><span class="va">$(</span><span class="bu">echo</span> <span class="at">-en</span> <span class="st">&quot;\n\b&quot;</span><span class="va">)</span><span class="kw">;</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="va">PAGES</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$(</span><span class="fu">find</span> . <span class="at">-type</span> f <span class="at">-name</span> <span class="st">&quot;*.page&quot;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-v</span> <span class="st">&quot;_site/&quot;</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-u</span><span class="va">)</span><span class="st">&quot;</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> PAGE <span class="kw">in</span> <span class="va">$PAGES</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="va">HTML</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${PAGE</span><span class="op">%</span>.page<span class="va">}</span><span class="st">&quot;</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">-f</span> <span class="st">&quot;_site/</span><span class="va">${HTML}</span><span class="st">.html&quot;</span> <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="va">HTML</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${HTML}</span><span class="st">.html&quot;</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-n</span> <span class="st">&quot;</span><span class="va">$HTML</span><span class="st">: &quot;</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">tidy</span> <span class="at">-quiet</span> <span class="at">-errors</span> <span class="at">--doctype</span> html5 ./_site/<span class="st">&quot;</span><span class="va">$HTML</span><span class="st">&quot;</span> <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span> <span class="op">&gt;</span>/dev/null <span class="kw">|</span> <span class="fu">fgrep</span> <span class="at">-v</span> <span class="at">-e</span> <span class="st">&#39;&lt;link&gt; proprietary attribute &#39;</span> <span class="at">-e</span> <span class="st">&#39;Warning: trimming empty &lt;span&gt;&#39;</span><span class="kw">)</span> <span class="kw">||</span> <span class="fu">true</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span><span class="kw">;</span> <span class="bu">set</span> <span class="at">-x</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
