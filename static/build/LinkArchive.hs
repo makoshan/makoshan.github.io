@@ -51,7 +51,6 @@ import qualified Data.ByteString.Lazy.UTF8 as U (toString)
 import System.Exit (ExitCode(ExitFailure, ExitSuccess))
 
 import Data.FileStore.Utils (runShellCommand)
-import Network.URI.TLD (parseTLD)
 import Text.Pandoc (Inline(Link))
 import Text.Show.Pretty (ppShow)
 
@@ -90,9 +89,7 @@ readArchiveMetadata = do pdl <- (fmap (read . T.unpack) $ TIO.readFile "metadata
                                   Right (Just u)  -> if not ("http" `isPrefixOf` p) then
                                                        printRed ("Error! Did a local link slip in somehow? " ++ show p ++ show u ++ show ami) >> return False
                                                      else
-                                                       if isNothing (parseTLD p) then
-                                                        printRed ("Error! Invalid URI link in archive? " ++ show p ++ show u ++ show ami) >> return False
-                                                       else return True
+                                                       return True
                                   Right Nothing   -> return True
                                   Left  _         -> return True)
                               pdl
