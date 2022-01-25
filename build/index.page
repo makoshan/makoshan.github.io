@@ -1,0 +1,41 @@
+---
+title: Essays
+description: Researcher, self-experimenter, and write
+created: 27 Jan 2009
+tags: personal
+status: in progress
+belief: log
+...
+
+
+<div class="abstract">
+<p><span class="smallcaps">这是</span>  <strong>Mako Shan</strong> 个人网站。 我写关于区块链、技术和经济学的内容。 可以查看我历史内容 <a href="/blockchain/sound-money" id="gwern-tags-silk-road" class="link-local">Sound Money</a>⁠、 <a href="/blockchain/uniswap-social-money" id="gwern-tags-bitcoin" class="link-local">Social Coin</a>⁠、 <a href="/blockchain/dragon-slayer-become-the-dragon" id="gwern-tags-experiments" class="link-local">Radical Market</a>⁠、  <a href="/blockchain/gitcoin-grants" id="gwern-spaced-repetition" class="link-local">Gitcoin Grant</a>⁠。</p>
+<p>更多关于我个人和网站的信息，请查看 <em><a href="/About" id="gwern-about" class="link-local">About 页面</a></em>; 关于网站的实现, 请查看 <em><a href="/Design" id="gwern-design" class="link-local">Design 页面</a></em>; 其他关于我的信息和联系方式,请查看 <em><a href="/Links" id="gwern-links" class="link-local">Links 页面</a></em>; 最新的页面, 请查看 <em><a href="/Changelog" id="gwern-changelog" class="link-local">Changelog</a></em>; 接受更新和新闻, <em><a href="https://v2eth.substack.com/" id="gwern-gwern-substack-com" class="docMetadata">订阅</a></em> newsletter (<a href="/tags/newsletter" id="gwern-tags-newsletter" class="link-local">archives</a>).</p>
+</div>
+
+# 加密经济学
+
+- [货币的历史-从金本位到区块链](/blockchain/sound-money "研究货币的起源和未来")
+- [Gitcoin-Grants：-对公共物品融资模式的探索](/blockchain/gitcoin-grants "该机制是 Vitalik Buterin 和《 激进市场 》作者之一的 Glen Weyl 在《Liberal Radicalism: Formal Rules for a Society Neutral among Communities》论文中提出的")
+- [当屠龙者成为恶龙-灵感买家俱乐部](/blockchain/dragon-slayer-become-the-dragon "我们是否可以通过激进市场的想法和区块链技术上，根本解决一些问题，避免又一次屠龙者成为恶龙")
+- [Social Money 代币化你的时间和才能](/blockchain/uniswap-social-money "某人铸造可兑换个人利益，奖励和/或专业服务的代币，目前多数人铸币后上架 Uniswap")
+
+# 零知识证明
+
+- [以太坊扩容主力 Rollup 技术、应用](/blockchain/sound-money "研究货币的起源和未来")
+- [深入理解零知识证明算法 Zk-stark](/blockchain/sound-money "研究货币的起源和未来")
+- [技术指南 | 理解零知识证明算法之 Zk-stark](/blockchain/sound-money "研究货币的起源和未来")
+- [你有 「MimbleWimble 协议 」 我有 「零知识证明」](/blockchain/sound-money "研究货币的起源和未来")
+
+# 全球概览
+- [理解整个系统](/blockchain/sound-money "研究货币的起源和未来")
+- [关键路径](/blockchain/sound-money "研究货币的起源和未来")
+- [地球号飞船操作指南](/blockchain/sound-money "研究货币的起源和未来")
+- [富勒](/blockchain/sound-money "研究货币的起源和未来")
+
+
+
+# Personal
+
+- [About](About "Site ideals; source & content; traffic; examples; license") / [Links](Links "Who am I online & what have I done? - Contact information; sites I use; things I've worked on")
+- [Notes](Notes "Miscellaneous thoughts, memories, drafts, proto-essays, musings, etc")
