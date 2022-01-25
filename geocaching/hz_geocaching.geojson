@@ -1,0 +1,866 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC7Y505",
+        "description": "Meijiawu Longjing Tea Village</br>D2.0/T2.5",
+        "url": "https://www.geocaching.com/geocache/GC7Y505",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.092983 N 30.211933",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.092983,
+          30.211933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GCA028",
+        "description": "West Lake Virtual</br>D2.0/T1.0",
+        "url": "https://www.geocaching.com/geocache/GCA028",
+        "type": "Geocache|Virtual Cache",
+        "location": "E 120.137917 N 30.2344",
+        "marker-color": "#e98390",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.137917,
+          30.2344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC7G8EX",
+        "description": "Hangzhou Civil Square</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC7G8EX",
+        "type": "Geocache|Multi-cache",
+        "location": "E 120.20715 N 30.246133",
+        "marker-color": "#e98300",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.20715,
+          30.246133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC7DWEV",
+        "description": "On the way to Baoshi Pagoda</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC7DWEV",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.1447 N 30.2628",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1447,
+          30.2628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC1KEZ9",
+        "description": "Baoshi Mountain</br>D2.0/T2.5",
+        "url": "https://www.geocaching.com/geocache/GC1KEZ9",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.130083 N 30.2606",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.130083,
+          30.2606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC66ZK8",
+        "description": "The heart of Gemdale Free City</br>D2.0/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC66ZK8",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.07145 N 30.3401",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.07145,
+          30.3401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC4C1NN",
+        "description": "Xixi National Wetland Park 西溪国家湿地公园</br>D2.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC4C1NN",
+        "type": "Geocache|Multi-cache",
+        "location": "E 120.0559 N 30.257117",
+        "marker-color": "#e98300",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0559,
+          30.257117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC25NPH",
+        "description": "The Silver Dragon Tidal Bore</br>D1.0/T1.0",
+        "url": "https://www.geocaching.com/geocache/GC25NPH",
+        "type": "Geocache|Earthcache",
+        "location": "E 120.213133 N 30.244067",
+        "marker-color": "#009bbb",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.213133,
+          30.244067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC7D99N",
+        "description": "Xihu Moon Walk Wherigo</br>D2.0/T2.0",
+        "url": "https://www.geocaching.com/geocache/GC7D99N",
+        "type": "Geocache|Wherigo Cache",
+        "location": "E 120.14105 N 30.242283",
+        "marker-color": "#1562a6",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#f1f2f3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.14105,
+          30.242283
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC24APF",
+        "description": "Under Feilai Feng at Lingyin Temple</br>D2.5/T3.5",
+        "url": "https://www.geocaching.com/geocache/GC24APF",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.099983 N 30.241633",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.099983,
+          30.241633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GCD992",
+        "description": "West Lake - Three Pagodas (China)</br>D2.0/T1.0",
+        "url": "https://www.geocaching.com/geocache/GCD992",
+        "type": "Geocache|Virtual Cache",
+        "location": "E 120.140017 N 30.240067",
+        "marker-color": "#e98390",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.140017,
+          30.240067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC68263",
+        "description": "Hear the history of Liangzhu Relic Site - West</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC68263",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 119.978467 N 30.3968",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.978467,
+          30.3968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC71FJX",
+        "description": "Roam around the West Lake - Statues of Vintage</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC71FJX",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.129683 N 30.25055",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.129683,
+          30.25055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC67XY4",
+        "description": "The Beautiful Island Park</br>D2.0/T2.0",
+        "url": "https://www.geocaching.com/geocache/GC67XY4",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.0233 N 30.374517",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0233,
+          30.374517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC71FK6",
+        "description": "Roam around the West Lake - Guo's Villa | 郭庄</br>D2.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC71FK6",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.127683 N 30.2459",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.127683,
+          30.2459
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC6G4F0",
+        "description": "Master Hongyi and Feng Zikai Research Center</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC6G4F0",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.003133 N 30.293233",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.003133,
+          30.293233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GCW5Y9",
+        "description": "Woo Yong Shan (Five Cloud Hill) in Hangzhou</br>D1.5/T2.0",
+        "url": "https://www.geocaching.com/geocache/GCW5Y9",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.0934 N 30.194317",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0934,
+          30.194317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC74T0F",
+        "description": "Hangzhou Underwater World not far away</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC74T0F",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.149567 N 30.23725",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.149567,
+          30.23725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC7ZFNK",
+        "description": "Taiziwan Park (太子湾公园, Prince Bay Park)</br>D2.0/T2.0",
+        "url": "https://www.geocaching.com/geocache/GC7ZFNK",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.13565 N 30.22515",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.13565,
+          30.22515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC6V0ZP",
+        "description": "Alongside the Grand Canal</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC6V0ZP",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.16 N 30.276667",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.16,
+          30.276667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC84CG5",
+        "description": "ZJUT crane watch</br>D2.0/T2.0",
+        "url": "https://www.geocaching.com/geocache/GC84CG5",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.032033 N 30.229683",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.032033,
+          30.229683
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GCN0MH",
+        "description": "Xiao He Shan Cache</br>D2.0/T3.5",
+        "url": "https://www.geocaching.com/geocache/GCN0MH",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.034917 N 30.204233",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.034917,
+          30.204233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC6BQY1",
+        "description": "Near a modern sculpture</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC6BQY1",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.06395 N 30.314217",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.06395,
+          30.314217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC74VGR",
+        "description": "Precious Stone Hill Floating in the Rosy Cloud</br>D2.0/T3.0",
+        "url": "https://www.geocaching.com/geocache/GC74VGR",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.142467 N 30.263317",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.142467,
+          30.263317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC7D62W",
+        "description": "Volcanic uplift in Moganshan</br>D2.0/T2.5",
+        "url": "https://www.geocaching.com/geocache/GC7D62W",
+        "type": "Geocache|Earthcache",
+        "location": "E 119.853433 N 30.611417",
+        "marker-color": "#009bbb",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.853433,
+          30.611417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC6PT3Z",
+        "description": "National Forest Park of Banshan - Hushan Park</br>D2.0/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC6PT3Z",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.198717 N 30.362483",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.198717,
+          30.362483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC5R7MZ",
+        "description": "Liangzhu Culture Museum Cache</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC5R7MZ",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.022733 N 30.377",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.022733,
+          30.377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC68271",
+        "description": "Hear the history of Liangzhu Relic Site - North</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC68271",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 119.987733 N 30.401583",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.987733,
+          30.401583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC6FGFP",
+        "description": "Chenghuang Hill</br>D3.0/T2.5",
+        "url": "https://www.geocaching.com/geocache/GC6FGFP",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.161533 N 30.235867",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.161533,
+          30.235867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC7CNNC",
+        "description": "The ginkgo trail near the Zhaohui Park</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC7CNNC",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.161633 N 30.286433",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.161633,
+          30.286433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC71FH5",
+        "description": "Roam around the West Lake - An artificial rockery</br>D3.5/T2.0",
+        "url": "https://www.geocaching.com/geocache/GC71FH5",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.150017 N 30.23285",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.150017,
+          30.23285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC7D9BW",
+        "description": "Find the picture of 1RMB note! 找到1人民币纸币图片地方</br>D3.0/T2.0",
+        "url": "https://www.geocaching.com/geocache/GC7D9BW",
+        "type": "Geocache|Unknown Cache",
+        "location": "E 120.140833 N 30.241",
+        "marker-color": "#12508c",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.140833,
+          30.241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC6FC2T",
+        "description": "Yanggong Causeway Scenic Area</br>D3.0/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC6FC2T",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.130383 N 30.229617",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.130383,
+          30.229617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC74XW6",
+        "description": "Strolling along the Dong River</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC74XW6",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.17415 N 30.274033",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.17415,
+          30.274033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC6PETD",
+        "description": "National Forest Park of Banshan - a wild trail</br>D2.0/T3.0",
+        "url": "https://www.geocaching.com/geocache/GC6PETD",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.17935 N 30.359267",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.17935,
+          30.359267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC71FJ5",
+        "description": "West Lake Roaming - Autumn Moon Over the Calm Lake</br>D2.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC71FJ5",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.141217 N 30.254333",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.141217,
+          30.254333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC6VTBQ",
+        "description": "Ancient Pilgrim's Path</br>D1.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC6VTBQ",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.117083 N 30.240083",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.117083,
+          30.240083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC754FD",
+        "description": "Qiaoxi Conservation Area | 桥西历史文化街区</br>D2.5/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC754FD",
+        "type": "Geocache|Multi-cache",
+        "location": "E 120.136867 N 30.319983",
+        "marker-color": "#e98300",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.136867,
+          30.319983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC7ZFQC",
+        "description": "Panoramic View of the West Lake</br>D2.0/T1.5",
+        "url": "https://www.geocaching.com/geocache/GC7ZFQC",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.136717 N 30.22265",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.136717,
+          30.22265
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC6FC2N",
+        "description": "Hangzhou Museum</br>D3.0/T2.5",
+        "url": "https://www.geocaching.com/geocache/GC6FC2N",
+        "type": "Geocache|Multi-cache",
+        "location": "E 120.162017 N 30.241917",
+        "marker-color": "#e98300",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.162017,
+          30.241917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GC6PDCG",
+        "description": "National Forest Park of Banshan - Cuifeng Tower</br>D2.0/T2.0",
+        "url": "https://www.geocaching.com/geocache/GC6PDCG",
+        "type": "Geocache|Traditional Cache",
+        "location": "E 120.18025 N 30.358217",
+        "marker-color": "#02874d",
+        "stroke-width": 1,
+        "marker-symbol": "pharmacy",
+        "stroke-color": "#1562a6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.18025,
+          30.358217
+        ]
+      }
+    }
+  ]
+}
