@@ -1,0 +1,15 @@
+metadata/auto.yaml
+metadata/archive.hs
+**\.png-768px\.png
+**\.jpg-768px\.jpg
+.DS_Store
+**.o
+**.hi
+static/build/hakyll
+static/build/generateDirectory
+static/build/generateBacklinks
+static/build/generateLinkBibliography
+static/build/link-extractor
+static/build/link-suggester
+static/build/generateSimilar
+static/build/preprocess-markdown
