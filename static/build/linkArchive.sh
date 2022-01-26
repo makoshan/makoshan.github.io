@@ -40,75 +40,75 @@ fi
 FILE=$(ls -U "docs/www/$DOMAIN/$HASH."* 2> /dev/null) || true
 if [[ -n "$FILE" ]]; then
     echo -n "/$FILE$ANCHOR"
-else
-    URL=$(echo "$@" | sed -e 's/https:\/\/arxiv\.org/https:\/\/export.arxiv.org/') # NOTE: http://export.arxiv.org/help/robots (we do the rewrite here to keep the directories & URLs as expected like `/docs/www/arxiv.org/`).
-    ## 404?
-    HTTP_STATUS=$(timeout 20s curl --user-agent "$USER_AGENT" \
-                          --write-out '%{http_code}' --silent -L -o /dev/null "$URL" || echo "Unsuccessful: $1 $HASH" 1>&2 && exit 1)
-    if [[ "$HTTP_STATUS" == "404" ]]; then
-        echo "Unsuccessful: $1 $HASH" 1>&2
-        exit 1
-    else
-        # Remote HTML, which might actually be a PDF:
-        MIME_REMOTE=$(timeout 20s curl --user-agent "$USER_AGENT" \
-                          --write-out '%{content_type}' --silent -L -o /dev/null "$URL" || echo "Unsuccessful: $1 $HASH" 1>&2 && exit 1)
+# else
+#     URL=$(echo "$@" | sed -e 's/https:\/\/arxiv\.org/https:\/\/export.arxiv.org/') # NOTE: http://export.arxiv.org/help/robots (we do the rewrite here to keep the directories & URLs as expected like `/docs/www/arxiv.org/`).
+#     ## 404?
+#     HTTP_STATUS=$(timeout 20s curl --user-agent "$USER_AGENT" \
+#                           --write-out '%{http_code}' --silent -L -o /dev/null "$URL" || echo "Unsuccessful: $1 $HASH" 1>&2 && exit 1)
+#     if [[ "$HTTP_STATUS" == "404" ]]; then
+#         echo "Unsuccessful: $1 $HASH" 1>&2
+#         exit 1
+#     else
+#         # Remote HTML, which might actually be a PDF:
+#         MIME_REMOTE=$(timeout 20s curl --user-agent "$USER_AGENT" \
+#                           --write-out '%{content_type}' --silent -L -o /dev/null "$URL" || echo "Unsuccessful: $1 $HASH" 1>&2 && exit 1)
 
-        if [[ "$URL" =~ .*'.pdf'.* || "$URL" =~ .*'_pdf'.* || "$URL" =~ '#pdf'.* || "$URL" =~ .*'/pdf/'.* ]];
-        then
+#         if [[ "$URL" =~ .*'.pdf'.* || "$URL" =~ .*'_pdf'.* || "$URL" =~ '#pdf'.* || "$URL" =~ .*'/pdf/'.* ]];
+#         then
 
-            timeout --kill-after=120s 120s wget --user-agent="$USER_AGENT" \
-                    --quiet --output-file=/dev/null "$1" --output-document=/tmp/"$HASH".pdf
-            TARGET=/tmp/"$HASH".pdf
-            ## sometimes servers lie or a former PDF URL has linkrotted or changed to a HTML landing page, so we need to check
-            ## that we actually got a real PDF file:
-            MIME_LOCAL=$(file "$TARGET" | fgrep 'PDF document, version ') || true
+#             timeout --kill-after=120s 120s wget --user-agent="$USER_AGENT" \
+#                     --quiet --output-file=/dev/null "$1" --output-document=/tmp/"$HASH".pdf
+#             TARGET=/tmp/"$HASH".pdf
+#             ## sometimes servers lie or a former PDF URL has linkrotted or changed to a HTML landing page, so we need to check
+#             ## that we actually got a real PDF file:
+#             MIME_LOCAL=$(file "$TARGET" | fgrep 'PDF document, version ') || true
 
-            if [[ -f "$TARGET" ]] && [[ -n "$MIME_LOCAL" ]] && [[ ! "$MIME_REMOTE" =~ .*"text/html".* ]] || \
-                   [[ "$MIME_REMOTE" =~ "application/pdf".*  || "$MIME_REMOTE" =~ "application/octet-stream".* ]] || \
-                   [[ ! "$MIME_LOCAL" == "" ]];
-            then
-                mkdir --parents "./docs/www/$DOMAIN/"
-                ## move the PDF into the Gwern.net repo:
-                mv "$TARGET" "./docs/www/$DOMAIN/$HASH.pdf"
-                echo -n "/docs/www/$DOMAIN/$HASH.pdf$ANCHOR"
-                ## use my local custom installation of recent ocrmypdf + JBIG2 encoder to OCR & optimize PDFs I'm hosting:
-                (source activate fastai && ocrmypdf --skip-text --optimize 3 --jbig2-lossy "./docs/www/$DOMAIN/$HASH.pdf" "./docs/www/$DOMAIN/$HASH.pdf") &
-            else
-                echo "Unsuccessful: $1 $HASH" 1>&2
-                exit 1
-            fi
-            # Handle actual remote HTML file:
-        else
-            TARGET="/tmp/$HASH.html"
-            # https://github.com/gildas-lormeau/SingleFile/blob/master/cli/README.MD (ArchiveBox didn't work out)
-            # WARNING: for me single-file emits misleading errors about needing to 'npm install' the browser, but
-            # apparently you're supposed to `--browser-executable-path` workaround that, which is documented only in a bug report
-            timeout --kill-after=240s 240s \
-                    ~/src/SingleFile/cli/single-file --browser-executable-path "$(command -v chromium-browser)" --compress-CSS --remove-scripts false \
-                    --browser-extensions "$(find ~/.config/chromium/Default/Extensions/* -maxdepth 0 -type d)" \
-                    --user-agent "$USER_AGENT" \
-                    --browser-load-max-time "240000" \
-                    --load-deferred-images-max-idle-time "20000" \
-                    --max-resource-size 50 \
-                    --browser-wait-until "networkidle2" \
-                    --browser-height "10000" \
-                    "$1" "$TARGET" 1>&2
+#             if [[ -f "$TARGET" ]] && [[ -n "$MIME_LOCAL" ]] && [[ ! "$MIME_REMOTE" =~ .*"text/html".* ]] || \
+#                    [[ "$MIME_REMOTE" =~ "application/pdf".*  || "$MIME_REMOTE" =~ "application/octet-stream".* ]] || \
+#                    [[ ! "$MIME_LOCAL" == "" ]];
+#             then
+#                 mkdir --parents "./docs/www/$DOMAIN/"
+#                 ## move the PDF into the Gwern.net repo:
+#                 mv "$TARGET" "./docs/www/$DOMAIN/$HASH.pdf"
+#                 echo -n "/docs/www/$DOMAIN/$HASH.pdf$ANCHOR"
+#                 ## use my local custom installation of recent ocrmypdf + JBIG2 encoder to OCR & optimize PDFs I'm hosting:
+#                 (source activate fastai && ocrmypdf --skip-text --optimize 3 --jbig2-lossy "./docs/www/$DOMAIN/$HASH.pdf" "./docs/www/$DOMAIN/$HASH.pdf") &
+#             else
+#                 echo "Unsuccessful: $1 $HASH" 1>&2
+#                 exit 1
+#             fi
+#             # Handle actual remote HTML file:
+#         else
+#             TARGET="/tmp/$HASH.html"
+#             # https://github.com/gildas-lormeau/SingleFile/blob/master/cli/README.MD (ArchiveBox didn't work out)
+#             # WARNING: for me single-file emits misleading errors about needing to 'npm install' the browser, but
+#             # apparently you're supposed to `--browser-executable-path` workaround that, which is documented only in a bug report
+#             timeout --kill-after=240s 240s \
+#                     ~/src/SingleFile/cli/single-file --browser-executable-path "$(command -v chromium-browser)" --compress-CSS --remove-scripts false \
+#                     --browser-extensions "$(find ~/.config/chromium/Default/Extensions/* -maxdepth 0 -type d)" \
+#                     --user-agent "$USER_AGENT" \
+#                     --browser-load-max-time "240000" \
+#                     --load-deferred-images-max-idle-time "20000" \
+#                     --max-resource-size 50 \
+#                     --browser-wait-until "networkidle2" \
+#                     --browser-height "10000" \
+#                     "$1" "$TARGET" 1>&2
 
-            if [[ -f "$TARGET" ]]; then
-                ## Check for error pages which nevertheless returned validly:
-                ERROR_404=$(fgrep '404 Not Found' "$TARGET")
-                if [[ -z "$ERROR_404" ]]; then
-                    mkdir --parents "./docs/www/$DOMAIN/"
-                    mv "$TARGET" "./docs/www/$DOMAIN/$HASH.html"
-                    echo -n "/docs/www/$DOMAIN/$HASH.html$ANCHOR"
-                    ## open original vs archived in web browser so the user can check that it preserved OK, or if it needs to be handled manually or domain blacklisted:
-                    $WWW_BROWSER "./docs/www/$DOMAIN/$HASH.html$ANCHOR" "$1"
-                else
-                    rm "$TARGET"
-                    echo "Unsuccessful: $1 $HASH" 1>&2
-                    exit 1
-                fi
-            fi
-        fi
-    fi
+#             if [[ -f "$TARGET" ]]; then
+#                 ## Check for error pages which nevertheless returned validly:
+#                 ERROR_404=$(fgrep '404 Not Found' "$TARGET")
+#                 if [[ -z "$ERROR_404" ]]; then
+#                     mkdir --parents "./docs/www/$DOMAIN/"
+#                     mv "$TARGET" "./docs/www/$DOMAIN/$HASH.html"
+#                     echo -n "/docs/www/$DOMAIN/$HASH.html$ANCHOR"
+#                     ## open original vs archived in web browser so the user can check that it preserved OK, or if it needs to be handled manually or domain blacklisted:
+#                     $WWW_BROWSER "./docs/www/$DOMAIN/$HASH.html$ANCHOR" "$1"
+#                 else
+#                     rm "$TARGET"
+#                     echo "Unsuccessful: $1 $HASH" 1>&2
+#                     exit 1
+#                 fi
+#             fi
+#         fi
+#     fi
 fi
