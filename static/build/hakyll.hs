@@ -89,7 +89,7 @@ main = hakyll $ do
                  -- strip extension since users shouldn't care if HTML3-5/XHTML/etc (cool URLs); delete apostrophes/commas & replace spaces with hyphens
                  -- as people keep screwing them up endlessly:
                  route $ gsubRoute "," (const "") `composeRoutes` gsubRoute "'" (const "") `composeRoutes` gsubRoute " " (const "-") `composeRoutes`
-                          setExtension ""
+                          setExtension "html"
                  -- https://groups.google.com/forum/#!topic/pandoc-discuss/HVHY7-IOLSs
                  let readerOptions = defaultHakyllReaderOptions
                  compile $ pandocCompilerWithTransformM readerOptions woptions (unsafeCompiler . pandocTransform meta am)
