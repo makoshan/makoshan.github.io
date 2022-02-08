@@ -144,7 +144,7 @@ archiveURL l = do (exit,stderr',stdout) <- runShellCommand "./" Nothing "linkArc
 whiteList :: String -> Bool
 whiteList url
   | any (`isInfixOf` url) ["citeseerx.ist.psu.edu"] = True
-  | any (`isPrefixOf` url) ["/", "./", "../", "https://www.gwern.net", "#", "!", "$", "mailto", "irc"] = True
+  | any (`isPrefixOf` url) ["/", "./", "../", "https://www.gwern.net", "#", "!", "$", "mailto", "irc","/docs/","blockchain"] = True
   | any (`isSuffixOf` url) [".pdf"] = False
   | any (`isSuffixOf` url) ["/pdf"] = False
   | any (`isInfixOf` url) [".pdf#"] = False

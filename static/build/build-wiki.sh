@@ -25,9 +25,9 @@ if ! [[ -n $(command -v ghc) && -n $(command -v git) && -n $(command -v rsync) &
           -n $(command -v tidy) && -n $(command -v linkchecker) && -n $(command -v du) && -n $(command -v rm) && -n $(command -v find) && \
           -n $(command -v fdupes) && -n $(command -v urlencode) && -n $(command -v sed) && -n $(command -v parallel) && -n $(command -v xargs) && \
           -n $(command -v file) && -n $(command -v exiftool) && -n $(command -v identify) && -n $(command -v pdftotext) && \
-          -n $(command -v /root/.nvm/versions/node/v8.11.2/lib/node_modules/mathjax-node-page/bin/mjpage) && -n $(command -v ./link-extractor.hs) && \
-          -n $(command -v ./anchor-checker.php) && -n $(command -v php) && -n $(command -v ./generateDirectory.hs) && \
-          -n $(command -v ./generateBacklinks.hs) ]] && \
+          -n $(command -v /root/.nvm/versions/node/v8.11.2/lib/node_modules/mathjax-node-page/bin/mjpage) && -n $(command -v ./static/build/link-extractor.hs) && \
+          -n $(command -v ./static/build/anchor-checker.php) && -n $(command -v php) && -n $(command -v ./static/build/generateDirectory.hs) && \
+          -n $(command -v ./static/build/generateBacklinks.hs) ]] && \
        [ -z "$(pgrep hakyll)" ];
 then
     red "Dependencies missing or Hakyll already running?"
@@ -37,15 +37,14 @@ else
 
     ## Update the directory listing index pages: there are a number of directories we want to avoid, like the various mirrors or JS projects, or directories just of data like CSVs, or dumps of docs, so we'll use a whitelist of directories which have files which may have decent annotations & be worth browsing:
     ## stack ghc --package base --package bytestring --package containers --package text --package directory --package pandoc --package MissingH --package aeson --package tagsoup --package arxiv --package hakyll --package filestore --package utf8-string --package temporary --package HTTP --package network-uri --package pandoc-types --package filepath --package split --package http-conduit --package pretty-show --resolver lts-18.3 hakyll.hs
-    bold "Building directory indexes…"
-    (./generateDirectory docs/ ) # &
 
-    bold "Updating annotations..."
-   ## (stack ghc --package base --package bytestring --package containers --package text --package directory --package pandoc --package MissingH --package aeson --package tagsoup --package arxiv --package hakyll --package filestore --package utf8-string --package temporary --package HTTP --package network-uri --package pandoc-types --package filepath --package split --package http-conduit --package pretty-show --resolver lts-18.3 hakyll.hs -e 'do { md <- readLinkMetadata; am <- readArchiveMetadata; writeAnnotationFragments am md; }' &> /dev/null) # &
 
-##    bold "Updating backlinks..."
-##    find . -name "*.page" -or -wholename "./metadata/annotations/*.html" | egrep -v -e '/index.page' -e '_site/' -e './metadata/annotations/backlinks/' | sort | ./generateBacklinks
-    bold "Check/update VCS…"
+    ## bold "Updating annotations..."
+    ## (stack ghc --package base --package bytestring --package containers --package text --package directory --package pandoc --package MissingH --package aeson --package tagsoup --package arxiv --package hakyll --package filestore --package utf8-string --package temporary --package HTTP --package network-uri --package pandoc-types --package filepath --package split --package http-conduit --package pretty-show --resolver lts-18.3 hakyll.hs -e 'do { md <- readLinkMetadata; am <- readArchiveMetadata; writeAnnotationFragments am md; }' &> /dev/null) # &
+
+    ##    bold "Updating backlinks..."
+    ##    find . -name "*.page" -or -wholename "./metadata/annotations/*.html" | egrep -v -e '/index.page' -e '_site/' -e './metadata/annotations/backlinks/' | sort | ./generateBacklinks
+    ## bold "Check/update VCS…"
 
     bold "Building Hakyll…"
     # Build:
@@ -53,15 +52,30 @@ else
     ## ghc -tmpdir /tmp/ -Wall -rtsopts -threaded --make hakyll.hs
     cd ./static/build/
     ## stack ghc --package base --package bytestring --package containers --package text --package directory --package pandoc --package MissingH --package aeson --package tagsoup --package arxiv --package hakyll --package filestore --package utf8-string --package temporary --package HTTP --package network-uri --package pandoc-types --package filepath --package split --package http-conduit --package pretty-show --resolver lts-18.3 hakyll.hs
+    stack ghc --package base --package bytestring --package containers --package text --package directory --package pandoc --package MissingH --package aeson --package tagsoup --package arxiv --package hakyll --package filestore --package utf8-string --package temporary --package HTTP --package network-uri --package pandoc-types --package filepath --package split --package http-conduit --package pretty-show --resolver lts-18.3 hakyll.hs
+    stack ghc --package base --package bytestring --package containers --package text --package directory --package pandoc --package MissingH --package aeson --package tagsoup --package arxiv --package hakyll --package filestore --package utf8-string --package temporary --package HTTP --package network-uri --package pandoc-types --package filepath --package split --package http-conduit --package pretty-show --resolver lts-18.3 generateDirectory.hs
     ## Parallelization:
-    N="$(if [ ${#} == 0 ]; then echo 16; else echo "$1"; fi)"
+    # N="$(if [ ${#} == 0 ]; then echo 16; else echo "$1"; fi)"
+ 
+
+
+
     cd ../../ # go to site root
+
+ 
+
+    bold "Building directory indexes…"
+    (./static/build/generateDirectory docs/ ) # &
     bold "Building site…"
     ## ./hakyll build +RTS -N"$N" -RTS || (red "Hakyll errored out!"; exit 1)
     ## stack ghc --package base --package bytestring --package containers --package text --package directory --package pandoc --package MissingH --package aeson --package tagsoup --package arxiv --package hakyll --package filestore --package utf8-string --package temporary --package HTTP --package network-uri --package pandoc-types --package filepath --package split --package http-conduit --package pretty-show --resolver lts-18.3 hakyll.hs
-    ./hakyll build
+    ./static/build/hakyll build
     # cleanup post: (note that if Hakyll crashes and we exit in the previous line, the compiled Hakyll binary & intermediates hang around for faster recovery)
     # rm --recursive --force -- ./static/build/hakyll ./static/build/*.o ./static/build/*.hi || true
+    ## rm --recursive --force -- ./static/build/hakyll ./static/build/*.o ./static/build/*.hi ./static/build/generateDirectory ./static/build/generateLinkBibliography ./static/build/generateBacklinks static/build/link-extractor || true
+
+    # Cleanup pre:
+    # rm --recursive --force -- ./_cache/ ./_site/ ./static/build/hakyll ./static/build/*.o ./static/build/*.hi ./static/build/generateDirectory ./static/build/generateLinkBibliography ./static/build/generateBacklinks static/build/link-extractor || true
 
     ## WARNING: this is a crazy hack to insert a horizontal rule 'in between' the first 3 sections on /index (Newest/Popular/Notable), and the rest (starting with Statistics); the CSS for making the rule a block dividing the two halves just doesn't work in any other way, but Pandoc Markdown doesn't let you write stuff 'in between' sections, either. So… a hack.
 
@@ -248,7 +262,7 @@ else
         ## anchor-checker.php doesn't work on HTML fragments, like the metadata annotations, and those rarely ever have within-fragment anchor links anyway, so skip those:
         for PAGE in $PAGES ./static/404.html; do
             HTML="${PAGE%.page}"
-            ANCHOR=$(./anchor-checker.php ./_site/"$HTML")
+            ANCHOR=$(./static/build/anchor-checker.php ./_site/"$HTML")
             if [[ -n $ANCHOR ]]; then echo -e "\n\e[31m$PAGE\e[0m:\n$ANCHOR"; fi
         done;
         set -e; }
@@ -259,8 +273,8 @@ else
 
     # Sync:
     ## make sure nginx user can list all directories (x) and read all files (r)
-    chmod a+x $(find ./ -type d)
-    chmod --recursive a+r ./*
+    chmod a+x $(find /home/thursday/workspace/wiki20220208/ -type d)
+    chmod --recursive a+r /home/thursday/workspace/wiki20220208/*
 
     λ(){ find . -xtype l -printf 'Broken symbolic link: %p\n'; }
     wrap λ "Broken symbolic links"
@@ -399,7 +413,7 @@ else
 
     # Testing files, post-sync
     bold "Checking for file anomalies…"
-    λ(){ fdupes --quiet --sameline --size --nohidden $(find ./ -type d | egrep -v -e 'static' -e '.git' -e 'gwern/wiki/$' -e 'docs/www/' -e 'metadata/annotations/backlinks') | fgrep --invert-match -e 'bytes each' -e 'trimfill.png' ; }
+    λ(){ fdupes --quiet --sameline --size --nohidden $(find ~/wiki/ -type d | egrep -v -e 'static' -e '.git' -e 'gwern/wiki/$' -e 'docs/www/' -e 'metadata/annotations/backlinks') | fgrep --invert-match -e 'bytes each' -e 'trimfill.png' ; }
     wrap λ "Duplicate file check"
 
     λ() { find . -perm u=r -path '.git' -prune; }
@@ -488,7 +502,7 @@ else
     if [ $(date +"%d") == "1" ]; then
 
         bold "Checking all MIME types…"
-        PAGES=$(cd ./ && find . -type f -name "*.page" | sed -e 's/\.\///' -e 's/\.page$//' | sort)
+        PAGES=$(cd ~/wiki/ && find . -type f -name "*.page" | sed -e 's/\.\///' -e 's/\.page$//' | sort)
         c() { curl --compressed --silent --output /dev/null --head "$@"; }
         for PAGE in $PAGES; do
             MIME=$(c --max-redirs 0 --write-out '%{content_type}' "https://wiki.v2eth.com/$PAGE")

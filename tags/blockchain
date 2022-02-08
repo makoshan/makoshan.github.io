@@ -2514,10 +2514,10 @@ setMode(currentMode);
     <!-- Hint at necessary third-party domains -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
 
-    <meta name="title" content="Tag: misc">
-    <meta name="citation_title" content="Tag: misc">
-    <meta name="og:title" content="Tag: misc">
-    <meta name="twitter:title" content="Tag: misc">
+    <meta name="title" content="Tag: blockchain">
+    <meta name="citation_title" content="Tag: blockchain">
+    <meta name="og:title" content="Tag: blockchain">
+    <meta name="twitter:title" content="Tag: blockchain">
     <meta name="generator" content="hakyll">
     <meta name="creator" content="gwern.net">
     <meta name="author" content="Gwern Branwen">
@@ -2528,22 +2528,22 @@ setMode(currentMode);
     <meta name="twitter:site" content="gwern.net">
     <meta name="og:site" content="gwern.net">
     <meta name="og:type" content="article">
-    <meta name="description" content="All Gwern.net pages for Tag: misc">
-    <meta name="og:description" content="All Gwern.net pages for Tag: misc">
+    <meta name="description" content="All Gwern.net pages for Tag: blockchain">
+    <meta name="og:description" content="All Gwern.net pages for Tag: blockchain">
     <meta property="og:image" content="https://wiki.v2eth.com/static/img/logo/logo-whitebg-large-border.png">
     <meta name="dc.date.issued" content="N/A">
     <link rel="schema.dcterms" href="https://dublincore.org/specifications/dublin-core/dcmi-terms/">
     <meta name="dcterms.rights" content="CC PD-0">
     <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
-    <link rel="canonical" href="https://wiki.v2eth.com/tags/misc">
-    <meta name="citation_fulltext_html_url" content="https://wiki.v2eth.com/tags/misc">
-    <meta name="og:url" content="https://wiki.v2eth.com/tags/misc">
+    <link rel="canonical" href="https://wiki.v2eth.com/tags/blockchain">
+    <meta name="citation_fulltext_html_url" content="https://wiki.v2eth.com/tags/blockchain">
+    <meta name="og:url" content="https://wiki.v2eth.com/tags/blockchain">
     <meta name="citation_fulltext_world_readable" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <meta name="keywords" content="Tag: misc">
+    <meta name="keywords" content="Tag: blockchain">
 
-    <title>Tag: misc · Gwern.net</title>
+    <title>Tag: blockchain · Gwern.net</title>
 
     <link rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png" />
     <link rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
@@ -2566,7 +2566,7 @@ setMode(currentMode);
       </div>
 
       <header>
-        <h1>Tag: misc</h1>
+        <h1>Tag: blockchain</h1>
       </header>
 
       <article>
@@ -2575,7 +2575,10 @@ setMode(currentMode);
           <section>
             <div class="columns">
               <ul>
-                <li><a href="/static/build/keys">My pubkeys</a></li>
+                <li><a href="/blockchain/dragon-slayer-become-the-dragon">当屠龙者成为恶龙-灵感买家俱乐部</a></li>
+<li><a href="/blockchain/gitcoin-grants">Gitcoin Grants： 对公共物品融资模式的探索</a></li>
+<li><a href="/blockchain/sound-money">货币的历史</a></li>
+<li><a href="/blockchain/uniswap-social-money">Social Money 代币化你的时间和才能</a></li>
 
               </ul>
             </div>

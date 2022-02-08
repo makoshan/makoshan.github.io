@@ -16,10 +16,6 @@ index: true
 
 ## Files
 
--   [`2015-12-07-tu-quoque.markdown`](/docs/2015-12-07-tu-quoque.markdown)
-
--   [`2015-11-28-carpe-diem.markdown`](/docs/2015-11-28-carpe-diem.markdown)
-
--   [`2015-10-07-rosa-rosa-rosam.markdown`](/docs/2015-10-07-rosa-rosa-rosam.markdown)
-
 -   [`2015-08-12-spqr`](/docs/2015-08-12-spqr)
+
+-   [`.DS_Store`](/docs/.DS_Store)

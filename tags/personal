@@ -2578,6 +2578,7 @@ setMode(currentMode);
                 <li><a href="/About">About This Website</a></li>
 <li><a href="/Links">Links</a></li>
 <li><a href="/index">Essays</a></li>
+<li><a href="/static/build/index">Essays</a></li>
 
               </ul>
             </div>

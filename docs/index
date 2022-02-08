@@ -2563,7 +2563,7 @@ setMode(currentMode);
     <meta name="keywords" content="index">
     <meta name="dc.date.issued" content="2009-01-01">
     <meta name="citation_publication_date" content="2009-01-01">
-    <meta name="dcterms.modified" content="2022-01-24">
+    <meta name="dcterms.modified" content="2022-02-08">
     <link rel="schema.dcterms" href="https://dublincore.org/specifications/dublin-core/dcmi-terms/">
     <meta name="dcterms.rights" content="CC PD-0">
     <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
@@ -2620,10 +2620,8 @@ setMode(currentMode);
 <section id="files" class="level2">
 <h2><a href="#files" title="Link to section: § &#39;Files&#39;">Files</a></h2>
 <ul>
-<li><p><a href="/docs/2015-12-07-tu-quoque.markdown"><code>2015-12-07-tu-quoque.markdown</code></a></p></li>
-<li><p><a href="/docs/2015-11-28-carpe-diem.markdown"><code>2015-11-28-carpe-diem.markdown</code></a></p></li>
-<li><p><a href="/docs/2015-10-07-rosa-rosa-rosam.markdown"><code>2015-10-07-rosa-rosa-rosam.markdown</code></a></p></li>
 <li><p><a href="/docs/2015-08-12-spqr" id="gwern-docs-2015-08-12-spqr" class="link-local"><code>2015-08-12-spqr</code></a></p></li>
+<li><p><a href="/docs/.DS_Store"><code>.DS_Store</code></a></p></li>
 </ul>
 </section></div>
 

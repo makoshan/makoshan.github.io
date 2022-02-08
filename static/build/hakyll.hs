@@ -105,6 +105,7 @@ main = hakyll $ do
              let static = route idRoute >> compile copyFileCompiler -- WARNING: custom optimization requiring forked Hakyll installation; see https://github.com/jaspervdj/hakyll/issues/786
              version "static" $ mapM_ (`match` static) [
                                      "docs/**",
+                                     "blockchain/**",
                                      "images/**",
                                      "**.hs",
                                      "**.sh",

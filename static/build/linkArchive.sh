@@ -81,7 +81,7 @@ else
             # WARNING: for me single-file emits misleading errors about needing to 'npm install' the browser, but
             # apparently you're supposed to `--browser-executable-path` workaround that, which is documented only in a bug report
             timeout --kill-after=240s 240s \
-                    single-file --browser-executable-path "$(command -v chromium-browser)" --compress-CSS --remove-scripts false \
+                    single-file --browser-executable-path "/usr/bin/chromium-browser --no-sandbox --user-data-dir" --compress-CSS --remove-scripts false \
 		    --user-agent "$USER_AGENT" --browser-wait-until "networkidle2" \
 		    --browser-load-max-time "240000" \
 		    --load-deferred-images-max-idle-time "20000" \
