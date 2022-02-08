@@ -40,14 +40,14 @@
     --GW-popins-popin-max-height: 50vh;
     --GW-popins-popin-min-height: 120px;
     --GW-popins-popin-border-width: 3px;
-    --GW-popins-popin-title-bar-height: 1.75rem;
+    --GW-popins-popin-title-bar-height: 1.5rem;
 }
 
 /*********************/
 /* ARTICLE CONTAINER */
 /*********************/
 
-/*  (ie. article) */
+/*  (i.e., article) */
 /*  Nothing!
     */
 
@@ -55,7 +55,7 @@
 /* SECTIONS */
 /************/
 /*  Use: annotate collapsible section headers with '{.collapse}' (in the Markdown);
-    for sections where I want a summary/abstract of that (eg. in Notes.page/Statistical-notes.page),
+    for sections where I want a summary/abstract of that (eg in Notes.page/Statistical-notes.page),
     one annotate summaries to keep uncollapsed with '<div class="collapseSummary">summary</div>'.
     (Pandoc Markdown does support a native div syntax, but it's long and ugly.)
     */
@@ -499,7 +499,7 @@ hr::after,
 .horizontalRule-nth-0 hr::after {
     /* https://commons.wikimedia.org/wiki/File:Sun_of_Vergina_black.svg */
     content: url('/static/img/icons/sun-verginasun-black.svg');
-    opacity: 0.87;
+    opacity: 0.85;
     width: 40px;
     height: 40px;
 }
@@ -508,13 +508,13 @@ hr::after,
     /* NOTE: alternative moon icon is /static/img/icons/japanesecrest-oookashippouofoookatadasuke-sun.svg modified from https://commons.wikimedia.org/wiki/File:Japanese_crest_Oooka_Shippou_of_Oooka_Tadasuke.svg - while nice, it lacks the intense moire effect of the Vergina Sun */
     content: url('/static/img/icons/japanesecrest-tsukinihoshi-dottedmoon.svg');
     opacity: 0.90;
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
 }
 .horizontalRule-nth-2 hr::after {
     content: url('/static/img/icons/asterism-triplewhitestar.svg');
-    width: 36px;
-    height: 30px;
+    width: 30px;
+    height: 28px;
 }
 .horizontalRule-nth-2 {
     filter: drop-shadow(0 0 0 currentColor);
@@ -581,7 +581,7 @@ ol {
 }
 #markdownBody ul,
 #markdownBody ol {
-    display: flow-root;
+	display: flow-root;
 }
 li > ul,
 li > ol {
@@ -637,23 +637,16 @@ ul > li::before {
 
 ul > li::before,
 ul ul ul ul > li::before {
-    content: url('/static/img/icons/single-black-star.svg');
-    opacity: 0.72;
-
+    content: url('/static/img/icons/single-white-star.svg');
 }
 ul ul > li::before,
-ul ul ul ul ul > li::before,
-/* special /index override because the link compilation is not bolded */
-body.index ul > li::before {
-    content: url('/static/img/icons/single-white-star.svg');
-    opacity: initial;
+ul ul ul ul ul > li::before {
+    content: url('/static/img/icons/single-black-star.svg');
 }
 ul ul ul > li::before,
-ul ul ul ul ul ul > li::before,
-body.index ul ul > li::before {
+ul ul ul ul ul ul > li::before {
     /* this rotates into more of a 'lozenge' square for variety's sake */
     content: url('/static/img/icons/single-white-star-rotated.svg');
-    opacity: initial;
 }
 
 /*=-----------------------=*/
@@ -741,8 +734,8 @@ figcaption {
     width: fit-content;
 }
 figcaption strong {
-    font-weight: inherit;
-    font-variant-caps: small-caps;
+	font-weight: inherit;
+	font-variant-caps: small-caps;
 }
 @media only screen and (max-width: 649px) {
     figcaption {
@@ -1322,7 +1315,6 @@ section.footnotes > hr:first-child.highlighted::before {
     overscroll-behavior: none;
     width: 100%;
     padding: 0 1px 0 0;
-    padding-right: 0.5em;
 }
 
 /*  Scroll bar styles (for WebKit/Chromium).
@@ -1574,7 +1566,7 @@ table td > code {
 
 /*  Add little icons to tables handled by tablesorter.js
     to advertise that they are sortable.
-    https://mottie.github.io/tablesorter/docs/#Configuration
+    http://tablesorter.com/docs/#Configuration
     */
 th.tablesorter-header {
     background-image: url('/static/img/tablesorter/tablesorter-bg.gif');
@@ -1683,8 +1675,7 @@ pre:hover {
 /* CODE BLOCKS */
 /***************/
 
-.uri, /* Pandoc sets a 'uri' class on naked/autolinks, which don't get a `<code>` wrapper even though they should (see https://github.com/jgm/pandoc/issues/7672 ) */
-code  {
+code {
     --GW-link-underline-background-color: var(--GW-code-element-background-color);
 
     border: 1px solid var(--GW-code-element-border-color);
@@ -1803,13 +1794,6 @@ code span.im { color: var(--GW-syntax-highlight-color-import); font-weight: bold
 /* MISC */
 /********/
 
-/* Hanging Punctuation https://en.wikipedia.org/wiki/Hanging_punctuation
-   Microtypography: paragraphs starting/ending in quote marks outdent the quote slightly, so the paragraph continues to line up.
-   This is most noticeable in epigraphs and blockquotes. Minor, but nice.
-   CSS standard: https://www.w3.org/TR/css-text-3/#propdef-hanging-punctuation
-   Supported only in Safari https://caniuse.com/css-hanging-punctuation https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation#browser_compatibility but that has 18% market share, which is not nothing. */
-p { hanging-punctuation: first last; }
-
 /*  LaTeX/TeX: Format the logotypes correctly (a higher up, e lower)
     (borrowed from https://latex.now.sh/ )
     */
@@ -1837,7 +1821,7 @@ p { hanging-punctuation: first last; }
 }
 
 /*  Prevent text-shadow of italics in links from creating visual glitches
-    (also fixes occasional link icon overlaps, eg. a WP link to 'MGS:V' where
+    (also fixes occasional link icon overlaps, eg a WP link to 'MGS:V' where
     the right-tilted 'V' would touch the WP 'W' link icon).
     */
 .markdownBody em {
@@ -1929,11 +1913,7 @@ span.inflationAdjusted {
     }
     .drop-cap-kanzlei::first-letter,
     .drop-cap-kanzlei > p:first-child::first-letter {
-        font-family: "Kanzlei Initialen";
-        font-size: 7em;
-        line-height: 1;
-        margin: 0.025em 0.025em -0.25em -0.03em;
-        color: var(--GW-drop-caps-kanzlei-color);
+   
     }
 
     /*  Compensating for responsive line-height reduction.
@@ -2274,9 +2254,9 @@ body.directory-index article::before {
     }
 }
 @media only screen and (max-width: 649px) {
-    body.index #back-to-top {
-        left: unset;
-    }
+	body.index #back-to-top {
+		left: unset;
+	}
 }
 
 /*=----------------=*/
@@ -2286,7 +2266,7 @@ body.directory-index article::before {
 body.reviews-books #markdownBody blockquote {
   clear: none;
 }
-body.reviews-books #markdownBody ol {
+bodyreviews-books #markdownBody ol {
   overflow: unset;
 }
 
@@ -2804,7 +2784,7 @@ body.directory-index #disqus_thread {
 
 .popframe ul,
 .popframe ol {
-    overflow: unset;
+	overflow: unset;
 }
 
 .popframe:not(.zoomed) p + p {
@@ -2921,7 +2901,7 @@ body.directory-index #disqus_thread {
 .popframe.annotation .originalURL {
     font-variant-caps: small-caps;
     margin: 0 0.5em 0 0;
-    font-size: 0.875em;
+    font-size: 90%;
 }
 .popframe.annotation .iaMirror {
     padding-right: 0.3em;
@@ -2961,60 +2941,54 @@ body.directory-index #disqus_thread {
     height: 100%;
 }
 
-/*  Wikipedia entries.
- */
-/* Suppress the author block in WP popups; we have nothing more useful to say than 'Wikipedia' (even if we grabbed the last-revision-time from WP, that's usually just a trivial bot edit and isn't a 'real' author date), and the fact that it's WP is already denoted by the dotted underline, 'W' icon on the title link, lack of the standard metadata block which non-WP annotations have (author/date/tag/backlinks/similar-links), and the encyclopedic topic & tone. Putting 'Wikipedia' on an entire line by itself is just a waste of precious popup vertical space. */
-.wikipedia-entry .author-plus-date { display: none; }
+/*	Wikipedia entries.
+	*/
 .wikipedia-entry .table-wrapper {
-    margin: 1.5em 0 1.5em 0;
-    clear: both;
+	margin: 1.5em 0 1.5em 0;
+	clear: both;
 }
 .wikipedia-entry .infobox {
-    font-size: 0.9em;
+	font-size: 0.9em;
 }
 .wikipedia-entry .infobox tbody tr:hover {
-    outline: none;
+	outline: none;
 }
 .wikipedia-entry .infobox th[colspan="2"],
 .wikipedia-entry .infobox td[colspan="2"],
 .wikipedia-entry .infobox th.sidebar-title,
 .wikipedia-entry .infobox th.sidebar-heading {
-    text-align: center;
+	text-align: center;
 }
 .wikipedia-entry .infobox th {
-    border-top: 1px solid var(--GW-table-row-horizontal-border-color);
+	border-top: 1px solid var(--GW-table-row-horizontal-border-color);
 }
 .wikipedia-entry .infobox tr:first-of-type th {
-    font-size: 1.25em;
+	font-size: 1.25em;
 }
 .wikipedia-entry .infobox td:first-child {
-    font-weight: bold;
+	font-weight: bold;
 }
 .wikipedia-entry .infobox td ul {
-    margin: 0.25em 0;
-    padding: 0 0 0 1.5em;
+	margin: 0.25em 0;
+	padding: 0 0 0 1.5em;
 }
 .popframe.annotation .popframe-content-view.wikipedia-entry > figure.float-right {
     margin: 0.125em 0 0.75em 1.5em;
 }
 .wikipedia-entry #Timeline-row {
-    display: flex;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 0.25em auto;
+	display: flex;
+	width: -moz-fit-content;
+	width: fit-content;
+	margin: 0.25em auto;
 }
 .wikipedia-entry th br ~ * {
-    font-weight: normal;
-    font-size: calc((1 / 1.25) * 1em);
+	font-weight: normal;
+	font-size: calc((1 / 1.25) * 1em);
 }
 .wikipedia-entry .hatnote {
-    margin: 0 0 0.75em 0;
-    font-style: italic;
+	margin: 0 0 0.75em 0;
+	font-style: italic;
 }
-
-/* HACK: In WP popups, the thumbnails typically do not *quite* align with the caption, unlike regular images or in regular popups: the images ('img') get set to 250px (WP API's default for mobile?), but the figure caption ('figcaption') get set to 265.185px, producing a nagging inconsistency. This seems to be due to a loop in extracts.js ('// Ensure no reflow due to figures'), which tries to avoid the popup reflowing by setting the width dynamically, but it does so only on the *img* element. Thus, they wind up inconsistent.
-To hack around this issue (which surely has a better answer), and since in some cursory testing I didn't observe any widths >250px even for cases where WP could be sending a far bigger thumbnail/image, we can hardwire ahead of time a max-width of 250px in just WP popups' floated figures' captions.  */
-.wikipedia-entry figure[class^='float-'] .caption-wrapper { max-width: 250px; }
 
 /*┌──────────────────────┐*/
 /*│ Footnote pop-frames. │*/
@@ -3249,6 +3223,8 @@ To hack around this issue (which surely has a better answer), and since in some 
     min-width: var(--GW-popups-popup-with-title-bar-min-width);
 }
 
+.popframe-title-link { font-weight: bold; }
+
 .popup .popframe-title-bar {
     position: absolute;
     height: var(--popup-title-bar-height);
@@ -3260,6 +3236,7 @@ To hack around this issue (which surely has a better answer), and since in some 
     width: 100%;
     cursor: grab;
     z-index: 11;
+    font-weight: bold;
 }
 
 .popup.has-title-bar.mini-title-bar .popframe-title-bar {
@@ -3287,7 +3264,6 @@ To hack around this issue (which surely has a better answer), and since in some 
 .popup .popframe-title {
     font-family: var(--GW-sans-serif-font-stack);
     font-size: 0.8rem;
-    font-weight: bold;
     flex: 1 1 100%;
     /*  Extra 3rem padding on left to accommodate 2 extra buttons. */
     padding: 0 4rem 0 1rem;
@@ -3711,15 +3687,6 @@ To hack around this issue (which surely has a better answer), and since in some 
     margin: 1em -1em 1.125em -1em;
 }
 
-/*┌─────────────┐*/
-/*│ Tag popups. │*/
-/*└─────────────┘*/
-/* on tag/directory index popups, we want to hide the initial '# Links' <h1> because it takes up way too much space and adds nothing. */
-.popup h1.displayPopNot, .popinb h1.displayPopNot { display: none; }
-
-/* We also want to squeeze the directory list because the default unordered-list padding of 2em bottom uses up too much of a popup. */
-.popup #directory-indexes ul { margin-top: 0.5em; margin-bottom: 0.5em; }
-
 /*=---------------=*/
 /*= POPUP CONTENT =*/
 /*=---------------=*/
@@ -3806,10 +3773,11 @@ To hack around this issue (which surely has a better answer), and since in some 
 }
 
 #popup-options-dialog button.close-button {
+    display: block;
     width: 2em;
     position: absolute;
     left: 0.4em;
-    top: 0.15em;
+    top: 0.4em;
     color: var(--GW-popups-popup-options-dialog-button-text-color);
     margin: 1px;
 }
@@ -3823,8 +3791,7 @@ To hack around this issue (which surely has a better answer), and since in some 
     box-shadow: -1px -1px 0 0 currentColor;
 }
 #popup-options-dialog button.close-button svg {
-    height: 100%;
-    width: 100%;
+    display: block;
     fill: currentColor;
 }
 
@@ -3982,7 +3949,7 @@ To hack around this issue (which surely has a better answer), and since in some 
     right: calc(-1 * var(--GW-popins-popin-border-width));
     bottom: calc(100%);
     height: calc(var(--GW-popins-popin-border-width) + var(--GW-popins-popin-title-bar-height));
-    max-width: calc(100% + (2 * var(--GW-popins-popin-border-width)) - 2em);
+	max-width: calc(100% + (2 * var(--GW-popins-popin-border-width)) - 2em);
     border-style: double;
     border-color: var(--GW-popins-popin-border-color);
     border-width:  var(--GW-popins-popin-border-width) var(--GW-popins-popin-border-width) 0 var(--GW-popins-popin-border-width);
@@ -4007,7 +3974,7 @@ To hack around this issue (which surely has a better answer), and since in some 
 .popin .popframe-title {
     display: flex;
     font-family: var(--GW-sans-serif-font-stack);
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     flex: 1 1 100%;
     padding: 0 1rem;
     white-space: nowrap;
@@ -4060,27 +4027,27 @@ To hack around this issue (which surely has a better answer), and since in some 
     opacity: 0.35;
 }
 
-/*  Popin stack counter.
-    */
+/*	Popin stack counter.
+	*/
 .popin-stack-counter {
-    position: absolute;
-    right: calc(100% + var(--GW-popins-popin-border-width));
-    bottom: var(--GW-popins-popin-border-width);
-    height: calc(var(--GW-popins-popin-title-bar-height) - var(--GW-popins-popin-border-width) - 3px);
+	position: absolute;
+	right: calc(100% + var(--GW-popins-popin-border-width));
+	bottom: var(--GW-popins-popin-border-width);
+	height: calc(var(--GW-popins-popin-title-bar-height) - var(--GW-popins-popin-border-width) - 3px);
     padding: 0 0.5em;
-    background-color: var(--GW-popins-popin-border-color);
-    border-style: solid;
-    border-color: var(--GW-popins-popin-border-color);
-    border-width: 1px 0 0 1px;
-    font-family: var(--GW-sans-serif-font-stack);
-    font-size: 0.8rem;
-    font-weight: normal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	background-color: var(--GW-popins-popin-border-color);
+	border-style: solid;
+	border-color: var(--GW-popins-popin-border-color);
+	border-width: 1px 0 0 1px;
+	font-family: var(--GW-sans-serif-font-stack);
+	font-size: 0.8rem;
+	font-weight: normal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
     text-indent: 0;
-    cursor: default;
-    color: var(--GW-popins-popin-stack-counter-text-color);
+	cursor: default;
+	color: var(--GW-popins-popin-stack-counter-text-color);
 }
 
 /*┌────────────────────┐*/
@@ -4188,25 +4155,25 @@ To hack around this issue (which surely has a better answer), and since in some 
 
 .popin-open:not(.footnote-ref),
 .popin-open:not(.footnote-ref):hover {
-    background-color: var(--GW-popins-popin-background-color);
-    --GW-link-underline-background-color: var(--GW-popins-popin-background-color);
-    --popin-open-highlight-box-shadow-x-offset: 2px;
-    box-shadow:
-        var(--popin-open-highlight-box-shadow-x-offset) 0 0 5px var(--GW-popins-popin-background-color);
-    background-image: none !important;
-    display: inline-block;
+	background-color: var(--GW-popins-popin-background-color);
+	--GW-link-underline-background-color: var(--GW-popins-popin-background-color);
+	--popin-open-highlight-box-shadow-x-offset: 2px;
+	box-shadow:
+		var(--popin-open-highlight-box-shadow-x-offset) 0 0 5px var(--GW-popins-popin-background-color);
+	background-image: none !important;
+	display: inline-block;
     text-align: left;
     text-indent: 0;
 }
 .popin-open:not(.footnote-ref)::before,
 .popin-open:not(.footnote-ref):hover::before {
-    background-image: none;
-    width: calc(100% + 2 * var(--GW-popins-popin-border-width));
-    height: calc(100% + 2 * var(--GW-popins-popin-border-width));
-    border: var(--GW-popins-popin-border-width) double var(--GW-popins-popin-border-color);
-    left: calc(var(--popin-open-highlight-box-shadow-x-offset) - (2 * var(--GW-popins-popin-border-width)));
-    bottom: calc(0px - (2 * var(--GW-popins-popin-border-width)));
-    top: unset;
+	background-image: none;
+	width: calc(100% + 2 * var(--GW-popins-popin-border-width));
+	height: calc(100% + 2 * var(--GW-popins-popin-border-width));
+	border: var(--GW-popins-popin-border-width) double var(--GW-popins-popin-border-color);
+	left: calc(var(--popin-open-highlight-box-shadow-x-offset) - (2 * var(--GW-popins-popin-border-width)));
+	bottom: calc(0px - (2 * var(--GW-popins-popin-border-width)));
+	top: unset;
 }
 
 /*=-------------=*/
@@ -4218,12 +4185,12 @@ To hack around this issue (which surely has a better answer), and since in some 
 /*└────────────────────┘*/
 
 @media only screen and (max-width: 649px) {
-    .popin .annotation-abstract figure:first-child {
-        margin-top: 1.75em;
-    }
-    .popin .annotation-abstract.wikipedia-entry figure:first-child {
-        margin-top: 1.5em;
-    }
+	.popin .annotation-abstract figure:first-child {
+		margin-top: 1.75em;
+	}
+	.popin .annotation-abstract.wikipedia-entry figure:first-child {
+		margin-top: 1.5em;
+	}
 }
 
 /*┌──────────────────┐*/
@@ -4231,7 +4198,7 @@ To hack around this issue (which surely has a better answer), and since in some 
 /*└──────────────────┘*/
 
 .popin.footnote {
-    min-height: unset;
+	min-height: unset;
 }
 
 /*┌──────────────────────────┐*/
@@ -4306,9 +4273,9 @@ To hack around this issue (which surely has a better answer), and since in some 
 /*└──────────────┘*/
 
 .popin {
-    white-space: normal;
-    font-weight: normal;
-    font-style: normal;
+	white-space: normal;
+	font-weight: normal;
+	font-style: normal;
     font-size: var(--GW-body-text-font-size);
     text-align: unset;
 }
@@ -4318,17 +4285,17 @@ To hack around this issue (which surely has a better answer), and since in some 
 /*└───────────────────────┘*/
 
 .popin .markdownBody p {
-    text-align: justify;
+	text-align: justify;
 }
 
-/*  Page metadata block in local page embed popups.
-    */
+/*	Page metadata block in local page embed popups.
+	*/
 .popin #page-metadata-block span:nth-of-type(3) {
-    white-space: normal;
-    display: block;
+	white-space: normal;
+	display: block;
 }
 .popin #page-metadata-block > span:nth-child(n+2)::after {
-    content: none;
+	content: none;
 }
 
 /*********************/

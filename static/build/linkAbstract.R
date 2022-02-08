@@ -3,7 +3,7 @@
 # LinkAbstracter
 # Author: gwern
 # Date: 2019-08-29
-# When:  Time-stamp: "2021-11-03 22:24:15 gwern"
+# When:  Time-stamp: "2021-04-29 15:26:41 gwern"
 # License: CC-0
 #
 # Read a PLOS or PMCID URL, and return the parsed fulltext as newline-delimited Title/Author/Date/DOI/Abstract.
@@ -47,12 +47,13 @@ if (grepl("plos",args)) {
     # look up in PLOS:
     library(fulltext)
     # NOTE: a PLOS DOI might not have fulltext, even if it's a valid DOI: PLOS assigns individual DOIs to *parts of articles* like figures or tables or supplements. See `ft_get-warnings` documentation.
-    fulltext <-  tryCatch(ft_get(doi, from="entrez"), warning=function(w) { print(w); cat(doi); cat(args[1]); quit(status=1) })
+    fulltext <-  tryCatch(ft_get(doi), warning=function(w) { print(w); cat(doi); cat(args[1]); quit(status=1) })
+
 
     library(pubchunks)
-    y <- (fulltext %>% ft_collect("author", "title") %>% pub_chunks())$entrez[[1]]
+    y <- (fulltext %>% ft_collect("author", "title") %>% pub_chunks())$plos[[1]]
     # NOTE: we preserve XML/HTML formatting in the abstract (but not other fields), such as headers or subscripts, by using 'as.character' option
-    abstract <- gsub("\\*", "×", (fulltext %>% ft_collect("abstract") %>% pub_chunks(extract="as.character"))$entrez[[1]]$abstract)
+    abstract <- gsub("\\*", "×", (fulltext %>% ft_collect("abstract") %>% pub_chunks(extract="as.character"))$plos[[1]]$abstract)
 
     title <- gsub("\n *", " ", y$title)
     author <- paste(sapply(y$authors, function(a) { paste(a$given_names, a$surname)}), collapse=", ")
@@ -102,10 +103,7 @@ if (grepl("plos",args)) {
     combined        <- paste0(paste0(labelsFormatted, rep(": ", length(labelsFormatted)), text), collapse="\n\n")
 
     title    <- fulltext$title
-    # convert `[1] "Kosuri, Sriram"   "Church, George M"` into "Sriram Kosuri, George M Church"
-    author   <- paste(unlist(
-          Map(function(name) { paste(rev(unlist(strsplit(name, ", "))), collapse=" ") }, fulltext$author)),
-      collapse=", ")
+    author   <- fulltext$author
     date     <- fulltext$year
     doi      <- fulltext$doi
     abstract <- { if (length(labels) > 1) { combined; } else { fulltext$abstract; } }
@@ -140,4 +138,5 @@ if (grepl("plos",args)) {
     cat(c(as.character(date), "\n"))
     if (is.list(doi)) { cat("\n"); } else { cat(c(doi, "\n")) }
     cat(paste0(abstract, sep="\n\n"))
+
 }

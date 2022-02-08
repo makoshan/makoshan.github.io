@@ -4,7 +4,7 @@ module Inflation (nominalToRealInflationAdjuster) where
 -- InflationAdjuster
 -- Author: gwern
 -- Date: 2019-04-27
--- When:  Time-stamp: "2022-01-06 14:20:52 gwern"
+-- When:  Time-stamp: "2021-01-02 16:50:10 gwern"
 -- License: CC-0
 --
 -- Experimental Pandoc module for fighting https://en.wikipedia.org/wiki/Money_illusion by implementing automatic inflation adjustment of nominal date-stamped dollar or Bitcoin amounts to provide real prices; Bitcoin's exchange rate has moved by multiple orders of magnitude over its early years (rendering nominal amounts deeply unintuitive), and this is particularly critical in any economics or technology discussion where a nominal price from 1950 is 11x the 2019 real price! (Misunderstanding of inflation may be getting worse over time: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3469008 )
@@ -19,15 +19,12 @@ Another example of the silliness of not thinking about the use: ever notice thos
 
 1. how it started: How did the efficient markets *react*?
 
-    When people look at stock price movements to interpret whether news is better or worse than expected, they are implicitly appealing to the EMH: "the market understands what this means, and the stock going up or down tells us what it thinks". So 'tickercruft' is a half-assed implicit 'event study' (which is only an event if you happen to read it within a few hours of publication—if even that). "GoodRx fell −25% when Amazon announced online pharmacy. Wow, that's serious!"
+  When people look at stock price movements to interpret whether news is better or worse than expected, they are implicitly appealing to the EMH: "the market understands what this means, and the stock going up or down tells us what it thinks". So 'tickercruft' is a halfassed implicit 'event study' (which is only an event if you happen to read it within a few hours of publication - if even that). "GoodRx fell -25% when Amazon announced online pharmacy. Wow, that's serious!"
 
-    To improve the event study, we make this rigorous: the ticker is meaningful only if it captures the *event*. Each use must be time-bracketed: what exact time did the news break & how did the stock move in the next ~hour (or possibly day)? Then that movement is cached and displayed henceforth. It may not be perfect but it's a lot better than displaying stock movements from arbitrarily far in the future when the reader happens to be reading it.
+To improve the event study, we make this rigorous: the ticker is meaningful only if it captures the *event*. Each use must be time-bracketed: what exact time did the news break & how did the stock move in the next ~hour (or possibly day)? Then that movement is cached and displayed henceforth. It may not be perfect but it's a lot better than displaying stock movements from arbitrarily far in the future when the reader happens to be reading it.
 2. How's it been going since then?
 
-    When we read news, to generalize event studies, we are interested in the long-term outcome. "It's a bold strategy, Cotton. Let's see how it works out for them." So, similar to considering the net return for investment purposes, we can show the (net real index adjusted) return since publication. The net is a high-variance but unbiased estimator of every news article, and useful to know as foreshadowing: imagine reading an old article with the sentence "VISA welcomes its exciting new CEO John Johnson (V: -30%)." This is useful context. V being up 0.1% the day you read the article, is not.
-
-Tooling-wise, this is easy to support. They can be marked up the same way, eg. '[AMZN](!N "2019-04-27")' for Amazon/NASDAQ. For easier writing, since stock tickers tend to be unique (there are not many places other than stock names that strings like "AMZN" or "TSLA" would appear), the writer's text editor can run a few thousand regexp query-search-and-replaces (there are only so many stocks) to transform 'AMZN' → '[AMZN](!N "2019-04-27")' to inject the current day automatically. (This could also be done by the CMS automatically on sight, assuming first-seen = writing-date, although with Pandoc this has the disadvantage that round-tripping does not preserve the original Markdown formatting, and the Pandoc conventions can look pretty strange compared to 'normal' Markdown—at least mine, anyway.)
--}
+When we read news, to generalize event studies, we are interested in the long-term outcome. "It's a bold strategy, Cotton. Let's see how it works out for them." So, similar to considering the net return for investment purposes, we can show the (net real index adjusted) return since publication. The net is a high-variance but unbiased estimator of every news article, and useful to know as foreshadowing: imagine reading an old article with the sentence "VISA welcomes its exciting new CEO John Johnson (V: -30%)." This is useful context. V being up 0.1% the day you read the article, is not. -}
 
 {- Examples:
 Markdown → HTML:
@@ -69,10 +66,10 @@ import Data.List (intercalate, unfoldr)
 import qualified Data.Map.Strict as M (findMax, findMin, fromList, lookup, lookupGE, lookupLE, mapWithKey, Map)
 import Data.Text as T (head, pack, unpack, tail)
 
-import Utils (currentYear)
-
 minPercentage :: Float
 minPercentage = 1 + 0.20
+currentYear :: Int
+currentYear = 2020
 
 nominalToRealInflationAdjuster :: Inline -> Inline
 nominalToRealInflationAdjuster x@(Link _ _ (ts, _))
@@ -92,9 +89,9 @@ dollarAdjuster l@(Link _ text (oldYears, _)) =
             -- provide all 4 variables as metadata the <span> tags for possible CSS/JS processing
             [("originalYear",oldYear),("originalAmount",T.pack oldDollarString),
              ("currentYear",T.pack $ show currentYear),("currentAmount",T.pack adjustedDollarString),
-             ("title", T.pack ("CPI inflation-adjusted US dollar: from nominal $"++oldDollarString'++" in "++T.unpack oldYear++" → real $"++adjustedDollarString++" in "++show currentYear)) ])
+             ("title", T.pack ("CPI inflation-adjusted US dollar: from nominal $"++oldDollarString++" in "++T.unpack oldYear++" → real $"++adjustedDollarString++" in "++(show currentYear))) ])
       -- [Str ("$" ++ oldDollarString), Subscript [Str oldYear, Superscript [Str ("$"++adjustedDollarString)]]]
-      [Str (T.pack $ "$"++adjustedDollarString),  Span ("",["supsub"],[]) [Superscript [Str $ T.pack $ "$" ++ oldDollarString'], Subscript [Str oldYear]]]
+      [Str (T.pack $ "$"++adjustedDollarString),  Span ("",["supsub"],[]) [Superscript text, Subscript [Str oldYear]]]
     where -- oldYear = '$1970' → '1970'
           oldYear = T.tail oldYears
           oldDollarString = filter (/= '$') $ inlinesToString text -- '$50.50' → '50.50'
@@ -105,10 +102,8 @@ dollarAdjuster l@(Link _ text (oldYears, _)) =
           -- round to 2 digits when converting to String if a decimal was present and the inflation factor is <10x, otherwise, round to whole numbers.
           -- So, '$1.05' becomes '$20.55', but '$1' becomes '$20' instead of '$20.2359002', and '$0.05' can still become '$0.97'
           precision = if ('.' `elem` oldDollarString) && ((adjustedDollar < 10*oldDollar) || (adjustedDollar < 1)) then "2" else "0"
-          oldDollarString' = formatDecimal oldDollar precision
           adjustedDollar = dollarAdjust oldDollar (T.unpack oldYear)
           adjustedDollarString = formatDecimal adjustedDollar precision
-
 dollarAdjuster x = x
 
 inlinesToString :: [Inline] -> String
@@ -129,13 +124,13 @@ dollarAdjust amount year = case (readMaybe year :: Maybe Int) of
 -- CPI: 1913-1958
 -- PCE: 1959
 -- https://en.wikipedia.org/wiki/Personal_consumption_expenditures_price_index
--- "When gauging inflation and the overall economic stability of the United States, the Federal Reserve prefers to use the PCE Index. The CPI is the most well-known economic indicator, and the PCE is largely forgotten. However, the Federal Reserve prefers the PCE index when reviewing economic conditions and fiscal policy, inflation, and employment. The PCE is preferred because it is composed of a broad range of expenditures. While the CPI helps to depict shifts or changes in consumer expenditures, it only reveals changes in those expenditures that fall within the pre-established fixed basket. The PCE, on the other hand, includes a broad range of household expenses. The PCE is also weighted by data acquired through business surveys, which tend to be more reliable than the consumer surveys used by the CPI." https://www.investopedia.com/terms/p/pce.asp https://www.forbes.com/sites/scottwinship/2015/06/15/debunking-disagreement-over-cost-of-living-adjustment/
+-- "When gauging inflation and the overall economic stability of the United States, the Federal Reserve prefers to use the PCE Index. The CPI is the most well-known economic indicator, and the PCE is largely forgotten. However, the Federal Reserve prefers the PCE index when reviewing economic conditions and fiscal policy, inflation, and employment. The PCE is preferred because it is composed of a broad range of expenditures. While the CPI helps to depict shifts or changes in consumer expenditures, it only reveals changes in those expenditures that fall within the pre-established fixed basket. The PCE, on the other hand, includes a broad range of household expenses. The PCE is also weighted by data acquired through business surveys, which tend to be more reliable than the consumer surveys used by the CPI." https://www.investopedia.com/terms/p/pce.asp https://www.forbes.com/sites/scottwinship/2015/06/15/debunking-disagreement-over-cost-of-living-adjustment/#46e0cfdf2eb4
 inflationRatesUS :: [Float]
 inflationRatesUS = let -- CPI: http://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/ 1913--1958
-    cpi19131958 = [0.0,1.0,2.0,12.6,18.1,20.4,14.5,2.6,-10.8,-2.3,2.4,0.0,3.5,-1.1,-2.3,-1.2,0.6,-6.4,-9.3,-10.3,0.8,1.5,3.0,1.4,2.9,-2.8,0.0,0.7,9.9,9.0,3.0,2.3,2.2,18.1,8.8,3.0,-2.1,5.9,6.0,0.8,0.7,-0.7,0.4,3.0,2.9,1.8] -- [1.7,1.4,0.7,1.3,1.6,1.0,1.9,3.5,3.0,4.7,6.2,5.6,3.3,3.4,8.7,12.3,6.9,4.9,6.7,9.0,13.3,12.5,8.9,3.8,3.8,3.9,3.8,1.1,4.4,4.4,4.6,6.1,3.1,2.9,2.7,2.7,2.5,3.3,1.7,1.6,2.7,3.4,1.6,2.4,1.9,3.3,3.4,2.5,4.1,0.1,2.7,1.5,3.0,1.7,1.5,0.8,0.7,2.1,2.1,]
+  cpi = [0.0,1.0,2.0,12.6,18.1,20.4,14.5,2.6,-10.8,-2.3,2.4,0.0,3.5,-1.1,-2.3,-1.2,0.6,-6.4,-9.3,-10.3,0.8,1.5,3.0,1.4,2.9,-2.8,0.0,0.7,9.9,9.0,3.0,2.3,2.2,18.1,8.8,3.0,-2.1,5.9,6.0,0.8,0.7,-0.7,0.4,3.0,2.9,1.8] in -- [1.7,1.4,0.7,1.3,1.6,1.0,1.9,3.5,3.0,4.7,6.2,5.6,3.3,3.4,8.7,12.3,6.9,4.9,6.7,9.0,13.3,12.5,8.9,3.8,3.8,3.9,3.8,1.1,4.4,4.4,4.6,6.1,3.1,2.9,2.7,2.7,2.5,3.3,1.7,1.6,2.7,3.4,1.6,2.4,1.9,3.3,3.4,2.5,4.1,0.1,2.7,1.5,3.0,1.7,1.5,0.8,0.7,2.1,2.1,]
                        -- https://www.bea.gov/system/files/2019-08/pi0719_hist.pdf#page=3 "Annual Personal Income, DPI, PCE And Personal Saving: Levels And Percent Changes" 1959--2018
-    pce19592018 = [5.7,2.7,2.1,4.9,4.1,6.0,6.3,5.7,3.0,5.8,3.7,2.4,3.8,6.1,4.9,-0.8,2.3,5.6,4.2,4.4,2.4,-0.3,1.4,1.5,5.7,5.3,5.2,4.1,3.4,4.2,2.9,2.0,0.2,3.7,3.5,3.9,3.0,3.5,3.8,5.3,5.3,5.1,2.5,2.6,3.2,3.8,3.6,3.1,2.2,-0.2,-1.3,1.7,1.9,1.5,1.5,3.0,3.7,2.7,2.6,3.0]
-    in (cpi19131958 ++ pce19592018) ++ repeat (last pce19592018)
+  let pce = [5.7,2.7,2.1,4.9,4.1,6.0,6.3,5.7,3.0,5.8,3.7,2.4,3.8,6.1,4.9,-0.8,2.3,5.6,4.2,4.4,2.4,-0.3,1.4,1.5,5.7,5.3,5.2,4.1,3.4,4.2,2.9,2.0,0.2,3.7,3.5,3.9,3.0,3.5,3.8,5.3,5.3,5.1,2.5,2.6,3.2,3.8,3.6,3.1,2.2,-0.2,-1.3,1.7,1.9,1.5,1.5,3.0,3.7,2.7,2.6,3.0]
+     in (cpi++pce) ++ repeat (last pce)
 
 -- inflationAdjustUS 1 1950 2019 → 10.88084
 -- inflationAdjustUS 5.50 1950 2019 → 59.84462

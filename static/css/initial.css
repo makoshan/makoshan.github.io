@@ -13,7 +13,7 @@
 /*************/
 
 :root {
-    --GW-serif-font-stack: "Source Serif Pro",  "Apple Garamond", "Baskerville", "Libre Baskerville", "Droid Serif", "Times New Roman", "Times", serif;
+    --GW-serif-font-stack: "Source Serif Pro",  "Apple Garamond", "Baskerville", "Libre Baskerville", "Times New Roman", "Droid Serif", "Times", serif;
     --GW-sans-serif-font-stack: "Lucida Sans Unicode", "Source Sans Pro", Helvetica, "Trebuchet MS", sans-serif;
     --GW-monospaced-font-stack: "IBM Plex Mono", "Liberation Mono", Consolas, Courier, monospace;
 
@@ -48,7 +48,7 @@ body {
 
 @media only screen and (min-width: 650px) {
     body {
-        padding: 0 25px 0 10px;
+        padding: 0 25px 0 5px;
         margin: 0 auto;
     }
     @media only screen and (min-width: 1185px) {
@@ -107,7 +107,7 @@ body {
 
 @media only screen and (max-width: 649px) {
     body {
-        margin: 0 15px;
+        margin: 0 20px;
     }
 }
 
@@ -243,7 +243,7 @@ header h1 {
     text-align: left;
 }
 
-/* Override normal handling of italics: before, we wrapped descriptions in `<em>`; however, they compile to HTML which can contain italics of their own (eg. book titles). This causes HTML Tidy to warn about nested italics (which is valid HTML but *usually* means you've made an error - this often triggers when I mess up bolding, for example, like on /GPT-3 ). So we removed the wrapper in favor of the above `font-style: italic`. However, now the titles don't unitalicize automatically like they would for nested italics! So we force italicized titles back to normal Roman font to match the expected typographic convention. */
+/* Override normal handling of italics: before, we wrapped descriptions in `<em>`; however, they compile to HTML which can contain italics of their own (eg book titles). This causes HTML Tidy to warn about nested italics (which is valid HTML but *usually* means you've made an error - this often triggers when I mess up bolding, for example, like on /GPT-3 ). So we removed the wrapper in favor of the above `font-style: italic`. However, now the titles don't unitalicize automatically like they would for nested italics! So we force italicized titles back to normal Roman font to match the expected typographic convention. */
 #page-metadata #page-description {
     display: block;
     margin: 0 auto 0.75em auto;
@@ -298,56 +298,10 @@ body.index #sidebar a#logo {
     pointer-events: none;
 }
 
-body.index #markdownBody section h1 {
-    border-bottom: 1px dotted currentColor;
-}
-
-/*  Columns.
- */
-
-/* Suppress bonus section in single/double-column layout */
-body.index #markdownBody #notable {
-    display: none;
-}
-
-@media only screen and (min-width: 961px) {
-
-    body.index #markdownBody {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 2em;
-        grid-row-gap: 0.5em;
-    }
-    body.index #markdownBody .abstract {
-        grid-column-start: 1;
-        grid-column-end: -1;
-    }
-    body.index #markdownBody section > ul {
-        margin: 0.75em 3em 0 0.25em;
-    }
-    @media only screen and (max-width: 1040px) {
-        body.index #markdownBody {
-            grid-template-columns: 1fr;
-        }
-        body.index #markdownBody section > ul {
-            column-count: 2;
-            column-gap: 3em;
-        }
-        body.index #markdownBody section > ul li {
-            break-inside: avoid;
-        }
-    }
-}
-
-/* On sufficiently-wide screens, we can get 3 columns in nicely; to preserve the initial row being 'meta' blocks, we leave #notable visible (for a newest/popular/notable triplet) */
-@media only screen and (min-width: 2050px) {
-
-    body.index #markdownBody #notable {
-        display: block;
-    }
-    body.index #markdownBody {
-        grid-template-columns: 45ch 45ch 45ch;
-    }
+/*  Make the sections reflow; better than fixed-width tables. */
+body.index article section {
+    display: inline-block;
+    vertical-align: top;
 }
 
 /*  Abstract is not a real abstract, just an introduction, no need for the abstract formatting.
@@ -357,6 +311,18 @@ body.index .abstract {
     border: none;
     margin: 0;
     box-shadow: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    /*  Leave enough horizontal room to show multiple sections simultaneously, table-like */
+    body.index #markdownBody {
+        width: 1350px;
+        max-width: calc(50vw + 420px);
+    }
+    body.index p,
+    body.index hr {
+        max-width: 970px;
+    }
 }
 
 /*  Add some vertical padding for the introduction.
@@ -384,7 +350,7 @@ body.tags #markdownBody ul {
 }
 body.index #markdownBody li > ul,
 body.tags #markdownBody li > ul {
-    margin: 0;
+    margin: 0.25em 0 0.25em 0;
 }
 body.index #markdownBody li,
 body.tags #markdownBody li {
@@ -691,25 +657,16 @@ body.index #markdownBody ul > li:nth-of-type(n+2) {
     }
 }
 
-/*  On wide screens (desktop), use fully-justified text (words get broken/hyphenated as necessary to avoid a
-    'ragged margin'), overriding browser default of 'flush left, ragged' right (see
+/*  Use justified text (words get broken/hyphenated as necessary to avoid a
+    'ragged margin'), undoing the default of 'flush left, ragged' right (see
     https://en.wikipedia.org/wiki/Typographic_alignment#Flush_left )
-
-    On mobile/narrow screens, that doesn't work as well: because browsers do greedy layout, justification forces 's t r e t c h e d out' words
-    and large spaces, leading to blatant https://en.wikipedia.org/wiki/River_(typography) , getting worse the narrower the screen (eg. in lists).
-    On wide screens, it isn't too bad, and justification is still better than not, but on mobile it is extremely noticeable.
-    Switching to flush left ragged right doesn't look as nicely 'even', but it avoids that pathological behavior.
-    (More advanced typesetting algorithms like Knuth-Plass https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap#Minimum_raggedness can handle mobile widths nicely,
-    but no contemporary browser implements them natively, and all JS implementations I've looked at are buggy.)
-*/
-@media only screen and (min-width: 900px) {
-    .markdownBody p,
-    .markdownBody li {
-        text-align: justify;
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
-    }
+    */
+.markdownBody p,
+.markdownBody li {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 /*  Cute 'old-style' numerals, look a little nicer inline in text, and available natively in the SS fonts:
@@ -747,14 +704,14 @@ h1 {
     }
 }
 
-/*  Lazy-load below-fold sections in supported browsers.
-    Disabled temporarily pending layout redesign to compensate for layout
-    containment. —Obormot 2021-03-21
-    */
+/*	Lazy-load below-fold sections in supported browsers.
+	Disabled temporarily pending layout redesign to compensate for layout
+	containment. —Obormot 2021-03-21
+	*/
 /*
 section.level1:nth-of-type(n+4) {
-    content-visibility: auto;
-    contain-intrinsic-size: 200vh;
+	content-visibility: auto;
+	contain-intrinsic-size: 200vh;
 }
  */
 
@@ -786,7 +743,7 @@ h1 {
 /*= Margin notes =*/
 /*=--------------=*/
 
-/*  On wide viewports, hide the margin notes until it is styled as a sidenote (i.e,
+/*  On wide viewports, hide margin note until it is styled as a sidenote (i.e,
     until it gets the `.sidenote` class applied to it).
     */
 @media only screen and (min-width: 1761px) {
@@ -802,11 +759,6 @@ h1 {
 a {
     color: var(--GW-body-link-color); /* off-black */
     text-decoration: none;
-}
-
-/* slightly gray out links the reader has already visited, so they know if they've seen that content before. (A critical affordance in densely hyperlinked longform.) */
-.markdownBody a:visited {
-    color: var(--GW-body-link-visited-color);
 }
 
 /*=------------------------=*/
@@ -825,20 +777,19 @@ May be able at some point to simplify this using regular link underlining, since
 */
 
 .markdownBody a:link,
-#footer a:link {
+div#footer a {
     text-decoration: none;
     background-image: linear-gradient(var(--GW-link-underline-gradient-line-color), var(--GW-link-underline-gradient-line-color));
     background-size: 1px 1px;
     background-repeat: repeat-x;
     background-position: 0% calc(100% - 0.1em);
-    box-decoration-break: clone;
+	box-decoration-break: clone;
 
     /*  Disable oldstyle nums in underlined links because the oldstyle nums are almost subscript-like and overlap */
     font-variant-numeric: lining-nums;
 }
 .markdownBody a:link,
-.markdownBody a:link *,
-#footer a:link {
+.markdownBody a:link * {
     text-shadow:
          0      0.05em  var(--GW-link-underline-background-color),
          0.05em 0.05em  var(--GW-link-underline-background-color),
@@ -866,23 +817,6 @@ a code {
     border-bottom-width: 0;
     word-break: normal;
     background-color: transparent;
-}
-
-/*  Reduce text-shadow overlap partially erasing letters next to smallcaps:
-    eg. in `<a href="https://www.microcovid.org/">"microCOVID project"</a>`,
-    the 'o' in 'micro' will be partially erased and look like a 'c' without
-    some sort of extra spacing
-    */
-.markdownBody a:link > .smallcaps,
-.markdownBody a:link > .smallcaps-auto {
-    margin-left: 0.7px;
-}
-
-/*  Like above, but for subscripts and superscripts
-    */
-.markdownBody a:link > sub,
-.markdownBody a:link > sup {
-    padding-left: 0.125em;
 }
 
 /**************/
@@ -1052,6 +986,9 @@ span.smallcaps-auto {
     font-feature-settings: 'smcp', 'c2sc';
     font-variant-numeric: tabular-nums;
 }
+/* Reduce text-shadow overlap partially erasing letters next to smallcaps: eg in `["microCOVID project"](https://www.microcovid.org/)`, the 'o' in 'micro' will be partially erased and look like a 'c' without some sort of extra spacing */
+a > .smallcaps-auto { margin-left: 0.7px; }
+
 /*************/
 /* DARK MODE */
 /*************/

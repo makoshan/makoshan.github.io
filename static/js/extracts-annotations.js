@@ -33,49 +33,44 @@ if (window.Extracts) {
 
         let referenceData = Annotations.referenceDataForAnnotationIdentifier(annotationIdentifier);
 
-        //  Open link in same window on mobile, new window on desktop.
-        let linkTarget = (Extracts.popFrameProvider == Popins) ? "_self" : "_blank";
+        let linkTarget = (Extracts.popFrameProvider == Popins) ? `target="_self"` : ` target="_new" `;
 
         //  Link to original URL (for archive links).
         let originalLinkHTML = "";
+        // remove HTML from the title, which may have <em> or <span class="smallcaps"> in it, breaking substitution.
+        function strip(html){
+            let doc = new DOMParser().parseFromString(html, 'text/html');
+            return doc.body.textContent || "";
+        }
+        let titleText = strip(referenceData.titleHTML);
+
         if (   referenceData.element.dataset.urlOriginal != undefined
-            && referenceData.element.dataset.urlOriginal != target.href) {
+               && referenceData.element.dataset.urlOriginal != target.href) {
+
             originalLinkHTML = `<span class="originalURL">[<a
-                            title="Link to original URL for ‘${referenceData.element.textContent}’"
-                            href="${referenceData.element.dataset.urlOriginal}"
-                            target="${linkTarget}"
-                            alt="Original URL for this archived link; may be broken."
+                            title="Link to original URL for ‘${titleText}’"
+                            href="${referenceData.element.dataset.urlOriginal}"` +
+                            linkTarget +
+                            `alt="Original URL for this archived link; may be broken."
                                 >live</a>]</span>`;
         }
 
         //  Extract title/link.
         let titleLinkClass = (originalLinkHTML > "" ? `title-link local-archive-link` : `title-link`);
         let titleLinkHTML = `<a
-                                class="${titleLinkClass}"
+                                class="${titleLinkClass}"` +
+                                linkTarget +
+                                `href="${target.href}"
                                 title="Open ${target.href} in a new window"
-                                href="${target.href}"
-                                target="${linkTarget}"
                                     >${referenceData.titleHTML}</a>`;
-
-        let similarLinksHtml = referenceData.similarHTML == `` ? `` : `; ${referenceData.similarHTML}`;
-
-        let tagBacklinks = `${similarLinksHtml}</p>`;
-        if (referenceData.tagsHTML == `` && referenceData.backlinksHTML == ``) { tagBacklinks = `${similarLinksHtml}</p>`; } else {
-            if (referenceData.tagsHTML != `` && referenceData.backlinksHTML == ``) { tagBacklinks = `; <span class="data-field link-tags">${referenceData.tagsHTML}${similarLinksHtml}</p>`; } else {
-                if (referenceData.tagsHTML == `` && referenceData.backlinksHTML != ``) { tagBacklinks = `; ${referenceData.backlinksHTML}${similarLinksHtml}</p>`; } else {
-                    if (referenceData.tagsHTML != `` && referenceData.backlinksHTML != ``) { tagBacklinks = `; ${referenceData.tagsHTML}; ${referenceData.backlinksHTML}${similarLinksHtml}</p>`; }
-                }
-            }
-        }
 
         //  The fully constructed annotation pop-frame contents.
         let abstractSpecialClass = ``;
         if (Annotations.isWikipediaLink(annotationIdentifier))
             abstractSpecialClass = "wikipedia-entry";
-        return `<p class="data-field title">${titleLinkHTML}${originalLinkHTML}</p>`
-            + `<p class="data-field author-plus-date">${referenceData.authorHTML}${referenceData.dateHTML}`
-            + tagBacklinks
-            + `<div class="data-field annotation-abstract ${abstractSpecialClass}">${referenceData.abstractHTML}</div>`;
+        return `<p class="data-field title">${titleLinkHTML} ${originalLinkHTML}</p>`
+             + `<p class="data-field author-plus-date">${referenceData.authorHTML}${referenceData.dateHTML}</p>`
+             + `<div class="data-field annotation-abstract ${abstractSpecialClass}">${referenceData.abstractHTML}</div>`;
     };
 
     Extracts.titleForPopFrame_ANNOTATION = (popFrame) => {
@@ -90,30 +85,29 @@ if (window.Extracts) {
         //  For sections of local pages, and Wikipedia, mark with ‘§’ symbol.
         if (   target.hash > ""
             && (   (   target.hostname == location.hostname
-                       // annotations for local archive links with an org notation for link icons (eg. ‘https://www.gwern.net/docs/ai/2020-bell.pdf#facebook') should not get a section mark
+                       // annotations for local archive links with an org notation for link icons (eg ‘https://www.gwern.net/docs/ai/2020-bell.pdf#facebook') should not get a section mark
                     && !([ "alibaba", "allen", "amazon", "baidu", "deepmind", "eleutherai", "facebook", "google", "googlebrain", "lighton", "microsoft", "miri", "nvidia", "openai", "pdf", "salesforce", "tencent", "tensorfork", "uber", "yandex"
                            ].includes(target.hash)))
                 || Annotations.isWikipediaLink(Extracts.targetIdentifier(target))))
             popFrameTitleText = "&#x00a7; " + popFrameTitleText;
 
         if (target.dataset.urlOriginal) {
-            //  Open link in same window on mobile, new window on desktop.
-            let linkTarget = (Extracts.popFrameProvider == Popins) ? "_self" : "_blank";
+            let linkTarget = (Extracts.popFrameProvider == Popins) ? ` target="_self" ` : ` target="_blank" `;
 
             //  For local-archive links, include archive link with original.
             return `<a
                     class="popframe-title-link-archived"
-                    title="Open ${target.href} in a new window (desktop) or current (mobile)"
                     href="${target.href}"
-                    target="${linkTarget}"
-                        >[ARCHIVED]</a>` +
+                    title="Open ${target.href} in a new window (desktop) or current (mobile)"` +
+                linkTarget +
+                `>[ARCHIVED]</a>` +
                 `<span class="separator">·</span>` +
                 `<a
                     class="popframe-title-link"
-                    title="Open ${target.dataset.urlOriginal} in a new window (desktop) or current (mobile)"
                     href="${target.dataset.urlOriginal}"
-                    target="${linkTarget}"
-                        >${popFrameTitleText.replace(/^\[original\]/, "")}</a>`;
+                    title="Open ${target.dataset.urlOriginal} in a new window (desktop) or current (mobile)"` +
+                    linkTarget +
+                        `>${popFrameTitleText.replace(/^\[original\]/, "")}</a>`;
         } else {
             return Extracts.standardPopFrameTitleElementForTarget(target, popFrameTitleText);
         }
@@ -237,7 +231,7 @@ if (window.Extracts) {
 
         /*  We set up an event handler for when the fragment loads, and respawn
             the popup / re-inject the popin, after it spawns (if it
-            hasn’t de-spawned already, eg. if the user moused out of the
+            hasn’t de-spawned already, e.g. if the user moused out of the
             target).
             */
         GW.notificationCenter.addHandlerForEvent("Annotations.annotationDidLoad", target.refreshPopFrameWhenFragmentLoaded = (info) => {

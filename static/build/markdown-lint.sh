@@ -1,5 +1,5 @@
 #!/bin/bash
-# When:  Time-stamp: "2022-01-16 10:41:14 gwern"
+# When:  Time-stamp: "2021-06-29 13:07:09 gwern"
 # see https://www.gwern.net/About#markdown-checker
 
 set +x
@@ -62,7 +62,7 @@ do
                   -e 'http://www.economist.com' -e 'http://www.theverge.com' -- "$PAGE"; }
         wrap λ "HTTP → HTTPS URLs"
 
-        ## ban articles written by John Hewitt; he endorses the pig-human pseudoscience, lies about research (eg claiming platypus genome proven to be a bird hybrid), and makes bad arguments (eg. his criticism of senolytics because senescent cells do not have a single unique universal signature):
+        ## ban articles written by John Hewitt; he endorses the pig-human pseudoscience, lies about research (eg claiming platypus genome proven to be a bird hybrid), and makes bad arguments (eg his criticism of senolytics because senescent cells do not have a single unique universal signature):
         λ(){ fgrep -e 'phys.org' -- "$PAGE" | fgp -v -e '2019-07-cat-science.html' -e '2017-08-cavemen-genetic-checkup.html' -e'2019-12-mouse-pups-born-eggs-derived.html'; }
         wrap λ "Phys.org link detected: make sure John Hewitt didn't write it"
 
@@ -84,7 +84,7 @@ do
         wrap λ "Section PDF links break when archived locally (thereby breaking the local-PDF popups), so avoid unusual anchors in favor of 'page=N' anchor links"
 
         λ() { egp -e '<div id="abstract"' -e '<div id="collapseSummary"' -e '^</div$' -e '^\[\!Margin: ' -e ' n=[[:digit:]]' -e ' n = [[:digit:]]' \
-                  -e ']\(/.*#fn[[:digit:]]' -e '[0-9]\.[0-9]*⁄' -e '^\.>' -e ' "\)[ );,$]' \
+                  -e ']\(/.*#fn[[:digit:]]' -e '[0-9]\.[0-9]*⁄' -e '^\.>' \
                   -e 'cssExtension: [a-c,e-z]' -e '^R> ' -e '^#+ Comments$' -- "$PAGE";
               fgp -e '(www' -e ')www' -e '![](' -e ']()' -e ' )' -e '](//' -e '](/wiki/' -e '](wiki/' -e '——–' -e '——' -e '————–' -e ' --- ' \
                   -e ' percent ' -e "    Pearson'" -e '~~~{.sh}' -e 'library("' -e ' +-' -e ' -+' -e '"collapse Summary"' -e '"CollapseSummary"' -e 'collapseSumary' -e '<!_-' -e ' bu ' \
@@ -92,7 +92,7 @@ do
                   -e '^ > [a-Z]' -e '^  > [a-Z]' -e '^   > [a-Z]' -e '^  - [a-Z]' -e '^   - [a-Z]' \
                   -e '<p class="drop-cap' -e 'class="drop-caps-' -e ' n_=' -e '~~~{.collape}' -e '~~~~' -e '{.fullwidth}' -e 'Wikiepdia' -e 'Wikipdia' -e '/docs/genetic/' \
                   -e '" ](' -e '!Marin:' -e '](images/' -e '\Mathcal{' -e "''" -e '``' -e ' " ' -e '\mathcal{O}(log' -e 'preload="metadata"' \
-                  -e '#close' -e '#page=page' -e '.pdf#section' -e '.pdf#subsection' -e '^<sup>' -e '<sup>^' -e '^</sup>' -e '</sup>^' -e ' : ' -e ']^[' -- "$PAGE"; }
+                  -e '#close' -e '#page=page' -e '.pdf#section' -e '.pdf#subsection' -e '^<sup>' -e '<sup>^' -e '^</sup>' -e '</sup>^' -- "$PAGE"; }
         wrap λ "look for broken syntax in original Markdown: (NOTE: footnotes should not be linked to because they are unstable; they should either be sections/appendices, or given a long-term div ID)"
 
         λ() { grep --perl-regexp --null-data --only-matching '(?s)\n\<\/div\>\n\n\^\[\!Margin: .....' -- "$PAGE"; }

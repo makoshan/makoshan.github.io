@@ -2,7 +2,7 @@
 
 -- Module for typographic enhancements of text:
 -- 1. adding smallcaps to capitalized phrases
--- 2. adding line-break tags (`<wbr>` as Unicode ZERO WIDTH SPACE) to slashes so web browsers break at slashes in text
+-- 2. adding line-break tags (`<wbr>`) to slashes so web browsers break at slashes in text
 -- 3. Adding classes to horizontal rulers (nth ruler modulo 3, allowing CSS to decorate it in a cycling pattern, like `class="ruler-1"`/`class="ruler-2"`/`class="ruler-3"`/`class="ruler-1"`..., like a repeating pattern of stars/moon/sun/stars/moon/sun... CSS can do this with :nth, but only for immediate sub-children, it can't count elements *globally*, and since Pandoc nests horizontal rulers and other block elements within each section, it is not possible to do the usual trick like with blockquotes/lists).
 module Typography (invertImageInline, typographyTransform, imageMagickDimensions) where
 
@@ -15,7 +15,7 @@ import Data.Time.Clock (diffUTCTime, getCurrentTime, nominalDay)
 import System.Directory (getModificationTime, removeFile)
 import System.Exit (ExitCode(ExitFailure))
 import System.Posix.Temp (mkstemp)
-import qualified Data.Text as T (any, isInfixOf, isSuffixOf, pack, unpack, replace, Text)
+import qualified Data.Text as T (any, append, isInfixOf, isSuffixOf, pack, unpack, replace, Text)
 import qualified Text.Regex.Posix as R (makeRegex, match, Regex)
 import Text.Regex (subRegex, mkRegex)
 import System.IO (stderr, hPrint)
@@ -23,16 +23,15 @@ import Control.Concurrent (threadDelay)
 
 import Data.FileStore.Utils (runShellCommand)
 
-import Text.Pandoc (Inline(..), Block(..), Pandoc, topDown, nullAttr)
+import Text.Pandoc (Inline(..), Block(..), Pandoc)
 import Text.Pandoc.Walk (walk, walkM)
 
 typographyTransform :: Pandoc -> Pandoc
 typographyTransform = walk (breakSlashes . breakEquals) .
-                      walk smallcapsfyInlineCleanup . walk smallcapsfy .
-                      rulersCycle 3
+                       walk smallcapsfyInlineCleanup . walk smallcapsfy . rulersCycle 3
 
--- Bringhurst & other typographers recommend using smallcaps for acronyms/initials of 3 or more capital letters because with full capitals, they look too big and dominate the page (eg. Bringhurst 2004, _Elements_ pg47; cf https://en.wikipedia.org/wiki/Small_caps#Uses http://theworldsgreatestbook.com/book-design-part-5/ http://webtypography.net/3.2.2 )
--- This can be done by hand in Pandoc by using the span syntax like `[ABC]{.smallcaps}`, but quickly grows tedious. It can also be done reasonably easily with a query-replace regexp eg. in Emacs `(query-replace-regexp "\\([[:upper:]][[:upper:]][[:upper:]]+\\)" "[\\1]{.smallcaps}\\2" nil begin end)`, but still must be done manually because while almost all uses in regular text can be smallcaps-ed, a blind regexp will wreck a ton of things like URLs & tooltips, code blocks, etc.
+-- Bringhurst & other typographers recommend using smallcaps for acronyms/initials of 3 or more capital letters because with full capitals, they look too big and dominate the page (eg Bringhurst 2004, _Elements_ pg47; cf https://en.wikipedia.org/wiki/Small_caps#Uses http://theworldsgreatestbook.com/book-design-part-5/ http://webtypography.net/3.2.2 )
+-- This can be done by hand in Pandoc by using the span syntax like `[ABC]{.smallcaps}`, but quickly grows tedious. It can also be done reasonably easily with a query-replace regexp eg in Emacs `(query-replace-regexp "\\([[:upper:]][[:upper:]][[:upper:]]+\\)" "[\\1]{.smallcaps}\\2" nil begin end)`, but still must be done manually because while almost all uses in regular text can be smallcaps-ed, a blind regexp will wreck a ton of things like URLs & tooltips, code blocks, etc.
 -- However, if we walk a Pandoc AST and check for only acronyms/initials inside a `Str`, where they *can't* be part of a Link or CodeBlock, then looking over Gwern.net ASTs, they seem to always be safe to substitute in SmallCaps elements. Unfortunately, we can't use the regular `Inline -> Inline` replacement pattern because SmallCaps takes a `[Inline]` argument, and so we are doing `Str String -> SmallCaps [Inline]` in theory and changing the size/type.
 -- So we instead walk the Pandoc AST, use a regexp to split on 3 capital letters, and inline the HTML span, skipping `Span` and `SmallCaps` entirely as the former causes serious problems in infinite loops & duplication when tree-walking, and the latter works incorrectly for capitalized phrases.
 --
@@ -61,8 +60,6 @@ typographyTransform = walk (breakSlashes . breakEquals) .
 -- → [Str "biggan means big"]
 -- walk smallcapsfyInline [Str "GPT-2-117M is a neural language model with ~117,000,000 parameters (fitting in 150MB) but smaller than GPT-2-1.5b and easily trained on a P100 using FP16; it is difficult to reach GPT-like levels"]
 -- → RawInline (Format "html") "<span class=\"smallcaps-auto\">GPT-2-117M</span> is a neural language model with ~117,000,000 parameters (fitting in 150MB) but smaller than <span class=\"smallcaps-auto\">GPT-2-1</span>.5b and easily trained on a P100 using FP16; it is difficult to reach <span class=\"smallcaps-auto\">GPT</span>-like levels"
--- walk smallcapsfyInline [Str "MS COCO"]
--- → [Span ("",[],[]) [Span ("",["smallcaps-auto"],[]) [Str "MS COCO"]]]
 --
 -- Whole-document examples:
 --
@@ -74,22 +71,20 @@ smallcapsfy :: Block -> Block
 smallcapsfy h@Header{} = h
 smallcapsfy x          = walk smallcapsfyInline x
 smallcapsfyInline, smallcapsfyInlineCleanup :: Inline -> Inline
-smallcapsfyInline x@(Str s) = let rewrite = go s in if [Str s] == rewrite then x else Span nullAttr rewrite
+smallcapsfyInline x@(Str s) = let rewrite = go s in if s /= rewrite then RawInline "html" rewrite else x
   where
-    go :: T.Text -> [Inline]
-    go "" = []
+    go :: T.Text -> T.Text
+    go "" = ""
     go a = let (before,matched,after) = R.match smallcapsfyRegex (T.unpack a) :: (String,String,String)
                                  in if matched==""
-                                    then [Str a] -- no acronym anywhere in it
-                                    else (if before==""then[] else [Str (T.pack before)]) ++
-                                         [Span ("", ["smallcaps-auto"], []) [Str $ T.pack matched]] ++
-                                         (if after==""then[] else go (T.pack after))
+                                    then a -- no acronym anywhere in it
+                                    else (T.pack before)
+                                         `T.append` "<span class=\"smallcaps-auto\">"`T.append` (T.pack matched) `T.append` "</span>"
+                                         `T.append` go (T.pack after)
 smallcapsfyInline x = x
--- Hack: collapse redundant span substitutions (this happens when we apply `typographyTransform` repeatedly eg. if we scrape a Gwern.net abstract (which will already be smallcaps) as an annotation, and then go to inline it elsewhere like a link to that page on a different page):
+-- Hack: collapse redundant span substitutions (this happens when we apply `typographyTransform` repeatedly eg if we scrape a Gwern.net abstract (which will already be smallcaps) as an annotation, and then go to inline it elsewhere like a link to that page on a different page):
 smallcapsfyInlineCleanup x@(Span (_,["smallcaps-auto"],_) [y@(RawInline _ t)]) = if "<span class=\"smallcaps-auto\">" `T.isInfixOf` t then y else x
 smallcapsfyInlineCleanup (Span (_,["smallcaps-auto"],_) (y@(Span (_,["smallcaps-auto"],_) _):_)) = y
-smallcapsfyInlineCleanup (Span (_,["smallcaps-auto"], _) [Span ("",[],[]) y]) = Span ("",["smallcaps-auto"], []) y
-smallcapsfyInlineCleanup (Span ("",[], []) [Span (_,["smallcaps-auto"],_) y]) = Span ("",["smallcaps-auto"], []) y
 smallcapsfyInlineCleanup x@(Span (_,["smallcaps-auto"],_) _) = x
 smallcapsfyInlineCleanup x = x
 
@@ -97,14 +92,14 @@ smallcapsfyInlineCleanup x = x
 smallcapsfyRegex :: R.Regex
 smallcapsfyRegex = R.makeRegex
   -- match standard acronyms like ABC or ABCDEF:
-  ("[A-Z&][A-Z&][A-Z&]+|" ++
+  ("[A-Z][A-Z][A-Z]+|" ++
     -- match hyphen-separated acronyms like 'GPT-2-117M' but not small mixed like '150MB'/'P100'/'FP16'
     -- or hyphenated expressions with lowercase letters like 'BigGAN-level':
-   "[A-Z&][A-Z&][A-Z&]+(-[[:digit:]]+|[A-Z&]+)+|" ++
+   "[A-Z][A-Z][A-Z]+(-[[:digit:]]+|[A-Z]+)+|" ++
    -- smallcaps entirety of "TPUv3", oldstyle numbers look odd when juxtaposed against smallcaps+lowercase
-   "[A-Z&][A-Z&][A-Z&]+([[:digit:]]+|[a-zA-Z&]+)+|" ++
+   "[A-Z][A-Z][A-Z]+([[:digit:]]+|[a-zA-Z]+)+|" ++
    -- but we do want to continue across hyphens of all-uppercase strings like "YYYY-MM-DD" or "X-UNITER" or "DALL·E":
-   "[A-Z&][A-Z&][A-Z&]+(-[A-Z&]+)+|" ++ "[A-Z&]+-[A-Z&][A-Z&][A-Z&]+|" ++ "[A-Z&]+\183[A-Z&]+|" ++
+   "[A-Z][A-Z][A-Z]+(-[A-Z]+)+|" ++ "[A-Z]+-[A-Z][A-Z][A-Z]+|" ++ "[A-Z]+\183[A-Z]+|" ++
    -- or slashed acronyms like "TCP/IP": eg
    -- walk smallcapsfyInline [Str "Connecting using TCP/IP"]
    -- → [RawInline (Format "html") "Connecting using <span class=\"smallcaps-auto\">TCP/IP</span>"]
@@ -112,14 +107,9 @@ smallcapsfyRegex = R.makeRegex
    -- → [RawInline (Format "html") "Connecting using <span class=\"smallcaps-auto\">TCP</span>"]
    -- walk smallcapsfyInline [Str "Connecting using IP"]
    -- → [Str "Connecting using IP"]
-   "[A-Z&][A-Z&][A-Z&]+(/[A-Z&]+)+|" ++ "[A-Z&]+/[A-Z&][A-Z&][A-Z&]+|" ++
-   -- It looks odd when you have 'AB XYZ' or 'XYZ AB' with partial smallcaps, so we treat them as a single range (although in practice this may not work due to the Space splitting):
    -- walk smallcapsfyInline [Str "Connecting using TCP IP"]
-   -- → [RawInline (Format "html") "Connecting using <span class=\"smallcaps-auto\">TCP IP</span>"]
-   "[A-Z&][A-Z&][A-Z&] [A-Z&][A-Z&]|" ++
-   -- walk smallcapsfyInline [Str "WP RSS bot"]
-   -- → [RawInline (Format "html") "<span class=\"smallcaps-auto\">WP RSS</span> bot"]
-   "[A-Z&][A-Z&] [A-Z&][A-Z&][A-Z&]+|" ++
+   -- → [RawInline (Format "html") "Connecting using <span class=\"smallcaps-auto\">TCP</span> IP"]
+   "[A-Z][A-Z][A-Z]+(/[A-Z]+)+|" ++ "[A-Z]+/[A-Z][A-Z][A-Z]+|" ++
    -- special-case AM/PM like "9:30AM" or "1PM" or "5:55 PM" (WARNING: Pandoc will typically parse spaces into 'Space' AST nodes, making it hard to match on things like "5 PM")
    "[[:digit:]]+ ?[AP]M|" ++
    "\\??[AP]M|" ++ -- special-case handling for all the "?AM--?PM" in /Morning-writing:
@@ -130,34 +120,21 @@ smallcapsfyRegex = R.makeRegex
 
 -------------------------------------------
 
--- add '<wbr>'/ZERO WIDTH SPACE (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) HTML element to inline uses of forward slashes, such as in lists, to tell Chrome to linebreak there (see https://www.gwern.net/Lorem#inline-formatting in Chrome for examples of how its linebreaking is incompetent, sadly).
--- WARNING: this will affect link texts like '[AC/DC](!W)', so make sure you do the rewrite after the interwiki and any passes which insert inline HTML - right now 'breakSlashes' tests for possible HTML and bails out to avoid damaging it.
+-- add '<wbr>' (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) HTML element to inline uses of forward slashes, such as in lists, to tell Chrome to linebreak there (see https://www.gwern.net/Lorem#inline-formatting in Chrome for examples of how its linebreaking is incompetent, sadly).
+-- WARNING: this will affect link texts like '[AC/DC](!Wikipedia)', so make sure you do the rewrite after the interwiki and any passes which insert inline HTML - right now 'breakSlashes' tests for possible HTML and bails out to avoid damaging it
 breakSlashes :: Block -> Block
 -- skip CodeBlock/RawBlock/Header/Table: enabling line-breaking on slashes there is a bad idea or not possible:
 breakSlashes x@CodeBlock{} = x
 breakSlashes x@RawBlock{}  = x
 breakSlashes x@Header{}    = x
 breakSlashes x@Table{}     = x
-breakSlashes x = topDown breakSlashesInline x
-breakSlashesInline, breakSlashesPlusHairSpaces :: Inline -> Inline
+breakSlashes x = walk breakSlashesInline x
+breakSlashesInline :: Inline -> Inline
 breakSlashesInline x@(SmallCaps _) = x
-breakSlashesInline x@Code{}        = x
-breakSlashesInline (Link a@(i,c,ks) [Str ss] (t,""))  = if ss == t then
-                                                -- if an autolink like '<https://example.com>' which converts to 'Link () [Str "https://example.com"] ("https://example.com","")' or '[Para [Link ("",["uri"],[]) [Str "https://www.example.com"] ("https://www.example.com","")]]' (NOTE: we cannot rely on there being a "uri" class), then we mark it up as Code and skip it:
-                                                (Link (i,["uri"]++c,ks) [Code nullAttr ss] (t,""))
-                                                else
-                                                Link a (walk breakSlashesPlusHairSpaces [Str ss]) (t,"")
-breakSlashesInline (Link a ss ts) = Link a (walk breakSlashesPlusHairSpaces ss) ts
-breakSlashesInline x@(Str s) = if T.any (\t -> t=='/' && not (t=='<' || t=='>' || t ==' ' || t == '\8203')) s then -- things get tricky if we mess around with raw HTML, so we bail out for anything that even *looks* like it might be HTML tags & has '<>' or a HAIR SPACE or ZERO WIDTH SPACE already
-                                 Str (T.replace " /\8203 " " / " $ T.replace " /\8203" " /" $ T.replace "/\8203 " "/ " $ -- fix redundant \8203s to make HTML source nicer to read; 2 cleanup substitutions is easier than using a full regexp rewrite
-                                                   T.replace "/" "/\8203" s) else x
+breakSlashesInline x@(Str s) = if T.any (\t -> t=='/' && not (t=='<' || t=='>')) s then -- things get tricky if we mess around with raw HTML, so we bail out for anything that even *looks* like it might be HTML tags & has '<>'
+                                 RawInline "html" (T.replace " /<wbr> " " / " $ T.replace " /<wbr>" " /" $ T.replace "/<wbr> " "/ " $ -- fix redundant <wbr>s to make HTML source nicer to read; 2 cleanup substitutions is easier than using a full regexp rewrite
+                                                   T.replace "/" "/<wbr>" s) else x
 breakSlashesInline x = x
--- the link-underlining hack, using drop-shadows, causes many problems with characters like slashes 'eating' nearby characters; a phrase like "A/B testing" is not usually a problem because the slash is properly kerned, but inside a link, the '/' will eat at 'B' and other characters where the top-left comes close to the top of the slash. (NOTE: We may be able to drop this someday if CSS support for underlining with skip-ink ever solidifies.)
--- The usual solution is to insert a HAIR SPACE or THIN SPACE. Here, we descend inside Link nodes to their Str to  add both <wbr> (line-breaking is still an issue AFAIK) and HAIR SPACE (THIN SPACE proved to be too much).
-breakSlashesPlusHairSpaces x@(Str s) = if T.any (\t -> t=='/' && not (t=='<' || t=='>' || t ==' ')) s then
-                                 Str (T.replace " /\8203 " " / " $ T.replace " /\8203" " /" $ T.replace "/\8203 " "/ " $
-                                                   T.replace "/" " / \8203" s) else x
-breakSlashesPlusHairSpaces x = x
 
 breakEquals :: Block -> Block
 breakEquals x@CodeBlock{} = x

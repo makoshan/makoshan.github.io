@@ -10,7 +10,7 @@
 // To the extent possible under law, D. Bohdan has waived all copyright and
 // related or neighboring rights to this work.
 //
-// Date: 2021-08-11.
+// Date: 2021-05-24.
 // Requirements: PHP 7.x with the standard DOM module.
 
 error_reporting(E_ALL);
@@ -44,7 +44,7 @@ function check_file($file) {
 
 function check_document($dom) {
     $ids = (new DOMXpath($dom))->query("//@id");
-    $id_set = ["#" => true, "#top" => true];
+    $id_set = array();
 
     foreach ($ids as $id) {
         $id_set["#" . $id->value] = true;

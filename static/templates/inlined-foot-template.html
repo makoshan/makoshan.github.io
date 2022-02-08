@@ -16,11 +16,11 @@
     $if(index)$ <!-- Stuff we don’t need on /index gets conditionally loaded: --> $else$
 
     <!-- JS library for clickable/zoomable images, for images larger than can be displayed in -->
-    <!-- the body: /static/js/image-focus.js /static/css/image-focus.css -->
+    <!-- the body: http://share.obormot.net/misc/gwern/image-focus.js http://share.obormot.net/misc/gwern/image-focus.css -->
     <!-- not lazy-loaded due to various bugs -->
     <script src="/static/js/image-focus.js" defer></script>
 
-    <!-- sort tables: https://mottie.github.io/tablesorter/docs/ ; requires JQuery, which has been prepended to avoid multiple JS page loads & race conditions -->
+    <!-- sort tables: http://tablesorter.com/docs/ ; requires JQuery, which has been prepended to avoid multiple JS page loads & race conditions -->
     <script>
     if (document.querySelector("table")) {
         var js = document.createElement("script");

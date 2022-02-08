@@ -14,3 +14,4 @@ static/build/link-suggester
 static/build/generateSimilar
 static/build/preprocess-markdown
 _cache/
+_site/
