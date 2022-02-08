@@ -2575,10 +2575,10 @@ setMode(currentMode);
           <section>
             <div class="columns">
               <ul>
-                <li><a href="/About">About This Website</a></li>
-<li><a href="/Links">Links</a></li>
-<li><a href="/index">Essays</a></li>
-<li><a href="/static/build/index">Essays</a></li>
+                <li><a href="/About.html">About This Website</a></li>
+<li><a href="/Links.html">Links</a></li>
+<li><a href="/index.html">Essays</a></li>
+<li><a href="/static/build/index.html">Essays</a></li>
 
               </ul>
             </div>

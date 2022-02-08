@@ -1002,7 +1002,7 @@ h1 {
 
 /*	Lazy-load below-fold sections in supported browsers.
 	Disabled temporarily pending layout redesign to compensate for layout
-	containment. —Obormot 2021-03-21
+	containment. —Obormot 2021-03-21
 	*/
 /*
 section.level1:nth-of-type(n+4) {
@@ -1069,7 +1069,7 @@ a {
     Unfortunately, we don't want to add underlines to links in the TOC because it clutters it (all the lines are links and are in small font), so we have to avoid styling the TOC, which is difficult.
     I got around this by adding in the Hakyll template an additional <div> just for the body of the Markdown content, excluding the TOC, and changing the Tufte CSS to target *that* instead.
 
-May be able at some point to simplify this using regular link underlining, since CSS4's `text-decoration-skip-ink` by default avoids overlapping with text descenders (but as of Oct 2019, no Edge/IE or Safari support, and only the latest Firefox 70 supports it; maybe in a few years...): https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-skip-ink#Browser_Compatibility https://www.caniuse.com/#feat=mdn-css_properties_text-decoration-skip-ink (Right now, Firefox skip-ink looks quite bad: it doesn't skip enough ink, defeating the point, and also positions the underline badly!)
+May be able at some point to simplify this using regular link underlining, since CSS4's `text-decoration-skip-ink` by default avoids overlapping with text descenders (but as of Oct 2019, no Edge/IE or Safari support, and only the latest Firefox 70 supports it; maybe in a few years...): https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-skip-ink#Browser_Compatibility https://www.caniuse.com/#feat=mdn-css_properties_text-decoration-skip-ink (Right now, Firefox skip-ink looks quite bad: it doesn't skip enough ink, defeating the point, and also positions the underline badly!)
 */
 
 .markdownBody a:link,
@@ -2539,10 +2539,10 @@ setMode(currentMode);
     <link rel="preconnect" href="https://www.googletagmanager.com">
 
     
-    <meta name="title" content="加密经济学">
-    <meta name="citation_title" content="加密经济学">
-    <meta name="og:title" content="加密经济学">
-    <meta name="twitter:title" content="加密经济学">
+    <meta name="title" content="About This Website">
+    <meta name="citation_title" content="About This Website">
+    <meta name="og:title" content="About This Website">
+    <meta name="twitter:title" content="About This Website">
     
     <meta name="generator" content="https://github.com/v2eth/v2eth.com/">
     <meta name="creator" content="v2eth.com">
@@ -2556,31 +2556,31 @@ setMode(currentMode);
     <meta name="twitter:site" content="v2eth.com">
     <meta name="og:site" content="v2eth.com">
     <meta name="og:type" content="article">
-    <meta name="description" content="粉丝经济">
-    <meta name="og:description" content="粉丝经济">
+    <meta name="description" content="Meta page describing v2eth.com; copyright license">
+    <meta name="og:description" content="Meta page describing v2eth.com; copyright license">
     <meta property="og:image" content="https://wiki.v2eth.com/static/img/logo/logo-whitebg-large-border.png">
     
-    <meta name="keywords" content="blockchain">
-    <meta name="dc.date.issued" content="2020-03-08 16:58">
-    <meta name="citation_publication_date" content="2020-03-08 16:58">
-    <meta name="dcterms.modified" content="2022-02-08">
+    <meta name="keywords" content="personal">
+    <meta name="dc.date.issued" content="25 Aug 2019">
+    <meta name="citation_publication_date" content="25 Aug 2019">
+    <meta name="dcterms.modified" content="26 Aug 2019">
     <link rel="schema.dcterms" href="https://dublincore.org/specifications/dublin-core/dcmi-terms/">
     <meta name="dcterms.rights" content="CC PD-0">
     <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
-    <link rel="canonical" href="https://wiki.v2eth.com/blockchain/uniswap-social-money">
-    <meta name="citation_fulltext_html_url" content="https://wiki.v2eth.com/blockchain/uniswap-social-money">
-    <meta name="og:url" content="https://wiki.v2eth.com/blockchain/uniswap-social-money">
-    <meta name="page-source" content="https://wiki.v2eth.com/blockchain/uniswap-social-money.page">
+    <link rel="canonical" href="https://wiki.v2eth.com/About.html">
+    <meta name="citation_fulltext_html_url" content="https://wiki.v2eth.com/About.html">
+    <meta name="og:url" content="https://wiki.v2eth.com/About.html">
+    <meta name="page-source" content="https://wiki.v2eth.com/About.html.page">
     <meta name="citation_fulltext_world_readable" content>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
 
-    <title>加密经济学 · v2eth.com</title>
+    <title>About This Website · v2eth.com</title>
 
     <link rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png" />
     <link rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
   </head>
-  <body class="blockchain-uniswap-social-money drop-caps-kanzlei">
+  <body class="about drop-caps-de-zs">
 
     <main>
       <div id="sidebar">
@@ -2602,22 +2602,22 @@ setMode(currentMode);
       </div>
 
       <header>
-        <h1>Social Money 代币化你的时间和才能</h1>
+        <h1>About This Website</h1>
       </header>
 
       <article> 
         <div id="page-metadata">
           <p> 
-            <span id="page-description" title="Short description of page.">粉丝经济</span><br />
-            <span id="page-tags" title="List of tags for this page."><em><a title="All pages tagged &#39;blockchain&#39;." href="/tags/blockchain">blockchain</a></em></span>
+            <span id="page-description" title="Short description of page.">Meta page describing v2eth.com; copyright license</span><br />
+            <span id="page-tags" title="List of tags for this page."><em><a title="All pages tagged &#39;personal&#39;." href="/tags/personal">personal</a></em></span>
             <br />
             <span id="page-metadata-block">
               
-              <span id="page-date-range"><span id="page-creation" title="Date page contents were begun."><em>2020-03-08 16:58</em></span>–<span id="page-source"><a title="Link to latest revision of the raw Markdown text source for this page, &#39;Social Money 代币化你的时间和才能&#39;: /blockchain/uniswap-social-money.page" href="/blockchain/uniswap-social-money.page"><span id="page-modified" title="Date of last major modification to this page."><em>2022-02-08</em></span></a></span></span>
-              <span id="page-status" title="Writing status of current page: ranges &#39;abandoned&#39;/&#39;notes&#39;/&#39;draft&#39;/&#39;in progress&#39;/&#39;finished&#39;"><em>finished</em></span>
-              <span id="page-confidence"><a href="/About#confidence-tags" title="Explanation of &#39;confidence&#39; metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: &#39;certain&#39;/&#39;highly likely&#39;/&#39;likely&#39;/&#39;possible&#39;/&#39;unlikely&#39;/&#39;highly unlikely&#39;/&#39;remote&#39;/&#39;impossible&#39;)">certainty</a>: <em>possible</em></span>
-              <span id="page-importance"><a href="/About#importance-tags" title="Explanation of &#39;importance&#39; metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>4</em></span>
-              <span class="backlinks"><a id="backlink" href="/metadata/annotations/backlinks/%252Fblockchain%252Funiswap-social-money.html" title="Reverse citations/backlinks/&#39;What links here&#39;/&#39;incoming link&#39;/&#39;inbound link&#39;/inlink/&#39;inward link&#39;/citation for this page (the list of other pages which link to this page).">backlinks</a></span>
+              <span id="page-date-range"><span id="page-creation" title="Date page contents were begun."><em>25 Aug 2019</em></span>–<span id="page-source"><a title="Link to latest revision of the raw Markdown text source for this page, &#39;About This Website&#39;: /About.html.page" href="/About.html.page"><span id="page-modified" title="Date of last major modification to this page."><em>26 Aug 2019</em></span></a></span></span>
+              <span id="page-status" title="Writing status of current page: ranges &#39;abandoned&#39;/&#39;notes&#39;/&#39;draft&#39;/&#39;in progress&#39;/&#39;finished&#39;"><em>in progress</em></span>
+              <span id="page-confidence"><a href="/About#confidence-tags" title="Explanation of &#39;confidence&#39; metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: &#39;certain&#39;/&#39;highly likely&#39;/&#39;likely&#39;/&#39;possible&#39;/&#39;unlikely&#39;/&#39;highly unlikely&#39;/&#39;remote&#39;/&#39;impossible&#39;)">certainty</a>: <em>highly likely</em></span>
+              <span id="page-importance"><a href="/About#importance-tags" title="Explanation of &#39;importance&#39; metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>3</em></span>
+              <span class="backlinks"><a id="backlink" href="/metadata/annotations/backlinks/%252FAbout.html" title="Reverse citations/backlinks/&#39;What links here&#39;/&#39;incoming link&#39;/&#39;inbound link&#39;/inlink/&#39;inward link&#39;/citation for this page (the list of other pages which link to this page).">backlinks</a></span>
             </span>
           </p>
           <hr>
@@ -2627,23 +2627,28 @@ setMode(currentMode);
         
 
         <div id="TOC"><ul>
-<li><a href="#什么是-social-money"><span>什么是 Social Money？</span></a></li>
-<li><a href="#并非所有的-social-money-交换是平等的"><span>并非所有的 Social Money 交换是平等的</span></a></li>
+<li><a href="#site"><span>Site</span></a>
+<ul>
+<li><a href="#credits"><span>Credits</span></a></li>
+<li><a href="#license"><span>License</span></a></li>
+</ul></li>
 </ul></div>
-<div id="markdownBody" class="markdownBody"><p>最近，关于社区关于 Social Money 的概念引起了一些热议。如果你不熟悉该名词，那么你可能会问：“什么是 Social Money ？” 老实说，这个名字的定义还很分散，以至于不难发现一些例子。目前在 Uniswap 和<a href="http://blockchain.buymagic.xyz/">示例列表</a> 可以找到已经发行的 Social Money 。</p>
-<section id="什么是-social-money" class="level2">
-<h2><a href="#什么是-social-money" title="Link to section: § &#39;什么是 Social Money？&#39;">什么是 Social Money？</a></h2>
-<p>Social Money 基本概念是：某人铸造可兑换个人利益，奖励和/<wbr>或专业服务的代币，目前多数人铸币后上架 Uniswap 。如果有人购买后，可以用代币换取一小时的工作，例如咨询，开发等，可以将 Social Money 视为一种跨平台销售个人品牌的方式。</p>
+<div id="markdownBody" class="markdownBody"><p>This page is about <code>wikiv2eth.com</code>; for information about me, see <a href="/Links" id="gwern-links" class="link-local">Links</a>.</p>
+<section id="site" class="level1">
+<h1><a href="#site" title="Link to section: § &#39;Site&#39;">Site</a></h1>
+<p>This webpage is a fork of Gwern Branwen’s site <a href="https://www.gwern.net">Gwern.net</a>. He has worked for many years to create a website conducive to research, with a number of appealing <a href="https://www.gwern.net/About#design" id="gwern-about-design" class="link-local">features</a>.</p>
+<section id="credits" class="level3">
+<h3><a href="#credits" title="Link to section: § &#39;Credits&#39;">Credits</a></h3>
+<p>Site design &amp; JS by Said Achmiz (<a href="http://wiki.obormot.net">http:/<wbr>/<wbr>wiki.obormot.net</a>).</p>
 </section>
-<section id="并非所有的-social-money-交换是平等的" class="level2">
-<h2><a href="#并非所有的-social-money-交换是平等的" title="Link to section: § &#39;并非所有的 Social Money 交换是平等的&#39;">并非所有的 Social Money 交换是平等的</a></h2>
-<p>与 DeFi 中的大多数事物一样，Social Money 有许多不同的应用。有些人甚至将 Social Money 与个人<span class="smallcaps-auto">ICO</span> 进行了比较，但这种想法可能并不总是成功的。例如，一些 Social Money 直接铸币 1000万个以上，每个价值 1小时的1000万代币，可以换取超过1140 年的时间。也有一些人指出，诸如 Brave Rewards 或 Unlock Protocol 之类的现有服务可以更好地满足需求，而无需单独的发行新代币。并不是所有的 Social Money 都可以作为换取工作时间的凭证，目前目前发行的 Social Money 都是实验阶段。</p>
-<p>目前 <a href="https://tryroll.com/">Roll</a> 是一家 Social Money 平台，他们 Fork 了一个 Uniswap，Roll 宣传通过 Social Money 来建立社区。发行人确定了社区成员如何赚取和使用发行的代币。每个 Social Money 的效用和价值完全取决于其发行人如何允许 你 赎回它，从而留出了很大的解释空间。也许你希望与关注者进行更多互动，因此你可以赠送一些代币作为促销。或者更确切地说，也许你想提供个人职业生涯的机会。归根结底，要由市场来确定任何社会资金的真实价值以及应以多少价格赎回。</p>
-<p>相关链接： - <a href="https://www.bilibili.com/video/av92353922?from=search&amp;seid=17908897468074474697">内容平台 瞬matataki 的探索</a> - <a href="https://memesbytom.com/">汤姆代币</a> - <a href="https://tryroll.com/">Roll 平台</a></p>
+<section id="license" class="level3">
+<h3><a href="#license" title="Link to section: § &#39;License&#39;">License</a></h3>
+<p>This site is licensed under the <a href="https://en.wikipedia.org/wiki/Creative_Commons" class="docMetadata">Creative Commons</a> <a href="http://creativecommons.org/about/cc0">public domain (CC-0)</a> license.</p>
+</section>
 </section></div>
 
         <div id="navigation">
-          <a id="navigation-previous" rel="prev" href="./blockchain/sound-money" title="Link to previous page by topic, ‘./blockchain/sound-money’">​<svg><use href="/static/img/icons/sequential-nav-icons-arabesque.svg#direction" /></svg></a><a id="navigation-center" title="Return to top of current page" href="#sidebar"><svg><use href="/static/img/icons/sequential-nav-icons-arabesque.svg#center" /></svg></a><a id="navigation-next" rel="next" href="./blockchain/gitcoin-grants" title="Link to next page by topic, ‘./blockchain/gitcoin-grants’"><svg><use href="/static/img/icons/sequential-nav-icons-arabesque.svg#direction" /></svg></a>  <!-- WARNING: We need empty (with a ZERO WIDTH SPACE inside them) links like <a>​</a> instead of self-closing <a/> links (which are valid) because otherwise mathjax-nodepage's mjpage function goes crazy & duplicates them. -->
+          <a id="navigation-previous" rel="prev" href="/index" title="Link to previous page by topic, ‘/index’">​<svg><use href="/static/img/icons/sequential-nav-icons-arabesque.svg#direction" /></svg></a><a id="navigation-center" title="Return to top of current page" href="#sidebar"><svg><use href="/static/img/icons/sequential-nav-icons-arabesque.svg#center" /></svg></a><a id="navigation-next" rel="next" href="/index" title="Link to next page by topic, ‘/index’"><svg><use href="/static/img/icons/sequential-nav-icons-arabesque.svg#direction" /></svg></a>  <!-- WARNING: We need empty (with a ZERO WIDTH SPACE inside them) links like <a>​</a> instead of self-closing <a/> links (which are valid) because otherwise mathjax-nodepage's mjpage function goes crazy & duplicates them. -->
 
         </div>
 

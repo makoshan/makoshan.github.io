@@ -2575,7 +2575,7 @@ setMode(currentMode);
           <section>
             <div class="columns">
               <ul>
-                <li><a href="/static/build/keys">My pubkeys</a></li>
+                <li><a href="/static/build/keys.html">My pubkeys</a></li>
 
               </ul>
             </div>

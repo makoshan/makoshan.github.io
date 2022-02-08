@@ -2575,7 +2575,7 @@ setMode(currentMode);
           <section>
             <div class="columns">
               <ul>
-                <li><a href="/docs/index">/docs/ Directory Listing</a></li>
+                <li><a href="/docs/index.html">/docs/ Directory Listing</a></li>
 
               </ul>
             </div>

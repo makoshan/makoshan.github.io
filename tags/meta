@@ -2575,7 +2575,7 @@ setMode(currentMode);
           <section>
             <div class="columns">
               <ul>
-                <li><a href="/Changelog">Changelog</a></li>
+                <li><a href="/Changelog.html">Changelog</a></li>
 
               </ul>
             </div>

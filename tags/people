@@ -2575,8 +2575,8 @@ setMode(currentMode);
           <section>
             <div class="columns">
               <ul>
-                <li><a href="/ML">Machine Learning Tweets</a></li>
-<li><a href="/docs/2015-08-12-spqr">Machine Learning Tweets</a></li>
+                <li><a href="/ML.html">Machine Learning Tweets</a></li>
+<li><a href="/docs/2015-08-12-spqr.html">Machine Learning Tweets</a></li>
 
               </ul>
             </div>

@@ -1002,7 +1002,7 @@ h1 {
 
 /*	Lazy-load below-fold sections in supported browsers.
 	Disabled temporarily pending layout redesign to compensate for layout
-	containment. —Obormot 2021-03-21
+	containment. —Obormot 2021-03-21
 	*/
 /*
 section.level1:nth-of-type(n+4) {
@@ -1069,7 +1069,7 @@ a {
     Unfortunately, we don't want to add underlines to links in the TOC because it clutters it (all the lines are links and are in small font), so we have to avoid styling the TOC, which is difficult.
     I got around this by adding in the Hakyll template an additional <div> just for the body of the Markdown content, excluding the TOC, and changing the Tufte CSS to target *that* instead.
 
-May be able at some point to simplify this using regular link underlining, since CSS4's `text-decoration-skip-ink` by default avoids overlapping with text descenders (but as of Oct 2019, no Edge/IE or Safari support, and only the latest Firefox 70 supports it; maybe in a few years...): https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-skip-ink#Browser_Compatibility https://www.caniuse.com/#feat=mdn-css_properties_text-decoration-skip-ink (Right now, Firefox skip-ink looks quite bad: it doesn't skip enough ink, defeating the point, and also positions the underline badly!)
+May be able at some point to simplify this using regular link underlining, since CSS4's `text-decoration-skip-ink` by default avoids overlapping with text descenders (but as of Oct 2019, no Edge/IE or Safari support, and only the latest Firefox 70 supports it; maybe in a few years...): https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-skip-ink#Browser_Compatibility https://www.caniuse.com/#feat=mdn-css_properties_text-decoration-skip-ink (Right now, Firefox skip-ink looks quite bad: it doesn't skip enough ink, defeating the point, and also positions the underline badly!)
 */
 
 .markdownBody a:link,
@@ -2539,10 +2539,10 @@ setMode(currentMode);
     <link rel="preconnect" href="https://www.googletagmanager.com">
 
     
-    <meta name="title" content="About This Website">
-    <meta name="citation_title" content="About This Website">
-    <meta name="og:title" content="About This Website">
-    <meta name="twitter:title" content="About This Website">
+    <meta name="title" content="Essays">
+    <meta name="citation_title" content="Essays">
+    <meta name="og:title" content="Essays">
+    <meta name="twitter:title" content="Essays">
     
     <meta name="generator" content="https://github.com/v2eth/v2eth.com/">
     <meta name="creator" content="v2eth.com">
@@ -2556,31 +2556,31 @@ setMode(currentMode);
     <meta name="twitter:site" content="v2eth.com">
     <meta name="og:site" content="v2eth.com">
     <meta name="og:type" content="article">
-    <meta name="description" content="Meta page describing v2eth.com; copyright license">
-    <meta name="og:description" content="Meta page describing v2eth.com; copyright license">
+    <meta name="description" content="Researcher, self-experimenter, and write">
+    <meta name="og:description" content="Researcher, self-experimenter, and write">
     <meta property="og:image" content="https://wiki.v2eth.com/static/img/logo/logo-whitebg-large-border.png">
     
     <meta name="keywords" content="personal">
-    <meta name="dc.date.issued" content="25 Aug 2019">
-    <meta name="citation_publication_date" content="25 Aug 2019">
-    <meta name="dcterms.modified" content="26 Aug 2019">
+    <meta name="dc.date.issued" content="27 Jan 2009">
+    <meta name="citation_publication_date" content="27 Jan 2009">
+    <meta name="dcterms.modified" content="2022-02-08">
     <link rel="schema.dcterms" href="https://dublincore.org/specifications/dublin-core/dcmi-terms/">
     <meta name="dcterms.rights" content="CC PD-0">
     <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
-    <link rel="canonical" href="https://wiki.v2eth.com/About">
-    <meta name="citation_fulltext_html_url" content="https://wiki.v2eth.com/About">
-    <meta name="og:url" content="https://wiki.v2eth.com/About">
-    <meta name="page-source" content="https://wiki.v2eth.com/About.page">
+    <link rel="canonical" href="https://wiki.v2eth.com/static/build/index.html">
+    <meta name="citation_fulltext_html_url" content="https://wiki.v2eth.com/static/build/index.html">
+    <meta name="og:url" content="https://wiki.v2eth.com/static/build/index.html">
+    <meta name="page-source" content="https://wiki.v2eth.com/static/build/index.html.page">
     <meta name="citation_fulltext_world_readable" content>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
 
-    <title>About This Website · v2eth.com</title>
+    <title>Essays · v2eth.com</title>
 
     <link rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png" />
     <link rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
   </head>
-  <body class="about drop-caps-de-zs">
+  <body class="static-build-index drop-caps-de-zs">
 
     <main>
       <div id="sidebar">
@@ -2602,22 +2602,22 @@ setMode(currentMode);
       </div>
 
       <header>
-        <h1>About This Website</h1>
+        <h1>Essays</h1>
       </header>
 
       <article> 
         <div id="page-metadata">
           <p> 
-            <span id="page-description" title="Short description of page.">Meta page describing v2eth.com; copyright license</span><br />
+            <span id="page-description" title="Short description of page.">Researcher, self-experimenter, and write</span><br />
             <span id="page-tags" title="List of tags for this page."><em><a title="All pages tagged &#39;personal&#39;." href="/tags/personal">personal</a></em></span>
             <br />
             <span id="page-metadata-block">
               
-              <span id="page-date-range"><span id="page-creation" title="Date page contents were begun."><em>25 Aug 2019</em></span>–<span id="page-source"><a title="Link to latest revision of the raw Markdown text source for this page, &#39;About This Website&#39;: /About.page" href="/About.page"><span id="page-modified" title="Date of last major modification to this page."><em>26 Aug 2019</em></span></a></span></span>
+              <span id="page-date-range"><span id="page-creation" title="Date page contents were begun."><em>27 Jan 2009</em></span>–<span id="page-source"><a title="Link to latest revision of the raw Markdown text source for this page, &#39;Essays&#39;: /static/build/index.html.page" href="/static/build/index.html.page"><span id="page-modified" title="Date of last major modification to this page."><em>2022-02-08</em></span></a></span></span>
               <span id="page-status" title="Writing status of current page: ranges &#39;abandoned&#39;/&#39;notes&#39;/&#39;draft&#39;/&#39;in progress&#39;/&#39;finished&#39;"><em>in progress</em></span>
-              <span id="page-confidence"><a href="/About#confidence-tags" title="Explanation of &#39;confidence&#39; metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: &#39;certain&#39;/&#39;highly likely&#39;/&#39;likely&#39;/&#39;possible&#39;/&#39;unlikely&#39;/&#39;highly unlikely&#39;/&#39;remote&#39;/&#39;impossible&#39;)">certainty</a>: <em>highly likely</em></span>
-              <span id="page-importance"><a href="/About#importance-tags" title="Explanation of &#39;importance&#39; metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>3</em></span>
-              <span class="backlinks"><a id="backlink" href="/metadata/annotations/backlinks/%252FAbout.html" title="Reverse citations/backlinks/&#39;What links here&#39;/&#39;incoming link&#39;/&#39;inbound link&#39;/inlink/&#39;inward link&#39;/citation for this page (the list of other pages which link to this page).">backlinks</a></span>
+              <span id="page-confidence"><a href="/About#confidence-tags" title="Explanation of &#39;confidence&#39; metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: &#39;certain&#39;/&#39;highly likely&#39;/&#39;likely&#39;/&#39;possible&#39;/&#39;unlikely&#39;/&#39;highly unlikely&#39;/&#39;remote&#39;/&#39;impossible&#39;)">certainty</a>: <em>log</em></span>
+              <span id="page-importance"><a href="/About#importance-tags" title="Explanation of &#39;importance&#39; metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>0</em></span>
+              <span class="backlinks"><a id="backlink" href="/metadata/annotations/backlinks/%252Fstatic%252Fbuild%252Findex.html" title="Reverse citations/backlinks/&#39;What links here&#39;/&#39;incoming link&#39;/&#39;inbound link&#39;/inlink/&#39;inward link&#39;/citation for this page (the list of other pages which link to this page).">backlinks</a></span>
             </span>
           </p>
           <hr>
@@ -2627,24 +2627,14 @@ setMode(currentMode);
         
 
         <div id="TOC"><ul>
-<li><a href="#site"><span>Site</span></a>
-<ul>
-<li><a href="#credits"><span>Credits</span></a></li>
-<li><a href="#license"><span>License</span></a></li>
-</ul></li>
+<li><a href="#加密经济学"><span>加密经济学</span></a></li>
+<li><a href="#personal"><span>Personal</span></a></li>
 </ul></div>
-<div id="markdownBody" class="markdownBody"><p>This page is about <code>wikiv2eth.com</code>; for information about me, see <a href="/Links" id="gwern-links" class="link-local">Links</a>⁠.</p>
-<section id="site" class="level1">
-<h1><a href="#site" title="Link to section: § &#39;Site&#39;">Site</a></h1>
-<p>This webpage is a fork of Gwern Branwen’s site <a href="https://www.gwern.net">Gwern.net</a>⁠. He has worked for many years to create a website conducive to research, with a number of appealing <a href="https://www.gwern.net/About#design" id="gwern-about-design" class="link-local">features</a>⁠.</p>
-<section id="credits" class="level3">
-<h3><a href="#credits" title="Link to section: § &#39;Credits&#39;">Credits</a></h3>
-<p>Site design &amp; JS by Said Achmiz (<a href="http://wiki.obormot.net">http:/<wbr>/<wbr>wiki.obormot.net</a>).</p>
+<div id="markdownBody" class="markdownBody"><section id="加密经济学" class="level1">
+<h1><a href="#加密经济学" title="Link to section: § &#39;加密经济学&#39;">加密经济学</a></h1>
 </section>
-<section id="license" class="level3">
-<h3><a href="#license" title="Link to section: § &#39;License&#39;">License</a></h3>
-<p>This site is licensed under the <a href="https://en.wikipedia.org/wiki/Creative_Commons" class="docMetadata">Creative Commons</a> <a href="http://creativecommons.org/about/cc0">public domain (CC-0)</a> license.</p>
-</section>
+<section id="personal" class="level1">
+<h1><a href="#personal" title="Link to section: § &#39;Personal&#39;">Personal</a></h1>
 </section></div>
 
         <div id="navigation">

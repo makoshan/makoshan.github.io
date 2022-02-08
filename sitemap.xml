@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.gwern.net/docs/2015-08-12-spqr</loc><changefreq>never</changefreq></url>
-<url><loc>https://www.gwern.net/docs/index</loc><changefreq>never</changefreq></url>
+<url><loc>https://www.gwern.net/docs/2015-08-12-spqr.html</loc><changefreq>never</changefreq></url>
+<url><loc>https://www.gwern.net/docs/index.html</loc><changefreq>never</changefreq></url>
 <url><loc>https://www.gwern.net/images/blockchain/lydia-coin.png</loc><changefreq>never</changefreq></url>
 <url><loc>https://www.gwern.net/images/blockchain/lydia-coin.png-768px.png</loc><changefreq>never</changefreq></url>
 <url><loc>https://www.gwern.net/images/blockchain/yuanchao.png</loc><changefreq>never</changefreq></url>
@@ -31,10 +31,10 @@
 <url><loc>https://www.gwern.net/static/build/generateDirectory.hs</loc><changefreq>never</changefreq></url>
 <url><loc>https://www.gwern.net/static/build/gen_rss.py</loc><changefreq>never</changefreq></url>
 <url><loc>https://www.gwern.net/static/build/hakyll.hs</loc><changefreq>never</changefreq></url>
-<url><loc>https://www.gwern.net/static/build/index</loc><changefreq>never</changefreq></url>
+<url><loc>https://www.gwern.net/static/build/index.html</loc><changefreq>never</changefreq></url>
 <url><loc>https://www.gwern.net/static/build/Inflation.hs</loc><changefreq>never</changefreq></url>
 <url><loc>https://www.gwern.net/static/build/Interwiki.hs</loc><changefreq>never</changefreq></url>
-<url><loc>https://www.gwern.net/static/build/keys</loc><changefreq>never</changefreq></url>
+<url><loc>https://www.gwern.net/static/build/keys.html</loc><changefreq>never</changefreq></url>
 <url><loc>https://www.gwern.net/static/build/linkAbstract.R</loc><changefreq>never</changefreq></url>
 <url><loc>https://www.gwern.net/static/build/LinkArchive.hs</loc><changefreq>never</changefreq></url>
 <url><loc>https://www.gwern.net/static/build/linkArchive.sh</loc><changefreq>never</changefreq></url>
@@ -415,15 +415,15 @@
 <url><loc>https://www.gwern.net/static/templates/inlined-foot-template.html</loc><changefreq>never</changefreq></url>
 <url><loc>https://www.gwern.net/static/templates/postitem.html</loc><changefreq>never</changefreq></url>
 <url><loc>https://www.gwern.net/static/templates/tags.html</loc><changefreq>never</changefreq></url>
-<url><loc>https://www.gwern.net/About</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.gwern.net/blockchain/dragon-slayer-become-the-dragon</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.gwern.net/blockchain/gitcoin-grants</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.gwern.net/blockchain/sound-money</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.gwern.net/blockchain/uniswap-social-money</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.gwern.net/Changelog</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.gwern.net/index</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.gwern.net/Links</loc><changefreq>monthly</changefreq></url>
-<url><loc>https://www.gwern.net/ML</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://www.gwern.net/About.html</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://www.gwern.net/blockchain/dragon-slayer-become-the-dragon.html</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://www.gwern.net/blockchain/gitcoin-grants.html</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://www.gwern.net/blockchain/sound-money.html</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://www.gwern.net/blockchain/uniswap-social-money.html</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://www.gwern.net/Changelog.html</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://www.gwern.net/index.html</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://www.gwern.net/Links.html</loc><changefreq>monthly</changefreq></url>
+<url><loc>https://www.gwern.net/ML.html</loc><changefreq>monthly</changefreq></url>
 <url><loc>https://www.gwern.net/sitemap.xml</loc><changefreq>monthly</changefreq></url>
 <url><loc>https://www.gwern.net/tags/blockchain</loc><changefreq>monthly</changefreq></url>
 <url><loc>https://www.gwern.net/tags/index</loc><changefreq>monthly</changefreq></url>

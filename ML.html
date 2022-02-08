@@ -1002,7 +1002,7 @@ h1 {
 
 /*	Lazy-load below-fold sections in supported browsers.
 	Disabled temporarily pending layout redesign to compensate for layout
-	containment. —Obormot 2021-03-21
+	containment. —Obormot 2021-03-21
 	*/
 /*
 section.level1:nth-of-type(n+4) {
@@ -1069,7 +1069,7 @@ a {
     Unfortunately, we don't want to add underlines to links in the TOC because it clutters it (all the lines are links and are in small font), so we have to avoid styling the TOC, which is difficult.
     I got around this by adding in the Hakyll template an additional <div> just for the body of the Markdown content, excluding the TOC, and changing the Tufte CSS to target *that* instead.
 
-May be able at some point to simplify this using regular link underlining, since CSS4's `text-decoration-skip-ink` by default avoids overlapping with text descenders (but as of Oct 2019, no Edge/IE or Safari support, and only the latest Firefox 70 supports it; maybe in a few years...): https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-skip-ink#Browser_Compatibility https://www.caniuse.com/#feat=mdn-css_properties_text-decoration-skip-ink (Right now, Firefox skip-ink looks quite bad: it doesn't skip enough ink, defeating the point, and also positions the underline badly!)
+May be able at some point to simplify this using regular link underlining, since CSS4's `text-decoration-skip-ink` by default avoids overlapping with text descenders (but as of Oct 2019, no Edge/IE or Safari support, and only the latest Firefox 70 supports it; maybe in a few years...): https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-skip-ink#Browser_Compatibility https://www.caniuse.com/#feat=mdn-css_properties_text-decoration-skip-ink (Right now, Firefox skip-ink looks quite bad: it doesn't skip enough ink, defeating the point, and also positions the underline badly!)
 */
 
 .markdownBody a:link,
@@ -2539,10 +2539,10 @@ setMode(currentMode);
     <link rel="preconnect" href="https://www.googletagmanager.com">
 
     
-    <meta name="title" content="从金本位到区块链">
-    <meta name="citation_title" content="从金本位到区块链">
-    <meta name="og:title" content="从金本位到区块链">
-    <meta name="twitter:title" content="从金本位到区块链">
+    <meta name="title" content="Machine Learning Tweets">
+    <meta name="citation_title" content="Machine Learning Tweets">
+    <meta name="og:title" content="Machine Learning Tweets">
+    <meta name="twitter:title" content="Machine Learning Tweets">
     
     <meta name="generator" content="https://github.com/v2eth/v2eth.com/">
     <meta name="creator" content="v2eth.com">
@@ -2556,31 +2556,31 @@ setMode(currentMode);
     <meta name="twitter:site" content="v2eth.com">
     <meta name="og:site" content="v2eth.com">
     <meta name="og:type" content="article">
-    <meta name="description" content="研究货币的起源和未来">
-    <meta name="og:description" content="研究货币的起源和未来">
+    <meta name="description" content="Tweets from a curated list of people involved in Machine Learning.">
+    <meta name="og:description" content="Tweets from a curated list of people involved in Machine Learning.">
     <meta property="og:image" content="https://wiki.v2eth.com/static/img/logo/logo-whitebg-large-border.png">
     
-    <meta name="keywords" content="blockchain">
-    <meta name="dc.date.issued" content="2020-08-20 16:58">
-    <meta name="citation_publication_date" content="2020-08-20 16:58">
-    <meta name="dcterms.modified" content="2022-02-08">
+    <meta name="keywords" content="NN, tweets, people">
+    <meta name="dc.date.issued" content="28 Aug 2019">
+    <meta name="citation_publication_date" content="28 Aug 2019">
+    <meta name="dcterms.modified" content="28 Aug 2019">
     <link rel="schema.dcterms" href="https://dublincore.org/specifications/dublin-core/dcmi-terms/">
     <meta name="dcterms.rights" content="CC PD-0">
     <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
-    <link rel="canonical" href="https://wiki.v2eth.com/blockchain/sound-money">
-    <meta name="citation_fulltext_html_url" content="https://wiki.v2eth.com/blockchain/sound-money">
-    <meta name="og:url" content="https://wiki.v2eth.com/blockchain/sound-money">
-    <meta name="page-source" content="https://wiki.v2eth.com/blockchain/sound-money.page">
+    <link rel="canonical" href="https://wiki.v2eth.com/ML.html">
+    <meta name="citation_fulltext_html_url" content="https://wiki.v2eth.com/ML.html">
+    <meta name="og:url" content="https://wiki.v2eth.com/ML.html">
+    <meta name="page-source" content="https://wiki.v2eth.com/ML.html.page">
     <meta name="citation_fulltext_world_readable" content>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
 
-    <title>从金本位到区块链 · v2eth.com</title>
+    <title>Machine Learning Tweets · v2eth.com</title>
 
     <link rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png" />
     <link rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
   </head>
-  <body class="blockchain-sound-money drop-caps-kanzlei">
+  <body class="ml drop-caps-kanzlei">
 
     <main>
       <div id="sidebar">
@@ -2602,22 +2602,22 @@ setMode(currentMode);
       </div>
 
       <header>
-        <h1>货币的历史</h1>
+        <h1>Machine Learning Tweets</h1>
       </header>
 
       <article> 
         <div id="page-metadata">
           <p> 
-            <span id="page-description" title="Short description of page.">研究货币的起源和未来</span><br />
-            <span id="page-tags" title="List of tags for this page."><em><a title="All pages tagged &#39;blockchain&#39;." href="/tags/blockchain">blockchain</a></em></span>
+            <span id="page-description" title="Short description of page.">Tweets from a curated list of people involved in Machine Learning.</span><br />
+            <span id="page-tags" title="List of tags for this page."><em><a title="All pages tagged &#39;NN&#39;." href="/tags/NN">NN</a>, <a title="All pages tagged &#39;tweets&#39;." href="/tags/tweets">tweets</a>, <a title="All pages tagged &#39;people&#39;." href="/tags/people">people</a></em></span>
             <br />
             <span id="page-metadata-block">
               
-              <span id="page-date-range"><span id="page-creation" title="Date page contents were begun."><em>2020-08-20 16:58</em></span>–<span id="page-source"><a title="Link to latest revision of the raw Markdown text source for this page, &#39;货币的历史&#39;: /blockchain/sound-money.page" href="/blockchain/sound-money.page"><span id="page-modified" title="Date of last major modification to this page."><em>2022-02-08</em></span></a></span></span>
-              <span id="page-status" title="Writing status of current page: ranges &#39;abandoned&#39;/&#39;notes&#39;/&#39;draft&#39;/&#39;in progress&#39;/&#39;finished&#39;"><em>in progress</em></span>
-              <span id="page-confidence"><a href="/About#confidence-tags" title="Explanation of &#39;confidence&#39; metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: &#39;certain&#39;/&#39;highly likely&#39;/&#39;likely&#39;/&#39;possible&#39;/&#39;unlikely&#39;/&#39;highly unlikely&#39;/&#39;remote&#39;/&#39;impossible&#39;)">certainty</a>: <em>possible</em></span>
-              <span id="page-importance"><a href="/About#importance-tags" title="Explanation of &#39;importance&#39; metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>4</em></span>
-              <span class="backlinks"><a id="backlink" href="/metadata/annotations/backlinks/%252Fblockchain%252Fsound-money.html" title="Reverse citations/backlinks/&#39;What links here&#39;/&#39;incoming link&#39;/&#39;inbound link&#39;/inlink/&#39;inward link&#39;/citation for this page (the list of other pages which link to this page).">backlinks</a></span>
+              <span id="page-date-range"><span id="page-creation" title="Date page contents were begun."><em>28 Aug 2019</em></span>–<span id="page-source"><a title="Link to latest revision of the raw Markdown text source for this page, &#39;Machine Learning Tweets&#39;: /ML.html.page" href="/ML.html.page"><span id="page-modified" title="Date of last major modification to this page."><em>28 Aug 2019</em></span></a></span></span>
+              <span id="page-status" title="Writing status of current page: ranges &#39;abandoned&#39;/&#39;notes&#39;/&#39;draft&#39;/&#39;in progress&#39;/&#39;finished&#39;"><em>in-progress</em></span>
+              <span id="page-confidence"><a href="/About#confidence-tags" title="Explanation of &#39;confidence&#39; metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: &#39;certain&#39;/&#39;highly likely&#39;/&#39;likely&#39;/&#39;possible&#39;/&#39;unlikely&#39;/&#39;highly unlikely&#39;/&#39;remote&#39;/&#39;impossible&#39;)">certainty</a>: <em>likely</em></span>
+              <span id="page-importance"><a href="/About#importance-tags" title="Explanation of &#39;importance&#39; metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>8</em></span>
+              <span class="backlinks"><a id="backlink" href="/metadata/annotations/backlinks/%252FML.html" title="Reverse citations/backlinks/&#39;What links here&#39;/&#39;incoming link&#39;/&#39;inbound link&#39;/inlink/&#39;inward link&#39;/citation for this page (the list of other pages which link to this page).">backlinks</a></span>
             </span>
           </p>
           <hr>
@@ -2626,208 +2626,18 @@ setMode(currentMode);
         <noscript><div id="noscriptWarning" class="admonition warning"><div class="admonition-title">JS Disabled</div> For support of <a href="/Design" title="About: v2eth.com Design: principles, features, links, tricks">website features</a> (table-sorting/collapsible-sections/image-zooms/link-annotations/floating-footnotes/Disqus-comments), please enable JavaScript.</div></noscript>
         
 
-        <div id="TOC"><ul>
-<li><a href="#货币的起源"><span>货币的起源</span></a>
-<ul>
-<li><a href="#商品货币"><span>商品货币</span></a></li>
-<li><a href="#礼物经济"><span>礼物经济</span></a></li>
-<li><a href="#收藏品"><span>收藏品</span></a></li>
-</ul></li>
-<li><a href="#货币形式的演进"><span>货币形式的演进</span></a></li>
-<li><a href="#金银货币"><span>金银货币</span></a>
-<ul>
-<li><a href="#纸币"><span>纸币</span></a></li>
-<li><a href="#世界货币"><span>世界货币</span></a></li>
-<li><a href="#电子货币"><span>电子货币</span></a></li>
-</ul></li>
-<li><a href="#货币的本质"><span>货币的本质</span></a>
-<ul>
-<li><a href="#一般等价物"><span>一般等价物</span></a></li>
-<li><a href="#债"><span>债</span></a></li>
-</ul></li>
-<li><a href="#sound-money"><span>Sound Money</span></a>
-<ul>
-<li><a href="#比特币是更好的货币吗"><span>比特币是更好的货币吗？</span></a></li>
-</ul></li>
-<li><a href="#参考"><span>参考</span></a></li>
-</ul></div>
-<div id="markdownBody" class="markdownBody"><p>2008年，美国房地产次贷危机导致全球金融危机，银行倒闭，国家超发货币拯救市场，就在这样全球金融混乱的背景下，有一位叫做中本聪的匿名程序员，在 <a href="http://metzdowd.com/">metzdowd.com</a> 的密码学邮件列表上发表了一份白皮书，描述了一种 P2P 的电子现金系统，称为 Bitcoin。</p>
-<p>中本聪实现了比特币第一个版本，并在比特币上线的第一个区块，将当天泰晤士报<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>的一条报道标题永久的写入区块 - <a href="https://www.thetimes03jan2009.com/">The Times 03/<wbr>Jan/<wbr>2009 Chancellor on brink of second bailout for banks</a>(财政大臣处于第二次援助银行的边缘)。于此呼应比特币采用 2100万固定上限，不能超发。</p>
-<p>我们不禁要问，比特币是未来的货币吗？经过超过 10 年的发展，为什么比特币为代表的加密货币并没有得到主流认可使用，如果回顾历史，我们现在用的货币，是如何一步一步变成人类生活不可缺少的一部分。</p>
-<p>在讲这些逻辑之前，我们首先要了解货币是怎么来的？</p>
-<section id="货币的起源" class="level2">
-<h2><a href="#货币的起源" title="Link to section: § &#39;货币的起源&#39;">货币的起源</a></h2>
-<p>货币的发明是早于文字，所以关于货币的起源，很多是基于猜想和逻辑推理。</p>
-<section id="商品货币" class="level3">
-<h3><a href="#商品货币" title="Link to section: § &#39;商品货币&#39;">商品货币</a></h3>
-<p>关于货币的起源，从古典经济学家都是认为货币起源于以物易物，这一想法可以追溯到亚里士多德和亚当.斯密，亚当斯密认为，劳动分工导致了更细分工具的出现，因而货币的出现就成为必要，以促进原来有复杂的交易活动。奥派经济学家认为货币的起源是<em>自发的，</em>最初货币是一种交换媒介的商品，最终销性程度高的商品成为了货币。</p>
-<p>有这样的一个典型的场景：</p>
-<ul>
-<li>一个农民正和小镇里的铁匠、裁缝、杂货店店主及医生进行以物易物的交易。但是，为了实现以物易物，必须满足需求的双重匹配……亨利想用自己的土豆换鞋子，乔舒亚想用一双额外的鞋子换土豆，那么以物易物的交易将使双方都感到满意。但是，如果亨利有木柴，而乔舒亚并不需要木柴，那么为了完成交易，就需要更多的人参与交易，采用多方交易的形式让亨利能够得到乔舒亚的鞋子。</li>
-</ul>
-<p>以物易物也非常低效，因为它需要需求的双重巧合。通常在这种情况下，一些商品会主导贸易，比如小麦，如果这种商品很普遍，它将有效地采取货币的形式。这个想法产生了<strong>商品货币</strong>。货币大大简化了多方交易的过程。亨利可以通过出售木柴换取货币，然后用货币购买乔舒亚的鞋子。</p>
-</section>
-<section id="礼物经济" class="level3">
-<h3><a href="#礼物经济" title="Link to section: § &#39;礼物经济&#39;">礼物经济</a></h3>
-<p>有另一派的人类学家，并不这样看，他们认为货币起源熟人社会的债，礼物经济。</p>
-<p>同样的场景：</p>
-<ul>
-<li>亨利走向乔舒亚，说：“这双鞋真棒！”乔舒亚说：“哦，其实不怎么好。但是既然看起来你很喜欢，那就拿去吧。”亨利拿走了鞋。亨利的土豆没派上用场，因为双方都非常清楚，如果乔舒亚有需要土豆的那一天，亨利一定会给他一些。</li>
-</ul>
-<p>在这个场景下“需求的双重巧合”消失了。亨利也许当时并没有乔舒亚想要的东西。但是如果这两个人是邻居，很明显，乔舒亚想要亨利的某个东西，只会是时间长短的问题。</p>
-<p>在这个场景下，亨利是“欠乔舒亚一个人情”，如何衡量人情，你可以说多少土豆等价于一双鞋，在这种礼物经济都是粗略估计，但这个情况下，也是充当了价值制度这个意义。</p>
-<p>礼物经济有自己独特的礼仪和规矩，通常三个环节：给与、获得、反馈，构成了礼物经济的循环。与货币借贷类似，还礼是一种义务，这种义务似乎就是利息的雏形。</p>
-<p>无论是收到礼物还是借贷货币，对于得到者来说都是欠下了一个人情或者债务。</p>
-<p>大约在公元前 5000 年前的农业社会，使用礼物这样没有利息的债务是很常见的。同时也出现了有利息的债务，贫困的农民向别人借来种子、谷物或者耕牛，偿还债务的时候附件利息，即是他们收获物。</p>
-<p>在这样的情况下，并非所有交易都是立即完成，我们会相互帮助，会记下谁欠我们的情，这样的债务的出现要远早于铸币的出现，货币不一定是商品，不一定是一般等价物，我们可以交易某种本身不具有内在价值的物品，这样的物品充当了价值的象征。</p>
-<p>但是非正式的信用系统并不能扩展到城市，因为城市不可能让每个人都认识每个人。为了协调更大的社会，最终还是需要一个更加成熟的货币体系。</p>
-</section>
-<section id="收藏品" class="level3">
-<h3><a href="#收藏品" title="Link to section: § &#39;收藏品&#39;">收藏品</a></h3>
-<p>货币的起源是商品还是信用，目前还是没有定论。但是可以明确货币的诞生，并非为了消除邻里之间进行以物易物时所遇到的不便-因为邻里之间根本没有理由进行以物易物，但在小团队之外，与其他村落交换，我们还是需要一种媒介。</p>
-<p>第一个观察到的原始货币以收藏品的形式出现。收藏品是小的，主要是同质的物品，如贝壳或珠子。收藏品往往经久耐用，易于存放或隐藏在个人身上，难以找到或伪造，并且易于评估价值。与牛等许多商品货币形式相比，这使它们成为更强大的货币形式。</p>
-<p>采用收藏品作为耐用货币在人类进化中至关重要。部落通常专注于狩猎特定物种，但由于动物迁徙，特定部落在一年中的某些时候可能很少有食物。通过在猎物淡季时搜寻收藏品，他们可以与猎物处于旺季因而食物过剩的其他部落进行交易。通过收藏品的交易，食物可以更均匀地分布在时间里，所有部落的生活都会变得更好。</p>
-</section>
-</section>
-<section id="货币形式的演进" class="level2">
-<h2><a href="#货币形式的演进" title="Link to section: § &#39;货币形式的演进&#39;">货币形式的演进</a></h2>
-<p>上文我们讲了没有文字记录的货币形式，最早有文字记录的货币是怎样的呢？</p>
-<p>早在公元前 3200年，真正的城市开始诞生和发展，人类最早的锲形文字也是在这一时期被苏美尔人发明出来，而有意思的发现，锲形文字不少与货币有关的记录。</p>
-<p>比如：公元前21世纪末，乌尔纳姆国王颁布了《乌尔纳姆法典》，主要内容是对奴隶制度、婚姻、家庭、继承、刑罚等方面的规定。如：若有人绑架了别人，应该入狱和支付15迈纳的银。</p>
-<p>根据这些法律条文规定和文字记录，货币史学家认为，银应该是4000年前苏美人社会的货币。主要是称量白银，使用的单位是谢克尔和迈纳。</p>
-<p>人们还规定，重量等于 1 歇尔克的银，1 普耳市大米，神庙的劳动者报酬是两份大米，从这一点可以看出，货币这时候的货币实际上是国家创造，为了记录资源的分配。</p>
-<p>尽管在苏美尔人社会中，谢克尔银即是债务清偿手段，也是支付手段，更有价值贮藏的功能，但是，银在苏美尔那里并没有广泛流通，而是被小心地被存在神庙的金库中，而只是作为一种记账货币。更多的是使用小麦支付债务。</p>
-</section>
-<section id="金银货币" class="level2">
-<h2><a href="#金银货币" title="Link to section: § &#39;金银货币&#39;">金银货币</a></h2>
-<p>在小型的农业社会，只要每个人愿意接受，任何东西都可以成为货币，但复杂的城市社会，单一的商品或者信用是无法满足的，因为纯粹由信用货币的体系存在问题，因为信用货币的基础是信用，但在竞争市场，信用是稀缺商品，尤其是陌生人之间。 金银本身是具有价值的商品，同时被印上国家权威的信用标志，价值会变得更高，金银货币完美的完美的包含了货币的两种属性。 同时相比其他的收藏品相比，金银： - 具有稀缺 - 耐用且不易腐蚀 - 很难伪造 - 易分割</p>
-<p>这些特性让金银货币在当时成为主流。 金属货币也存在问题，每次使用需要称重或分割，当然比牛更方便。这个情况是需要铸币术，将金属铸成重量固定的硬币，最早铸币术发明要归功于离底亚国王。公元前 640年， 吕底亚王国铸造出史上第一批硬币。</p>
-<figure>
-<img alt="吕底亚王国珀金币" decoding="async" height="465" loading="lazy" sizes="(max-width: 768px) 100vw, 930px" src="/images/blockchain/lydia-coin.png" srcset="/images/blockchain/lydia-coin.png-768px.png 768w, /images/blockchain/lydia-coin.png 930w" width="930" /><figcaption aria-hidden="true">吕底亚王国珀金币</figcaption>
-</figure>
-<p>在吕底亚之后，硬币铸造在希腊、西西里和意大利广泛使用。大部分的希腊城邦会铸造自己的硬币。并认为是独立的象征，铸币也可以理解成为一种权力。</p>
-<p>大卫·格雷伯等人类学家推测铸币的出现为了满足战争扩充军队的需求，与信用货币不一样，在充满暴力威胁的时期是金银货币的天下，因为士兵远行，需要认可度更高的货币，对于金银货币来说，即使交易对手不承认货币的主权，他们仍然愿意对货币本身的金银进行估价。</p>
-<section id="纸币" class="level3">
-<h3><a href="#纸币" title="Link to section: § &#39;纸币&#39;">纸币</a></h3>
-<p>可以想象大额金银货币便携性不够好，如何保留金银货币优点，还可以增加便携性，于是人们发明了纸币。</p>
-<p>首先，纸币的发明离不开造纸和印刷术。东汉蔡伦改进造纸方法，使得纸张进入全面实用的阶段。印刷术始于东晋时期，在唐朝发展为成熟的雕版印刷技术，宋代毕昇发明了更加便利的活字印刷术。</p>
-<p>当纸币的先决条件都满足了，宋朝成为第一个发行纸币的国家，纸币盛行的原因，当时商品经济盛行，出现钱荒。公元 1000 年左右，北宋缺少铜钱的四川一些商户开始印制并发行交子(纸币)。到了公元 1023年，北宋把纸币发行权收归政府独有。交子原先仅在四川使用，后逐步扩大到全国。交子先是用铁钱做储备金，后来有改用白银做储备金。</p>
-<figure>
-<img alt="现存最早的纸币元钞" decoding="async" height="1400" loading="lazy" sizes="(max-width: 768px) 100vw, 1080px" src="/images/blockchain/yuanchao.png" srcset="/images/blockchain/yuanchao.png-768px.png 768w, /images/blockchain/yuanchao.png 1080w" width="1080" /><figcaption aria-hidden="true">现存最早的纸币元钞</figcaption>
-</figure>
-<p>1279年，南宋被灭，元朝统一中国，同样的，元朝也发行了被称为中统钞的纸币，白银做储备金，同时还规定这种纸币是全国唯一可以被接受的货币，伪造者将被处死。</p>
-<p>可以说中国发明了最早的法定货币（Fiat Currency），主要原因中国建立起一个集权和强大到足以对国内经济实施自上而下控制的政府。</p>
-<p>十三世纪意大利人马可·波罗撰写<a href="https://book.douban.com/subject/1164124/">《马可·波罗游记》</a>时，详细介绍了元朝纸币印制工艺和发行流通的情况，并称之为炼金术的秘密。由此，欧洲人了解了纸币。</p>
-<p>欧洲人在公元1600年之前仍然使用硬币，从殖民地获取的贵金属用来铸造更多硬币，最早受中国的影响发行纸币的是瑞典，1661年，若昂·帕默斯特罗创办第一家瑞典银行，即斯德哥尔摩银行，并发行纸币，币值由存储的等额铸币作担保。很快因为超发过量纸币，若昂·帕默斯特罗差点被处死。</p>
-<p>公元 1694年，为了英法战争筹款，英国国会批准，以民间出资私营方式创立中央银行-英格兰银行<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>，并发行纸币。</p>
-<p>银行开始向存款人和贷款人发行票据，这种票据更适合随身携带。票据随时可以拿到银行兑换同等价值的金币或银币。纸币可以用来购买商品，使用方法和现在的货币很像，不过当时它是由银行和私有机构发行的，而非政府。</p>
-<p>随着时间的推移，由于技术进步和更发达的官僚机构，政府获得对国内经济的更多控制。伴随着这种控制，国家发行货币变为主流</p>
-</section>
-<section id="世界货币" class="level3">
-<h3><a href="#世界货币" title="Link to section: § &#39;世界货币&#39;">世界货币</a></h3>
-<p>世界货币是在国际商品流通中发挥一般等价物作用的货币。在历史上随着各国贸易的发展，中世纪以后，黄金逐渐取得世界货币的垄断地位。19世纪，由于英国国力强盛、货币币值稳定，英镑成为了第一种非金银的世界货币。</p>
-<p>二战后《布雷顿森林协定》的签署，确立了以美元为国际储备货币的<a href="https://baike.baidu.com/item/%E5%9B%BD%E9%99%85%E9%87%91%E8%9E%8D%E4%BD%93%E7%B3%BB">国际金融体系</a>：世界上所有主要大国都将本国货币对美元的汇率固定为固定汇率，美元本身与黄金挂钩，从此美元成为世界货币。</p>
-<p>1970 年代，在美国经济蓬勃发展和政府在越南战争上增加支出的情况下，美联储印制的美元比黄金支持的还要多。这使得美元在布雷顿森林体系下被高估。外国政府开始退出布雷顿森林体系，将多余的美元兑换成黄金，耗尽了美国的黄金储备。尼克松意识到，如果这种情况持续下去，就会引发一场危机。于是在1971年尼克松脱离布雷顿森林体系<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>，取消了美元对黄金的国际兑换，永久打破了金本位，将美元变成了纯法币。</p>
-<p>快进到 21 世纪，自金本位制终结以来发生了很多事情。</p>
-<p>2008 年，我们看到金融危机有可能摧毁全球银行体系。为了应对连锁银行倒闭，世界各国央行救助金融机构，大量印钞，并进行大规模资产购买操作——这种做法被称为<a href="https://en.wikipedia.org/wiki/Quantitative_easing" class="docMetadata">量化宽松</a>。。</p>
-<p>2021年，新冠疫情全球爆发以来，美股连续数次熔断，美联储更是推出诸如利率降至为零、向市场注入近万亿流动性等“暴力”救市量化宽松政策。</p>
-<p>有意思的是，在2008年金融危机的背景下诞生的比特币，在2021年金融风险再次来临的时候，比特币也是跌了很多，并没有起到储值的功能。</p>
-<p>接下来要完全理解为什么会加密货币，我们不仅要关注货币，还要关注支付的历史，比特币出现之前货币是如何转移的。</p>
-</section>
-<section id="电子货币" class="level3">
-<h3><a href="#电子货币" title="Link to section: § &#39;电子货币&#39;">电子货币</a></h3>
-<p>自从货币出现以来，出现了许多促进货币支付的技术：纸币、支票（Check）、信用卡<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>。</p>
-<p>我们上面已经介绍纸币，纸币和硬币一样也存在一些缺点，如果交易量巨大，携带麻烦。于是发明了支票，支票是向开户行发出的支付指令，要求银行将货币从你的账户转移到存入改支票的人的账户上，支票无需携带货币也可以完成交易，提升了支付体系效率。</p>
-<p>支票可以互相抵消的支付便可通过冲销支票来清算，无需运送。大额交易更加便捷，也降低了失窃的风险，但是支票的运送需要时日，纸质支票的处理工作成本高。</p>
-<p>随着价格低廉的计算机发展和互联网的普及，电子支付大大降低了支票运输和处理成本，电子货币即以电子形式存在，通过电子化方式支付的货币，是法定货币的虚拟化。最初的电子货币的主要形态是借记卡和信用卡。电子货币的出现节约了交易成本，提高了经济交易的效率和安全性。</p>
-<p>随着手机的普及率，兴起了移动支付，像是支付宝或者 Apple Pay 也是依赖现有的信用卡(借记卡)支付网络。</p>
-<p>以上电子货币更多是建立在现有货币之上，并没有产生新的货币形式，而且现有的电子货币与现金的点对点交易不同，电子货币支付依赖第三方中介来确认交易。</p>
-<p>加密数字货币: - 于是，在2008年，中本聪发明了比特币，一种无需中介的点对点交易系统。 - 中本聪在非常彻底地证明和验证的基础上构建了比特币，免除了信任第三方的必要性。可以说，比特币运行的核心特征就是验证，因为只有人人都可以充分的验证，才能完全消除对信任的依赖。 - 但加密货币并符合大众对于货币功能的定义，因为没有得到主权国家的认可。</p>
-</section>
-</section>
-<section id="货币的本质" class="level2">
-<h2><a href="#货币的本质" title="Link to section: § &#39;货币的本质&#39;">货币的本质</a></h2>
-<p>介绍完货币起源和演化过程，我们来看货币的本质到底是什么？</p>
-<section id="一般等价物" class="level3">
-<h3><a href="#一般等价物" title="Link to section: § &#39;一般等价物&#39;">一般等价物</a></h3>
-<p>在以金银等金属铸造货币的时代，政治经济学者普遍把货币当作具有一般商品等价物功能的一种特殊商品。法国古典政治经济学家萨伊也明确指出：“货币，或有人把它称为铸币，是一种商品，其价值是由相同的一般法则所决定的，就和其他的商品一样。”</p>
-<p>马克思也认为，货币天生不是金银，但金银天生是货币。</p>
-<p>传统政治经济学家的货币商品说，不仅影响了后来中央计划经济国家里的马克思主义政治经济学，也影响了西方经济学的主流理论。</p>
-</section>
-<section id="债" class="level3">
-<h3><a href="#债" title="Link to section: § &#39;债&#39;">债</a></h3>
-<p>现代社会，经济越来越货币化，货币也越来越虚拟化。尤其是在1971年布雷顿森林体系崩溃后，美元带领全球货币集体脱离金属本位。到了20世纪80年代计算机网络形成后，货币越来越电脑数字化了，越来越成为一种记账和信用体系。货币甚至脱离了纸币符号，演变成一个与银行数据网络联结在一起的银行卡和储蓄账户中的纯电脑数字，货币的本质由此越来越清晰地呈现在世人面前。</p>
-<p>如今很少有人再把货币作为一般商品等价物的一种特殊商品，世界上的货币已经越来越完全受控于各国中央银行的“管理”。黄金非货币化之后，货币与实际任何商品的最后一丝联系也被抛弃了。如今我们生活在纯粹“法定”记账单位的世界中，每个记账单位的价值唯一取决于对其负责的中央银行的相应政策以及人们对其信心。</p>
-<p>在目前广泛使用的法定货币的角度下看，货币不是交换的一种商品媒介，而是由三种基本要素所构成的一套社会协作体系和公共产品：首先是由国家法律支持的一种抽象价值单位；其次是一个社会成员相互交易时跟踪和记录信用或债务余额的记账体系。</p>
-<p>货币的本质看成一种可转让的债或可转让的信用。</p>
-<p>如果货币仅仅是一种表征和信用体系，那么随着比特币背后区块链技术的进步和成熟，是否可以将国家权力的信用背书排除在货币体系之外？这一想法切合了奥地利经济学的健全货币理念。</p>
-</section>
-</section>
-<section id="sound-money" class="level2">
-<h2><a href="#sound-money" title="Link to section: § &#39;Sound Money&#39;">Sound Money</a></h2>
-<p>奥迪经济学派的米塞斯给了健全货币<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>非常清晰的概括，健全货币原则有两个方面：</p>
-<ol type="1">
-<li>原则上使用的交易媒介应该是市场选择</li>
-<li>尽可能避免政府干预货币体制</li>
-</ol>
-<p>米塞斯认为健全货币意指贵金属本位，因为金本位可以不依赖于政府而决定货币单位的购买力。与主流经济学不同，健全货币的主张不在于币值稳定，而在于能否削弱现代主流货币理论和政策导致的通货膨胀和通货紧缩的周期交替。</p>
-<p>现在货币理论中的健全货币的思想最早出现在 16 世纪西班牙经院哲学家的著作中，他们反对国王借着伦理和经济的<span class="smallcaps-auto">幌子降低</span>铸币成色。</p>
-<p>19 世纪初期，健全货币概念是 大卫. 李嘉图及其追随者金条党人论著的核心，这些人认为，拿破仑战争期间和战后不列颠的物价上涨，是由不列颠政府强制实施的停止用黄金白银承兑银行券引起的。金条党人的理想货币是一种自我调节的货币，即一种完全由市场供应力量控制其数量和价值以及国家之间分布的货币。</p>
-<p>19世纪末，关于金银复本位制的论战中，出现了一种新的、更加成熟的反健全货币理论。主要国家都使用法定本位制度，停止白银的货币用途。一直到现在，健全货币理论已经被各个国家抛弃，目前各国国家采用法定货币，中央银行控制货币供给和利率，但这会带来问题，比如说<em>引发大萧条。</em></p>
-<p>稳健货币一直被奥地利经济学派奉为自由市场经济中繁荣的社会和稳定的价格机制的必要先决条件。</p>
-<p>哈耶克、米塞斯 和门格尔他们在详细阐述了经济周期繁荣与萧条的根本原因，因为自 1930 年代以来，通胀性货币政策一直在主导政府方向。</p>
-<p>哈耶克甚至有先见之明地将 1984 年不受政府控制的一种新型货币描述为再次获得良好、稳健货币的唯一真正手段。哈耶克认为国家对货币发行的垄断应该扩展到私营公司——以促进竞争并让人们可以自由选择自己的货币.</p>
-<p>从历史上看，黄金是最成熟的健全货币，直到2008年，比特币的发明，比特币继承了健全货币的想法，比特币是代表了数字时代的稳健货币，与金银货币相比，比特币非常年轻，但它是一种抗通胀、去中心化、高度可分割且可转移的新价值形式，只要有网络连接，全球任何地方都可以使用。</p>
-<p>比特币满足健全货币的所有先决条件，同时加密货币的市场驱动价格符合哈耶克的愿景，即自由市场充当经济体中商品和服务价值的持续公投。</p>
-<p>还有哈耶克的理论提倡去中心化、无需许可的节点网络，就像在区块链去中心化账本是一样的。可以说，加密货币代表了哈耶克关于货币系统的论文在现实世界中的实现。</p>
-<section id="比特币是更好的货币吗" class="level3">
-<h3><a href="#比特币是更好的货币吗" title="Link to section: § &#39;比特币是更好的货币吗？&#39;">比特币是更好的货币吗？</a></h3>
-<p>比特币发明之前，此时支付方式分为两种截然不同的类别：</p>
-<p>1.现金支付：现金支付由双方面对面完成，方便快捷，立刻完成，不需要任何一方的信任。缺点是需要当事双方亲自同时出现在同一地点。</p>
-<p>2.中介支付<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>：中介支付需要一个可信第三方。例如信用卡或支付宝，第三方来处理交易双方资金转移。优点是交易双方不必同时出现在同一地点。缺点是，需要信任，有被第三方拖累的风险。</p>
-<p>这两种支付方式各有优缺点，在经济交易中，大多数人会按当时需要选择较为适宜的支付方式。</p>
-<p>在比特币发明之前，中介支付是主要的电子支付形式，因为在网络的数字对象可以无限复制，为了避免双花，电子支付都必须依靠中介。</p>
-<p>在很多程序员多年尝试和失败的基础上，基于广泛的技术积累，比特币成为首个不依赖可信第三方的电子支付解决方案。作为首个可验证其稀缺性的数字对象。</p>
-<p>中本聪发明比特币的动机，是想创建一种“纯粹点对点的电子现金形式”，在交易中不需要信任第三方，并且货币供给不会被任何人改变。</p>
-<p>换句话说，比特币将实物现金支付的理想特性（不需中介，交易立达）带到数字领域。</p>
-<p>自 2009 年推出以来，比特币风靡全球。2010 年，一个比特币价值 0.003 美元，而在 2021 年 4 月，比特币创下了近 60000 美元的历史新高，增长了近 200 百万倍。</p>
-<p>这是一个惊人的故事。但比特币的故事不仅仅是关于价格：比特币的起源深深植根于意识形态。加密货币如何产生的另一个方面：来自密码朋克的亚文化。在下一篇文章，我会继续讲密码朋克和比特币之前的数字货币尝试。</p>
-</section>
-</section>
-<section id="参考" class="level2">
-<h2><a href="#参考" title="Link to section: § &#39;参考&#39;">参考</a></h2>
-<ol type="1">
-<li><a href="https://medium.com/our-new-nature/the-case-for-sound-currency-b52da8148131">The Case for Sound Currency</a></li>
-<li><a href="https://nakamoto.com/a-brief-history-of-money/">A Brief History of Money</a></li>
-<li><a href="https://www.money.org/money-museum/history-of-money">The history of money</a></li>
-<li><a href="https://www.youtube.com/watch?v=yPIvqJsCOSo">Bitcoin: The New Gold Standard</a></li>
-<li><a href="https://blockonomi.com/sound-money-bitcoin/">What is Sound Money? A Look at Bitcoin’s Emergence</a></li>
-<li><a href="https://medium.com/galaxy-digital-research/on-sound-money-afc0619697b3">On Sound Money</a></li>
-<li><a href="https://book.douban.com/subject/20272111/">《债：第一个5000年》大卫·格雷伯</a></li>
-<li><a href="https://book.douban.com/subject/35178904/">《货币未来：从金本位到区块链》赛费迪安·阿莫斯</a></li>
-<li><a href="https://book.douban.com/subject/35375504/">《货币：健全与非健全》约瑟夫・萨勒诺</a></li>
-<li><a href="https://book.douban.com/subject/34807450/">《货币、权力与人》翟东升</a></li>
-<li><a href="https://book.douban.com/subject/26950185/">《货币金融学》[美] 弗雷德里<span class="smallcaps-auto">克·S</span>.米什金</a></li>
-<li><a href="https://book.douban.com/subject/30341977/">《货币与信用理论》路德维希·冯·米塞斯</a></li>
-<li><a href="https://book.douban.com/subject/26772766/">《货币简史》卡比尔·塞加尔</a></li>
-<li><a href="https://book.douban.com/subject/33464162/">《货币的非国家化》弗里德里希·冯·哈耶克</a></li>
-<li><a href="https://book.douban.com/subject/35269253/">《经济学入门50讲》张是之</a></li>
-</ol>
-</section>
-<section class="footnotes" role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1" role="doc-endnote"><p>这里指英国政府为 挽 救国家金融体系免于崩溃所做的努力。当中本聪创造了前 50 个硬币，现在称为创世区块时，他将日期和标题永久嵌入到数据中。隐藏的文字是数字战斗口号。中本聪认为是时候做一些新的事情了：一种不受政府和中央银行控制的去中心化加密货币<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>英格兰银行成立后，在整个18世纪约有五分之四的业务及获利都与政府有关。它对政府提供贷款、为大部分政府机关管帐、负责管理国债，也发行钞票。因兼具私营及执行公权力的特质，它必须在民间股东将本求利的要求，以及必须照顾公众福利之间求取平衡。当时是属于黄金本位时代，民众保有随时以纸币兑换黄金的权利。虽然除英格兰银行外，民间银行亦得发行纸币，但英格兰银行较易取得民众的信心，故几乎包办了发行货币的业务。惟直到1844年的银行权利法案，方将货币发行权集中到英格兰银行，要求民间银行的货币发行权因任何理由到期，都得移转给英格兰银行。这些移转至1921年才全部完成，故英格兰自该年起才独自享有货币发行权。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3" role="doc-endnote"><p>但由于美国国力强盛，及其在全球金融体系中的支配地位，国际上大多数结算和外汇储备仍然是美元。<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4" role="doc-endnote"><p>信用卡诞生于美国，最初以信用筹码的形式出现，1915年，美国的商店、饮食店、加油站为招徕顾客，扩大营业额，开始发放一种类似金属徽章的信用筹码，用于赊购商品，此为信用卡的雏形。<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5" role="doc-endnote"><p>健全货币一词起源于古罗马，在那里，小银币是日常商业活动的标准，无论是用于支付罗马士兵还是从已知世界的各个角落购买异国情调的商品。 随着罗马挥霍其财富，它找到了一条支撑国库的捷径。它逐渐用普通金属贬低那些银币，最终将银含量降低到大约 5%。这一举动并没有持续很长时间。可以理解的是，训练有素的罗马士兵不喜欢用毫无价值的神秘金属作为报酬，以换取在血腥战场上冒生命危险。结果，他们抵制了这些毫无价值的金属的使用，并开始掠夺剩余的可作为可交易商品的资源，直到罗马沦陷，其统治者将他们没收的资产转移到其他地方。<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6" role="doc-endnote"><p>历史上人们最看重的货币属性是可互换性和流动性。选择具有可互换性和流动性的货币，是因为人们想真正对自己的钱拥有主权，主权货币包含了所有使用它所需的许可，其他人也想要它，但不能对它施加控制。中介支付会损害一些理想的货币属性，在用实物现金交易的时候，原本不存在这些缺点。然而，由于现代电信的发展，远距离贸易和就业的增加，实物现金交易事实上越来越不具备可行性。<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div>
+        <div id="TOC"></div>
+<div id="markdownBody" class="markdownBody"><div id="abstract">
+<blockquote>
+<p>Here are some tweets from <a href="https://twitter.com/theshawwn/lists/machine-learning/members">people</a> involved in Machine Learning. Whenever I notice someone tweeting interesting work related to ML, I add them to this list. There are about 35 members now.</p>
+<p>You can view the list <a href="https://twitter.com/theshawwn/lists/machine-learning">on Twitter</a>, if you prefer.</p>
+</blockquote>
+</div>
+<a class="twitter-timeline" href="https://twitter.com/theshawwn/lists/machine-learning?ref_src=twsrc%5Etfw">A Twitter List by theshawwn</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 
         <div id="navigation">
-          <a id="navigation-previous" rel="prev" href="./blockchain/uniswap-social-money" title="Link to previous page by topic, ‘./blockchain/uniswap-social-money’">​<svg><use href="/static/img/icons/sequential-nav-icons-arabesque.svg#direction" /></svg></a><a id="navigation-center" title="Return to top of current page" href="#sidebar"><svg><use href="/static/img/icons/sequential-nav-icons-arabesque.svg#center" /></svg></a><a id="navigation-next" rel="next" href="./blockchain/gitcoin-grants" title="Link to next page by topic, ‘./blockchain/gitcoin-grants’"><svg><use href="/static/img/icons/sequential-nav-icons-arabesque.svg#direction" /></svg></a>  <!-- WARNING: We need empty (with a ZERO WIDTH SPACE inside them) links like <a>​</a> instead of self-closing <a/> links (which are valid) because otherwise mathjax-nodepage's mjpage function goes crazy & duplicates them. -->
+          <a id="navigation-previous" rel="prev" href="/index" title="Link to previous page by topic, ‘/index’">​<svg><use href="/static/img/icons/sequential-nav-icons-arabesque.svg#direction" /></svg></a><a id="navigation-center" title="Return to top of current page" href="#sidebar"><svg><use href="/static/img/icons/sequential-nav-icons-arabesque.svg#center" /></svg></a><a id="navigation-next" rel="next" href="/index" title="Link to next page by topic, ‘/index’"><svg><use href="/static/img/icons/sequential-nav-icons-arabesque.svg#direction" /></svg></a>  <!-- WARNING: We need empty (with a ZERO WIDTH SPACE inside them) links like <a>​</a> instead of self-closing <a/> links (which are valid) because otherwise mathjax-nodepage's mjpage function goes crazy & duplicates them. -->
 
         </div>
 
