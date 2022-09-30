@@ -131,7 +131,7 @@ main = hakyll $ do
                                      "static/**.conf",
                                      "static/**.css",
                                      "static/**.gif",
-                                     "static/**.git",
+                                      "static/**.git",
                                      "static/**.gitignore",
                                      "static/**.hs",
                                      "static/**.html",

@@ -25,7 +25,7 @@ if ! [[ -n $(command -v ghc) && -n $(command -v git) && -n $(command -v rsync) &
           -n $(command -v tidy) && -n $(command -v linkchecker) && -n $(command -v du) && -n $(command -v rm) && -n $(command -v find) && \
           -n $(command -v fdupes) && -n $(command -v urlencode) && -n $(command -v sed) && -n $(command -v parallel) && -n $(command -v xargs) && \
           -n $(command -v file) && -n $(command -v exiftool) && -n $(command -v identify) && -n $(command -v pdftotext) && \
-          -n $(command -v /root/.nvm/versions/node/v8.11.2/lib/node_modules/mathjax-node-page/bin/mjpage) && -n $(command -v ./static/build/link-extractor.hs) && \
+          -n $(command -v /usr/local/lib/node_modules/mathjax-node-page/bin/mjpage) && -n $(command -v ./static/build/link-extractor.hs) && \
           -n $(command -v ./static/build/anchor-checker.php) && -n $(command -v php) && -n $(command -v ./static/build/generateDirectory.hs) && \
           -n $(command -v ./static/build/generateBacklinks.hs) ]] && \
        [ -z "$(pgrep hakyll)" ];
@@ -132,7 +132,7 @@ else
     staticCompileMathJax () {
         if [[ $(fgrep -e '<span class="math inline"' -e '<span class="math display"' "$@") ]]; then
             TARGET=$(mktemp /tmp/XXXXXXX.html)
-            cat "$@" | nice ~/src/node_modules/mathjax-node-page/bin/mjpage --output CommonHTML --fontURL '/static/font/mathjax' | \
+            cat "$@" | nice /usr/local/node_modules/mathjax-node-page/bin/mjpage --output CommonHTML --fontURL '/static/font/mathjax' | \
             ## WARNING: experimental CSS optimization: can't figure out where MathJax generates its CSS which is compiled,
             ## but it potentially blocks rendering without a 'font-display: swap;' parameter (which is perfectly safe since the user won't see any math early on)
                 sed -e 's/^\@font-face {/\@font-face {font-display: swap; /' >> "$TARGET";
