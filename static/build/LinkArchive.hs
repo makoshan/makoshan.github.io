@@ -131,7 +131,7 @@ currentDay = fmap (toModifiedJulianDay . utctDay) Data.Time.Clock.getCurrentTime
 
 -- take a URL, archive it, and if successful return the hashed path
 archiveURL :: String -> IO (Maybe Path)
-archiveURL l = do (exit,stderr',stdout) <- runShellCommand "./" Nothing "linkArchive.sh" [l]
+archiveURL l = do (exit,stderr',stdout) <- runShellCommand "./" Nothing "python" [l]
                   case exit of
                      ExitSuccess -> do hPutStrLn stderr ( "Archiving (LinkArchive.hs): " ++ l ++ " returned: " ++ U.toString stdout)
                                        return $ Just $ U.toString stdout
