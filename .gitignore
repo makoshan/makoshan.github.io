@@ -75,3 +75,5 @@ newsletter/temp/
 
 # Claude Code
 .claude/
+_site/
+build/dist-newstyle/
