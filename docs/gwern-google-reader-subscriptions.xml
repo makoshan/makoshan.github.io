@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+  <head>
+    <title>The Old Reader</title>
+    <dateCreated>Wed, 12 Feb 2014 18:03:37 GMT</dateCreated>
+    <dateModified>Wed, 12 Feb 2014 18:03:37 GMT</dateModified>
+    <ownerName>gwern</ownerName>
+    <ownerEmail>gwern@gwern.net</ownerEmail>
+  </head>
+  <body>
+    <outline title="economics" text="economics">
+      <outline type="rss" title="Krebs on Security" text="Krebs on Security" htmlUrl="http://krebsonsecurity.com" xmlUrl="http://krebsonsecurity.com/feed/atom/"/>
+      <outline type="rss" title="2011 Intrade fee changes, or, Intrade considered no longer useful for LessWrongers - Less Wrong" text="2011 Intrade fee changes, or, Intrade considered no longer useful for LessWrongers - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/3l2/2011_intrade_fee_changes_or_intrade_considered_no/.rss"/>
+      <outline type="rss" title="China Financial Markets" text="China Financial Markets" htmlUrl="http://blog.mpettis.com" xmlUrl="http://mpettis.com/feed/"/>
+      <outline type="rss" title="Coordination Problem" text="Coordination Problem" htmlUrl="http://www.coordinationproblem.org/" xmlUrl="http://www.coordinationproblem.org/atom.xml"/>
+      <outline type="rss" title="EconLog" text="EconLog" htmlUrl="http://econlog.econlib.org/" xmlUrl="http://econlog.econlib.org/index.xml"/>
+      <outline type="rss" title="Marginal Revolution" text="Marginal Revolution" htmlUrl="http://marginalrevolution.com" xmlUrl="http://marginalrevolution.com/marginalrevolution/index.rdf"/>
+      <outline type="rss" title="Patrick Chovanec" text="Patrick Chovanec" htmlUrl="http://chovanec.wordpress.com" xmlUrl="http://chovanec.wordpress.com/feed/"/>
+      <outline type="rss" title="TheMoneyIllusion" text="TheMoneyIllusion" htmlUrl="http://www.themoneyillusion.com" xmlUrl="http://feeds.feedburner.com/Themoneyillusion"/>
+      <outline type="rss" title="(title unknown)" text="(title unknown)" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/2v6/poker_playing/.rss"/>
+      <outline type="rss" title="Unenumerated" text="Unenumerated" htmlUrl="http://unenumerated.blogspot.com/" xmlUrl="http://unenumerated.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Weirder WebWeirder Web | Tag Archive | Silk Road" text="Weirder WebWeirder Web | Tag Archive | Silk Road" htmlUrl="http://weirderweb.com" xmlUrl="http://weirderweb.com/tag/silk-road/feed/"/>
+    </outline>
+    <outline title="literature" text="literature">
+      <outline type="rss" title="Continued on Next Rock" text="Continued on Next Rock" htmlUrl="http://ralafferty.tumblr.com/" xmlUrl="http://ralafferty.tumblr.com/rss"/>
+      <outline type="rss" title="etouffee's New Writeups" text="etouffee's New Writeups" htmlUrl="http://everything2.com/index.pl?node=Everything%20User%20Search&amp;usersearch=etouffee" xmlUrl="http://everything2.com/index.pl?node_id=1822009&amp;lastnode_id=1153472&amp;foruser=etouffee"/>
+      <outline type="rss" title="Hoof &amp; Hide" text="Hoof &amp; Hide" htmlUrl="http://hoofandhide.tumblr.com/" xmlUrl="http://hoofandhide.tumblr.com/rss"/>
+      <outline type="rss" title="Lapham's Quarterly" text="Lapham's Quarterly" htmlUrl="http://www.laphamsquarterly.org/" xmlUrl="http://www.laphamsquarterly.org/feeds/rss/"/>
+      <outline type="rss" title="R.A. Lafferty Devotional Forum" text="R.A. Lafferty Devotional Forum" htmlUrl="http://www.mulle-kybernetik.com/RAL/messageboard/index.php" xmlUrl="http://www.mulle-kybernetik.com/RAL/messageboard/feed.php?f=1"/>
+      <outline type="rss" title="Ruthless Culture" text="Ruthless Culture" htmlUrl="http://ruthlessculture.com" xmlUrl="http://ruthlessculture.com/feed/"/>
+      <outline type="rss" title="The Ants Of God Are Queer Fish" text="The Ants Of God Are Queer Fish" htmlUrl="http://antsofgodarequeerfish.blogspot.com/" xmlUrl="http://antsofgodarequeerfish.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="The New Yorker" text="The New Yorker" htmlUrl="http://www.newyorker.com/mrss/feeds/everything.xml" xmlUrl="http://www.newyorker.com/services/rss/feeds/everything.xml"/>
+      <outline type="rss" title="Ultan's Library" text="Ultan's Library" htmlUrl="http://ultan.org.uk" xmlUrl="http://ultan.org.uk/feed/"/>
+    </outline>
+    <outline title="Korea" text="Korea">
+      <outline type="rss" title="Asian Correspondent: Korea Beat" text="Asian Correspondent: Korea Beat" htmlUrl="http://asiancorrespondent.com" xmlUrl="http://asiancorrespondent.com/author/nschwartzman/feed/"/>
+      <outline type="rss" title="Ask a Korean!" text="Ask a Korean!" htmlUrl="http://askakorean.blogspot.com/" xmlUrl="http://askakorean.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Black in Korea: Jasmine Taiwo is Teaching for CDI in Jeonju, South Korea ( blog - life in Korea )" text="Black in Korea: Jasmine Taiwo is Teaching for CDI in Jeonju, South Korea ( blog - life in Korea )" htmlUrl="http://officialtaiwo.blogspot.com/" xmlUrl="http://officialtaiwo.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Gusts Of Popular Feeling" text="Gusts Of Popular Feeling" htmlUrl="http://populargusts.blogspot.com/" xmlUrl="http://populargusts.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="KTLIT" text="KTLIT" htmlUrl="http://www.ktlit.com" xmlUrl="http://www.ktlit.com/feed"/>
+      <outline type="rss" title="Mark Russell's Website" text="Mark Russell's Website" htmlUrl="http://www.markjamesrussell.com" xmlUrl="http://www.markjamesrussell.com/feed/"/>
+      <outline type="rss" title="One Free Korea" text="One Free Korea" htmlUrl="http://freekorea.us" xmlUrl="http://freekorea.us/feed/"/>
+      <outline type="rss" title="Roboseyo" text="Roboseyo" htmlUrl="http://roboseyo.blogspot.com/" xmlUrl="http://roboseyo.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="ryung068" text="ryung068" htmlUrl="https://ryung068.wordpress.com" xmlUrl="https://ryung068.wordpress.com/feed/"/>
+      <outline type="rss" title="Scribblings of the Metropolitician" text="Scribblings of the Metropolitician" htmlUrl="http://metropolitician.blogs.com/scribblings_of_the_metrop/" xmlUrl="http://metropolitician.blogs.com/scribblings_of_the_metrop/atom.xml"/>
+      <outline type="rss" title="Send Me To Korea" text="Send Me To Korea" htmlUrl="http://sendmetokorea.wordpress.com" xmlUrl="http://feeds.feedburner.com/SendMeToKorea"/>
+      <outline type="rss" title="The Grand Narrative" text="The Grand Narrative" htmlUrl="http://thegrandnarrative.com" xmlUrl="http://thegrandnarrative.com/feed/"/>
+    </outline>
+    <outline title="statistics" text="statistics">
+      <outline type="rss" title="Data ColadaData Colada" text="Data ColadaData Colada" htmlUrl="http://datacolada.org" xmlUrl="http://datacolada.org/feed/"/>
+      <outline type="rss" title="2012 Survey Results - Less Wrong" text="2012 Survey Results - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/fp5/2012_survey_results/.rss"/>
+      <outline type="rss" title="How strong is the impact of science fiction on inspiring people to pursue STEM careers? - Skeptics Stack Exchange" text="How strong is the impact of science fiction on inspiring people to pursue STEM careers? - Skeptics Stack Exchange" htmlUrl="http://skeptics.stackexchange.com/q/18791" xmlUrl="http://skeptics.stackexchange.com/feeds/question/18791"/>
+      <outline type="rss" title="Notes on Brainwashing &amp; 'Cults' - Less Wrong Discussion" text="Notes on Brainwashing &amp; 'Cults' - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/imu/notes_on_brainwashing_cults/.rss"/>
+      <outline type="rss" title="Against NHST - Less Wrong Discussion" text="Against NHST - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/g13/against_nhst/.rss"/>
+      <outline type="rss" title="Analyzing FF.net reviews of 'Harry Potter and the Methods of Rationality' - Less Wrong Discussion" text="Analyzing FF.net reviews of 'Harry Potter and the Methods of Rationality' - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/fag/analyzing_ffnet_reviews_of_harry_potter_and_the/.rss"/>
+      <outline type="rss" title="Capture-recapture sampling valid in literary analysis? - Cross Validated - Stack Exchange" text="Capture-recapture sampling valid in literary analysis? - Cross Validated - Stack Exchange" htmlUrl="http://stats.stackexchange.com/q/43707" xmlUrl="http://stats.stackexchange.com/feeds/question/43707"/>
+      <outline type="rss" title="Case Study: the Death Note Script and Bayes - LessWrong" text="Case Study: the Death Note Script and Bayes - LessWrong" htmlUrl="http://lesswrong.com/r/lesswrong/" xmlUrl="http://lesswrong.com/r/lesswrong/lw/f63/case_study_the_death_note_script_and_bayes/.rss"/>
+      <outline type="rss" title="Comments on: In a few cases, the start dates are well-informed guesses" text="Comments on: In a few cases, the start dates are well-informed guesses" htmlUrl="http://www.metafilter.com/127712/In-a-few-cases-the-start-dates-are-wellinformed-guesses/" xmlUrl="http://www.metafilter.com/127712/In-a-few-cases-the-start-dates-are-wellinformed-guesses/rss"/>
+      <outline type="rss" title="Correlated bivariate normal distribution: finding percentage of of data which is 2 standard deviations above the mean? - Cross Validated - Stack Exchange" text="Correlated bivariate normal distribution: finding percentage of of data which is 2 standard deviations above the mean? - Cross Validated - Stack Exchange" htmlUrl="http://stats.stackexchange.com/q/48227" xmlUrl="http://stats.stackexchange.com/feeds/question/48227"/>
+      <outline type="rss" title="FiveThirtyEight" text="FiveThirtyEight" htmlUrl="http://fivethirtyeight.blogs.nytimes.com/" xmlUrl="http://feeds.feedburner.com/538dotcom"/>
+      <outline type="rss" title="Human Varieties" text="Human Varieties" htmlUrl="http://humanvarieties.org" xmlUrl="http://humanvarieties.org/feed/"/>
+      <outline type="rss" title="[LINK] &quot;Prediction Audits&quot; for Nate Silver, Dave Weigel - Less Wrong Discussion" text="[LINK] &quot;Prediction Audits&quot; for Nate Silver, Dave Weigel - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/93y/link_prediction_audits_for_nate_silver_dave_weigel/.rss"/>
+      <outline type="rss" title="Long Bets" text="Long Bets" htmlUrl="http://feeds.feedburner.com" xmlUrl="http://feeds.feedburner.com/longbets"/>
+      <outline type="rss" title="LW anchoring experiment: maybe - Less Wrong Discussion" text="LW anchoring experiment: maybe - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/gft/lw_anchoring_experiment_maybe/.rss"/>
+      <outline type="rss" title="Maximum Entropy" text="Maximum Entropy" htmlUrl="http://maximum-entropy-blog.blogspot.com/" xmlUrl="http://maximum-entropy-blog.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Mixed/hierarchical/multilevel model for n-of-1/single-subject design: incorporating baseline data? - Cross Validated" text="Mixed/hierarchical/multilevel model for n-of-1/single-subject design: incorporating baseline data? - Cross Validated" htmlUrl="http://stats.stackexchange.com/q/59912" xmlUrl="http://stats.stackexchange.com/feeds/question/59912"/>
+      <outline type="rss" title="Normal Deviate" text="Normal Deviate" htmlUrl="http://normaldeviate.wordpress.com" xmlUrl="https://normaldeviate.wordpress.com/feed/"/>
+      <outline type="rss" title="On the Importance of Systematic Biases in Science - Less Wrong Discussion" text="On the Importance of Systematic Biases in Science - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/geb/on_the_importance_of_systematic_biases_in_science/.rss"/>
+      <outline type="rss" title="R-bloggers" text="R-bloggers" htmlUrl="http://www.r-bloggers.com" xmlUrl="http://www.r-bloggers.com/feed/"/>
+      <outline type="rss" title="Random Observations" text="Random Observations" htmlUrl="http://bentilly.blogspot.com/" xmlUrl="http://bentilly.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Statistical Modeling, Causal Inference, and Social Science" text="Statistical Modeling, Causal Inference, and Social Science" htmlUrl="http://andrewgelman.com" xmlUrl="http://feeds.feedburner.com/StatisticalModeling"/>
+      <outline type="rss" title="Stigler Diet" text="Stigler Diet" htmlUrl="http://www.stiglerdiet.com" xmlUrl="http://www.stiglerdiet.com/feed/"/>
+      <outline type="rss" title="The Endeavour" text="The Endeavour" htmlUrl="http://www.johndcook.com/blog" xmlUrl="http://feeds.feedburner.com/theendeavour"/>
+      <outline type="rss" title="The Hardest Science" text="The Hardest Science" htmlUrl="http://hardsci.wordpress.com" xmlUrl="https://hardsci.wordpress.com/feed/"/>
+    </outline>
+    <outline title="science" text="science">
+      <outline type="rss" title="Mind the Brain" text="Mind the Brain" htmlUrl="http://blogs.plos.org/mindthebrain" xmlUrl="http://blogs.plos.org/mindthebrain/feed/"/>
+      <outline type="rss" title="The Unz Review » Razib Khan" text="The Unz Review » Razib Khan" htmlUrl="http://www.unz.com" xmlUrl="http://www.unz.com/rkhan/feed/"/>
+      <outline type="rss" title="Arcsecond" text="Arcsecond" htmlUrl="http://arcsecond.wordpress.com" xmlUrl="https://arcsecond.wordpress.com/feed/"/>
+      <outline type="rss" title="Are there better ways of identifying the most creative scientists? - Less Wrong" text="Are there better ways of identifying the most creative scientists? - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/7dd/are_there_better_ways_of_identifying_the_most/.rss"/>
+      <outline type="rss" title="arXiv review" text="arXiv review" htmlUrl="http://www.technologyreview.com/stream/26986/?sort=recent" xmlUrl="http://feeds.technologyreview.com/technology_review_blog_arxiv"/>
+      <outline type="rss" title="BPS Research Digest" text="BPS Research Digest" htmlUrl="http://bps-research-digest.blogspot.com/" xmlUrl="http://feeds.feedburner.com/BpsResearchDigest"/>
+      <outline type="rss" title="Case Study: Testing Confirmation Bias - Less Wrong Discussion" text="Case Study: Testing Confirmation Bias - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/c5f/case_study_testing_confirmation_bias/.rss"/>
+      <outline type="rss" title="Cashing Out Cognitive Biases as Behavior - Less Wrong" text="Cashing Out Cognitive Biases as Behavior - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/ahz/cashing_out_cognitive_biases_as_behavior/.rss"/>
+      <outline type="rss" title="Chris - Even Better" text="Chris - Even Better" htmlUrl="http://evenbetterchris.blogspot.com/" xmlUrl="http://evenbetterchris.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Contrary Brin" text="Contrary Brin" htmlUrl="http://davidbrin.blogspot.com/" xmlUrl="http://davidbrin.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Experiment: a good researcher is hard to find - Less Wrong Discussion" text="Experiment: a good researcher is hard to find - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/c4c/experiment_a_good_researcher_is_hard_to_find/.rss"/>
+      <outline type="rss" title="Gene Expression" text="Gene Expression" htmlUrl="http://blogs.discovermagazine.com/gnxp" xmlUrl="http://feeds.feedburner.com/GeneExpressionBlog"/>
+      <outline type="rss" title="Gödel's Lost Letter and P=NP" text="Gödel's Lost Letter and P=NP" htmlUrl="http://rjlipton.wordpress.com" xmlUrl="https://rjlipton.wordpress.com/feed/"/>
+      <outline type="rss" title="High Tower Pharmacology" text="High Tower Pharmacology" htmlUrl="http://hightowerpharmacology.blogspot.com/" xmlUrl="http://hightowerpharmacology.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="In the Pipeline" text="In the Pipeline" htmlUrl="http://pipeline.corante.com/index.xml" xmlUrl="http://pipeline.corante.com/index.xml"/>
+      <outline type="rss" title="Information Processing" text="Information Processing" htmlUrl="http://infoproc.blogspot.com/" xmlUrl="http://infoproc.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Jay, Quantified" text="Jay, Quantified" htmlUrl="http://jayquantified.blogspot.com/" xmlUrl="http://jayquantified.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Living Forever is Hard, part 2: Adult Longevity - Less Wrong" text="Living Forever is Hard, part 2: Adult Longevity - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/7jh/living_forever_is_hard_part_2_adult_longevity/.rss"/>
+      <outline type="rss" title="Living Forever is Hard, part 3: the state of life extension research - Less Wrong" text="Living Forever is Hard, part 3: the state of life extension research - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/bl3/living_forever_is_hard_part_3_the_state_of_life/.rss"/>
+      <outline type="rss" title="Longevity Meme" text="Longevity Meme" htmlUrl="https://www.fightaging.org/" xmlUrl="http://www.fightaging.org/index.xml"/>
+      <outline type="rss" title="N-back news: Jaeggi 2011, or, is there a psychologist/statistician in the house? - Less Wrong" text="N-back news: Jaeggi 2011, or, is there a psychologist/statistician in the house? - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/68k/nback_news_jaeggi_2011_or_is_there_a/.rss"/>
+      <outline type="rss" title="Notes on Psychopathy - Less Wrong Discussion" text="Notes on Psychopathy - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/fzy/notes_on_psychopathy/.rss"/>
+      <outline type="rss" title="Notes on the Psychology of Power - Less Wrong Discussion" text="Notes on the Psychology of Power - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/dtg/notes_on_the_psychology_of_power/.rss"/>
+      <outline type="rss" title="NYT &gt; Science" text="NYT &gt; Science" htmlUrl="http://www.nytimes.com/pages/science/index.html?partner=rss&amp;emc=rss" xmlUrl="http://www.nytimes.com/services/xml/rss/nyt/Science.xml"/>
+      <outline type="rss" title="Plastination is maturing and needs funding, says Hanson - Less Wrong Discussion" text="Plastination is maturing and needs funding, says Hanson - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/lesswrong/" xmlUrl="http://lesswrong.com/r/lesswrong/lw/d5u/plastination_is_maturing_and_needs_funding_says/.rss"/>
+      <outline type="rss" title="pubmed: adult iodine supplem..." text="pubmed: adult iodine supplem..." htmlUrl="http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Search&amp;db=PubMed&amp;term=adult%20iodine%20supplementation%20(IQ%20OR%20intelligence%20OR%20cognitive)" xmlUrl="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/erss.cgi?rss_guid=1HM5Uxfu7f2KxGr_CS9LmYOdwKatD3BVNLpbJIYpYNtDkgaYfE"/>
+      <outline type="rss" title="Resveratrol continues to be useless - Less Wrong" text="Resveratrol continues to be useless - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/2ug/resveratrol_continues_to_be_useless/.rss"/>
+      <outline type="rss" title="Seth's blog" text="Seth's blog" htmlUrl="http://blog.sethroberts.net" xmlUrl="http://blog.sethroberts.net/feed/"/>
+      <outline type="rss" title="Spaced repetition review (my entry) - Less Wrong" text="Spaced repetition review (my entry) - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/718/spaced_repetition_review_my_entry/.rss"/>
+      <outline type="rss" title="The Physics of Finance" text="The Physics of Finance" htmlUrl="http://physicsoffinance.blogspot.com/" xmlUrl="http://physicsoffinance.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="(title unknown)" text="(title unknown)" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/5qm/living_forever_is_hard_or_the_gompertz_curve/.rss"/>
+      <outline type="rss" title="(title unknown)" text="(title unknown)" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/1lt/case_study_melatonin/.rss"/>
+      <outline type="rss" title="West Hunter" text="West Hunter" htmlUrl="http://westhunt.wordpress.com" xmlUrl="https://westhunt.wordpress.com/feed/"/>
+      <outline type="rss" title="What If?" text="What If?" htmlUrl="http://what-if.xkcd.com/feed.atom" xmlUrl="http://what-if.xkcd.com/feed.atom"/>
+    </outline>
+    <outline title="philo" text="philo">
+      <outline type="rss" title="Buddhism for Vampires" text="Buddhism for Vampires" htmlUrl="http://buddhism-for-vampires.com/rss.xml" xmlUrl="http://buddhism-for-vampires.com/rss.xml"/>
+      <outline type="rss" title="&quot;A good volunteer is hard to find&quot; - Less Wrong" text="&quot;A good volunteer is hard to find&quot; - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/6ne/a_good_volunteer_is_hard_to_find/.rss"/>
+      <outline type="rss" title="&quot;Ray Kurzweil and Uploading: Just Say No!&quot;, Nick Agar - Less Wrong" text="&quot;Ray Kurzweil and Uploading: Just Say No!&quot;, Nick Agar - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/8of/ray_kurzweil_and_uploading_just_say_no_nick_agar/.rss"/>
+      <outline type="rss" title="&quot;Trials and Errors: Why Science Is Failing Us&quot; - Less Wrong" text="&quot;Trials and Errors: Why Science Is Failing Us&quot; - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/8x1/trials_and_errors_why_science_is_failing_us/.rss"/>
+      <outline type="rss" title="*Reflective Disequilibrium*" text="*Reflective Disequilibrium*" htmlUrl="http://reflectivedisequilibrium.blogspot.com/" xmlUrl="http://reflectivedisequilibrium.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="1001 PredictionBook Nights - Less Wrong" text="1001 PredictionBook Nights - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/7z9/1001_predictionbook_nights/.rss"/>
+      <outline type="rss" title="Against Utilitarianism: Sobel's attack on judging lives' goodness - Less Wrong" text="Against Utilitarianism: Sobel's attack on judging lives' goodness - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/9oa/against_utilitarianism_sobels_attack_on_judging/.rss"/>
+      <outline type="rss" title="AIXI-style IQ tests - Less Wrong" text="AIXI-style IQ tests - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/42t/aixistyle_iq_tests/.rss"/>
+      <outline type="rss" title="ALCOR finances - Less Wrong" text="ALCOR finances - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/6me/alcor_finances/.rss"/>
+      <outline type="rss" title="Amanda Knox: post mortem - Less Wrong" text="Amanda Knox: post mortem - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/84j/amanda_knox_post_mortem/.rss"/>
+      <outline type="rss" title="An Abortion Dialogue - Less Wrong" text="An Abortion Dialogue - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/47k/an_abortion_dialogue/.rss"/>
+      <outline type="rss" title="Andart" text="Andart" htmlUrl="http://www.aleph.se/andart/" xmlUrl="http://aleph.se/andart/index.rdf"/>
+      <outline type="rss" title="Anderson Brown's Philosophy Blog" text="Anderson Brown's Philosophy Blog" htmlUrl="http://andersonbrownphilosophy.blogspot.com/" xmlUrl="http://andersonbrownphilosophy.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Atheism &amp; autism spectrum - Less Wrong" text="Atheism &amp; autism spectrum - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/7o4/atheism_autism_spectrum/.rss"/>
+      <outline type="rss" title="Bayesian Investor Blog" text="Bayesian Investor Blog" htmlUrl="http://www.bayesianinvestor.com/blog" xmlUrl="http://www.bayesianinvestor.com/blog/index.php/feed/"/>
+      <outline type="rss" title="Bayesian justice - Less Wrong" text="Bayesian justice - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/6u0/bayesian_justice/.rss"/>
+      <outline type="rss" title="(Blog&amp;~Blog)" text="(Blog&amp;~Blog)" htmlUrl="http://blogandnot-blog.blogspot.com/" xmlUrl="http://blogandnot-blog.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="blog.kennypearce.net" text="blog.kennypearce.net" htmlUrl="http://blog.kennypearce.net/" xmlUrl="http://blog.kennypearce.net/index.rdf"/>
+      <outline type="rss" title="blog.talkingphilosophy.com" text="blog.talkingphilosophy.com" htmlUrl="http://blog.talkingphilosophy.com" xmlUrl="http://blog.talkingphilosophy.com/?feed=rss2"/>
+      <outline type="rss" title="C&amp;I Updates" text="C&amp;I Updates" htmlUrl="http://cical.blogspot.com/" xmlUrl="http://www.blogger.com/feeds/7941317/posts/default"/>
+      <outline type="rss" title="Case study: Folding@home - Less Wrong" text="Case study: Folding@home - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/7mz/case_study_foldinghome/.rss"/>
+      <outline type="rss" title="Choice &amp; Inference" text="Choice &amp; Inference" htmlUrl="http://choiceandinference.com" xmlUrl="http://choiceandinference.com/feed/"/>
+      <outline type="rss" title="Clay Shirky" text="Clay Shirky" htmlUrl="http://www.shirky.com/weblog" xmlUrl="http://www.shirky.com/weblog/feed/"/>
+      <outline type="rss" title="Cryonics costs: given estimates are low - Less Wrong" text="Cryonics costs: given estimates are low - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/8fe/cryonics_costs_given_estimates_are_low/.rss"/>
+      <outline type="rss" title="Cryonics is Far, Cord-blood is Near - Less Wrong" text="Cryonics is Far, Cord-blood is Near - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/8qz/cryonics_is_far_cordblood_is_near/.rss"/>
+      <outline type="rss" title="discussion: What's new" text="discussion: What's new" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/.rss"/>
+      <outline type="rss" title="Does Hyperbolic Discounting Really Exist? - Less Wrong" text="Does Hyperbolic Discounting Really Exist? - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/8om/does_hyperbolic_discounting_really_exist/.rss"/>
+      <outline type="rss" title="Examine success as much as failure - Less Wrong" text="Examine success as much as failure - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/51v/examine_success_as_much_as_failure/.rss"/>
+      <outline type="rss" title="Experimental Philosophy" text="Experimental Philosophy" htmlUrl="http://experimentalphilosophy.typepad.com/experimental_philosophy/" xmlUrl="http://experimentalphilosophy.typepad.com/experimental_philosophy/atom.xml"/>
+      <outline type="rss" title="fragments of consciousness" text="fragments of consciousness" htmlUrl="http://fragments.consc.net/djc/" xmlUrl="http://fragments.consc.net/djc/atom.xml"/>
+      <outline type="rss" title="Funnel plots: the study that didn't bark, or, visualizing regression to the null - Less Wrong" text="Funnel plots: the study that didn't bark, or, visualizing regression to the null - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/8nc/funnel_plots_the_study_that_didnt_bark_or/.rss"/>
+      <outline type="rss" title="Harry Potter and the Methods of Rationality predictions - Less Wrong Discussion" text="Harry Potter and the Methods of Rationality predictions - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/bl4/harry_potter_and_the_methods_of_rationality/.rss"/>
+      <outline type="rss" title="Hofstadter's Superrationality - Less Wrong" text="Hofstadter's Superrationality - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/bxi/hofstadters_superrationality/.rss"/>
+      <outline type="rss" title="Hope Function - Less Wrong Discussion" text="Hope Function - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/dds/hope_function/.rss"/>
+      <outline type="rss" title="In Socrates' Wake" text="In Socrates' Wake" htmlUrl="http://insocrateswake.blogspot.com/" xmlUrl="http://feeds.feedburner.com/blogspot/qNdd"/>
+      <outline type="rss" title="Inverse p-zombies: the other direction in the Hard Problem of Consciousness - Less Wrong" text="Inverse p-zombies: the other direction in the Hard Problem of Consciousness - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/8wi/inverse_pzombies_the_other_direction_in_the_hard/.rss"/>
+      <outline type="rss" title="Is Sunk Cost Fallacy a Fallacy? - Less Wrong" text="Is Sunk Cost Fallacy a Fallacy? - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/9si/is_sunk_cost_fallacy_a_fallacy/.rss"/>
+      <outline type="rss" title="Journal of Consciousness Studies issue on the Singularity - Less Wrong" text="Journal of Consciousness Studies issue on the Singularity - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/aif/journal_of_consciousness_studies_issue_on_the/.rss"/>
+      <outline type="rss" title="Julian Sanchez" text="Julian Sanchez" htmlUrl="http://www.juliansanchez.com" xmlUrl="http://feeds.feedburner.com/JulianSanchez"/>
+      <outline type="rss" title="Less Wrong" text="Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/.rss"/>
+      <outline type="rss" title="lesswrong: What's new" text="lesswrong: What's new" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/5dl/is_kiryas_joel_an_unhappy_place/.rss"/>
+      <outline type="rss" title="[LINK] Get paid to train your rationality (update) - Less Wrong Discussion" text="[LINK] Get paid to train your rationality (update) - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/c3v/link_get_paid_to_train_your_rationality_update/.rss"/>
+      <outline type="rss" title="LW Experiment: orthonormal" text="LW Experiment: orthonormal" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/user/orthonormal/submitted/.rss"/>
+      <outline type="rss" title="LW Experiment: Swimmer" text="LW Experiment: Swimmer" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/user/Swimmer963/submitted/.rss"/>
+      <outline type="rss" title="LW Reddit submissions" text="LW Reddit submissions" htmlUrl="http://www.reddit.com/domain/lesswrong.com/" xmlUrl="http://www.reddit.com/domain/lesswrong.com/.rss"/>
+      <outline type="rss" title="Matters of Substance" text="Matters of Substance" htmlUrl="http://substantialmatters.blogspot.com/" xmlUrl="http://substantialmatters.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Meteuphoric" text="Meteuphoric" htmlUrl="http://meteuphoric.wordpress.com" xmlUrl="http://meteuphoric.wordpress.com/feed/"/>
+      <outline type="rss" title="muflax becomes a saint" text="muflax becomes a saint" htmlUrl="http://daily.muflax.com" xmlUrl="http://daily.muflax.com/rss.xml"/>
+      <outline type="rss" title="New Year's Prediction Thread (2012) - Less Wrong" text="New Year's Prediction Thread (2012) - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/94k/new_years_prediction_thread_2012/.rss"/>
+      <outline type="rss" title="Not By Empathy Alone - Less Wrong" text="Not By Empathy Alone - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/7xr/not_by_empathy_alone/.rss"/>
+      <outline type="rss" title="On the etiology of religious belief - Less Wrong Discussion" text="On the etiology of religious belief - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/aq6/on_the_etiology_of_religious_belief/.rss"/>
+      <outline type="rss" title="On the Openness personality trait &amp; 'rationality' - Less Wrong" text="On the Openness personality trait &amp; 'rationality' - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/82g/on_the_openness_personality_trait_rationality/.rss"/>
+      <outline type="rss" title="On the unpopularity of cryonics: life sucks, but at least then you die - Less Wrong" text="On the unpopularity of cryonics: life sucks, but at least then you die - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/6vq/on_the_unpopularity_of_cryonics_life_sucks_but_at/.rss"/>
+      <outline type="rss" title="Online education and Conscientiousness - Less Wrong" text="Online education and Conscientiousness - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/ac4/online_education_and_conscientiousness/.rss"/>
+      <outline type="rss" title="Overcoming Bias" text="Overcoming Bias" htmlUrl="http://www.overcomingbias.com" xmlUrl="http://www.overcomingbias.com/feed"/>
+      <outline type="rss" title="PEA Soup" text="PEA Soup" htmlUrl="http://peasoup.typepad.com/peasoup/" xmlUrl="http://feeds.feedburner.com/typepad/peasoup"/>
+      <outline type="rss" title="(Philosophical) Disagreements are not Rational - Less Wrong" text="(Philosophical) Disagreements are not Rational - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/607/philosophical_disagreements_are_not_rational/.rss"/>
+      <outline type="rss" title="Philosophical Disquisitions" text="Philosophical Disquisitions" htmlUrl="http://philosophicaldisquisitions.blogspot.com/" xmlUrl="http://philosophicaldisquisitions.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Philosophy, et cetera" text="Philosophy, et cetera" htmlUrl="http://www.philosophyetc.net/" xmlUrl="http://feeds.feedburner.com/PhilosophyEtCetera"/>
+      <outline type="rss" title="Prediction is hard, especially of medicine - Less Wrong" text="Prediction is hard, especially of medicine - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/8yp/prediction_is_hard_especially_of_medicine/.rss"/>
+      <outline type="rss" title="Quodlibeta" text="Quodlibeta" htmlUrl="http://bedejournal.blogspot.com/" xmlUrl="http://feeds.feedburner.com/Quodlibeta"/>
+      <outline type="rss" title="Recent updates to gwern.net - Less Wrong" text="Recent updates to gwern.net - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/8kv/recent_updates_to_gwernnet/.rss"/>
+      <outline type="rss" title="Reddit: gwern.net" text="Reddit: gwern.net" htmlUrl="http://www.reddit.com/domain/gwern.net/" xmlUrl="http://www.reddit.com/domain/gwern.net/.rss"/>
+      <outline type="rss" title="Rethink." text="Rethink." htmlUrl="http://www.ashokkarra.com" xmlUrl="http://www.ashokkarra.com/feed/"/>
+      <outline type="rss" title="Richard Carrier Blogs" text="Richard Carrier Blogs" htmlUrl="http://richardcarrier.blogspot.com/" xmlUrl="http://richardcarrier.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Shtetl-Optimized" text="Shtetl-Optimized" htmlUrl="http://www.scottaaronson.com/blog" xmlUrl="http://scottaaronson.com/blog/?feed=rss2"/>
+      <outline type="rss" title="SL4 META: list closure 2 month followup - Less Wrong" text="SL4 META: list closure 2 month followup - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/5n2/sl4_meta_list_closure_2_month_followup/.rss"/>
+      <outline type="rss" title="Social status &amp; testosterone - Less Wrong" text="Social status &amp; testosterone - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/84i/social_status_testosterone/.rss"/>
+      <outline type="rss" title="space and games" text="space and games" htmlUrl="http://www.spaceandgames.com" xmlUrl="http://www.spaceandgames.com/?feed=rss2"/>
+      <outline type="rss" title="Stanford Encyclopedia of Philosophy" text="Stanford Encyclopedia of Philosophy" htmlUrl="http://plato.stanford.edu/" xmlUrl="http://plato.stanford.edu/rss/sep.xml"/>
+      <outline type="rss" title="Stanislav Petrov Day - Less Wrong" text="Stanislav Petrov Day - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/7t7/stanislav_petrov_day/.rss"/>
+      <outline type="rss" title="Terrorism is not about Terror - Less Wrong" text="Terrorism is not about Terror - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/51/terrorism_is_not_about_terror/.rss"/>
+      <outline type="rss" title="The Last Psychiatrist" text="The Last Psychiatrist" htmlUrl="http://thelastpsychiatrist.com/" xmlUrl="http://thelastpsychiatrist.com/atom.xml"/>
+      <outline type="rss" title="The Personality of (great/creative) Scientists: Open and Conscientious - Less Wrong" text="The Personality of (great/creative) Scientists: Open and Conscientious - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/9m6/the_personality_of_greatcreative_scientists_open/.rss"/>
+      <outline type="rss" title="The Philosophy Smoker" text="The Philosophy Smoker" htmlUrl="http://philosophysmoker.blogspot.com/" xmlUrl="http://philosophysmoker.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="The Prosblogion" text="The Prosblogion" htmlUrl="http://prosblogion.ektopos.com/" xmlUrl="http://prosblogion.ektopos.com/atom.xml"/>
+      <outline type="rss" title="The Singularity Institute Blog" text="The Singularity Institute Blog" htmlUrl="http://intelligence.org" xmlUrl="http://www.singinst.org/blog/feed/"/>
+      <outline type="rss" title="The Technium" text="The Technium" htmlUrl="http://www.kk.org/thetechnium/" xmlUrl="http://feeds.feedburner.com/thetechnium"/>
+      <outline type="rss" title="Three-Toed Sloth" text="Three-Toed Sloth" htmlUrl="http://bactra.org/weblog/" xmlUrl="http://vserver1.cscs.lsa.umich.edu/~crshalizi/weblog/index.rss"/>
+      <outline type="rss" title="(title unknown)" text="(title unknown)" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/78y/how_to_be_deader_than_dead/.rss"/>
+      <outline type="rss" title="(title unknown)" text="(title unknown)" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/72f/why_epidemiology_will_not_correct_itself/.rss"/>
+      <outline type="rss" title="To Learn Critical Thinking, Study Critical Thinking - Less Wrong" text="To Learn Critical Thinking, Study Critical Thinking - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/dhe/to_learn_critical_thinking_study_critical_thinking/.rss"/>
+      <outline type="rss" title="TPM: The Philosophers' Magazine" text="TPM: The Philosophers' Magazine" htmlUrl="http://philosophypress.co.uk" xmlUrl="http://philosophypress.co.uk/?feed=rss2"/>
+      <outline type="rss" title="Trivium" text="Trivium" htmlUrl="http://chneukirchen.org/trivium/" xmlUrl="http://chneukirchen.org/trivium/index.atom"/>
+      <outline type="rss" title="Twitter / stevenkaas" text="Twitter / stevenkaas" htmlUrl="http://twitter.com/stevenkaas" xmlUrl="http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=stevenkaas"/>
+      <outline type="rss" title="Value of Information: 8 examples - Less Wrong Discussion" text="Value of Information: 8 examples - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/cih/value_of_information_8_examples/.rss"/>
+      <outline type="rss" title="Vihvelin.com" text="Vihvelin.com" htmlUrl="http://vihvelin.typepad.com/vihvelincom/" xmlUrl="http://vihvelin.typepad.com/vihvelincom/atom.xml"/>
+      <outline type="rss" title="wo's weblog" text="wo's weblog" htmlUrl="http://www.umsu.de/wo/" xmlUrl="http://umsu.de/wo/rss.xml"/>
+      <outline type="rss" title="You Are Not So Smart" text="You Are Not So Smart" htmlUrl="http://youarenotsosmart.com" xmlUrl="http://youarenotsosmart.com/feed/"/>
+      <outline type="rss" title="Yvain" text="Yvain" htmlUrl="http://slatestarcodex.com" xmlUrl="http://slatestarcodex.com/feed/"/>
+    </outline>
+    <outline title="torrent" text="torrent">
+      <outline type="rss" title="Touhou lossless music collection" text="Touhou lossless music collection" htmlUrl="http://www.tlmc.eu/" xmlUrl="http://www.tlmc.eu/feeds/posts/default"/>
+      <outline type="rss" title="isoHunt &gt; All &gt; &quot;boy eats drum machine&quot;" text="isoHunt &gt; All &gt; &quot;boy eats drum machine&quot;" htmlUrl="http://isohunt.com" xmlUrl="http://isohunt.com/js/rss/%22boy+eats+drum+machine%22?iht="/>
+      <outline type="rss" title="isoHunt &gt; All &gt; &quot;the pillows&quot;" text="isoHunt &gt; All &gt; &quot;the pillows&quot;" htmlUrl="http://isohunt.com" xmlUrl="http://isohunt.com/js/rss/%22the+pillows%22?iht="/>
+      <outline type="rss" title="isoHunt &gt; All &gt; Kino's Journey: Life Goes On" text="isoHunt &gt; All &gt; Kino's Journey: Life Goes On" htmlUrl="http://isohunt.com" xmlUrl="http://isohunt.com/js/rss/Kino's+Journey:+Life+Goes+On?iht="/>
+      <outline type="rss" title="isoHunt &gt; All &gt; olafur Arnalds" text="isoHunt &gt; All &gt; olafur Arnalds" htmlUrl="http://isohunt.com" xmlUrl="http://isohunt.com/js/rss/olafur+Arnalds?iht="/>
+      <outline type="rss" title="isoHunt &gt; All &gt; pandora by holly gene wolfe -rice" text="isoHunt &gt; All &gt; pandora by holly gene wolfe -rice" htmlUrl="http://isohunt.com" xmlUrl="http://isohunt.com/js/rss/pandora+by+holly+gene+wolfe+-rice?iht="/>
+      <outline type="rss" title="isoHunt &gt; All &gt; protoculture addicts" text="isoHunt &gt; All &gt; protoculture addicts" htmlUrl="http://isohunt.com" xmlUrl="http://isohunt.com/js/rss/protoculture+addicts?iht="/>
+      <outline type="rss" title="isoHunt &gt; All &gt; r. a. lafferty" text="isoHunt &gt; All &gt; r. a. lafferty" htmlUrl="http://isohunt.com" xmlUrl="http://isohunt.com/js/rss/r.+a.+lafferty?iht="/>
+      <outline type="rss" title="isoHunt &gt; Audio &gt; &quot;cloud cult&quot;" text="isoHunt &gt; Audio &gt; &quot;cloud cult&quot;" htmlUrl="http://isohunt.com" xmlUrl="http://isohunt.com/js/rss/%22cloud+cult%22?iht=2"/>
+      <outline type="rss" title="isoHunt &gt; Audio &gt; hevia" text="isoHunt &gt; Audio &gt; hevia" htmlUrl="http://isohunt.com" xmlUrl="http://isohunt.com/js/rss/hevia?iht=2"/>
+      <outline type="rss" title="NGE manga" text="NGE manga" htmlUrl="http://isohunt.com" xmlUrl="http://isohunt.com/js/rss/evangelion+manga+-francais+-wallpaper+-hentai+-french+-doujin+-raw+-soundtrack+-megapack+-doujinshi?iht="/>
+      <outline type="rss" title="O-Life Japan" text="O-Life Japan" htmlUrl="http://www.nyaa.se/" xmlUrl="http://www.nyaa.eu/?page=rss&amp;term=O-life+japan"/>
+      <outline type="rss" title="sdml (nyaa Touhou)" text="sdml (nyaa Touhou)" htmlUrl="http://www.nyaa.se/" xmlUrl="http://www.nyaa.eu/?page=rss&amp;user=61334"/>
+    </outline>
+    <outline title="tech" text="tech">
+      <outline type="rss" title="Hacker Tradecraft" text="Hacker Tradecraft" htmlUrl="http://grugq.tumblr.com/" xmlUrl="http://grugq.tumblr.com/rss"/>
+      <outline type="rss" title="Anonymous feedback forms revisited - Less Wrong Discussion" text="Anonymous feedback forms revisited - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/j8f/anonymous_feedback_forms_revisited/.rss"/>
+      <outline type="rss" title="Free Ross Ulbricht" text="Free Ross Ulbricht" htmlUrl="https://www.rossulbricht.org" xmlUrl="http://www.rossulbricht.org/feed/"/>
+      <outline type="rss" title="33 Bits of Entropy" text="33 Bits of Entropy" htmlUrl="http://33bits.org" xmlUrl="http://33bits.org/feed/"/>
+      <outline type="rss" title="Abstract Heresies" text="Abstract Heresies" htmlUrl="http://funcall.blogspot.com/" xmlUrl="http://funcall.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Accelerating Future" text="Accelerating Future" htmlUrl="http://www.acceleratingfuture.com/michael/blog" xmlUrl="http://feeds.feedburner.com/AcceleratingFuture"/>
+      <outline type="rss" title="Alaska Ataca a Kamtchatka" text="Alaska Ataca a Kamtchatka" htmlUrl="http://alaska-kamtchatka.blogspot.com/" xmlUrl="http://alaska-kamtchatka.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Andrew Lih" text="Andrew Lih" htmlUrl="http://www.andrewlih.com/blog" xmlUrl="http://www.andrewlih.com/blog/feed/"/>
+      <outline type="rss" title="apenwarr - Business is Programming" text="apenwarr - Business is Programming" htmlUrl="http://apenwarr.ca/log/" xmlUrl="http://apenwarr.ca/log/rss.php"/>
+      <outline type="rss" title="Are Girl Scout Cookies Deliciously Evil? A Case Study in Evaluating Charities by Yourself - Less Wrong" text="Are Girl Scout Cookies Deliciously Evil? A Case Study in Evaluating Charities by Yourself - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/5el/are_girl_scout_cookies_deliciously_evil_a_case/.rss"/>
+      <outline type="rss" title="Arvind Narayanan's journal" text="Arvind Narayanan's journal" htmlUrl="http://arvindn.livejournal.com/" xmlUrl="http://arvindn.livejournal.com/data/rss"/>
+      <outline type="rss" title="ASCII by Jason Scott" text="ASCII by Jason Scott" htmlUrl="http://ascii.textfiles.com" xmlUrl="http://ascii.textfiles.com/feed/atom"/>
+      <outline type="rss" title="Bad Science" text="Bad Science" htmlUrl="http://www.badscience.net" xmlUrl="http://www.badscience.net/feed/"/>
+      <outline type="rss" title="BetterExplained" text="BetterExplained" htmlUrl="http://betterexplained.com" xmlUrl="http://feeds.feedburner.com/Betterexplained"/>
+      <outline type="rss" title="bitslog" text="bitslog" htmlUrl="https://bitslog.wordpress.com" xmlUrl="https://bitslog.wordpress.com/feed/"/>
+      <outline type="rss" title="Brad Ideas" text="Brad Ideas" htmlUrl="http://ideas.4brad.com" xmlUrl="http://ideas.4brad.com/index.rdf"/>
+      <outline type="rss" title="Case study: Console Insurance - Less Wrong" text="Case study: Console Insurance - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/4or/case_study_console_insurance/.rss"/>
+      <outline type="rss" title="Charlie's Diary" text="Charlie's Diary" htmlUrl="http://www.antipope.org/charlie/blog-static/" xmlUrl="http://www.antipope.org/charlie/blog-static/atom.xml"/>
+      <outline type="rss" title="CHRONOSPHERE" text="CHRONOSPHERE" htmlUrl="http://chronopause.com" xmlUrl="http://chronopause.com/index.php/feed/"/>
+      <outline type="rss" title="codahale.com" text="codahale.com" htmlUrl="http://feeds.feedburner.com" xmlUrl="http://feeds.feedburner.com/codahale"/>
+      <outline type="rss" title="Daniel Lemire's blog" text="Daniel Lemire's blog" htmlUrl="http://lemire.me/blog" xmlUrl="http://feeds.feedburner.com/daniel-lemire/atom"/>
+      <outline type="rss" title="Death Note, Anonymity, and Information Theory - Less Wrong" text="Death Note, Anonymity, and Information Theory - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/5ld/death_note_anonymity_and_information_theory/.rss"/>
+      <outline type="rss" title="Dragon Ball's Hyperbolic Time Chamber - Less Wrong Discussion" text="Dragon Ball's Hyperbolic Time Chamber - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/ecp/dragon_balls_hyperbolic_time_chamber/.rss"/>
+      <outline type="rss" title="Eli Bendersky" text="Eli Bendersky" htmlUrl="http://eli.thegreenplace.net" xmlUrl="http://eli.thegreenplace.net/feed/"/>
+      <outline type="rss" title="Embedded in Academia" text="Embedded in Academia" htmlUrl="http://blog.regehr.org" xmlUrl="http://feeds.feedburner.com/EmbeddedInAcademia"/>
+      <outline type="rss" title="Financial Cryptography" text="Financial Cryptography" htmlUrl="https://financialcryptography.com/" xmlUrl="https://financialcryptography.com/index.rdf"/>
+      <outline type="rss" title="Geeking with Greg" text="Geeking with Greg" htmlUrl="http://glinden.blogspot.com/" xmlUrl="http://glinden.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Generic Modafinil sales begin? - Less Wrong Discussion" text="Generic Modafinil sales begin? - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/bes/generic_modafinil_sales_begin/.rss"/>
+      <outline type="rss" title="Geoff's Site" text="Geoff's Site" htmlUrl="http://geoff.greer.fm/" xmlUrl="http://geoff.greer.fm/feed/"/>
+      <outline type="rss" title="Getting Sought After" text="Getting Sought After" htmlUrl="http://kenfeinstein.blogspot.com/" xmlUrl="http://kenfeinstein.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Getting Stronger » intermittent fasting" text="Getting Stronger » intermittent fasting" htmlUrl="http://gettingstronger.org" xmlUrl="http://gettingstronger.org/tag/intermittent-fasting/feed/"/>
+      <outline type="rss" title="Glowing Face Man" text="Glowing Face Man" htmlUrl="http://feeds.feedburner.com/GlowingFaceMan" xmlUrl="http://feeds.feedburner.com/GlowingFaceMan"/>
+      <outline type="rss" title="Good Math, Bad Math" text="Good Math, Bad Math" htmlUrl="http://scientopia.org/blogs/goodmath" xmlUrl="http://scientopia.org/blogs/goodmath/feed/"/>
+      <outline type="rss" title="Google Operating System" text="Google Operating System" htmlUrl="http://googlesystem.blogspot.com/" xmlUrl="http://feeds.feedburner.com/GoogleOperatingSystem"/>
+      <outline type="rss" title="Gunther Eysenbach's random research rants" text="Gunther Eysenbach's random research rants" htmlUrl="http://gunther-eysenbach.blogspot.com/" xmlUrl="http://feeds.feedburner.com/eysenbach"/>
+      <outline type="rss" title="gwern Twitter" text="gwern Twitter" htmlUrl="http://search.twitter.com/search?q=gwern" xmlUrl="http://search.twitter.com/search.atom?q=gwern"/>
+      <outline type="rss" title="How would you stop Moore's Law? - Less Wrong Discussion" text="How would you stop Moore's Law? - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/apm/how_would_you_stop_moores_law/.rss"/>
+      <outline type="rss" title="HXA7241 Notes latest" text="HXA7241 Notes latest" htmlUrl="http://www.hxa.name/notes/latest.xml" xmlUrl="http://www.hxa.name/notes/latest.xml"/>
+      <outline type="rss" title="I, Cringely" text="I, Cringely" htmlUrl="http://www.cringely.com" xmlUrl="http://feeds.feedburner.com/ICringely"/>
+      <outline type="rss" title="It Will Never Work in Theory" text="It Will Never Work in Theory" htmlUrl="http://neverworkintheory.org" xmlUrl="http://feeds.feedburner.com/ItWillNeverWorkInTheory"/>
+      <outline type="rss" title="Lambda the Ultimate - Programming Languages Weblog" text="Lambda the Ultimate - Programming Languages Weblog" htmlUrl="http://lambda-the-ultimate.org" xmlUrl="http://lambda-the-ultimate.org/rss.xml"/>
+      <outline type="rss" title="Les Hatton" text="Les Hatton" htmlUrl="http://www.leshatton.org" xmlUrl="http://www.leshatton.org/feed/"/>
+      <outline type="rss" title="lesswrong: What's new" text="lesswrong: What's new" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/2vv/lifelogging_the_recording_device/.rss"/>
+      <outline type="rss" title="Mathematics and Computation" text="Mathematics and Computation" htmlUrl="http://math.andrej.com" xmlUrl="http://math.andrej.com/feed/"/>
+      <outline type="rss" title="Metamodern" text="Metamodern" htmlUrl="http://metamodern.com" xmlUrl="http://feeds.feedburner.com/Metamodern"/>
+      <outline type="rss" title="Michael Nielsen" text="Michael Nielsen" htmlUrl="http://michaelnielsen.org/blog" xmlUrl="http://feeds.feedburner.com/michaelnielsen/wmna"/>
+      <outline type="rss" title="MicroISV on a Shoestring" text="MicroISV on a Shoestring" htmlUrl="http://www.kalzumeus.com" xmlUrl="http://www.kalzumeus.com/feed/"/>
+      <outline type="rss" title="NearlyFreeSpeech.NET Blog" text="NearlyFreeSpeech.NET Blog" htmlUrl="http://blog.nearlyfreespeech.net" xmlUrl="http://blog.nearlyfreespeech.net/feed/"/>
+      <outline type="rss" title="No Moods, Ads or Cutesy Fucking Icons (Re-reloaded)" text="No Moods, Ads or Cutesy Fucking Icons (Re-reloaded)" htmlUrl="http://www.rifters.com/crawl" xmlUrl="http://www.rifters.com/crawl/?feed=rss2"/>
+      <outline type="rss" title="Notes on Autonomous Cars - Less Wrong Discussion" text="Notes on Autonomous Cars - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/gfv/notes_on_autonomous_cars/.rss"/>
+      <outline type="rss" title="Oddhead Blog" text="Oddhead Blog" htmlUrl="http://blog.oddhead.com" xmlUrl="http://blog.oddhead.com/feed/"/>
+      <outline type="rss" title="oscarbonilla.com" text="oscarbonilla.com" htmlUrl="http://oscarbonilla.com" xmlUrl="http://oscarbonilla.com/feed/"/>
+      <outline type="rss" title="Papers in Computer Science" text="Papers in Computer Science" htmlUrl="http://papersincomputerscience.org" xmlUrl="http://papersincomputerscience.org/feed"/>
+      <outline type="rss" title="Paul Graham" text="Paul Graham" htmlUrl="http://www.paulgraham.com/" xmlUrl="http://www.aaronsw.com/2002/feeds/pgessays.rss"/>
+      <outline type="rss" title="Planet Haskell" text="Planet Haskell" htmlUrl="http://planet.haskell.org/" xmlUrl="http://planet.haskell.org/rss20.xml"/>
+      <outline type="rss" title="Proper Fixation" text="Proper Fixation" htmlUrl="http://www.yosefk.com/blog" xmlUrl="http://www.yosefk.com/blog/feed"/>
+      <outline type="rss" title="Rationalist sites worth archiving? - Less Wrong" text="Rationalist sites worth archiving? - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/7kg/rationalist_sites_worth_archiving/.rss"/>
+      <outline type="rss" title="Recent updates to gwern.net (2012-2013) - Less Wrong" text="Recent updates to gwern.net (2012-2013) - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/h0b/recent_updates_to_gwernnet_20122013/.rss"/>
+      <outline type="rss" title="Rocketpunk Manifesto" text="Rocketpunk Manifesto" htmlUrl="http://www.rocketpunk-manifesto.com/" xmlUrl="http://www.rocketpunk-manifesto.com/feeds/posts/default"/>
+      <outline type="rss" title="Ron Burk" text="Ron Burk" htmlUrl="http://ronburk.blogspot.com/" xmlUrl="http://ronburk.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Schneier on Security" text="Schneier on Security" htmlUrl="https://www.schneier.com/blog/" xmlUrl="http://www.schneier.com/blog/index.rdf"/>
+      <outline type="rss" title="Steve Yegge" text="Steve Yegge" htmlUrl="http://steve-yegge.blogspot.com/" xmlUrl="http://steve-yegge.blogspot.com/atom.xml"/>
+      <outline type="rss" title="The Codeless Code" text="The Codeless Code" htmlUrl="http://thecodelesscode.com" xmlUrl="http://thecodelesscode.com/rss"/>
+      <outline type="rss" title="The Long Now Blog" text="The Long Now Blog" htmlUrl="http://blog.longnow.org" xmlUrl="http://blog.longnow.org/feed/"/>
+      <outline type="rss" title="The Quantified Self" text="The Quantified Self" htmlUrl="http://quantifiedself.com" xmlUrl="http://feeds.feedburner.com/QuantifiedSelf"/>
+      <outline type="rss" title="Things Of Interest" text="Things Of Interest" htmlUrl="http://qntm.org/" xmlUrl="http://qntm.org/rss.php"/>
+      <outline type="rss" title="(title unknown)" text="(title unknown)" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/7gy/case_study_reading_edges_financial_filings/.rss"/>
+      <outline type="rss" title="urticator.net - urticator.net" text="urticator.net - urticator.net" htmlUrl="http://page2rss.com/a2d2d059481ed14637484df3636d3ebc" xmlUrl="http://page2rss.com/rss/a2d2d059481ed14637484df3636d3ebc"/>
+      <outline type="rss" title="vetta project" text="vetta project" htmlUrl="http://www.vetta.org" xmlUrl="http://www.vetta.org/feed/"/>
+      <outline type="rss" title="Why could you be optimistic that the Singularity is Near? - Less Wrong Discussion" text="Why could you be optimistic that the Singularity is Near? - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/dm5/why_could_you_be_optimistic_that_the_singularity/.rss"/>
+      <outline type="rss" title="Wired" text="Wired" htmlUrl="http://www.wired.com" xmlUrl="http://www.wired.com/news/feeds/rss2/0,2610,,00.xml"/>
+      <outline type="rss" title="Wired Science » Jonah Lehrer" text="Wired Science » Jonah Lehrer" htmlUrl="http://www.wired.com/wiredscience" xmlUrl="http://www.wired.com/wiredscience/author/jonah_lehrer/feed/"/>
+      <outline type="rss" title="Zeology" text="Zeology" htmlUrl="http://blog.myzeo.com" xmlUrl="http://feeds.feedburner.com/Zeology"/>
+    </outline>
+    <outline title="Library" text="Library">
+      <outline type="rss" title="LessWrong help desk - free paper downloads and more - Less Wrong Discussion" text="LessWrong help desk - free paper downloads and more - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/eto/lesswrong_help_desk_free_paper_downloads_and_more/.rss"/>
+      <outline type="rss" title="Family Man" text="Family Man" htmlUrl="http://www.lutherlevy.com" xmlUrl="http://www.lutherlevy.com/?feed=rss2"/>
+      <outline type="rss" title="Library Journal - Annoyed Librarian" text="Library Journal - Annoyed Librarian" htmlUrl="http://lj.libraryjournal.com/blogs/annoyedlibrarian" xmlUrl="http://feeds.feedburner.com/LibraryJournal-AnnoyedLibrarian"/>
+    </outline>
+    <outline title="humor" text="humor">
+      <outline type="rss" title="Power Nap RSS Feed" text="Power Nap RSS Feed" htmlUrl="http://www.powernapcomic.com/" xmlUrl="http://powernapcomic.com/index.xml"/>
+      <outline type="rss" title="Romantically Apocalyptic" text="Romantically Apocalyptic" htmlUrl="http://romanticallyapocalyptic.com" xmlUrl="http://feeds.feedburner.com/zeefeed"/>
+      <outline type="rss" title="Paranatural" text="Paranatural" htmlUrl="http://paranatural.net" xmlUrl="http://paranatural.net/feed/"/>
+      <outline type="rss" title="2D Goggles" text="2D Goggles" htmlUrl="http://sydneypadua.com/2dgoggles" xmlUrl="http://feeds.feedburner.com/sydneypadua/yBZX"/>
+      <outline type="rss" title="A Softer World" text="A Softer World" htmlUrl="http://www.asofterworld.com" xmlUrl="http://www.rsspect.com/rss/asw.xml"/>
+      <outline type="rss" title="Abstruse Goose" text="Abstruse Goose" htmlUrl="http://abstrusegoose.com" xmlUrl="http://abstrusegoose.com/feed"/>
+      <outline type="rss" title="Buttercup Festival" text="Buttercup Festival" htmlUrl="http://www.buttercupfestival.com" xmlUrl="http://www.rsspect.com/rss/buttercupfestival.xml"/>
+      <outline type="rss" title="Buttersafe" text="Buttersafe" htmlUrl="http://buttersafe.com" xmlUrl="http://feeds.feedburner.com/Buttersafe"/>
+      <outline type="rss" title="Darths &amp; Droids" text="Darths &amp; Droids" htmlUrl="http://www.darthsanddroids.net/" xmlUrl="http://www.darthsanddroids.net/rss.xml"/>
+      <outline type="rss" title="dinosaur comics" text="dinosaur comics" htmlUrl="http://www.qwantz.com" xmlUrl="http://rsspect.com/rss/qwantz.xml"/>
+      <outline type="rss" title="Doctor Cat" text="Doctor Cat" htmlUrl="http://doctorcatmd.com" xmlUrl="http://doctorcatmd.com/feed"/>
+      <outline type="rss" title="Dresden Codak" text="Dresden Codak" htmlUrl="http://dresdencodak.com" xmlUrl="http://feeds.feedburner.com/rsspect/fJur"/>
+      <outline type="rss" title="Faraday the Blob" text="Faraday the Blob" htmlUrl="http://www.faradaytheblob.com" xmlUrl="http://www.faradaytheblob.com/?feed=rss2"/>
+      <outline type="rss" title="FoxTrot" text="FoxTrot" htmlUrl="http://www.gocomics.com/foxtrot" xmlUrl="http://www.gocomics.com/foxtrot/rss.pxml"/>
+      <outline type="rss" title="Girl Genius" text="Girl Genius" htmlUrl="http://www.girlgeniusonline.com/" xmlUrl="http://www.girlgeniusonline.com/ggmain.rss"/>
+      <outline type="rss" title="Gun Show ~ ~ ~ ~" text="Gun Show ~ ~ ~ ~" htmlUrl="http://gunshowcomic.com" xmlUrl="http://www.rsspect.com/rss/gunshowcomic.xml"/>
+      <outline type="rss" title="Happle Tea" text="Happle Tea" htmlUrl="http://www.happletea.com" xmlUrl="http://www.happletea.com/feed/"/>
+      <outline type="rss" title="Hard Truths From Soft Cats" text="Hard Truths From Soft Cats" htmlUrl="http://hardtruthsfromsoftcats.tumblr.com/" xmlUrl="http://hardtruthsfromsoftcats.tumblr.com/rss"/>
+      <outline type="rss" title="Hark, A Vagrant!" text="Hark, A Vagrant!" htmlUrl="http://www.rsspect.com" xmlUrl="http://www.rsspect.com/rss/vagrant.xml"/>
+      <outline type="rss" title="Hipster Hitler" text="Hipster Hitler" htmlUrl="http://hipsterhitler.com" xmlUrl="http://hipsterhitler.com/feed/"/>
+      <outline type="rss" title="Hyperbole and a Half" text="Hyperbole and a Half" htmlUrl="http://hyperboleandahalf.blogspot.com/" xmlUrl="http://feeds.feedburner.com/Hyperbole-and-a-half"/>
+      <outline type="rss" title="Manly Guys Doing Manly Things" text="Manly Guys Doing Manly Things" htmlUrl="http://thepunchlineismachismo.com" xmlUrl="http://thepunchlineismachismo.com/feed/rss"/>
+      <outline type="rss" title="Mistakes of Youth: The Beast That Shouted &quot;MOE~!&quot; at the Heart of the World" text="Mistakes of Youth: The Beast That Shouted &quot;MOE~!&quot; at the Heart of the World" htmlUrl="http://mistakesofyouth.com" xmlUrl="http://mistakesofyouth.com/feed/"/>
+      <outline type="rss" title="My Little Pony: Friendship is Betrayal" text="My Little Pony: Friendship is Betrayal" htmlUrl="http://mlp-fib.thecomicseries.com" xmlUrl="http://mlp-fib.thecomicseries.com/rss"/>
+      <outline type="rss" title="Oglaf! -- Comics. Often dirty." text="Oglaf! -- Comics. Often dirty." htmlUrl="http://oglaf.com/latest/" xmlUrl="http://www.oglaf.com/feeds/rss/"/>
+      <outline type="rss" title="Penny Arcade" text="Penny Arcade" htmlUrl="http://penny-arcade.com" xmlUrl="http://feeds.penny-arcade.com/pa-mainsite/"/>
+      <outline type="rss" title="PHD Comics" text="PHD Comics" htmlUrl="http://www.phdcomics.com" xmlUrl="http://www.phdcomics.com/gradfeed_justcomics.php"/>
+      <outline type="rss" title="Sarah's Sketches" text="Sarah's Sketches" htmlUrl="http://sarahmensinga.blogspot.com/" xmlUrl="http://sarahmensinga.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Saturday Morning Breakfast Cereal (updated daily)" text="Saturday Morning Breakfast Cereal (updated daily)" htmlUrl="http://www.smbc-comics.com" xmlUrl="http://feeds.feedburner.com/smbc-comics/PvLb"/>
+      <outline type="rss" title="Scenes From A Multiverse" text="Scenes From A Multiverse" htmlUrl="http://amultiverse.com" xmlUrl="http://amultiverse.com/feed/"/>
+      <outline type="rss" title="SPACE AVALANCHE" text="SPACE AVALANCHE" htmlUrl="http://www.spaceavalanche.com" xmlUrl="http://feeds.feedburner.com/SpaceAvalanche1"/>
+      <outline type="rss" title="The Abominable Charles Christopher" text="The Abominable Charles Christopher" htmlUrl="http://karlkerschl.com" xmlUrl="http://feeds.feedburner.com/abominable"/>
+      <outline type="rss" title="The Adventures of Dr. McNinja" text="The Adventures of Dr. McNinja" htmlUrl="http://drmcninja.com" xmlUrl="http://drmcninja.com/feed"/>
+      <outline type="rss" title="The Non-Adventures of Wonderella" text="The Non-Adventures of Wonderella" htmlUrl="http://nonadventures.com" xmlUrl="http://nonadventures.com/feed/"/>
+      <outline type="rss" title="The Perry Bible Fellowship" text="The Perry Bible Fellowship" htmlUrl="http://pbfcomics.com/feed/feed.xml" xmlUrl="http://pbfcomics.com/feed/feed.xml"/>
+      <outline type="rss" title="VG Cats" text="VG Cats" htmlUrl="http://www.vgcats.com/" xmlUrl="http://www.vgcats.com/vgcats.rdf.xml"/>
+      <outline type="rss" title="Wondermark" text="Wondermark" htmlUrl="http://wondermark.com" xmlUrl="http://feeds.feedburner.com/wondermark"/>
+      <outline type="rss" title="xkcd" text="xkcd" htmlUrl="http://xkcd.com/" xmlUrl="http://xkcd.com/atom.xml"/>
+      <outline type="rss" title="xkcd blag" text="xkcd blag" htmlUrl="http://blog.xkcd.com" xmlUrl="http://blag.xkcd.com/feed/"/>
+    </outline>
+    <outline title="politics" text="politics">
+      <outline type="rss" title="Armarium Magnum" text="Armarium Magnum" htmlUrl="http://armariummagnus.blogspot.com/" xmlUrl="http://feeds.feedburner.com/ArmariumMagnus"/>
+      <outline type="rss" title="Crooked Timber" text="Crooked Timber" htmlUrl="http://crookedtimber.org" xmlUrl="http://crookedtimber.org/feed/"/>
+      <outline type="rss" title="Econstudentlog" text="Econstudentlog" htmlUrl="https://econstudentlog.wordpress.com" xmlUrl="https://econstudentlog.wordpress.com/feed/"/>
+      <outline type="rss" title="Entitled to an Opinion" text="Entitled to an Opinion" htmlUrl="http://entitledtoanopinion.wordpress.com" xmlUrl="http://entitledtoanopinion.wordpress.com/feed/"/>
+      <outline type="rss" title="EXILED ONLINE" text="EXILED ONLINE" htmlUrl="http://exiledonline.com" xmlUrl="http://exiledonline.com/feed/"/>
+      <outline type="rss" title="Global Guerrillas" text="Global Guerrillas" htmlUrl="http://globalguerrillas.typepad.com/globalguerrillas/" xmlUrl="http://feeds.feedburner.com/typepad/rzYD"/>
+      <outline type="rss" title="Isegoria" text="Isegoria" htmlUrl="http://www.isegoria.net" xmlUrl="http://www.isegoria.net/feed/"/>
+      <outline type="rss" title="Law and the Multiverse » I’m not dead yet! Resurrection and Probate Law" text="Law and the Multiverse » I’m not dead yet! Resurrection and Probate Law" htmlUrl="http://lawandthemultiverse.com" xmlUrl="http://lawandthemultiverse.com/feed/"/>
+      <outline type="rss" title="longform.org" text="longform.org" htmlUrl="http://longform.org/" xmlUrl="http://longform.org/feed"/>
+      <outline type="rss" title="Mangan's" text="Mangan's" htmlUrl="http://mangans.blogspot.com/" xmlUrl="http://mangans.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="NYT &gt; Magazine" text="NYT &gt; Magazine" htmlUrl="http://www.nytimes.com/pages/magazine/index.html?partner=rss&amp;emc=rss" xmlUrl="http://www.nytimes.com/services/xml/rss/nyt/Magazine.xml"/>
+      <outline type="rss" title="Off to Alice Springs - Less Wrong Discussion" text="Off to Alice Springs - Less Wrong Discussion" htmlUrl="http://lesswrong.com/r/discussion/" xmlUrl="http://lesswrong.com/r/discussion/lw/cge/off_to_alice_springs/.rss"/>
+      <outline type="rss" title="Rajiv Sethi" text="Rajiv Sethi" htmlUrl="http://rajivsethi.blogspot.com/" xmlUrl="http://rajivsethi.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="ribbonfarm" text="ribbonfarm" htmlUrl="http://www.ribbonfarm.com" xmlUrl="http://feeds.ribbonfarm.com/Ribbonfarm"/>
+      <outline type="rss" title="Steve Sailer" text="Steve Sailer" htmlUrl="http://isteve.blogspot.com/" xmlUrl="http://isteve.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="Terrorist leaders are not about Terror - Less Wrong" text="Terrorist leaders are not about Terror - Less Wrong" htmlUrl="http://lesswrong.com/" xmlUrl="http://lesswrong.com/lw/5j8/terrorist_leaders_are_not_about_terror/.rss"/>
+      <outline type="rss" title="The Audacious Epigone" text="The Audacious Epigone" htmlUrl="http://anepigone.blogspot.com/" xmlUrl="http://anepigone.blogspot.com/feeds/posts/default"/>
+      <outline type="rss" title="The Browser" text="The Browser" htmlUrl="http://thebrowser.com" xmlUrl="http://thebrowser.com/feed/"/>
+      <outline type="rss" title="The GiveWell Blog" text="The GiveWell Blog" htmlUrl="http://blog.givewell.org" xmlUrl="http://feeds.feedburner.com/givewell/rss2"/>
+      <outline type="rss" title="Unqualified Reservations" text="Unqualified Reservations" htmlUrl="http://unqualified-reservations.blogspot.com/" xmlUrl="http://unqualified-reservations.blogspot.com/feeds/posts/default"/>
+    </outline>
+    <outline title="anime" text="anime">
+      <outline type="rss" title="All Doujin Music" text="All Doujin Music" htmlUrl="http://alldoujinmusic.wordpress.com" xmlUrl="http://alldoujinmusic.wordpress.com/feed/"/>
+      <outline type="rss" title="Anime News Network - Brain Diving" text="Anime News Network - Brain Diving" htmlUrl="http://www.animenewsnetwork.com/brain-diving/" xmlUrl="http://www.animenewsnetwork.com/brain-diving/rss.xml"/>
+      <outline type="rss" title="Anime News Network - Hey, Answerman!" text="Anime News Network - Hey, Answerman!" htmlUrl="http://www.animenewsnetwork.com/answerman/" xmlUrl="http://www.animenewsnetwork.com/answerman/rss.xml"/>
+      <outline type="rss" title="Anime News Network - Review" text="Anime News Network - Review" htmlUrl="http://www.animenewsnetwork.com/review/" xmlUrl="http://www.animenewsnetwork.com/review/rss.xml"/>
+      <outline type="rss" title="AniPages Daily" text="AniPages Daily" htmlUrl="http://www.pelleas.net/aniTOP/index.php" xmlUrl="http://www.pelleas.net/aniTOP/index.php?tempskin=_rss2"/>
+      <outline type="rss" title="ANN: Buried Treasure" text="ANN: Buried Treasure" htmlUrl="http://www.animenewsnetwork.com/buried-treasure/" xmlUrl="http://www.animenewsnetwork.com/buried-treasure/rss.xml"/>
+      <outline type="rss" title="ANN: feature" text="ANN: feature" htmlUrl="http://www.animenewsnetwork.com/feature/" xmlUrl="http://www.animenewsnetwork.com/feature/rss.xml"/>
+      <outline type="rss" title="AWESOME ENGINE" text="AWESOME ENGINE" htmlUrl="http://www.awesome-engine.com" xmlUrl="http://www.awesome-engine.com/feed/"/>
+      <outline type="rss" title="Behind The Nihon Review" text="Behind The Nihon Review" htmlUrl="http://behind-the.nihonreview.com" xmlUrl="http://behind-the.nihonreview.com/feed/atom/"/>
+      <outline type="rss" title="Blickwinkel" text="Blickwinkel" htmlUrl="http://imperialx.wordpress.com" xmlUrl="https://imperialx.wordpress.com/feed/"/>
+      <outline type="rss" title="Conversations at the Café Subculture" text="Conversations at the Café Subculture" htmlUrl="http://cafesubculture.wordpress.com" xmlUrl="https://cafesubculture.wordpress.com/feed/"/>
+      <outline type="rss" title="Eva Monkey, an Evangelion Fansite" text="Eva Monkey, an Evangelion Fansite" htmlUrl="http://www.evamonkey.com" xmlUrl="http://feeds.feedburner.com/EvaMonkey"/>
+      <outline type="rss" title="EvaGeeks.org" text="EvaGeeks.org" htmlUrl="http://www.evageeks.org" xmlUrl="http://www.evageeks.org/feed/"/>
+      <outline type="rss" title="genron" text="genron" htmlUrl="http://global.genron.co.jp" xmlUrl="http://global.genron.co.jp/feed/"/>
+      <outline type="rss" title="Ha Neul Seom" text="Ha Neul Seom" htmlUrl="http://guriguriblog.wordpress.com" xmlUrl="http://guriguriblog.wordpress.com/feed/"/>
+      <outline type="rss" title="Hige vs. Otaku" text="Hige vs. Otaku" htmlUrl="http://higevsotaku.tumblr.com/" xmlUrl="http://feeds.feedburner.com/hvo"/>
+      <outline type="rss" title="iSugoi" text="iSugoi" htmlUrl="http://www.isugoi.com" xmlUrl="http://www.isugoi.com/feed/"/>
+      <outline type="rss" title="Kritik der Animationskraft" text="Kritik der Animationskraft" htmlUrl="http://animekritik.wordpress.com" xmlUrl="https://animekritik.wordpress.com/feed/"/>
+      <outline type="rss" title="Mecha Guignol" text="Mecha Guignol" htmlUrl="http://mecha-guignol.com" xmlUrl="http://mecha-guignol.com/feed/"/>
+      <outline type="rss" title="Miku DataBase - Vocaloid discography" text="Miku DataBase - Vocaloid discography" htmlUrl="http://mikudb.com" xmlUrl="http://mikudb.com/?feed=rss2"/>
+      <outline type="rss" title="Mono no aware" text="Mono no aware" htmlUrl="http://mononoaware.concretebadger.net" xmlUrl="http://feeds.feedburner.com/concretebadger/mononoaware"/>
+      <outline type="rss" title="Néojaponisme" text="Néojaponisme" htmlUrl="http://neojaponisme.com" xmlUrl="http://feeds.feedburner.com/neojaponisme"/>
+      <outline type="rss" title="Oyasumi Punpun" text="Oyasumi Punpun" htmlUrl="http://mangafox.me/" xmlUrl="http://mangafox.me/rss/oyasumi_punpun.xml"/>
+      <outline type="rss" title="Polychromium" text="Polychromium" htmlUrl="http://polychromium.wordpress.com" xmlUrl="https://polychromium.wordpress.com/feed/"/>
+      <outline type="rss" title="red rabbits » Arthur Pyuty the Night Witch" text="red rabbits » Arthur Pyuty the Night Witch" htmlUrl="https://theredrabbits.wordpress.com" xmlUrl="https://theredrabbits.wordpress.com/tag/arthur-pyuty-the-night-witch/feed/"/>
+      <outline type="rss" title="Revolution of Evangelion" text="Revolution of Evangelion" htmlUrl="http://revolutionofevangelion.org" xmlUrl="http://revolutionofevangelion.org/feed/"/>
+      <outline type="rss" title="THAT Anime Blog" text="THAT Anime Blog" htmlUrl="http://www.thatanimeblog.com" xmlUrl="http://www.thatanimeblog.com/index.php/feed/"/>
+      <outline type="rss" title="The Anime Review" text="The Anime Review" htmlUrl="http://www.theanimereview.com" xmlUrl="http://www.theanimereview.com/theanimereview.xml"/>
+      <outline type="rss" title="The LiLiquarium" text="The LiLiquarium" htmlUrl="http://the-liliquarium.livejournal.com/" xmlUrl="http://the-liliquarium.livejournal.com/data/rss"/>
+      <outline type="rss" title="The Nihon Review" text="The Nihon Review" htmlUrl="http://www.nihonreview.com" xmlUrl="http://www.nihonreview.com/feed/"/>
+      <outline type="rss" title="The Official Schoolgirl Milky Crisis Blog" text="The Official Schoolgirl Milky Crisis Blog" htmlUrl="http://schoolgirlmilkycrisis.com" xmlUrl="http://schoolgirlmilkycrisis.com/blog/feed/"/>
+      <outline type="rss" title="Tim Maughan Books" text="Tim Maughan Books" htmlUrl="http://timmaughanbooks.com" xmlUrl="http://feeds.feedburner.com/TimMaughanBooks"/>
+      <outline type="rss" title="We Remember Love" text="We Remember Love" htmlUrl="http://ghostlightning.wordpress.com" xmlUrl="http://ghostlightning.wordpress.com/feed/"/>
+      <outline type="rss" title="Wonders in the Dark » Saturday Anime" text="Wonders in the Dark » Saturday Anime" htmlUrl="https://wondersinthedark.wordpress.com" xmlUrl="https://wondersinthedark.wordpress.com/category/author-bob-clark/saturday-anime/feed/"/>
+      <outline type="rss" title="分解系" text="分解系" htmlUrl="http://bunkai-kei.com" xmlUrl="http://bunkai-kei.com/feed/"/>
+    </outline>
+    <outline title="wiki" text="wiki">
+      <outline type="rss" title="Joining Clouds" text="Joining Clouds" htmlUrl="http://www.gwern.net/atom.xml" xmlUrl="http://www.gwern.net/atom.xml"/>
+      <outline type="rss" title="Lesswrongwiki  - Recent changes [en]" text="Lesswrongwiki  - Recent changes [en]" htmlUrl="http://wiki.lesswrong.com/wiki/Special:RecentChanges" xmlUrl="http://wiki.lesswrong.com/mediawiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+    </outline>
+  </body>
+</opml>

@@ -1,0 +1,100 @@
+name: Daily Newsletter Generator
+
+on:
+  # 每天早上 8:00 (UTC+8 = 0:00 UTC) 自动运行
+  schedule:
+    - cron: '0 0 * * *'
+  
+  # 手动触发
+  workflow_dispatch:
+  
+  # Push 到 main 时也运行
+  push:
+    branches: [ main, master ]
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # 获取完整历史以便 git 操作
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install Python dependencies
+      run: |
+        pip install feedparser requests
+    
+    - name: Generate Newsletter
+      run: |
+        python scripts/daily_newsletter_page.py
+      env:
+        TZ: Asia/Shanghai
+    
+    - name: Set up Haskell
+      uses: haskell/actions/setup@v2
+      with:
+        ghc-version: '9.2.8'
+        cabal-version: '3.10.1.0'
+    
+    - name: Cache Cabal packages
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cabal/packages
+          ~/.cabal/store
+          dist-newstyle
+        key: ${{ runner.os }}-cabal-${{ hashFiles('**/*.cabal', '**/cabal.project') }}
+        restore-keys: |
+          ${{ runner.os }}-cabal-
+    
+    - name: Build Hakyll site
+      run: |
+        cd build
+        cabal update
+        cabal build
+        cabal run hakyll -- rebuild +RTS -N -RTS
+    
+    - name: Prepare deployment
+      run: |
+        # 复制编译后的网站到临时目录
+        mkdir -p /tmp/site
+        cp -r _site/* /tmp/site/
+        
+        # 添加 .nojekyll 文件（GitHub Pages 需要）
+        touch /tmp/site/.nojekyll
+        
+        # 创建 CNAME（如果有自定义域名）
+        # echo "your-domain.com" > /tmp/site/CNAME
+    
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: /tmp/site
+        publish_branch: gh-pages
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        commit_message: 'Deploy: Newsletter ${{ github.run_number }}'
+    
+    - name: Commit Newsletter updates
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # 添加生成的文件
+        git add newsletter/*.page newsletter/*.json
+        
+        # 只在有变化时提交
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Auto-generate newsletter $(date +'%Y-%m-%d')"
+          git push
+        fi

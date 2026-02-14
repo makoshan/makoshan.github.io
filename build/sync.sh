@@ -1,0 +1,2073 @@
+#!/usr/bin/env bash
+
+# Author: Gwern Branwen
+# Date: 2016-10-01
+# When:  Time-stamp: "2026-02-07 12:29:25 gwern"
+# License: CC-0
+#
+# sync-gwern.net.sh: shell script which automates a full build and sync of Gwern.net. A full build is intricate, and requires several passes like generating link-bibliographies/tag-directories, running two kinds of syntax-highlighting, stripping cruft etc.
+#
+# This script automates all of that: it cleans up, compiles a hakyll binary for faster compilation,
+# generates a sitemap XML file, optimizes the MathJax use, checks for many kinds of errors, uploads,
+# and cleans up.
+
+# key dependencies: GHC, Hakyll, emacs, curl, tidy (HTML5 version), git, regex-compat-tdfa (Unicode Haskell regexps), urlencode
+# ('gridsite-clients' package), linkchecker, fdupes, ImageMagick, exiftool, mathjax-node-page (eg.
+# `npm i -g mathjax-node-page`), parallel, xargs, php-cli, php-xml, php-masterminds-html5, libreoffice, gifsicle, tidy, libxml2-utils…
+
+cd ~/wiki/
+# shellcheck source=~/wiki/static/build/bash.sh
+. ./static/build/bash.sh # import a bunch of Bash utilities for output formatting, checks, file IO etc: red/bold, wrap, gf/gfc/gfv/ge/gec/gev, png2JPGQualityCheck, gwmv...
+
+DEPENDENCIES=(
+  bc curl shuf dos2unix du elinks emacs exiftool fdupes feh ffmpeg file find firefox
+  ghc ghci runghc hlint gifsicle git identify inotifywait jpegtran jq libreoffice
+  linkchecker locate mogrify ocrmypdf pandoc parallel pdftk pdftotext img2pdf php ping
+  optipng rm rsync sed tidy urlencode x-www-browser xargs xmllint xprintidle
+  anchor-checker.php generateBacklinks.hs generateDirectory.hs
+  generateLinkBibliography.hs generateSimilarLinks.hs link-extractor.hs
+  compressJPG openai chromium inkscape node pngnq advpng docker
+  should_image_have_outline.php mp3val
+) # ~/src/node_modules/mathjax-node-page/bin/mjpage, beautifulsoup-4
+declare -A ERROR_OUTPUTS
+DEPENDENCIES_MISSING=()
+
+for DEP in "${DEPENDENCIES[@]}"; do
+    if ! command -v "$DEP" &> /dev/null; then
+        DEPENDENCIES_MISSING+=("$DEP")
+        # Attempt to run the missing command to capture its error output.
+        error_msg=$({ "$DEP" 2>&1; } 2>/dev/null)
+        ERROR_OUTPUTS["$DEP"]="$error_msg"
+    fi
+done
+
+if [ ${#DEPENDENCIES_MISSING[@]} -ne 0 ]; then
+    red "Error: missing dependencies!"
+    for dep in "${DEPENDENCIES_MISSING[@]}"; do
+         echo "Missing: $dep"
+         # Print whatever error output was produced when attempting to run the command.
+         echo "${ERROR_OUTPUTS[$dep]}"
+         echo
+    done
+    exit 1
+fi
+
+# cleanup:
+rm --recursive --force -- ./_cache/ ./_site/ &
+## delete Emacs temporary files which tend to break the build in unpredictable ways:
+find ./static/build/ -type f -name "flycheck_*.hs" -delete 2>/dev/null &
+find ./ -type f -name "#*\.md#" -delete 2>/dev/null &
+
+MIN_GB="6"
+if [ "$(df --block-size=G ~/ | awk 'NR==2 {print $4}' | sed 's/G//')" -lt "$MIN_GB" ]; then
+    red "Error: Less than $MIN_GB gigabytes of free space in home directory; one cannot reliably compile Gwern.net with so little space, so exiting." >&2
+    exit 2
+fi
+
+if  [ -n "$(pgrep hakyll)" ]
+then
+    red "or Hakyll already running?"
+else
+    set -e
+
+    # lower priority of everything we run (some of it is expensive):
+    renice --priority 19 --pid "$$" &>/dev/null
+    ionice --class 3     --pid "$$" &>/dev/null
+
+    ## Parallelization: WARNING: post-2022-03 Hakyll uses parallelism which catastrophically slows down at >= # of physical cores; see <https://groups.google.com/g/hakyll/c/5_evK9wCb7M/m/3oQYlX9PAAAJ>
+    N=14
+    SLOW="true"
+    SKIP_DIRECTORIES=""
+    TODAY=$(date '+%F')
+
+    for ARG in "$@"; do
+        case "$ARG" in
+            --fast) SLOW="" ;;
+            --skip-directories) SKIP_DIRECTORIES="true" ;;
+            *[!0-9]*) ;; # skip non-numbers
+            *) N="$ARG" ;;
+        esac
+    done
+    s() { gwsed "$@"; }
+    export SLOW SKIP_DIRECTORIES N s
+
+    if [ "$SLOW" ]; then (cd ~/wiki/ && git status) || true; fi # quickly summarize pending changes
+    bold "Pulling infrastructure updates…"
+    # pull from Said Achmiz's repo, with his edits overriding mine in any conflict (`-Xtheirs`) & auto-merging with the default patch text (`--no-edit`), to make sure we have the latest JS/CSS. (This is a bit tricky because the use of versioning in the includes means we get a lot of merge conflicts, for some reason.)
+    (cd ./static/ && git status && timeout 5m git pull --strategy-option=theirs --no-edit --verbose 'https://gwern.obormot.net/static/.git/' master) || true
+
+
+    if [ "$SLOW" ]; then
+        bold "Executing string rewrite cleanups…" # automatically clean up some Gwern.net bad URL patterns, typos, inconsistencies, house-styles:
+        ( set +e
+          ## domain/URL rewrites:
+          s 'https://mobile.x.com' 'https://x.com'; s 'https://www.x.com' 'https://x.com'; s 'https://twitter.com/' 'https://x.com/'; s 'https://en.reddit.com/' 'https://www.reddit.com/'; s 'https://www.greaterwrong.com/posts/' 'https://www.lesswrong.com/posts'; s 'http://web.archive.org/web/' 'https://web.archive.org/web/'; s 'https://youtu.be/' 'https://www.youtube.com/watch?v='; s 'http://arxiv.org' 'https://arxiv.org'; s 'https://deepmind.com' 'https://www.deepmind.com'; s 'http://en.wikipedia.org' 'https://en.wikipedia.org'; s 'v1.full' '.full'; s 'v2.full' '.full'; s 'v3.full' '.full'; s 'v4.full' '.full'; s 'v5.full' '.full'; s 'v6.full' '.full'; s 'v7.full' '.full'; s 'v8.full' '.full'; s 'v9.full' '.full'; s '.full-text' '.full'; s '.full.full' '.full'; s '.full-text' '.full'; s '.full-text.full' '.full'; s '.full.full.full' '.full'; s '.full.full' '.full'; s '.gov/labs/pmc/articles/P' '.gov/pmc/articles/P';  s 'rjlipton.wpcomstaging.com' 'rjlipton.wordpress.com'; s 'www.super-memory.com' 'super-memory.com'; s 'https://www.bldgblog.com' 'https://bldgblog.com'; s 'https://www.clinicaltrials.gov' 'https://clinicaltrials.gov'; s 'https://arxiv.org/abs//' 'https://arxiv.org/abs/'; s 'http://paulgraham.com' 'https://paulgraham.com'; s 'http://www.paulgraham.com' 'https://paulgraham.com'; s "https://www.paulgraham.com" "https://paulgraham.com"; s 'https://www.arxiv.org/' 'https://arxiv.org/';
+          ## NOTE: domains which are bad or unfixable are handled by a later lint. This is only for safe rewrites.
+
+          ## link cruft rewrites:
+          s '&hl=en&oi=ao' ''; s '&hl=en' ''; s '?hl=en&' '?'; s '?hl=en' ''; s '?usp=sharing' ''; s '?via%3Dihub' ''; s '.html?pagewanted=all' '.html'; s '&feature=youtu.be' ''; s '?app=desktop&' '?'; s ':443/' '/'; s ':80/' '/'; s '?s=r' ''; s '?s=61' ''; s '?sd=pf' ''; s '?ref=The+Browser-newsletter' ''; s '?ref=thebrowser.com' ''; s '?ignored=irrelevant' ''; s '](/docs/' '](/doc/'; s 'href="/docs/' 'href="/doc/'; s '.pdf#pdf' '.pdf'; s '#fromrss' ''; s '&amp;hl=en' ''; s '?rss=1' ''; s '/doc/statistics/decision-theory' '/doc/statistics/decision'; s '?ref=quillette.com' ''; s '?login=false' ''; s '?open=false#' '#'; s 'https://amp.theguardian.com/' 'https://theguardian.com/'; s '?wprov=sfti1' '';
+          stringReplace '&oi=ao' '' ./static/build/Config/Metadata/Author.hs; stringReplace '&hl=en' '' ./static/build/Config/Metadata/Author.hs; stringReplace '&oi=sra' '' ./static/build/Config/Metadata/Author.hs; stringReplace '?hl=en&' '?' ./static/build/Config/Metadata/Author.hs
+
+          ## name/entity consistency & fixing common spelling errors:
+          s 'EMBASE' 'Embase'; s 'Medline' 'MEDLINE'; s 'PsychINFO' 'PsycINFO'; s 'MSCOCO' 'MS COCO'; s 'Yann Le Cun' 'Yann LeCun'; s ' VQVAE' ' VQ-VAE'; s 'CIFAR 10' 'CIFAR-10'; s 'Jorges Luis Borges' 'Jorge Luis Borges'; s 'Rene Girard' 'René Girard'; s 'Anno Hideaki' 'Hideaki Anno'; s ' GPT2' ' GPT-2'; s ' Clinicaltrials.gov' ' ClinicalTrials.gov'; s ' clinicaltrials.gov' ' ClinicalTrials.gov'; s 'Dario Amodai' 'Dario Amodei'; s 'single nucleotide polymorph' 'single-nucleotide polymorph'; s 'Single Nucleotide Polymorph' 'Single-Nucleotide Polymorph'; s 'single nucleotide variant' 'single-nucleotide variant'; s ' CIFAR10' 'CIFAR-10'; s 'TyDi QA' 'TyDiQA'; s 'Türkiye' 'Turkey'; s ' Poincare' ' Poincaré'; s 'Francois de La Rochefoucauld' 'François de La Rochefoucauld'; s 'Moliere' 'Molière'; s 'behavioural genetic' 'behavioral genetic'; s ' gwern.net' ' Gwern.net'; s 'chain of thought' 'chain-of-thought'; s 'Chain Of Thought' 'Chain-Of-Thought'; s 'Chain of Thought' 'Chain-of-Thought'; s 'Chain of thought' 'Chain-of-thought'; s 'MS Marco' 'MS MARCO'; s 'MS-MARCO' 'MS MARCO'; s 'NLSY-79' 'NLSY79'; s 'NLSY-97' 'NLSY97'; s 'state of the art' 'state-of-the-art'; s 'State of the Art' 'State-of-the-Art'; s 'State of the art' 'State-of-the-art'; s 'State Of The Art' 'State-of-the-Art'; s 'Enwik8' 'enwik8'; s 'enwiki8' 'enwik8'; s 'G. M. Fahy' 'Gregory M. Fahy'; s 'Greg M. Fahy' 'Gregory M. Fahy'; s 'Gary Kasparov' 'Garry Kasparov'; s 'Fel D1' 'Fel D 1'; s 'Fel d1' 'Fel d 1'; s 'CIFAR10' 'CIFAR-10'; s 'ImageNet1k' 'ImageNet-1k'; s 'ImageNet21k' 'ImageNet-21k'; s ' Imagenet' ' ImageNet'; s ' LeGuin' ' Le Guin'; s 'DALL-E 1' 'DALL·E 1'; s 'DALL-E 2' 'DALL·E 2'; s 'DALLE-2 ' 'DALL·E 2 '; s 'DALL-E 3' 'DALL·E 3'; s 'FLAN-PALM' 'Flan-PaLM'; s 'GPT-4V' 'GPT-4-V'; s 'GPT-4 V' 'GPT-4-V'; s ' GPT4' ' GPT-4'; s 'drop cap' 'dropcap'; s 'Drop cap' 'Dropcap'; s 'Drop Cap' 'Dropcap'; s 'R.A. Fisher' 'R. A. Fisher'; s 'Larry Sumners' 'Larry Summers'; s ' auto-encoder' ' autoencoder'; s 'Auto-Encoder' 'Autoencoder'; s ' GPT3' ' GPT-3' ; s ' GPT4' ' GPT-4'; s 'J.R.R. Tolkien' 'J. R. R. Tolkien'; s 'F.D.A.' 'FDA'; s 'C.D.C.' 'CDC'; s 'F.B.I.' 'FBI'; s 'C.I.A.' 'CIA'; s ' Onlyfans' ' OnlyFans'; s ' A.I.' ' AI'; s ' Juergen' ' Jürgen'; s ' Godel' ' Gödel'; s ' Goedel' ' Gödel'; s 'Bryne Hobart' 'Byrne Hobart'; s 'Saigyo' 'Saigyō'; s 'John Wentsworth' 'John Wentworth'; s ' othre' ' other'; s 'edtorial' 'editorial'; s ' Javascript' ' JavaScript';
+
+          ## abbreviation consistency:
+          s '(ie,' '(ie.'; s '(ie ' '(ie. '; s 'i.e.,' 'ie.'; s 'ie., ' 'ie. '; s '(i.e.' '(ie.'; s '(eg, ' '(eg. '; s ' eg ' ' eg. '; s '(eg ' '(eg. '; s '[eg ' '[eg. '; s '[Eg ' '[eg. '; s 'e.g. ' 'eg. '; s ' e.g. ' ' eg. '; s 'e.g.,' 'eg.'; s 'eg.,' 'eg.'; s 'E.g.,' 'Eg.'; s '(cf ' '(cf. '; s ' cf ' ' cf. '; s 'c.f., ' 'cf. '; s 'v.s.' 'versus';
+          s ' etc ' ' etc. '; s ' etc)' ' etc.)'; s ' etc,' ' etc.,'; s ' etc]' ' etc.]'; s ' etc’' ' etc.’'; s ' etc---' ' etc.---'; s ' etc|' ' etc.|'; s ' etc?' ' etc.?'; s ' etc;' ' etc.;'; s ' etc:' ' etc.:'; s ' etc"' ' etc."'; s ' etc[' ' etc.['; s " etc'" " etc.'"; s ' etc!' ' etc.!'; s 'etc</p>' 'etc.</p>'; s 'etc</td>' 'etc.</td>'; s ' etc—' ' etc.—'; s ' etc”' ' .etc”'; s 'etc</a>' 'etc.</a>'
+          s ' Feb ' ' February '; s ' Aug ' ' August '; s ', Jr.' ' Junior'; s ' Jr.' ' Junior'; s ', Junior' ' Junior';
+          s '<sup>Th</sup>' '<sup>th</sup>'; s ' 20th' ' 20<sup>th</sup>'; s ' 21st' ' 21<sup>st</sup>';
+          s ',”' '”,'; s ",’" "’,"; s '(vs. ' '(versus '; s ' vs. ' ' versus '; s ' Vs. ' ' Versus '; s 'best-of-<em>N</em>' 'best-of-<em>n</em>'; s ' Best-Of-N ' ' Best-of-<em>n</em> '; s 'Best-of-n ' 'Best-of-<em>n</em> '; s ' best-of-n' ' best-of-<em>n</em>'; s ' best-of-N' ' best-of-<em>n</em>';
+
+          ### NOTE: Not safe to do site-wide with `gwsed` because it stomps all over R transcripts where quartiles
+          ### are often reported in summaries like '1st'; we can do it safely for GTX because no R sessions there (for now):
+          stringReplace '<sup>St</sup>' '<sup>st</sup>' ./metadata/*.gtx; stringReplace '<sup>Nd</sup>' '<sup>nd</sup>' ./metadata/*.gtx; stringReplace '<sup>Rd</sup>' '<sup>rd</sup>' ./metadata/*.gtx; stringReplace ' 1st ' ' 1<sup>st</sup> ' ./metadata/*.gtx; stringReplace ' 2nd' ' 2<sup>nd</sup>' ./metadata/*.gtx; stringReplace ' 3rd' ' 3<sup>rd</sup>' ./metadata/*.gtx; stringReplace ' 4th' ' 4<sup>th</sup>' ./metadata/*.gtx;
+
+          ## spelling errors:
+          s 'border colly' 'border collie'; s 'genomewide' 'genome-wide'; s 'regularise' 'regularize'; s ' residualis' ' residualiz'; s 'endelian randomisation' 'endelian randomization'; s 'mendelian randomization' 'Mendelian Randomization'; s 'Mendelian randomization' 'Mendelian Randomization'; s 'canalization' 'canalisation'; s 'Statistical significance' 'Statistical-significance'; s 'Statistical Significance' 'Statistical-Significance'; s 'statistical significance' 'statistical-significance'; s ' longstanding' ' long-standing'; s 'utilise' 'utilize'; s 'facebookok' 'facebook'; s 'Tartarian' 'Tatarian'; s 'tartarian' 'tatarian'; s ' an One' ' a One'; s ' an one' ' a one'; s '<p>he ' '<p>He '; s ' lik ' ' like '; s ' Behaviour ' ' Behavior '; s ' behaviour ' ' behavior '; s ' anaesthesia' ' anesthesia'; s ' Modelling' ' Modeling'; s ' modelling' ' modeling'; s ' colour' ' color'; s ' Colour' ' Color'; s 'multicentre' 'multicenter'; s 'Multicentre' 'Multicenter'; s ' Cluster-Randomis' ' Cluster-Randomiz'; s ' Non-Randomis' ' Non-Randomiz'; s ' Non-randomised' ' Non-randomized'; s ' Randomis' ' Randomiz'; s ' cluster-randomis' ' cluster-randomiz'; s ' non-randomis' ' non-randomiz'; s ' non-randomised' ' non-randomized'; s ' nonrandomised' ' non-randomised'; s ' quasi-randomised' ' quasi-randomized'; s ' randomis' ' randomiz'; s 'categoris' 'categoriz'; s ' ageing' ' aging'; s ' Ageing' ' Aging'; s 'Likert-scale' 'Likert scale'; s 'discussiom' 'discussion'; s ' Homogeneous' ' Homogenous'; s ' homogeneous' ' homogenous'; s ' Non-Homogeneous' ' Non-Homogenous'; s ' non-homogeneous' ' non-homogenous'; s 'Homogeneous:' 'Homogenous:'; s '“homogeneous”' '“homogenous”'; s ' ancestry-homogeneous' ' ancestry-homogenous'; s ' inhomogeneous' ' inhomogenous'; s ' continuee ' ' continue ';
+
+          ## citation consistency:
+          s ']^[' '] ^['; s 'et. al.' 'et al'; s 'et al. (' 'et al ('; s ' et al. 1'  ' et al 1'; s ' et al. 2'  ' et al 2'; s ' et al., ' ' et al '; s 'et al., ' 'et al ';
+          s 'pg 1' 'pg1'; s 'pg 2' 'pg2'; s 'pg 3' 'pg3'; s 'pg 4' 'pg4'; s 'pg 5' 'pg5'; s 'pg 6' 'pg6'; s 'pg 7' 'pg7'; s 'pg 8' 'pg8'; s 'pg 9' 'pg9';
+          ### WARNING: when using `+` in sed, by default, it is treated as an ordinary literal. It MUST be escaped to act as a regexp! Whereas in `grep --extended-regexp`, it's the opposite. So remember: `\+` in sed, and `+` in grep.
+          ### WARNING: remember that `sed -i` modifies the last-modified timestamp of all files it runs on, even when the file was not, in fact, modified!
+          for file in $(find . -type f -name "*.md" -or -name "*.gtx"); do
+              if grep --extended-regexp --quiet "[A-Z][a-z]+ et al \([1-2][0-9]{3}[a-z]?\)" "$file"; then
+                  sed -i -e 's/\([A-Z][a-z]\+\) et al (\([1-2][0-9][0-9][0-9][a-z]\?\))/\1 et al \2/g' "$file"
+              fi
+
+              if grep --extended-regexp --quiet "[A-Z][a-z]+ and [A-Z][a-z]+ \([1-2][0-9]{3}[a-z]?\)" "$file"; then
+                  sed -i -e 's/\([A-Z][a-z]\+\) and \([A-Z][a-z]\+\) (\([1-2][0-9][0-9][0-9][a-z]\?\))/\1 \& \2 \3/g' "$file"
+              fi
+          done
+
+          ## anchor errors:
+          s '#allen#allen' '#allen'; s '#deepmind#deepmind' '#deepmind'; s '&org=deepmind&org=deepmind' '&org=deepmind'; s '#nvidia#nvidia' '#nvidia'; s '#openai#openai' '#openai'; s '#google#google' '#google'; s '#uber#uber' '#uber';
+
+          ## HTML/Markdown formatting:
+          s '<p> ' '<p>'; s ' _n_s' ' <em>n</em>s'; s ' (n = ' ' (<em>n</em> = '; s ' (N = ' ' (<em>n</em> = '; s ' de novo ' ' <em>de novo</em> '; s ' De Novo ' ' <em>De Novo</em> '; s '. De novo ' '. <em>De novo</em> '; s 'backlinks-not' 'backlink-not'; s ',</a>' '</a>,'; s ':</a> ' '</a>: '; s ';</a>' '</a>;'; s ' <<a href' ' <a href'; s '_X_s' '<em>X</em>s'; s ' _r_s' ' <em>r</em>s'; s '<em ' '<em>'; s '# External links' '# External Links'; s '# See also' '# See Also'; s '"abstract-collapse abstract"' '"abstract abstract-collapse"'; s "‐" "-"; s 'class="link-auto"' ''; s '𝑂(' '𝒪('; s '</strong> and <strong>' '</strong> & <strong>'; s '<Sub>' '<sub>'; s '<Sup>' '<sup>';
+          s 'class="invertible"' 'class="invert"'; s '”&gt;' '">'; s '<br/>' '<br>'; s '<br />' '<br>'; s ' id="cb1"' ''; s ' id="cb2"' ''; s ' id="cb3"' ''; s ' id="cb4"' '';
+          s '.svg-530px.jpg' '.svg'; s ' (”' ' (“'; s '<A Href' '<a href'; s '</a>’s' '’s</a>'; s '-530px.jpg' ''; s '-768px.png' ''; s '-768px.jpg' ''; s '—-' '—'; s 'collapse-summary' 'abstract-collapse'; s 'collapse-abstract' 'abstract-collapse';
+          s 'href="ttp' 'href="http'; s '\xmlpi{\\}' ''; s '°C' '℃'; s ' degrees Celsius' '℃'; s '° C' '℃'; s '°F' '℉'; s '° F' '℉'; s '℉ahrenheit' '℉'; s '℃elsius' '℃'; s ' ℃' '℃'; s ' ℉' '℉'; s 'marginnnote' 'marginnote'; s ' <br></li>' '</li>';
+          s ' <br> </li>' '</li>'; s '<psna ' '<span '; s '……' '…'; s '</strong>::' '</strong>:'; s '](//' '[(/'; s '{.full-width' '{.width-full'; s '<div class="admonition">' '<div class="admonition note">'; s '](/home/gwern/wiki/' '](/'; s '](wiki/' '](/';
+          s '<a href="/home/gwern/wiki/' '<a href="/'; s '.png.png' '.png'; s '.jpg.jpg' '.jpg'; s '.’</p>' '’.</p>';
+          s 'Cite-Author' 'cite-author'; s 'cite-author-Plural' 'cite-author-plural'; s 'Cite-Date' 'cite-date'; s 'Cite-Joiner' 'cite-joiner'; s 'class="Cite' 'class="cite'; s 'Logotype-Tex' 'logotype-tex'; s 'Date-Range' 'date-range'; s 'Inflation-Adjusted' 'inflation-adjusted'; s 'Logotype-Latex-A' 'logotype-latex-a'; s 'Logotype-Latex-E' 'logotype-latex-e'; s 'SUbsup' 'subsup';
+          s '</p></p>' '</p>'; s '’ ”' '’ ”'; s ' ”' ' “';
+          s '[("doi","")]' ''; s '>/a>' '</a>'; s 'href="W!"' 'href="!W"'; s 'class="Logotype-Tex"' 'class="logotype-tex"'; s 'Class="Logotype-Tex"' 'class="logotype-tex"'; s '<span Class="' '<span class="';
+          s '_n_th' '<em>n</em>th'; s 'thumbnailText: ' 'thumbnail-text: '; s ' — ' '—'; s '_n_=' '_n_ = ';
+          s '< a href' '<a href'; s 'modifed: 20' 'modified: 20'; s 'linklive-not' 'link-live-not'; s ' n-dimensional' ' <em>n</em>-dimensional'; s 'pdf#pg=' 'pdf#page='; s 'PDF#pg=' 'PDF#page='; s '<hr />' '<hr>'; s '</hr>' '<hr>'; s '<hr></hr>' '<hr>'; s 'confidence: highly-likely' 'confidence: highly likely'; s 'drop-caps-de-zs' 'dropcaps-de-zs'; s 'drop-caps-kanzlei' 'dropcaps-kanzlei'; s '฿' '₿'; s 'mL/kg/day' 'mL⧸kg⧸day'; s 'μg/day' 'μg⧸day'; s 'kg/day' 'kg⧸day'; s 'mg/day' 'mg⧸day'; s 'g/day' 'g⧸day'; s 'kcal/day' 'kcal⧸day'; s 'tokens/sec' 'tokens⧸sec'; s 'kg/m<sup>2</sup>' 'kg⧸m<sup>2</sup>'; s 'kg/m(2)' 'kg⧸m<sup>2</sup>'; s 'ng/mL' 'ng⧸mL'; s ' g/L' ' g⧸L'; s ' mg/L' ' mg⧸L';s ' mg/L' ' mg⧸L'; s 'μg/L' 'μg⧸L'; s 'g/cm2' 'g⧸cm<sup>2</sup>'; s ' g/d' ' g⧸d'; s 'kV/m' 'kV⧸m'; s 'μg/mL' 'μg⧸mL'; s 'muons/second' 'muons⧸second'; s 'mmol/L' 'mmol⧸L'; s 'mmol/l' 'mmol⧸L';
+          s 'src="doc/' 'src="/doc/'; s 'href="doc/' 'href="/doc/';
+          s 'link-icon-not' 'icon-not'; s '<!--<p>' '<!-- <p>'; s '</p>-->' '</p> -->';
+          s '](W!' '](!W'; s '<em>𝛽</em>' '<em>β</em>'; s '𝛽' '<em>β</em>'; s 'class="table-simple' 'class="table-small';
+          s ' > > ' ' >> '; s '</pan>' '</span>'; s 'display:none;' 'display: none;'; s '</spam>' '</span>'; s '\U0001D4AA' '𝒪̃';
+          s 'class="Editorial"' 'class="editorial"'; s '<a herf=' '<a href='; s '<a ref=' '<a href='; s '<a hrfe=' '<a href=';
+
+          ## TODO: duplicate HTML classes from Pandoc reported as issue #8705 & fixed; fix should be in >pandoc 3.1.1 (2023-03-05), so can remove these two rewrites once I upgrade past that:
+          s 'class="odd odd' 'class="odd'; s 'class="even even' 'class="even';
+          s '  ' ' '; s '​ ' ' ';
+
+          # update all LW comment links from comment ID anchors to explicit '?commentId=' queries, for more reliable linking
+          gf 'https://www.lesswrong.com/' ./metadata/backlinks.hs \
+            | cut --delimiter='"' --field=2 \
+            | sort --unique \
+            | gfv -e '?commentId=' -e '#comments' \
+            | ge '#[A-Za-z0-9]{17}$' | while read -r URL; do
+              NEW_URL="${url/\#/?commentId=}"
+              gwsed "$URL" "$NEW_URL"
+          done
+
+        ) &> /dev/null &
+    sed -i -e 's/ data-link-?[Tt]ags="[a-z0-9 \/-]\+">/>/' ./metadata/*.gtx;
+    fi
+
+    bold "Compiling…"
+    cd ./static/build
+    # WARNINGS=""
+    # if [ "$SLOW" ]; then WARNINGS="-Wall -Werror"; fi
+    # compile () { ghc -O2 $WARNINGS -rtsopts -threaded --make "$@"; }
+    # compile hakyll.hs
+    # if [ -z "$SKIP_DIRECTORIES" ]; then
+    #     compile generateLinkBibliography.hs
+    #     compile generateDirectory.hs; fi
+    # compile preprocess-markdown.hs
+    # compile guessTag.hs &
+    # compile changeTag.hs &
+    # compile checkMetadata.hs &
+    # compile generateSimilarLinks.hs &
+    cabal install ; cabal clean
+    ## NOTE: the generateSimilarLinks & link-suggester.hs runs are done at midnight by a cron job because
+    ## they are too slow to run during a regular site build & don't need to be super-up-to-date
+    ## anyway
+    cd ../../
+
+  if [ "$SLOW" ]; then # run *after* recompiling 'checkMetadata' to ensure that we have the latest config (ie. blacklists, overrides, new rules etc.) for the lints
+    bold "Checking metadata…"
+    pkill checkMetadata || true
+    rm ~/METADATA.txt &> /dev/null || true
+    TMP_CHECK=$(mktemp /tmp/"XXXXX.txt"); ./static/build/checkMetadata >> "$TMP_CHECK" 2>&1 && mv "$TMP_CHECK" ~/METADATA.txt || true &
+
+    bold "Checking embeddings database…"
+    ghci -istatic/build/ ./static/build/GenerateSimilar.hs  -e 'e <- readEmbeddings' &>/dev/null
+
+    # duplicates a later check but if we have a fatal link error, we'd rather find out now rather than 30 minutes later while generating annotations:
+    λ(){ gf -e 'href=""' -e 'href="!W"></a>' -e "href='!W'></a>" -- ./metadata/*.gtx || true; }
+    wrap λ "Malformed empty link in annotations?"
+
+    # another early fatal check: if there is a Markdown file 'foo.md' and also a subdirectory 'foo/' in the same directory, then this will result in, later, a fatal error when one tries to compile 'foo.md' → 'foo' (the HTML file) but 'foo' (the directory) already exists.
+    # Check if any files collide with directories of the same name (without the .md extension).
+    # Usage: find_colliding_files [path]
+    function find_colliding_files() { # GPT-3 written:
+      set -euo pipefail
+      path="${1:-.}"
+      find "$path" -depth -type f -name "*.md" -exec sh -c '
+        for file do
+          path="$(dirname "$file")/$(basename "$file" ".md")"
+          if [ -e "$path" ] && [ ! -L "$path" ]; then
+            if [ -d "$path" ]; then
+              printf "Fatal error: Directory exists with the same name as file %s\n" "$file" >&2
+              exit 3
+            else
+              printf "Fatal error: File exists with the same name as file %s\n" "$file" >&2
+              exit 4
+            fi
+          fi
+        done' sh {} +
+    }
+    find_colliding_files ./
+
+    # We update the linkSuggestions.el in a cron job because too expensive, and vastly slows down build.
+
+    # Update the directory listing index pages: there are a number of directories we want to avoid,
+    # like the various mirrors or JS projects, or directories just of data like CSVs, or dumps of
+    # docs, so we'll blacklist those:
+    DIRECTORY_TAGS="$(find doc/ fiction/ haskell/ newsletter/ nootropic/ note/ review/ sicp/ zeo/ -type d \
+                      | gfv -e 'doc/www' -e 'doc/rotten.com' -e 'doc/genetics/selection/www.mountimprobable.com' \
+                                        -e 'doc/biology/2000-iapac-norvir' -e 'doc/gwern.net-gitstats' -e 'doc/reinforcement-learning/armstrong-controlproblem' \
+                                        -e 'doc/statistics/order/beanmachine-multistage' -e 'doc/personal/2011-gwern-yourmorals.org/' \
+                                        -e 'confidential/' -e 'private/' -e 'secret/' -e 'newest/' | \
+                                         sort_by_lastmodified)"
+
+    if [ -z "$SKIP_DIRECTORIES" ]; then
+        bold "Writing missing annotations to support link-bibliography/tag-directory updates…"
+        # We add new annotations daily, but all the code in link-bib/tag-directory deal with only the current annotations which have been written out to disk as HTML snippets; thus, since that is done in the main compilation phase, the default would be that annotations would be omitted the first day and only appear the next time. This is annoying and manually working around it is even more tedious, so we provide a 'one-shot' missing-annotation mode and call that phase immediately before the lb/tag phase:
+        hakyll build +RTS -N"$N" -RTS --annotation-missing-one-shot  ; hakyll build clean
+        bold "Updating link bibliographies…"
+        generateLinkBibliography +RTS -N"$N" -RTS || true
+
+        # we want to generate all directories first before running Hakyll in case a new tag was created
+        bold "Building directory indexes…"
+        generateDirectory +RTS -N3 -RTS $DIRECTORY_TAGS
+
+        # ensure that the list of test-cases has been updated so we can look at <https://gwern.net/lorem-link#live-link-testcases> immediately after the current sync (rather than afterwards, delaying it to after the next sync)
+        λ() { ghci -istatic/build/ ./static/build/LinkLive.hs \
+                   -e 'do { l <- linkLivePrioritize; putStrLn (Text.Show.Pretty.ppShow l); }' | \
+                  gfv -e ' secs,' -e 'it :: ()' -e '[]'; }
+        wrap λ "Need link live whitelist/blacklisting?" &
+    else
+        # we don't rebuild *all* tag-directories, but we will build any empty ones (ie. newly-created ones), because otherwise they will kill a fast sync (and I'd often forget at night that it has to be a full sync after creating a tag during the day):
+        DIRECTORIES_EMPTY="$(find ./doc/ -type f -name "index.md" -size 0)"
+        [ -n "$DIRECTORIES_EMPTY" ] && runghc -istatic/build/ ./static/build/generateDirectory $DIRECTORIES_EMPTY
+    fi
+  fi
+
+    bold "Check & update VCS…"
+    (ping -q -c 5 google.com &> /dev/null && cd ./static/ && git status; git pull; git push --verbose &) || true
+
+    # Cleanup pre:
+    # rm --recursive --force ./static/build/*.o ./static/build/*.hi ./static/build/generateDirectory ./static/build/generateLinkBibliography ./static/build/generateBacklinks ./static/build/link-suggester || true
+
+    cd ~/wiki/ # go to site root
+    bold "Building site…"
+
+    # Make sure all videos have  3×3 filmstrip 'poster' preview images:
+    for VIDEO in $(find . -type f \( -name "*.mp4" -o -name "*.webm" -o -name "*.avi" \) | gfv "doc/www/" | sort); do
+        # We skip posters for videos in /doc/www/* archives from split archives because nothing sets a poster on them, so just a waste of space
+        POSTER="$VIDEO-poster.jpg"
+        if [ ! -f "$POSTER" ]; then
+            green "Generating filmstrip poster for $VIDEO…"
+            # Problem: embedded videos (e.g. https://gwern.net/lorem-multimedia#video ) all look like generic small black rectangles.
+            # User has no idea what it is until they click to begin download the (possibly huge) video file.
+            # This also causes layout shift as the `<video>` element expands to the proper size of the video.
+            #
+            # We would like user to see, on load, preview of video displayed as still image.
+            # Even if uninformative, this solves the layout shift problem.
+            #
+            # Solution: the `poster="foo.jpg"` attribute of the HTML <video> element.
+            # Its value is URL of image file, to be shown as preview (and used for layout sizing of video element),
+            # prior to the user clicking to download and play video.
+            #
+            # Original approach: extract a single frame (e.g. frame 5). Problem: a single frame is often uninformative—
+            # it might be black, a transition, or otherwise unrepresentative. Videos are temporally extended but
+            # a single thumbnail discards the entire temporal dimension.
+            #
+            # Improved approach: generate a 3×3 filmstrip grid sampling 9 frames evenly across the video duration.
+            # This restores temporal information to the thumbnail—user can see the video's progression at a glance.
+            # Output dimensions match the original video dimensions (each cell is 1/3 size, tiled 3×3 = original).
+            # A 2px black grid separates cells for visual clarity.
+            #
+            # For very short videos (<0.5s), we fall back to single-frame extraction since there's insufficient
+            # temporal content to sample meaningfully.
+            #
+            # Note: because posters can be large (e.g. /face loads >1MB of posters), and because `<img>` lazy-loading
+            # doesn't apply to posters (due to poorly-conceived standards <https://github.com/whatwg/html/issues/6636>
+            # which short-sightedly implemented `poster=` as a hack without thinking about how this is reinventing
+            # `<img>` badly), we don't actually use `poster=` per se. We instead use a data attribute `data-video-poster`
+            # to store it, and hand-implement lazy-loading with IntersectionObservers.
+
+            DURATION=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$VIDEO" 2>/dev/null)
+
+            if [ -n "$DURATION" ] && [ "$(echo "$DURATION > 0.5" | bc)" -eq 1 ]; then
+                SAMPLE_FPS=$(echo "scale=6; 10 / $DURATION" | bc)
+                ffmpeg -y -i "$VIDEO" \
+                    -vf "fps=$SAMPLE_FPS,scale=iw*sar:ih,setsar=1,scale=iw/3:ih/3,tile=3x3:nb_frames=9:padding=2:color=black" \
+                    -frames:v 1 "$POSTER" 2>/dev/null;
+            else
+                ffmpeg -y -i "$VIDEO" \
+                    -vf "select=eq(n\\,0),scale=iw*sar:ih,setsar=1" \
+                    -vframes 1 "$POSTER" 2>/dev/null;
+            fi
+
+            compressJPG "$POSTER";
+        fi
+    done &
+
+    # Make sure all videos have 5×5 filmstrip 'large poster' hover images, which provide more frames & detailed metadata.
+    #
+    # Problem: the 3×3 poster provides a preview and fixes layout shift, but on hover users may want
+    # more detail before committing to all the time watching & downloading a (potentially large) video file.
+    #
+    # Solution: generate a larger 5×5 filmstrip (25 frames vs 9) with video file textual metadata overlay.
+    # This "$VIDEO-poster-large.jpg" is loaded on hover via JS, giving users:
+    # - Better temporal coverage of video content (25 samples vs 9)
+    # - Larger thumbnails for detail visibility (350px cells vs original⧸3)
+    # - Metadata bar showing: filepath, duration, dimensions, file size, codec, bitrate, audio presence
+    #
+    # Unlike the regular poster, the large poster doesn't need to match original video dimensions
+    # (no layout shift concern on hover), so we use a fixed ~1750px width for comfortable viewing.
+    # High-FPS (≥48) is noted; standard frame-rates are omitted as unremarkable.
+    #
+    # For very short videos (<1s), we fall back to a single enlarged frame since there's
+    # insufficient temporal content for meaningful sampling.
+    #
+    # TODO: turn into regular annotations and use video LLMs to transcribe & summarize video content using full Gwern.net context.
+    # As a medium-term hack, the frontend JS will special-case knowledge of "$VIDEO-poster-large.jpg", but the right thing long-term
+    # would be to make videos annotated (ie. `.video-annotated` etc) and then on hover simply pops up the annotation, which happens
+    # to transclude a filmstrip, as well as everything else like ffmpeg-sourced metadata, summary, transcription of audio etc.
+    generate_large_poster() {
+        set -e
+        local VIDEO="$1"
+        local POSTER="${VIDEO}-poster-large.jpg"
+
+        [[ -f "$POSTER" ]] && return 0
+
+        # Extract all metadata in one jq call
+        local PROBE
+        PROBE=$(ffprobe -v error -show_format -show_streams -select_streams v:0 -of json "$VIDEO" 2>/dev/null)
+
+        read -r DURATION WIDTH HEIGHT CODEC BITRATE FPS < <(echo "$PROBE" | jq -r '
+            [.format.duration // "",
+             .streams[0].width // "",
+             .streams[0].height // "",
+             .streams[0].codec_name // "",
+             .format.bit_rate // "",
+             .streams[0].r_frame_rate // ""] | @tsv')
+
+        local HAS_AUDIO
+        HAS_AUDIO=$(ffprobe -v error -select_streams a -show_entries stream=codec_type -of csv=p=0 "$VIDEO" 2>/dev/null | head -1)
+
+        local FILESIZE
+        FILESIZE=$(stat --printf="%s" "$VIDEO" 2>/dev/null || stat -f%z "$VIDEO" 2>/dev/null)
+
+        # Format duration
+        local DUR_FMT="?"
+        if [[ -n "$DURATION" ]]; then
+            local SECS=${DURATION%.*}
+            (( SECS >= 60 )) && DUR_FMT="$((SECS / 60)):$(printf '%02d' $((SECS % 60)))" || DUR_FMT="${SECS}s"
+        fi
+
+        # Format file size
+        local SIZE_FMT="?"
+        if [[ -n "$FILESIZE" ]]; then
+            if (( FILESIZE >= 1073741824 )); then
+                printf -v SIZE_FMT "%.0fGB" "$(bc <<< "scale=1; $FILESIZE/1073741824")"
+            elif (( FILESIZE >= 1048576 )); then
+                printf -v SIZE_FMT "%.0fMB" "$(bc <<< "scale=1; $FILESIZE/1048576")"
+            else
+                printf -v SIZE_FMT "%.0fKB" "$(bc <<< "scale=0; $FILESIZE/1024")"
+            fi
+        fi
+
+        # Format bitrate (if available)
+        local BITRATE_FMT=""
+        if [[ -n "$BITRATE" ]]; then
+            printf -v BITRATE_FMT "%.1fMbps" "$(bc <<< "scale=1; $BITRATE/1000000")"
+        fi
+
+        # Format FPS (only if ≥48)
+        local FPS_FMT=""
+        if [[ -n "$FPS" && "$FPS" != "0/0" ]]; then
+            local FPS_NUM=$(awk -F'/' '{print ($2>0 ? int($1/$2) : $1)}' <<< "$FPS")
+            (( FPS_NUM >= 48 )) && FPS_FMT="${FPS_NUM}fps"
+        fi
+
+        # Prettify codec name
+        local CODEC_FMT="$CODEC"
+        case "$CODEC" in
+            h264|avc1) CODEC_FMT="H.264" ;;
+            hevc|h265) CODEC_FMT="H.265" ;;
+            vp[89]|av1) CODEC_FMT="${CODEC^^}" ;;
+        esac
+
+        # Build metadata string
+        local FILEPATH="/${VIDEO#./}"
+        (( ${#FILEPATH} > 80 )) && FILEPATH="...${FILEPATH: -77}"
+
+        local AUDIO_FMT
+        [[ -n "$HAS_AUDIO" ]] && AUDIO_FMT="sound" || AUDIO_FMT="no sound"
+
+        local META_LINE="${FILEPATH}  |  ${DUR_FMT}  |  ${AUDIO_FMT}  |  ${WIDTH}×${HEIGHT}  |  ${SIZE_FMT}  |  ${CODEC_FMT}"
+        [[ -n "$BITRATE_FMT" ]] && META_LINE+="  |  ${BITRATE_FMT}"
+        [[ -n "$FPS_FMT" ]] && META_LINE+="  |  ${FPS_FMT}"
+
+        # Cell dimensions (5×5 grid ≈ 1750px wide)
+        local CELL_WIDTH=350
+        local CELL_HEIGHT
+        if [[ -n "$WIDTH" && -n "$HEIGHT" && "$HEIGHT" -gt 0 ]]; then
+            CELL_HEIGHT=$(( CELL_WIDTH * HEIGHT / WIDTH ))
+        else
+            CELL_HEIGHT=197  # default 16:9
+        fi
+
+        local TMPSTRIP
+        TMPSTRIP=$(mktemp --suffix=.jpg)
+
+        if [[ -n "$DURATION" ]] && (( $(bc <<< "$DURATION > 1") )); then
+            local SAMPLE_FPS=$(bc <<< "scale=6; 26 / $DURATION")
+            ffmpeg -y -i "$VIDEO" \
+                -vf "fps=$SAMPLE_FPS,scale=iw*sar:ih,setsar=1,scale=${CELL_WIDTH}:${CELL_HEIGHT},tile=5x5:nb_frames=25:padding=3:color=black" \
+                -frames:v 1 "$TMPSTRIP" 2>/dev/null
+        else
+            ffmpeg -y -i "$VIDEO" \
+                -vf "select=eq(n\\,0),scale=iw*sar:ih,setsar=1,scale=$((CELL_WIDTH * 5)):$((CELL_HEIGHT * 5))" \
+                -vframes 1 "$TMPSTRIP" 2>/dev/null
+        fi
+
+        convert "$TMPSTRIP" \
+            -gravity North \
+            -background '#000000' \
+            -splice 0x60 \
+            -font IBM-Plex-Mono-Bold \
+            -pointsize 24 \
+            -fill white \
+            -annotate +0+13 "$META_LINE" \
+            "$POSTER"
+        compressJPG "$POSTER"
+        rm --force"$TMPSTRIP"
+    }
+    for VIDEO in $(find . -type f \( -name "*.mp4" -o -name "*.webm" -o -name "*.avi" \) | gfv "doc/www/" | sort); do
+        generate_large_poster "$VIDEO" &
+    done
+
+    # for use in popups, as an optimization, we provide 256px-width thumbnails of all Gwern.net locally-hosted essay/annotation JPGs/PNGs.
+    # (More exotic image formats like AVIF/WebP/JPEG XL/etc are banned, and we exclude mirrors like Rotten.com or the WWW local archives as they are not browsed via popups; and we do not attempt to generate thumbnails for hotlinked images, because hotlinked images are banned and supposed to be localized.)
+    # They live at /metadata/thumbnail/256px/urlencoded($IMAGE_URL):
+    # eg. '/doc/ai/nn/gan/stylegan/anime/2021-01-19-gwern-stylegan2ext-danbooru2019-3x10montage-3.png' → '/metadata/thumbnail/256px/%2Fdoc%2Fai%2Fnn%2Fgan%2Fstylegan%2Fanime%2F2021-01-19-gwern-stylegan2ext-danbooru2019-3x10montage-3.png' (and must be requested double-URL-encoded).
+    # Because we guarantee they will exist, we do not bother with inlining the thumbnail path into <img>/<figure> (whether by rewriting the href, adding a data-attribute, using a poster/responsive attribute, etc); the frontend JS can simply assume that one exists and try to fetch it when it needs a small version of an image, and fall back.
+    generate_thumbnail() {
+        local image="$1"
+        local relative_path="${image#./}"
+        local encoded_path
+        encoded_path="$(urlencode "/$relative_path")"
+        local thumbnail_path="metadata/thumbnail/256px/${encoded_path}"
+        if [ ! -f "$thumbnail_path" ]; then
+            mkdir -p "$(dirname "$thumbnail_path")"
+            convert "$image" -resize 256x "$thumbnail_path" # set width to 256px but height may vary
+            echo "Generated 256px-wide thumbnail: $thumbnail_path for: $relative_path"
+        fi
+    }
+    export -f generate_thumbnail
+    find ./doc/ ./static/ -type f \( -iname "*.jpg" -o -iname "*.png" \) | \
+        gfv -e '/doc/www/' -e '/doc/rotten.com/' | \
+        parallel --jobs "$N" generate_thumbnail &
+
+    time hakyll build +RTS -N"$N" -RTS || (red "Hakyll errored out!"; exit 5)
+
+    if [ "$SLOW" ]; then
+
+        bold "Updating annotation-of-the-day…"
+        ghci -istatic/build/ ./static/build/XOfTheDay.hs ./static/build/LinkMetadata.hs \
+             -e 'do {md <- LinkMetadata.readLinkMetadata; aotd md; }' | \
+            gfv -e ' secs,' -e 'it :: [T.Text]' -e '[]' &
+
+        bold "Updating quote-of-the-day…"
+        ghci -istatic/build/ ./static/build/XOfTheDay.hs -e 'qotd' | \
+            gfv -e ' secs,' -e 'it :: [T.Text]' -e '[]' &
+
+        bold "Updating site-of-the-day…"
+        ghci -istatic/build/ ./static/build/XOfTheDay.hs -e 'sotd' | \
+            gfv -e ' secs,' -e 'it :: [T.Text]' -e '[]' &
+    fi
+
+    bold "Results size:"
+    du -chs ./_cache/ ./_site/
+    echo "Raw file count: $(find ./_site/ -type f | wc --lines)"
+    echo "Total (including hardlinks) file count: $(find ./_site/ -type f -or -type l | wc --lines)"
+
+    # cleanup post:
+    # rm -- ./static/build/hakyll ./static/build/*.o ./static/build/*.hi ./static/build/generateDirectory ./static/build/generateLinkBibliography ./static/build/generateBacklinks ./static/build/link-extractor &>/dev/null || true
+    rm --recursive -- ./_cache/ &>/dev/null || true
+
+    ## WARNING: this is a crazy hack to insert a sun horizontal rule 'in between' the first 3 sections
+    ## on /index (Newest/Popular/Notable), then the Newest: Blog section, and then and the rest (starting with Statistics); the CSS for
+    ## making the rule a block dividing the two halves just doesn't work in any other way, but
+    ## Pandoc Markdown doesn't let you write stuff 'in between' sections, either. So… a hack.
+    sed -i -e 's/section id=\"newest-blog\"/hr class="horizontal-rule-nth-1"> <section id="newest-blog"/' ./_site/index
+    sed -i -e 's/section id=\"statistics\"/hr class="horizontal-rule-nth-1"> <section id="statistics"/' ./_site/index
+
+    bold "Building sitemap.xml…"
+    ## generate a sitemap file for search engines:
+    ## NOTE: we generate the sitemap *before* generating syntax-highlighted .html files of everything to avoid having to exclude those (which would be tricky because how do we know if any given 'foo.html' a standalone HTML file or merely a syntax-highlighted snippet?)
+    (echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">"
+     ## very static files which rarely change: PDFs, images, site infrastructure:
+     find -L _site/doc/ _site/static/ -not -name "*.md" -type f | gfv -e 'doc/www/' -e 'metadata/' -e '.git' -e '404' -e '/static/template/default.html' -e 'lorem' -e 'private/' | gev -e 'static/.*\..*\.html$' -e 'doc/.*\..*\.html$' -e '.hi$' -e '.o$' | \
+         xargs urlencode -m | sed -e 's/%20/\n/g' | \
+         sed -e 's/_site\/\(.*\)/\<url\>\<loc\>https:\/\/gwern\.net\/\1<\/loc><changefreq>never<\/changefreq><\/url>/';
+     ## Everything else changes once in a while:
+     find -L _site/ -not -name "*.md" -type f | gfv -e 'static/' -e 'doc/' -e 'fulltext' -e 'lorem' -e 'metadata/' -e '.md.html' -e 'private/' | \
+         gev -e '/.*/index' -e '.md$' | \
+         xargs urlencode -m | sed -e 's/%20/\n/g' | \
+         sed -e 's/_site\/\(.*\)/\<url\>\<loc\>https:\/\/gwern\.net\/\1<\/loc><changefreq>monthly<\/changefreq><\/url>/';
+     echo "</urlset>";) >> ./_site/sitemap.xml
+
+    bold "Generating HTML previews of document types (like MS Word)…"
+    # For some document types, Pandoc doesn't support them, or syntax-highlighting wouldn't be too useful for preview popups. So we use LibreOffice to convert them to HTML.
+    # <https://en.wikipedia.org/wiki/LibreOffice#Supported_file_formats>
+    convert_to_html() {
+        local EMBED_IMAGES="$1"
+        shift # Remove the first argument to process remaining arguments
+        if [[ -f "$1" ]]; then
+            local FILE="$1"
+            convert_file "$FILE"
+        else
+            local FILE_EXTS=("$@") # Remaining arguments are file extensions
+            find ./doc/ -type f \( $(printf -- "-name *.%s -o " "${FILE_EXTS[@]}" | sed 's/ -o $//') \) | while read -r FILE; do
+                convert_file "$FILE"
+            done
+        fi
+    }
+    convert_file() {
+    local FILE="$1"
+    if [ ! -f "_site/${FILE}.html" ]; then
+        local TARGET
+        TARGET="$FILE" # HTML versions are located at "$FILE.html"; we do not strip the extensions
+        local OUTDIR
+        OUTDIR="$(dirname "_site/${FILE}.html")"
+        local CONVERSION_OPTION="html"
+
+        # Create output directory if it doesn't exist
+        mkdir -p "$OUTDIR"
+
+        # Handle file path properly, especially with spaces
+        if [[ "$EMBED_IMAGES" == "true" ]]; then
+            CONVERSION_OPTION="html:HTML:EmbedImages"
+        fi
+
+        # Use quotes around paths and create a clean temporary user profile
+        # WARNING: Libreoffice `--convert-to` will replace the original suffix, like '$FILE.ods' → '$FILE.html'. But we need to preserve the original extension to allow other use-cases like syntax-highlighting HTML (so we can load '$FILE.html.html' to get the presentable version of '$FILE.html'). We have to work around this by restoring the original filename afterwards.
+        timeout 5m libreoffice --headless \
+            --convert-to "$CONVERSION_OPTION" \
+            -env:UserInstallation=file:///tmp/LibO_Conversion \
+            --outdir "$OUTDIR" \
+            "$FILE" >/dev/null 2>&1 || echo "$FILE failed LibreOffice conversion?"
+
+        # If file wasn't created directly in outdir, try to find it
+        if [ ! -f "$OUTDIR/$(basename "${FILE}").html" ]; then
+            # Try to find the generated HTML file in current directory
+            local GENERATED_HTML="$(find _site/ -name "$(basename "${FILE%.*}").html" -print -quit)"
+            if [ -n "$GENERATED_HTML" ]; then
+                mv "$GENERATED_HTML" "$OUTDIR/$(basename "${FILE}").html" || echo "$FILE failed to move HTML file?"
+            else
+                echo "$FILE conversion result not found?"
+            fi
+        fi
+    fi
+    }
+
+    # Convert documents with embedded images
+    # WARNING: LibreOffice seems to have race-conditions and can't convert >1 files at a time reliably, with sporadic failures or even a GUI popup error dialogue!
+    # HACK: Libreoffice for some reason fails if you specify the 'HTML:EmbedImages' on a spreadsheet file, even though that obviously can't be a problem (it works fine on other documents, and spreadsheets don't have images to embed, so why is it a fatal error‽), and also Libreoffice lies about the error, exiting with success, so you can't simply try a second time with the `EmbedImages` removed...
+    convert_to_html "true" "doc" "docx" # document
+    # Convert spreadsheets without embedded images
+    # Note: Specifying 'HTML:EmbedImages' for spreadsheets leads to failures despite being unnecessary.
+    convert_to_html "false" "csv" "ods" "xls" "xlsx" & # spreadsheet; && mv ./2010-nordhaus-nordhaus2007twocenturiesofproductivitygrowthincomputing-appendix_html*.png ./_site/doc/cs/hardware/
+    # NOTE: special-case: *very* complex multi-sheet spreadsheet with many images; HACK: LibreOffice also appears to ignore the embed option anyway, so we copy the images manually
+    # convert_to_html "false" "./doc/cs/hardware/2010-nordhaus-nordhaus2007twocenturiesofproductivitygrowthincomputing-appendix.xlsx"
+
+    wait
+    set -e
+
+    ## generate a syntax-highlighted HTML fragment (not whole standalone page) version of source code files for popup usage:
+    ### We skip full conversion of .json/.jsonl because they are too large & Pandoc will choke; and we truncate at 1000 lines because such
+    ### long source files are not readable as popups and their complexity makes browsers choke while rendering them.
+    ### (We include plain text files in this in order to get truncated versions of them.)
+    ###
+    #### NOTE: for each new extension, add a `find` name, and an entry in `content.js`/`LinkMetadata.is{Doc,Code}Viewable`
+    bold "Generating syntax-highlighted versions of source code files…"
+    syntaxHighlight () {
+        declare -A extensionToLanguage=( ["R"]="R" ["c"]="C" ["py"]="Python" ["css"]="CSS" ["hs"]="Haskell" ["js"]="Javascript" ["patch"]="Diff" ["diff"]="Diff" ["sh"]="Bash" ["bash"]="Bash" ["html"]="HTML" ["conf"]="Bash" ["php"]="PHP" ["opml"]="Xml" ["xml"]="Xml" ["md"]="Markdown"
+                                         # NOTE: we do 'text' to get a 'syntax-highlighted' version which has wrapped columns etc.
+                                         # NOTE: CSV is unsupported by Pandoc skylighting, so we convert to HTML instead
+                                         ["txt"]="default" ["jsonl"]="JSON" ["json"]="JSON" )
+        LENGTH="2000"
+        for FILE in "$@"; do
+
+            FILEORIGINAL=$(echo "$FILE" | sed -e 's/_site//')
+            FILENAME=$(basename -- "$FILE")
+            EXTENSION="${FILENAME##*.}"
+            LANGUAGE=${extensionToLanguage[$EXTENSION]}
+            FILELENGTH=$(cat "$FILE" | wc --lines)
+            (echo -e "~~~~~~~~~~~~~~~~~~~~~{.$LANGUAGE}"; # NOTE: excessively long tilde-line is necessary to override/escape any tilde-blocks inside Markdown files: <https://pandoc.org/MANUAL.html#fenced-code-blocks>
+            if [ $EXTENSION == "md" ] || [ $EXTENSION == "txt" ] ; then # the very long lines look bad in narrow popups, so we fold:
+                cat "$FILE" | fold --spaces --width=70 | sed -e 's/~~~/∼∼∼/g' | head "-$LENGTH";
+            else
+                cat "$FILE" | head "-$LENGTH";
+            fi
+             echo -e "\n~~~~~~~~~~~~~~~~~~~~~"
+             if (( $FILELENGTH >= "$LENGTH" )); then echo -e "\n\n…[File truncated due to length; see <a class=\"link-page\" href=\"$FILEORIGINAL\">original file</a>]…"; fi;
+            ) | iconv -t utf8 -c | pandoc --from=markdown+smart --write=html5 --standalone \
+                       --template=./static/template/pandoc/sourcecode.html5 \
+                       --metadata title="$(echo $FILE | sed -e 's/_site\///g')"  | \
+                ## delete annoying self-link links: Pandoc/skylighting doesn't make this configurable
+                sed -e 's/<span id="cb[0-9]\+-[0-9]\+"><a href="#cb[0-9]\+-[0-9]\+" aria-hidden="true" tabindex="-1"><\/a>/<span>/' -e 's/id="mathjax-styles" type="text\/css"/id="mathjax-styles"/' >> $FILE.html || red "Pandoc syntax-highlighting failed on: $FILE $FILEORIGINAL $FILENAME $EXTENSION $LANGUAGE $FILELENGTH"
+        done
+    }
+    export -f syntaxHighlight
+    set +e
+    find _site/static/ -type f,l -name "*.html" | parallel --jobs "$N" syntaxHighlight # NOTE: run .html first to avoid duplicate files like 'foo.js.html.html'
+    find _site/metadata/ -maxdepth 1 -type f,l -name "*.html" | gfv -e 'metadata/annotation/id/' | parallel --jobs "$N" syntaxHighlight
+    find _site/ -type f,l \
+         -name "*.R" -or -name "*.c" -or -name "*.css" -or -name "*.hs" -or -name "*.js" -or -name "*.patch" -or -name "*.diff" -or -name "*.py" -or -name "*.sh" -or -name "*.bash" -or -name "*.php" -or -name "*.conf" -or -name "*.opml" -or -name "*.md" -or -name "*.txt" -or -name "*.json" -or -name "*.jsonl" -or -name "*.gtx" -or -name "*.xml" | \
+        gfv \
+                 `# Pandoc fails on embedded Unicode/regexps in JQuery` \
+                 -e 'mountimprobable.com/assets/app.js' -e 'jquery.min.js' -e 'index.md' \
+                 -e 'metadata/backlinks.hs' -e 'metadata/embeddings.bin' -e 'metadata/archive.hs' -e 'doc/www/' -e 'sitemap.xml' | parallel --jobs "$N" syntaxHighlight
+
+    # essays only:
+    ## eg. './2012-election.md \n...\n ./doc/cs/cryptography/1955-nash.md \n...\n ./newsletter/2022/09.md \n...\n ./review/mcnamara.md \n...\n ./wikipedia-and-knol.md \n...\n ./zeo/zma.md'
+    PAGES="$(find . -type f -name "*.md" | gfv -e '_site/' -e 'index' -e '#' | sort --unique)"
+    # essays+tags+annotations+similars+backlinks:
+    # eg. "_site/2012-election _site/2014-spirulina _site/3-grenades ... _site/doc/ai/text-style-transfer/index ... _site/doc/anime/2010-sarrazin ... _site/fiction/erl-king ... _site/lorem-admonition ... _site/newsletter/2013/12 ... _site/note/attention ... _site/review/umineko ... _site/zeo/zma"
+    PAGES_ALL="$(find ./ -type f -name "*.md" | gfv -e '_site' -e '#' | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/'; find _site/metadata/annotation/ -type f -name '*.html' | gfv '/metadata/annotation/id/')"
+
+    ## Pandoc/Skylighting by default adds empty self-links to line-numbered code blocks to make them clickable (as opposed to just setting a span ID, which it also does). These links *would* be hidden except that self links get marked up with up/down arrows, so arrows decorate the code-blocks. We have no use for them and Pandoc/skylighting has no option or way to disable them, so we strip them.
+    bold "Stripping self-links from syntax-highlighted HTML…"
+    cleanCodeblockSelflinks () {
+        if [[ $(gf -e 'class="sourceCode' "$@") ]]; then
+            sed -i -e 's/<a href="\#cb[0-9]\+-[0-9]\+" aria-hidden="true" tabindex="-1"><\/a>//g' -e 's/<a href="\#cb[0-9]\+-[0-9]\+" aria-hidden="true" tabindex="-1" \/>//g' -- "$@";
+        fi
+    }
+    export -f cleanCodeblockSelflinks
+    echo "$PAGES_ALL" | parallel --max-args=500 cleanCodeblockSelflinks || true
+
+    # reformat the JSON ID database to be more readable
+    for JSON in ./metadata/annotation/id/*.json; do
+        TMP=$(mktemp /tmp/XXXXXXX.json)
+        jq . "$JSON" >> "$TMP" && mv "$TMP" "$JSON"
+    done &
+
+    ## use https://github.com/pkra/mathjax-node-page/ to statically compile the MathJax rendering of the MathML to display math instantly on page load
+    ## background: https://joashc.github.io/posts/2015-09-14-prerender-mathjax.html installation: `npm install --prefix ~/src/ mathjax-node-page`
+    bold "Compiling LaTeX JS+HTML into static CSS+HTML…"
+    staticCompileMathJax () {
+      TARGET=$(mktemp /tmp/XXXXXXX.html)
+      cat "$@" | ~/src/mathjax-node-page/bin/mjpage --output CommonHTML --fontURL '/static/font/mathjax' | \
+      ## WARNING: experimental CSS optimization: can't figure out where MathJax generates its CSS which is compiled,
+      ## but it potentially blocks rendering without a 'font-display: swap;' parameter (which is perfectly safe since the user won't see any math early on)
+          sed -e 's/^\@font-face {/\@font-face {font-display: swap; /' \
+              -e 's/<style type="text\/css">\.mjx-chtml/<style id="mathjax-styles" type="text\/css">.mjx-chtml/' >> "$TARGET";
+
+      if [[ -s "$TARGET" ]]; then
+          mv "$TARGET" "$@" && echo "$@ succeeded";
+      else red "$@ failed MathJax compilation";
+      fi
+    }
+    export -f staticCompileMathJax
+    (find ./ -path ./_site -prune -type f -o -name "*.md" | gfv -e 'doc/www/' -e '#' | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/';
+     find _site/metadata/annotation/ -name '*.html') | xargs --max-procs=0 --max-args=1000 grep --fixed-strings --files-with-matches -e '<span class="math inline"' -e '<span class="math display"' | \
+        parallel --jobs "$N" --max-args=1 staticCompileMathJax
+
+    # we mark up fractions in non-TeX using the Unicode '⁄' FRACTION SLASH, which is specified to turn arbitrary integer pairs into oblique fractions in a more generalized way than the hardwired vulgar fractions Unicode supports for a handful of pairs like '½'. (See <https://www.unicode.org/versions/Unicode6.0.0/ch06.pdf#page=15> & <http://www.unicode.org/notes/tn28/UTN28-PlainTextMath-v3.pdf#page=5>.)
+    # Unfortunately, support in applications is very patchy, and it seems to not work in most (all?) web browsers like Firefox or Chrome.
+    # So until they get native support, we will be relying on JS/CSS to restyle the fractions. To do so, we need to mark it up with a `span.fraction`.
+    # However, there are so many uses, and spans are so verbose, that it's too much of a PITA to add them all manually forever or keep the search-and-replaces in sync, and ensure no duplicates etc. But we also prefer not to overload the browser client with yet another JS rewrite pass. So we instead just rewrite the HTML after compilation to put FRACTION SLASH users inside a span.fraction.
+    bold "Adding '.fraction' span to FRACTION SLASH uses for better styling…"
+    # sed regexp details: conservatively skip lines with any .fraction already; limit it to 4-digit short integers to avoid accidental breakage; and anchor on word boundaries to avoid under-markup & splitting longer numbers.
+    fraction () { sed -i --regexp-extended '/class=["'\'']fraction["'\'']/! s/\b([0-9]{1,4})⁄([0-9]{1,4})\b/<span class=fraction>\1⁄\2<\/span>/g' -- "$@"; }
+    export -f fraction
+    echo "$PAGES_ALL" | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/' | parallel --max-args=500 fraction
+
+    # For inline lists which cannot be handled usefully by horizontal rulers nor by '.columns' lists nor collapsed away (such as bullet-pointed summaries at the beginning of paper abstracts), we use dot separators.
+    # Specifically, we use BULLET instead of MIDDLE DOT because MIDDLE DOT is overloaded by its use in dot-product multiplication, multiplied-units, proper nouns like 'WALL·E'/'DALL·E'...
+    # This is then marked up with a <span> class, similar to FRACTION SLASH, for JS/CSS styling as appropriate.
+    bold "Adding '.separator-inline' span to BULLET (•) uses for better inline-list styling…"
+    separator () { sed -i 's/ • / <span class=separator-inline>•<\/span> /g' -- "$@"; }
+    export -f separator
+    echo "$PAGES_ALL" | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/' | parallel --max-args=500 separator
+
+    bold "Cleaning up Pandoc’s self-closing-tag-isms…" # TODO: why *does* Pandoc do this even with HTML5 output if it's invalid?
+    # Pandoc AST/HTML block problems seem to lead to odd problems with duplicate rulers, so we try to fix that up as well:
+    # (They are primarily generated in the footnote section, but who knows where else? Generated tables, poem blockquotes, and horizontal rulers seem especial offenders.)
+    hr () { sed -i -e 's/<hr \/>/<hr>/g' -e 's/<hr\/>/<hr>/g' -e 's/<hr><\/hr>/<hr>/g' -e 's/><\/img>/>/g' -e 's/<br \/>/<br>/g' -e 's/<col \(style="width: [0-9]\{1,3\}%"\) \/>/<col \1>/g' -e 's/<col \(style="width: [0-9]\{1,3\}%"\)\/>/<col \1>/g' -- "$@"; }
+    export -f hr
+    echo "$PAGES_ALL" | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/' | parallel --max-args=500 hr
+    gwsed "<hr />" "<hr>" &>/dev/null &
+    gwsed "<hr><hr>" "<hr>" &>/dev/null &
+
+    # 1. turn "As per Foo et al 2020, we can see." → "<p>As per Foo et al 2020, we can see.</p>" (&nbsp;); likewise for 'Foo 2020' or 'Foo & Bar 2020'
+    # 2. add non-breaking character to punctuation after links to avoid issues with links like '[Foo](/bar);' where ';' gets broken onto the next line (this doesn't happen in regular text, but only after links, so I guess browsers have that builtin but only for regular text handling?), (U+2060 WORD JOINER (HTML &#8288; • &NoBreak; • WJ))
+    # 3. add hair space ( U+200A   HAIR SPACE (HTML &#8202; • &hairsp;)) in slash-separated links or quotes, to avoid overlap of '/' with curly-quote
+                               # -e 's/\([a-zA-Z‘’-]\)[   ]et[   ]al[   ]\([1-2][0-9][0-9a-z]\+\)/\1 <span class="etal"><span class="etalMarker">et al<\/span> <span class="etalYear">\2<\/span><\/span>/g' \
+                           # -e 's/\([A-Z][a-zA-Z]\+\)[   ]\&[   ]\([A-Z][a-zA-Z]\+\)[   ]\([1-2][0-9][0-9a-z]\+\)/\1 \& \2 <span class="etalYear">\3<\/span>/g' \
+    # bold "Adding non-breaking spaces…"
+    # nonbreakSpace () { sed -i -e 's/\([a-zA-Z]\) et al \([1-2]\)/\1 et al \2/g' \
+    #                           -e 's/\([A-Z][a-zA-Z]\+\) \([1-2]\)/\1 \2/g' \
+    #                           `# "Foo & Quux 2020" Markdown → "Foo &amp; Quux 2020" HTML` \
+    #                           -e 's/\([A-Z][a-zA-Z]\+\)[  ]\&amp\;[  ]\([A-Z][a-zA-Z]\+\)[  ]\([1-2][1-2][1-2][1-2]\)/\1 \&amp\;_\2 \3/g' \
+    #                           `# "Foo & Quux 2020" Markdown → "Foo &amp; Quux&emsp14;2020" HTML` \
+    #                           -e 's/\([A-Z][a-zA-Z]\+\) \&amp\; \([A-Z][a-zA-Z]\+\)\&emsp14\;\([1-2][1-2][1-2][1-2]\)/\1 \&amp\;_\2\&emsp14\;\3/g' \
+    #                           -e 's/<\/a>;/<\/a>\⁠;/g' -e 's/<\/a>,/<\/a>\⁠,/g' -e 's/<\/a>\./<\/a>\⁠./g' -e 's/<\/a>\//<\/a>\⁠\/ /g' \
+    #                           -e 's/\/<wbr><a /\/ <a /g' -e 's/\/<wbr>"/\/ "/g' \
+    #                           -e 's/\([a-z]\)…\([0-9]\)/\1⁠…⁠\2/g' -e 's/\([a-z]\)…<sub>\([0-9]\)/\1⁠…⁠<sub>\2/g' -e 's/\([a-z]\)<sub>…\([0-9]\)/\1⁠<sub>…⁠\2/g' -e 's/\([a-z]\)<sub>…<\/sub>\([0-9]\)/\1⁠<sub>…⁠<\/sub>\2/g' \
+    #                           -e 's/\([a-z]\)⋯\([0-9]\)/\1⁠⋯⁠\2/g' -e 's/\([a-z]\)⋯<sub>\([0-9]\)/\1⁠⋯⁠<sub>\2/g' \
+    #                           -e 's/\([a-z]\)⋱<sub>\([0-9]\)/\1⁠⋱⁠<sub>\2/g' -e 's/\([a-z]\)<sub>⋱\([0-9]\)/\1<sub>⁠⋱⁠\2/g' \
+    #                           -e 's/ \+/ /g' -e 's/​​\+/​/g' -e 's/​ ​​ ​\+/​ /g' -e 's/​ ​\+/ /g' -e 's/​ ​ ​ \+/ /g' -e 's/​ ​ ​ \+/ /g' -e 's/  / /g' -e 's/​ ​​ \+​/ /g' \
+    #                           `# add HAIR SPACE to parenthetical links to avoid biting of the open-parenthesis (eg. '( <a href="https://tvtropes.org...">TvTropes</a>)'); note that formatting can be *outside* the <a> as well as *inside*: ` \
+    #                           -e 's/ (<a / ( <a /g' -e 's/ (<strong><a / ( <strong><a /g' -e 's/ (<em><a / ( <em><a /g' -e 's/ (<span class="smallcaps"><a / ( <span class="smallcaps"><a /g' \
+    #                           `# and similarly, '[foo](http)/[bar](http)' bites the '/':` \
+    #                           -e 's/<\/a>\/<a /<\/a> \/ <a /g' \
+    #                           -e 's/““/“ “/g' -e 's/””/” ”/g' \
+    #                           `# Big O notation: '𝒪(n)' in some browsers like my Chromium will touch the O/parenthesis (particularly noticeable in /Problem-14's abstract), so add a THIN SPACE (HAIR SPACE is not enough for the highly-tilted italic):` \
+    #                           -e 's/𝒪(/𝒪 (/g' \
+    #                         "$@"; }; export -f nonbreakSpace;
+    # find ./ -path ./_site -prune -type f -o -name "*.md" | gfv -e '#' | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/' | parallel --max-args=500 nonbreakSpace || true
+    # find ./_site/metadata/annotation/ -type f -name "*.html" | parallel --max-args=500 nonbreakSpace || true
+
+    bold "Stripping compile-time-only classes unnecessary at runtime…"
+    cleanClasses () {
+        sed -i -e 's/class=\"\(.*\)archive-not \?/class="\1/g' \
+               -e 's/class=\"\(.*\)id-not \?/class="\1/g' \
+               `# TODO: revert 9f246da03503b3c20d3c38eecd235b5aa7caa0b3 and remove .backlink-not clutter once all link-ID problems are resolved` \
+               -e 's/class=\"\(.*\)link-annotated-not \?/class="\1/g' \
+               -e 's/class=\"\(.*\)link-auto \?/class="\1/g' \
+               -e 's/class=\"\(.*\)link-live-not \?/class="\1/g' \
+               -e 's/class=\"\(.*\)link-modified-recently-not \?/class="\1/g' \
+    "$@"; }; export -f cleanClasses
+    echo "$PAGES" | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/' | parallel --max-args=500 cleanClasses || true
+    # TODO: rewriting in place doesn't work because of the symbolic links. need to copy ./metadata/ instead of symlinking?
+    find ./_site/metadata/ -type f -name "*.html" | parallel --max-args=500 cleanClasses || true
+
+    # HACK: still haven't figured out how these keep getting reintroduced when the titlecase code responsible should be fixing them automatically now. So hack around by replacing them manually...
+    (s 'cite-author-Plural' 'cite-author-plural' ; s 'Date-Range' 'date-range' ; s 'Inflation-Adjusted' 'inflation-adjusted' ; s 'Logotype-Latex-A' 'logotype-latex-a' ; s 'Logotype-Latex-E' 'logotype-latex-e' ; s 'SUbsup' 'subsup'; s 'Cite-Joiner' 'cite-joiner'; s '<span class="Poem"' '<span class="poem"'; s '<div class="Poem"' '<div class="poem"'; ) &> /dev/null;
+    wait;
+
+  if [ "$SLOW" ]; then
+    # Testing compilation results:
+    set +e
+
+    λ(){
+         echo "$PAGES_ALL" | xargs grep --fixed-strings -l --color=always -e '<span class="math inline">' -e '<span class="math display">' -e '<span class="mjpage">' | \
+                                     gfv -e '/1955-nash' -e '/backstop' -e '/death-note-anonymity' -e '/difference' \
+                                                          -e '/lorem' -e '/modus' -e '/order-statistics' -e '/conscientiousness-and-online-education' \
+                                -e 'doc%2Fmath%2Fhumor%2F2001-borwein.pdf' -e 'statistical_paradises_and_paradoxes.pdf' -e '1959-shannon.pdf' \
+                                -e '/math-error' -e '/replication' \
+                                -e 'performance-pay-nobel.html' -e '/coin-flip' \
+                                -e '/nootropic/magnesium' -e '/selection' -e 'doc/statistics/bayes/1994-falk' -e '/zeo/zeo' \
+                                -e '/mail-delivery' -e '/rock-paper-scissors' \
+                                -e '/variable' -e '1400861560180858880' \
+                                -e 'w28340%2Fw28340.pdf' -e 'conference-size';
+       }
+    wrap λ "Warning: unauthorized LaTeX users somewhere"
+
+    λ(){ VISIBLE_N=$(cat ./_site/sitemap.xml | wc --lines); [ "$VISIBLE_N" -le 20000 ] && echo "$VISIBLE_N" && exit 6; }
+    wrap λ "Sanity-check number-of-public-site-files in sitemap.xml failed"
+
+    λ(){ COMPILED_N="$(find -L ./_site/ -type f | wc --lines)"
+         [ "$COMPILED_N" -le 115000 ] && echo "File count: $COMPILED_N" && exit 7;
+         COMPILED_BYTES="$(du --summarize --total --dereference --bytes ./_site/ | tail --lines=1 | cut --field=1)"
+         [ "$COMPILED_BYTES" -le 100000000000 ] && echo "Total filesize: $COMPILED_BYTES" && exit 8; }
+    wrap λ "Sanity-check: number of files & file-size too small?"
+
+    λ(){ SUGGESTIONS_N=$(cat ./metadata/linkSuggestions.el | wc --lines); [ "$SUGGESTIONS_N" -le 6000 ] && echo "$SUGGESTIONS_N"; }
+    wrap λ "Link-suggestion database broken?"
+    λ(){ BACKLINKS_N=$(cat ./metadata/backlinks.hs | wc --lines);         [ "$BACKLINKS_N"   -le 180000 ] && echo "$BACKLINKS_N"; }
+    wrap λ "Backlinks database broken?"
+
+    λ(){ ANNOTATION_FILES_N=$(find ./metadata/annotation/ -maxdepth 1 -type f | wc --lines);
+         [ "$ANNOTATION_FILES_N"   -le 19000 ] && echo "$ANNOTATION_FILES_N"; }
+    wrap λ "Annotation files are missing?"
+    λ(){ BACKLINKS_FILES_N=$(find ./metadata/annotation/backlink/ -type f | wc --lines);
+         [ "$BACKLINKS_FILES_N"    -le 28500 ] && echo "$BACKLINKS_FILES_N"; }
+    wrap λ "Backlinks files are missing?"
+    λ(){ SIMILARLINKS_FILES_N=$(find ./metadata/annotation/similar/ -type f | wc --lines);
+         [ "$SIMILARLINKS_FILES_N" -le 11000 ] && echo "$SIMILARLINKS_FILES_N"; }
+    wrap λ "Similar-links files are missing?"
+
+    ## NOTE: transclude.js supports some special 'range' syntax for transclusions, so a link like '/note/lion#history#'/'/note/lion##history'/'/note/lion##'/'/note/lion#history#foo' is in fact valid
+    λ(){ ge -e '#[[:alnum:]-]+#' -e '[[:alnum:]-]+##[[:alnum:]-]+' metadata/*.gtx metadata/*.hs | gev -e '#[[:alnum:]-]+#$' | gfv -e '/index#newest#statistics'; }
+    wrap λ "Broken double-hash anchors in links somewhere?"
+
+    λ(){ ge -- '^http.*/[[:graph:]]+[0-9]–[0-9]' ./metadata/*.gtx ./metadata/*.hs || true;
+         gf -- '–' ./metadata/*.hs || true; }
+    wrap λ "En-dashes in URLs?"
+
+    λ(){ gf -e 'http' ./metadata/*.hs ./metadata/*.gtx | gfv -e 'https://en.wikipedia.org/wiki/' -e '10/arc-1-gestation/1' -e 'the-elves-leave-middle-earth-' -e '2011/05/from-the-bookcase-no-2' -e 'd-a-rovinskiis-collection-of-russian-lubki-18th' -e 'commons.wikimedia.org/wiki/File:Flag_of_the_NSDAP_' | gf -e "%E2%80%93" -e "%E2%80%94" -e "%E2%88%92"; }
+    wrap λ "*Escaped* En/em/minus dashes in URLs?"
+
+    λ(){ gf -e '\\' ./static/css/*.css; }
+    wrap λ "Warning: stray backslashes in CSS‽ (Dangerous interaction with minification!)"
+
+    λ(){ echo "$PAGES_ALL" | find ./ -type f -name "*.md" | grep --fixed-strings -v -e '_site' -e 'Modafinil' -e 'Blackmail' | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/' | xargs grep --fixed-strings --with-filename --color=always -e '!Wikipedia' -e '!W'")" -e '!W \"' -e ']( http' -e ']( /' -e '](#fn' -e '!Margin' -e '<span></span>' -e '<span />' -e '<span/>' -e 'http://gwern.net' -e 'http://www.gwern.net' -e 'https://www.gwern.net' -e 'https//www' -e 'http//www'  -e 'hhttp://' -e 'hhttps://' -e ' _n_s' -e '/journal/vaop/ncurrent/' -e '://bit.ly/' -e 'remote/check_cookie.html' -e 'https://www.biorxiv.org/node/' -e '/article/info:doi/10.1371/' -e 'https://PaperCode.cc' -e '?mod=' -e 'www.researchgate.net' -e '.pdf&amp;rep=rep1&amp;type=pdf' -e '.pdf&rep=rep1&type=pdf' -e ".pdf#subsection" -e ".pdf#Appendix" -e 'linkinghub.elsevier.com' -e 'https://www.youtube.com/watch?t=' | \
+         ge -e 'https://web.archive.org/web/.*gwern\.net.*' -e 'Blackmail';
+       }
+    wrap λ "Stray or bad URL links in Markdown-sourced HTML."
+
+    ## Whitelist of HTML classes & data-attributes which are authorized for use. Any new classes/attributes should be added here.
+    λ(){
+        # parse all HTML files, print out classes to a unique newline-delimited list, and return classes not in the whitelist, for detailed examination as either bugs or new classes to whitelist:
+        declare -a html_classes_whitelist=(
+            "see-also-append" "archive-not" "archive-local" "author" "full-authors-list" "aux-links"
+            "backlink-not" "backlinks" "backlinks-append" "aux-links-append" "aux-links-transclude-file" "bash"
+            "Bash" "book-review-author" "book-review-date" "book-review-rating" "book-review-title" "cite-author"
+            "cite-author-plural" "cite-date" "date" "display" "email" "external-page-embed"
+            "id-not" "inflation-adjusted" "logotype-tex" "logotype-latex" "logotype-latex-a" "logotype-latex-e"
+            "link-annotated" "link-annotated-not" "link-annotated-partial" "link-live" "link-page" "link-page-not" "link-tag" "link-tags"
+            "image-annotated" "image-annotated-not" "image-annotated-partial" "image-modified-recently"
+            "cite" "cite-joiner" "collapse" "collapse-small" "columns" "directory-indexes-downwards" "directory-indexes-upwards"
+            "epigraph" "even" "figures" "float-right" "float-left" "logo" "footer-logo" "footnote-ref" "full-width"
+            "haskell" "header" "heading" "horizontal-rule-nth-1" "horizontal-rule-nth-2" "horizontal-rule-nth-3" "icon-not" "icon-special"
+            "link-modified-recently" "icon-single-white-star-on-black-circle" "icon-manicule-left" "icon-manicule-right"
+            "icon-book-open-solid" "icon-gear-solid" "icon-magnifying-glass" "icon-message-slash-solid" "icon-moon-solid" "icon-sun-solid" "icon-eye-slash-solid"
+            "inline" "invert" "invert-auto" "invert-not"
+            "javascript" "content-transform-not" "link-live-not"
+            "math" "odd" "page-thumbnail" "patreon" "pascal" "python" "reader-mode-selector-inline"
+            "smallcaps" "smallcaps-not" "sourceCode" "subsup" "table-small" "table-sort-not" "width-full"
+            "TOC" "uri" "at" "bu" "c1" "c2"
+            "c3" "c4" "c5" "c6" "c7" "c8"
+            "c9" "c10" "cf" "co" "dv" "fu"
+            "kw" "op" "s1" "st" "reader-mode" "reader-mode-style-not" "reader-mode-not" "reader-mode-disable-when-here" "reader-mode-disable-when-clicked"
+            "print-mode-not"
+            "scrape-abstract-not" "abstract" "abstract-collapse" "abstract-collapse-only" "admonition" "admonition-title"
+            "book-review-meta" "book-review-review" "tip" "xml" "yaml" "warning" "al" "an"
+            "bn" "cn" "cv" "do" "dt" "er"
+            "error" "ex" "fl" "im" "in" "ot"
+            "pp" "re" "sc" "ss" "va" "citation"
+            "directory-indexes" "directory-indexes-sideways" "display-pop-not" "footnote-back" "footnotes" "image-focus-not"
+            "include" "include-strict" "include-lazy" "include-annotation" "include-even-when-collapsed" "include-spinner-not"
+            "include-unwrap" "include-block-context" "include-omit-metadata" "include-content"
+            "include-content-no-header" "include-block-context-expanded" "include-annotation-core" "include-annotation-partial" "include-content-core" "marginnote" "markdownBody"
+            "mjpage" "mjpage__block" "mjx-base" "mjx-box" "MJXc-display" "mjx-cell"
+            "mjx-char" "mjx-charbox" "mjx-chtml" "MJXc-space1" "MJXc-space2" "MJXc-space3"
+            "MJXc-stacked" "MJXc-TeX-ams-R" "MJXc-TeX-cal-R" "MJXc-TeX-main-R" "MJXc-TeX-math-I" "MJXc-TeX-size1-R"
+            "MJXc-TeX-size2-R" "MJXc-TeX-size3-R" "MJXc-TeX-size4-R" "mjx-delim-h" "mjx-delim-v" "mjx-denominator"
+            "mjx-itable" "mjx-line" "mjx-math" "mjx-mfrac" "mjx-mi" "mjx-mn"
+            "mjx-mo" "mjx-mrow" "mjx-mspace" "mjx-msqrt" "mjx-mstyle" "mjx-msubsup"
+            "mjx-msup" "mjx-mtext" "mjx-munderover" "mjx-numerator" "mjx-op" "mjx-over"
+            "mjx-row" "mjx-stack" "mjx-sub" "mjx-sup" "mjx-surd" "mjx-texatom"
+            "mjx-TeXmathchoice" "mjx-under" "mjx-vsize" "tabular-nums" "new" "outline-not" "outline"
+            "warning" "markdown-body" "similars" "similars-append" "similar-links-search" "text-center" "text-right"
+            "abstract-tag-directory" "page-description-annotation" "link-bibliography" "link-bibliography-append" "expand-on-hover" "tag-index-link-bibliography-block"
+            "doc-index-tag-short" "decorate-not" "quote-of-the-day" "interview"
+            "dropcap-dropcat" "desktop-not" "mobile-not" "adsense" "years-since" "date-range"
+            "^page-[a-z0-9-]+" "sidebar-links"
+            "test-april-fools-2024" "test-april-fools-2025" "test-april-fools-2026" "test-christmas" "test-easter"
+            "test-halloween" "triptych" "logo-image" "dropcap-cheshire" "dropcap-de-zs" "dropcap-gene-wolfe"
+            "dropcap-goudy" "dropcap-kanzlei" "dropcap-ninit" "dropcap-not" "dropcaps-cheshire"
+            "dropcaps-de-zs" "dropcaps-dropcat" "dropcaps-gene-wolfe" "dropcaps-goudy" "dropcaps-kanzlei"
+            "dropcaps-yinit" "dropcap-yinit" "dropcaps-not"
+            "display-entry" "disable-the-not-chosen" "display-random-1" "display-random-2" "display-random-3" "display-random-4" "display-random-5" "display-random-6" "display-random-7" "display-random-8" "display-random-9" "display-random-10"
+            "level1" "level2" "level3" "level4" "level5" "level6" "level7"
+            "footnotes-end-of-document" "note" "bibtex" "Bibtex" "c" "C" "ch" "cpp" "Cpp" "cs" "CS"
+            "css" "CSS" "d" "D" "diff" "Diff" "Haskell" "html" "HTML" "JavaScript"
+            "json" "JSON" "markdown" "Markdown" "Python" "r" "R" "RNN" "scheme" "Scheme" "vs" "wa" "XML"
+            "completion-status" "collapsible" "me" "new-essays" "new-links" "site" "accesskey"
+            "dark-mode-selector-inline" "extracts-mode-selector-inline" "help-mode-selector-inline" "search-mode-selector-inline" "toolbar-mode-selector-inline"
+            "link-bibliography-context" "extract-not" "fraction" "separator-inline" "dark-mode-invert" "dark-mode-enable-when-here" "dark-mode" "light-mode-re-enable-when-here"
+            "prefetch" "prefetch-not" "filesize-not" "poem" "poem-html" "redirect-from-id" "toc-not" "index" "editorial" "wrap-not"
+        )
+        html_dataattributes_whitelist=("data-filesize-bytes" "data-link-icon" "data-amount-current" "data-amount-original" "data-aspect-ratio" "data-filesize-bytes" "data-filesize-percentage" "data-href-mobile" "data-image-height" "data-image-width" "data-include-selector-not" "data-include-template" "data-inflation" "data-link-content-type" "data-link-icon" "data-link-icon-color" "data-link-icon-type" "data-progress-percentage" "data-redirect-from-id" "data-target-id" "data-url-archive" "data-url-iframe" "data-url-original" "data-year-current" "data-year-original")
+        html_classes_regexpattern=$(IFS='|'; echo "${html_classes_whitelist[*]}" "${html_dataatributes_whitelist[*]}")
+        html_classes=$(echo "$PAGES_ALL" | xargs --max-procs=0 --max-args=500 ./static/build/htmlAttributesExtract.py | tr ' ' '\n' | sort --unique)
+
+        echo "$html_classes" | gev --line-regexp "$html_classes_regexpattern" --
+
+        # Check for whitelisted classes *not* present, suggesting a typo or stale entry in the whitelist:
+        for class in "${html_classes_whitelist[@]}"; do
+            if ! grep --extended-regexp --invert-match --line-regexp --quiet "$class" <<< "$html_classes"; then
+                echo "'""$class""' is not in HTML classes"
+            fi
+        done
+
+        # Check for collisions: detect if any class/data-attribute appears multiple times in extracted HTML
+        # eg. like '.link-live turning into 'data-link-live' (for class → data) or 'data-filesize-bytes' turning into '.data-filesize-bytes', (data → class).
+        # TODO: this is wrong and incomplete
+        # collision_check=$(echo "$PAGES_ALL" | xargs --max-procs=0 --max-args=500 ./static/build/htmlAttributesExtract.py | \
+        #                       while IFS= read -r line; do
+        #                           # Split each line into individual classes/attributes
+        #                           echo "$line" | tr ' ' '\n'
+        #                       done | sort | uniq --count | sort --reverse --numeric | awk '$1 > 1 {print $1 " occurrences: " $2}')
+
+        # if [ -n "$collision_check" ]; then
+        #     red "⚠ Potential collisions detected:"
+        #     echo "$collision_check"
+        # fi
+
+        # Check for HTML IDs that match whitelisted classes/data-attributes (likely typos where
+        # someone wrote id="foo" instead of class="foo"):
+        html_ids=$(echo "$PAGES_ALL" | gfv -e '/lorem' | xargs --max-procs=0 --max-args=500 ./static/build/htmlAttributesExtract.py | \
+                       grep '^id:' | sed 's/^id://' | sort --unique | gev -e '^link-bibliography$' -e '^similars$' -e '^TOC$' )
+
+        # Build a plain-string-only pattern (exclude regex entries like "^page-[a-z0-9-]+")
+        id_collision_whitelist=()
+        for entry in "${html_classes_whitelist[@]}" "${html_dataattributes_whitelist[@]}"; do
+            # Skip entries containing regex metacharacters
+            if [[ ! "$entry" =~ [\^\$\[\]\*\+\?] ]]; then
+                id_collision_whitelist+=("$entry")
+            fi
+        done
+
+        if [ -n "$html_ids" ]; then
+            id_collision_pattern=$(IFS='|'; echo "${id_collision_whitelist[*]}")
+            suspicious_ids=$(echo "$html_ids" | grep --extended-regexp --line-regexp "$id_collision_pattern" || true)
+            if [ -n "$suspicious_ids" ]; then
+                red "⚠ HTML IDs matching whitelisted classes/data-attributes (possible typos - should be class/data-attr instead of id?):"
+                echo "$suspicious_ids"
+            fi
+        fi
+    }
+    wrap λ "Mysterious HTML classes in compiled HTML? (Add to whitelist or fix.)"
+
+    λ(){ echo "$PAGES_ALL" | gfv 'hafu' | xargs grep --fixed-strings --with-filename --invert-match -e ' tell what Asahina-san' -e 'contributor to the Global Fund to Fight AIDS' -e 'collective name of the project' -e 'model resides in the' -e '{.cite-' -e '<span class="op">?' -e '<td class="c' -e '<td style="text-align: left;">?' -e '>?</span>' -e '<pre class="sourceCode xml">' | \
+             gfc -e ")'s " -e "}'s " -e '">?' -e '</a>s';
+       }
+    wrap λ "Punctuation like possessives should go *inside* the link (unless it is an apostrophe in which case it should go outside due to Pandoc bug #8381)."
+    ## NOTE: 8381 <https://github.com/jgm/pandoc/issues/8381> is a WONTFIX by jgm, so no solution but to manually check for it. Fortunately, it is rare.
+
+    # λ(){ echo "$PAGES_ALL" | xargs --max-args=100 elinks -dump |
+
+    # check YAML metadata properties; properties should either have 1 or none, usually.
+    # Upstream Pandoc will only warn on duplicate YAML keys (<https://github.com/jgm/pandoc/issues/10312>)
+    # but we want to check more than that.
+    count       () { ge --count $@; }
+    moreThanOne () { gev -e ':1$' -e ':0$'; }
+    λ(){ count '^title: '          $PAGES | moreThanOne
+         count '^description: '    $PAGES | moreThanOne
+         count '^author: '         $PAGES | moreThanOne
+         count '^author: '         $PAGES | moreThanOne
+         count '^created: '        $PAGES | moreThanOne
+         count '^modified: '       $PAGES | moreThanOne
+         count '^status: '         $PAGES | moreThanOne
+         count '^thumbnail: '      $PAGES | moreThanOne
+         count '^thumbnail-text: ' $PAGES | moreThanOne
+         count '^thumbnail-css: '  $PAGES | moreThanOne
+         count '^confidence: '     $PAGES | moreThanOne
+         count '^importance: '     $PAGES | moreThanOne
+         count '^css-extension: '  $PAGES | moreThanOne
+       }
+    wrap λ "Essays with redundant or duplicate metadata fields (must have no more than one of any!)"
+
+    λ(){ echo "$PAGES_ALL" | xargs grep --extended-regexp --with-filename 'thumbnail: /doc/.*/.*\.svg$'; }
+    wrap λ "SVGs don't work as page thumbnails in Twitter (and perhaps many other websites), so replace with a PNG."
+
+    λ(){ ge 'http.*http' ./metadata/archive.hs | \
+             gfv -e 'web.archive.org' -e 'https-everywhere' -e 'check_cookie.html' -e 'translate.goog' -e 'archive.md' -e 'webarchive.loc.gov' -e 'https://http.cat/' -e '//)' -e 'https://esolangs.org/wiki////' -e 'https://ansiwave.net/blog/sqlite-over-http.html' -e 'addons.mozilla.org/en-US/firefox/addon/' -e 'httparchive.org/' -e 'github.com/phiresky/' -e 'github.com/psanford/' -e 'stackoverflow.com/questions/' -e 'https://www.latent.space/p/sim-ai#%C2%A7websim-httpswebsimai';
+         ge 'https://web.archive.org/web/[0-9]+/https?://web.archive.org/http' ./metadata/archive.hs ./metadata/backlinks.hs ./metadata/sites.hs;
+         gf -e '#org=' ./metadata/archive.hs ./metadata/backlinks.hs ./metadata/sites.hs | ge -e 'page=[0-9]+'; # check for unnecessary 'org=' uses like 'https://arxiv.org/abs/2507.20534#org=moonshot', which should just be '#moonshot'
+         ge -e 'http[[:alnum:]]+\\' -- ./metadata/archive.hs ./metadata/backlinks.hs ./metadata/sites.hs; }
+    wrap λ "Bad URL links in archive database (and perhaps site-wide?)."
+
+    λ(){ echo "$PAGES_ALL" | xargs grep --fixed-strings --with-filename --color=always -e '<div>' -e '<div class="horizontal-rule-nth-1" />' -e '<div class="horizontal-rule-nth-2" />' -e '<div class="horizontal-rule-nth-3" />' -e ':::' | gfv -e 'I got around this by adding in the Hakyll template an additional'; }
+    wrap λ "Stray <div>?"
+
+    λ(){ echo "$PAGES_ALL" | xargs --max-args=500 grep --fixed-strings --with-filename --color=always -e 'invertible-not' -e 'invertible-auto' -e '.invertible' -e '.invertibleNot' -e '.invertible-Not' -e '{.Smallcaps}' -e '{.sallcaps}' -e '{.mallcaps}' -e '{.small}' -e '{.invertible-not}' -e 'no-image-focus' -e 'no-outline' -e 'idNot' -e 'backlinksNot' -e 'abstractNot' -e 'displayPopNot' -e 'small-table' -e '{.full-width' -e 'collapseSummary' -e 'collapse-summary' -e 'tex-logotype' -e ' abstract-not' -e 'localArchive' -e 'backlinks-not' -e '{.}' -e "bookReview-title" -e "bookReview-author" -e "bookReview-date" -e "bookReview-rating" -e 'class="epigraphs"' -e 'data-embedding-distance' -e 'data-embeddingdistance' -e 'data-linktags' -e 'link-auto-first' -e 'link-auto-skipped' -e 'local-archive-link' -e 'drop-caps-de-kanzlei' -e '.backlink-not)' -e 'link-annotated link-annotated-partial' -e 'link-annotated-partial link-annotated' -e '{.margin-note}' -e '{. ' -e 'interview}' -e 'cssExtension' -e 'thumbnailText' -e 'thumbnailCSS' -e '!Margin' -e '{.include-annotation' -e ' .backlink-not ' -e '<div id="abstract">' -e '<div class="display-random">' -e '<div style="text-center' -e '<div style="poem'; }
+    wrap λ "Misspelled/outdated classes in HTML."
+
+    λ(){
+        ghci -istatic/build/ static/build/LinkMetadata.hs -e 'do { md <- readLinkMetadata; putStrLn $ unlines $ map (\(f,(t,auts,_,_,_,_,_)) -> f ++ " : " ++ t ++ " : " ++ auts) $ M.toList md; }' | \
+             `## blacklist of fraudsters or bad papers:` \
+             gf \
+                  `### authors:` \
+                  -e 'Francesca Gino' -e 'Dan Ariely' -e 'Michael LaCour' -e 'David Rosenhan' -e 'Diederik Stapel' -e 'Didier Raoult' -e 'Brian Wansink' -e 'Marc Hauser' -e 'Robert Rosenthal' -e 'J. Hendrik Schön' -e 'Matthew Walker' -e 'Guéguen' -e 'Gueguen' -e 'Stephan Lewandowsky' -e 'Sander van der Linden' -e 'Bharat B. Aggarwal' -e 'Bharat Aggarwal' -e 'Changhwan Yoon' -e 'Sam Yoon' -e 'Juan Manuel Corchado' -e 'Adrien Matray' -e 'Ping Dong' -e 'Sylvain Lesné' -e 'Aidan Toner-Rodgers' \
+                  `### papers:` \
+                  -e "A Fine is a Price" -e 'Artificial Intelligence, Scientific Discovery, and Product Innovation' | \
+             ## whitelist of papers to not warn about, because not dangerous or have appropriate warnings/caveats:
+             gfv -e '/doc/economics/experience-curve/2020-kc.pdf' -e '/doc/food/2002-wansink.pdf' -e 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2244801/' -e 'https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0069258' -e '/doc/statistics/bias/2012-levelt.pdf' -e 'https://en.wikipedia.org/wiki/' -e 'https://guzey.com/books/why-we-sleep/' -e 'https://statmodeling.stat.columbia.edu/2019/11/' -e '/doc/psychiatry/schizophrenia/rosenhan/2020-01-25-andrewscull-howafraudulentexperimentsetpsychiatrybackdecades.html' -e 'https://osf.io/preprints/psyarxiv/m6s28/' -e '/doc/statistics/bias/1968-rosenthal-pygmalionintheclassroom.pdf' -e '/doc/statistics/bias/1976-rosenthal-experimenterexpectancyeffects.pdf' -e '/doc/statistics/bias/2023-amabile.pdf' -e 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7615113/' -e 'https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html' -e '/doc/psychology/novelty/2017-huang.pdf' -e '/doc/psychology/cognitive-bias/2020-ruggeri.pdf' -e 'https://www.buzzfeednews.com/article/stephaniemlee/brian-wansink-cornell-p-hacking' -e 'https://economics.mit.edu/news/assuring-accurate-research-record';
+       }
+    wrap λ "Dishonest or serial fabricators detected as authors? (If a fraudulent publication should be annotated anyway, add a warning to the annotation & whitelist it.)" &
+
+     λ(){ find ./ -type f -name "*.md" | gfv '/variable' | gfv '_site' | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/' | parallel --max-args=500 gf --with-filename --color=always -e '{#'; }
+     wrap λ "Bad link ID overrides in Markdown."
+
+    λ(){ find ./ -type f -name "*.md" | gfv '_site' | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/'  | parallel --max-args=500 ge --with-filename --color=always -e 'pdf#page[0-9]' -e 'pdf#pg[0-9]'; }
+    wrap λ "Incorrect PDF page links in Markdown."
+
+    λ(){ echo "$PAGES_ALL" | xargs grep --extended-regexp -e '\#[a-z]+\#[a-z]+' | gfv -e '/index#newest#statistics'; }
+    wrap λ "Broken HTML: double-anchor hash links? While valid HTML5, this is likely an error; if it's intentional range-transclusion, whitelist it."
+
+    λ(){ find ./ -type f -name "*.md" -type f -exec grep --extended-regexp -e 'css-extension:' {} \; | \
+       gfv -e 'css-extension: dropcaps-cheshire' -e 'css-extension: dropcaps-cheshire reader-mode' -e 'css-extension: dropcaps-de-zs' -e 'css-extension: dropcaps-goudy' -e 'css-extension: dropcaps-goudy reader-mode' -e 'css-extension: dropcaps-kanzlei' -e 'css-extension: "dropcaps-kanzlei reader-mode"' -e 'css-extension: dropcaps-yinit' -e 'css-extension: dropcaps-dropcat' -e 'css-extension: dropcaps-gene-wolfe' -e 'css-extension: dropcaps-not'; }
+    wrap λ "Incorrect dropcaps in Markdown."
+
+    λ(){ find ./ -type f -name "*.md" | gfv '_site' | gfv -e 'lorem-code.md' -e 'ab-test.md' | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/'  | parallel --max-args=500 "grep --color=always -F --with-filename -- '<span class=\"er\">'"; } # NOTE: filtered out lorem-code.md's deliberate CSS test-case use of it in the syntax-highlighting section
+    wrap λ "Broken code in Markdown."
+
+    λ(){ find ./ -type f -name "*.md" | gfv -e '/lorem-inline' -e '/subscript' | parallel --max-args=500 "gf --with-filename -e '<span class=\"supsub\">' -e 'class=\"subsup\"><sup>' --"; }
+    wrap λ "Incorrect use of 'supsub' name (should be 'subsup')."
+
+    λ(){ find ./ -type f -name "*.md" | gfv -e '/lorem-inline' -e '/subscript' | parallel --max-args=500 "gf --with-filename -e 'class=\"subsup\"><sup>'"; }
+    wrap λ "Incorrect ordering of '<sup>' (the superscript '<sup>' must come second, or else risk Pandoc misinterpreting as footnote while translating HTML↔Markdown)."
+
+    # NOTE: we avoid `gec` use to force no highlighting, because terminal escape codes trigger bracket-matching:"
+    λ(){ ge --only-matching '^\[\^.*\]: ' -- $PAGES | sort | uniq --count | sort --numeric-sort | egrep -v -e '^ + 1 ./'; }
+    wrap λ "Check for duplicate footnote IDs in Markdown."
+
+    λ(){ ge -e '<div class="admonition .*\?">[^$]' -e 'class="admonition"' -e '"admonition warn"' -e '<div class="epigrah">' -e 'class="epigraph>' -e '<span><div>' -e '<span class="admonition' -- $PAGES; }
+    wrap λ "Broken admonition paragraph or epigraph in Markdown."
+
+    λ(){  gf -i -e '<div class="admonition-warning">' -e '<div class="admonition-note">' -e '<div class="admonition-error">' -e '**Warn' -e '**Note' -e '**Error' -- $PAGES \
+              | gf -v -e 1996-animerica-conscience.md; }
+    wrap λ "Remember to use formal admonitions instead of just bolding."
+
+    λ(){ ge -e '^   - '  -e '~~~[[:alnum:]]' $PAGES; }
+    wrap λ "Markdown formatting problem: use of 3-space indented sub-list items instead of 4-space?"
+
+    λ() { ge -e '^[0-9]\. \*[^\*]' -e '^- \*[^\*][a-Z]' -e '^- \[.*\]\{\.smallcaps\}' -- $PAGES | gfv -e '/newsletter/20' -e '/lorem-inline'; }
+    wrap λ "Remember to use bold as the top level of emphasis in lists rather than italics (second-level) or smallcaps (third-level)."
+
+    λ(){ ge -e ' a [aei]' $PAGES | gfv -e 'static/build/' -e '/gpt-3' -e '/gpt-2-preference-learning' -e 'sicp/' -e 'a eulogy' -e 'a eureka moment' | gec -e ' a [aei]'; }
+    wrap λ "Grammar: 'a' → 'an'?"
+
+     λ(){ gec -e '<div class="text-center">$' -e '[A-Za-z]\.\. ' -e '^> <div class="abstract">$' -e ' is is ' \
+              -e '[12][0-9][0-9][0-9]–[01][0-9]–[0-3][0-9]' -e '[12][0-9][0-9][0-9]–[01][0-9]-[0-3][0-9]' -e '[12][0-9][0-9][0-9]-[01][0-9]–[0-3][0-9][^0-9]' \
+              -e '[12][0-9][0-9][0-9]—[01][0-9]—[0-3][0-9]' -e '[12][0-9][0-9][0-9]—[01][0-9]-[0-3][0-9]' -e '[12][0-9][0-9][0-9]-[01][0-9]—[0-3][0-9]' \
+              -e '[12][0-9][0-9][0-9]—[12][0-9][0-9][0-9]' -e '[\[( ~#"][12][0-9][0-9][0-9]-[12][0-9][0-9][0-9]' \
+              -e ' -\$[1-9][0-9]+' -e ' -\$[1-9][0-9][0-9]' -e ' -\$[1-9][0-9][0-9]+' -e ' \$[0-9][0-9][0-9][0-9]' -e ' \$[0-9][0-9][0-9][0-9][0-9]' -e ' \$[1-9][0-9][0-9][0-9]' -e '[^=]\$[1-9][0-9][0-9][0-9][^)>kmg"]' -e '\$[0-9][0-9][0-9][0-9][0-9]' -e '\[\$[12][0-9][0-9][0-9]' \
+              -e '<div class="epigraph"$' -e 'Borge[^arsu]' \
+              -- $PAGES | \
+              gfv '/utext'; }
+     wrap λ "Markdown: miscellaneous regexp errors."
+
+     λ(){ gfc -e '– ' -e  ' –' -e '</>' -e "</div></span>" -e '&gt; &gt;' -e ' > > ' -- $PAGES; }
+     wrap λ "Markdown: miscellaneous fixed-string errors."
+
+     λ(){ gec -e '[a-zA-Z]→[a-zA-Z]' -e '[a-zA-Z]←[a-zA-Z]' -e '[a-zA-Z]↔[a-zA-Z]' -- $PAGES; }
+     wrap λ "Markdown Unicode: Add spaces to arrows: more legible"
+
+     λ(){ gf -e '= ~' -- $PAGES | gfv ' mods = ~ '; }
+     wrap λ "Markdown: Unicodify: instead of writing 'x = ~y', Unicode as '≈'."
+
+      λ(){ gec -e '[[:alnum:]]≠[[:alnum:]]' -- $PAGES | gfv 'lorem-inline.md'; }
+     wrap λ "Markdown: Unicodify: != renders better with spaces around it"
+
+     λ(){ gfc -e '?!' -e '!?' -e '<->' -e '~>' -- $PAGES | gfv '/subscript.md'; }
+     wrap λ "Unicodify: misc"
+
+     # λ(){ gf -e '' -- $PAGES; }
+     # wrap λ "Markdown: miscellaneous fixed string errors."
+
+     λ(){ echo $PAGES | tr ' ' '\n' | gfv '/lorem' | xargs --max-procs=0 --max-args=20 pandoc --from=Markdown --to=plain | gf -e "redirect-from-id"; }
+     wrap λ "Plain text: miscellaneous fixed-string errors (eg. HTML/Markdown fragments leaking through)."
+
+    λ(){ find -L . -type f -size 0  -printf 'Empty file: %p %s\n' | gfv -e '.git/FETCH_HEAD' -e './.git/modules/static/logs/refs/remotes/'; }
+    wrap λ "Empty files somewhere."
+
+    λ(){ check_dirs() {
+             for dir in "$@"; do
+                 if [ -d "$dir" ]; then
+                     if find "$dir" -mindepth 1 -maxdepth 1 -type f ! -name "index.md" ! -name "abstract.md" | read; then
+                         echo "Directory $dir contains files other than 'index.md' or 'abstract.md':"
+                         find "$dir" -mindepth 1 -maxdepth 1 -type f ! -name "index.md" ! -name "abstract.md"
+                     fi
+                 else
+                     echo "$dir is not a valid directory!"
+                 fi
+             done
+         }
+         check_dirs "./doc/www/" "./doc/newest/" "./doc/newsletter/"; }
+    wrap λ "Stray files in ./doc/ subdirectories that should not contain any files besides the 'index.md' or 'abstract.md' tag-directory files."
+
+    λ(){ find ./_site/ -type f -not -name "*.*" -exec grep --quiet --binary-files=without-match . {} \; -print0 | parallel --null --max-args=500 "gf --color=always --with-filename -- '————–'"; }
+    wrap λ "Broken tables in HTML."
+
+    λ(){ find ./ -type f -name "*.md" | gfv -e '_site' -e '/index' -e '/lorem-block' | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/' | xargs --max-procs=0 --max-args=10 ./static/build/collapse-checker.py;
+         find ./metadata/annotation/ -maxdepth 1 -name "*.html"  -type f | xargs --max-procs=0 --max-args=500 ./static/build/collapse-checker.py | \
+             gfv -e '1681442477994311681' -e 'inside-the-mind-of-a-sava' -e '/non-biblical-sentences' -e '/fiction/perished-paradise-graveyard'; }
+    wrap λ "Overuse of '.collapse' class in compiled HTML?"
+
+    λ(){ find ./ -type f -name "*.md" | gfv '_site' | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/' | \
+             xargs --max-args=500 grep --fixed-strings --with-filename --color=always \
+                   -e '](/​image/​' -e '](/​images/​' -e '](/images/' -e '<p>[[' -e ' _</span><a ' -e ' _<a ' -e '{.marginnote}' -e '^[]' -e '‘’' -e '``' -e 'href="\\%' -e '**' -e '<a href="!W"' -e '’S ' -e '<span id="#' -e ' abd ' -e '<p><span class="abstract-collapse-only">' -e '{=HTML}' -e ' 1_e_' -e '>><' -e '</>' -e '](!W “' -e '```{' -e '.- ' -e '<div class="cite' -e 'id="reader-mode-disable-when-here' -e '&gt; &gt;' | \
+                   gfv -e '/design-graveyard' --; }
+    wrap λ "Miscellaneous fixed string errors in compiled HTML."
+
+    λ(){ find ./ -type f -name "*.md" | gfv '_site' | sed -e 's/\.md$//' -e 's/\.\/\(.*\)/_site\/\1/'  | parallel --max-args=500 ge --with-filename --color=always -e 'href="/[a-z0-9-]#fn[0-9]+"' -e 'href="#fn[0-9]+"' -e '"></a>' -e '</p>[^ <"]' -e '[0-9][0-9]−[0-9][0-9]' -e '[^0-9]⁄.' -e '.⁄[^0-9]' | gfv -e 'tabindex="-1"></a>'; }
+    wrap λ "Miscellaneous regexp errors in compiled HTML."
+
+    λ(){ ge -e '^"~/' -e '\$";$' -e '$" "doc' -e '\|' -e '\.\*\.\*' -e '\.\*";' -e '"";$' -e '.\*\$ doc' -e '\$" "";' -e '""' -e '^;$' ./static/nginx/redirect/*.conf | gfv -e 'default "";'; }
+    wrap λ "Warning: empty result or caret/tilde-less Nginx redirect rule (dangerous because it matches anywhere in URL)."
+
+    λ(){ ghci -istatic/build/ ./static/build/Paragraph.hs -e 'warnParagraphizeGTX "metadata/full.gtx"' | gfv -e ' secs,' -e ' bytes' -e 'it :: ()'; }
+    wrap λ "Annotations that need to be rewritten into paragraphs." &
+
+    λ(){ gwa | gf -- '[]' | gfv -e '/newsletter/' | sort; } # we exclude future newsletter issues as deliberately untagged to avoid appearing at the top of the newsletter tag # | gev --perl-regexp '\e\[36ma\e\[0m: '
+    wrap λ "Untagged annotations." &
+
+    λ(){ gwa | gev -e '</a></p> ?</li> ?<li> ?<p><a' | ge -e '<div class="aux-links-append see-also-append collapse">.*<p><strong>See Also</strong>:</p>.*<div class="columns"> ?<ul> ?<li>'; }
+    wrap λ "Annotations with single-entry See-Alsos which are collapsed, which is pointless (as it is not any more compact); remove the '.collapse' class." &
+
+    λ(){ gwa | gf -- '[("doi"'; }
+    wrap λ "Broken annotations leaking into each other in GTX?" &
+
+    λ(){ runghc -istatic/build/ ./static/build/link-prioritize.hs 20; }
+    wrap λ "Links needing annotations by priority:" &
+
+    λ(){ gec -e '[a-zA-Z]- ' -e 'PsycInfo Database Record' -e 'https://www.gwern.net' -e '/home/gwern/' -e 'https://goo.gl' -- ./metadata/*.gtx | \
+         gfv -e 'https://web.archive.org/web/'; }
+    wrap λ "Check possible typo in GTX metadata database." &
+
+    λ(){ ge '  - .*[a-z]–[a-Z]' -- ./metadata/me.gtx ./metadata/full.gtx ./metadata/half.gtx; }
+    wrap λ "Look for en-dash abuse." &
+
+    λ(){ gf -e ' ?' ./metadata/full.gtx; }
+    wrap λ "Problem with question-marks (perhaps the crossref/Emacs copy-paste problem?)." &
+
+    λ(){ gfv -e 'N,N-DMT' -e 'E,Z-nepetalactone' -e 'Z,E-nepetalactone' -e 'N,N-Dimethyltryptamine' -e 'N,N-dimethyltryptamine' -e 'h,s,v' -e ',VGG<sub>' -e 'data-link-icon-type="text,' -e 'data-link-icon-type=\"text,' -e '(R,S)' -e 'R,R-formoterol' -e '(18)F-FDG' -e '<em>N,N</em>' -e '3,n-butylphthalide' -e '3,n-butylhexahydrophthalide' -e 'AUC0-5h,para' -e '0-1h,para' -e '"text,tri' -e '"text,quad' -e '"text,sans"' -e '<sub>T,c</sub>' -e '<sub>T,t</sub>' -e '<sub>C,t</sub>' -e '<em>L<sub>ρ,n</sub></em>' -- ./metadata/me.gtx ./metadata/full.gtx ./metadata/half.gtx | \
+             gec -e ',[A-Za-z]'; }
+    wrap λ "Look for run-together commas (but exclude chemical names where that's correct)." &
+
+    λ(){ gev '^- - http' ./metadata/*.gtx | ge '[a-zA-Z0-9>]-$'; }
+    wrap λ "Look for GTX line breaking at a hyphen." &
+
+    λ(){ ge -e '[.,:;-<]</a>' -e '\]</a>' -- ./metadata/*.gtx | gfv -e 'i.i.d.' -e 'sativum</em> L.</a>' -e 'this cloning process.</a>' -e '#' -e '[review]</a>' | gec -e '[.,:;-<]</a>'; }
+    wrap λ "Look for punctuation inside links; unless it's a full sentence or a quote or a section link, generally prefer to put punctuation outside." &
+
+    λ(){ gfc -e '**' -e ' _' -e '_ ' -e '!!' -e '*' -- ./metadata/me.gtx ./metadata/full.gtx ./metadata/half.gtx | gfv -e '_search_algorithm' -e 'Bad_Apple' -e 'Bad Apple' -e 'Sagittarius_A'; } # need to exclude 'A* search'
+    wrap λ "Look for italics errors." &
+
+    λ(){ gf -e 'amp#' -- ./metadata/*.gtx; }
+    wrap λ "Unicode/HTML entity encoding error?" &
+
+    λ(){ gfc -e 'en.m.wikipedia.org' -- ./metadata/me.gtx ./metadata/full.gtx; }
+    wrap λ "Check possible syntax errors in full.gtx GTX metadata database (fixed string-matches)." &
+
+    λ(){ gec -e '^- - /docs/.*' -e '^  -  ' -e "\. '$" -e '[a-zA-Z]\.[0-9]+ [A-Z]' \
+            -e 'href="[a-ce-gi-ln-zA-Z]' -e '>\.\.[a-zA-Z]' -e '\]\([0-9]' \
+            -e '[⁰ⁱ⁴⁵⁶⁷⁸⁹⁻⁼⁽⁾ⁿ₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎ₐₑₒₓₔₕₖₗₘₙₚₛₜ]' -e '<p>Table [0-9]' -e '<p>Figure [0-9]' \
+            -e '</[a-z][a-z]+\?' -e 'via.*ihub' -e " '$" -e "’’" -e '</[0-9]+' \
+            -e ' - 20[0-9][0-9]:[0-9][0-9]:[0-9][0-9]' -e '#googl$' -e "#googl$'" -e 'gwtag' -e ' <p><strong>[A-Z][A-Z][A-Z]+</strong>' \
+            -e '&org=.*&org=' -e '[0-9]⁄[0-9]\.[0-9]' -e '[0-9]\.[0-9]⁄[0-9]' -e '\[[Kk]eywords\?: ' \
+            -e ' 19[0-9][0-9]–[1-9][0-9]–[0-9][0-9]' -e ' 20[0-9][0-9]–[1-9][0-9]–[0-9][0-9]' -e "''.*''" \
+            `# match both single & double-quotation versions of erroneous inflation-adjusters like "<a href='$2022'>148,749</a>":` \
+            -e '<a href=.\$[12][0-9][0-9][0-9].>[0-9a-zA-Z,.-]' -e '<ul>[ a-zA-Z][ a-zA-Z]' \
+            -e '<a href="\$[12][0-9][0-9][0-9]">\$<su[bp]>.*</a>' \
+            -e '[12][0-9][0-9][0-9]–[01][0-9]–[0-3][0-9]' -e '[12][0-9][0-9][0-9]–[01][0-9]-[0-3][0-9]' -e '[12][0-9][0-9][0-9]-[01][0-9]–[0-3][0-9]' \
+            -e '[12][0-9][0-9][0-9]—[01][0-9]—[0-3][0-9]' -e '[12][0-9][0-9][0-9]—[01][0-9]-[0-3][0-9]' -e '[12][0-9][0-9][0-9]-[01][0-9]—[0-3][0-9]' \
+            -e '[12][0-9][0-9][0-9]—[12][0-9][0-9][0-9]' -e '[\[( ~#"][12][0-9][0-9][0-9]-[12][0-9][0-9][0-9]' \
+            -e ' -\$[1-9][0-9]+' -e ' -\$[1-9][0-9][0-9]' -e ' -\$[1-9][0-9][0-9]+' -e ' \$[0-9][0-9][0-9][0-9]' -e ' \$[0-9][0-9][0-9][0-9][0-9]' -e ' \$[1-9][0-9][0-9][0-9]' -e '[^=]\$[1-9][0-9][0-9][0-9][^)>kmg"]' -e '\$[0-9][0-9][0-9][0-9][0-9]' -e '\[\$[12][0-9][0-9][0-9]' \
+            -e '[12][0-9][0-9][0-9]-[012][0-9]-[12][0-9][0-9][0-9]-[012][0-9]' -e '[0-9][0-9]−[0-9][0-9]' \
+            -e '<p>\.\.[A-Z]' -e '^p>' -e '^hr>' -e '^ol>' -e '^ul>' -e '^li>' -e '^figure>' -e '^code>' -e '^blockquote>' -e '^div>' \
+            -e '^div class=.*>' -e '\. [A-Z]</p>' -e '[a-z]+\?s ' -- ./metadata/*.gtx;
+         ge -e ' I[0-9][0-9][0-9]' -e '</span> <[A-Z]' -- ./metadata/*.gtx | gfv ' I432'; }
+    wrap λ "Check possible syntax errors in GTX metadata database (regexp matches)." &
+
+    λ(){ gfc -e ']{' -e 'id="cb1"' -e '<dd>' -e '<dl>' \
+            -e '&lgt;/a>' -e '</a&gt;' -e '&lgt;/p>' -e '/p&gt;' -e '<i><i' -e '</e>' -e '>>' \
+            -e '<abstract' -e '<em<' -e '< em>' -e '<em.' -e '<center' -e '<p/>' -e '</o>' -e '< sub>' -e '< /i>' \
+            -e '</i></i>' -e '<i><i>' -e 'font-style:italic' -e '<p><p>' -e '</p></p>' -e 'fnref' \
+            -e '<figure class="invertible">' -e '</a<' -e 'href="%5Bhttps' -e '<jats:inline-graphic' \
+            -e '<figure-inline' -e '<small></small>' -e '<inline-formula' -e '<inline-graphic' -e '<ahref=' \
+            -e '](/' -e '-, ' -e '<abstract abstract-type="' -e '- pdftk' -e 'thumb|' -e ' <span>' -e "''''" -e '<em>𝒪' -- ./metadata/*.gtx | gfv -e 'righto.com/2025/01/'; }
+    wrap λ "#1: Check possible syntax errors in GTX metadata database (fixed string matches)."
+    λ(){ gfc -e '<sec ' -e '<list' -e '</list>' -e '<wb<em>r</em>' -e '<abb<em>' -e '<ext-link' -e '<title>' -e '</title>' \
+            -e ' {{' -e '<<' -e '[Formula: see text]' -e '<p><img' -e '<p> <img' -e '- - /./' -e '[Keyword' -e '[KEYWORD' \
+            -e '[Key word' -e '<strong>[Keywords:' -e 'href="$"' -e '<em>Figure' \
+            -e '<strongfigure' -e ' ,' -e ' ,' -e 'href="Wikipedia"' -e 'href="W"' -e 'href="(' -e '>/em>' -e '<figure>[' \
+            -e '<figcaption></figcaption>' -e '&Ouml;' -e '&uuml;' -e '&amp;gt;' -e '&amp;lt;' -e '&amp;ge;' -e '&amp;le;' \
+            -e '<ul class="columns"' -e '<ol class="columns"' -e ',/div>' -e '](https://' -e ' the the ' \
+            -e 'Ꜳ' -e 'ꜳ'  -e 'ꬱ' -e 'Ꜵ' -e 'ꜵ' -e 'Ꜷ' -e 'ꜷ' -e 'Ꜹ' -e 'ꜹ' -e 'Ꜻ' -e 'ꜻ' -e 'Ꜽ' -e 'ꜽ' -- ./metadata/*.gtx | gfv 'Jamais Vu'; }
+    wrap λ "#2: Check possible syntax errors in GTX metadata database (fixed string matches)." &
+    λ(){ gfc -e '🙰' -e 'ꭁ' -e 'ﬀ' -e 'ﬃ' -e 'ﬄ' -e 'ﬁ' -e 'ﬂ' -e 'ﬅ' -e 'ﬆ ' -e 'ᵫ' -e 'ꭣ' -e ']9h' -e ']9/' \
+            -e ']https' -e 'STRONG>' -e '\1' -e '\2' -e '\3' -e ']($' -e '](₿' -e 'M age ' -e '….' -e '((' -e ' %' \
+            -e '<h1' -e '</h1>' -e '<h2' -e '</h2>' -e '<h3' -e '</h3>' -e '<h4' -e '</h4>' -e '<h5' -e '</h5>' \
+            -e '</strong>::' -e ' bya ' -e '?gi=' -e ' ]' -e 'gwsed' -e 'full.full' -e ',,' \
+            -e '"!"' -e '</sub<' -e 'xref>' -e '<xref' -e '<e>' -e '\\$' -e 'title="http' -e '%3Csup%3E' -e 'sup%3E' -e ' et la ' \
+            -e '<strong>Abstract' -e ' ]' -e "</a>’s" -e 'title="&#39; ' -e 'collapseAbstract' -e 'utm_' \
+            -e ' JEL' -e '(JEL' -e 'top-k' -e '</p> </p>' -e '</sip>' -e '<sip>' -e ' : ' -e " ' " -e '>/>a' -e '</a></a>' -e '(, ' \
+            -e '&lt;figcaption' -e '{.' -e ' ?' -e " ’’" -e 'lt;/td&gt;' -e "‘’" -e "’‘" -e "’’" -e '<li></li>' -e '</em<em>' -e '𝑂' \
+            -e '</a.>' -e ' . ' -e ' , ' -e ' ; ' -e 'class=”collapse”' -e "‘’" -e " ’" -e '<bold>' -e '</bold>' -e '<jats:bold>' \
+            -e  '</jats:bold>' -e 'Ã©' -e '</a>s' -e '/&gt;'  -e '&lt;figcaption'  -e 'aria-hidden=">' -e '&gt;</a>' -e '<A Href' \
+            -e '</strong>:,' -e ' et al.' -e '<em>et al</em>' -e '<span class="latex">LaTeX</span>' -e '<div>' -e '>LaTeX</a>' -e '>TeX</a>' -e '<em><em>' \
+            -e '</em></em>' -e '<strong><strong>' -e '</strong></strong>' -e 'doi:' -e '\\\' -e 'href"http' \
+            -e '… .' -e '... .'  -e '– ' -e  ' –' -e '### Competing' -e '<strong></strong>' -e '<span style="font-weight: 400;">' \
+            -e '</p> </figcaption>' -e '</p></figcaption>' -e '<figcaption aria-hidden="true"><p>' -e '<figcaption aria-hidden="true"> <p>' \
+            -e '<figcaption><p>' -e '<figcaption> <p>' -e 'Your input seems to be incomplete.' -e 'tercile' -e 'tertile' -e '\\x01' \
+            -e '</strong>:. ' -e 'http://https://' -e '#"' -e "#'" -e '<strong>Highlights</strong>: ' -e 'jats:styled-content' \
+            -e 'inline-formula' -e 'inline-graphic' -e '<sec' -e '”(' -e '’(' -e '#.' -e 'href="#page=' \
+            -e '%7E' -e '<p>. ' -e '<p>, ' -e '<p>; ' -e '= ~' -e 'data-cites="' \
+            -e '=“”' -e '““{' -e '““}' -e '““[' -e '““]' -e 'Ã' -e '’S ' -e '<span id="#' -e 'href=/' -e 'href=http' \
+            -e '<n/em>' -e '!=' -e '%3Cem%3E' -e '%3C/em%3E' -e '%3Cstrong%3E' -e '%3C/strong%3E' \
+            -e ' r-squared' -e ' R-squared' -e '&gt ' -e '&lt ' -e '&lte ' -e '&gte ' -e 'Error occurred. Exception: ' \
+            -e '"editorial"[' -e ' data-;' -e ' data-$' -e ' data-1' -e ' data-2' -e 'ttle="' -- ./metadata/*.gtx | \
+             gfv -e 'popular_shelves' -e 'Le corps dans les étoiles: l’homme zodiacal';
+         gf -e ' TeX' -e ' LaTeX' -e '>><' -e '</>' -- ./metadata/*.gtx | gfv -e 'logotype-';
+       }
+    wrap λ "#3: Check possible syntax errors in GTX metadata database (fixed string matches)." &
+
+    λ(){ ge -e ' [0-9]/[0-9]+ ' -- ./metadata/*.gtx | gfv -e 'Toll-like' -e 'Adam' -e '0/1' -e 'My Little Pony Seasons' -e '9/11' -e 'TRFK 31/8' -e 'TRFK 303/577' -e 'TRFK 6/8'; }
+    wrap λ "Possible uses of FRACTION SLASH ⁄ or EN DASH –?" &
+
+    λ(){ gf -e 'http://dl.dropbox' -e '.wiley.com/doi/abs/'  \
+                 -e 'www.tandfonline.com/doi/abs/' -e 'jstor.org' -e 'springer.com' -e 'springerlink.com' \
+                 -e 'www.mendeley.com' -e 'academia.edu' -e 'researchgate.net' -e 'pdf.yt' \
+                 -e 'photobucket' -e 'imgur.com' -e 'hathitrust.org' -e 'emilkirkegaard.dk' -e 'arthurjensen.net' \
+                 -e 'humanvarieties.org' -e 'libgen.io/' -e 'gen.lib.rus.ec/' -e 'sci-hub.bz/' -e '](http://www.scilogs.com/' \
+                 -e 'sci-hub.cc/' -e "papers.nber.org/" -e '](!wikipedia' -e '](!wikipedia)'"'s" -e 'https://wwww.' -e 'http://wwww.' \
+                 -e 'http://33bits.org' -e 'https://gwern.net' -e 'https://gwern.net' -e 'web.archive.org/web/2' \
+                 -e 'webarchive.org.uk/wayback/' -e 'webcitation.org' -e 'plus.google.com' -e 'www.deepdotweb.com' -e 'raikoth.net' \
+                 -e 'drive.google.com/' -e 'ssrn.com' -e 'ardenm.us' -e 'gnxp.nofe.me' -e 'psycnet.apa.org' \
+                 -e 'wellcomelibrary.org/item/' -e 'dlcs.io/pdf/' -e 'secure.wikimedia.org' \
+                 -e 'https://biorxiv.org' \
+                 -e 'fbclid=' -e '?gid=' -e 'x.com/#!' -e 'pay.reddit.com' -e 'europepmc.org' -e 'drugcite.com' \
+                 -e 'guardian.co.uk' -e 'mlp.wikia.com' -e '฿' -e '!Wikipedia ""' -e 'temcauley.staff.shef.ac.uk' \
+                 -e 'yahoo.com' -e 'bloomberg.com' -e '.wsj.com' -e 'extremelongevity.net' -e 'blog.openai.com' \
+                 -e 'https://ww.gwern.net' -e 'https://w.gwern.net' -e 'www.heretical.com' -e 'books.google.ca' \
+                 -e 'lesserwrong.com' -e 'au.news.yahoo.com' -e 'northjersey.com' -e 'tribune.com.pk' -e 'idsnews.com' \
+                 -e 'catsensebook.com' -e 'whec.com' -e 'www.mercurynews.com' -e 'meetup.com' \
+                 -e 'dlcs.io/' -e 'centerforcollegeaffordability.org' -e 'quora.com' -e 'times-news.com' -e 'www.cebp.nl' \
+                 -e '#filmtv' -e 'nybooks.com' -e '<div id="columns">' -e 'annualreviews.org' \
+                 -e 'dspace.mit.edu' -e 'shirky.com' -e '](http://www.nzherald.co.nz)' -e 'https://www.arxiv.org' \
+                  -e 'goodreads.com/review/show' -e 'myanimelist.net/reviews.php?id='  \
+                 -e 'cloudfront.net' -e 'https://www.amazon.com/s?ie=UTF8&field-isbn=&page=1&rh=i:stripbooks' -e 'http://ltimmelduchamp.com' \
+                 -e 'thiswaifudoesnotexist.net)' -e 'thiswaifudoesnotexist.net"' -e 'www.wikilivres.ca' -e 'worldtracker.org' \
+                 -e 'meaningness.wordpress.com' -e 'ibooksonline.com' -e 'tinypic.com' -e 'isteve.com' -e 'j-bradford-delong.net'\
+                 -e 'cdn.discordapp.com' -e 'http://https://' -e '#"' -e "#'" -e '.comwww.' -e 'httpss://' -- ./metadata/backlinks.hs;
+         # NOTE: we do not need to ban bad domains which are handled by link rewrites like www.reddit.com or medium.com.
+       ge 'https://arxiv.org/abs/[0-9]\{4\}\.[0-9]+v[0-9]' -- ./metadata/backlinks.hs | sort --unique; }
+    wrap λ "Bad or banned blacklisted domains found? They should be removed or rehosted." &
+
+    λ(){ gf -e '""' -- ./metadata/*.gtx | gfv -e ' alt=""' -e 'controls=""' -e 'loop=""' -e '[("doi","")]'; }
+    wrap λ "Doubled double-quotes in GTX, usually an error." &
+
+    λ(){ gf -e "'''" -- ./metadata/me.gtx ./metadata/full.gtx ./metadata/half.gtx; }
+    wrap λ "Triple quotes in GTX, should be curly quotes for readability/safety." &
+
+    λ(){ gev '^- - ' -- ./metadata/*.gtx | gf -e ' -- '; }
+    wrap λ "Markdown hyphen problems in GTX metadata database" &
+
+    λ(){ ge -e '^    - _' $PAGES | gfv -e '_Additional Poems_' -e '_Aim for the Top!_' -e '_[Cognitive Surplus](!W)_' \
+                                              -e '_Fontemon_' -e '_Forbes_' -e '_[Four Major Plays of Chikamatsu](!W)_' \
+                                              -e '_[Neon Genesis Evangelion: Angelic Days](!W)_' -e '_Rebuild_' -e '_[Star Maker](!W)_' \
+                                              -e '_[The Battles of Coxinga](!W)_' -e '_[The End of Evangelion](!W)_' -e '_The Fountain_' \
+                                              -e '_[The Love Suicides at Sonezaki](!W)_' -e '_[The Pleasures of Japanese Literature](!W)_' \
+                                              -e '_The Simple Men_'  -e '_Renaming of the Birds_' -e '_[The Love Suicides at Amijima](!W)_' \
+                                              -e '_[The Uprooted Pine](!W)_' -e '_[Travelers of a Hundred Ages](!W)_' \
+                                              -e '_[Seeds in the Heart: Japanese Literature from Earliest Times to the Late Sixteenth Century](!W)_' \
+                                              -e '_[Neon Genesis Evangelion (manga)](!W)_' -e '_[Dendrocnide moroides](!W)_';
+          }
+    wrap λ "Markdown files: incorrect list nesting using italics for second-level list instead of smallcaps?" &
+
+    λ(){ grep --color --with-filename --perl-regexp -e "[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]" $PAGES;
+         # Check that bidirectional scripts (Hebrew, Arabic) are not displayed; can cause Firefox Mac rendering bugs page-wide
+         grep --color -P -e '[\x{0590}-\x{05FF}]|[\x{0600}-\x{06FF}]' $PAGES | gfv -e 'dnm-arrest.md' -e 'unsongbook.com' -e 'א, ג, ה, ז, ט'; }
+    wrap λ "Markdown files: garbage or control characters detected?" &
+
+    λ(){  find metadata/ -type f -name "*.html" -exec grep --with-filename --perl-regexp "[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]" {} \;; }
+    wrap λ "Metadata HTML files: garbage or control characters detected?" &
+
+    λ(){ gec -e '^- - https://en\.wikipedia\.org/wiki/' -- ./metadata/me.gtx ./metadata/full.gtx; }
+    wrap λ "Wikipedia annotations in GTX metadata database, but will be ignored by popups! Override with non-WP URL?" &
+
+    λ(){ gec -e '^- - /[12][0-9][0-9]-[a-z]\.pdf$' -- ./metadata/*.gtx; }
+    wrap λ "Wrong filepaths in GTX metadata database—missing prefix?" &
+
+    λ(){ gec -e ' [0-9]*[02456789]th' -e ' [0-9]*[3]rd' -e ' [0-9]*[2]nd' -e ' [0-9]*[1]st' -- ./metadata/*.gtx | \
+             gfv -e '%' -e '<figure>' -e 'alt="Figure ' -e http -e '- - /' -e "- - ! '" -e 'src=' -e "- - '#"; }
+    wrap λ "Missing superscript abbreviations in GTX metadata database" &
+
+    λ(){ gec -e 'up>T[Hh]<' -e 'up>R[Dd]<' -e 'up>N[Dd]<' -e 'up>S[Tt]<' -- ./metadata/*.gtx; }
+    wrap λ "Superscript abbreviations are weirdly capitalized?" &
+
+    λ(){ gf -e ' <sup>' -e ' <sub>' -e ' </sup>' -e ' </sub>' -- ./metadata/*.gtx | gfv -e ' <sup>242m</sup>Am' -e ' <sup>60</sup>Co' -e ' <sup>2</sup> This is because of the principle' -e ' <sup>3</sup> There are some who' -e ' <sup>4</sup> Such as setting' -e ' <sup>5</sup> Such as buying gifts' -e '  <sup>31</sup>P-Magnetic' -e ' <sup>242m</sup>Am' -e ' <sup>31</sup>P' -e ' <sup>60</sup>Co' -e ' <sup>31</sup>P-MRS' -e ' <sup>4</sup>He' -e '<sup>7</sup>Be' -e '<sup>3</sup>H' -e '<sup>10</sup>C<sup>✱</sup>' -e '<sup>9</sup>B' -e '<sup>4</sup><a href="!W" title="Helium">He</a>' -e '<sup>7</sup><a href="!W" title="Lithium">Li</a>' ; }
+    wrap λ "Superscripts/subscripts have spaces in front?" &
+
+    λ(){ gec -e '<p><img ' -e '<img src="http' -e '<img src="[^h/].*"' ./metadata/*.gtx; }
+    wrap λ "Check <figure> vs <img> usage, image hotlinking, non-absolute relative image paths in GTX metadata database" &
+
+    λ(){ grep --perl-regexp --null-data --only-matching --color=always '</[a-z]+>\n\n<[a-z]+>' ./metadata/*.gtx; }
+    wrap λ "Spurious blank lines in GTX?"
+
+    λ(){ grep --perl-regexp --null --color --only-matching -e '\!\[.*\]\(.*\)\n\!\[.*\]\(.*\)' -- $PAGES; }
+    wrap λ "look for images used without newline in between them; in some situations, this leads to odd distortions of aspect ratio/zooming or something (first discovered in /correlation in blockquotes)" &
+
+    λ(){ gfc -e ' significant' -- ./metadata/me.gtx ./metadata/full.gtx; }
+    wrap λ "Misleading language in full.gtx" &
+
+    λ(){ gfc -e '/doc/www/' -- ./metadata/me.gtx ./metadata/full.gtx; }
+    wrap λ "Generated local archive links showing up in manual annotations." &
+
+    λ(){ gfc -e 'backlink/' -e 'metadata/annotation/' -e '?gi=' -- ./metadata/backlinks.hs; }
+    wrap λ "Bad paths in backlinks databases: metadata paths are being annotated when they should not be!" &
+
+    λ(){ find _site/ -type f -name "index" | gf -e '{#'; }
+    wrap λ "Broken anchors in directory indexes." &
+
+    λ(){ ls | gf -e '.pdf' -e '.jpg' -e '.png' 2> /dev/null; ls | ge -ec '^[014-9]' 2> /dev/null; }
+    wrap λ "Files in root wiki directory which should be in docs/ (perhaps a move gone awry)?" &
+
+    λ(){ find ./ -type f -name '*gwner*' -or -name '*\.htm'; }
+    wrap λ "Malformed filenames: dangerous strings in them?" &
+
+    λ(){ find ./ -type f -wholename '*[^-a-zA-Z0-9_./~%#]*' | gfv -e 'cattleya幻想写景' -e '緑華野菜子' -e '.par2'; }
+    wrap λ "Malformed filenames: dangerous characters in them?" &
+
+    λ(){ find . -type f | grep --perl-regexp -e "[^\x21-\x7E]" | gfv -e 'cattleya幻想写景' -e '緑華野菜子'; }
+    wrap λ "Malformed filenames: dangerous non-ASCII/Unicode characters in them?" &
+
+    λ(){ find ./ -type f -name "[12][0-9][0-9]-*" -or -name "[12][0-9][0-9][0-9][0-9]-*"; }
+    wrap λ "Malformed filenames: year prefixes which have one too many or few digits?" &
+
+    λ(){
+        # Function to find file sequences like 'prefix-9.ext', 'prefix-10.ext'
+        # suggesting they might need zero-padding (e.g., to prefix-09.ext).
+        # It specifically checks for the existence of the *unpadded* single-digit file.
+        check_unpadded_files() {
+            # 1. Find all files matching the pattern '*-10.*'
+            # 2. Filter out specific directory patterns using grep -v
+            # 3. Process each remaining candidate file line by line
+            find . -type f -name '*-10.*' | \
+                gfv -e './doc/www/' -e './metadata/' -e './static/' -e './_site/' -e './_cache/' | \
+                while IFS= read -r file_minus_10; do
+                    # 4. Construct the potential corresponding unpadded filename ('*-9.*')
+                    #    - Get the part before '-10.' -> base (e.g., ./path/to/foo)
+                    #    - Get the extension after the last '.' -> ext (e.g., jpg)
+                    #    - Combine them as 'base-9.ext'
+                    local ext="${file_minus_10##*.}"
+                    local base="${file_minus_10%-10.*}"
+                    local file_minus_9="${base}-9.${ext}"
+
+                    # 5. Check if the corresponding unpadded file ('*-9.*') exists
+                    if [ -e "$file_minus_9" ]; then
+                        # 6. If it exists, print a message and list all files matching the base pattern '*'
+                        red "→ Potential padding needed for files matching: ${base}-*"
+                        # Use ls -d to prevent listing directory contents if a directory matches
+                        ls -d "${base}-"*
+                    fi
+                done
+        }
+        check_unpadded_files;
+    }
+    wrap λ "Malformed filenames: there are ≥10 files with the same prefix, but the first 9 may not be appropriately zero-padded to 'PREFIX-0n.EXT'."
+
+    λ(){
+        set +e;
+        IFS=$(echo -en "\n\b");
+        OTHERS="$(find metadata/annotation/ -name "*.html"; echo index)"
+        for PAGE in $PAGES $OTHERS ./404; do
+            HTML="./_site/${PAGE%.md}"
+            if [ ! -f "$HTML" ]; then red "Tidy validation pass: file ($PAGE → $HTML) not readable?"; fi
+            # we do not reformat HTML files with Tidy, because it has caused too many subtle bugs in the long run.
+            # however, we still want to use Tidy to lint and look for HTML validation problems.
+            # But if we do that on the original unmodified HTML, we get a ton of apparently spurious warnings we don't care about and which are Tidy-isms, especially with closing tags.
+            # So we compromise by running Tidy first, which defaults to printing to stdout, and then linting that:
+            TIDY=$(tidy -quiet --fix-style-tags no --doctype html5 "$HTML" 2>/dev/null | \
+                       tidy -quiet -errors --fix-style-tags no --doctype html5 - 2>&1 | \
+                       gfv \
+                                  -e '<link> proprietary attribute ' \
+                                  `# -e 'Warning: trimming empty <span>'` \
+                                  -e "Error: missing quote mark for attribute value" \
+                                  -e 'Warning: <img> proprietary attribute "loading"' \
+                                  -e 'Warning: <svg> proprietary attribute "alt"' \
+                                  -e 'Warning: <source> proprietary attribute "alt"' \
+                                  -e 'Warning: missing <!DOCTYPE> declaration' \
+                                  -e 'Warning: inserting implicit <body>' \
+                                  -e "Warning: inserting missing 'title' element" \
+                                  -e 'Warning: <img> proprietary attribute "decoding"' \
+                                  `# -e 'Warning: <a> escaping malformed URI reference'` \
+                                  -e 'Warning: <script> proprietary attribute "fetchpriority"' \
+                                  -e 'Warning: <img> lacks "alt" attribute' \
+                                  -e 'fix-style-tags: yes to move'
+                       )
+            if [[ -n $TIDY ]]; then echo -e "\n\e[31m$PAGE\e[0m:\n$TIDY"; fi
+        done
+
+        set -e;
+    }
+    wrap λ "Markdown→HTML pages don't validate as HTML5" &
+
+    ## anchor-checker.php doesn't work on HTML fragments, like the metadata annotations, and those rarely ever have within-fragment anchor links anyway, so skip those:
+    λ() { echo "$PAGES_ALL" | xargs --max-procs=0 --max-args=50 ./static/build/anchor-checker.php; } #  | gfv -e '/lorem'
+    wrap λ "Anchors linked but not defined inside page?" &
+
+    λ(){ find . -not -name "*#*" -xtype l -printf 'Broken symbolic link: %p\n'; }
+    wrap λ "Broken symbolic links" &
+
+    bold "Waiting on tests…"
+    wait;
+
+    ## Is the remote server up?
+    ping -q -c 5 gwern.net  &>/dev/null
+
+    # Testing complete.
+  fi
+
+    # Sync:
+    set -e
+    ## make sure nginx user can list all directories (x) and read all files (r)
+    chmod a+x $(find ./ -type d) &
+    chmod --recursive a+r ./* &
+    ## sync to Hetzner server: (`--size-only` because Hakyll rebuilds mean that timestamps will always be different, forcing a slower rsync)
+    ## If any links are symbolic links (such as to make the build smaller/faster), we make rsync follow the symbolic link (as if it were a hard link) and copy the file using `--copy-links`.
+    ## NOTE: we skip time/size syncs because sometimes the infrastructure changes values but not file size, and it's confusing when JS/CSS doesn't get updated; since the infrastructure is so small (compared to eg. doc/*), just force a hash-based sync every time to reduce risk:
+    bold "Syncing static/…"
+    REMOTE="gwern@176.9.41.242:/home/gwern/gwern.net/"
+    # rsync --perms --exclude=".*" --exclude "*.hi" --exclude "*.o" --exclude "*.elc" --exclude '#*' --exclude='preprocess-markdown' --exclude 'generateLinkBibliography' --exclude='generateDirectory' --exclude='changeTag' --exclude='generateSimilar' --exclude='generateSimilarLinks' --exclude='hakyll' --exclude='guessTag' --exclude='changeTag' --exclude='link-extractor' --exclude='checkMetadata' --exclude="annotation-dump" --exclude="link-suggester" --chmod='a+r' --recursive --checksum --copy-links --verbose --itemize-changes --stats ./static/ "$REMOTE"/static &
+    rsync --perms --exclude=".*" --exclude "*.elc" --exclude '#*' --chmod='a+r' --recursive --checksum --copy-links --verbose --itemize-changes --stats ./static/ "$REMOTE"/static &
+    ## Likewise, force checks of the Markdown pages but skip symlinks (ie. non-generated files):
+    bold "Syncing pages…"
+    rsync --perms --exclude=".*" --chmod='a+r' --recursive --checksum --quiet --info=skip0 ./_site/ "$REMOTE"
+    ## Randomize sync type—usually, fast, but occasionally do a regular slow hash-based rsync which deletes old files:
+    bold "Syncing everything else…"
+    SPEED=""; if [ "$SLOW" ] && everyNDays 14; then SPEED="--delete --checksum"; else SPEED="--size-only"; fi
+    ## note we use `--copy-links` here, which pulls in all the symlinked static documents:
+    rsync --perms --exclude=".*" --chmod='a+r' --recursive $SPEED --copy-links --verbose --itemize-changes --stats ./_site/ "$REMOTE" || true
+    wait
+    set +e
+
+    bold "Expiring ≤100 updated files…"
+    # expire CloudFlare cache to avoid hassle of manual expiration: (if more than 100, we've probably done some major systemic change & better to flush whole cache or otherwise investigate manually)
+    # NOTE: 'bot-fighting' CloudFlare settings must be largely disabled, otherwise CF will simply CAPTCHA or block outright the various curl/linkchecker tests as 'bots'.
+    EXPIRE="$(find . -type f -mtime -1 -not -wholename "*/\.*/*" -not -wholename "*/_*/*" | gfv -e '/doc/www' -e '/static/build/' -e '/static/template/' -e '/static/include/' -e '/metadata/annotation/backlink/' -e '/metadata/annotation/similar/' -e '.gtx' -e 'static/nginx/redirect/' -e 'static/nginx' -e '.hs' | xargs ls -t 2>/dev/null | sed -e 's/\.md$//' -e 's/^\.\/\(.*\)$/https:\/\/gwern\.net\/\1/' | head -50) https://gwern.net/sitemap.xml https://gwern.net/lorem https://gwern.net/ https://gwern.net/index https://gwern.net/metadata/today-quote.html https://gwern.net/metadata/today-annotation.html https://gwern.net/metadata/today-site.html"
+    for URL in $EXPIRE; do
+        echo -n "Expiring: $URL "
+        ( curl --silent --request POST "https://api.cloudflare.com/client/v4/zones/57d8c26bc34c5cfa11749f1226e5da69/purge_cache" \
+            --header "X-Auth-Email:gwern@gwern.net" \
+            --header "Authorization: Bearer $CLOUDFLARE_CACHE_TOKEN" \
+            --header "Content-Type: application/json" \
+            --data "{\"files\":[\"$URL\"]}" > /dev/null; ) &
+    done
+    echo
+
+ if [ "$SLOW" ]; then
+
+   # continue building author database
+   (ghci -istatic/build/ ./static/build/Metadata/Author.hs ./static/build/LinkMetadata.hs -e 'do { md <- LinkMetadata.readLinkMetadata; authorBrowseTopN md 4; }' > /dev/null &)
+
+   # test a random page modified in the past month for W3 validation & dead-link/anchor errors (HTML tidy misses some, it seems, and the W3 validator is difficult to install locally):
+   CHECKED_URLS_FILE="./metadata/urls-linkchecker-checked.txt"
+   # Filter URLs: Exclude URLs present in the checked list:
+   FILTERED_PAGES=$(echo "$PAGES" | gfv -e '/fulltext' -e '/lorem' -e '/secret/' -e '/confidential/' -e '/private/' | sed -e 's/\.md$//' -e 's/^\.\/\(.*\)$/https:\/\/gwern\.net\/\1/' \
+                        | while IFS= read -r URL; do
+                        if ! grep --fixed-strings --line-regexp --quiet "$URL" "$CHECKED_URLS_FILE"; then
+                            echo "$URL"
+                        fi
+                    done; )
+
+   CHECK_RANDOM_PAGE=$(echo "$FILTERED_PAGES" | shuf | head -1)
+   echo "$CHECK_RANDOM_PAGE" >> "$CHECKED_URLS_FILE" # update checked-list
+   CHECK_RANDOM_PAGE_ENCODED=$(echo "$CHECK_RANDOM_PAGE" | xargs urlencode)
+
+   FILTERED_ANNOTATIONS=$(find metadata/annotation/ -maxdepth 1 -name "*.html" -type f -size +2k \
+                 | sed -e 's/metadata\/annotation\/\(.*\)/\1/' \
+                 | while IFS= read -r ANNOTATION_URL; do
+                     if ! grep --fixed-strings --line-regexp --quiet "$ANNOTATION_URL" "$CHECKED_URLS_FILE"; then
+                       echo "$ANNOTATION_URL"
+                     fi
+                   done; )
+   CHECK_RANDOM_ANNOTATION="$(echo "$FILTERED_ANNOTATIONS" | shuf | head -1)"
+   CHECK_RANDOM_ANNOTATION_ENCODED=$(echo "$CHECK_RANDOM_ANNOTATION" | xargs urlencode | xargs urlencode | sed -e 's/^\(.*\)$/https:\/\/gwern\.net\/metadata\/annotation\/\1/'; ) # urlencode twice: once for the on-disk escaping, once for the URL argument to the W3C checker
+   CHECK_REF=$(head -1 metadata/annotation/"$CHECK_RANDOM_ANNOTATION" | tr ' ' '\n' | gf 'id=' | sed -e 's/link-bibliography-//' | cut --delimiter='"' --field=2 | head -1)
+   echo "$CHECK_RANDOM_ANNOTATION_ENCODED" >> "$CHECKED_URLS_FILE"
+
+   ( curl --silent --request POST "https://api.cloudflare.com/client/v4/zones/57d8c26bc34c5cfa11749f1226e5da69/purge_cache" \
+           --header "X-Auth-Email:gwern@gwern.net" \
+           --header "Authorization: Bearer $CLOUDFLARE_CACHE_TOKEN" \
+           --header "Content-Type: application/json" \
+           --data "{\"files\":[\"$CHECK_RANDOM_PAGE\", \"$CHECK_RANDOM_ANNOTATION_ENCODED\"]}" > /dev/null; )
+
+       # wait a bit for the CF cache to expire so it can refill with the latest version to be checked:
+        everyNDays 7 && chromium "https://validator.w3.org/nu/?doc=$CHECK_RANDOM_PAGE_ENCODED" &
+        sleep 5s; chromium "https://validator.w3.org/checklink?uri=$CHECK_RANDOM_PAGE_ENCODED&no_referer=on" &
+        sleep 15s; chromium "https://validator.w3.org/checklink?uri=$CHECK_RANDOM_ANNOTATION_ENCODED&no_referer=on" "https://gwern.net/ref/$CHECK_REF" &
+        if everyNDays 100; then
+            # check Google PageSpeed report for any regressions:
+            chromium "https://pagespeed.web.dev/report?url=$CHECK_RANDOM_PAGE_ENCODED&form_factor=desktop" &
+            bold "Checking print-mode CSS as well…"
+            ## WARNING: we cannot simply use `--headless` & `--print-to-pdf` because Chrome does not, in fact, save the same PDF
+            ## as it would if you print-to-PDF in-browser! It *mostly* does use the print CSS, but it skips things like transcludes
+            ## that would correctly fire when you print in-browser, so is not useful for the purpose of checking Gwern.net for regressions.
+            chromium "$CHECK_RANDOM_PAGE#reminder-to-manually-print-out-and-check-the-page" && evince ~/"$TODAY"-gwernnet-printmode.pdf >/dev/null 2>&1 &
+        fi
+
+    (chromium --temp-profile "https://gwern.net/index#footer" &> /dev/null &) # check the X-of-the-day in a different & cache-free browser instance
+
+    λ(){ run_gold_test; }
+    wrap λ "Lorem pages changed? Review, and if good, run 'lorem_update' to update the gold snapshots."
+
+    # once in a while, do a detailed check for accessibility issues using WAVE Web Accessibility Evaluation Tool:
+    everyNDays 200 && chromium "https://wave.webaim.org/report#/$CHECK_RANDOM_PAGE" &
+
+    # some of the live popups have probably broken, since websites keep adding X-FRAME options…
+    everyNDays 50 && ghci -istatic/build/ ./static/build/LinkLive.hs -e 'linkLiveTestHeaders'
+
+    # it is rare, but some duplicates might've crept into the X-of-the-day databases:
+    everyNDays 30 && (runghc -istatic/build/ ./static/build/duplicatequotesitefinder.hs &)
+
+    # check the holiday themes function:
+    everyNDays 180 && chromium "https://gwern.net/lorem-halloween" "https://gwern.net/lorem-christmas"
+
+    # Testing post-sync:
+    bold "Checking MIME types, redirects, content…"
+    c () { curl --max-filesize 200000000 --compressed --silent --output /dev/null --head "$@"; }
+    λ(){ cr () { [[ "$2" != $(c --location --write-out '%{url_effective}' "$1") ]] && echo "$1" "$2"; }
+         cr 'https://gwern.net/DNM-archives' 'https://gwern.net/dnm-archive'
+         cr 'https://gwern.net/doc/dnb/1978-zimmer.pdf' 'https://gwern.net/doc/psychology/music/distraction/1978-zimmer.pdf'
+         cr 'https://gwern.net/AB%20testing' 'https://gwern.net/ab-test'
+         cr 'https://gwern.net/Archiving%20URLs.html' 'https://gwern.net/archiving'
+         cr 'https://gwern.net/Book-reviews' 'https://gwern.net/review/book'
+         cr 'https://gwern.net/doc/ai/2019-10-21-gwern-gpt2-folkrnn-samples.ogg' 'https://gwern.net/doc/ai/music/2019-10-21-gwern-gpt2-folkrnn-samples.mp3';
+         cr 'https://gwern.net/doc/sr/2013-06-07-premiumdutch-profile.htm' 'https://gwern.net/doc/darknet-market/silk-road/1/2013-06-07-premiumdutch-profile.html'
+         cr 'https://gwern.net/doc/elections/2012-gwern-notes.txt' 'https://gwern.net/doc/statistics/prediction/election/2012-gwern-notes.txt'
+         cr 'https://gwern.net/doc/statistics/peerreview/1976-rosenthal-experimenterexpectancyeffects-ch3.pdf' 'https://gwern.net/doc/statistics/peer-review/1976-rosenthal-experimenterexpectancyeffects-ch3.pdf'
+         cr 'https://gwern.net/doc/longnow/form990-longnowfoundation-2001-12.pdf' 'https://gwern.net/doc/long-now/form990-longnowfoundation-2001-12.pdf'
+         cr 'https://gwern.net/doc/eva/2011-house' 'https://gwern.net/doc/anime/eva/2011-house'
+         cr 'https://gwern.net/doc/cs/1955-nash' 'https://gwern.net/doc/cs/cryptography/nash/1955-nash'
+         cr 'https://gwern.net/doc/cs/cryptography/nash/1955-nash' 'https://gwern.net/doc/cs/cryptography/nash/1955-nash' # check www.gwern.net → gwern.net redirect
+         cr 'https://gwern.net/dropcap.page' 'https://gwern.net/dropcap.md'
+
+       }
+    wrap λ "Check that some redirects go where they should"
+    λ() { cm () { [[ "$1" != $(c --write-out '%{content_type}' "$2") ]] && echo "$1" "$2"; }
+          ### check key pages:
+          ## check every possible extension:
+          ## check some arbitrary ones:
+          cm "application/epub+zip" 'https://gwern.net/doc/anime/eva/notenki-memoirs/2002-takeda-notenkimemoirs.epub'
+          cm "application/font-sfnt" 'https://gwern.net/static/font/dropcap/kanzlei/Kanzlei-Initialen-M.ttf'
+          cm "application/javascript" 'https://gwern.net/doc/statistics/order/beanmachine-multistage/script.js'
+          cm "application/javascript" 'https://gwern.net/static/js/rewrite.js'
+          cm "application/javascript" 'https://gwern.net/static/js/sidenotes.js'
+          cm "application/json" 'https://gwern.net/doc/touhou/2013-c84-downloads.json'
+          cm "application/msword" 'https://gwern.net/doc/iq/2014-tenijenhuis-supplement.doc'
+          cm "application/octet-stream" 'https://gwern.net/doc/zeo/firmware-v2.6.3R-zeo.img'
+          cm "application/pdf" 'https://gwern.net/doc/cs/hardware/2010-bates.pdf'
+          cm "application/pdf" 'https://gwern.net/doc/history/1694-gregory.pdf'
+          cm "application/pdf" 'https://gwern.net/doc/statistics/decision/1994-benter.pdf'
+          cm "application/vnd.ms-excel" 'https://gwern.net/doc/dual-n-back/2012-05-30-kundu-dnbrapm.xls'
+          cm "application/vnd.oasis.opendocument.spreadsheet" 'https://gwern.net/doc/genetics/heritable/1980-osborne-twinsblackandwhite-appendix.ods'
+          cm "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" 'https://gwern.net/doc/cs/hardware/2010-nordhaus-nordhaus2007twocenturiesofproductivitygrowthincomputing-appendix.xlsx'
+          cm "application/vnd.openxmlformats-officedocument.wordprocessingml.document" 'https://gwern.net/doc/genetics/heritable/2015-mosing-supplement.docx'
+          cm "application/x-maff" 'https://gwern.net/doc/anime/eva/2001-pulpmag-hernandez-2.html.maff'
+          cm "application/x-shockwave-flash" 'https://gwern.net/doc/rotten.com/library/bio/entertainers/comic/patton-oswalt/patton.swf'
+          cm "application/x-tar" 'https://gwern.net/doc/dual-n-back/2011-zhong.tar'
+          cm "application/x-xz" 'https://gwern.net/doc/personal/2013-09-25-gwern-googlealertsemails.tar.xz'
+          cm "application/zip" 'https://gwern.net/doc/statistics/bayes/2014-tenan-supplement.zip'
+          cm "audio/mpeg" 'https://gwern.net/doc/history/1969-schirra-apollo11flighttothemoon.mp3'
+          cm "audio/mpeg" 'https://gwern.net/doc/rotten.com/library/bio/crime/serial-killers/elmer-wayne-henley/areyouguilty.mp3'
+          cm "image/gif" 'https://gwern.net/doc/gwern.net-gitstats/arrow-none.gif'
+          cm "image/gif" 'https://gwern.net/doc/rotten.com/library/religion/creationism/creationism6.GIF'
+          cm "image/jpeg" 'https://gwern.net/doc/personal/2011-gwern-yourmorals.org/schwartz_process.php_files/schwartz_graph.jpg'
+          cm "image/jpeg" 'https://gwern.net/doc/rotten.com/library/bio/pornographers/al-goldstein/goldstein-fuck-you.jpg'
+          cm "image/jpeg" 'https://gwern.net/doc/rotten.com/library/religion/heresy/circumcellions/circumcellions-augustine.JPG'
+          cm "image/png" 'https://gwern.net/doc/statistics/order/beanmachine-multistage/beanmachine-demo.png'
+          cm "image/png" 'https://gwern.net/static/img/logo/logo.png'
+          cm "image/svg+xml" 'https://gwern.net/doc/psychology/spaced-repetition/gwern-forgetting-curves.svg'
+          cm "image/svg+xml" 'https://gwern.net/static/img/logo/logo-smooth.svg'
+          cm "image/svg+xml" 'https://gwern.net/static/img/icon/alcor.svg'
+          cm "image/svg+xml" 'https://gwern.net/doc/genetics/selection/www.mountimprobable.com/assets/images/verm_darkeryellow.svg'
+          cm "image/svg+xml" 'https://gwern.net/static/img/triple-question-mark.svg'
+          cm "image/svg+xml" 'https://gwern.net/static/img/icon/arrow-up.svg'
+          cm "image/x-icon" 'https://gwern.net/static/img/favicon.ico'
+          cm "image/x-ms-bmp" 'https://gwern.net/doc/rotten.com/library/bio/hackers/robert-morris/morris.bmp'
+          cm "image/x-xcf" 'https://gwern.net/doc/personal/businesscard-front-draft.xcf'
+          cm "message/rfc822" 'https://gwern.net/doc/cs/linkrot/2009-08-20-b3ta-fujitsuhtml.mht'
+          cm "text/css; charset=utf-8" 'https://gwern.net/doc/gwern.net-gitstats/gitstats.css'
+          cm "text/css; charset=utf-8" 'https://gwern.net/doc/statistics/order/beanmachine-multistage/offsets.css'
+          cm "text/css; charset=utf-8" 'https://gwern.net/doc/statistics/order/beanmachine-multistage/style.css'
+          cm "text/css; charset=utf-8" 'https://gwern.net/static/css/default.css'
+          cm "text/css; charset=utf-8" 'https://gwern.net/static/css/fonts.css'
+          cm "text/css; charset=utf-8" 'https://gwern.net/static/css/initial.css'
+          cm "text/css; charset=utf-8" 'https://gwern.net/static/css/links.css'
+          cm "text/css; charset=utf-8" 'https://gwern.net/static/css/colors.css'
+          cm "text/csv; charset=utf-8" 'https://gwern.net/doc/statistics/2013-google-index.csv'
+          cm "text/html" 'https://gwern.net/atom.xml'
+          cm "text/html; charset=utf-8" 'https://gwern.net/doc/cs/security/2012-terencetao-anonymity.html'
+          cm "text/html; charset=utf-8" 'https://gwern.net/doc/darknet-market/silk-road/1/2013-06-07-premiumdutch-profile.html'
+          cm "text/html; charset=utf-8" 'https://gwern.net/'
+          cm "text/html; charset=utf-8" 'https://gwern.net/doc/ai/nn/transformer/attention/abstract'
+          cm "text/html; charset=utf-8" 'https://gwern.net/note/faster'
+          cm "text/html; charset=utf-8" 'https://gwern.net/nootropic/magnesium'
+          cm "text/html; charset=utf-8" 'https://gwern.net/zeo/co2'
+          cm "text/html; charset=utf-8" 'https://gwern.net/review/book'
+          cm "text/html; charset=utf-8" 'https://gwern.net/review/anime'
+          cm "text/html; charset=utf-8" 'https://gwern.net/review/movie'
+          cm "text/html; charset=utf-8" 'https://gwern.net/doc/existential-risk/1985-hofstadter'
+          cm "text/html; charset=utf-8" 'https://gwern.net/review/bakewell'
+          cm "text/html; charset=utf-8" 'https://gwern.net/backfire-effect'
+          cm "text/html; charset=utf-8" 'https://gwern.net/console-insurance'
+          cm "text/xml" 'https://gwern.net/sitemap.xml'
+          cm "text/markdown; charset=utf-8" 'https://gwern.net/2014-spirulina.md'
+          cm "text/markdown; charset=utf-8" 'https://gwern.net/dnm-archive.md'
+          cm "text/markdown; charset=utf-8" 'https://gwern.net/gpt-3.md'
+          cm "text/markdown; charset=utf-8" 'https://gwern.net/catitecture.md'
+          cm "text/plain; charset=utf-8" 'https://gwern.net/doc/personal/2009-sleep.txt'
+          cm "text/plain; charset=utf-8" 'https://gwern.net/static/nginx/redirect/move.conf'
+          cm "text/x-adobe-acrobat-drm" 'https://gwern.net/doc/dual-n-back/2012-zhong.ebt'
+          cm "text/x-haskell; charset=utf-8" 'https://gwern.net/static/build/hakyll.hs'
+          cm "text/x-opml; charset=utf-8" 'https://gwern.net/doc/personal/rss-subscriptions.opml'
+          cm "text/x-patch; charset=utf-8" 'https://gwern.net/doc/ai/music/2019-12-22-gpt2-preferencelearning-gwern-abcmusic.patch'
+          cm "text/x-r; charset=utf-8" 'https://gwern.net/doc/darknet-market/2013-05-05-moore-bitcoinexchangesurvivalanalysis.R'
+          cm "text/plain; charset=utf-8" 'https://gwern.net/static/build/linkArchive.sh'
+          cm "text/x-gtx; charset=utf-8" 'https://gwern.net/metadata/full.gtx'
+          cm "text/x-gtx; charset=utf-8" 'https://gwern.net/metadata/me.gtx'
+          cm "video/mp4"  'https://gwern.net/doc/genetics/selection/artificial/2019-coop-illinoislongtermselectionexperiment-responsetoselection-animation.mp4'
+          cm "video/webm" 'https://gwern.net/doc/statistics/2003-gwern-murray-humanaccomplishment-region-proportions-bootstrap.webm'
+          cm "image/jpeg" 'https://gwern.net/doc/cs/security/lobel-frogandtoadtogether-thebox-crop.jpg'
+          cm "image/png"  'https://gwern.net/doc/technology/google/gwern-googlesearch-tools-daterange.png'
+          cm "image/png"  'https://gwern.net/doc/technology/google/gwern-15-predicted-survivorship-curves.png'
+          cm "application/wasm"  'https://gwern.net/static/js/patterns/en-us.wasm'
+          # special-case rewrite, handling double-slashed prefixes:
+          cm "application/pdf" 'https://gwern.net//doc/sociology/2022-yuan.pdf'
+          cm "text/html; charset=utf-8" 'https://gwern.net//index'
+        }
+    wrap λ "The live MIME types are incorrect" &
+
+    ## known-content check:
+    elinks -dump 'https://gwern.net/index'   | gf --quiet -e 'This is the website of' || red "/index content-check failed"
+    elinks -dump 'https://gwern.net/zeo/zeo' | gf --quiet -e 'lithium orotate'        || red "/zeo/zeo content-check failed"
+
+    ## check that tag-directories have the right thumbnails (ie. *not* the fallback thumbnail):
+    λ(){ curl --silent 'https://gwern.net/doc/sociology/index' 'https://gwern.net/doc/psychology/index' 'https://gwern.net/doc/economics/index' | \
+             gf 'https://gwern.net/static/img/logo/logo-whitebg-large-border.png'; }
+    wrap λ "Tag-directories missing their automatically-extracted-from-annotation thumbnails & instead having the site-wide default thumbnail?"
+
+    ## Check that password protection is working:
+    λ() { URL="https://gwern.net/private/canary"
+          USERNAME="guest"
+          PASSWORD="password"
+          CANARY_TOKEN_SUBSTRING="c1e1908dac358d40e7e2"
+
+          # Use curl with & without basic authentication to download the webpage:
+          RESPONSE=$(curl --silent --user "$USERNAME:$PASSWORD" "$URL"; curl --silent "$URL")
+
+          # Check if the canary token is present in the downloaded content:
+          if echo "$RESPONSE" | gf --quiet "$CANARY_TOKEN_SUBSTRING"; then
+              echo "Error: Canary token found! $RESPONSE"
+          fi
+    }
+    wrap λ "Canary token was downloadable; nginx password-protection security failed?"
+
+    λ() { OUTPUT=$(./static/nginx/memoriam.sh) # NOTE: time is set to 'America/New_York' in the script
+          if [[ ! -z "$OUTPUT" ]]; then
+              HEADER=$(curl --head --silent -- 'https://gwern.net/index' | gf --ignore-case 'X-Clacks-Overhead')
+              if [[ -z "$HEADER" ]]; then
+                  echo "$OUTPUT"
+              fi
+          fi; }
+    wrap λ "X-Clacks-Overhead HTTP header check failed."
+
+    wait;
+    ## check that the robots-headers are being set appropriately:
+    curl --silent --head "https://gwern.net/doc/www/www.usagi.org/4b4194c682efeeab1f37fd9956dff3fc3807e3c8.html"  "https://gwern.net/doc/www/www.usagi.org/df4966e6908602944e3f0f22e9a818ffbfe09086.html" | ge --quiet "^x-robots-tag: " || red "/doc/www/ paths missing robots tag! ✗" # these mirrors are chosen to trigger SSI errors, if SSI processing is incorrectly happening on /doc/www/ files
+    curl --silent --head "https://gwern.net/doc/index" | ge --quiet "^x-robots-tag: " && red "/doc/index has robots tag! ✗"
+
+    ## check that Range requests are working on Gwtar files like </doc/philosophy/religion/2010-02-brianmoriarty-thesecretofpsalm46.gwtar.html>:
+    GWTAR_RANGE=$(curl --silent --head --header "Range: bytes=0-99" 'https://gwern.net/doc/philosophy/religion/1999-03-17-brianmoriarty-whoburiedpaul.gwtar.html')
+    echo "$GWTAR_RANGE" | ge --quiet "^HTTP/[0-9.]* 206" || red "gwtar Range request not returning 206! ✗"
+    echo "$GWTAR_RANGE" | ge --quiet "^content-range:"   || red "gwtar Range request missing Content-Range! ✗"
+
+    ## check that all tag shortcuts are working, and create missing ones:
+    ( find ./doc/ -type f -name "index.md" | sort | while IFS= read -r file; do
+        dir=$(basename "$(dirname "$file")")
+        fullpath="$(echo "${file#./}" | sed 's/\.md$//')"
+        url="https://gwern.net/$dir"
+        if timeout 30s curl --silent --output /dev/null --write "%{http_code}" "$url" | \
+                gf --quiet "404"; then
+            echo "\"~^/$dir\$\" \"/$fullpath\";" >> ./static/nginx/redirect/move.conf
+        fi
+    done; ) &
+
+    ## did any of the key pages mysteriously vanish from the live version?
+    linkchecker --ignore-url='https://www.googletagmanager.com' --ignore-url="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" --threads=5 --check-extern --recursion-level=1 'https://gwern.net/index' &
+    ## - traffic checks/alerts are done in Google Analytics: alerts on <900 pageviews/daily, <40s average session length/daily.
+    ## - latency/downtime checks are done in `updown.io` (every 1h, 1s response-time for /index)
+    set +e
+  fi
+
+    # Cleanup post:
+    rm --recursive --force -- ./_cache/ ./_site/ || true
+
+  if [ "$SLOW" ]; then
+    # Testing files, post-sync
+    bold "Checking for file anomalies…"
+    λ(){ fdupes --quiet --sameline --size --nohidden $(find ./* -type d | gev -e 'static' -e '.git' -e 'gwern/wiki/$' -e 'metadata/annotation/backlink' -e 'metadata/annotation/similar' -e 'metadata/annotation/link-bibliography' -e 'doc/www/') | gfv -e 'bytes each' -e 'trimfill.png' -e 'logarithmicspiralsunflower-schematic' | gev -e 'doc/www/.*/.*\.woff2'; }
+    wrap λ "Duplicate file check"
+
+    λ(){ find ./ -type f | gfv -e 'git/' -e 'newsletter/' -e 'doc/rotten.com/' -e 'doc/www/' -e 'metadata/annotation/' -e 'doc/personal/2011-gwern-yourmorals.org/' -e 'index.md' -e 'abstract.md' -e 'index.html' -e 'favicon.ico' -e 'generator_config.txt' -e '.gitignore' -e 'static/build/Config/' -e 'static/font/dropcap/' -e 'static/img/ornament/' -e '2024-11-22-gwern-midjourneyv6-logarithmicspiralsunflower-schematic' | xargs --max-procs=0 --max-args=1 basename  | sort | uniq --count | gev -e '^ +1 ' | sort --numeric-sort; }
+    wrap λ "File base names are preferably globally-unique, to avoid issues with duplicate search results and clashing link IDs."
+
+    λ() { find . -perm u=r -path '.git' -prune; }
+    wrap λ "Read-only file check" ## check for read-only outside ./.git/ (weird but happened):
+
+    λ() { find . -executable -type f | gfv -e 'static/build/' -e 'nginx/memoriam.sh' -e 'haskell/lcp.hs' -e '.git/hooks/post-commit'; }
+    wrap λ "Executable bit set on files that shouldn't be executable?"
+
+    λ(){ gf -e 'RealObjects' -e '404 Not Found Error: No Page' -e '403 Forbidden' ./metadata/auto.gtx; }
+    wrap λ "Broken links, corrupt authors, or failed scrapes in auto.gtx."
+
+    λ(){ (find . -type f -name "*--*"; find . -type f -name "*~*"; ) | gfv -e metadata/annotation/; }
+    wrap λ "No files should have double hyphens or tildes in their names."
+
+    λ(){ find ./ -printf "%P\n" | gfv 'metadata/annotation/' | \
+             awk 'length($0) > 240 {print "WARNING: Long path (" length($0) " chars):", $0}'; }
+    wrap λ "Dangerously long full filepaths; shorten them."
+
+    λ(){ echo "$PAGES" | tr ' ' '\n'  | sed '/^$/d' \
+             | xargs --max-args=1 basename --suffix='.md' \
+             | awk '{ n=length($0); if (n<2 || n>=45) print }'; }
+    wrap λ "Dangerously long/short Markdown filenames; fix." # maximum set by 'Tale of the Just Man', minimum set by monthly newsletters
+
+    λ(){ gf --before-context=1 -e 'Right Nothing' -e 'Just ""' ./metadata/archive.hs; }
+    wrap λ "Links failed to archive (broken)."
+    λ(){ gf -e '//"' ./metadata/archive.hs | gfv -e 'https://esolangs.org/wiki////' | cut --delimiter='"' --fields=2; }
+    wrap λ "Links rewritten incorrectly (double trailing-slash) in archive DB (broken)."
+
+    λ(){ find . -type f | gfv -e '.'; }
+    wrap λ "Every file should have at least one period in them (extension)."
+
+    λ(){ find . -type f -name "*\.*\.md" | gfv -e '404.md'; }
+    wrap λ "Markdown files should have exactly one period in them."
+
+    λ(){ find . -type f -name "*.html.html.html"; }
+    wrap λ "Found a triple-'.html' HTML file; weird! Syntax-highlighting gone astray?"
+
+    λ(){ find . -type f -mtime +2 -name "*#*" -or -type f -name "temp[0-9]*"; }
+    wrap λ "Stale temporary files?"
+
+    λ(){ find ./* -type d -empty; }
+    wrap λ "Unused or empty directories?"
+
+    bold "Checking for HTML anomalies…"
+    λ(){ BROKEN_HTMLS="$(find ./ -type f -mtime -31 -name "*.html" | gfv 'static/' | \
+                         parallel --max-args=500 "gf --ignore-case --files-with-matches \
+                         -e '404 Not Found' -e '<title>Sign in - Google Accounts</title' -e 'Download Limit Exceeded' -e 'Access Denied' -e '403 Forbidden'")"
+         for BROKEN_HTML in $BROKEN_HTMLS; do
+             grep --before-context=3 "$BROKEN_HTML" ./metadata/archive.hs | gfv -e 'Right' -e 'Just';
+         done; }
+    wrap λ "Archives of broken links"
+
+    ## 'file' throws a lot of false negatives on HTML pages, often detecting XML and/or ASCII instead, so we whitelist some:
+    λ(){ find ./ -type f -mtime -31 -name "*.html" -not -name "*.gwtar.html" \
+             | gfv -e '4a4187fdcd0c848285640ce9842ebdf1bf179369' -e '5fda79427f76747234982154aad027034ddf5309' \
+                   -e 'f0cab2b23e1929d87f060beee71f339505da5cad' -e 'a9abc8e6fcade0e4c49d531c7d9de11aaea37fe5' \
+                   -e '2015-01-15-outlawmarket-index.html' -e 'ac4f5ed5051405ddbb7deabae2bce48b7f43174c.html' \
+                   -e '%3FDaicon-videos.html' -e '86600697f8fd73d008d8383ff4878c25eda28473.html' \
+                   -e '16aacaabe05dfc07c0e966b994d7dd0a727cd90e' -e 'metadata/today-quote.html' -e 'metadata/today-annotation.html' \
+                   -e '023a48cb80d48b1438d2accbceb5dc8ad01e8e02' -e '/Starr_Report/' -e '88b3f6424a0b31dcd388ef8364b11097e228b809.html' \
+                   -e '7f81f4ef122b83724448beb1f585025dbc8505d0' -e '/static/include/sidebar.html' -e 'unfortunatelytheclockisticking.html' -e 'idealconditionsdonotexistandwillneverhappen.html' -e '32938f5a1be0697eaca1f747631fc17550c1e862' \
+             | parallel --max-args=500 file | gfv -e 'HTML document, ' -e 'ASCII text' -e 'LaTeX document, UTF-8 Unicode text' -e 'CSV Unicode text, UTF-8 text'; }
+    wrap λ "Corrupted filetype: HTML" &
+
+    ## having noindex tags causes conflicts with the robots.txt and throws SEO errors; except in the ./doc/www/ mirrors, where we don't want them to be crawled:
+    λ(){ find ./ -type f -mtime -31 -name "*.html" | gfv -e './doc/www/' -e './404' -e './static/template/default.html' -e 'lucky-luciano' | parallel gf --files-with-matches 'noindex'; }
+    wrap λ "Noindex tags detected in HTML pages."
+
+    λ(){ find ./doc/www/ -type f | gfv -e '.html' -e '.pdf' -e '.txt' -e 'www/misc/' -e '.gif' -e '.mp4' -e '.png' -e '.jpg' -e '.dat' -e '.bak' -e '.woff' -e '.webp' -e '.ico' -e '.svg' -e '.ttf' -e '.otf' -e '.js' -e '.mp3' -e '.ogg' -e '.wav' -e '.webm' -e '.bmp' -e '.m4a' -e '.mov'; }
+    wrap λ "Unexpected filetypes in /doc/www/ WWW archives."
+
+    λ(){ find ./ -type f -name "*.ogg" | gfv -e '/doc/www/'; }
+    wrap λ "OGG files need to be converted to MP3 for compatibility with Apple devices (which refuses to support OGG to push its own monopoly file formats)."
+
+    λ(){ find ./ -type f | gf -e ".pkl.xz" -e ".h5.xz" -e ".weights.xz" -e ".t7.xz"; }
+    wrap λ "There is no point in XZ-compressing these sorts of binary archives."
+
+    λ(){ find ./ -type f -name "*.mp3" | parallel 'output=$(mp3val {} 2>&1); if echo "$output" | gf --quiet "ERROR"; then echo "Corrupt file: {}"; echo "$output" | gf "ERROR"; fi'; }
+    wrap λ "Corrupted MP3 files detected! Maybe try fixing in-place with 'mp3val -f'?"
+
+    # ensure all Markdown & text files are ordinary Unix text files with a trailing newline:
+    dos2unix --quiet --add-eol -- `find -type f -name "*.md" -or -name "*.txt"` > /dev/null &
+
+    λ(){ find . -type f -name "*.txt" -or -type f -name "*.md" | parallel file | awk '/ CRLF/ || !/:.*text/'; }
+    wrap λ "Corrupted text file (either CRLF or not a text file at all eg. a misnamed PDF)? use 'file' or 'dos2unix' on it."
+
+    bold "Checking for PDF anomalies…"
+    λ(){ BROKEN_PDFS="$(find ./ -type f -mtime -31 -name "*.pdf" -not -size 0 | parallel --max-args=500 file | \
+                                grep --invert-match 'PDF document' | cut -d ':' -f 1)"
+         for BROKEN_PDF in $BROKEN_PDFS; do
+             echo "$BROKEN_PDF"; grep --before-context=3 "$BROKEN_PDF" ./metadata/archive.hs;
+         done; }
+    wrap λ "Corrupted or broken PDFs" &
+
+    λ(){
+        LL="$(curl --silent https://ifconfig.me/ip)"
+        export LL # some academic publishers inject spam, but not in an easy-to-grep way; I've noticed they sometimes insert the download IP, however, so we add that dynamically as a search string.
+        checkSpamHeader () {
+            # extract text from first page, where the junk usually is (some insert at the end, but those are less of an issue & harder to check):
+            HEADER=$(pdftotext -f 1 -l 1 "$@" - 2> /dev/null | head -100 | \
+                         gf -e 'INFORMATION TO USERS' -e 'Your use of the JSTOR archive indicates your acceptance of JSTOR' \
+                               -e 'This PDF document was made available from www.rand.org as a public' -e 'A journal for the publication of original scientific research' \
+                               -e 'This is a PDF file of an unedited manuscript that has been accepted for publication.' \
+                               -e 'Additional services and information for ' -e 'Access to this document was granted through an Emerald subscription' \
+                               -e 'PLEASE SCROLL DOWN FOR ARTICLE' -e 'ZEW Discussion Papers' -e "$LL" -e 'eScholarship.org' \
+                  -e 'Full Terms & Conditions of access and use can be found at' -e 'This paper is posted at DigitalCommons' -e 'This paper is included in the Proceedings of the' \
+                  -e 'See discussions, stats, and author profiles for this publication at' \
+                  -e 'This article appeared in a journal published by Elsevier. The attached' \
+                  -e 'The user has requested enhancement of the downloaded file' \
+                  -e 'See discussions, stats, and author profiles for this publication at: https://www.researchgate.net' \
+                  -e 'This paper has been accepted for publication in '\
+                  -e 'Online First Publication, ' )
+            if [ "$HEADER" != "" ]; then echo "Header: $@"; fi;
+        }
+        export -f checkSpamHeader
+        find ./doc/ -type f -mtime -31 -name "*.pdf" | gfv -e 'doc/www/' -e '2012-kirk.pdf' -e '1929-tolmachoff.pdf' -e '1920-courtierforster.pdf' | parallel checkSpamHeader
+    }
+    wrap λ "Remove academic-publisher wrapper junk from PDFs using 'pdfcut'. (Reminder: can use 'pdfcut-append' to move low-quality-but-not-deletion-worthy first pages to the end, and 'pdfcut-last' to remove the last page.)" &
+
+    removeEncryption () { ENCRYPTION=$(exiftool -quiet -quiet -Encryption "$@");
+                          if [ "$ENCRYPTION" != "" ]; then
+                              echo "Stripping encryption from $*…"
+                              TEMP=$(mktemp /tmp/encrypted-XXXX.pdf)
+                              pdftk "$@" input_pw output "$TEMP" && mv "$TEMP" "$@";
+                          fi; }
+    export -f removeEncryption
+    find ./ -type f -mtime -31 -name "*.pdf" -not -size 0 | parallel removeEncryption &
+
+    λ(){ find ./ -type f -name "*.djvu"; }
+    wrap λ "Legacy DjVu detected (convert to JBIG2 PDF; see <https://gwern.net/design-graveyard#djvu-files>)."
+
+    bold "Checking for image anomalies…"
+    λ(){ CORRUPT=$(find ./doc/ -type f -mtime -31 -name "*.jpg" | parallel --max-args=500 file | gf -e 'PNG image data' -e 'GIF image data' | cut --delimiter=':' --fields=1)
+     if [ -n "$CORRUPT" ]; then
+         echo "Found JPGs with PNG/GIF data: $CORRUPT"
+         echo "attempting to convert the PNG/GIF ones into JPG…"
+         for FILE in $CORRUPT; do
+             if file "$FILE" | grep --fixed-strings --silent -e 'PNG image data' -e 'GIF image data'; then
+                 echo "Converting $FILE"
+                 TMP=$(mktemp /tmp/XXXX.jpg)
+                 convert "$FILE" "$TMP" && mv "$TMP" "$FILE" && identify "$FILE"
+             fi
+         done
+     fi; }
+    wrap λ "JPGs with PNG data"
+    λ(){ find ./doc/ -type f -mtime -31 -name "*.jpg" | parallel --max-args=500 file | gfv 'JPEG image data'; }
+    wrap λ "Remaining corrupted JPGs post-repair-attempts (were not PNGs and so not attempting to repair)" &
+
+    λ(){ CORRUPT=$(find ./doc/ -type f -mtime -31 -name "*.png" | parallel --max-args=500 file | gfv 'PNG image data' | cut --delimiter ':' -f 1)
+         if [ -n "$CORRUPT" ]; then
+             echo "Found broken PNGs: $CORRUPT"
+             echo "attempting to convert the JPG/GIF ones into PNG…"
+             for FILE in $CORRUPT; do
+                 if file "$FILE" | grep --fixed-strings --silent -e 'JPEG image data' -e 'GIF image data'; then
+                     echo "Converting $FILE"
+                     TMP=$(mktemp /tmp/XXXX.png)
+                     convert "$FILE" "$TMP" && mv "$TMP" "$FILE" && identify "$FILE"
+                 fi
+             done
+         fi; }
+    wrap λ "Corrupted PNGs (attempted to repair JPG/GIF ones)" &
+
+    λ(){ find ./ -name "*.svg" -mtime -31 -print0 | xargs --null --max-procs="$N" -I {} sh -c \
+          'xmllint --noout "{}" 2>/dev/null && identify "{}" >/dev/null 2>&1 || echo "{}"'; }
+    wrap λ "Corrupted SVGs" &
+
+    λ(){  find ./doc/ -type f -mtime -31 -name "*.png" | gfv -e '/static/img/' -e '/doc/www/misc/' | \
+              xargs identify -ping -format '%F %[opaque]\n' | gf ' false' | cut --delimiter=' ' --field=1 | \
+              xargs mogrify -background white -alpha remove -alpha off |
+              gfv -e ': ICC profile tag start not a multiple of 4' | \
+              gfv -e '2024-12-04-gwern-claude36-secondlifesentence-sls-square-thumbnail-512px.png'; }
+    wrap λ "Partially transparent PNGs (may break in dark mode, converting with 'mogrify -background white -alpha remove -alpha off'…)" &
+
+    λ(){ find ./ -type f -name "*.gif" | gfv -e 'static/img/' -e 'doc/gwern.net-gitstats/' \
+             -e 'doc/rotten.com/' -e 'doc/genetics/selection/www.mountimprobable.com/' -e 'doc/www/' | \
+             parallel --max-args=500 identify | ge '\.gif\[[0-9]\] '; }
+    wrap λ "Animated GIF is deprecated; GIFs should be converted to WebMs/MP4s."
+
+    # ensure all MP4 files have the 'moov atom' (the MP4 "table of contents") at the front of the file, to allow browser streaming:
+    find ./ -type f -name '*.mp4' \
+        | parallel --max-args="50" mp4-check-faststart 2>/dev/null \
+        | parallel --max-args="50" mp4-fix-faststart &
+
+    # check MP4 validity by forcing ffmpeg to decode every frame to /dev/null; this forces ffmpeg to actually parse and decode the full stream, and it'll report any corruption or truncation. If it prints nothing, the file is clean. Any output means something is wrong.
+    # This is intrinsically slow for huge collections like Gwern.net (>955 MP4 files) since it fully decodes every file, so we only do it occasionally.
+    λ(){ everyNDays 31 && find ./ -type f -name '*.mp4' -print0 | xargs --null -I{} sh -c '
+        errors=$(ffmpeg -v error -i "{}" -f null - 2>&1 | grep --fixed-strings --invert-match -- "non monotonically increasing dts to muxer")
+        if [ -n "$errors" ]; then
+           echo "FAIL: {}"
+           echo "$errors"
+        fi'; }
+    wrap λ "Some MP4 files are invalid?" &
+
+    λ(){ find . -type f -name "*.gwtar.html" | parallel --max-args=500 grep --files-without-match --fixed-strings -e "PAR2"; }
+    wrap λ "Gwtar archive file found which likely does not contain any PAR2 FEC (no hit for the string 'PAR2')? Add PAR2 to it."
+
+    λ(){ JPGS_BIG="$(find ./doc/ -type f -mtime -31 -name "*.jpg" | gfv -e 'doc/www/misc/' | \
+                          parallel --max-args=500 "identify -ping -format '%Q %F\n'" {} | sort --numeric-sort | \
+                          ge -e '^[7-9][0-9] ' -e '^6[6-9]' -e '^100')"
+         echo "$JPGS_BIG"
+         compressJPG $(echo "$JPGS_BIG" | cut --delimiter=' ' --field=2); }
+    wrap λ "Compressing high-quality JPGs to ≤65% quality…" &
+
+    bold "Compressing new PNGs…"
+    compressPNG $(find ./doc/ -type f -name "*.png" -mtime -3 | gfv -e './doc/www/misc/' -e '2025-05-03-gwern-gpto3-demotivationalposter-heraclitus-youcanneverreproducethesamebugtwice.png') &> /dev/null &
+
+    # because GIF videos are *so* big, we lossily-compress GIFs in the WWW split archives using `gifsicle`:
+    λ(){ find ./doc/www/ -type f -name "*.gif" -mtime -3 | compressGIF; }
+    wrap λ "Optimized WWW archive GIFs."
+
+    ## Find JPGs/PNGs which are too wide (1600px is an entire screen width on even wide monitors, which is too large for a figure/illustration):
+    ## TODO: images currently sit uneasily between 'archival' full-resolution originals (suitable for research/design/close examination) and 'optimized' web images for pleasant fast efficient browsing.
+    ## We should probably return to a regular image thumbnail system, so we never downscale the originals, and serve appropriate thumbnails instead.
+    # λ() { for IMAGE in $(find ./doc/ -type f -mtime -31 -name "*.jpg" -or -name "*.png" | gfv -e 'doc/www/' -e '2020-07-19-oceaninthemiddleofanisland-gpt3-chinesepoetrytranslation.png' -e '2020-05-22-caji9-deviantart-stylegan-ahegao.jpg' -e '2021-anonymous-meme-virginvschad-journalpapervsblogpost.jpg' -e 'tadne-l4rz-kmeans-k256-n120k-centroidsamples.jpg' -e '2009-august-newtype-rebuildinterview-maayasakamoto-pg090091.jpg' -e 'doc/fiction/science-fiction/batman/' -e 'dall-e' -e 'midjourney' -e 'stablediffusion' -e '2022-09-27-gwern-gwernnet-indentjustification2x2abtest.png' -e 'reinforcement-learning/2022-bakhtin' -e 'technology/2021-roberts-figure2' -e '2022-10-02-mollywhite-annotate-latecomersdesktopscreenshot.png' -e '/doc/anime/eva/' -e 'doc/www/misc/' -e '2021-power-poster.png' -e '2002-change-table2-preandposttestscoresultsfrommindmappingshowminimaleffect.png' -e 'genetics/selection/www.mountimprobable.com/assets/images/card.png' -e 'reinforcement-learning/imperfect-information/diplomacy/2022-bakhtin-figure6-successfulcicerohumandialogueexamplesfromtestgames.jpg' -e 'reinforcement-learning/imperfect-information/diplomacy/2022-bakhtin-figure3-differentcicerointentsleadtodifferentdialogues.jpg' -e 'reinforcement-learning/imperfect-information/diplomacy/2022-bakhtin-figure5-theeffectofdialogueoncicerosplanningandintents3possiblescenariosinanegotiationwithengland.jpg' -e 'reinforcement-learning/imperfect-information/diplomacy/2022-bakhtin-figure2-trainingandinferenceofcicerointentcontrolleddialogue.jpg' -e 'reinforcement-learning/imperfect-information/diplomacy/2022-bakhtin-figure1-architectureofcicerodiplomacyagent.jpg' -e '2021-roberts-figure2-manufacturingofhumanbloodbricks.jpg' -e 'gwern-gwernnet' -e '2023-11-03-gwern-googleimages-catwindowbox-imagequilt.jpg' -e '1999-marklombardi-olivernorthlakeresourcespanamairancontra198486-v4-detail.jpg' -e '2022-09-24-aella-fetishtaboonessvspopularity-chart-large.jpg' -e '2024-perkovic-figure1-kidneydiseasesurvivalcurvesonsemaglutidevsplacebo.jpg' -e '1992-02-18-neilgaiman-sandman-issue36-agameofyoupart5-overtheseatothesky-theendoftheland.jpg' -e 'elementsglass-amberantelope-triptych' ); do
+    #           SIZE_W=$(identify -ping -format "%w" "$IMAGE")
+    #           if (( SIZE_W > 1800 )); then
+    #               echo "Too wide image: $IMAGE $SIZE_W; shrinking…";
+    #               mogrify -resize 1700x10000 "$IMAGE";
+    #           fi;
+    #       done; }
+    # wrap λ "Too-wide images (downscale)" # run this before 'png2JPGQualityCheck' to avoid that deleting images
+
+    λ() { TARGETS=$(find doc/ -type f -mtime -31 -name "*.png" | gfv -e 'static/' -e 'doc/www/' -e 'doc/rotten.com/' -e 'www.mountimprobable.com' | parallel png2JPGQualityCheck);
+          if [[ -n "$TARGETS" ]]; then
+              echo "Converting $TARGETS…"
+              # `gwmv` handles PNG → JPG as a special-case, so we don't need to munge the filename:
+              for PNG in $TARGETS; do gwmv "$PNG"; done
+          fi; }
+    wrap λ "png2JPGQualityCheck: Converting PNGs that should have been JPGs" &
+
+    bold "Running site functionality checks…"
+    ## Look for domains that may benefit from link icons or link live status now:
+    λ() { everyNDays 7 && ghci -istatic/build/ ./static/build/LinkIcon.hs  -e 'linkIconPrioritize' | gfv -e ' secs,' -e 'it :: [(Int, T.Text)]' -e '[]'; }
+    wrap λ "Need link icons?" &
+    λ() { gf '>{.archive-not .link-annotated-not .link-live}' ./lorem-link.md; }
+    wrap λ "Sites needing link live whitelist/blacklisting? (see <https://gwern.net/lorem-link#live-link-testcases>)"
+
+    λ() { ghci -istatic/build/ ./static/build/LinkBacklink.hs  -e 'suggestAnchorsToSplitOut' | gfv -e ' secs,' -e 'it :: [(Int, T.Text)]' -e '[]' -e '/me#contact'; }
+    wrap λ "Refactor out pages?" &
+
+    λ() { find ./metadata/annotation/similar/ -type f -name "*.html" | xargs --max-args=1000 grep --fixed-strings --no-filename -e '<a href="' -- | sort | uniq --count | sort --numeric-sort | ge '^ +[4-9][0-9][0-9][0-9]+ +' | gfv '/design#similar-links'; }
+    wrap λ "Similar-links: overused links (>999) indicate pathological lookups; blacklist links as necessary." &
+
+    λ(){ ghci -istatic/build/ ./static/build/XOfTheDay.hs -e 'sitePrioritize' | \
+             gfv -e ' secs,' -e 'it :: [T.Text]' -e '[]' || true; }
+    wrap λ "Site-of-the-day: check for recommendations?" &
+
+    λ() { (cd ./static/build/ && find ./ -type f -name "*.hs" -exec ghc -package random -O0 -Wall -Werror -fno-code {} \; ) >/dev/null; }
+    wrap λ "Test-compilation of all Haskell files in static/build: failure." &
+
+    λ() { find . -type f -name "*.hs" | gfv -e 'static/' -e 'metadata/' | xargs hlint | gfv 'No hints'; }
+    wrap λ "Check hosted Haskell files for Hlint style suggestions."
+
+    λ() { find ./static/build/ -type f -name "*.hs" -exec grep --fixed-strings 'nub ' {} \; ; }
+    wrap λ "Haskell blacklist functions: 'nub' (use 'Data.Containers.ListUtils.nubOrd' for safety instead)."
+
+    # Checks one random file per extension for incorrect text/html MIME type.
+    λ() { everyNDays 7 && (
+              BASE_URL="https://gwern.net"
+              DEFAULT_MIME_TYPE="text/html"
+              # Define paths to exclude (relative to the starting directory)
+              EXCLUDE_PATHS=( \( -path './.git' -o -path './static/.git' -o -path './metadata' \) )
+
+              # Step 1: Get unique, lowercase extensions, respecting exclusions
+              find . \
+                   "${EXCLUDE_PATHS[@]}" -prune \
+                   -o \
+                   \( -type f -name '*.*' ! -name '.*' -print \) \
+                  | sed 's/.*\.//' \
+                  | tr '[:upper:]' '[:lower:]' \
+                  | sort -u \
+                  | while IFS= read -r ext; do
+                  # Skip empty lines and html/htm extensions
+                  if [[ -z "$ext" ]] || [[ "$ext" == "html" ]] || [[ "$ext" == "html5" ]]; then
+                      continue
+                  fi
+
+                  # Step 2: Find *all* files with this extension (case-insensitive),
+                  # respecting exclusions, shuffle, and pick one random example.
+                  example_rel_with_dot_slash=$(find . \
+                                                    "${EXCLUDE_PATHS[@]}" -prune \
+                                                    -o \
+                                                    \( -type f -iname "*.${ext}" -print \) \
+                                                   | shuf -n 1)
+
+                  if [[ -z "$example_rel_with_dot_slash" ]]; then
+                      # No examples found for this extension outside excluded paths
+                      # Report to stderr, not stdout
+                      echo "Info: No non-excluded example found for .$ext" >&2
+                      continue
+                  fi
+
+                  # Step 3: Prepare path and URL
+                  example_rel=$(echo "$example_rel_with_dot_slash" | sed 's#^\./##')
+                  file_url="${BASE_URL}/${example_rel}"
+
+                  # Step 4: Get Content-Type via curl
+                  mime_type=$(curl --fail --silent --location --max-time 10 --output /dev/null --write-out '%{content_type}' "$file_url")
+                  curl_status=$?
+
+                  if [[ "$curl_status" -ne 0 ]]; then
+                      # Report curl errors to stderr
+                      echo "Error: curl failed (status $curl_status) for .$ext sample: $file_url"
+                      continue # Skip this extension on error
+                  fi
+
+                  # Step 5: Check if base MIME type is the default text/html
+                  if [[ "${mime_type%%;*}" == "$DEFAULT_MIME_TYPE" ]]; then
+                      # Output only problematic files: Filename Extension MimeType
+                      echo "$example_rel .$ext $mime_type"
+                  fi
+              done;
+          ); }
+    wrap λ "MIME type checking: filetype which has a wrong (default) HTML MIME type? Update gwern.net.conf if so, or whitelist it here."
+
+    # if the first of the month, download all pages and check that they have the right MIME type and are not suspiciously small or redirects.
+    if [ "$(date +"%d")" == "1" ]; then
+
+        bold "Checking all MIME types…"
+        c () { curl --max-filesize 200000000 --compressed --silent --output /dev/null --head "$@"; }
+        for PAGE in $PAGES; do
+            MIME=$(c --max-redirs 0 --write-out '%{content_type}' "https://gwern.net/$PAGE")
+            if [ "$MIME" != "text/html; charset=utf-8" ]; then red "$PAGE : $MIME"; fi
+
+            SIZE=$(curl --max-filesize 200000000 --max-redirs 0 --compressed --silent "https://gwern.net/$PAGE" | wc --bytes)
+            if [ "$SIZE" -lt 7500 ]; then red "$PAGE : $SIZE : $MIME"; fi
+        done
+
+        # check for any pages that could use multi-columns now:
+        λ(){ (find . -name "*.md"; find ./metadata/annotation/ -maxdepth 1 -name "*.html") | \
+                 parallel --max-args=500 runghc -istatic/build/ ./static/build/Columns.hs --print-filenames; }
+        wrap λ "Multi-columns use?"
+    fi
+    # if the end of the month, expire all of the annotations to get rid of stale ones:
+    if [ "$(date +"%d")" == "31" ]; then
+        find ./metadata/annotation/ -maxdepth 1 -name "*.html" -delete
+    fi
+
+    # once a year, check all on-site local links to make sure they point to the true current URL; this avoids excess redirects and various possible bugs (such as an annotation not being applied because it's defined for the true current URL but not the various old ones, or going through HTTP nginx redirects first)
+    if [ "$(date +"%j")" == "002" ]; then
+        bold "Checking all URLs for redirects…"
+        for URL in $(find . -type f -name "*.md" | parallel --max-args=500 runghc -istatic/build/ ./static/build/link-extractor.hs | \
+                         ge -e '^/' | cut --delimiter=' ' --field=1 | sort --unique); do
+            echo "$URL"
+            MIME=$(curl --max-filesize 200000000 --silent --max-redirs 0 --output /dev/null --write '%{content_type}' "https://gwern.net$URL");
+            if [[ "$MIME" == "" ]]; then red "redirect! $URL (MIME: $MIME)"; fi;
+        done
+
+        for URL in $(find . -type f -name "*.md" | parallel --max-args=500 runghc -istatic/build/ ./static/build/link-extractor.hs | \
+                         ge -e '^https://gwern.net' | sort --unique); do
+            MIME=$(curl --max-filesize 200000000 --silent --max-redirs 0 --output /dev/null --write '%{content_type}' "$URL");
+            if [[ "$MIME" == "" ]]; then red "redirect! $URL"; fi;
+        done
+    fi
+  fi
+
+    rm static/build/generateLinkBibliography static/build/*.hi static/build/*.o &>/dev/null || true
+
+    bold "Sync successful: $(date)"
+    echo -n -e '\a'; # ring bell because done
+fi

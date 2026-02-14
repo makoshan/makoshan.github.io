@@ -1,228 +1,274 @@
-if (window.Extracts) {
-	/*	Popins.
-		*/
+Extracts = { ...Extracts,
+	/*****************/
+	/*	Configuration.
+	 */
+	modeOptions: [
+		[ "on", "On", "Enable Pop-frames", "Pop-frames Enabled", "Enable link pop-frames.", "message-lines-solid" ],
+		[ "off", "Off", "Disable Pop-frames", "Pop-frames Disabled", "Disable link pop-frames.", "message-slash-solid" ],
+	],
 
-// 	Extracts.popinOptionsEnabled = true;
+	selectedModeOptionNote: " [This option is currently selected.]",
 
-	Extracts.showPopinOptionsDialogPopinTitleBarButton = () => {
-		let button = Popins.titleBarComponents.optionsButton();
+	popFramesDisableDespawnDelay: 1000,
+	popFramesDisableWidgetFlashStayDuration: 3000,
+	popFramesDisableAutoToggleDelay: 1000,
+
+	/******************/
+	/*	Infrastructure.
+	 */
+
+	modeSelector: null,
+	modeSelectorInteractable: true,
+
+	/*************/
+	/*	Functions.
+	 */
+
+	/******************/
+	/*	Mode selection.
+	 */
+
+	setMode: (selectedMode) => {
+		if (selectedMode == "on")
+			Extracts.enableExtractPopFrames();
+		else
+			Extracts.disableExtractPopFrames();
+	},
+
+	//	Called by: Extracts.injectModeSelector
+	modeSelectorHTML: (inline = false) => {
+		//	Get saved mode setting (or default).
+		let currentMode = Extracts.extractPopFramesEnabled() ? "on" : "off";
+
+		let modeSelectorInnerHTML = Extracts.modeOptions.map(modeOption => {
+			let [ name, shortLabel, unselectedLabel, selectedLabel, desc, iconName ] = modeOption;
+			let selected = (name == currentMode ? " selected" : " selectable");
+			let disabled = (name == currentMode ? " disabled" : "");
+			unselectedLabel = unselectedLabel.replace("-frame", Extracts.popFrameTypeSuffix());
+			selectedLabel = selectedLabel.replace("-frame", Extracts.popFrameTypeSuffix());
+			desc = desc.replace("-frame", Extracts.popFrameTypeSuffix());
+			if (name == currentMode)
+				desc += Extracts.selectedModeOptionNote;
+			let label = inline
+						? shortLabel
+						: (name == currentMode
+						   ? selectedLabel 
+						   : unselectedLabel);
+			return `<button
+					 type="button"
+					 class="select-mode-${name}${selected}"
+					 ${disabled}
+					 tabindex="-1"
+					 data-name="${name}"
+					 title="${desc}"
+					 >`
+						+ `<span class="icon">${(GW.svg(iconName))}</span>`
+						+ `<span
+							class="label"
+							data-selected-label="${selectedLabel}"
+							data-unselected-label="${unselectedLabel}"
+							>${label}</span>`
+				 + `</button>`;
+		  }).join("");
+
+		let selectorTag = (inline ? "span" : "div");
+		let selectorId = (inline ? "" : "extracts-mode-selector");
+		let selectorClass = ("extracts-mode-selector mode-selector" + (inline ? " mode-selector-inline" : ""));
+
+		return `<${selectorTag} id="${selectorId}" class="${selectorClass}">${modeSelectorInnerHTML}</${selectorTag}>`;
+	},
+
+	modeSelectButtonClicked: (event) => {
+		GWLog("Extracts.modeSelectButtonClicked", "extracts-options.js", 2);
+
+		let button = event.target.closest("button");
+
+		// Determine which setting was chosen (ie. which button was clicked).
+		let selectedMode = button.dataset.name;
+
+		/*	We don’t want clicks to go through if the transition
+			between modes has not completed yet, so we disable the
+			button temporarily while we’re transitioning between
+			modes.
+		 */
+		doIfAllowed(() => {
+			//	Check if this is a click or an accesskey press.
+			if (event.pointerId == -1) {
+				button.blur();
+
+				GW.pageToolbar.expandToolbarFlashWidgetDoThing("extracts-mode-selector", () => {
+					//	Actually change the mode.
+					Extracts.setMode(selectedMode);
+				});
+			} else {
+				//	Actually change the mode.
+				Extracts.setMode(selectedMode);
+			}
+		}, Extracts, "modeSelectorInteractable");
+	},
+
+	//	Called by: Extracts.setup (extracts.js)
+	injectModeSelector: (replacedElement = null) => {
+		GWLog("Extracts.injectModeSelector", "extracts-options.js", 1);
+
+		//	Inject the mode selector widget.
+		let modeSelector;
+		if (replacedElement) {
+			modeSelector = elementFromHTML(Extracts.modeSelectorHTML(true));
+			replacedElement.replaceWith(modeSelector);
+		} else {
+			modeSelector = Extracts.modeSelector = GW.pageToolbar.addWidget(Extracts.modeSelectorHTML());
+			Extracts.activateModeSelector(modeSelector);
+		}
+	},
+
+	//	Called by: Extracts.setup (extracts.js)
+	activateModeSelector: (modeSelector) => {
+		//	Activate mode selector widget buttons.
+		modeSelector.querySelectorAll("button").forEach(button => {
+			button.addActivateEvent(Extracts.modeSelectButtonClicked);
+		});
+
+		//	Register event handler to update mode selector state.
+		GW.notificationCenter.addHandlerForEvent("Extracts.didSetMode", (info) => {
+			Extracts.updateModeSelectorState(modeSelector);
+		}, { name: "Extracts.updateModeSelectorStateOnSetMode" });
+
+		//	Update state now.
+		Extracts.updateModeSelectorState(modeSelector);
+	},
+
+	//	Called by: Extracts.didSetMode event handler
+	updateModeSelectorState: (modeSelector = Extracts.modeSelector) => {
+		GWLog("Extracts.updateModeSelectorState", "extracts-options.js", 2);
+
+		/*	If the mode selector has not yet been injected, then do nothing.
+		 */
+		if (modeSelector == null)
+			return;
+
+		//	Get saved mode setting (or default).
+		let currentMode = Extracts.extractPopFramesEnabled() ? "on" : "off";
+
+		//	Clear current buttons state.
+		modeSelector.querySelectorAll("button").forEach(button => {
+			button.classList.remove("active");
+			button.swapClasses([ "selectable", "selected" ], 0);
+			button.disabled = false;
+
+			//	Remove “[This option is currently selected.]” note.
+			if (button.title.endsWith(Extracts.selectedModeOptionNote))
+				button.title = button.title.slice(0, (-1 * Extracts.selectedModeOptionNote.length));
+
+			//	Reset label text to unselected state.
+			if (modeSelector.classList.contains("mode-selector-inline") == false) {
+				let label = button.querySelector(".label");
+				label.replaceChildren(label.dataset.unselectedLabel);
+			}
+
+			//	Clear accesskey.
+			button.accessKey = "";
+		});
+
+		//	Set the correct button to be selected.
+		modeSelector.querySelectorAll(`.select-mode-${currentMode}`).forEach(button => {
+			button.swapClasses([ "selectable", "selected" ], 1);
+			button.disabled = true;
+			button.title += Extracts.selectedModeOptionNote;
+
+			//	Set label text to selected state.
+			if (modeSelector.classList.contains("mode-selector-inline") == false) {
+				let label = button.querySelector(".label");
+				label.replaceChildren(label.dataset.selectedLabel);
+			}
+		});
+
+		//	Set accesskey.
+		let buttons = Array.from(modeSelector.querySelectorAll("button"));
+		buttons[(buttons.findIndex(button => button.classList.contains("selected")) + 1) % buttons.length].accessKey = "p";
+	},
+
+	//	Called by: extracts.js
+	disableExtractPopFramesPopFrameTitleBarButton: () => {
+		let button = Extracts.popFrameProvider.titleBarComponents.genericButton();
+
+		button.title = `Disable link pop${(Extracts.popFrameTypeSuffix())}s [currently enabled]`;
+		button.innerHTML = Extracts.popFrameProvider == Popups
+						   ? GW.svg("eye-slash-solid")
+						   : GW.svg("eye-slash-regular");
+		button.classList.add("extracts-disable-button");
 
 		button.addActivateEvent((event) => {
 			event.stopPropagation();
 
-			Extracts.showPopinOptionsDialog();
+			button.classList.add("disabled");
+
+			//	Expand toolbar.
+			GW.pageToolbar.toggleCollapseState(false);
+
+			setTimeout(() => {
+				Extracts.popFrameProvider.cleanup();
+
+				GW.pageToolbar.flashWidget("extracts-mode-selector", {
+					flashStayDuration: Extracts.popFramesDisableWidgetFlashStayDuration,
+					showSelectedButtonLabel: true,
+					highlightSelectedButtonLabelAfterDelay: Extracts.popFramesDisableAutoToggleDelay
+				});
+				setTimeout(() => {
+					//	Actually disable extract pop-frames.
+					Extracts.disableExtractPopFrames();
+
+					//	Collapse toolbar, after a delay.
+					GW.pageToolbar.toggleCollapseState(true, {
+														   delay: GW.pageToolbar.demoCollapseDelay
+																+ Extracts.popFramesDisableWidgetFlashStayDuration
+																+ GW.pageToolbar.widgetFlashFallDuration
+													   });
+				}, GW.pageToolbar.widgetFlashRiseDuration + Extracts.popFramesDisableAutoToggleDelay);
+			}, Extracts.popFramesDisableDespawnDelay);
 		});
 
-		button.title = "Show popin options (enable/disable popins)";
-		button.classList.add("show-popin-options-dialog");
-
 		return button;
-	};
+	},
 
-	/*	Popups.
-		*/
+	extractPopFramesDisabledLocalStorageItemKey: () => {
+		return (Extracts.popFrameProvider == Popups
+				? Extracts.popupsDisabledLocalStorageItemKey
+				: Extracts.popinsDisabledLocalStorageItemKey);
+	},
 
-	Extracts.popupOptionsEnabled = true;
+	extractPopFramesEnabled: () => {
+		return (localStorage.getItem(Extracts.extractPopFramesDisabledLocalStorageItemKey()) != "true");
+	},
 
-	Extracts.popupsDisabledShowPopupOptionsDialogButton = null;
-	Extracts.popupOptionsDialog = null;
+	disableExtractPopFrames: () => {
+		GWLog("Extracts.disableExtractPopFrames", "extracts-options.js", 1);
 
-	Extracts.showPopupOptionsDialogPopupTitleBarButton = () => {
-		let button = Popups.titleBarComponents.optionsButton();
+		//	Save setting.
+		localStorage.setItem(Extracts.extractPopFramesDisabledLocalStorageItemKey(), "true");
 
-		button.addActivateEvent((event) => {
-			event.stopPropagation();
+		//	Fire event.
+		GW.notificationCenter.fireEvent("Extracts.didSetMode");
 
-			Extracts.showPopupOptionsDialog();
-		});
-		button.title = "Show popup options (enable/disable popups)";
-		button.classList.add("show-popup-options-dialog");
-
-		return button;
-	};
-
-	Extracts.disableExtractPopups = () => {
-		GWLog("Extracts.disableExtractPopups", "extracts.js", 1);
-
-		localStorage.setItem("extract-popups-disabled", "true");
+		//	Run cleanup.
 		Extracts.cleanup();
-		Extracts.injectPopupsDisabledShowPopupOptionsDialogButton();
-	};
+	},
 
-	Extracts.enableExtractPopups = () => {
-		GWLog("Extracts.enableExtractPopups", "extracts.js", 1);
+	enableExtractPopFrames: () => {
+		GWLog("Extracts.enableExtractPopFrames", "extracts-options.js", 1);
 
-		localStorage.removeItem("extract-popups-disabled");
+		//	Clear saved setting.
+		localStorage.removeItem(Extracts.extractPopFramesDisabledLocalStorageItemKey());
+
+		//	Fire event.
+		GW.notificationCenter.fireEvent("Extracts.didSetMode");
 
 		//  Run setup.
 		Extracts.setup();
 
 		/*  Since the main document has already loaded, we must trigger the
-			processing of targets (and add event handlers) manually.
-			*/
-		document.querySelectorAll(Extracts.contentContainersSelector).forEach(container => {
-			Extracts.addTargetsWithin(container);
-			Extracts.setUpAnnotationLoadEventWithin(container);
-		});
-		GW.notificationCenter.addHandlerForEvent("GW.contentDidLoad", Extracts.signalAnnotationLoaded);
-		GW.notificationCenter.addHandlerForEvent("GW.contentLoadDidFail", Extracts.signalAnnotationLoadFailed);
-
-		//  Remove the icon/button.
-		Extracts.removePopupsDisabledShowPopupOptionsDialogButton();
-	};
-
-	Extracts.showPopupOptionsDialog = () => {
-		GWLog("Extracts.showPopupOptionsDialog", "extracts.js", 1);
-
-		Popups.hidePopupContainer();
-
-		//  Create the options dialog, if needed.
-		if (Extracts.popupOptionsDialog == null) {
-			let enabledRadioButtonChecked = Extracts.popupsEnabled() ? `checked=""` : ``;
-			let disabledRadioButtonChecked = Extracts.popupsEnabled() ? `` : `checked=""`;
-			Extracts.popupOptionsDialog = addUIElement(`<div id='popup-options-dialog' style='display: none;'><div>` + 
-				`<h1>Popups</h1>` + 
-				`<form class="option-buttons">
-					<label>
-						<input class="popups-enable" name="popups-enable-status" ${enabledRadioButtonChecked} value="enabled" type="radio">
-						<span class='button-text'>
-							<span class='label'>Enable</span>
-							<span class='explanation'>Show popups when hovering over annotated links.</span>
-						</span>
-					</label>
-					<label>
-						<input class="popups-disable" name="popups-enable-status" ${disabledRadioButtonChecked} value="disabled" type="radio">
-						<span class='button-text'>
-							<span class='label'>Disable</span>
-							<span class='explanation'>Don’t show popups.</span>
-						</span>
-					</label>
-				</form>` +
-				`<button type='button' class='close-button'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/></svg></button>` + 
-				`<button type='button' class='save-button'>Save</button>` + 
-				`</div></div>`);
-			//  Add event listeners.
-			requestAnimationFrame(() => {
-				Extracts.popupOptionsDialog.addEventListener("click", Extracts.popupOptionsDialogBackdropClicked = (event) => {
-					GWLog("Extracts.popupOptionsDialogBackdropClicked", "extracts.js", 2);
-
-					event.stopPropagation();
-					Extracts.fadePopupOptionsDialog();
-				});
-				Extracts.popupOptionsDialog.firstElementChild.addEventListener("click", Extracts.popupOptionsDialogClicked = (event) => {
-					GWLog("Extracts.popupOptionsDialogClicked", "extracts.js", 3);
-
-					event.stopPropagation();
-				});
-				Extracts.popupOptionsDialog.querySelector("button.close-button").addActivateEvent(Extracts.popupOptionsDialogCloseButtonClicked = (event) => {
-					GWLog("Extracts.popupOptionsDialogCloseButtonClicked", "extracts.js", 2);
-
-					Extracts.fadePopupOptionsDialog();
-				});
-				Extracts.popupOptionsDialog.querySelector("button.save-button").addActivateEvent(Extracts.popupOptionsDialogSaveButtonClicked = (event) => {
-					GWLog("Extracts.popupOptionsDialogSaveButtonClicked", "extracts.js", 2);
-
-					Extracts.savePopupOptions();
-					Extracts.fadePopupOptionsDialog();
-				});
-				document.addEventListener("keyup", Extracts.popupOptionsDialogKeyUp = (event) => {
-					GWLog("Extracts.popupOptionsDialogKeyUp", "extracts.js", 3);
-
-					let allowedKeys = [ "Escape", "Esc" ];
-					if (!allowedKeys.includes(event.key) || Extracts.popupOptionsDialog.style.display == "none")
-						return;
-
-					event.preventDefault();
-					Extracts.fadePopupOptionsDialog();
-				});
-			});
-		} else {
-			Extracts.popupOptionsDialog.querySelector(Extracts.popupsEnabled() ? "input.popups-enable" : "input.popups-disable").checked = true;
-		}
-
-		//  Un-hide the options dialog.
-		Extracts.popupOptionsDialog.style.display = "";
-	};
-
-	Extracts.fadePopupOptionsDialog = () => {
-		GWLog("Extracts.fadePopupOptionsDialog", "extracts.js", 1);
-
-		Extracts.popupOptionsDialog.classList.toggle("fading", true);
-		setTimeout(Extracts.hidePopupOptionsDialog, 150);
-	};
-
-	Extracts.hidePopupOptionsDialog = () => {
-		GWLog("Extracts.hidePopupOptionsDialog", "extracts.js", 1);
-
-		Popups.unhidePopupContainer();
-
-		if (Extracts.popupOptionsDialog != null) {
-			Extracts.popupOptionsDialog.style.display = "none";
-			Extracts.popupOptionsDialog.classList.toggle("fading", false);
-		}
-	};
-
-	Extracts.savePopupOptions = () => {
-		GWLog("Extracts.savePopupOptions", "extracts.js", 1);
-
-		if (Extracts.popupOptionsDialog.querySelector("input.popups-enable").checked)
-			Extracts.enableExtractPopups();
-		else
-			Extracts.disableExtractPopups();
-	};
-
-	Extracts.injectPopupsDisabledShowPopupOptionsDialogButton = () => {
-		GWLog("Extracts.injectPopupsDisabledShowPopupOptionsDialogButton", "extracts.js", 1);
-
-		if (Extracts.popupsDisabledShowPopupOptionsDialogButton != null)
-			return;
-
-		//  Create and inject the button.
-		Extracts.popupsDisabledShowPopupOptionsDialogButton = addUIElement(`<div id="popups-disabled-show-popup-options-dialog-button">` + 
-			`<button type="button" title="Show options for link popups. (Popups are currently disabled.)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M64 352c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L368 416h2L64 179.5V352zm569.8 106.1l-77.6-60c12.1-11.6 19.8-28 19.8-46.1V64c0-35.3-28.7-64-64-64H128c-21.5 0-40.4 10.7-52 27L45.5 3.4C38.5-2 28.5-.8 23 6.2L3.4 31.4c-5.4 7-4.2 17 2.8 22.4l588.4 454.7c7 5.4 17 4.2 22.5-2.8l19.6-25.3c5.4-6.8 4.1-16.9-2.9-22.3z"/></svg></button>` + `</div>`);
-
-		//  Add event listener.
-		requestAnimationFrame(() => {
-			Extracts.popupsDisabledShowPopupOptionsDialogButton.querySelector("button").addActivateEvent(Extracts.popupsDisabledShowPopupOptionsDialogButtonClicked = (event) => {
-				GWLog("Extracts.popupsDisabledShowPopupOptionsDialogButtonClicked", "extracts.js", 2);
-
-				event.stopPropagation();
-
-				Extracts.showPopupOptionsDialog();
-			});
-		});
-
-		//	Show/hide the button on scroll up/down.
-		addScrollListener(Extracts.updatePopupsDisabledShowPopupOptionsDialogButtonVisibility, 
-			"updatePopupsDisabledShowPopupOptionsDialogButtonVisibilityScrollListener");
-	};
-
-	Extracts.updatePopupsDisabledShowPopupOptionsDialogButtonVisibility = (event) => {
-		GWLog("updatePopupsDisabledShowPopupOptionsDialogButtonVisibility", "rewrite.js", 3);
-
-		if (Extracts.popupsDisabledShowPopupOptionsDialogButton == null)
-			return;
-
-		// Hide button when scrolling a full page down.
-		if (GW.scrollState.unbrokenDownScrollDistance > window.innerHeight)
-			Extracts.popupsDisabledShowPopupOptionsDialogButton.classList.toggle("hidden", true);
-
-		// Show back-to-top link on ANY scroll up.
-		if (GW.scrollState.unbrokenUpScrollDistance > window.innerHeight || GW.scrollState.lastScrollTop <= 0)
-			Extracts.popupsDisabledShowPopupOptionsDialogButton.classList.toggle("hidden", false);
-	};
-
-	Extracts.removePopupsDisabledShowPopupOptionsDialogButton = () => {
-		GWLog("Extracts.removePopupsDisabledShowPopupOptionsDialogButton", "extracts.js", 1);
-
-		if (Extracts.popupsDisabledShowPopupOptionsDialogButton == null)
-			return;
-
-		Extracts.popupsDisabledShowPopupOptionsDialogButton.remove();
-		Extracts.popupsDisabledShowPopupOptionsDialogButton = null;
-	};
-}
-
-//  Inject “popups disabled” icon/button, if need be.
-if (!Extracts.popupsEnabled())
-	Extracts.injectPopupsDisabledShowPopupOptionsDialogButton();
+			processing of targets manually.
+		 */
+		Extracts.processTargetsInContainer(Extracts.rootDocument);
+	},
+};

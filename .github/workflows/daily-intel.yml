@@ -1,0 +1,43 @@
+name: Daily Intel Generator
+
+on:
+  schedule:
+    # 每天北京时间 08:00 运行 (UTC 00:00)
+    - cron: '0 0 * * *'
+  
+  # 允许手动触发
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install feedparser requests python-dotenv
+    
+    - name: Generate Daily Intel
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+      run: |
+        cd scripts
+        python daily-intel-pipeline.py
+    
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add _posts/
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Add Daily Intel - $(date +%Y-%m-%d)" && git push)

@@ -1,0 +1,47 @@
+# 要删除的冗余文件列表
+
+## 冗余文档（15个）
+ANNOTATION_GUIDE.md
+CONTRIBUTING.md
+CONTRIBUTORS.md
+DATA-SOURCES.md
+DEPLOY.md
+DEPLOYMENT.md
+HAKYLL_COMPILE_GUIDE.md
+NEWSLETTER_WORKFLOW.md
+QUICKSTART.md
+README.md
+SECURITY.md
+一分钟开始.md
+开始使用.md
+开源部署指南.md
+快速指南.md
+快速编译指南.md
+知识关联说明.md
+编译命令.md
+项目总结.md
+
+## 模板/示范文件（7个）
+gwen-net-index模版.md
+gwern-net-design.md
+hacker-podcast-analysis.md
+temp_annotation_section.md
+首页.md
+daily-intel-pipeline-README.m
+Feed.hs
+
+## 冗余Python脚本（8个）
+daily-intel-pipeline.py
+daily-intel-pipeline-enhanced.py
+daily_intel_enhanced.py
+content_enhancer.py
+hn_comment_analyzer.py
+fetcher.py
+summarizer.py
+main.py
+daily_newsletter_page.py
+
+## 转换脚本和其他（3个）
+convert_to_page.py
+convert_all_posts.sh
+markdown-lint.sh

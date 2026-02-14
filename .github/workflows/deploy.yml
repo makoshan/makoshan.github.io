@@ -1,0 +1,105 @@
+name: 部署 Daily Intel
+
+on:
+  # 每天 08:00 UTC+8 (00:00 UTC) 自动运行
+  schedule:
+    - cron: '0 0 * * *'
+  
+  # 手动触发
+  workflow_dispatch:
+  
+  # Push 到 main 分支时触发
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+      - '**.page'
+      - '.github/workflows/deploy.yml'
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. 检出代码
+      - name: 检出仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史，用于 git 操作
+      
+      # 2. 设置 Python 环境
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      # 3. 安装 Python 依赖
+      - name: 安装依赖
+        run: |
+          pip install feedparser requests python-dotenv beautifulsoup4
+      
+      # 4. 生成 Newsletter
+      - name: 生成 Newsletter
+        run: |
+          python scripts/daily_newsletter_page.py
+        env:
+          TZ: Asia/Shanghai
+      
+      # 5. 设置 Haskell 环境
+      - name: 设置 Haskell
+        uses: haskell-actions/setup@v2
+        with:
+          ghc-version: '9.4.8'
+          cabal-version: '3.10.2.0'
+      
+      # 6. 缓存 Cabal 依赖
+      - name: 缓存 Cabal
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cabal/packages
+            ~/.cabal/store
+            dist-newstyle
+          key: ${{ runner.os }}-cabal-${{ hashFiles('**/*.cabal') }}
+          restore-keys: |
+            ${{ runner.os }}-cabal-
+      
+      # 7. 编译 Hakyll
+      - name: 编译 Hakyll 站点
+        run: |
+          cd build
+          cabal update
+          cabal build
+          cabal run hakyll -- clean
+          cabal run hakyll -- build
+      
+      # 8. 部署到 GitHub Pages
+      - name: 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: '🚀 部署: ${{ github.event.head_commit.message }}'
+      
+      # 9. 提交新生成的 Newsletter (如果有)
+      - name: 提交 Newsletter
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # 添加新生成的文件
+          git add newsletter/*.page
+          git add newsletter/topics.json
+          
+          # 检查是否有变更
+          if git diff --staged --quiet; then
+            echo "没有新的 Newsletter 生成"
+          else
+            git commit -m "📰 自动生成 Newsletter $(date +'%Y-%m-%d')"
+            git push
+          fi

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomSearchEngine id="1eorkzz2gp4" creator="009114923999563836576" keywords="anime manga wikipedia news review reviews criticism reliable sources " language="en" encoding="UTF-8">
+  <Title>Wikipedia RSs for anime/manga</Title>
+  <Description>Runs site searches on everything in http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Anime_and_manga/Online_reliable_sources
+and other mainstream sources (&gt;341 domains). Includes a thorough blacklist of &gt;4202 domains.
+
+For video game searches, https://www.google.com/cse/home?cx=003516479746865699832:leawcwkqifq may be useful. (I do not maintain it.)
+
+This CSE is maintained by gwern (http://www.gwern.net). The exported black/whitelist of this CSE is available at http://www.gwern.net/docs/gwern-google-cse.xml and is synced every 3 months, for those who wish to debug it or create their own version.</Description>
+  <Context>
+    <BackgroundLabels>
+      <Label name="_cse_1eorkzz2gp4" mode="BOOST" />
+      <Label name="_cse_exclude_1eorkzz2gp4" mode="ELIMINATE" />
+    </BackgroundLabels>
+  </Context>
+  <LookAndFeel code="4" nonprofit="false" googlebranding="watermark" element_layout="1" theme="2" custom_theme="false" text_font="Arial, sans-serif" enable_cse_thumbnail="true" ads_layout="1">
+    <Colors url="#000000" background="#FFFFFF" border="#FFFFFF" title="#CC0000" text="#333333" visited="#CC0000" title_hover="#CC0000" title_active="#777777" />
+    <Promotions title_color="#0000CC" title_visited_color="#0000CC" url_color="#00CC00" background_color="#E6E6E6" border_color="#CCCCCC" snippet_color="#333333" title_hover_color="#CC0000" title_active_color="#00CC00" />
+    <SearchControls input_border_color="#777777" button_border_color="#333333" button_background_color="#333333" tab_border_color="#777777" tab_background_color="#777777" tab_selected_border_color="#333333" tab_selected_background_color="#333333" />
+    <Results border_color="#FFFFFF" border_hover_color="#000000" background_color="#FFFFFF" background_hover_color="#FFFFFF" ads_background_color="#EEEEEE" ads_border_color="#EEEEEE" />
+  </LookAndFeel>
+  <AdSense />
+  <EnterpriseAccount />
+  <commerce_search_security_setting />
+  <autocomplete_settings />
+</CustomSearchEngine>

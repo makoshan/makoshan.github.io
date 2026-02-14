@@ -1,19 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Hakyll
+_cache/
+dist/
+dist-newstyle/
+.stack-work/
+*.hi
+*.o
+hakyll
+
+# Cabal
+cabal.project.local
+cabal.project.local~
+.ghc.environment.*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+
+# Temporary
+tmp/
+temp/
+*.tmp
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Git
+*.orig
+
+# Build artifacts
+*.exe
+static/build/convert
+metadata/annotation/
+metadata/annotations/
+metadata/auto.gtx
 metadata/auto.yaml
 metadata/archive.hs
-metadata/annotations/http%3A%2F%2Fcogprints.org%2F772%2F3%2F152.pdf%23page%3D8.html
-metadata/annotations/http%3A%2F%2Fcogprints.org%2F772%2F3%2F152.pdf.html
-**\.png-768px\.png
-**\.jpg-768px\.jpg
-.DS_Store
-**.o
-**.hi
-static/build/hakyll
-static/build/generateDirectory
-static/build/generateBacklinks
-static/build/generateLinkBibliography
-static/build/link-extractor
-static/build/link-suggester
-static/build/generateSimilar
-static/build/preprocess-markdown
-_cache/
-_site/
+index.generated.page
+
+# Build output
+_site_deploy/
+
+# Newsletter specific - keep sources, ignore temp
+newsletter/*.html
+newsletter/temp/
+
+# Keep these
+!newsletter/*.page
+!newsletter/*.json
+!newsletter/*.md
+
+# Claude Code
+.claude/

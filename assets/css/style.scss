@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+// 导入主题变量
+$primary: #667eea;
+$primary-dark: #5a67d8;
+$accent: #f093fb;
+
+// 自定义样式
+.highlight {
+  background: linear-gradient(120deg, rgba(102, 126, 234, 0.2) 0%, rgba(240, 147, 251, 0.2) 100%);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}

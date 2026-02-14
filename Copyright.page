@@ -1,0 +1,124 @@
+---
+title: 反对版权
+description: 版权被认为是自相矛盾的、不连贯的、有害的
+created: 26 Sep 2008
+tags: philosophy, politics, computer science
+status: finished
+belief: possible
+...
+
+版权法应用于技术时，最棘手的方面之一在于后者使得做一些事情成为可能——甚至*鼓励*这样做——而这些事情暴露了前者在智识上的不连贯性；版权不过是一套为已经过时的经济条件而演变出来的临时规则和惯例，用以实现某些社会期望的目的（也可以因其失败而被批判或废除）。如果我们无法获得版权的正确[本体论](!Wikipedia)，那么讨论注定将徒劳无功^[例如，如果你承认版权作为一项道德权利而存在，那么你就立即接受了*另一项*道德权利——言论自由——的废除；这本质上就内含于版权的概念之中，版权不过是对他人言论施加限制而已。]。许多人深受错觉之苦，以为版权不仅仅如此，以为版权在某种程度上是客观的，甚至是某种真正的道德人权（想想法语中的"_[droit d'auteur](!Wikipedia)_"，即所谓的["*精神*权利"](!Wikipedia "Moral rights (copyright law)")）[^moral]，拥有与其他权利相同的属性，例如永续性[^Helprin]。这是完全错误的。信息有其历史，但它本身并不附带任何固有的版权。
+
+[^moral]:  引自 [Stephen Breyer](!Wikipedia) 在 2012 年 [Golan v. Holder](http://www.supremecourt.gov/opinions/11pdf/10-545.pdf) 案中的反对意见（[维基百科](!Wikipedia "Golan v. Holder")）：
+
+    > Jefferson eventually came to agree with Madison, supporting a limited conferral of monopoly rights but only "as *an encouragement to men to pursue ideas which may produce utility*." Letter from Thomas Jefferson to Isaac McPherson (Aug. 13, 1813), in 6 Papers of Thomas Jefferson, at 379, 383 (J. Looney ed. 2009) (emphasis added).
+    >
+    > This utilitarian view of copyrights and patents, embraced by Jefferson and Madison, stands in contrast to the "natural rights" view underlying much of continental European copyright law-a view that the English booksellers promoted in an effort to limit their losses following the enactment of the [Statute of Anne](!Wikipedia) and that in part motivated the enactment of some of the colonial statutes. Patterson 158-179, 183-192. Premised on the idea that an author or inventor has an inherent right to the fruits of his labor, it mythically stems from a legendary 6th-century statement of King Diarmed "'to every cow her calf, and accordingly to every book its copy.'" A. Birrell, Seven Lectures on the Law and History of Copy right in Books 42 (1899). That view, though perhaps reflected in the Court's opinion, _ante_, at 30, runs contrary to the more utilitarian views that influenced the writing of our own Constitution's [Copyright Clause](!Wikipedia). See S. Ricketson, [_The Berne Convention for the Protection of Literary and Artistic Works: 1886-1986_](http://www.amazon.com/Convention-Protection-Literary-Artistic-1886-1986/dp/085121603X/), pp. 5-6 (1987) (The first French copyright laws "placed authors' rights on a more elevated basis than the Act of Anne had done," on the understanding that they were "simply according formal recognition to what was already inherent in the 'very nature of things' "); S. Stewart, International Copyright and Neighbouring Rights 6-7 (2d ed. 1989) (describing the European system of _droit d'auteur_).
+[^Helprin]: [Mark Helprin](!Wikipedia) 的社论 ["A Great Idea Lives Forever. Shouldn't Its Copyright?"](http://www.nytimes.com/2007/05/20/opinion/20helprin.html)（Lessig 的[书评](http://www.lessig.org/2009/05/the-solipsist-and-the-internet/ "The Solipsist and the Internet (a review of Helprin's _Digital Barbarism_)")）是这类观点的标准范例之一。他一开始就声称知识产权在道德上等同于其他形式的财产，因此在道德上受到同等的保护：
+
+    > What if, after you had paid the taxes on earnings with which you built a house, sales taxes on the materials, real estate taxes during your life, and inheritance taxes at your death, the government would eventually commandeer it entirely? This does not happen in our society ... to houses. Or to businesses. Were you to have ushered through the many gates of taxation a flour mill, travel agency or newspaper, they would not suffer total confiscation.
+
+    当然，作者可以永久拥有他的作品——那个物理载体。政府并未对作者的手稿或电脑施以"全面没收"。相反，被没收的是要求政府在其管辖范围内，以物理强制和暴力手段，执行某些关于信息的做法的能力。这与财产有些不同。Helprin 随后论及版权的经济理据，却立刻诉诸超越任何单纯法律或经济收益的伦理关切：
+
+    > It is, then, for the public good. But it might also be for the public good were Congress to allow the enslavement of foreign captives and their descendants (this was tried); the seizure of Bill Gates's bankbook; or the ruthless suppression of Alec Baldwin. You can always make a case for the public interest if you are willing to exclude from common equity those whose rights you seek to abridge. But we don't operate that way, mostly...Congress is free to extend at will the term of copyright. It last did so in 1998, and should do so again, as far as it can throw. Would it not be just and fair for those who try to extract a living from the uncertain arts of writing and composing to be freed from a form of confiscation not visited upon anyone else? The answer is obvious, and transcends even justice. No good case exists for the inequality of real and intellectual property, because no good case can exist for treating with special disfavor the work of the spirit and the mind.
+
+    引自 Helprin 的 ["In Defense of The Book: A reply to the critics of _Digital Barbarism_"](http://web.archive.org/web/20121122031147/http://www.nationalreview.com/nrd/article/?q=OWUzNTRjMzZlN2NkN2ZhYjFkZTRiM2RjZDMzNDc1NmM)：
+
+    > Copyright was the sometimes sparkling, controversial fuse I used as an armature for a much expanded argument in regard to the relationship of man and machine, in which I attacked directly into the assault of modernism, collectivism, militant atheism, utilitarianism, mass conformity, and like things that are poison to the natural pace and requirements of the soul, that reify what those who say there is no soul believe is left, and that, in a headlong rush to fashion man solely after his own conceptions, are succeeding. The greater the success of this tendency, however, the unhappier are its adherents and the more they seek after their unavailing addictions, which, like the explanation for nymphomania, is not surprising. It is especially true in regard to the belief that happiness and salvation can be found in gadgets: i.e., toy worship. I addressed this. I defended property as a moral necessity of liberty. I attempted to reclaim Jefferson from the presumptuous embrace of the copyleft. (Even the docents at Monticello misinterpret Jefferson, failing to recognize his deep and abiding love of the divine order.) And I advanced a proposition to which the critics of copyright have been made allergic by their collectivist education - that the great achievement of Western civilization is the evolution from corporate to individual right, from man defined, privileged, or oppressed by cast, clan, guild, ethnicity, race, sex, and creed, to the individual's rights and privileges that once were the province only of kings
+    >
+    > But this is its concluding passage:
+    >
+    >> 'The new, digital barbarism is, in its language, comportment, thoughtlessness, and obeisance to force and power, very much like the old. And like the old, and every form of tyranny, hard or soft, it is most vulnerable to a bright light shone upon it. To call it for what it is, to examine it while paying no heed to its rich bribes and powerful coercions, to contrast it to what it presumes to replace, is to begin the long fight against it.
+    >>
+    >> Very clearly, the choice is between the preeminence of the individual or of the collective, of improvisation or of routine, of the soul or of the machine. It is a choice that perhaps you have already made, without knowing it. Or perhaps it has been made for you. But it is always possible to opt in or out, because your affirmations are your own, the court of judgement your mind and heart. These are free, and you are the sovereign, always. Choose.'
+
+这个问题已经以一些[严肃的](http://ansuz.sooke.bc.ca/lawpoli/colour/2004061001.php)和[幽默的](http://www.qwantz.com/archive/000353.html)方式被阐述过，但我们可以从理论的角度以一种有趣的方式来探讨它。
+
+# 无损压缩
+
+计算机科学中最优雅的思想之一，是证明了无损压缩不可能压缩所有文件。也就是说，虽然像 ZIP 这样的算法能压缩大量文件——或许能将原文件大小压缩到很小的比例——但它必然无法压缩许多其他文件，而且对于它所缩小的每一个文件，它都会使另一些文件变大。这里的一般原则是 [TANSTAAFL](!Wikipedia)：
+
+> "There ain't no such thing as a free lunch."（天下没有免费的午餐。）
+
+压缩没有免费的午餐。通常对此的证明会援引[鸽巢原理](!Wikipedia "Pigeonhole Principle")；证明过程如下：每个文件必须映射到唯一的更短文件，而那个更短的文件必须唯一地映射回更长的文件（如果更短的文件不能做到这一点，那你就发明了一种极其无用的压缩算法——一种不支持解压缩的算法）。
+
+但问题在于，长字符串比短字符串有更多的"空间"（可能性）。考虑一个简单的案例：我们有一个介于 0 到 1000 之间的数字，我们希望压缩它。我们的压缩输出在 0 到 10 之间——显然更短了，对吧？但假设我们把 1000 压缩到 10。那 900-999 这些数字压缩到哪里去了？它们都被压缩到 9 吗？但那样的话，给出一个 9，我们完全不知道它应该被展开成什么。也许 999 变成 9，998 变成 8，997 变成 7，以此类推——但只过几个数字我们就用完了所有个位数，我们又面临同样的问题。
+
+从根本上说，你不能把 10 磅的东西装进一个 5 磅的袋子里。天下没有免费的午餐。
+
+## 你一直在用那个词......
+
+上述论述似乎证明了无损压缩不可能实现，但我们知道我们确实在日常中做到了；那么它是如何运作的呢？好吧，我们已经证明了将一组长字符串无损地映射到一组更短子字符串是不可能的。答案是放宽"更短"的要求：我们可以让算法将一个字符串"压缩"成一个*更长*的字符串。现在鸽巢原理对我们有利了——在更长的字符串中，有足够的空间容纳所有待压缩的字符串。而且碰巧，对于某些压缩算法，人们可以设计出"病态"的输入，使得一个短输入解压缩^[这应该只适用于解压缩——只有不称职的压缩算法才会将一个小输入*压缩*为一个大输出，因为算法的格式可以以一个比特开头来指示后面的内容是否被压缩，如果输出大于输入，就根本不进行压缩。那个额外的比特使文件变大，因此不会引起任何关于鸽巢原理的问题。]成一个大得多的输出——有[这样的文件](!Wikipedia "Zip bomb")可供使用，经验上证明了这种可能性。
+
+使无损压缩不仅仅是一个数学趣题的原因在于，我们可以选择哪些字符串集合将最终有效地变小，而哪些字符串集合将被打入臃肿的冷宫。
+
+## 全部压缩，用户自会辨别
+
+天下没有免费的午餐是铁律，但宇宙通常接受以垃圾来支付。我们人类实际上并不想压缩所有可能的字符串，而只是压缩我们真正创造的那些。这类似于编程语言中的静态类型；类型检查可能会拒绝许多正确的程序，但我们并不真正在意，因为那些不是我们真正想要运行的程序。或者说，高级编程语言将我们与机器隔离开来，使得如果用汇编语言编程可以做的各种技巧变得不可能；但我们中大多数人实际上并不想做那些技巧，并且乐意用那种能力换取便携性等便利。或者我们欣然用手动内存管理（连同它所赋予的一切能力）换取便利性和正确性。
+
+这是一个强大的概念，适用于计算机科学和工程中的许多权衡取舍，但我们可以从不同的角度来看待这个问题——这个角度对版权法中所见的那种关于知识和创造力的简单化观点提出了质疑。首先，我们可以看看[时空权衡](!Wikipedia "space-time tradeoff")：一个快速的算法只是将输入数据（如 WAV）本质上视为输出，而一个消除了基本冗余的更小输入将需要额外的处理，运行时间更长。这是一个常见的现象，有一些极端的例子[^size]，但我们可以看一个更有意义的权衡。
+
+[^size]: 我遇到过的最极端的时空权衡，远超任何[记忆化](!Wikipedia "memoization")或[动态规划](!Wikipedia "dynamic programming")的例子，是一个纯理论性的例子；来自 [Bennett 1988](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.70.4331&rep=rep1&type=pdf "Logical Depth and Physical Complexity")：
+
+    > The tradeoff between conciseness of representation and ease of decoding is illustrated in an extreme form by the information required to solve the [halting problem](!Wikipedia). One standard representation of this information is as an [infinite binary sequence K0](!Wikipedia "Chaitin's constant") whose i'th bit is 0 or 1 according to whether the i'th program halts. This sequence is clearly redundant, because many instances of the halting problem are easily solvable or reducible to other instances. Indeed, K0 is far more redundant than this superficial evidence might indicate. Barzdin [2] showed that this information can be compressed to the logarithm of its original bulk, but *no concisely encoded representation of it can be decoded in recursively bounded time*.
+
+    [复杂性类](!Wikipedia "Complexity classes")如 [NP-hard](!Wikipedia)，在复杂性层级中已经相当高了，是程序员们口中难以处理和徒劳的代名词。但对 K0 的极端空间高效表示的解码是一个*如此*缓慢的过程，它甚至不属于任何正常的复杂性类！
+
+回想一下无损算法。它以某种方式选择压缩"有趣的"字符串，而让无趣的字符串承受后果。它是如何做到的？它不可能是随机进行的，而且做一些"显而易见的"事情，比如减少重复，当然不会让你编写一个能将 30 兆字节的 [WAV](!Wikipedia) 文件压缩到 5 兆字节的 [FLAC](!Wikipedia) 算法。
+
+## 更聪明地工作，而非更努力地工作
+
+> "An efficient program is an exercise in logical brinkmanship."（高效程序是逻辑冒险的一种练习。）--B.W. Lampson[^Dijkstra]
+
+[^Dijkstra]: 这是 Lampson 1983 年的 ["Hints for computer system design"](http://users.ece.utexas.edu/~adnan/pop-05/lampson-system-design.pdf) 对 Dijkstra 在 ["EWD 709: My hopes of computing science"](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD07xx/EWD709.html) 中的评论的转述：
+
+    > The hope is that transformations from a modest library will provide a path from a naïve, inefficient but obviously correct program to a sophisticated efficient solution. I have seen how via program transformations striking gains in efficiency have been obtained by avoiding recomputations of the same intermediate results, even in situations in which this possibility —note that the intermediate results are never part of the original problem statement!— was, at first sight, surprising...I am afraid that great hopes of program transformations can only be based on what seems to me an underestimation of the logical brinkmanship that is required for the justification of really efficient algorithms. It is certainly true, that each program transformation embodies a theorem, but are these the theorems that could contribute significantly to the body of knowledge and understanding that would give us maturity? I doubt, for many of them are too trivial and too much tied to program notation.
+
+答案是算法对一类文件很*聪明*。有人花了大量精力去思考在 WAV 文件中——而且只在 WAV 文件中——可能找到什么样的规律性，以及如何预测和利用它们。正如我们程序员喜欢说的，算法体现了领域特定知识。比如一个 GZIP 算法，在运行时隐含地做出一整套关于其输入的假设——重复是以块的形式出现的，它是低熵的，它在整体上是相似的，它很可能是英语类语言的文本（这意味着 GZIP 可以利用的又一批规律性），或者它是二进制的，等等。这些烘焙在算法中的假设共同构成了一种初级的智能。
+
+算法之所以能聪明地压缩，是因为它在所有可能字符串的一个小子域上运行。如果域进一步缩小，就可以做出更多假设；考虑一下 [Marcus Hutter 压缩挑战](http://prize.hutter1.net/)中顶尖选手所达到的压缩比。主题领域非常狭窄：高度程式化且格式规范的、人工生成的英文文本，使用 MediaWiki 标记，关于百科全书式的主题。在这里，算法几乎真正展现出智能以挤出更多的空间节省，借鉴了人工智能技术如神经网络。
+
+如果上述论证不够令人信服，那就去看看更广泛的无损算法。视频编解码器以小波变换和帧的方式思考；它们甚至不屑于查看任意的流。音频编解码器努力模拟人耳。图像压缩方案建立在独特的人类假设之上，比如三色视觉。
+
+那么，我们一致认为一个好的压缩算法体现了关于主题内容的知识或信息。这个命题似乎是不容置疑的。上述论述都是非形式化的，但我相信其中没有什么不能在需要时转化为严格的数学证明。
+
+# 压缩需要解释
+
+但这个命题应该让有版权意识的人隐隐感到不安。内容取决于解释？后者与前者密不可分？这感觉很危险。但情况会更糟。
+
+## 代码即数据，数据即代码
+
+假设我们有一部受版权保护的电影，[_Titanic_（泰坦尼克号）](!Wikipedia "Titanic (1997 film)")。我们正在用 DVD 播放器或电脑观看它，MPEG4 文件正在播放，一切正常。现在，显然如果播放器不通过专门的 MPEG4 算法来解释文件，它就无法播放这个文件。毕竟，任何其他算法都只会把事情搞得一团糟；所以算法包含了必要的信息。同样显然的是，文件本身也包含了必要的信息，因为我们不能简单地告诉 DVD 播放器播放_泰坦尼克号_而不拥有那个非常具体的数千兆字节的文件——给 MPEG4 算法输入一个随机文件或根本不输入文件同样只会制造一团混乱。因此，算法和文件都包含了对最终受版权保护的实际视听体验所必需的信息。
+
+没有什么能阻止我们将算法和文件融合在一起。在计算机科学中有一句老话："代码即数据，数据即代码"。每台计算机都依赖于这个事实。我们可以轻松地得出一个 4 或 5 千兆字节的可执行文件，当它独自运行时，就会产生_泰坦尼克号_。将所需数据存储在程序中的一般方法是一种常见的编程技术，因为它使安装更简单。
+
+上述论述的要点是，构成_泰坦尼克号_的信息是可移动的；它可以在任何时候从文件转移到算法——反之亦然。
+
+如果我们愿意，我们可以将大部分信息从算法挤压到文件中；一个例子是 WAV 音频文件，它基本上是扬声器的原始输入——几乎不需要解释（与小得多的 FLAC 文件相比，后者需要大量的算法处理）。对于_泰坦尼克号_的 MPEG4 文件也可以做类似的事情。一台电视是 n 像素乘以 n，每秒渲染 n 次，所以一个完全原始且几乎未经解释的文件将是 n^3^ 个像素的有限总和。这证明了频谱的一端是可能的，即文件包含几乎所有信息，而算法包含极少信息。
+
+## 思想实验
+
+频谱的另一端是算法拥有大部分信息而文件只有极少信息。我们如何构造这样一种情况？
+
+好吧，考虑最退化的例子：一个在其内部包含_泰坦尼克号_帧数组的算法。这个可执行文件需要 0 比特的输入。一个不那么极端的例子：可执行文件持有_泰坦尼克号_的每一帧，从 1 编号到（比如说）100 万。那么输入只需要是 `1,2,3,4..1000000`。当我们在适当的输入上运行该算法时，瞧——_泰坦尼克号_出现了！
+
+你说这很荒谬，什么也没证明。好吧，如果换成 400 万个四分之一帧呢，你满意吗？不满意？也许 1600 万个十六分之一帧将足够不像_泰坦尼克号_了。如果这还不能让你满意，我愿意细到像素级别。值得注意的是，即使是像素级别版本的算法仍然可以编码所有其他电影！逐像素表达其他电影可能很笨拙（一帧将是一个几乎任意的序列，如 456788,67,89,189999,1001..20000），但这是可以做到的。
+
+细心的读者应该已经注意到了，但这个假想的_泰坦尼克号_算法恰好证明了我之前关于"天下没有免费的午餐"和算法拥有知识的观点；这个算法对_泰坦尼克号_了解得令人难以置信地多，因此_泰坦尼克号_获得了极短的压缩输出；但它仍然让我们能够编码其他所有电影——只是输出更长。
+
+## 版权的结构与解释
+
+现在从版权角度考虑这个算法频谱。在标准 MPEG4 算法和电影文件的情况下，我认为版权明显只属于电影文件。没有人会提出相反的意见（软件专利是一个正交的问题）。算法对电影有一点了解，了解的是人类制作的电影，而不是所有可能电影的集合——这不过是一个可疑的学术趣谈。同样，在我们的_泰坦尼克号_算法和那个仅仅是从 1 到 100 万的整数列表的文件的情况下，所有的版权显然适用于算法——毕竟，人们不能对像 1 或 100 万这样的自然事实主张版权，而且我很难看出像 1 到 100 万这样的简单序列如何能被版权保护。
+
+但在这里我们遇到了一个滑坡问题！在我们两个案例之间的许多可能步骤中的每一步，都有一点信息从文件溜到算法中（或反之亦然）。坚持认为文件*总是*受版权保护的东西，或者算法*总是*受版权保护的东西——这都是站不住脚的——因为在任何一种情况下，我们都可以产生一个算法或文件，常识告诉我们它*必须*是受版权保护的对象。但我们无法确定它们在哪里交换了角色。是在四分之三的位置？还是在一半的位置？
+
+但在一半的位置上，两者都不是_泰坦尼克号_，而且两者仍然可以用于其他事物。那个处于中间位置的算法可以合理地用于压缩另一部航海题材的作品，比如[_Horatio Hornblower_](!Wikipedia "Horatio Hornblower#Screen adaptations")的剧集——如果我们已经细化到操作小像素块的层面，整个算法中可能没有一个可识别的_泰坦尼克号_特征，但有大量有用的"蓝色"或"黑色"块。这个滑坡问题并不像某些那么严重，因为我们可以加总电影的比特数（文件也许是 320 亿字节，可执行文件可能是几亿字节），并且知道可能的高效中间体数量必须等于或少于这个数；但 10 亿或 1000 亿个中间步骤仍然给我们带来了滑坡问题——我们如何合理地指定版权只在第 667,503,001 个比特处发生变化，而在之前的任何比特处都不变？
+
+# 一切昭然若揭
+
+没有任何有意义且非任意的线可以划定。版权是机器中一个不可分析的幽灵，迄今为止靠着法令和有限的人类（机器）能力维系着。在此之前这个问题很少出现，因为人类无法自由地改变我们的眼睛或耳朵进行多少解释，而且我们缺乏心理能力在极其详尽的文本和极其简略的、暗示性的语言之间自由选择；我们可以尝试，但数学胜过我们，能够产生相差数量级的程序/数据对，而我们的机器可以处理这些数学运算。
+
+但现在我们对信息等概念有了更好的理解，显然版权在其逻辑或道德依据上已不再可持续。维持版权只有实际的经济理由，而当前的版权制度显然未能实现这些目标。
+
+# 另见
+- [The Compression FAQ](http://www.faqs.org/faqs/compression-faq/)
