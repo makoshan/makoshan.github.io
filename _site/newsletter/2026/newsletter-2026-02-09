@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inlined head (no SSI): injected by Hakyll from static/include/inlined-head.html -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #aaa;
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popins-popin-box-shadow-color: #aaa;
+
+    --GW-popins-popin-title-bar-background-color: #fff;
+    --GW-popins-popin-title-bar-button-color: #777;
+
+    --GW-popins-popin-scrollbar-thumb-color: #ccc;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #999;
+
+    --GW-popins-popin-stack-counter-text-color: #fff;
+    --GW-popins-popin-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #ccc;
+	--GW-back-to-top-link-hover-color: #999;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #7c7c7c;
+    --GW-popins-popin-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popins-popin-box-shadow-color: #7c7c7c;
+
+    --GW-popins-popin-title-bar-background-color: #000;
+    --GW-popins-popin-title-bar-button-color: #a6a6a6;
+
+    --GW-popins-popin-scrollbar-thumb-color: #5c5c5c;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popins-popin-stack-counter-text-color: #000;
+    --GW-popins-popin-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #5c5c5c;
+	--GW-back-to-top-link-hover-color: #8b8b8b;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popins-popin-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+div.poem span.caesura-mark {
+	opacity: 0.3;
+}
+@media all and (max-width: 649px) {
+	div.poem span.caesura-mark {
+		opacity: 0.4;
+	}
+}
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1770514858">
+<script src="/static/js/head.js?v=1770514858"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1768170615" as="image">
+
+
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="每日科技情报 - 2026年02月09日">
+  <meta name="citation_title" content="每日科技情报 - 2026年02月09日">
+  <meta name="og:title" content="每日科技情报 - 2026年02月09日">
+  <meta name="twitter:title" content="每日科技情报 - 2026年02月09日">
+  <meta name="generator" content="https://github.com/gwern/gwern.net/">
+  <meta name="creator" content="gwern.net">
+  
+  <meta name="author" content="Gwern">
+  <meta name="citation_author" content="Gwern">
+  
+  <meta name="contact" content="https://gwern.net/me#contact">
+  <link rel="index" title="Gwern.net homepage" href="https://gwern.net/index">
+  <link href="https://gwern.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Gwern.net newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="gwern">
+  <meta name="twitter:site" content="gwern.net">
+  <meta name="og:site" content="gwern.net">
+  <meta name="og:type" content="article">
+  <meta name="description" content="每日科技情报。本期关注: AI, Cloud, Haskell, Programming, Python">
+  <meta name="og:description" content="每日科技情报。本期关注: AI, Cloud, Haskell, Programming, Python">
+  <meta property="og:image" content="https://gwern.net/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail text: the Gwern.net site logo, a logotype of a large blackletter fraktur capital letter 'G' on a white background.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content="">
+  <meta name="keywords" content="">
+  <meta name="dc.date.issued" content="09 Feb 2026">
+  
+  <meta name="citation_publication_date" content="09 Feb 2026">
+  <meta name="dcterms.modified" content="">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://gwern.net/newsletter/2026/newsletter-2026-02-09">
+  <meta name="citation_fulltext_html_url" content="https://gwern.net/newsletter/2026/newsletter-2026-02-09">
+  <meta name="og:url" content="https://gwern.net/newsletter/2026/newsletter-2026-02-09">
+  <link rel="alternate" type="text/markdown" href="https://gwern.net/newsletter/2026/newsletter-2026-02-09.md" title="Markdown source of ‘每日科技情报 - 2026年02月09日’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-newsletter-2026-newsletter-2026-02-09 dropcaps-de-zs">
+  <meta name="citation_fulltext_world_readable" content="">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>每日科技情报 - 2026年02月09日 · Gwern.net</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+
+  <!-- CSS for JS-disabled users: ensure that NoScripters know what they are missing even if they jump to a section & miss the warning at top/bottom. -->
+  <noscript>
+    <style>
+      #markdownBody #noscript-warning-header {
+          position: fixed; /* sticky */
+          top: 6px; /* at top */
+          width: 58%;
+          z-index: 99; /* Make sure it is on top */
+          background-color: #f8f8f8; /* Set a solid background color so legible while positioned over text */
+          border-color: var(--GW-abstract-border-color); /* Make look like theme-toggle/admonitions a bit more */
+          border-width: 6px 6px 6px 6px;
+          border-style: double;
+      }
+      #markdownBody #noscript-warning-header p { margin: 10px; }
+      nav#navbar { padding-top: 160px; } /* avoid overlap with page header */
+    </style>
+  </noscript>
+</head>
+
+<body class="page-newsletter-2026-newsletter-2026-02-09 dropcaps-de-zs page-created-recently">
+  <!-- Inlined asset links (no SSI): injected by Hakyll from static/include/inlined-asset-links.html -->
+  <link rel="stylesheet" href="/static/css/style.css?v=1770491984" media="print" onload="this.media=`all`">
+<script src="/static/js/script.js?v=1770491982" defer></script>
+
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <!-- Navbar (no SSI): injected by Hakyll from static/include/navbar.html -->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="design link-page link-annotated" href="/design" title="Design and implementation notes">Design</a>
+        <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="links link-page" href="/Links" title="Links page">Links</a>
+        <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+
+    <article>
+
+      <header>
+        <h1>每日科技情报 - 2026年02月09日</h1>
+      </header>
+
+      
+      <div class="markdownBody" id="page-metadata">
+          
+        <div class="page-description"><p>每日科技情报。本期关注: AI, Cloud, Haskell, Programming, Python</p></div>
+        <div class="page-metadata-fields">
+            
+            
+            <span class="page-status" title="Writing status of current page: ranges 'abandoned'/'notes'/'draft'/'in progress'/'finished'"><em><span class="completion-status" data-progress-percentage="100">finished</span></em></span>
+            <span class="page-confidence"><a href="/about#confidence-tags" title="Explanation of 'confidence' metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: 'certain'/'highly likely'/'likely'/'possible'/'unlikely'/'highly unlikely'/'remote'/'impossible')">certainty</a>: <em><span class="completion-status" data-progress-percentage="100">log</span></em></span>
+            <span class="page-importance"><a href="/about#importance-tags" title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>5</em></span>
+            
+            
+            
+        </div>
+      </div>
+      
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#每日科技情报-2026年02月09日-周一" id="toc-每日科技情报-2026年02月09日-周一">📊 每日科技情报 | 2026年02月09日 周一</a>
+<ul>
+<li><a href="#今日重点" id="toc-今日重点">🔥 今日重点</a>
+<ul>
+<li><a href="#用连字呈现-cistercian-数字的自定义字体实现扩展与可用性" id="toc-用连字呈现-cistercian-数字的自定义字体实现扩展与可用性">1. 🧮 用连字呈现 Cistercian 数字的自定义字体：实现、扩展与可用性</a></li>
+<li><a href="#matrix-获政府采用但联邦化运维与客户端痛点阻碍普及" id="toc-matrix-获政府采用但联邦化运维与客户端痛点阻碍普及">2. 😕 Matrix 获政府采用，但联邦化、运维与客户端痛点阻碍普及</a></li>
+<li><a href="#offpunk-30协作贡献gemini-可发现性与终端图片性能问题" id="toc-offpunk-30协作贡献gemini-可发现性与终端图片性能问题">3. 🔧 Offpunk 3.0：协作贡献、Gemini 可发现性与终端图片/性能问题</a></li>
+<li><a href="#基于-kim-stanley-robinson-火星三部曲的网页版火星殖民地-rpg致敬原著但界面与体验仍有诸多问题" id="toc-基于-kim-stanley-robinson-火星三部曲的网页版火星殖民地-rpg致敬原著但界面与体验仍有诸多问题">4. 🪐 基于 Kim Stanley Robinson 火星三部曲的网页版火星殖民地 RPG——致敬原著但界面与体验仍有诸多问题</a></li>
+<li><a href="#ai-让琐碎更快但放大难题提示架构与版权争论" id="toc-ai-让琐碎更快但放大难题提示架构与版权争论">5. 🛠️ AI 让琐碎更快但放大难题：提示、架构与版权争论</a></li>
+<li><a href="#算法寻找地球最长视线几何极限折射与高程数据局限" id="toc-算法寻找地球最长视线几何极限折射与高程数据局限">6. 🔭 算法寻找地球最长视线：几何极限、折射与高程数据局限</a></li>
+<li><a href="#游戏道路艺术曲线数学实现难题与城市设计抉择" id="toc-游戏道路艺术曲线数学实现难题与城市设计抉择">7. 🛣️ 游戏道路艺术：曲线数学、实现难题与城市设计抉择</a></li>
+<li><a href="#lispenaver用--替代括号的-lisp-实验引争议" id="toc-lispenaver用--替代括号的-lisp-实验引争议">8. 🤔 LispE（Naver）：用 ‘.’ 替代括号的 Lisp 实验引争议</a></li>
+<li><a href="#台积电在日本建先进-ai-晶圆厂供应链分散台湾硅盾与欧洲衰退的争论" id="toc-台积电在日本建先进-ai-晶圆厂供应链分散台湾硅盾与欧洲衰退的争论">9. 🛡️ 台积电在日本建先进 AI 晶圆厂：供应链分散、台湾“硅盾”与欧洲衰退的争论</a></li>
+<li><a href="#已签名引导程序绕过-uefi-secure-boot密钥管理与供应链风险" id="toc-已签名引导程序绕过-uefi-secure-boot密钥管理与供应链风险">10. ⚠️ 已签名引导程序绕过 UEFI Secure Boot：密钥管理与供应链风险</a></li>
+</ul></li>
+<li><a href="#数据来源" id="toc-数据来源">📡 数据来源</a></li>
+<li><a href="#newsletter-信息" id="toc-newsletter-信息">📮 Newsletter 信息</a></li>
+<li><a href="#导航" id="toc-导航">🧭 导航</a></li>
+</ul></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><section id="每日科技情报-2026年02月09日-周一" class="level1">
+<h1><a href="#每日科技情报-2026年02月09日-周一" title="Link to section: § &#39;📊 每日科技情报 | 2026年02月09日 周一&#39;">📊 每日科技情报 | 2026年02月09日 周一</a></h1>
+<blockquote>
+<p>不只是资讯，更有技术趋势与多元观点的碰撞</p>
+</blockquote>
+<p><strong>本期主题</strong>: #AI · #Cloud · #<a href="https://en.wikipedia.org/wiki/Haskell" id="_AC8VbUc5" class="link-modified-recently link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Haskell#bodyContent" title="Haskell">Haskell</a> · #Programming · #Python · #Rust · #Security · #Startup · #Web3</p>
+<div class="horizontal-rule-nth-1">
+<hr />
+</div>
+<section id="今日重点" class="level2">
+<h2><a href="#今日重点" title="Link to section: § &#39;🔥 今日重点&#39;">🔥 今日重点</a></h2>
+<section id="用连字呈现-cistercian-数字的自定义字体实现扩展与可用性" class="level3">
+<h3><a href="#用连字呈现-cistercian-数字的自定义字体实现扩展与可用性" title="Link to section: § &#39;1. 🧮 用连字呈现 Cistercian 数字的自定义字体：实现、扩展与可用性&#39;">1. 🧮 用连字呈现 Cistercian 数字的自定义字体：实现、扩展与可用性</a></h3>
+<p>#AI #Programming #Security</p>
+<p><strong>来源</strong>: <a href="">News Hacker</a> · <strong>类别</strong>: 极客洞察</p>
+<p>原标题：《Show <a href="https://en.wikipedia.org/wiki/Hacker_News" id="_NNioUzwg" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hacker_News#bodyContent">HN</a>: A custom font that displays Cistercian numerals using ligatures》评分: 121 | 作者: bobbiechen💭 换一套漂亮字体就能解决数字安全问题吗？🎯 讨论背景这是一个把 Cistercian numerals（中世纪修道院用的数字系统）用 ligatures（连字）在自定义字体内呈现的 Show HN 项目，作者通过合成笔画把位置化位值压缩为单一字形。评论从字体设计与好奇心出发，延伸到如何扩展到不同进制（如 sexagesimal/60 进制）、每字形的信息量（评论里提到大约 13 bits/字…</p>
+<p>🔗 <a href="https://newshacker.me/story?id=46939312" id="_WYqneZ7L">查看原文</a></p>
+<div class="horizontal-rule-nth-2">
+<hr />
+</div>
+</section>
+<section id="matrix-获政府采用但联邦化运维与客户端痛点阻碍普及" class="level3">
+<h3><a href="#matrix-获政府采用但联邦化运维与客户端痛点阻碍普及" title="Link to section: § &#39;2. 😕 Matrix 获政府采用，但联邦化、运维与客户端痛点阻碍普及&#39;">2. 😕 Matrix 获政府采用，但联邦化、运维与客户端痛点阻碍普及</a></h3>
+<p>#AI #Python #Rust #Security #Web3</p>
+<p><strong>来源</strong>: <a href="">News Hacker</a> · <strong>类别</strong>: 极客洞察</p>
+<p>原标题：《Matrix messaging gaining ground in government IT》评分: 22 | 作者: rbanffy💭 要为了去中心化忍受断线和垃圾信息吗？🎯 讨论背景Matrix 是一个开源的去中心化即时通讯协议，主张通过 federation（联邦化）让不同服务器互联并支持 E2EE（端到端加密）。Element 是该生态中最常见的客户端与商业化公司，Synapse 是其 Python 实现的参考服务器，Olm/Megolm 则是用于单聊/群聊的加密库。讨论发生在政府与受监管机构开始考虑或部署自托管 Matrix 的背景下，评论关注点包括群组前向安全的限制、…</p>
+<p>🔗 <a href="https://newshacker.me/story?id=46944245" id="_Tz6Ufu3J">查看原文</a></p>
+<div class="horizontal-rule-nth-3">
+<hr />
+</div>
+</section>
+<section id="offpunk-30协作贡献gemini-可发现性与终端图片性能问题" class="level3">
+<h3><a href="#offpunk-30协作贡献gemini-可发现性与终端图片性能问题" title="Link to section: § &#39;3. 🔧 Offpunk 3.0：协作贡献、Gemini 可发现性与终端图片/性能问题&#39;">3. 🔧 Offpunk 3.0：协作贡献、Gemini 可发现性与终端图片/性能问题</a></h3>
+<p>#AI #Programming</p>
+<p><strong>来源</strong>: <a href="">News Hacker</a> · <strong>类别</strong>: 极客洞察</p>
+<p>原标题：《Offpunk 3.0》评分: 29 | 作者: todsacerdoti💭 把“代码没逐行审查”当卖点，不怕乱套吗？🎯 讨论背景Offpunk 3.0 是该终端优先内容阅读/聚合器的新版本发布，作者在说明里提到“包含我没逐行审查的代码”，引发了对“无人审查”措辞的误读与担忧。讨论延伸到 Gemini protocol（极简文本优先网络协议）资料的可检索性问题，以及有人建议直接查找官方站点 geminiprotocol.net。评论里还回顾了 <a href="https://en.wikipedia.org/wiki/Emacs" id="_ij4Mg-Kj" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Emacs#bodyContent">Emacs</a>/Gnus（Emacs 的邮件/<a href="https://en.wikipedia.org/wiki/Usenet" id="_LbBj-m_i" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Usenet#bodyContent">Usenet</a> 客户端）那种统一收件箱理念及其在大消息量下的性能限制，并将其与 slrn、sfeed …</p>
+<p>🔗 <a href="https://newshacker.me/story?id=46943752" id="_kvSWlCM_">查看原文</a></p>
+<div class="horizontal-rule-nth-1">
+<hr />
+</div>
+</section>
+<section id="基于-kim-stanley-robinson-火星三部曲的网页版火星殖民地-rpg致敬原著但界面与体验仍有诸多问题" class="level3">
+<h3><a href="#基于-kim-stanley-robinson-火星三部曲的网页版火星殖民地-rpg致敬原著但界面与体验仍有诸多问题" title="Link to section: § &#39;4. 🪐 基于 Kim Stanley Robinson 火星三部曲的网页版火星殖民地 RPG——致敬原著但界面与体验仍有诸多问题&#39;">4. 🪐 基于 Kim Stanley Robinson 火星三部曲的网页版火星殖民地 RPG——致敬原著但界面与体验仍有诸多问题</a></h3>
+<p>#AI #Programming</p>
+<p><strong>来源</strong>: <a href="">News Hacker</a> · <strong>类别</strong>: 极客洞察</p>
+<p>原标题：《Show HN: I created a Mars colony RPG based on Kim Stanley Robinson's Mars books》评分: 233 | 作者: ariaalam💭 没版权许可就靠'fair use'，谁兜底？🎯 讨论背景这是一个 Show HN 帖子：作者发布了一个基于 Kim Stanley Robinson 火星三部曲（以硬科幻、政治议题与 terraforming 为核心的小说系列）的网页版火星殖民地 RPG。作品由 vanilla JS 与 HTML5 Canvas 实现，作者提到在开发中借助了 Cla…</p>
+<p>🔗 <a href="https://newshacker.me/story?id=46936237" id="_hRNg5iYN">查看原文</a></p>
+<div class="horizontal-rule-nth-2">
+<hr />
+</div>
+</section>
+<section id="ai-让琐碎更快但放大难题提示架构与版权争论" class="level3">
+<h3><a href="#ai-让琐碎更快但放大难题提示架构与版权争论" title="Link to section: § &#39;5. 🛠️ AI 让琐碎更快但放大难题：提示、架构与版权争论&#39;">5. 🛠️ AI 让琐碎更快但放大难题：提示、架构与版权争论</a></h3>
+<p>#AI #Programming #Security</p>
+<p><strong>来源</strong>: <a href="">News Hacker</a> · <strong>类别</strong>: 极客洞察</p>
+<p>原标题：《AI Makes the Easy Part Easier and the Hard Part Harder》评分: 368 | 作者: weaksauce💭 你真的愿意把关键代码交给 AI 随性生成吗？🎯 讨论背景帖子围绕“一句话论断：AI 让容易的事更容易、把难的事变难”展开，评论者多为在业工程师分享实战经验。讨论触及 coding agents（如 Claude Code、Codex、Gemini、Opus 等模型/工具）、AGENTS.md（供代理读取的项目上下文文件）、以及训练语料主要来自 GitHub（开源代码托管平台）带来的许可证/抄袭风险（如 GPL 与 fair u…</p>
+<p>🔗 <a href="https://newshacker.me/story?id=46939593" id="_toC_e1qa">查看原文</a></p>
+<div class="horizontal-rule-nth-3">
+<hr />
+</div>
+</section>
+<section id="算法寻找地球最长视线几何极限折射与高程数据局限" class="level3">
+<h3><a href="#算法寻找地球最长视线几何极限折射与高程数据局限" title="Link to section: § &#39;6. 🔭 算法寻找地球最长视线：几何极限、折射与高程数据局限&#39;">6. 🔭 算法寻找地球最长视线：几何极限、折射与高程数据局限</a></h3>
+<p>#AI #Programming #Rust</p>
+<p><strong>来源</strong>: <a href="">News Hacker</a> · <strong>类别</strong>: 极客洞察</p>
+<p>原标题：《Show HN: Algorithmically Finding the Longest Line of Sight on Earth》评分: 26 | 作者: tombh💭 地图说能看四百八十三公里，大气同意吗？🎯 讨论背景这是一个 Show HN 项目：通过算法在全球高程数据上计算“最长的地形可视线”，并在地图上展示连线与 Top Ten。评论里有人用新西兰多座山峰（如 Ruapehu、Mt Owen、Tapuae‑o‑Uenuku）和北美的 Mount Rainier（约 390 km）做实测对比，并提到一项接近的实拍纪录（Guinness 世界纪录，约 483 km）。讨论建…</p>
+<p>🔗 <a href="https://newshacker.me/story?id=46943568" id="_P17hHI8P">查看原文</a></p>
+<div class="horizontal-rule-nth-1">
+<hr />
+</div>
+</section>
+<section id="游戏道路艺术曲线数学实现难题与城市设计抉择" class="level3">
+<h3><a href="#游戏道路艺术曲线数学实现难题与城市设计抉择" title="Link to section: § &#39;7. 🛣️ 游戏道路艺术：曲线数学、实现难题与城市设计抉择&#39;">7. 🛣️ 游戏道路艺术：曲线数学、实现难题与城市设计抉择</a></h3>
+<p>#Programming #Python #Rust</p>
+<p><strong>来源</strong>: <a href="">News Hacker</a> · <strong>类别</strong>: 极客洞察</p>
+<p>原标题：《Art of Roads in Games》评分: 375 | 作者: linolevan💭 真要为完美交叉口曲率毁掉游戏乐趣吗？🎯 讨论背景这是对一篇关于“如何在游戏（尤其是城市建造类）中生成更自然且可行驶道路”文章的评论汇总。讨论横跨道路几何学（如 clothoid（Euler spiral，用于道路过渡曲线）、B ézier curve（贝塞尔曲线）与 cubic parabola）、工程实现难题（偏移曲线、网格挤出、自相交与性能）以及城市规划层面的争议（stroad——街道/道路混合体的批评）。评论里还引用了具体游戏与项目作比较与示例，包括 Junxions（路口沙盒）、Eg…</p>
+<p>🔗 <a href="https://newshacker.me/story?id=46938511" id="_zHSU0NbB">查看原文</a></p>
+<div class="horizontal-rule-nth-2">
+<hr />
+</div>
+</section>
+<section id="lispenaver用--替代括号的-lisp-实验引争议" class="level3">
+<h3><a href="#lispenaver用--替代括号的-lisp-实验引争议" title="Link to section: § &#39;8. 🤔 LispE（Naver）：用 . 替代括号的 Lisp 实验引争议&#39;">8. 🤔 LispE（Naver）：用 ‘.’ 替代括号的 Lisp 实验引争议</a></h3>
+<p>#AI #Haskell #Programming</p>
+<p><strong>来源</strong>: <a href="">News Hacker</a> · <strong>类别</strong>: 极客洞察</p>
+<p>原标题：《LispE: Lisp Interpreter with Pattern Programming and Lazy Evaluation》评分: 26 | 作者: PaulHoule💭 把 '.' 当括号替代，这是创新还是自残？🎯 讨论背景LispE 是一款标榜支持 pattern programming（模式化编程）和 lazy evaluation（惰性求值）的 Lisp 解释器，本次讨论集中在它用 '.' 作为组合/语法运算符以替代或简化括号语义的设计。评论基于对 Lisp 传统 S-expression（用圆括号表示代码和数据）与点对（…</p>
+<p>🔗 <a href="https://newshacker.me/story?id=46889710" id="_5pl8IFJd">查看原文</a></p>
+<div class="horizontal-rule-nth-3">
+<hr />
+</div>
+</section>
+<section id="台积电在日本建先进-ai-晶圆厂供应链分散台湾硅盾与欧洲衰退的争论" class="level3">
+<h3><a href="#台积电在日本建先进-ai-晶圆厂供应链分散台湾硅盾与欧洲衰退的争论" title="Link to section: § &#39;9. 🛡️ 台积电在日本建先进 AI 晶圆厂：供应链分散、台湾“硅盾”与欧洲衰退的争论&#39;">9. 🛡️ 台积电在日本建先进 AI 晶圆厂：供应链分散、台湾“硅盾”与欧洲衰退的争论</a></h3>
+<p>#AI #Security</p>
+<p><strong>来源</strong>: <a href="">News Hacker</a> · <strong>类别</strong>: 极客洞察</p>
+<p>原标题：《TSMC to make advanced AI semiconductors in Japan》评分: 153 | 作者: dev_tty01💭 把台积电分散就能消除占领台湾的动机吗？🎯 讨论背景台积电（TSMC）宣布在日本兴建用于 AI 的先进晶圆产能，此举发生在全球为应对 AI 芯片需求暴增与地缘政治风险而推进“在地化”投资的背景下。美国与日本正通过补贴与战略合作吸引关键代工落地，以降低对单一区域（台湾）的依赖并提升供应链韧性。评论讨论交织技术、经济与安全层面：ASML（荷兰光刻机商）与 EUV（极紫外光刻）设备是先进制程的关键，产能常以 WSPM（晶圆/月）计量；同时有人批评…</p>
+<p>🔗 <a href="https://newshacker.me/story?id=46941640" id="_yZoPJ0r5">查看原文</a></p>
+<div class="horizontal-rule-nth-1">
+<hr />
+</div>
+</section>
+<section id="已签名引导程序绕过-uefi-secure-boot密钥管理与供应链风险" class="level3">
+<h3><a href="#已签名引导程序绕过-uefi-secure-boot密钥管理与供应链风险" title="Link to section: § &#39;10. ⚠️ 已签名引导程序绕过 UEFI Secure Boot：密钥管理与供应链风险&#39;">10. ⚠️ 已签名引导程序绕过 UEFI Secure Boot：密钥管理与供应链风险</a></h3>
+<p>#AI #Rust #Security #Web3</p>
+<p><strong>来源</strong>: <a href="">News Hacker</a> · <strong>类别</strong>: 极客洞察</p>
+<p>原标题：《Exploiting signed bootloaders to circumvent UEFI Secure Boot》评分: 120 | 作者: todsacerdoti💭 把开机钥匙交给微软签名的 shim，值得吗？🎯 讨论背景文章与讨论围绕利用“已签名引导程序”来绕过 UEFI Secure Boot 的技术与治理问题展开。UEFI Secure Boot（固件层的引导链完整性验证机制）依赖平台密钥（PK）、受信证书库（db）与撤销库（dbx）来决定谁能在设备上启动代码；为兼容 Linux 生态常见做法是用 shim（由 Microsoft 或 OEM 签名的中间引导加载器）…</p>
+<p>🔗 <a href="https://newshacker.me/story?id=46934579" id="_dAUDALGz">查看原文</a></p>
+<div class="horizontal-rule-nth-2">
+<hr />
+</div>
+</section>
+</section>
+<section id="数据来源" class="level2">
+<h2><a href="#数据来源" title="Link to section: § &#39;📡 数据来源&#39;">📡 数据来源</a></h2>
+<p>本期内容聚合自以下平台：</p>
+<ul>
+<li><p><strong><a href="">News Hacker</a></strong> (极客洞察) - 10 条</p></li>
+<li><p><strong><a href="">Hacker Podcast</a></strong> (播客) - 5 条</p></li>
+<li><p><strong><a href="">Hacker News</a></strong> (开源&amp;AI) - 10 条</p></li>
+<li><p><strong><a href="">GitHub Trending</a></strong> (开源项目) - 10 条</p></li>
+<li><p><strong><a href="">少数派</a></strong> (生活科技) - 10 条</p></li>
+<li><p><strong><a href="">Hugging Face Blog</a></strong> (AI 模型) - 8 条</p></li>
+<li><p><strong><a href="">阮一峰网络日志</a></strong> (技术周刊) - 3 条</p></li>
+</ul>
+<div class="horizontal-rule-nth-3">
+<hr />
+</div>
+</section>
+<section id="newsletter-信息" class="level2">
+<h2><a href="#newsletter-信息" title="Link to section: § &#39;📮 Newsletter 信息&#39;">📮 Newsletter 信息</a></h2>
+<p><strong>更新频率</strong>: 每日 08:00 (北京时间)</p>
+<p><strong>涵盖领域</strong>: 🤖 AI · 🔐 安全 · 💻 开发 · 🚀 创业 · 🌐 Web3</p>
+<div class="horizontal-rule-nth-1">
+<hr />
+</div>
+</section>
+<section id="导航" class="level2">
+<h2><a href="#导航" title="Link to section: § &#39;🧭 导航&#39;">🧭 导航</a></h2>
+<ul>
+<li><p><a href="/newsletter/" id="gwern-newsletter" class="prefetch-not link-page">Newsletter 首页</a> - 所有期刊索引</p></li>
+<li><p><a href="/newsletter/topics" id="gwern-newsletter-topics" class="prefetch-not link-modified-recently link-page">主题索引</a> - 按主题浏览</p></li>
+<li><p><a href="/about" id="gwern-about" class="prefetch-not link-annotated link-page" title="&#39;About This Website&#39;, Gwern 2010">关于本站</a> - 项目理念</p></li>
+</ul>
+<div class="horizontal-rule-nth-2">
+<hr />
+</div>
+<p><em>生成于 09 Feb 2026 · 聚合自 9 个信息源</em></p>
+</section>
+</section>
+
+      
+      <noscript><div id="noscript-warning-footer" class="admonition error" title="Warning to NoScript Users"><div class="admonition-title"><p>[<strong>Error</strong>: JavaScript disabled.]</p></div> <p>[Backlinks, similar links, and the bibliography require JS enabled to load.]</p></div></noscript>
+      
+      
+      
+      
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+    <!-- Footer (no SSI): injected by Hakyll from static/include/footer.html -->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"
+        ><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center" /></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Gwern Branwen">[&hairsp;Send Anonymous Feedback&hairsp;]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Gwern.net homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

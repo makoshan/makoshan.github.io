@@ -1,0 +1,58 @@
+<p><a href="/design" id="link-bibliography-gwern-design" class="prefetch-not link-page link-annotated" data-filesize-bytes="0" data-filesize-percentage="100">“Design Of This Website”</a></p>
+<p> <span class="author cite-author"><a href="/index#abstract" id="_i198YQWg" class="prefetch-not link-page" data-filesize-bytes="0" data-filesize-percentage="100">Gwern</a></span></p>
+<p><span class="date cite-date" title="2010-10-01">2010</span></p>
+<p><span class="link-tags"><a href="/doc/cs/css/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to cs/css tag index">CSS</a>, <a href="/doc/cs/js/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to cs/js tag index">JS</a>, <a href="/doc/cs/linkrot/archiving/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to cs/linkrot/archiving tag index">Internet archiving</a>, <a href="/doc/design/typography/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to design/typography tag index">typography</a>, <a href="/doc/meta/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to meta tag index">meta</a></span></p>
+<blockquote>
+<figure>
+<img src="/doc/design/2020-12-25-gwern-gwernnet-recursivepopups.png" title="Screenshot of Gwern.net demonstrating recursive popup functionality, allowing arbitrarily deep hypertext exploration of references and links." id="_IkEOxVRn" class="float-right page-thumbnail outline invert-not" width="0" height="0"></img>
+</figure>
+<div class="page-description-annotation">
+<p>Meta page describing Gwern.net, the self-documenting website’s implementation and experiments for better ‘semantic zoom’ of hypertext; technical decisions using <a href="https://en.wikipedia.org/wiki/Markdown" id="_gCEHmPFk" class="link-live" data-url-iframe="https://en.m.wikipedia.org/wiki/Markdown#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg">Markdown</a> and static hosting.</p>
+</div>
+<p><strong>Gwern.net</strong> is implemented as a static website compiled via Hakyll from Pandoc Markdown and hosted on a dedicated server (due to expensive cloud bandwidth).</p>
+<p>It stands out from your standard Markdown static website by aiming at good typography, fast performance, and advanced (ie. 1980s-era) hypertext browsing features (at the cost of great implementation complexity); the <a href="/design#principles" id="gwern-design--principles" class="prefetch-not link-page">4 design principles</a> are: aesthetically-pleasing minimalism, accessibility/progressive-enhancement, speed, and a ‘semantic zoom’ approach to hypertext use.</p>
+<p>Unusual features include the monochrome esthetics, <a href="/sidenote" id="gwern-sidenote" class="prefetch-not link-annotated link-page" data-filesize-bytes="70563" data-filesize-percentage="50" title="&#39;Sidenotes In Web Design&#39;, Gwern 2020">sidenotes</a> instead of footnotes on wide windows, efficient <a href="https://en.wikipedia.org/wiki/Initial" id="_ZGUuc8od" class="link-live" data-url-iframe="https://en.m.wikipedia.org/wiki/Initial#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg">dropcaps</a>, smallcaps, collapsible sections, automatic inflation-adjusted currency, Wikipedia-style link icons &amp; infoboxes, custom <a href="https://en.wikipedia.org/wiki/Syntax_highlighting" id="_oIj-657b" class="link-live link-annotated-partial" data-url-iframe="https://en.m.wikipedia.org/wiki/Syntax_highlighting#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Syntax_highlighting#bodyContent" title="Syntax highlighting">syntax highlighting</a>, extensive local archives to fight linkrot, and an ecosystem of “popup”/“popover” annotations &amp; previews of links for frictionless browsing—the net effect of hierarchical structures with collapsing and instant popup access to excerpts enables iceberg-like pages where most information is hidden but the reader can easily drill down as deep as they wish. (For a demo of all features &amp; stress-test page, see <a href="/lorem" id="gwern-lorem" class="prefetch-not link-annotated link-page" data-filesize-bytes="14495" data-filesize-percentage="21" title="&#39;Lorem Ipsum&#39;, Gwern 2020">Lorem Ipsum</a>; for detailed guidelines, <a href="/style-guide" id="gwern-style-guide" class="prefetch-not link-modified-recently link-annotated link-page" data-filesize-bytes="143752" data-filesize-percentage="66" title="‘Manual of Style’, Gwern 2025">the Manual of Style</a>.)</p>
+<p>Also discussed are the <a href="/design-graveyard" id="gwern-design-graveyard" class="prefetch-not link-annotated link-page" data-filesize-bytes="200493" data-filesize-percentage="73" title="&#39;Design Graveyard&#39;, Gwern 2010">many failed experiments/changes</a> made along the way.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/design#benefit" id="toc-benefit" class="prefetch-not link-page">Benefit</a></li>
+<li><a href="/design#principles" id="toc-principles" class="prefetch-not link-page">Principles</a></li>
+<li><a href="/design#features" id="toc-features" class="prefetch-not link-page">Features</a>
+<ul>
+<li><a href="/design#backlink" id="toc-backlink" class="prefetch-not link-page" data-link-icon="arrows-pointing-inwards-to-dot" data-link-icon-type="svg">Backlink</a>
+<ul>
+<li><a href="/design#backlink-features" id="toc-backlink-features" class="prefetch-not link-page">Backlink Features</a>
+<ul>
+<li><a href="/design#in-context" id="toc-in-context" class="prefetch-not link-page">In-Context</a></li>
+<li><a href="/design#popups" id="toc-popups" class="prefetch-not link-page">Popups</a></li>
+</ul></li>
+<li><a href="/design#implementation" id="toc-implementation" class="prefetch-not link-page">Implementation</a>
+<ul>
+<li><a href="/design#other-uses" id="toc-other-uses" class="prefetch-not link-page">Other Uses</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#similar-links" id="toc-similar-links" class="prefetch-not link-page" data-link-icon="≈" data-link-icon-type="text">Similar Links</a></li>
+<li><a href="/design#link-bibliographies" id="toc-link-bibliographies" class="prefetch-not link-page" data-link-icon="bibliography" data-link-icon-type="svg">Link Bibliographies</a></li>
+<li><a href="/design#tags" id="toc-tags" class="prefetch-not link-page">Tags</a>
+<ul>
+<li><a href="/design#properties" id="toc-properties" class="prefetch-not link-page">Properties</a></li>
+<li><a href="/design#use-appearance" id="toc-use-appearance" class="prefetch-not link-page">Use &amp; Appearance</a></li>
+<li><a href="/design#features-1" id="toc-features-1" class="prefetch-not link-page">Features</a>
+<ul>
+<li><a href="/design#future-tag-features" id="toc-future-tag-features" class="prefetch-not link-page">Future Tag Features</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#abandoned" id="toc-abandoned" class="prefetch-not link-page">Abandoned</a></li>
+<li><a href="/design#tools" id="toc-tools" class="prefetch-not link-page">Tools</a>
+<ul>
+<li><a href="/design#implementation-details" id="toc-implementation-details" class="prefetch-not link-page">Implementation Details</a></li>
+</ul></li>
+<li><a href="/design#external-links" id="toc-external-links" class="prefetch-not link-page">External Links</a></li>
+<li><a href="/design#appendix" id="toc-appendix" class="prefetch-not link-page">Appendix</a>
+<ul>
+<li><a href="/design#returns-to-design" id="toc-returns-to-design" class="prefetch-not link-page">Returns To Design?</a></li>
+</ul></li>
+</ul>
+</div>
+</blockquote>

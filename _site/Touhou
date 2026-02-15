@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inlined head (no SSI): injected by Hakyll from static/include/inlined-head.html -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #aaa;
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popins-popin-box-shadow-color: #aaa;
+
+    --GW-popins-popin-title-bar-background-color: #fff;
+    --GW-popins-popin-title-bar-button-color: #777;
+
+    --GW-popins-popin-scrollbar-thumb-color: #ccc;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #999;
+
+    --GW-popins-popin-stack-counter-text-color: #fff;
+    --GW-popins-popin-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #ccc;
+	--GW-back-to-top-link-hover-color: #999;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #7c7c7c;
+    --GW-popins-popin-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popins-popin-box-shadow-color: #7c7c7c;
+
+    --GW-popins-popin-title-bar-background-color: #000;
+    --GW-popins-popin-title-bar-button-color: #a6a6a6;
+
+    --GW-popins-popin-scrollbar-thumb-color: #5c5c5c;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popins-popin-stack-counter-text-color: #000;
+    --GW-popins-popin-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #5c5c5c;
+	--GW-back-to-top-link-hover-color: #8b8b8b;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popins-popin-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+div.poem span.caesura-mark {
+	opacity: 0.3;
+}
+@media all and (max-width: 649px) {
+	div.poem span.caesura-mark {
+		opacity: 0.4;
+	}
+}
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1770514858">
+<script src="/static/js/head.js?v=1770514858"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1768170615" as="image">
+
+
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="东方音乐的数据分析">
+  <meta name="citation_title" content="东方音乐的数据分析">
+  <meta name="og:title" content="东方音乐的数据分析">
+  <meta name="twitter:title" content="东方音乐的数据分析">
+  <meta name="generator" content="https://github.com/gwern/gwern.net/">
+  <meta name="creator" content="gwern.net">
+  
+  <meta name="author" content="Gwern">
+  <meta name="citation_author" content="Gwern">
+  
+  <meta name="contact" content="https://gwern.net/me#contact">
+  <link rel="index" title="Gwern.net homepage" href="https://gwern.net/index">
+  <link href="https://gwern.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Gwern.net newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="gwern">
+  <meta name="twitter:site" content="gwern.net">
+  <meta name="og:site" content="gwern.net">
+  <meta name="og:type" content="article">
+  <meta name="description" content="收集音乐元数据并寻找规律">
+  <meta name="og:description" content="收集音乐元数据并寻找规律">
+  <meta property="og:image" content="https://gwern.net/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail text: the Gwern.net site logo, a logotype of a large blackletter fraktur capital letter 'G' on a white background.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content="">
+  <meta name="keywords" content="">
+  <meta name="dc.date.issued" content="28 Feb 2013">
+  
+  <meta name="citation_publication_date" content="28 Feb 2013">
+  <meta name="dcterms.modified" content="">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://gwern.net/Touhou">
+  <meta name="citation_fulltext_html_url" content="https://gwern.net/Touhou">
+  <meta name="og:url" content="https://gwern.net/Touhou">
+  <link rel="alternate" type="text/markdown" href="https://gwern.net/Touhou.md" title="Markdown source of ‘东方音乐的数据分析’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-touhou dropcaps-de-zs">
+  <meta name="citation_fulltext_world_readable" content="">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>东方音乐的数据分析 · Gwern.net</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+
+  <!-- CSS for JS-disabled users: ensure that NoScripters know what they are missing even if they jump to a section & miss the warning at top/bottom. -->
+  <noscript>
+    <style>
+      #markdownBody #noscript-warning-header {
+          position: fixed; /* sticky */
+          top: 6px; /* at top */
+          width: 58%;
+          z-index: 99; /* Make sure it is on top */
+          background-color: #f8f8f8; /* Set a solid background color so legible while positioned over text */
+          border-color: var(--GW-abstract-border-color); /* Make look like theme-toggle/admonitions a bit more */
+          border-width: 6px 6px 6px 6px;
+          border-style: double;
+      }
+      #markdownBody #noscript-warning-header p { margin: 10px; }
+      nav#navbar { padding-top: 160px; } /* avoid overlap with page header */
+    </style>
+  </noscript>
+</head>
+
+<body class="page-touhou dropcaps-de-zs">
+  <!-- Inlined asset links (no SSI): injected by Hakyll from static/include/inlined-asset-links.html -->
+  <link rel="stylesheet" href="/static/css/style.css?v=1770491984" media="print" onload="this.media=`all`">
+<script src="/static/js/script.js?v=1770491982" defer></script>
+
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <!-- Navbar (no SSI): injected by Hakyll from static/include/navbar.html -->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="design link-page link-annotated" href="/design" title="Design and implementation notes">Design</a>
+        <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="links link-page" href="/Links" title="Links page">Links</a>
+        <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+
+    <article>
+
+      <header>
+        <h1>东方音乐的数据分析</h1>
+      </header>
+
+      
+      <div class="markdownBody" id="page-metadata">
+          
+        <div class="page-description"><p>收集音乐元数据并寻找规律</p></div>
+        <div class="page-metadata-fields">
+            
+            
+            <span class="page-status" title="Writing status of current page: ranges 'abandoned'/'notes'/'draft'/'in progress'/'finished'"><em><span class="completion-status" data-progress-percentage="75">in progress</span></em></span>
+            <span class="page-confidence"><a href="/about#confidence-tags" title="Explanation of 'confidence' metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: 'certain'/'highly likely'/'likely'/'possible'/'unlikely'/'highly unlikely'/'remote'/'impossible')">certainty</a>: <em><span class="completion-status" data-progress-percentage="50">possible</span></em></span>
+            <span class="page-importance"><a href="/about#importance-tags" title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>0</em></span>
+            
+            
+            
+        </div>
+      </div>
+      
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#数据" id="toc-数据">数据</a>
+<ul>
+<li><a href="#失业率数据来源" id="toc-失业率数据来源">失业率数据来源</a></li>
+<li><a href="#东方音乐数据来源" id="toc-东方音乐数据来源">东方音乐数据来源</a>
+<ul>
+<li><a href="#种子文件" id="toc-种子文件">种子文件</a></li>
+</ul></li>
+<li><a href="#vgmdb" id="toc-vgmdb">VGMdb</a></li>
+<li><a href="#touhouwikinet" id="toc-touhouwikinet"><code>touhouwiki.net</code></a></li>
+<li><a href="#个人下载" id="toc-个人下载">个人下载</a>
+<ul>
+<li><a href="#chan-jp-c83-主题帖" id="toc-chan-jp-c83-主题帖">4chan /jp/ C83 主题帖</a></li>
+<li><a href="#chan-jp-c84-主题帖" id="toc-chan-jp-c84-主题帖">4chan /jp/ C84 主题帖</a></li>
+<li><a href="#chan-jp-c85-主题帖" id="toc-chan-jp-c85-主题帖">4chan /jp/ C85 主题帖</a></li>
+<li><a href="#chan-jp-例大祭10-主题帖" id="toc-chan-jp-例大祭10-主题帖">4chan /jp/ 例大祭10 主题帖</a></li>
+<li><a href="#例大祭10-种子" id="toc-例大祭10-种子">例大祭10 种子</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#分析" id="toc-分析">分析</a>
+<ul>
+<li><a href="#随时间增长" id="toc-随时间增长">随时间增长</a></li>
+</ul></li>
+<li><a href="#附录" id="toc-附录">附录</a>
+<ul>
+<li><a href="#touhouwikinet-爬虫代码" id="toc-touhouwikinet-爬虫代码"><code>touhouwiki.net</code> 爬虫代码</a></li>
+<li><a href="#vgmdb-爬虫代码" id="toc-vgmdb-爬虫代码">VGMdb 爬虫代码</a></li>
+</ul></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><p><!-- TODO: from Culture is not about esthetics: mv here?
+[^touhou]: This is a general assertion that is fairly hard to prove, but an example may be suggestive. The [Touhou](!Wikipedia "Touhou Project") doujinshi-game phenomenon has a [fair amount of music](http://touhou.wikia.com/wiki/Category:Music), but to get a sense of the true scale, we can look at some numbers. From the talk ["Riding on Fans' Energy: Touhou, Fan Culture, and Grassroot Entertainment"](http://cardcaptor.moekaku.com/?p=112) ([Barcamp](!Wikipedia) Bangkok 2 on August 31, 2008):
+
+    > Touhou is [ZUN](!Wikipedia "Team Shanghai Alice#Member")'s work as much as it is a gigantic repertoire of fan-made manga, games, music, and video clips. I estimate that there are roughly at least three thousands short manga, five hundred music rearrangement albums, and one hundred derivative games created since 2003. These works are traded mainly in conventions dedicated to them, and some commercial firms are starting to capitalize on their popularity. Doujinshi shops like [Tora no Ana](!Wikipedia "Comic Toranoana") and [Mandarake](!Wikipedia) have shelves dedicate to Touhou comics. And Amazon.co.jp are carrying CDs of arranged/sampled Touhou music (but not ZUN's originals). More and more people are attracted to the franchise because its diverse derivative works provide a variety of entry points for potential fans. In fact, Touhou's popularity skyrocketed when it became one of the killer content of [Nico Nico Douga](!Wikipedia), a Japanese equivalent of YouTube launched one year and a half earlier. There, Touhou content spread like wild fire and gave rise to many recurring memes and tens of thousands of mashup videos. To give a sense of how popular Touhou is in Nico Nico Douga, 18 of 100 most viewed videos are Touhou-related, and the best Touhou video ranks the 6th. [[5]](http://cardcaptor.moekaku.com/?p=112#touhou-popularity-in-nico-nico-douga)
+
+    For a recent estimate, we can turn to [TV Tropes](!Wikipedia)'s [article](http://tvtropes.org/pmwiki/pmwiki.php/CrowningMusic/TouhouProject) on Touhou music:
+
+    > The Touhou Project really gets a lot of great pieces of music for [the music] being [originally] made up by a single guy with a synthesizer. To put the sheer number of remix CDs in perspective, there is a torrent with over 870.4 gigabytes of over 3000 Touhou remixes, and that only includes the ones that the (English-speaking) maintainers of the torrent have added.
+
+    (This is outdated; the October 2011 lossless torrent is [1,020 gigabytes](http://www.nyaa.eu/?page=torrentinfo&tid=255825). Personally, [I](http://www.reddit.com/r/TOUHOUMUSIC/search?q=author%3A%27gwern%27&restrict_sr=on) enjoy the orchestral pieces like the [WAVE](http://www.circle-wave.net/) group's [Luna Forest (第七楽章)](http://www.youtube.com/watch?v=xhDNC12hWKc).)
+--></p>
+<p><!--
+16:19:10 <@gwern> Speed: it is difficult to explain. also, it's much more than 44k
+16:19:23 < klfwip> speed, touhou is a video game franchise which has one of the best fan bases in the world.
+16:19:24 <@gwern> that's just that one highly incomplete torrent
+16:19:28 < Speed> I've found the Touhou Project on wikipedia
+16:19:40 < Speed> but that one seems to list maybe 10 CD's
+16:19:48 < klfwip> they have multiple festivals per year in japan almost completely devoted to selling touhou music and other collectables
+16:21:13 <@gwern> klfwip: actually, I'm not entirely sure about that... I think zun may've put out his stuff under a custom license
+16:21:58 <@gwern> http://cardcaptor.moekaku.com/?p=125 eg
+16:22:08 <@gwern> http://en.touhouwiki.net/wiki/Touhou_Wiki:Copyrights#Copyright_status.2FTerms_of_Use_of_the_Touhou_Project
+16:22:40 <@gwern> this seems pretty unusual for doujin works, but both touhou and vocaloid are big enough that they've'd to've make things more explicit
+16:24:23 <@gwern> Speed: nope. I think it's heavily biased toward recent music, the growth seems too rapid
+16:24:44 < Speed> how much Touhou music does then exist by your estimations?
+16:25:56 <@gwern> Speed: I'm not sure yt. I haven't cleaned the data enough to get a good idea of the counts, and I can't run a capture-recapture estimate of the total universe until the data has improved
+16:26:09 <@gwern> Speed: I wouldn't be too surprised if it were >100k though
+16:26:30 < klfwip> for every big artist who releases dozens of albums, I suspect there are thousands who post one vocaloid mix of a touhou song to niconico
+                   video.
+16:26:39 < Siod> how is most touhou music made?
+16:27:23 < Speed> I'm still not entirely able to believe that many derivatives could have been made from just a few soundtracks
+16:27:39 < Siod> what? it's all derived from soundtracks?
+16:27:41 < klfwip> speed, there are hundreds of original touhou songs.
+16:27:47 < Speed> klfwip: since you have a collection, can you give me a few samples of the music?
+16:27:58 < klfwip> electro, classical, metal, what do you want?
+16:28:04 <@gwern> Speed: oh come on, that's like saying 'I don't know how there can be thousands of apocrypha when there's onyl like a hundred canonical books
+                  in the bible'
+16:28:25 <@gwern> or, 'I don't know how there can be 300m+ books in total'
+16:28:26 < klfwip> and some of them honestly have very little in comon with the source except a melody.
+16:28:38  * gwern links Speed to https://xkcd.com/915/
+16:31:55 <@gwern> Burninate: remixes, distant inspirations, borrowing a hook or melody... they can be remixes in the same way Book of Mormon is a remix of
+                  Zoroastrianism
+16:32:34 < quanticle> gwern: More apropos, it's like saying, "I don't know how a single 5-second drum and bass solo can give rise to an entire genre of music."
+                      http://en.wikipedia.org/wiki/Amen_break
+16:33:46 < quanticle> gwern: Yeah. Pretty much the entire DNB scene is made up of derivatives and riffs on Amen Break.
+16:35:59 < Speed> gwern: so, how does one then classify something as Touhou music or not?
+16:36:02 <@gwern> but it's only 'indie' because zun can make a living off it
+16:37:04 <@gwern> Speed: well, obviously if something is a rearrangement of an existing Zun track like 'Shanghai Teahouse', it's touhou, but there are a lot of
+                  marginal cases where it's simply social - does the creator consider it touhou? did they use touhou-related artowkr or characters? do they
+                  thank zun?
+16:37:38 < klfwip> some really big names in the touhou scene also have succesful careers are pro musicians outside of it.
+16:37:49 <@gwern> nothing stops people from writing their own music without reference to the canonical Zun melodies or themes and simply branding it as Touhou
+16:37:57 < klfwip> if they don't call a particular album a touhou remix album, I would just assume it not to be.
+16:38:14 < Burninate> So Zun made 15 games.  Himself.  Without involving a studio (dojin).
+16:38:28 < Burninate> and then fans made a bunch of derivatives of those 15 games
+16:38:42 <@gwern> Burninate: hm, wasn't the last one or two a collaboration with another group? is that 15 counting the collaborations?
+16:38:44 < Burninate> songs, other games, anime, comics
+16:38:46 <@gwern> novels
+16:38:48 < klfwip> correct
+16:39:01 < Burninate> the descriptions are confusing as fuck
+16:39:05  * Tuxedage would like to add that Zun is insanely talented
+16:39:07 < Tuxedage> Except for the art
+16:39:10 < klfwip> gwern, also the earliest games were not under his control, remember.
+--></p>
+<p><!-- "Videos containing Touhou tag  Total Hits: 153,553" http://www.nicovideo.jp/tag/Touhou TODO: scrape niconico --></p>
+<p>构想：将东方音乐的产出量与日本青年失业率进行关联分析——以秒数衡量的音乐总产量是否会随失业率上升而增加？</p>
+<p>相反观点认为，经济衰退反而会抑制产出（或许因为人们工作更辛苦，即使其他人失业了自己也没有多少空闲时间？）http://www.gamesetwatch.com/<span class="date-range">2009<sub><span title="2009 was 17 years ago.">17ya</span></sub></span>/12/sound_current_yokohamas_mediam.php</p>
+<blockquote>
+<p>While the turnout at M3 remains strong, at the same time an economic recession cannot help but touch a community whose activities rely on having free time. Furthermore while previously many hobbyists dreamed of someday breaking into the industry, more recently many also fear that game companies will begin cracking down on unlicensed tributes.</p>
+</blockquote>
+<section id="数据" class="level1">
+<h1><a href="#数据" title="Link to section: § &#39;数据&#39;">数据</a></h1>
+<section id="失业率数据来源" class="level2">
+<h2><a href="#失业率数据来源" title="Link to section: § &#39;失业率数据来源&#39;">失业率数据来源</a></h2>
+<p>使用了 FRED 的<a href="http://research.stlouisfed.org/fred2/series/JPNURYNAA" id="_vOtmwTmT">日本青年（15-24岁）经调整失业率 (JPNURYNAA)</a>；下载为 CSV 格式，年度百分比数据涵盖 <span class="date-range" title="The date range 2000–2011 lasted 11 years, ending 15 years ago.">2000<span class="subsup"><sup>–</sup><sub>11</sub></span>2011<sub><span title="2000 was 26 years ago.">15ya</span></sub></span> 年</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>jpn <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="fu">stdin</span>(),<span class="at">header=</span><span class="cn">TRUE</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>      DATE VALUE</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2000-01-01</span>   <span class="fl">8.9</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2001-01-01</span>   <span class="fl">9.1</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2002-01-01</span>   <span class="fl">9.5</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dv">2003-01-01</span>   <span class="fl">9.6</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dv">2004-01-01</span>   <span class="fl">9.0</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dv">2005-01-01</span>   <span class="fl">8.1</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dv">2006-01-01</span>   <span class="fl">7.5</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dv">2007-01-01</span>   <span class="fl">7.5</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dv">2008-01-01</span>   <span class="fl">7.0</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="dv">2009-01-01</span>   <span class="fl">8.9</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dv">2010-01-01</span>   <span class="fl">9.0</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="dv">2011-01-01</span>   <span class="fl">8.1</span></span></code></pre></div>
+</section>
+<section id="东方音乐数据来源" class="level2">
+<h2><a href="#东方音乐数据来源" title="Link to section: § &#39;东方音乐数据来源&#39;">东方音乐数据来源</a></h2>
+<p>TODO 建议来源：http://www.reddit.com/r/TOUHOUMUSIC/comments/19hh2m/touhou_music_databases_comprehensive_easily/ http://boards.4chan.org/jp/res/10559057</p>
+<p>其他备选来源</p>
+<ul>
+<li><p><a href="http://vgmdb.net/product/9" id="_ZflVUfmJ">VGMdb 东方条目</a> 规模较小，仅有不到 1389 张专辑的元数据</p></li>
+<li><p>开源替代方案是 <a href="https://en.wikipedia.org/wiki/MusicBrainz" id="_BGTYxkTG" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/MusicBrainz#bodyContent">MusicBrainz</a>；看起来<a href="http://musicbrainz.org/tag/touhou/release" id="_R98L_Qjb">有约 190 张专辑</a>，但其中 90% 以上链接到 VGMdb，所以我不确定是否值得纳入（浪费精力，而且如果几年前有人只是把 VGMdb 全部复制过来，对任何总体规模的标记-重捕分析来说都会产生严重误导）。</p></li>
+<li><p><a href="http://en.touhouwiki.net/wiki/Doujin_circles" id="_iCmRN5Q5" data-link-icon="☯" data-link-icon-type="text" data-link-icon-color="#e44031">Touhouwiki.net</a> 另一个来源，不到 1182 张专辑</p></li>
+<li><p>“東方音団録 ～ Arrange Circle Database ver.3.0”；<a href="http://www16.atwiki.jp/toho" id="_PkcuogOC">主页</a> 和 <a href="http://www16.atwiki.jp/toho/pages/727.html" id="_KvlfrO2K">发布信息</a>（<a href="http://www16.atwiki.jp/toho/pages/13.html" id="_rBMo7-T_">讨论</a>、<a href="http://www16.atwiki.jp/toho/pages/948.html" id="_HAsQ42wa">聊天</a>），<a href="http://www.toranoana.jp/bl/article/04/0030/04/86/040030048682.html" id="_NW_hxuCe">商品页面</a>，j-subculture.com 报价部分总计约 15 美元，加上 <a href="https://en.wikipedia.org/wiki/PayPal" id="_y3CpAFzg" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/PayPal#bodyContent">Paypal</a> 和国际运费后约 30 美元！（其他代购包括 <a href="http://yokattaweb.jp/index.html" id="_2KD1s0AM">Yokatta</a>。）</p>
+<p>策略：首先在 wiki 聊天室请求下载 Arrange CD 数据库；然后查找运营者的邮箱直接联系；再看看日本有没有欠我人情或愿意帮忙的人；然后打听更便宜的转运商；如果以上全部失败，就付 j-subculture 可能高达 25 美元的天价费用。</p>
+<p>2013 年 3 月 1 日发出的邮件到 5 月 27 日未获任何回复；随后在 <code>/r/TOUHOUMUSIC</code> 上<a href="http://www.reddit.com/r/TOUHOUMUSIC/comments/1f61p6/request_anyone_ordering_from_tora_no_ana_soon/" id="_s7MYAoUB" data-link-icon="☯" data-link-icon-type="text" data-link-icon-color="#e44031" title="[request] Anyone ordering from Tora no Ana soon? (self.TOUHOUMUSIC)">发帖求购</a>。</p></li>
+</ul>
+<p>需要更多数据库来进行标记-重捕分析！</p>
+<p><!--
+The ISO file seems to be broken: `file` just calls it 'data', and when I mount it as a loopback iso9660 file, `mount` throws an error. I redownloaded it and compared it, but the copies were identical.
+
+The good news is that the zip file seems to work fine. The data is in a .accdb file in a subfolder, which turns out to be the latest Microsoft Access database format. Unfortunately, this turns out to be almost entirely unsupported by anything on Linux (except for a Java library), but fortunately, an acquaintance had an Office 365 subscription and re-exported the .accdb file as a .mdb file (the older Access format) which was successfully read and converted to CSV by `mdb-tools`. The entries look like this:
+
+$ mdb-tables Toho_arrange_circle_database-gwern.mdb
+アレンジサークルリスト
+$ mdb-export Toho_arrange_circle_database-gwern.mdb `mdb-tables Toho_arrange_circle_database-gwern.mdb` > Toho_arrange_circle_database-gwern.csv
+$ head Toho_arrange_circle_database-gwern.csv
+    ID,pin,サークル名,ふりがな,URL,ジャンル,Vocal,主な頒布CD,原曲アレンジの程度,一言,memo
+    1,,"っ´Д｀)っゼロ式の処刑場（っ´Д｀)っゼロ式の家・DESTRUCTIVE ANGEL）","ぜろしきのしょけいじょう","http://shinzanzeroshiki.fc2web.com/","メタル","男","Crazy Trancy Ecstasy","原曲維持","重厚感あふれる荘厳なメタル。（Black）",
+    2,,"α music","あるふぁみゅーじっく","http://www19.atpages.jp/tatu4/","オーケストラ、ピアノ",,"東方風水華月","原曲維持",,
+    3,,"凸凹えんたーていめんとすたじお","でこぼこえんたーていめんとすたじお","http://3rd.geocities.jp/deko_boko_es/index/","リコーダー、ゲームミュージック",,"Electronic Magus","原曲維持","8ビットあり、リコーダー生演奏ありと多彩。（Black）",
+    4,,"[4989]","しくはっく","http://4989mm.littlestar.jp/","ロック","男女","musick for me","原曲維持","スローなロック風アレンジにハイトーン男声ボーカル、エレクトロも混ざったインストも。ドラマCDあり。（Black）",
+    5,,"[ kapparecords])","かっぱれこーず","http://www5f.biglobe.ne.jp/~kapparecords/","ハードロック","男","SCARLET FANTASIA","原曲維持","生演奏ギタードラムベースと男声ボーカルがんばれ。（Black）",
+    6,,"＜echo＞PROJECT","えこぷろじぇくと","http://echoproject.3rin.net/","ダンス、ポップス、ロック","女","eclat:","原曲重視～維持","女性ボーカルを軸にしてジャンルは何でもアレンジ。（Black）",
+    7,,"#039","しゃーぷさんきゅー","http://sharp039.web.fc2.com/",,,"EMERGENCE",,,
+    8,,"#ゆうかりんちゃんねる","ゆうかりんちゃんねる","http://yuukach.web.fc2.com/","オーケストラ、クラシック、ピアノ、エレクトロ、ロック",,"ゴリラ人間のための華麗なる大幻想曲集","原曲維持","クラシカルな構成と管弦を散りばめたオーケストラ、クラシック風インスト。バイオリンの倍音の響きが印象的。（Black）",
+    9,,"10-GALLON(Digit Smith)","てんがろん","http://10-gallon.net/","ロック、エレクトロ、ハードロック","女","悪魔城レミリア","原曲維持","原曲メロをミドルテンポなロックとエレクトロに乗せて。（Black）",
+$ tail -1 Toho_arrange_circle_database-gwern.csv
+    1316,,"侘助","わびすけ","http://ameblo.jp/wa-bi-su-ke/","エレクトロ、ロック","女","東方乙女椿","原曲維持","速めのエレクトロ、ロックアレンジが多め。女声ボーカル。（Black）",
+
+I am a little surprised that there are only 1316 entries. Either I've overestimated their thoroughness or this is limited to a specific convention or something like that... Need to look into this more.
+--></p>
+<section id="种子文件" class="level3">
+<h3><a href="#种子文件" title="Link to section: § &#39;种子文件&#39;">种子文件</a></h3>
+<p>音乐来源：<a href="http://www.nyaa.eu/?page=torrentinfo&amp;tid=387790" id="_H42-ZJXT">Touhou lossy music collection v.15.2</a>（源自 <a href="http://www.tlmc.eu/" id="_2Xq8kHLN">Touhou lossless music collection</a> 合集），共 265.2GB，包含来自不到 1264 个社团（“circles”）的 4952 张专辑中的 44421 首曲目。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode Bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> find ~/torrent/Touhou\ lossy\ music\ collection/ <span class="at">-type</span> f <span class="at">-name</span> <span class="st">&quot;*.mp3&quot;</span> <span class="kw">|</span> <span class="fu">wc</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">44421</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls torrent/Touhou\ lossy\ music\ collection/ <span class="kw">|</span> <span class="fu">wc</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>   <span class="ex">1264</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls torrent/Touhou\ lossy\ music\ collection/<span class="pp">*</span>/ <span class="kw">|</span> <span class="fu">wc</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>   <span class="ex">7477</span></span></code></pre></div>
+<p>文件名、音乐时长和元数据中的年份（如有）使用 <code>exiftool</code> 提取：</p>
+<p>活动列表： 例大祭[““,”SP”,“SP2”,2-9]：年度例大祭 M3*：年度 Media Mix Market，例如 http://polymetrica.wordpress.com/<span class="date-range">2009<sub><span title="2009 was 17 years ago.">17ya</span></sub></span>/10/09/things-i-am-excited-about-04-m324/ C[63-82]：半年一度的 <a href="https://en.wikipedia.org/wiki/Comiket" id="_XHr5_SCR" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Comiket#bodyContent">Comiket</a> サンクリ[28-50]：年度？Sunshine Creation http://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%82%B7%E3%83%A7%E3%83%B3_%28%E5%90%8C%E4%BA%BA%E5%8D%B3%E5%A3%B2%E4%BC%9A%29 東方紅楼夢[?2-8]：年度 Koromu 月の宴?2-5：年度？月之宴 紅のひろば?2-6：半年一度 红色广场 東方不敗小町?2-6, SP, ぷちこまち：Komachi 杜の奇跡[15-16] 東方杜郷想[2-3] 幺樂団カァニバル！?2-3 東方幻楽祭[2]：半年一度 コミコミ[12-14] FF[9-17] ? こみトレ[12-17] COMIC1☆2-6 COMIC CITY大阪[63,73] 恋魔理?2-3 東方椰麟祭?2-3 東方名華祭2</p>
+<p>exiftool; json</p>
+<p><code>exiftool</code> 的时长近似值可靠吗？是的，它似乎总是在完整的 <code>mp3info</code> 结果的几秒之内：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode Bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> find <span class="st">&quot;/home/gwern/torrent/Touhou lossy music collection/&quot;</span> <span class="at">-type</span> f <span class="at">-name</span> <span class="st">&quot;*.mp3&quot;</span> <span class="dt">\</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">-exec</span> mp3info <span class="at">-F</span> <span class="at">-p</span> <span class="st">&quot;0:%02m:%02s &quot;</span> {} <span class="dt">\;</span> <span class="at">-exec</span> exiftool <span class="at">-Duration</span> {} <span class="dt">\;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">0:00:23</span> Duration                        : 23.12 s <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">0:04:28</span> Duration                        : 0:04:28 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">0:02:44</span> Duration                        : 0:02:44 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">0:04:52</span> Duration                        : 0:04:52 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">0:03:56</span> Duration                        : 0:03:56 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">0:01:44</span> Duration                        : 0:01:44 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ex">0:04:34</span> Duration                        : 0:04:34 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ex">0:02:30</span> Duration                        : 0:02:30 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ex">0:03:02</span> Duration                        : 0:03:02 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ex">0:03:43</span> Duration                        : 0:03:42 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ex">0:03:23</span> Duration                        : 0:03:23 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ex">0:03:11</span> Duration                        : 0:03:11 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ex">0:04:22</span> Duration                        : 0:04:22 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="ex">0:03:13</span> Duration                        : 0:03:13 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="ex">0:04:04</span> Duration                        : 0:04:04 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ex">0:03:58</span> Duration                        : 0:03:57 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="ex">0:05:24</span> Duration                        : 0:05:24 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="ex">0:04:17</span> Duration                        : 0:04:17 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="ex">0:03:14</span> Duration                        : 0:03:14 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="ex">0:01:59</span> Duration                        : 0:01:58 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="ex">0:03:21</span> Duration                        : 0:03:21 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="ex">0:02:35</span> Duration                        : 0:02:35 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="ex">0:04:20</span> Duration                        : 0:04:20 <span class="er">(</span><span class="ex">approx</span><span class="kw">)</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 生成、解析和清理数据</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 约需 30 分钟：</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># R&gt; system(&quot;exiftool -extension mp3 -json -forcePrint</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#           -Title -Year -Album -Artist -Duration -Genre -Track -Directory -FileName -FileSize -AudioBitrate</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#           ~/torrent/Touhou\\ lossy\\ music\\ collection/*/* &gt; ~/touhou.json&quot;)</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rjson)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 从 http://www.gwern.net/docs/touhou/2013-torrent.json.xz 下载并用 xz 解压</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>json_data <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(<span class="fu">paste</span>(<span class="fu">readLines</span>(<span class="st">&quot;2013-gwern-touhoutorrent.json&quot;</span>), <span class="at">collapse=</span><span class="st">&quot;&quot;</span>))</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>touhou <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">matrix</span>(<span class="fu">unlist</span>(json_data), <span class="at">ncol=</span><span class="dv">12</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>))</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(touhou) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;SourceFile&quot;</span>, <span class="st">&quot;Title&quot;</span>, <span class="st">&quot;Year&quot;</span>, <span class="st">&quot;Album&quot;</span>, <span class="st">&quot;Artist&quot;</span>, <span class="st">&quot;Length&quot;</span>, <span class="st">&quot;Genre&quot;</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>                      <span class="st">&quot;Track&quot;</span>, <span class="st">&quot;Directory&quot;</span>, <span class="st">&quot;FileName&quot;</span>, <span class="st">&quot;FileSize&quot;</span>, <span class="st">&quot;AudioBitrate&quot;</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 删除 SourceFile 列；与 Directory/FileName 重复</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>touhou <span class="ot">&lt;-</span> touhou[,<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Directory <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">&quot;/home/gwern/torrent/Touhou lossy music collection/&quot;</span>, <span class="st">&quot;&quot;</span>,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">as.character</span>(touhou<span class="sc">$</span>Directory))</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>touhou[touhou<span class="sc">==</span><span class="st">&quot;&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>touhou[touhou<span class="sc">==</span><span class="st">&quot;-&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Year <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">as.character</span>(touhou<span class="sc">$</span>Year))</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 种子不包含 2013 年的音乐，而 PC-98 游戏之前的音乐根本不存在……</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Year[touhou<span class="sc">$</span>Year<span class="sc">&lt;</span><span class="dv">1990</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Year[touhou<span class="sc">$</span>Year<span class="sc">&gt;</span><span class="dv">2012</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Genre 是 &quot;None&quot; 或 &quot; &quot;？都是无用且错误的（谢谢标签器）；所以也删掉：</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Genre[touhou<span class="sc">$</span>Genre<span class="sc">==</span><span class="st">&quot;None&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Genre[touhou<span class="sc">$</span>Genre<span class="sc">==</span><span class="st">&quot; &quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co"># 将曲目时长和比特率转换为可用的数字，统一单位（秒和 MB）</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Length <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot; </span><span class="sc">\\</span><span class="st">(approx</span><span class="sc">\\</span><span class="st">)&quot;</span>,<span class="st">&quot;&quot;</span>,<span class="fu">as.character</span>(touhou<span class="sc">$</span>Length))</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>AudioBitrate <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">sub</span>(<span class="st">&quot; kbps&quot;</span>,<span class="st">&quot;&quot;</span>,<span class="fu">as.character</span>(touhou<span class="sc">$</span>AudioBitrate)))</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="co"># exiftool 输出 &quot;16 s&quot;；如果是这样，去掉 &quot; s&quot; 并转为整数</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="co"># 否则格式为 &quot;0:04:37&quot;；按冒号分割，</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co"># 小时乘以 3600 秒，分钟乘以 60，秒数不变；然后求和</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>interval <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(x)) { <span class="cf">if</span> (<span class="fu">grepl</span>(<span class="st">&quot; s&quot;</span>,x)) <span class="fu">as.integer</span>(<span class="fu">sub</span>(<span class="st">&quot; s&quot;</span>,<span class="st">&quot;&quot;</span>,x))</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>                                           <span class="cf">else</span> { y <span class="ot">&lt;-</span> <span class="fu">unlist</span>(<span class="fu">strsplit</span>(x, <span class="st">&quot;:&quot;</span>));</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>                                                  <span class="fu">as.integer</span>(y[[<span class="dv">1</span>]])<span class="sc">*</span><span class="dv">3600</span> <span class="sc">+</span> <span class="fu">as.integer</span>(y[[<span class="dv">2</span>]])<span class="sc">*</span><span class="dv">60</span> <span class="sc">+</span> <span class="fu">as.integer</span>(y[[<span class="dv">3</span>]]); }</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>                                                  }</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>                          <span class="cf">else</span> <span class="cn">NA</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>                          }</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Length <span class="ot">&lt;-</span> <span class="fu">sapply</span>(touhou<span class="sc">$</span>Length,interval)</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>filesize <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { <span class="cf">if</span> (<span class="fu">grepl</span>(<span class="st">&quot; kB&quot;</span>,x)) (<span class="fu">as.integer</span>(<span class="fu">sub</span>(<span class="st">&quot; kB&quot;</span>,<span class="st">&quot;&quot;</span>,x))<span class="sc">/</span><span class="dv">1000</span>) <span class="cf">else</span> <span class="fu">as.integer</span>(<span class="fu">sub</span>(<span class="st">&quot; MB&quot;</span>,<span class="st">&quot;&quot;</span>,x))}</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>FileSize <span class="ot">&lt;-</span> <span class="fu">sapply</span>(touhou<span class="sc">$</span>FileSize, filesize)</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="co"># 重头戏：将 Directory 中编码的信息转换为可用的列。非胆小者勿入。</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Directory 列的格式如 &quot;[twith1450]/2009.03.08 TOHOMOHO [例大祭6]&quot;</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="co"># 编码规则为 &quot;[社团]/活动日期 专辑名 [活动]&quot;</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;[Angelic Quasar]/2006.01.29 [AQSH-0003] Racial Ethnic Nation&quot;</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;[Alstroemeria Records]/[ARCD0001] The regret of stars, but stars shine bright (C65) (mp3)&quot;</span></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;[Aqua Style／ひえろぐらふ]/2010.05.24 [AQUA-0031] 春宵一刻値千金 -シュンショウイッコク　アタイセンキン-&quot;</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>brackets <span class="ot">&lt;-</span> <span class="cf">function</span>(b) <span class="fu">sub</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">]&quot;</span>,<span class="st">&quot;&quot;</span>, <span class="fu">sub</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">[&quot;</span>,<span class="st">&quot;&quot;</span>,b))</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a><span class="co"># 第一步简单：解析出开头的社团名称（总是存在的，以正斜杠结尾）作为新列</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Circle <span class="ot">&lt;-</span> <span class="fu">sapply</span>(touhou<span class="sc">$</span>Directory, <span class="cf">function</span>(x) <span class="fu">brackets</span>(<span class="fu">unlist</span>(<span class="fu">strsplit</span>(<span class="fu">as.character</span>(x), <span class="st">&quot;/&quot;</span>))[<span class="dv">1</span>]))</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="co"># 破坏性更新：移除社团名称，以简化下一步</span></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a><span class="co"># 这使 Directory 变成类似 &quot;2009.06.07 [PAER-0007] #01 -LILITH- [東方幻楽祭2]&quot;</span></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a><span class="co"># 或 &quot;[ARCD0001] The regret of stars, but stars shine bright (C65) (mp3)&quot;</span></span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Directory <span class="ot">&lt;-</span> <span class="fu">sapply</span>(touhou<span class="sc">$</span>Directory, <span class="cf">function</span>(x) <span class="fu">unlist</span>(<span class="fu">strsplit</span>(<span class="fu">as.character</span>(x), <span class="st">&quot;/&quot;</span>))[<span class="dv">2</span>])</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="fu">sapply</span>(touhou<span class="sc">$</span>Directory, <span class="cf">function</span>(x) <span class="fu">substring</span>(x, <span class="dv">1</span>, <span class="dv">10</span>)), <span class="at">format=</span><span class="st">&quot;%Y.%m.%d&quot;</span>)</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a><span class="co"># 同样地，去掉已解析的活动日期，剩下如 &quot;ピアノのための東方小品集 Op.1-1 [御射宮司祭]&quot;</span></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a><span class="co"># 或 &quot;月遊 [例大祭8]&quot; 或 &quot;[AQUA-0031] 春宵一刻値千金 -シュンショウイッコク　アタイセンキン-&quot;</span></span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Directory <span class="ot">&lt;-</span> <span class="fu">sapply</span>(touhou<span class="sc">$</span>Directory, <span class="cf">function</span>(x) <span class="fu">substring</span>(x, <span class="dv">12</span>))</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="co"># 提取下一个参数——专辑发布的活动名称——更加困难</span></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a><span class="co"># 如果目录不以右方括号结尾，则没有活动信息，应返回空值</span></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a><span class="co"># 否则用正则表达式抓取最后一对方括号（前面有空格，排除专辑编号方案）并修剪</span></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a><span class="co"># 如果失败了？那么它一定是没有空格在括号前的目录格式，不加前导空格重试</span></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Event <span class="ot">&lt;-</span> <span class="fu">sapply</span>(touhou<span class="sc">$</span>Directory, <span class="cf">function</span>(x) { <span class="cf">if</span> (<span class="fu">str_sub</span>(x,<span class="at">start=</span><span class="sc">-</span><span class="dv">1</span>) <span class="sc">==</span> <span class="st">&quot;]&quot;</span>) { res <span class="ot">&lt;-</span> <span class="fu">brackets</span>(<span class="fu">unlist</span>(<span class="fu">str_split</span>(x, <span class="st">&quot; </span><span class="sc">\\</span><span class="st">[&quot;</span>))[<span class="dv">2</span>]); <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(res)) res <span class="cf">else</span> <span class="fu">brackets</span>(<span class="fu">unlist</span>(<span class="fu">str_split</span>(x, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">[&quot;</span>))[<span class="dv">2</span>]) } <span class="cf">else</span> x})</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a><span class="co"># 检查 Event 列会发现充满错误条目。我列出了 19 个活动名称前缀（希望是完整的），</span></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a><span class="co"># 用作白名单，删除所有不包含这 19 个前缀的条目。</span></span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>isPrefix <span class="ot">&lt;-</span> <span class="cf">function</span>(x,y) <span class="fu">grepl</span>(<span class="fu">paste0</span>(<span class="st">&quot;^&quot;</span>,x), y)</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>events <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;例大祭&quot;</span>,<span class="st">&quot;M3&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;サンクリ&quot;</span>,<span class="st">&quot;東方紅楼夢&quot;</span>,<span class="st">&quot;月の宴&quot;</span>,<span class="st">&quot;紅のひろば&quot;</span>,<span class="st">&quot;東方不敗小町&quot;</span>,<span class="st">&quot;杜の奇跡&quot;</span>,<span class="st">&quot;東方杜郷想&quot;</span>,</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;幺樂団カァニバル！&quot;</span>,<span class="st">&quot;東方幻楽祭&quot;</span>,<span class="st">&quot;コミコミ&quot;</span>,<span class="st">&quot;FF&quot;</span>,<span class="st">&quot;こみトレ&quot;</span>,<span class="st">&quot;COMIC1&quot;</span>,<span class="st">&quot;COMIC CITY大阪&quot;</span>,<span class="st">&quot;恋魔理&quot;</span>,<span class="st">&quot;東方椰麟祭&quot;</span>,<span class="st">&quot;東方名華祭&quot;</span>)</span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Event <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">as.character</span>(touhou<span class="sc">$</span>Event),</span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>                       <span class="cf">function</span>(target) <span class="cf">if</span> (<span class="fu">sum</span>(<span class="fu">sapply</span>(events, <span class="cf">function</span>(e) <span class="fu">isPrefix</span>(e,target))) <span class="sc">!=</span> <span class="dv">0</span>) target <span class="cf">else</span> <span class="cn">NA</span>)</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="co"># 这个白名单覆盖了几乎整个样本，所以我认为效果很好：</span></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="do">## R&gt; sum(!is.na(touhou$Event))</span></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 39190</span></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a><span class="do">## R&gt; length(touhou$Event)</span></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 41866</span></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a><span class="co"># 最后一件事，由于（几乎）所有目录都有日期而并非所有文件都有年份；</span></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="co"># 根据刚提取的日期覆盖缺失的年份</span></span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Year <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">format</span>(touhou<span class="sc">$</span>Date, <span class="st">&quot;%Y&quot;</span>))</span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>Directory <span class="ot">&lt;-</span> <span class="cn">NULL</span> <span class="co"># 清理</span></span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a><span class="co"># 带着战利品逃跑：</span></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(touhou, <span class="at">file=</span><span class="st">&quot;2013-gwern-touhoumusic-torrent.csv&quot;</span>, <span class="at">row.names=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+</section>
+</section>
+<section id="vgmdb" class="level2">
+<h2><a href="#vgmdb" title="Link to section: § &#39;VGMdb&#39;">VGMdb</a></h2>
+<p><a href="http://vgmdb.net/product/9" id="_ZflVUfmJ">东方项目页面</a>实际上并不完整：每个条目都需要手动标注为与东方相关。有人给我指了一个<a href="http://vgmdb.net/search?do=results&amp;id=161863" id="_SrKPjAPd">搜索查询</a>，通过在”games”字段中查找包含”Touhou”字符串的页面，找到了更多结果。</p>
+<p>VGMdb 管理员友好地给予了我对其 MySQL 数据库的只读访问权限。我从 VGMdb 主数据库中导出了 <code>vgmdb_albums</code> 和 <code>vgmdb_tracks</code> 两张完整的表；导出为逗号分隔的 2 个 CSV 文件，分别命名为 <code>2013-vgmdb-albums.csv</code> 和 <code>2013-vgmdb-tracks.csv</code>。在加载导出文件之前，我必须删除所有转义引号；R 的默认 CSV 解析器无法处理它们。曲目行是一首曲目对应一个专辑 ID，因此要将每个曲目记录/行转换为与种子文件行等效的格式，我需要根据专辑表填充信息。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>albums <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;http://www.gwern.net/docs/touhou/2013-vgmdb.csv&quot;</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>albums <span class="ot">&lt;-</span> <span class="fu">with</span>(albums,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>           <span class="fu">data.frame</span>(albumid,reldate,publisher,game,albumtitles))</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>albums <span class="ot">&lt;-</span> albums[<span class="fu">grepl</span>(<span class="st">&quot;ouhou&quot;</span>, albums<span class="sc">$</span>game),]; albums<span class="sc">$</span>game <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>tracks <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;2013-vgmdb-tracks.csv&quot;</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>tracks<span class="sc">$</span>tracklistid <span class="ot">&lt;-</span> <span class="cn">NULL</span>; tracks<span class="sc">$</span>trackid <span class="ot">&lt;-</span> <span class="cn">NULL</span>; tracks<span class="sc">$</span>disctitle <span class="ot">&lt;-</span> <span class="cn">NULL</span>; tracks<span class="sc">$</span>disc <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>tracks<span class="sc">$</span>length[tracks<span class="sc">$</span>length<span class="sc">==</span><span class="dv">0</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span> <span class="co"># 0 是 VGMdb 架构中的默认值</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>tracks <span class="ot">&lt;-</span> tracks[tracks<span class="sc">$</span>albumid <span class="sc">%in%</span> albums<span class="sc">$</span>albumid,]</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>touhou <span class="ot">&lt;-</span> <span class="fu">merge</span>(tracks, albums)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>albumid <span class="ot">&lt;-</span> <span class="cn">NULL</span>; albums <span class="ot">&lt;-</span> <span class="cn">NULL</span>; tracks <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 处理 41 个格式为 &quot;2005-09-00&quot; 的日期（第 0 个月或日不存在……）</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="fu">sub</span>(<span class="st">&quot;-00&quot;</span>,<span class="st">&quot;-01&quot;</span>,<span class="fu">as.character</span>(touhou<span class="sc">$</span>reldate)))</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>reldate <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>touhou<span class="sc">$</span>year <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">format</span>(touhou<span class="sc">$</span>date, <span class="st">&quot;%Y&quot;</span>))</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 大写并重新排列为种子文件的列顺序</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(touhou) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Track&quot;</span>,<span class="st">&quot;Title&quot;</span>,<span class="st">&quot;Length&quot;</span>,<span class="st">&quot;Circle&quot;</span>,<span class="st">&quot;Album&quot;</span>,<span class="st">&quot;Date&quot;</span>,<span class="st">&quot;Year&quot;</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>touhou <span class="ot">&lt;-</span> touhou[<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">6</span>)]</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(touhou, <span class="at">file=</span><span class="st">&quot;2013-vgmdb-touhou.csv&quot;</span>, <span class="at">row.names=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+</section>
+<section id="touhouwikinet" class="level2">
+<h2><a href="#touhouwikinet" title="Link to section: § &#39;touhouwiki.net&#39;"><code>touhouwiki.net</code></a></h2>
+</section>
+<section id="个人下载" class="level2">
+<h2><a href="#个人下载" title="Link to section: § &#39;个人下载&#39;">个人下载</a></h2>
+<section id="chan-jp-c83-主题帖" class="level3">
+<h3><a href="#chan-jp-c83-主题帖" title="Link to section: § &#39;4chan /jp/ C83 主题帖&#39;">4chan /jp/ C83 主题帖</a></h3>
+<p>一群松散的 <a href="https://en.wikipedia.org/wiki/4chan" id="_vsu6CTu3" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/4chan#bodyContent">4chan</a> 用户在 <a href="https://boards.4chan.org/jp/" id="_qPIKHcH3" data-link-icon="4CH" data-link-icon-type="text,sans,tri" data-link-icon-color="#69ac46">/jp/</a> 子版块每次 Comiket 期间合作上传和分发该次 Comiket 发布的同人漫画、游戏和音乐；有些由 Comiket 参加者上传，有些从 <a href="https://en.wikipedia.org/wiki/Comic_Toranoana" id="_-i_MoKU0" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Comic_Toranoana#bodyContent">Comic Toranoana</a> 等经销商购买，许多文件则从日本 P2P 文件共享网络如 <a href="https://en.wikipedia.org/wiki/Winny" id="_dD9i7m7Z" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Winny#bodyContent">Winny</a>/<a href="https://en.wikipedia.org/wiki/Share_(P2P)" id="_KyFv44Eh" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Share_(P2P)#bodyContent">Share</a>/<a href="https://en.wikipedia.org/wiki/Perfect_Dark_(P2P)" id="_5MADNwia" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Perfect_Dark_(P2P)#bodyContent">Perfect Dark</a> 收集而来。我从 <a href="http://www.reddit.com/r/TOUHOUMUSIC/comments/15pp33/c83_resource_thread/" id="_fzyL9-QD" data-link-icon="☯" data-link-icon-type="text" data-link-icon-color="#e44031">/r/TouhouMusic</a> 的 C83 主题帖（主要来自 4chan 链接）和博客 <a href="http://alldoujinmusic.wordpress.com" id="_60nkC0bH">All Doujin Music</a> 中汇编了约 400 个文件的列表，并在 <span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span> 年 1 月至 3 月间逐步下载。去除死链后，剩余 400-500 个文件。其中很多不是音乐，甚至与东方无关，因此我手动筛选专辑，寻找东方同人作品的特征（致谢 ZUN、封面中的东方角色、我认出的东方主题等）；当我不确定时，宁可排除。<a href="/docs/touhou/2013-c83-downloads.txt" id="_tmztE-EU" class="link-modified-recently" data-link-icon="txt" data-link-icon-type="svg">最终合集</a><span>产出 3503 个文件（大致均分：<span class="date-range">1776<sub><span title="1776 was 250 years ago.">250ya</span></sub></span> 个东方 vs <span class="date-range">1728<sub><span title="1728 was 298 years ago.">298ya</span></sub></span> 个”其他”），其中有 953 个东方音乐文件。</span></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># exiftool -extension ogg -json -forcePrint -Title -Year -Album -Artist -Duration -Genre -TrackNumber -Directory</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># -FileName -FileSize -NominalBitrate -Date -recurse</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ~/c83/touhou/ ~/c83/touhou/*/** ~/c83/touhou/*/*/** ~/c83/touhou/*/*/*/** &gt; ~/2013-c83-downloads.json</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rjson)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 从 http://www.gwern.net/docs/touhou/2013-torrent.json.xz 下载并用 xz 解压</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>json_data <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(<span class="fu">paste</span>(<span class="fu">readLines</span>(<span class="st">&quot;2013-c83-downloads.json&quot;</span>), <span class="at">collapse=</span><span class="st">&quot;&quot;</span>))</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>touhou <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">matrix</span>(<span class="fu">unlist</span>(json_data), <span class="at">ncol=</span><span class="dv">13</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>))</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(touhou) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;SourceFile&quot;</span>, <span class="st">&quot;Title&quot;</span>, <span class="st">&quot;Year&quot;</span>, <span class="st">&quot;Album&quot;</span>, <span class="st">&quot;Artist&quot;</span>, <span class="st">&quot;Length&quot;</span>, <span class="st">&quot;Genre&quot;</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>                      <span class="st">&quot;Track&quot;</span>, <span class="st">&quot;Directory&quot;</span>, <span class="st">&quot;FileName&quot;</span>, <span class="st">&quot;FileSize&quot;</span>, <span class="st">&quot;AudioBitrate&quot;</span>, <span class="st">&quot;Date&quot;</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 删除 SourceFile 列；与 Directory/FileName 重复</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>touhou <span class="ot">&lt;-</span> touhou[,<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (filter <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;/home/gwern/c83/touhou/&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">[touhou.vnsharing.net</span><span class="sc">\\</span><span class="st">]&quot;</span>, <span class="st">&quot; </span><span class="sc">\\</span><span class="st">(320K</span><span class="sc">\\</span><span class="st">+BK</span><span class="sc">\\</span><span class="st">)&quot;</span>, <span class="st">&quot;/mp3&quot;</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>                 <span class="st">&quot; MP3v0&quot;</span>, <span class="st">&quot; v0&quot;</span>, <span class="st">&quot; </span><span class="sc">\\</span><span class="st">(flac</span><span class="sc">\\</span><span class="st">+scans</span><span class="sc">\\</span><span class="st">)&quot;</span>, <span class="st">&quot; </span><span class="sc">\\</span><span class="st">(128K</span><span class="sc">\\</span><span class="st">)&quot;</span>, <span class="st">&quot; </span><span class="sc">\\</span><span class="st">(V0</span><span class="sc">\\</span><span class="st">)&quot;</span>, <span class="st">&quot; </span><span class="sc">\\</span><span class="st">(320</span><span class="sc">\\</span><span class="st">)&quot;</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>                 <span class="st">&quot; </span><span class="sc">\\</span><span class="st">(mp3 320</span><span class="sc">\\</span><span class="st">)&quot;</span>, <span class="st">&quot; </span><span class="sc">\\</span><span class="st">(v0</span><span class="sc">\\</span><span class="st">+jpg</span><span class="sc">\\</span><span class="st">)&quot;</span>))</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a> { touhou<span class="sc">$</span>Directory <span class="ot">&lt;-</span> <span class="fu">sub</span>(filter, <span class="st">&quot;&quot;</span>, <span class="fu">as.character</span>(touhou<span class="sc">$</span>Directory)) }</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>touhou[touhou<span class="sc">==</span><span class="st">&quot;&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>touhou[touhou<span class="sc">==</span><span class="st">&quot;-&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code></pre></div>
+<p>播放时长：</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode Bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> c83/touhou/ <span class="at">-name</span> <span class="st">&quot;*.ogg&quot;</span> <span class="at">-exec</span> ogginfo {} <span class="dt">\;</span><span class="kw">|</span><span class="fu">fgrep</span> <span class="st">&quot;Playback length&quot;</span></span></code></pre></div>
+</section>
+<section id="chan-jp-c84-主题帖" class="level3">
+<h3><a href="#chan-jp-c84-主题帖" title="Link to section: § &#39;4chan /jp/ C84 主题帖&#39;">4chan /jp/ C84 主题帖</a></h3>
+<p>591 个东方音乐文件：</p>
+<p>/docs/touhou/2013-c84-downloads.json</p>
+</section>
+<section id="chan-jp-c85-主题帖" class="level3">
+<h3><a href="#chan-jp-c85-主题帖" title="Link to section: § &#39;4chan /jp/ C85 主题帖&#39;">4chan /jp/ C85 主题帖</a></h3>
+<p>449 个东方音乐文件：</p>
+<p>/docs/touhou/2013-c85-download.json</p>
+</section>
+<section id="chan-jp-例大祭10-主题帖" class="level3">
+<h3><a href="#chan-jp-例大祭10-主题帖" title="Link to section: § &#39;4chan /jp/ 例大祭10 主题帖&#39;">4chan /jp/ 例大祭10 主题帖</a></h3>
+<p>与上述类似，参考 <a href="http://www.reddit.com/r/TOUHOUMUSIC/comments/1f3ikk/the_reitaisai_10_resource_thread/" id="_7wwdJ6yg" data-link-icon="☯" data-link-icon-type="text" data-link-icon-color="#e44031">/r/TouhouMusic</a> 的讨论，手动去除重复和非东方内容后，得到 491 个音乐文件。</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode Bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">exiftool</span> <span class="at">-extension</span> ogg <span class="at">-json</span> <span class="at">-forcePrint</span> <span class="at">-Title</span> <span class="at">-Year</span> <span class="at">-Album</span> <span class="at">-Artist</span> <span class="at">-Duration</span> <span class="at">-Genre</span> <span class="at">-TrackNumber</span> <span class="at">-Directory</span> <span class="at">-FileName</span> <span class="at">-FileSize</span> <span class="at">-NominalBitrate</span> <span class="at">-Date</span> <span class="pp">*</span>/<span class="pp">*</span>.ogg <span class="op">&gt;</span> ~/2013-reitaisai-downloads.json</span></code></pre></div>
+</section>
+<section id="例大祭10-种子" class="level3">
+<h3><a href="#例大祭10-种子" title="Link to section: § &#39;例大祭10 种子&#39;">例大祭10 种子</a></h3>
+<p>2013 年 5 月和 6 月，一位匿名人士汇编了 67 张专辑，发布了两个例大祭10 专辑种子（<a href="http://www.nyaa.se/?page=view&amp;tid=438733" id="_0EtCwoJi">第1卷</a>、<a href="http://www.nyaa.se/?page=view&amp;tid=440787" id="_p8ebnw8v">第2卷</a>）</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode Bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">exiftool</span> <span class="at">-extension</span> ogg <span class="at">-json</span> <span class="at">-forcePrint</span> <span class="at">-Title</span> <span class="at">-Year</span> <span class="at">-Album</span> <span class="at">-Artist</span> <span class="at">-Duration</span> <span class="at">-Genre</span> <span class="at">-TrackNumber</span> <span class="at">-Directory</span> <span class="at">-FileName</span> <span class="at">-FileSize</span> <span class="at">-NominalBitrate</span> <span class="at">-Date</span> <span class="pp">*</span>/<span class="pp">*</span>.ogg <span class="op">&gt;</span> ~/2013-reitaisai-downloads-torrent.json</span></code></pre></div>
+</section>
+</section>
+</section>
+<section id="分析" class="level1">
+<h1><a href="#分析" title="Link to section: § &#39;分析&#39;">分析</a></h1>
+<div class="sourceCode" id="cb10"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>touhou <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;http://www.gwern.net/docs/touhou/2013-torrent.csv&quot;</span>,</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">colClasses=</span><span class="fu">c</span>(<span class="st">&quot;character&quot;</span>, <span class="st">&quot;integer&quot;</span>, <span class="st">&quot;factor&quot;</span>, <span class="st">&quot;character&quot;</span>, <span class="st">&quot;integer&quot;</span>, <span class="st">&quot;factor&quot;</span>,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;character&quot;</span>, <span class="st">&quot;character&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;integer&quot;</span>, <span class="st">&quot;factor&quot;</span>, <span class="st">&quot;Date&quot;</span>))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 对数据进行分析</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 总体相关性</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(touhou<span class="sc">$</span>Year, touhou<span class="sc">$</span>Length, touhou<span class="sc">$</span>FileSize, touhou<span class="sc">$</span>AudioBitrate)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(t,<span class="at">use=</span><span class="st">&quot;pairwise.complete.obs&quot;</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">#                     touhou.Year touhou.Length touhou.FileSize touhou.AudioBitrate</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co"># touhou.Year</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># touhou.Length          -0.01091</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># touhou.FileSize         0.04484       0.93915</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co"># touhou.AudioBitrate     0.19188       0.11091         0.35499</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 检验高比特率与大文件之间的相关性：</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(touhou<span class="sc">$</span>FileSize, touhou<span class="sc">$</span>AudioBitrate)</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 流派元数据毫无用处！</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">table</span>(touhou<span class="sc">$</span>Genre), <span class="at">decreasing=</span><span class="cn">TRUE</span>)</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 箱线图：每年平均时长</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(touhou<span class="sc">$</span>Length <span class="sc">~</span> <span class="fu">factor</span>(touhou<span class="sc">$</span>Year))</span></code></pre></div>
+<p>经济学建模：</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>jpn <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">stdin</span>(),<span class="at">header=</span><span class="cn">TRUE</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>DATE,VALUE</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2000-01-01</span>,<span class="fl">8.9</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2001-01-01</span>,<span class="fl">9.1</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2002-01-01</span>,<span class="fl">9.5</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="dv">2003-01-01</span>,<span class="fl">9.6</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="dv">2004-01-01</span>,<span class="fl">9.0</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="dv">2005-01-01</span>,<span class="fl">8.1</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="dv">2006-01-01</span>,<span class="fl">7.5</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="dv">2007-01-01</span>,<span class="fl">7.5</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="dv">2008-01-01</span>,<span class="fl">7.0</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="dv">2009-01-01</span>,<span class="fl">8.9</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="dv">2010-01-01</span>,<span class="fl">9.0</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="dv">2011-01-01</span>,<span class="fl">8.1</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 每年作品数量不相关：</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(jpn<span class="sc">$</span>VALUE[<span class="dv">3</span><span class="sc">:</span><span class="dv">12</span>], <span class="fu">table</span>(touhou<span class="sc">$</span>Year)[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    Pearson<span class="st">`</span><span class="at">s product-moment correlation</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="at">data:  jpn$VALUE[3:12] and table(touhou$Year)[1:10]</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="at">t = -0.3053, df = 8, p-value = 0.768</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="at">alternative hypothesis: true correlation is not equal to 0</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="at">95% confidence interval:</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="at"> -0.6903  0.5602</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="at">sample estimates:</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="at">    cor</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="at">-0.1073</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="at">model &lt;- lm(table(touhou$Year)[1:10] ~ c(2002:2011) + jpn$VALUE[3:12]); summary(model)</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="at">Call:</span></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="at">lm(formula = table(touhou$Year)[1:10] ~ c(2002:2011) + jpn$VALUE[3:12])</span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="at">Residuals:</span></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a><span class="at">    Min      1Q  Median      3Q     Max</span></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="at">-2128.6  -716.4    52.4   632.6  2253.4</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a><span class="at">Coefficients:</span></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a><span class="at">                Estimate Std. Error t value Pr(&gt;|t|)</span></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a><span class="at">(Intercept)     -2775278     342171   -8.11  8.3e-05</span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="at">c(2002:2011)        1379        170    8.13  8.2e-05</span></span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a><span class="at">jpn$VALUE[3:12]     1450        567    2.56    0.038</span></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a><span class="at">Residual standard error: 1400 on 7 degrees of freedom</span></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a><span class="at">Multiple R-squared: 0.905,  Adjusted R-squared: 0.878</span></span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a><span class="at">F-statistic: 33.5 on 2 and 7 DF,  p-value: 0.00026</span></span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a><span class="at">logModel &lt;- lm(log(table(touhou$Year)[1:10]) ~ c(2002:2011) + jpn$VALUE[3:12])</span></span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a><span class="at">summary(logModel)</span></span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a><span class="at">Call:</span></span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a><span class="at">lm(formula = log(table(touhou$Year)[1:10]) ~ c(2002:2011) + jpn$VALUE[3:12])</span></span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a><span class="at">Residuals:</span></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="at">   Min     1Q Median     3Q    Max</span></span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="at">-1.218 -0.632  0.108  0.551  0.982</span></span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a><span class="at">Coefficients:</span></span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a><span class="at">                 Estimate Std. Error t value Pr(&gt;|t|)</span></span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a><span class="at">(Intercept)     -1295.060    207.535   -6.24  0.00043</span></span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a><span class="at">c(2002:2011)        0.652      0.103    6.34  0.00039</span></span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a><span class="at">jpn$VALUE[3:12]    -0.725      0.344   -2.11  0.07301</span></span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a><span class="at">Residual standard error: 0.849 on 7 degrees of freedom</span></span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a><span class="at">Multiple R-squared: 0.906,  Adjusted R-squared: 0.879</span></span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a><span class="at">F-statistic: 33.8 on 2 and 7 DF,  p-value: 0.000253</span></span>
+<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a><span class="at">plot(c(2002:2011),table(touhou$Year)[1:10])</span></span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a><span class="at">points(c(2002:2011),exp(predict(logModel)),type=&#39;l&#39;,col=&#39;blue&#39;)</span></span></code></pre></div>
+<section id="随时间增长" class="level2">
+<h2><a href="#随时间增长" title="Link to section: § &#39;随时间增长&#39;">随时间增长</a></h2>
+<p>东方音乐语料库的增长速度有多快？</p>
+<p>恒定增长模型：第一款游戏发布于 1996 年，对吧？因此有 17 年时间积累了 1.26TB 即 1260GB，年均 74.1GB。截图显示下载速度为 0kb/s，这没什么参考价值，但它显示还需 2640 天，所以可以估算他的下载速度为每天 0.47GB（<code>1260/2640</code>），一年则为 174GB，是年均 74GB 的 2.35 倍。因此按这个年增速，发帖者<em>不会</em>永远追不上，实际上是可以赶上的。</p>
+<p>指数增长模型：这就有点棘手了，因为不能仅从累计总量和经过时间推导出公式。我需要更多数据。所以使用我 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span> 年的 <a href="https://en.wikipedia.org/wiki/Touhou_Project" id="_J5mNpr-6" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Touhou_Project#bodyContent">Touhou</a> Lossy Torrent 数据，我可以尝试对年度数量拟合指数曲线……但等等！音乐数量似乎并没有呈指数增长！</p>
+<pre><code>R&gt; touhou &lt;- read.csv(&quot;http://www.gwern.net/docs/touhou/2013-torrent.csv&quot;,
++                    colClasses=c(&quot;character&quot;, &quot;integer&quot;, &quot;factor&quot;, &quot;character&quot;,
++                                         &quot;integer&quot;, &quot;factor&quot;, &quot;character&quot;,
++                                         &quot;character&quot;, &quot;numeric&quot;, &quot;integer&quot;,
++                                         &quot;factor&quot;, &quot;Date&quot;))
+R&gt; summary(touhou$Year)
+R&gt; perYear &lt;- table(touhou$Year); perYear; plot(perYear)
+
+ 2002  2003  2004  2005  2006  2007  2008  2009  2010  2011  2012
+   13    23   255  1241  2070  2599  5073 10278  9765  7494  2999</code></pre>
+<p>图表：http://i.imgur.com/23fMA5c.png</p>
+<p>看起来东方音乐的增长在 <span class="date-range">2009<sub><span title="2009 was 17 years ago.">17ya</span></sub></span> 年达到峰值；这可能反映了种子的不完整性，但种子来自 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span> 年，你会期望到那时 <span class="date-range">2010<sub><span title="2010 was 16 years ago.">16ya</span></sub></span> 年或 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年的覆盖率应该相当好了。所以种子<em>整体</em>的增长看起来更像是 S 形曲线或对数曲线：</p>
+<pre><code>R&gt; runningTotal &lt;- cumsum(table(touhou$Year)); runningTotal; plot(runningTotal)
+ 2002  2003  2004  2005  2006  2007  2008  2009  2010  2011  2012
+   13    36   291  1532  3602  6201 11274 21552 31317 38811 41810</code></pre>
+<p>http://i.imgur.com/Lv9vHrZ.png</p>
+<p>所以更好的问法可能是：如果 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span> 年的增长速率持续下去，与他的下载速度之比是多少？</p>
+<p>2012 年为种子增加了 19.5GB：</p>
+<pre><code>R&gt; # FileSize 单位为兆字节，转为吉字节
+R&gt; sum(touhou[touhou$Year==2012,]$FileSize, na.rm=TRUE) / 1000
+[1] 19.5</code></pre>
+</section>
+</section>
+<section id="附录" class="level1">
+<h1><a href="#附录" title="Link to section: § &#39;附录&#39;">附录</a></h1>
+<section id="touhouwikinet-爬虫代码" class="level2">
+<h2><a href="#touhouwikinet-爬虫代码" title="Link to section: § &#39;touhouwiki.net 爬虫代码&#39;"><code>touhouwiki.net</code> 爬虫代码</a></h2>
+<p>使用 <a href="http://hackage.haskell.org/package/tagsoup" id="_bzesPnkH" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">Tagsoup</a> 和 <a href="http://hackage.haskell.org/package/split" id="_-zMXio7E" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">split</a> 包；向标准输出发送 CSV。这是一堆拼凑的代码，我有点不好意思公开，可能对你不起作用。</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode Haskell"><code class="sourceCode haskell"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Text.HTML.TagSoup</span> (fromAttrib, fromTagText, isTagOpen, isTagText,</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                          parseTags, (<span class="op">~/=</span>), <span class="dt">Tag</span>(<span class="dt">TagComment</span>, <span class="dt">TagOpen</span>,<span class="dt">TagText</span>))</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Network.HTTP</span> (getResponseBody, getRequest, simpleHTTP)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Data.List</span> (isInfixOf, isPrefixOf, nub, sort, stripPrefix)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Data.Char</span> (isSpace)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Codec.Binary.UTF8.String</span> (decodeString)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Data.Maybe</span> (fromMaybe, isJust, listToMaybe)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Data.List.Split</span> (keepDelimsL, split, whenElt)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Control.Monad</span> (join, unless)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="ot">main ::</span> <span class="dt">IO</span> ()</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>main <span class="ot">=</span> <span class="kw">do</span> albums1 <span class="ot">&lt;-</span> getAlbums <span class="st">&quot;http://en.touhouwiki.net/wiki/List_by_Groups&quot;</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>          albums2 <span class="ot">&lt;-</span> getAlbums <span class="st">&quot;http://en.touhouwiki.net/wiki/List_of_Old_Touhou_Arrangement_Groups&quot;</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>          <span class="kw">let</span> albumURLs <span class="ot">=</span> <span class="fu">map</span> (<span class="st">&quot;http://en.touhouwiki.net&quot;</span><span class="op">++</span>) <span class="op">$</span> nub <span class="op">$</span> <span class="fu">sort</span> <span class="op">$</span> albums1 <span class="op">++</span> albums2</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>          <span class="fu">putStrLn</span> header</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>          <span class="fu">mapM_</span> getAlbum albumURLs</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="ot">getAlbums ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> [<span class="dt">String</span>]</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>getAlbums <span class="fu">index</span> <span class="ot">=</span> <span class="kw">do</span> touhou <span class="ot">&lt;-</span> openURL <span class="fu">index</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">return</span> <span class="op">$</span> <span class="fu">drop</span> <span class="dv">22</span> <span class="op">$</span> <span class="fu">reverse</span> [link <span class="op">|</span> (<span class="dt">TagOpen</span> <span class="st">&quot;a&quot;</span> ((ref, link)<span class="op">:</span>_)) <span class="ot">&lt;-</span> parseTags touhou,</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>                                                        ref<span class="op">==</span><span class="st">&quot;href&quot;</span>,</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>                                                        <span class="st">&quot;/wiki/&quot;</span> <span class="ot">`isPrefixOf`</span> link,</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>                                                        <span class="kw">let</span> fltr x <span class="ot">=</span> <span class="fu">not</span> (x <span class="ot">`isInfixOf`</span> link),</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>                                                        fltr <span class="st">&quot;_Groups&quot;</span>, fltr <span class="st">&quot;Touhou_Wiki:&quot;</span>, fltr <span class="st">&quot;Special:&quot;</span>,</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>                                                        fltr <span class="st">&quot;Template:&quot;</span>, fltr <span class="st">&quot;Category:&quot;</span>, fltr <span class="st">&quot;Talk:&quot;</span>]</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Album</span> <span class="ot">=</span> [<span class="dt">Track</span>]</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="kw">data</span> <span class="dt">Track</span> <span class="ot">=</span> <span class="dt">Track</span> {<span class="ot"> title ::</span> <span class="dt">String</span>,<span class="ot"> year ::</span> <span class="dt">Int</span>,<span class="ot"> date ::</span> <span class="dt">String</span>,<span class="ot">artist ::</span> <span class="dt">String</span>,</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="ot">                     album ::</span> <span class="dt">String</span>,<span class="ot"> event ::</span> <span class="dt">String</span>,<span class="ot"> circle ::</span> <span class="dt">String</span>,<span class="ot"> duration ::</span> <span class="dt">Maybe</span> <span class="dt">Int</span>,</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="ot">                     track ::</span> <span class="dt">Int</span> } <span class="kw">deriving</span> <span class="dt">Show</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="ot">empty ::</span> <span class="dt">Track</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>empty <span class="ot">=</span> <span class="dt">Track</span> {title<span class="ot">=</span><span class="st">&quot;&quot;</span>,year<span class="ot">=</span><span class="dv">0</span>,date<span class="ot">=</span><span class="st">&quot;&quot;</span>,album<span class="ot">=</span><span class="st">&quot;&quot;</span>,event<span class="ot">=</span><span class="st">&quot;&quot;</span>,circle<span class="ot">=</span><span class="st">&quot;&quot;</span>,artist<span class="ot">=</span><span class="st">&quot;&quot;</span>,duration<span class="ot">=</span><span class="dt">Nothing</span>,track<span class="ot">=</span><span class="dv">0</span>}</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="ot">header ::</span> <span class="dt">String</span></span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>header <span class="ot">=</span> <span class="st">&quot;Title,Year,Date,Album,Event,Circle,Duration,Track&quot;</span></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="ot">convert ::</span> <span class="dt">Track</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>convert t <span class="ot">=</span> <span class="st">&quot;\&quot;&quot;</span> <span class="op">++</span> dequote (title t) <span class="op">++</span> <span class="st">&quot;\&quot;,&quot;</span> <span class="op">++</span> <span class="fu">show</span> (year t) <span class="op">++</span> <span class="st">&quot;,&quot;</span> <span class="op">++</span> <span class="fu">show</span> (date t) <span class="op">++</span> <span class="st">&quot;,\&quot;&quot;</span> <span class="op">++</span> dequote (album t) <span class="op">++</span> <span class="st">&quot;\&quot;,\&quot;&quot;</span> <span class="op">++</span></span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>             event t <span class="op">++</span> <span class="st">&quot;\&quot;,\&quot;&quot;</span> <span class="op">++</span> circle t <span class="op">++</span> <span class="st">&quot;\&quot;,&quot;</span> <span class="op">++</span> <span class="fu">maybe</span> <span class="st">&quot;&quot;</span> <span class="fu">show</span> (duration t) <span class="op">++</span> <span class="st">&quot;,&quot;</span> <span class="op">++</span> <span class="fu">show</span> (track t)</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="co">-- You are not expected to understand this.</span></span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a><span class="ot">getAlbum ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> ()</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>getAlbum a <span class="ot">=</span> <span class="kw">do</span> t <span class="ot">&lt;-</span> <span class="fu">fmap</span> parseTags <span class="op">$</span> openURL a</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>                <span class="co">--TagText &quot;Released&quot;,TagClose &quot;th&quot;,TagOpen &quot;td&quot; [],TagText &quot;\n2007-03-23&quot;</span></span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>                <span class="kw">let</span> dt <span class="ot">=</span> <span class="kw">let</span> target <span class="ot">=</span> <span class="fu">dropWhile</span> (<span class="dt">TagText</span> <span class="st">&quot;Released&quot;</span> <span class="op">~/=</span>) t</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>                         <span class="kw">in</span> <span class="kw">if</span> <span class="fu">null</span> target <span class="kw">then</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>                            <span class="kw">else</span> deleteParens <span class="op">$</span> fromTagText <span class="op">$</span> <span class="fu">head</span> <span class="op">$</span> <span class="fu">tail</span> <span class="op">$</span> <span class="fu">filter</span> isTagText target</span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>                <span class="co">-- TagText &quot;Released&quot;,TagClose &quot;th&quot;,TagOpen &quot;td&quot; [],TagText &quot;\n2009/02/08 (&quot;,</span></span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a>                <span class="co">-- TagOpen &quot;a&quot; [(&quot;href&quot;,&quot;/wiki/Category:Sunshine_Creation_42&quot;),(&quot;title&quot;,&quot;Category:Sunshine Creation 42&quot;)],</span></span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a>                <span class="co">-- TagText &quot;Sunshine Creation 42&quot;,TagClose &quot;a&quot;,TagText &quot;)&quot;,TagClose &quot;td&quot;</span></span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a>                <span class="kw">let</span> evnt <span class="ot">=</span> <span class="kw">let</span> stream <span class="ot">=</span> <span class="fu">filter</span> isTagText <span class="op">$</span> <span class="fu">dropWhile</span> (<span class="dt">TagText</span> <span class="st">&quot;Released&quot;</span> <span class="op">~/=</span>) t</span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a>                           <span class="kw">in</span> <span class="kw">if</span> <span class="ch">&#39;(&#39;</span> <span class="op">==</span> <span class="fu">last</span> (fromTagText <span class="op">$</span> <span class="fu">head</span> <span class="op">$</span> <span class="fu">take</span> <span class="dv">5</span> <span class="op">$</span> <span class="fu">drop</span> <span class="dv">1</span> stream) <span class="co">-- )</span></span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a>                              <span class="kw">then</span> fromTagText (<span class="fu">filter</span> isTagText (<span class="fu">dropWhile</span> (<span class="dt">TagText</span> <span class="st">&quot;Released&quot;</span> <span class="op">~/=</span>) t) <span class="op">!!</span> <span class="dv">2</span>)</span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>                              <span class="kw">else</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a>                <span class="co">-- &quot;2007-03-23&quot;</span></span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>                <span class="kw">let</span> yr <span class="ot">=</span> <span class="kw">if</span> <span class="fu">null</span> dt <span class="kw">then</span> <span class="dv">0</span> <span class="kw">else</span> <span class="fu">read</span> (<span class="fu">take</span> <span class="dv">4</span> dt)<span class="ot">::</span><span class="dt">Int</span></span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>                <span class="co">-- TagText &quot;Album by CODE ZTS LABEL&quot;</span></span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>                <span class="kw">let</span> hasCrcl <span class="ot">=</span> [cl <span class="op">|</span> <span class="dt">TagText</span> cl <span class="ot">&lt;-</span> t, <span class="st">&quot;Album by &quot;</span> <span class="ot">`isPrefixOf`</span> cl]</span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>                unless (<span class="fu">null</span> hasCrcl <span class="op">||</span> (yr<span class="op">==</span><span class="dv">0</span> <span class="op">&amp;&amp;</span> <span class="fu">null</span> dt)) <span class="op">$</span> <span class="kw">do</span></span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">let</span> crcl <span class="ot">=</span> lookForCircle t</span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a>                    <span class="co">-- TagText &quot;Selfregards2 - Touhou Wiki - Characters, games, locations, and more&quot;</span></span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">let</span> albm <span class="ot">=</span> <span class="fu">reverse</span> <span class="op">$</span> <span class="fu">drop</span> <span class="dv">55</span> <span class="op">$</span> <span class="fu">reverse</span> <span class="op">$</span> <span class="fu">head</span> [al <span class="op">|</span> <span class="dt">TagText</span> al <span class="ot">&lt;-</span> t,</span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">&quot; - Touhou Wiki - Characters, games, locations, and more&quot;</span> <span class="ot">`isInfixOf`</span> al]</span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">let</span> dflt <span class="ot">=</span> empty { date <span class="ot">=</span> dt, year <span class="ot">=</span> yr, circle <span class="ot">=</span> crcl, album <span class="ot">=</span> albm, event <span class="ot">=</span> evnt }</span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">let</span> table <span class="ot">=</span> <span class="fu">filter</span> (\x <span class="ot">-&gt;</span> <span class="fu">not</span> (<span class="st">&quot;Disc&quot;</span> <span class="ot">`isInfixOf`</span> x <span class="op">||</span> <span class="st">&quot; CD&quot;</span> <span class="ot">`isInfixOf`</span> x)) <span class="op">$</span></span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>                                 <span class="fu">filter</span> (<span class="fu">not</span> <span class="op">.</span> <span class="fu">all</span> <span class="fu">isSpace</span>) <span class="op">$</span></span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">map</span> (trim <span class="op">.</span> fromTagText) <span class="op">$</span> <span class="fu">filter</span> isTagText <span class="op">$</span></span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a>                                   <span class="fu">drop</span> <span class="dv">5</span> <span class="op">$</span> <span class="fu">takeWhile</span> (<span class="dt">TagOpen</span> <span class="st">&quot;table&quot;</span></span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a>                                     [(<span class="st">&quot;class&quot;</span>,<span class="st">&quot;navbox&quot;</span>),(<span class="st">&quot;cellspacing&quot;</span>,<span class="st">&quot;0&quot;</span>),</span>
+<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a>                                      (<span class="st">&quot;style&quot;</span>,<span class="st">&quot;background:#FFFBEE;border-color:#A8A077;&quot;</span>)] <span class="op">~/=</span>) <span class="op">$</span></span>
+<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a>                                       <span class="fu">takeWhile</span> (<span class="dt">TagComment</span> <span class="st">&quot;&quot;</span> <span class="op">~/=</span>) <span class="op">$</span></span>
+<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>                                        <span class="fu">dropWhile</span> (<span class="dt">TagOpen</span> <span class="st">&quot;span&quot;</span></span>
+<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a>                                         [(<span class="st">&quot;class&quot;</span>,<span class="st">&quot;mw-headline&quot;</span>),(<span class="st">&quot;id&quot;</span>,<span class="st">&quot;Tracks&quot;</span>)] <span class="op">~/=</span>) t</span>
+<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">let</span> tracks <span class="ot">=</span> <span class="fu">filter</span> (<span class="fu">not</span> <span class="op">.</span> <span class="fu">null</span>) <span class="op">$</span></span>
+<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a>                                  split (keepDelimsL <span class="op">$</span> whenElt</span>
+<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a>                                   (\x <span class="ot">-&gt;</span> <span class="fu">length</span> x<span class="op">==</span><span class="dv">3</span> <span class="op">&amp;&amp;</span> <span class="st">&quot;.&quot;</span> <span class="ot">`isInfixOf`</span> x <span class="op">&amp;&amp;</span>  isJust(maybeRead<span class="ot"> x ::</span> <span class="dt">Maybe</span> <span class="dt">Int</span>))) table</span>
+<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">mapM_</span> (<span class="fu">putStrLn</span> <span class="op">.</span> convert <span class="op">.</span> trackToTrack dflt) tracks</span>
+<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a><span class="co">-- TagText &quot;Album by &quot;,TagOpen &quot;a&quot;</span></span>
+<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a><span class="co">-- [(&quot;href&quot;,&quot;/wiki/ALiCE%27S_EMOTiON&quot;),(&quot;title&quot;,&quot;ALiCE&#39;S EMOTiON&quot;)],TagText</span></span>
+<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a><span class="co">-- &quot;ALiCE&#39;S EMOTiON&quot;,TagClose &quot;a&quot;</span></span>
+<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a><span class="ot">lookForCircle ::</span> [<span class="dt">Tag</span> <span class="dt">String</span>] <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a>lookForCircle t <span class="ot">=</span> <span class="kw">let</span> c <span class="ot">=</span> <span class="fu">head</span> [cl <span class="op">|</span> <span class="dt">TagText</span> cl <span class="ot">&lt;-</span> t, <span class="st">&quot;Album by &quot;</span> <span class="ot">`isPrefixOf`</span> cl]</span>
+<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a>                      res <span class="ot">=</span> <span class="kw">if</span> c <span class="op">==</span> <span class="st">&quot;Album by &quot;</span> <span class="kw">then</span> (<span class="kw">let</span> tg <span class="ot">=</span> (<span class="fu">dropWhile</span> (<span class="dt">TagText</span> <span class="st">&quot;Album by &quot;</span> <span class="op">~/=</span>) t <span class="op">!!</span> <span class="dv">2</span>)</span>
+<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a>                        <span class="kw">in</span> <span class="kw">if</span> isTagText tg <span class="kw">then</span> fromTagText tg <span class="kw">else</span></span>
+<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a>                            (<span class="kw">if</span> isTagOpen tg <span class="kw">then</span> fromAttrib <span class="st">&quot;title&quot;</span> tg <span class="kw">else</span> <span class="st">&quot;&quot;</span>) ) <span class="kw">else</span> <span class="fu">drop</span> <span class="dv">9</span> c</span>
+<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a>                      <span class="kw">in</span> <span class="kw">if</span> <span class="st">&quot;(page does not exist)&quot;</span> <span class="ot">`isInfixOf`</span> res <span class="kw">then</span> <span class="fu">takeWhile</span> (<span class="op">/=</span><span class="ch">&#39;(&#39;</span>) res <span class="kw">else</span> res <span class="co">-- )</span></span>
+<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-88"><a href="#cb15-88" aria-hidden="true" tabindex="-1"></a><span class="co">-- [&quot;01.&quot;,&quot;The mom&quot;,&quot;(04:07)&quot;,&quot;arrangement: ZTS&quot;,&quot;composition: ZTS&quot;,&quot;original title: The mom&quot;,&quot;source: Parhelia&quot;]</span></span>
+<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a><span class="ot">trackToTrack ::</span> <span class="dt">Track</span> <span class="ot">-&gt;</span> [<span class="dt">String</span>] <span class="ot">-&gt;</span> <span class="dt">Track</span></span>
+<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a>trackToTrack tr t <span class="ot">=</span> tr { track <span class="ot">=</span> fromMaybe <span class="dv">0</span> (maybeRead (<span class="fu">head</span> t)<span class="ot"> ::</span> <span class="dt">Maybe</span> <span class="dt">Int</span>),</span>
+<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a>                         title <span class="ot">=</span> t <span class="op">!!</span> <span class="dv">1</span>,</span>
+<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a>                         duration <span class="ot">=</span> <span class="kw">if</span> <span class="fu">length</span> t <span class="op">&gt;=</span><span class="dv">3</span> <span class="kw">then</span> <span class="dt">Just</span> (timeConverter <span class="op">$</span> deleteParens (t <span class="op">!!</span> <span class="dv">2</span>)) <span class="kw">else</span> <span class="dt">Nothing</span>,</span>
+<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a>                         artist <span class="ot">=</span>  lookForAnArtist t }</span>
+<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a><span class="ot">lookForAnArtist ::</span> [<span class="dt">String</span>] <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb15-96"><a href="#cb15-96" aria-hidden="true" tabindex="-1"></a>lookForAnArtist t <span class="ot">=</span> <span class="kw">let</span> targets <span class="ot">=</span> <span class="fu">dropWhile</span> (\x <span class="ot">-&gt;</span> <span class="fu">not</span> (<span class="st">&quot;arrangement:&quot;</span> <span class="ot">`isPrefixOf`</span> x <span class="op">||</span> <span class="st">&quot;composition:&quot;</span> <span class="ot">`isPrefixOf`</span> x)) t</span>
+<span id="cb15-97"><a href="#cb15-97" aria-hidden="true" tabindex="-1"></a>                        target</span>
+<span id="cb15-98"><a href="#cb15-98" aria-hidden="true" tabindex="-1"></a>                            <span class="op">|</span> <span class="fu">null</span> targets <span class="ot">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb15-99"><a href="#cb15-99" aria-hidden="true" tabindex="-1"></a>                            <span class="op">|</span> <span class="fu">last</span> (<span class="fu">head</span> targets) <span class="op">==</span> <span class="ch">&#39;:&#39;</span> <span class="ot">=</span> <span class="fu">head</span> targets <span class="op">++</span> (targets <span class="op">!!</span> <span class="dv">1</span>)</span>
+<span id="cb15-100"><a href="#cb15-100" aria-hidden="true" tabindex="-1"></a>                            <span class="op">|</span> <span class="fu">otherwise</span> <span class="ot">=</span> <span class="fu">head</span> targets</span>
+<span id="cb15-101"><a href="#cb15-101" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">in</span> trim <span class="op">$</span> fromMaybe <span class="st">&quot;&quot;</span> <span class="op">$</span> join <span class="op">$</span> <span class="fu">fmap</span> (stripPrefix <span class="st">&quot;arrangement:&quot;</span>) <span class="op">$</span> stripPrefix <span class="st">&quot;composition:&quot;</span> target</span>
+<span id="cb15-102"><a href="#cb15-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-103"><a href="#cb15-103" aria-hidden="true" tabindex="-1"></a><span class="co">-- 工具函数</span></span>
+<span id="cb15-104"><a href="#cb15-104" aria-hidden="true" tabindex="-1"></a><span class="ot">openURL ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">String</span></span>
+<span id="cb15-105"><a href="#cb15-105" aria-hidden="true" tabindex="-1"></a>openURL url <span class="ot">=</span> <span class="fu">fmap</span> decodeString (simpleHTTP (getRequest url) <span class="op">&gt;&gt;=</span> getResponseBody)</span>
+<span id="cb15-106"><a href="#cb15-106" aria-hidden="true" tabindex="-1"></a>deleteParens, trim,<span class="ot"> dequote ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb15-107"><a href="#cb15-107" aria-hidden="true" tabindex="-1"></a>deleteParens <span class="ot">=</span> trim <span class="op">.</span> <span class="fu">filter</span> (\x <span class="ot">-&gt;</span> x <span class="op">/=</span> <span class="ch">&#39;(&#39;</span> <span class="op">&amp;&amp;</span> x <span class="op">/=</span> <span class="ch">&#39;)&#39;</span>)</span>
+<span id="cb15-108"><a href="#cb15-108" aria-hidden="true" tabindex="-1"></a>trim <span class="ot">=</span> <span class="fu">reverse</span> <span class="op">.</span> <span class="fu">dropWhile</span> <span class="fu">isSpace</span> <span class="op">.</span> <span class="fu">reverse</span> <span class="op">.</span> <span class="fu">dropWhile</span> <span class="fu">isSpace</span></span>
+<span id="cb15-109"><a href="#cb15-109" aria-hidden="true" tabindex="-1"></a>dequote <span class="ot">=</span> <span class="fu">map</span> (\x <span class="ot">-&gt;</span> <span class="kw">if</span> x<span class="op">==</span><span class="ch">&#39;&quot;&#39;</span> <span class="kw">then</span> <span class="ch">&#39;\&#39;&#39;</span> <span class="kw">else</span> x) <span class="co">-- &quot;&#39;)</span></span>
+<span id="cb15-110"><a href="#cb15-110" aria-hidden="true" tabindex="-1"></a><span class="ot">timeConverter ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb15-111"><a href="#cb15-111" aria-hidden="true" tabindex="-1"></a>timeConverter n <span class="ot">=</span> <span class="kw">let</span> (m,s) <span class="ot">=</span> <span class="fu">break</span> (<span class="op">==</span><span class="ch">&#39;:&#39;</span>) n</span>
+<span id="cb15-112"><a href="#cb15-112" aria-hidden="true" tabindex="-1"></a>                      m&#39; <span class="ot">=</span> maybeRead<span class="ot"> m ::</span> <span class="dt">Maybe</span> <span class="dt">Int</span></span>
+<span id="cb15-113"><a href="#cb15-113" aria-hidden="true" tabindex="-1"></a>                      s&#39; <span class="ot">=</span> maybeRead (<span class="fu">drop</span> <span class="dv">1</span> s)<span class="ot"> ::</span> <span class="dt">Maybe</span> <span class="dt">Int</span></span>
+<span id="cb15-114"><a href="#cb15-114" aria-hidden="true" tabindex="-1"></a>                  <span class="kw">in</span> (fromMaybe <span class="dv">0</span> m&#39; <span class="op">*</span> <span class="dv">60</span>) <span class="op">+</span> fromMaybe <span class="dv">0</span> s&#39;</span>
+<span id="cb15-115"><a href="#cb15-115" aria-hidden="true" tabindex="-1"></a><span class="ot">maybeRead ::</span> <span class="dt">Read</span> a <span class="ot">=&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Maybe</span> a</span>
+<span id="cb15-116"><a href="#cb15-116" aria-hidden="true" tabindex="-1"></a>maybeRead <span class="ot">=</span> <span class="fu">fmap</span> <span class="fu">fst</span> <span class="op">.</span> listToMaybe <span class="op">.</span> <span class="fu">reads</span></span></code></pre></div>
+</section>
+<section id="vgmdb-爬虫代码" class="level2">
+<h2><a href="#vgmdb-爬虫代码" title="Link to section: § &#39;VGMdb 爬虫代码&#39;">VGMdb 爬虫代码</a></h2>
+<p>以下是一个用于爬取 VGMdb 上东方专辑的有缺陷的程序；它只能在有限的专辑页面子集上运行，存在数量不明的致命 bug。在我获得只读数据库访问权限后便放弃了它，实际上我用的是数据库访问来获取 VGMdb 数据。留在这里以备将来需要。</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Text.HTML.TagSoup</span> (fromTagText, isTagOpenName, isTagText, <span class="dt">Tag</span>(<span class="dt">TagOpen</span>,<span class="dt">TagText</span>), parseTags)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Network.HTTP</span> (getResponseBody, getRequest, simpleHTTP)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Data.List</span> (isPrefixOf, sort)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Data.Char</span> (isSpace)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Codec.Binary.UTF8.String</span> (decodeString)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="ot">main ::</span> <span class="dt">IO</span> ()</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>main <span class="ot">=</span> <span class="kw">do</span> albumsURLs <span class="ot">&lt;-</span> getAlbums</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>          albums <span class="ot">&lt;-</span> <span class="fu">mapM</span> openURL (<span class="fu">sort</span> albumsURLs)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>          <span class="kw">let</span> metadata <span class="ot">=</span> <span class="fu">map</span> toAlbum albums</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>          <span class="fu">writeFile</span> <span class="st">&quot;vgmdb.csv&quot;</span> <span class="op">$</span> <span class="fu">unlines</span> (header <span class="op">:</span> <span class="fu">concatMap</span> (<span class="fu">map</span> convert) metadata)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Album</span> <span class="ot">=</span> [<span class="dt">Track</span>]</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="kw">data</span> <span class="dt">Track</span> <span class="ot">=</span> <span class="dt">Track</span> {<span class="ot"> title ::</span> <span class="dt">String</span>,</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="ot">                     year ::</span> <span class="dt">Int</span>,</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="ot">                     date ::</span> <span class="dt">String</span>,</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="ot">                     album ::</span> <span class="dt">String</span>,</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="ot">                     circle ::</span> <span class="dt">String</span>,</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="ot">                     duration ::</span> <span class="dt">Maybe</span> <span class="dt">Int</span>,</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="ot">                     track ::</span> <span class="dt">Int</span> } <span class="kw">deriving</span> <span class="dt">Show</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="ot">empty ::</span> <span class="dt">Track</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>empty <span class="ot">=</span> <span class="dt">Track</span> {title<span class="ot">=</span><span class="st">&quot;&quot;</span>,year<span class="ot">=</span><span class="dv">0</span>,date<span class="ot">=</span><span class="st">&quot;&quot;</span>,album<span class="ot">=</span><span class="st">&quot;&quot;</span>,circle<span class="ot">=</span><span class="st">&quot;&quot;</span>,duration<span class="ot">=</span><span class="dt">Nothing</span>,track<span class="ot">=</span><span class="dv">0</span>}</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="ot">header ::</span> <span class="dt">String</span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>header <span class="ot">=</span> <span class="st">&quot;Title,Year,Date,Album,Circle,Duration,Track&quot;</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="ot">convert ::</span> <span class="dt">Track</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>convert t <span class="ot">=</span> <span class="st">&quot;\&quot;&quot;</span> <span class="op">++</span> title t <span class="op">++</span> <span class="st">&quot;\&quot;,&quot;</span> <span class="op">++</span> <span class="fu">show</span>(year t) <span class="op">++</span> <span class="st">&quot;,&quot;</span> <span class="op">++</span> <span class="fu">show</span> (date t) <span class="op">++</span> <span class="st">&quot;,\&quot;&quot;</span> <span class="op">++</span></span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>              album t <span class="op">++</span> <span class="st">&quot;\&quot;,\&quot;&quot;</span> <span class="op">++</span> circle t <span class="op">++</span> <span class="st">&quot;\&quot;,&quot;</span> <span class="op">++</span> <span class="fu">maybe</span> <span class="st">&quot;&quot;</span> <span class="fu">show</span>(duration t) <span class="op">++</span> <span class="st">&quot;,&quot;</span> <span class="op">++</span> <span class="fu">show</span> (track t)</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="co">-- 示例专辑链接：&#39;TagOpen &quot;a&quot; [(&quot;class&quot;,&quot;albumtitle album-doujin&quot;),</span></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a><span class="co">--                                   (&quot;href&quot;,&quot;http://vgmdb.net/album/36901&quot;),</span></span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="co">--                                   (&quot;title&quot;,&quot;Majo to Ringo to Samayou Kimi to&quot;)]&#39;</span></span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a><span class="ot">getAlbums ::</span> <span class="dt">IO</span> [<span class="dt">String</span>]</span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>getAlbums <span class="ot">=</span> <span class="kw">do</span> touhou <span class="ot">&lt;-</span> openURL <span class="st">&quot;http://vgmdb.net/product/9&quot;</span></span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>               <span class="fu">return</span> [<span class="fu">snd</span>(atts <span class="op">!!</span> <span class="dv">1</span>) <span class="op">|</span> <span class="dt">TagOpen</span> <span class="st">&quot;a&quot;</span> atts <span class="ot">&lt;-</span> parseTags touhou, <span class="fu">snd</span>(<span class="fu">head</span> atts)<span class="op">==</span><span class="st">&quot;albumtitle album-doujin&quot;</span>]</span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a><span class="co">-- 需要 &#39;decodeString&#39; 来处理日文字符；参见 http://stackoverflow.com/questions/10558003/how-to-get-utf8-rss-feed</span></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a><span class="ot">openURL ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">String</span></span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>openURL url <span class="ot">=</span> <span class="fu">fmap</span> decodeString (simpleHTTP (getRequest url) <span class="op">&gt;&gt;=</span> getResponseBody)</span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a><span class="ot">toAlbum ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Album</span></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>toAlbum page <span class="ot">=</span> <span class="kw">let</span> tags <span class="ot">=</span> parseTags page</span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>                   (yr,dt) <span class="ot">=</span> extractDate tags</span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a>                   albm <span class="ot">=</span> extractAlbum tags</span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>                   crcl <span class="ot">=</span> extractCircle tags</span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>                   files <span class="ot">=</span> extractMusic tags</span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>               <span class="kw">in</span> <span class="fu">map</span> (\t <span class="ot">-&gt;</span> <span class="dt">Track</span> {title <span class="ot">=</span> title t, year <span class="ot">=</span> yr, date <span class="ot">=</span> dt,</span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>                                    album <span class="ot">=</span> albm, circle <span class="ot">=</span> crcl, duration <span class="ot">=</span> duration t,</span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>                                    track <span class="ot">=</span> track t}) files</span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a><span class="co">-- TagOpen &quot;a&quot; [(&quot;title&quot;,&quot;View albums released on Dec 30, 2011&quot;),(&quot;href&quot;,&quot;/db/calendar.php?year=2011&amp;month=12#20111230&quot;)]</span></span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a><span class="ot">extractDate ::</span> [<span class="dt">Tag</span> <span class="dt">String</span>] <span class="ot">-&gt;</span> (<span class="dt">Int</span>,<span class="dt">String</span>)</span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a>extractDate t <span class="ot">=</span> <span class="kw">let</span> (a<span class="op">:</span>b<span class="op">:</span>_) <span class="ot">=</span> <span class="fu">map</span> <span class="fu">snd</span> <span class="op">$</span> <span class="fu">head</span> [atts <span class="op">|</span> <span class="dt">TagOpen</span> <span class="st">&quot;a&quot;</span> atts <span class="ot">&lt;-</span> t,</span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a>                                       <span class="kw">let</span> ttle <span class="ot">=</span> <span class="fu">snd</span>(<span class="fu">head</span> atts),</span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">&quot;View albums released on &quot;</span> <span class="ot">`isPrefixOf`</span> ttle]</span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a>        <span class="kw">in</span> (<span class="fu">read</span>(<span class="fu">reverse</span> <span class="op">$</span> <span class="fu">take</span> <span class="dv">4</span> <span class="op">$</span> <span class="fu">reverse</span> a)<span class="ot">::</span><span class="dt">Int</span>,</span>
+<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a>           tail<span class="op">$</span> <span class="fu">snd</span> <span class="op">$</span> <span class="fu">break</span> (<span class="op">==</span><span class="ch">&#39;#&#39;</span>) b)</span>
+<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a><span class="co">-- TagOpen &quot;title&quot; [],TagText &quot;Gensou Rashinban - VGMdb&quot;,TagClose &quot;title&quot;,</span></span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a><span class="ot">extractAlbum ::</span> [<span class="dt">Tag</span> <span class="dt">String</span>] <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a>extractAlbum t <span class="ot">=</span> (\(<span class="dt">TagText</span> x) <span class="ot">-&gt;</span> <span class="fu">reverse</span> <span class="op">$</span> <span class="fu">drop</span> <span class="dv">8</span> <span class="op">$</span> <span class="fu">reverse</span> x) (<span class="fu">dropWhile</span> (<span class="fu">not</span> <span class="op">.</span> isTagOpenName <span class="st">&quot;title&quot;</span>) t <span class="op">!!</span> <span class="dv">1</span>)</span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a><span class="co">-- [TagText &quot;Published by&quot;,TagClose &quot;b&quot;,TagClose &quot;span&quot;,TagClose &quot;td&quot;,TagText &quot;\r\n&quot;,</span></span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a><span class="co">-- TagOpen &quot;td&quot; [],TagOpen &quot;a&quot; [(&quot;href&quot;,&quot;/org/217&quot;)],TagOpen &quot;span&quot;</span></span>
+<span id="cb16-65"><a href="#cb16-65" aria-hidden="true" tabindex="-1"></a><span class="co">-- [(&quot;class&quot;,&quot;productname&quot;),(&quot;lang&quot;,&quot;en&quot;),(&quot;style&quot;,&quot;display:inline&quot;)],TagText &quot;PopKorn&quot;]</span></span>
+<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a><span class="ot">extractCircle ::</span> [<span class="dt">Tag</span> <span class="dt">String</span>] <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a>extractCircle t <span class="ot">=</span> fromTagText(<span class="fu">head</span> (<span class="fu">drop</span> <span class="dv">8</span> (<span class="fu">dropWhile</span> (\x <span class="ot">-&gt;</span> <span class="fu">not</span>(isTagText x <span class="op">&amp;&amp;</span> (fromTagText x)<span class="op">==</span><span class="st">&quot;Published by&quot;</span>)) t)))</span>
+<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a><span class="ot">extractMusic ::</span> [<span class="dt">Tag</span> <span class="dt">String</span>] <span class="ot">-&gt;</span> [<span class="dt">Track</span>]</span>
+<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a>extractMusic t <span class="ot">=</span> <span class="kw">let</span> tracks <span class="ot">=</span> <span class="fu">filter</span> (<span class="fu">not</span> <span class="op">.</span> <span class="fu">all</span> <span class="fu">isSpace</span>) <span class="op">$</span></span>
+<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a>                               <span class="fu">tail</span> <span class="op">$</span> <span class="fu">dropWhile</span> (\z <span class="ot">-&gt;</span> z <span class="op">/=</span> <span class="st">&quot;Disc 1&quot;</span>) <span class="op">$</span></span>
+<span id="cb16-72"><a href="#cb16-72" aria-hidden="true" tabindex="-1"></a>                                <span class="fu">map</span> fromTagText <span class="op">$</span> <span class="fu">filter</span> isTagText <span class="op">$</span></span>
+<span id="cb16-73"><a href="#cb16-73" aria-hidden="true" tabindex="-1"></a>                                 <span class="fu">takeWhile</span> (\y <span class="ot">-&gt;</span> <span class="fu">not</span>(isTagText y <span class="op">&amp;&amp;</span> (fromTagText y)<span class="op">==</span><span class="st">&quot;Disc length&quot;</span>)) <span class="op">$</span></span>
+<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">dropWhile</span> (\x <span class="ot">-&gt;</span> <span class="fu">not</span>(isTagText x <span class="op">&amp;&amp;</span> (fromTagText x)<span class="op">==</span><span class="st">&quot;Tracklist&quot;</span>)) t</span>
+<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a>                   <span class="kw">in</span> <span class="kw">if</span> <span class="fu">length</span> tracks <span class="ot">`rem`</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span> <span class="kw">then</span> threezip tracks <span class="kw">else</span> twozip tracks</span>
+<span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a>       <span class="kw">where</span></span>
+<span id="cb16-77"><a href="#cb16-77" aria-hidden="true" tabindex="-1"></a>       twozip,<span class="ot">threezip ::</span> [<span class="dt">String</span>] <span class="ot">-&gt;</span> [<span class="dt">Track</span>]</span>
+<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a>       threezip [] <span class="ot">=</span> []</span>
+<span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a>       threezip (a<span class="op">:</span>b<span class="op">:</span>c<span class="op">:</span>d) <span class="ot">=</span> empty {title<span class="ot">=</span>b,duration<span class="ot">=</span><span class="dt">Just</span> (timeConverter c),track<span class="ot">=</span><span class="fu">read</span> a} <span class="op">:</span> threezip d</span>
+<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a>       threezip _ <span class="ot">=</span> []</span>
+<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a>       twozip [] <span class="ot">=</span> []</span>
+<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a>       twozip (a<span class="op">:</span>b<span class="op">:</span>d) <span class="ot">=</span> empty {title<span class="ot">=</span>b,duration<span class="ot">=</span><span class="dt">Nothing</span>,track<span class="ot">=</span><span class="fu">read</span> a} <span class="op">:</span> twozip d</span>
+<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a>       twozip _ <span class="ot">=</span> []</span>
+<span id="cb16-84"><a href="#cb16-84" aria-hidden="true" tabindex="-1"></a><span class="ot">       timeConverter ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb16-85"><a href="#cb16-85" aria-hidden="true" tabindex="-1"></a>       timeConverter n <span class="ot">=</span> <span class="kw">let</span> (m,s) <span class="ot">=</span> <span class="fu">break</span> (<span class="op">==</span><span class="ch">&#39;:&#39;</span>) n <span class="kw">in</span> ((<span class="fu">read</span><span class="ot"> m ::</span> <span class="dt">Int</span>) <span class="op">*</span> <span class="dv">60</span>) <span class="op">+</span> (<span class="fu">read</span> (<span class="fu">tail</span> s)<span class="ot"> ::</span> <span class="dt">Int</span>)</span></code></pre></div>
+</section>
+</section>
+
+      
+      <noscript><div id="noscript-warning-footer" class="admonition error" title="Warning to NoScript Users"><div class="admonition-title"><p>[<strong>Error</strong>: JavaScript disabled.]</p></div> <p>[Backlinks, similar links, and the bibliography require JS enabled to load.]</p></div></noscript>
+      
+      
+      
+      
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+    <!-- Footer (no SSI): injected by Hakyll from static/include/footer.html -->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"
+        ><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center" /></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Gwern Branwen">[&hairsp;Send Anonymous Feedback&hairsp;]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Gwern.net homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

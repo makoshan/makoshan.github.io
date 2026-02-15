@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inlined head (no SSI): injected by Hakyll from static/include/inlined-head.html -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #aaa;
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popins-popin-box-shadow-color: #aaa;
+
+    --GW-popins-popin-title-bar-background-color: #fff;
+    --GW-popins-popin-title-bar-button-color: #777;
+
+    --GW-popins-popin-scrollbar-thumb-color: #ccc;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #999;
+
+    --GW-popins-popin-stack-counter-text-color: #fff;
+    --GW-popins-popin-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #ccc;
+	--GW-back-to-top-link-hover-color: #999;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #7c7c7c;
+    --GW-popins-popin-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popins-popin-box-shadow-color: #7c7c7c;
+
+    --GW-popins-popin-title-bar-background-color: #000;
+    --GW-popins-popin-title-bar-button-color: #a6a6a6;
+
+    --GW-popins-popin-scrollbar-thumb-color: #5c5c5c;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popins-popin-stack-counter-text-color: #000;
+    --GW-popins-popin-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #5c5c5c;
+	--GW-back-to-top-link-hover-color: #8b8b8b;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popins-popin-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+div.poem span.caesura-mark {
+	opacity: 0.3;
+}
+@media all and (max-width: 649px) {
+	div.poem span.caesura-mark {
+		opacity: 0.4;
+	}
+}
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1770514858">
+<script src="/static/js/head.js?v=1770514858"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1768170615" as="image">
+
+
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="Hacker News submission analysis">
+  <meta name="citation_title" content="Hacker News submission analysis">
+  <meta name="og:title" content="Hacker News submission analysis">
+  <meta name="twitter:title" content="Hacker News submission analysis">
+  <meta name="generator" content="https://github.com/gwern/gwern.net/">
+  <meta name="creator" content="gwern.net">
+  
+  <meta name="author" content="Gwern">
+  <meta name="citation_author" content="Gwern">
+  
+  <meta name="contact" content="https://gwern.net/me#contact">
+  <link rel="index" title="Gwern.net homepage" href="https://gwern.net/index">
+  <link href="https://gwern.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Gwern.net newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="gwern">
+  <meta name="twitter:site" content="gwern.net">
+  <meta name="og:site" content="gwern.net">
+  <meta name="og:type" content="article">
+  <meta name="description" content="Describing HN submissions; estimating manipulability">
+  <meta name="og:description" content="Describing HN submissions; estimating manipulability">
+  <meta property="og:image" content="https://gwern.net/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail text: the Gwern.net site logo, a logotype of a large blackletter fraktur capital letter 'G' on a white background.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content="">
+  <meta name="keywords" content="">
+  <meta name="dc.date.issued" content="25 Sep 2013">
+  
+  <meta name="citation_publication_date" content="25 Sep 2013">
+  <meta name="dcterms.modified" content="">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://gwern.net/HN">
+  <meta name="citation_fulltext_html_url" content="https://gwern.net/HN">
+  <meta name="og:url" content="https://gwern.net/HN">
+  <link rel="alternate" type="text/markdown" href="https://gwern.net/HN.md" title="Markdown source of ‘Hacker News submission analysis’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-hn dropcaps-de-zs">
+  <meta name="citation_fulltext_world_readable" content="">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>Hacker News submission analysis · Gwern.net</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+
+  <!-- CSS for JS-disabled users: ensure that NoScripters know what they are missing even if they jump to a section & miss the warning at top/bottom. -->
+  <noscript>
+    <style>
+      #markdownBody #noscript-warning-header {
+          position: fixed; /* sticky */
+          top: 6px; /* at top */
+          width: 58%;
+          z-index: 99; /* Make sure it is on top */
+          background-color: #f8f8f8; /* Set a solid background color so legible while positioned over text */
+          border-color: var(--GW-abstract-border-color); /* Make look like theme-toggle/admonitions a bit more */
+          border-width: 6px 6px 6px 6px;
+          border-style: double;
+      }
+      #markdownBody #noscript-warning-header p { margin: 10px; }
+      nav#navbar { padding-top: 160px; } /* avoid overlap with page header */
+    </style>
+  </noscript>
+</head>
+
+<body class="page-hn dropcaps-de-zs">
+  <!-- Inlined asset links (no SSI): injected by Hakyll from static/include/inlined-asset-links.html -->
+  <link rel="stylesheet" href="/static/css/style.css?v=1770491984" media="print" onload="this.media=`all`">
+<script src="/static/js/script.js?v=1770491982" defer></script>
+
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <!-- Navbar (no SSI): injected by Hakyll from static/include/navbar.html -->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="design link-page link-annotated" href="/design" title="Design and implementation notes">Design</a>
+        <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="links link-page" href="/Links" title="Links page">Links</a>
+        <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+
+    <article>
+
+      <header>
+        <h1>Hacker News submission analysis</h1>
+      </header>
+
+      
+      <div class="markdownBody" id="page-metadata">
+          
+        <div class="page-description"><p>Describing HN submissions; estimating manipulability</p></div>
+        <div class="page-metadata-fields">
+            
+            
+            <span class="page-status" title="Writing status of current page: ranges 'abandoned'/'notes'/'draft'/'in progress'/'finished'"><em><span class="completion-status" data-progress-percentage="25">notes</span></em></span>
+            <span class="page-confidence"><a href="/about#confidence-tags" title="Explanation of 'confidence' metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: 'certain'/'highly likely'/'likely'/'possible'/'unlikely'/'highly unlikely'/'remote'/'impossible')">certainty</a>: <em><span class="completion-status" data-progress-percentage="67">likely</span></em></span>
+            <span class="page-importance"><a href="/about#importance-tags" title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>0</em></span>
+            
+            
+            
+        </div>
+      </div>
+      
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#submissions" id="toc-submissions">Submissions</a></li>
+<li><a href="#newest" id="toc-newest">/newest</a>
+<ul>
+<li><a href="#methodology" id="toc-methodology">Methodology</a></li>
+<li><a href="#analysis-plan" id="toc-analysis-plan">Analysis Plan</a></li>
+<li><a href="#data" id="toc-data">Data</a></li>
+<li><a href="#analysis" id="toc-analysis">Analysis</a></li>
+<li><a href="#reddit-comparison" id="toc-reddit-comparison">Reddit Comparison</a>
+<ul>
+<li><a href="#data-1" id="toc-data-1">Data</a></li>
+</ul></li>
+</ul></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><p>Related:</p>
+<ul>
+<li><p>http://nathanael.hevenet.com/the-best-time-to-post-on-hacker-news-a-comprehensive-answer/</p></li>
+<li><p>http://minimaxir.com/<span class="date-range">2014<sub><span title="2014 was 12 years ago.">12ya</span></sub></span>/02/hacking-hacker-news/</p></li>
+<li><p>http://karpathy.ca/myblog/<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span>/11/27/quantifying-hacker-news-with-50-days-of-data/</p></li>
+<li><p>http://metamarkets.com/<span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span>/hacking-hacker-news-headlines/</p></li>
+<li><p>http://danluu.com/randomize-hn/</p></li>
+<li><p>http://www.bayesianwitch.com/blog/<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span>/why_hn_shouldnt_use_randomized_algorithms.html</p></li>
+<li><p>http://gkosev.blogspot.com/<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>/08/fixing-hacker-news-mathematical-approach.html</p></li>
+<li><p>http://blog.rjmetrics.com/<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>/10/17/surprising-hacker-news-data-analysis/</p></li>
+<li><p>http://blog.rjmetrics.com/<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>/10/24/how-to-get-on-the-front-page-of-hacker-news/</p></li>
+</ul>
+<p>Page view counts: - 11.8k https://web.archive.org/web/20130719064119/http://aberrant.me/front-page-of-hacker-news/ - 15k http://www.mikedellanoce.com/<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>/09/my-first-hacker-news-effect-experience.html - 30k, 12k http://shkspr.mobi/blog/<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>/11/whats-the-front-page-of-hackernews-worth/ - 8.5k http://tumbling.alastair.is/post/17661390124/fun-with-analytics-pitting-hacker-news-and - 15k http://najafali.com/zero-to-fifteen-thousand-in-twenty-four-hours.html - 15.2k http://www.matvoz.com/blog/<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span>/10/interesting-facts-about-when-you-get-hit-by-hacker-news-tsunami/ - 7k unique visitors http://greig.cc/journal/<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span>/1/what-does-a-hacker-news-traffic-spike-look-like - 10k unique visitors https://whoapi.com/blog/554/how-hacker-news-hit-us-with-10-000-unique-visitors-in-10-hours/ - &gt;40k unique visitors https://news.ycombinator.com/item?id=7427542 “in one 24 hour period, 35,000 visits and 32,000 uniques” - https://medium.com/p/81bd75a39425</p>
+<section id="submissions" class="level1">
+<h1><a href="#submissions" title="Link to section: § &#39;Submissions&#39;">Submissions</a></h1>
+<p>Question: is submitting to <a href="https://en.wikipedia.org/wiki/Hacker_News" id="_NNioUzwg" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hacker_News#bodyContent">HN</a> worthwhile?</p>
+<p>Simple experiment: submit each day one link to gwern.net + 2 links to other domains. These serve as both a rough control for that day’s difficulty of front page, any benefits or penalties applied to my account, and repayment to HN for the potential spamming.</p>
+<p>per nathanael’s post, I tried to consistently post around 10AM EST (I don’t get up early enough to do 7-8AM EST). Apparently he’s wrong? Oh well.</p>
+<p>https://news.ycombinator.com/submitted?id=gwern extract stats from http://hn.algolia.com/#!/story/sort_by_date/prefix/0/author%3Agwern ? API: https://hn.algolia.com/api</p>
+<p>Sep <span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span>, started with: ‘“Equoid” (Charles Stross meets My Little Pony)’<span> (http://www.tor.com/stories/<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span>/09/equoid) https://news.ycombinator.com/item?id=6445266 5 points by gwern 6 months ago; 0 comments</span></p>
+<p>multi-level Poisson model? Group by Domain and cross group by Day. mixture model? seems appropriate for two different groups (those who make front page and those who don’t)</p>
+<p>can’t filter GA by ycombinator.com: https breaks referrers</p>
+</section>
+<section id="newest" class="level1">
+<h1><a href="#newest" title="Link to section: § &#39;/newest&#39;">/newest</a></h1>
+<blockquote>
+<p>The social news service Hacker News has a two-layered organization, where newly submitted links are displayed on a ‘/newest’ page seen by few users, and the best (as determined by users voting on each submission) are automatically selected for display on the high-traffic main front-page which most HN users read. I hypothesized that there is a lack of traffic on /newest and this implies that even one vote can substantially affect the chance a particular submission will reach the front-page, its ultimate score, and page-views of the submitted link. A randomized experiment in upvoting small batches of links confirms that the effect is real &amp; large: TODO.</p>
+</blockquote>
+<p>While using HN, as a sort of ‘public service’, I occasionally made sure to visit the <a href="https://news.ycombinator.com/newest" id="_CxJflpPh" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522" title="New Links">newest submissions</a> page rather than just the <a href="https://news.ycombinator.com/news" id="_fOkz1Gh3" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">main front page</a> most people read. After a while, I noticed that the links I upvoted there seemed to be turning up a lot on the front page, more than I would expect from my usual pattern of upvoting perhaps 5 links out of the 30 available. A horrible suspicion struck me: could the apparent arbitrariness of what links made the front page be caused by the /newest page being <em>so</em> sparsely voted upon that a single upvote made a meaningful difference?</p>
+<section id="methodology" class="level2">
+<h2><a href="#methodology" title="Link to section: § &#39;Methodology&#39;">Methodology</a></h2>
+<p>I decided to do a randomized parallel groups experiment to test: On /newest, take the first 5 links (#1-5, to maximize impact), do a simple 50-50 randomization on each to decide whether to upvote or ignore (I have a shell function for randomization: <code>echo "$((RANDOM % 2 &lt; 1))"</code>); and make no votes on any other /newest items (I allowed myself my usual browsing &amp; upvoting on the main page while I was there). As I have ‘noprocast’ turned on for 180 minutes, each group of 5 links should have been separated by a minimum of 3 hours (more than enough time for all links to fall off /newest). This was typically done during HN’s busiest hours: 11AM-midnight EST. I was not blinded during the experiment, but the writeup &amp; list were never public while the experiment was running. I used my existing high-karma (&gt;7k) account since there doesn’t seem to be any weighting of upvotes, reading through <a href="http://www.righto.com/2009/06/how-does-newsyc-ranking-work.html" id="_pkefJA19">“Inside the news.yc ranking formula”</a>, <a href="http://amix.dk/blog/post/19574" id="_Q-yZHP2F">“How Hacker News ranking algorithm works”</a> &amp; <a href="https://news.ycombinator.com/item?id=1781013" id="_d-BAQGf7" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">discussion</a>.</p>
+<p>A power calculation for sample size is hard to do: I don’t have a Poisson power function handy, and I don’t expect the data to fit a Poisson too well due to the stark contrast between the front-page and /newest. (And I do want a <a href="https://en.wikipedia.org/wiki/Power_of_a_test" id="_4HjKZF87" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Power_of_a_test#bodyContent">well-powered</a> experiment - the only thing more wasteful than an overpowered experiment is an underpowered weak experiment.) However, I do expect the necessary sample to be quite large by the standards of continuous <a href="https://en.wikipedia.org/wiki/Normal_distribution" id="_T4iJJGn_" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Normal_distribution#bodyContent">normally-distributed</a> data. Most submissions to /newest fail to gain more than an upvote or two, which means that most of the sample contains little information about whether the extra upvote helped them reach the front-page or not. Further, I don’t just want to estimate whether the net effect of upvoting is &gt;1, I would like a reasonably precise estimate of <em>what</em> the effect is: knowing that it’s, say, +2-10, is not very satisfactory. (“The oncoming car is somewhere between 10 meters and a kilometer away.”) All in all, I don’t expect the necessary <em>n</em> to be &lt;200. I decided to stop at <em>n</em>=300.</p>
+<p>The experiment ran from 16 March <span class="date-range">2014<sub><span title="2014 was 12 years ago.">12ya</span></sub></span> - 31 March <span class="date-range">2014<sub><span title="2014 was 12 years ago.">12ya</span></sub></span>. On 22 April, after doing my planned analysis, the results turned out to be as expected but weaker than I’d prefer (turned out a <em>lot</em> of the sample is just a waste as they are stuck at +1/2) and so I resumed randomization to get another 100 links or so. I stopped the additional randomization on 6 May.</p>
+</section>
+<section id="analysis-plan" class="level2">
+<h2><a href="#analysis-plan" title="Link to section: § &#39;Analysis plan&#39;">Analysis Plan</a></h2>
+<p>The analysis strategy is:</p>
+<ol type="1">
+<li><p>a non-parametric test of difference in mean scores</p></li>
+<li><p>dichotomize the items by &lt;10 as a proxy for having made it to the front-page for a meaningful amount of time, for a <a href="https://en.wikipedia.org/wiki/Logistic_regression" id="_cS8lCmX7" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Logistic_regression#bodyContent">logistic regression</a> to estimate increase in front-page odds</p></li>
+<li><p>attempt a Poisson regression on scores, to extract an estimate of the difference in means</p></li>
+<li><p>something fancier, suggested by the data (such as a <a href="https://en.wikipedia.org/wiki/Mixture_model" id="_20tLCvSL" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mixture_model#bodyContent">mixture model</a> of Poissons, perhaps, to split between front-page and non-front-page)</p></li>
+</ol>
+<p>TODO: extract page views &amp; time on page from my old Analytics, letting me calculate ‘how much time am I steering with, say, 10 upvotes on /newest?’</p>
+</section>
+<section id="data" class="level2">
+<h2><a href="#data" title="Link to section: § &#39;Data&#39;">Data</a></h2>
+<p>upvoted: https://news.ycombinator.com/item?id=7410094 https://news.ycombinator.com/item?id=7410068 https://news.ycombinator.com/item?id=7410065 https://news.ycombinator.com/item?id=7410052 https://news.ycombinator.com/item?id=7411076 https://news.ycombinator.com/item?id=7411073 https://news.ycombinator.com/item?id=7412318 https://news.ycombinator.com/item?id=7416907 https://news.ycombinator.com/item?id=7416897 https://news.ycombinator.com/item?id=7416891 https://news.ycombinator.com/item?id=7418265 https://news.ycombinator.com/item?id=7418223 https://news.ycombinator.com/item?id=7419205 https://news.ycombinator.com/item?id=7419194 https://news.ycombinator.com/item?id=7419188 https://news.ycombinator.com/item?id=7419183 https://news.ycombinator.com/item?id=7422967 https://news.ycombinator.com/item?id=7422954 https://news.ycombinator.com/item?id=7422948 https://news.ycombinator.com/item?id=7426089 https://news.ycombinator.com/item?id=7426084 https://news.ycombinator.com/item?id=7426073 https://news.ycombinator.com/item?id=7426670 https://news.ycombinator.com/item?id=7429611 https://news.ycombinator.com/item?id=7430953 https://news.ycombinator.com/item?id=7432226 https://news.ycombinator.com/item?id=7432225 https://news.ycombinator.com/item?id=7433186 https://news.ycombinator.com/item?id=7433144 https://news.ycombinator.com/item?id=7436121 https://news.ycombinator.com/item?id=7436113 https://news.ycombinator.com/item?id=7436110 https://news.ycombinator.com/item?id=7436091 https://news.ycombinator.com/item?id=7437717 https://news.ycombinator.com/item?id=7439392 https://news.ycombinator.com/item?id=7439390 https://news.ycombinator.com/item?id=7443074 https://news.ycombinator.com/item?id=7443051 https://news.ycombinator.com/item?id=7444167 https://news.ycombinator.com/item?id=7445317 https://news.ycombinator.com/item?id=7445314 https://news.ycombinator.com/item?id=7446530 https://news.ycombinator.com/item?id=7446524 https://news.ycombinator.com/item?id=7450534 https://news.ycombinator.com/item?id=7450531 https://news.ycombinator.com/item?id=7450528 https://news.ycombinator.com/item?id=7450527 https://news.ycombinator.com/item?id=7450519 https://news.ycombinator.com/item?id=7451229 https://news.ycombinator.com/item?id=7451212 https://news.ycombinator.com/item?id=7451762 https://news.ycombinator.com/item?id=7453752 https://news.ycombinator.com/item?id=7453738 https://news.ycombinator.com/item?id=7455416 https://news.ycombinator.com/item?id=7456099 https://news.ycombinator.com/item?id=7456090 https://news.ycombinator.com/item?id=7456069 https://news.ycombinator.com/item?id=7459234 https://news.ycombinator.com/item?id=7459220 https://news.ycombinator.com/item?id=7459217 https://news.ycombinator.com/item?id=7459214 https://news.ycombinator.com/item?id=7460853 https://news.ycombinator.com/item?id=7460844 https://news.ycombinator.com/item?id=7462246 https://news.ycombinator.com/item?id=7462233 https://news.ycombinator.com/item?id=7462356 https://news.ycombinator.com/item?id=7462345 https://news.ycombinator.com/item?id=7462326 https://news.ycombinator.com/item?id=7463289 https://news.ycombinator.com/item?id=7463259 https://news.ycombinator.com/item?id=7463235 https://news.ycombinator.com/item?id=7466412 https://news.ycombinator.com/item?id=7466409 https://news.ycombinator.com/item?id=7466404 https://news.ycombinator.com/item?id=7467802 https://news.ycombinator.com/item?id=7467788 https://news.ycombinator.com/item?id=7470701 https://news.ycombinator.com/item?id=7470633 https://news.ycombinator.com/item?id=7470619 https://news.ycombinator.com/item?id=7473787 https://news.ycombinator.com/item?id=7473770 https://news.ycombinator.com/item?id=7473759 https://news.ycombinator.com/item?id=7475102 https://news.ycombinator.com/item?id=7475098 https://news.ycombinator.com/item?id=7476652 https://news.ycombinator.com/item?id=7476649 https://news.ycombinator.com/item?id=7476644 https://news.ycombinator.com/item?id=7476640 https://news.ycombinator.com/item?id=7477631 https://news.ycombinator.com/item?id=7477630 https://news.ycombinator.com/item?id=7477629 https://news.ycombinator.com/item?id=7477600 https://news.ycombinator.com/item?id=7478328 https://news.ycombinator.com/item?id=7478333 https://news.ycombinator.com/item?id=7481022 https://news.ycombinator.com/item?id=7481021 https://news.ycombinator.com/item?id=7481012 https://news.ycombinator.com/item?id=7481011 https://news.ycombinator.com/item?id=7482433 https://news.ycombinator.com/item?id=7482392 https://news.ycombinator.com/item?id=7482391 https://news.ycombinator.com/item?id=7483717 https://news.ycombinator.com/item?id=7483718 https://news.ycombinator.com/item?id=7484560 https://news.ycombinator.com/item?id=7484554 https://news.ycombinator.com/item?id=7484541 https://news.ycombinator.com/item?id=7484539 https://news.ycombinator.com/item?id=7484522 https://news.ycombinator.com/item?id=7485210 https://news.ycombinator.com/item?id=7487677 https://news.ycombinator.com/item?id=7488960 https://news.ycombinator.com/item?id=7490310 https://news.ycombinator.com/item?id=7490307 https://news.ycombinator.com/item?id=7490306 https://news.ycombinator.com/item?id=7490287 https://news.ycombinator.com/item?id=7491047 https://news.ycombinator.com/item?id=7491031 https://news.ycombinator.com/item?id=7491030 https://news.ycombinator.com/item?id=7492283 https://news.ycombinator.com/item?id=7492281 https://news.ycombinator.com/item?id=7492276 https://news.ycombinator.com/item?id=7492264 https://news.ycombinator.com/item?id=7492964 https://news.ycombinator.com/item?id=7492939 https://news.ycombinator.com/item?id=7492938 https://news.ycombinator.com/item?id=7493774 https://news.ycombinator.com/item?id=7493736 https://news.ycombinator.com/item?id=7493730 https://news.ycombinator.com/item?id=7496906 https://news.ycombinator.com/item?id=7497795 https://news.ycombinator.com/item?id=7498485 https://news.ycombinator.com/item?id=7498474 https://news.ycombinator.com/item?id=7499221 https://news.ycombinator.com/item?id=7499218 https://news.ycombinator.com/item?id=7499183 https://news.ycombinator.com/item?id=7501511 https://news.ycombinator.com/item?id=7501500 https://news.ycombinator.com/item?id=7502814 https://news.ycombinator.com/item?id=7502802 https://news.ycombinator.com/item?id=7502801 https://news.ycombinator.com/item?id=7628002 https://news.ycombinator.com/item?id=7629426 https://news.ycombinator.com/item?id=7630675 https://news.ycombinator.com/item?id=7630660 https://news.ycombinator.com/item?id=7630657 https://news.ycombinator.com/item?id=7631449 https://news.ycombinator.com/item?id=7631445 https://news.ycombinator.com/item?id=7634123 https://news.ycombinator.com/item?id=7634120 https://news.ycombinator.com/item?id=7634099 https://news.ycombinator.com/item?id=7635489 https://news.ycombinator.com/item?id=7635479 https://news.ycombinator.com/item?id=7636681 https://news.ycombinator.com/item?id=7637667 https://news.ycombinator.com/item?id=7638285 https://news.ycombinator.com/item?id=7638261 https://news.ycombinator.com/item?id=7638240 https://news.ycombinator.com/item?id=7640751 https://news.ycombinator.com/item?id=7640742 https://news.ycombinator.com/item?id=7640734 https://news.ycombinator.com/item?id=7641897 https://news.ycombinator.com/item?id=7641895 https://news.ycombinator.com/item?id=7643084 https://news.ycombinator.com/item?id=7643078 https://news.ycombinator.com/item?id=7644238 https://news.ycombinator.com/item?id=7644232 https://news.ycombinator.com/item?id=7644203 https://news.ycombinator.com/item?id=7644199 https://news.ycombinator.com/item?id=7646719 https://news.ycombinator.com/item?id=7646709 https://news.ycombinator.com/item?id=7646694 https://news.ycombinator.com/item?id=7646691 https://news.ycombinator.com/item?id=7647963 https://news.ycombinator.com/item?id=7647958 https://news.ycombinator.com/item?id=7647954 https://news.ycombinator.com/item?id=7648978 https://news.ycombinator.com/item?id=7649855 https://news.ycombinator.com/item?id=7649823 https://news.ycombinator.com/item?id=7649815 https://news.ycombinator.com/item?id=7649810 https://news.ycombinator.com/item?id=7650256 https://news.ycombinator.com/item?id=7650232 https://news.ycombinator.com/item?id=7650229 https://news.ycombinator.com/item?id=7651604 https://news.ycombinator.com/item?id=7651592 https://news.ycombinator.com/item?id=7651579 https://news.ycombinator.com/item?id=7651563 https://news.ycombinator.com/item?id=7652270 https://news.ycombinator.com/item?id=7652260 https://news.ycombinator.com/item?id=7652254 https://news.ycombinator.com/item?id=7652800 https://news.ycombinator.com/item?id=7652798 https://news.ycombinator.com/item?id=7652777 https://news.ycombinator.com/item?id=7652764 https://news.ycombinator.com/item?id=7652761 https://news.ycombinator.com/item?id=7653301 https://news.ycombinator.com/item?id=7653297 https://news.ycombinator.com/item?id=7653273 https://news.ycombinator.com/item?id=7653267 https://news.ycombinator.com/item?id=7653745 https://news.ycombinator.com/item?id=7653723 https://news.ycombinator.com/item?id=7655287 https://news.ycombinator.com/item?id=7655281 https://news.ycombinator.com/item?id=7655278 https://news.ycombinator.com/item?id=7656019 https://news.ycombinator.com/item?id=7656003 https://news.ycombinator.com/item?id=7656858 https://news.ycombinator.com/item?id=7656806 https://news.ycombinator.com/item?id=7656778 https://news.ycombinator.com/item?id=7657521 https://news.ycombinator.com/item?id=7657518 https://news.ycombinator.com/item?id=7657515 https://news.ycombinator.com/item?id=7657497 https://news.ycombinator.com/item?id=7658020 https://news.ycombinator.com/item?id=7660808 https://news.ycombinator.com/item?id=7660796 https://news.ycombinator.com/item?id=7662240 https://news.ycombinator.com/item?id=7662217 https://news.ycombinator.com/item?id=7663572 https://news.ycombinator.com/item?id=7663567 https://news.ycombinator.com/item?id=7663540 https://news.ycombinator.com/item?id=7663539 https://news.ycombinator.com/item?id=7664488 https://news.ycombinator.com/item?id=7664475 https://news.ycombinator.com/item?id=7664460 https://news.ycombinator.com/item?id=7667576 https://news.ycombinator.com/item?id=7667540 https://news.ycombinator.com/item?id=7669036 https://news.ycombinator.com/item?id=7669035 https://news.ycombinator.com/item?id=7669027 https://news.ycombinator.com/item?id=7669025 https://news.ycombinator.com/item?id=7670043 https://news.ycombinator.com/item?id=7670035 https://news.ycombinator.com/item?id=7670101 https://news.ycombinator.com/item?id=7670969 https://news.ycombinator.com/item?id=7673841 https://news.ycombinator.com/item?id=7673831 https://news.ycombinator.com/item?id=7673809 https://news.ycombinator.com/item?id=7675258 https://news.ycombinator.com/item?id=7676629 https://news.ycombinator.com/item?id=7676615 https://news.ycombinator.com/item?id=7681583 https://news.ycombinator.com/item?id=7681581 https://news.ycombinator.com/item?id=7681566 https://news.ycombinator.com/item?id=7682763 https://news.ycombinator.com/item?id=7682760 https://news.ycombinator.com/item?id=7682751 https://news.ycombinator.com/item?id=7683584 https://news.ycombinator.com/item?id=7683556 https://news.ycombinator.com/item?id=7683555 https://news.ycombinator.com/item?id=7687323 https://news.ycombinator.com/item?id=7687316 https://news.ycombinator.com/item?id=7687307 https://news.ycombinator.com/item?id=7688997 https://news.ycombinator.com/item?id=7688986 https://news.ycombinator.com/item?id=7688985 https://news.ycombinator.com/item?id=7691192 https://news.ycombinator.com/item?id=7692029 https://news.ycombinator.com/item?id=7692010 https://news.ycombinator.com/item?id=7692040 https://news.ycombinator.com/item?id=7694347 https://news.ycombinator.com/item?id=7694346 https://news.ycombinator.com/item?id=7694332 https://news.ycombinator.com/item?id=7694319 https://news.ycombinator.com/item?id=7695847 https://news.ycombinator.com/item?id=7696461 https://news.ycombinator.com/item?id=7696459 https://news.ycombinator.com/item?id=7696458 https://news.ycombinator.com/item?id=7696844 https://news.ycombinator.com/item?id=7696843 https://news.ycombinator.com/item?id=7698827 https://news.ycombinator.com/item?id=7698826 https://news.ycombinator.com/item?id=7700220 https://news.ycombinator.com/item?id=7701855 https://news.ycombinator.com/item?id=7701835 https://news.ycombinator.com/item?id=7702514 https://news.ycombinator.com/item?id=7702509 https://news.ycombinator.com/item?id=7702505 https://news.ycombinator.com/item?id=7702500 https://news.ycombinator.com/item?id=7704503 https://news.ycombinator.com/item?id=7704485 https://news.ycombinator.com/item?id=7705794 https://news.ycombinator.com/item?id=7705789 https://news.ycombinator.com/item?id=7706898</p>
+<p>ignored: https://news.ycombinator.com/item?id=7410071 https://news.ycombinator.com/item?id=7411079 https://news.ycombinator.com/item?id=7411066 https://news.ycombinator.com/item?id=7411060 https://news.ycombinator.com/item?id=7412315 https://news.ycombinator.com/item?id=7412294 https://news.ycombinator.com/item?id=7412252 https://news.ycombinator.com/item?id=7412241 https://news.ycombinator.com/item?id=7416935 https://news.ycombinator.com/item?id=7416922 https://news.ycombinator.com/item?id=7418230 https://news.ycombinator.com/item?id=7418225 https://news.ycombinator.com/item?id=7418222 https://news.ycombinator.com/item?id=7419192 https://news.ycombinator.com/item?id=7422960 https://news.ycombinator.com/item?id=7422959 https://news.ycombinator.com/item?id=7424951 https://news.ycombinator.com/item?id=7424928 https://news.ycombinator.com/item?id=7424923 https://news.ycombinator.com/item?id=7424910 https://news.ycombinator.com/item?id=7424896 https://news.ycombinator.com/item?id=7426094 https://news.ycombinator.com/item?id=7426074 https://news.ycombinator.com/item?id=7426699 https://news.ycombinator.com/item?id=7426643 https://news.ycombinator.com/item?id=7426640 https://news.ycombinator.com/item?id=7429618 https://news.ycombinator.com/item?id=7429616 https://news.ycombinator.com/item?id=7429609 https://news.ycombinator.com/item?id=7429604 https://news.ycombinator.com/item?id=7430954 https://news.ycombinator.com/item?id=7430949 https://news.ycombinator.com/item?id=7430946 https://news.ycombinator.com/item?id=7430939 https://news.ycombinator.com/item?id=7432227 https://news.ycombinator.com/item?id=7432222 https://news.ycombinator.com/item?id=7432217 https://news.ycombinator.com/item?id=7433188 https://news.ycombinator.com/item?id=7433184 https://news.ycombinator.com/item?id=7433160 https://news.ycombinator.com/item?id=7433144 https://news.ycombinator.com/item?id=7436103 https://news.ycombinator.com/item?id=7437748 https://news.ycombinator.com/item?id=7437745 https://news.ycombinator.com/item?id=7437726 https://news.ycombinator.com/item?id=7437718 https://news.ycombinator.com/item?id=7439413 https://news.ycombinator.com/item?id=7439405 https://news.ycombinator.com/item?id=7439385 https://news.ycombinator.com/item?id=7440232 https://news.ycombinator.com/item?id=7440220 https://news.ycombinator.com/item?id=7440217 https://news.ycombinator.com/item?id=7440212 https://news.ycombinator.com/item?id=7440205 https://news.ycombinator.com/item?id=7443068 https://news.ycombinator.com/item?id=7443053 https://news.ycombinator.com/item?id=7443041 https://news.ycombinator.com/item?id=7444177 https://news.ycombinator.com/item?id=7444169 https://news.ycombinator.com/item?id=7444160 https://news.ycombinator.com/item?id=7444155 https://news.ycombinator.com/item?id=7445325 https://news.ycombinator.com/item?id=7445320 https://news.ycombinator.com/item?id=7445303 https://news.ycombinator.com/item?id=7446563 https://news.ycombinator.com/item?id=7446533 https://news.ycombinator.com/item?id=7446522 https://news.ycombinator.com/item?id=7449691 https://news.ycombinator.com/item?id=7449688 https://news.ycombinator.com/item?id=7449681 https://news.ycombinator.com/item?id=7449666 https://news.ycombinator.com/item?id=7449663 https://news.ycombinator.com/item?id=7451253 https://news.ycombinator.com/item?id=7451233 https://news.ycombinator.com/item?id=7451228 https://news.ycombinator.com/item?id=7451745 https://news.ycombinator.com/item?id=7451738 https://news.ycombinator.com/item?id=7451732 https://news.ycombinator.com/item?id=7451719 https://news.ycombinator.com/item?id=7451824 https://news.ycombinator.com/item?id=7451819 https://news.ycombinator.com/item?id=7451808 https://news.ycombinator.com/item?id=7451788 https://news.ycombinator.com/item?id=7451762 https://news.ycombinator.com/item?id=7453743 https://news.ycombinator.com/item?id=7453712 https://news.ycombinator.com/item?id=7453702 https://news.ycombinator.com/item?id=7455421 https://news.ycombinator.com/item?id=7455419 https://news.ycombinator.com/item?id=7455406 https://news.ycombinator.com/item?id=7455377 https://news.ycombinator.com/item?id=7456109 https://news.ycombinator.com/item?id=7456095 https://news.ycombinator.com/item?id=7459215 https://news.ycombinator.com/item?id=7460872 https://news.ycombinator.com/item?id=7460871 https://news.ycombinator.com/item?id=7460867 https://news.ycombinator.com/item?id=7462235 https://news.ycombinator.com/item?id=7462232 https://news.ycombinator.com/item?id=7462223 https://news.ycombinator.com/item?id=7462348 https://news.ycombinator.com/item?id=7462344 https://news.ycombinator.com/item?id=7463279 https://news.ycombinator.com/item?id=7463247 https://news.ycombinator.com/item?id=7466408 https://news.ycombinator.com/item?id=7466402 https://news.ycombinator.com/item?id=7467813 https://news.ycombinator.com/item?id=7467795 https://news.ycombinator.com/item?id=7467784 https://news.ycombinator.com/item?id=7469237 https://news.ycombinator.com/item?id=7469230 https://news.ycombinator.com/item?id=7469219 https://news.ycombinator.com/item?id=7469216 https://news.ycombinator.com/item?id=7469215 https://news.ycombinator.com/item?id=7470681 https://news.ycombinator.com/item?id=7470620 https://news.ycombinator.com/item?id=7473757 https://news.ycombinator.com/item?id=7475103 https://news.ycombinator.com/item?id=7475086 https://news.ycombinator.com/item?id=7476651 https://news.ycombinator.com/item?id=7477616 https://news.ycombinator.com/item?id=7478348 https://news.ycombinator.com/item?id=7478335 https://news.ycombinator.com/item?id=7478329 https://news.ycombinator.com/item?id=7481025 https://news.ycombinator.com/item?id=7482435 https://news.ycombinator.com/item?id=7482404 https://news.ycombinator.com/item?id=7483729 https://news.ycombinator.com/item?id=7483728 https://news.ycombinator.com/item?id=7483723 https://news.ycombinator.com/item?id=7485245 https://news.ycombinator.com/item?id=7485238 https://news.ycombinator.com/item?id=7485206 https://news.ycombinator.com/item?id=7485203 https://news.ycombinator.com/item?id=7487691 https://news.ycombinator.com/item?id=7487685 https://news.ycombinator.com/item?id=7487673 https://news.ycombinator.com/item?id=7487669 https://news.ycombinator.com/item?id=7487667 https://news.ycombinator.com/item?id=7488958 https://news.ycombinator.com/item?id=7488952 https://news.ycombinator.com/item?id=7488950 https://news.ycombinator.com/item?id=7488948 https://news.ycombinator.com/item?id=7490316 https://news.ycombinator.com/item?id=7491026 https://news.ycombinator.com/item?id=7491003 https://news.ycombinator.com/item?id=7492252 https://news.ycombinator.com/item?id=7492943 https://news.ycombinator.com/item?id=7492928 https://news.ycombinator.com/item?id=7493776 https://news.ycombinator.com/item?id=7493716 https://news.ycombinator.com/item?id=7496943 https://news.ycombinator.com/item?id=7496925 https://news.ycombinator.com/item?id=7496923 https://news.ycombinator.com/item?id=7496921 https://news.ycombinator.com/item?id=7497764 https://news.ycombinator.com/item?id=7497758 https://news.ycombinator.com/item?id=7497744 https://news.ycombinator.com/item?id=7497742 https://news.ycombinator.com/item?id=7498462 https://news.ycombinator.com/item?id=7498455 https://news.ycombinator.com/item?id=7498452 https://news.ycombinator.com/item?id=7499254 https://news.ycombinator.com/item?id=7499240 https://news.ycombinator.com/item?id=7501530 https://news.ycombinator.com/item?id=7501519 https://news.ycombinator.com/item?id=7501516 https://news.ycombinator.com/item?id=7502812 https://news.ycombinator.com/item?id=7502804 https://news.ycombinator.com/item?id=7628015 https://news.ycombinator.com/item?id=7628009 https://news.ycombinator.com/item?id=7627995 https://news.ycombinator.com/item?id=7627991 https://news.ycombinator.com/item?id=7629448 https://news.ycombinator.com/item?id=7629428 https://news.ycombinator.com/item?id=7629413 https://news.ycombinator.com/item?id=7629406 https://news.ycombinator.com/item?id=7630669 https://news.ycombinator.com/item?id=7630653 https://news.ycombinator.com/item?id=7631468 https://news.ycombinator.com/item?id=7631447 https://news.ycombinator.com/item?id=7631441 https://news.ycombinator.com/item?id=7634108 https://news.ycombinator.com/item?id=7634104 https://news.ycombinator.com/item?id=7635476 https://news.ycombinator.com/item?id=7635475 https://news.ycombinator.com/item?id=7635470 https://news.ycombinator.com/item?id=7636703 https://news.ycombinator.com/item?id=7636700 https://news.ycombinator.com/item?id=7636687 https://news.ycombinator.com/item?id=7636678 https://news.ycombinator.com/item?id=7637697 https://news.ycombinator.com/item?id=7637690 https://news.ycombinator.com/item?id=7637689 https://news.ycombinator.com/item?id=7637673 https://news.ycombinator.com/item?id=7637667 https://news.ycombinator.com/item?id=7638293 https://news.ycombinator.com/item?id=7638283 https://news.ycombinator.com/item?id=7638238 https://news.ycombinator.com/item?id=7640756 https://news.ycombinator.com/item?id=7640747 https://news.ycombinator.com/item?id=7641898 https://news.ycombinator.com/item?id=7641892 https://news.ycombinator.com/item?id=7641887 https://news.ycombinator.com/item?id=7643067 https://news.ycombinator.com/item?id=7643065 https://news.ycombinator.com/item?id=7643054 https://news.ycombinator.com/item?id=7644208 https://news.ycombinator.com/item?id=7646710 https://news.ycombinator.com/item?id=7647972 https://news.ycombinator.com/item?id=7647962 https://news.ycombinator.com/item?id=7649001 https://news.ycombinator.com/item?id=7648995 https://news.ycombinator.com/item?id=7648988 https://news.ycombinator.com/item?id=7648984 https://news.ycombinator.com/item?id=7649849 https://news.ycombinator.com/item?id=7650241 https://news.ycombinator.com/item?id=7650238 https://news.ycombinator.com/item?id=7651557 https://news.ycombinator.com/item?id=7652264 https://news.ycombinator.com/item?id=7652259 https://news.ycombinator.com/item?id=7653273 https://news.ycombinator.com/item?id=7653808 https://news.ycombinator.com/item?id=7653787 https://news.ycombinator.com/item?id=7653766 https://news.ycombinator.com/item?id=7655279 https://news.ycombinator.com/item?id=7655266 https://news.ycombinator.com/item?id=7656043 https://news.ycombinator.com/item?id=7656017 https://news.ycombinator.com/item?id=7655970 https://news.ycombinator.com/item?id=7656846 https://news.ycombinator.com/item?id=7656800 https://news.ycombinator.com/item?id=7657502 https://news.ycombinator.com/item?id=7658033 https://news.ycombinator.com/item?id=7658030 https://news.ycombinator.com/item?id=7658029 https://news.ycombinator.com/item?id=7658026 https://news.ycombinator.com/item?id=7660785 https://news.ycombinator.com/item?id=7660768 https://news.ycombinator.com/item?id=7660755 https://news.ycombinator.com/item?id=7662237 https://news.ycombinator.com/item?id=7662225 https://news.ycombinator.com/item?id=7662221 https://news.ycombinator.com/item?id=7663552 https://news.ycombinator.com/item?id=7664490 https://news.ycombinator.com/item?id=7664470 https://news.ycombinator.com/item?id=7667554 https://news.ycombinator.com/item?id=7667541 https://news.ycombinator.com/item?id=7667523 https://news.ycombinator.com/item?id=7669037 https://news.ycombinator.com/item?id=7670095 https://news.ycombinator.com/item?id=7670045 https://news.ycombinator.com/item?id=7670973 https://news.ycombinator.com/item?id=7670957 https://news.ycombinator.com/item?id=7670947 https://news.ycombinator.com/item?id=7670939 https://news.ycombinator.com/item?id=7673837 https://news.ycombinator.com/item?id=7673805 https://news.ycombinator.com/item?id=7675264 https://news.ycombinator.com/item?id=7675253 https://news.ycombinator.com/item?id=7675250 https://news.ycombinator.com/item?id=7675243 https://news.ycombinator.com/item?id=7676629 https://news.ycombinator.com/item?id=7676618 https://news.ycombinator.com/item?id=7676609 https://news.ycombinator.com/item?id=7677459 https://news.ycombinator.com/item?id=7677457 https://news.ycombinator.com/item?id=7677456 https://news.ycombinator.com/item?id=7677454 https://news.ycombinator.com/item?id=7677453 https://news.ycombinator.com/item?id=7680140 https://news.ycombinator.com/item?id=7680136 https://news.ycombinator.com/item?id=7680123 https://news.ycombinator.com/item?id=7680118 https://news.ycombinator.com/item?id=7680115 https://news.ycombinator.com/item?id=7681573 https://news.ycombinator.com/item?id=7681572 https://news.ycombinator.com/item?id=7682754 https://news.ycombinator.com/item?id=7682752 https://news.ycombinator.com/item?id=7683569 https://news.ycombinator.com/item?id=7683527 https://news.ycombinator.com/item?id=7686007 https://news.ycombinator.com/item?id=7686001 https://news.ycombinator.com/item?id=7686000 https://news.ycombinator.com/item?id=7685989 https://news.ycombinator.com/item?id=7685986 https://news.ycombinator.com/item?id=7687318 https://news.ycombinator.com/item?id=7687313 https://news.ycombinator.com/item?id=7689018 https://news.ycombinator.com/item?id=7689003 https://news.ycombinator.com/item?id=7691261 https://news.ycombinator.com/item?id=7691241 https://news.ycombinator.com/item?id=7691205 https://news.ycombinator.com/item?id=7691196 https://news.ycombinator.com/item?id=7692038 https://news.ycombinator.com/item?id=7691998 https://news.ycombinator.com/item?id=7694351 https://news.ycombinator.com/item?id=7695912 https://news.ycombinator.com/item?id=7695875 https://news.ycombinator.com/item?id=7695870 https://news.ycombinator.com/item?id=7695851 https://news.ycombinator.com/item?id=7696467 https://news.ycombinator.com/item?id=7696463 https://news.ycombinator.com/item?id=7696841 https://news.ycombinator.com/item?id=7696830 https://news.ycombinator.com/item?id=7696827 https://news.ycombinator.com/item?id=7698818 https://news.ycombinator.com/item?id=7698816 https://news.ycombinator.com/item?id=7698798 https://news.ycombinator.com/item?id=7700216 https://news.ycombinator.com/item?id=7700201 https://news.ycombinator.com/item?id=7700200 https://news.ycombinator.com/item?id=7700193 https://news.ycombinator.com/item?id=7701837 https://news.ycombinator.com/item?id=7701821 https://news.ycombinator.com/item?id=7701800 https://news.ycombinator.com/item?id=7702515 https://news.ycombinator.com/item?id=7704515 https://news.ycombinator.com/item?id=7704500 https://news.ycombinator.com/item?id=7704473 https://news.ycombinator.com/item?id=7705803 https://news.ycombinator.com/item?id=7705798 https://news.ycombinator.com/item?id=7705782 https://news.ycombinator.com/item?id=7706885 https://news.ycombinator.com/item?id=7706883 https://news.ycombinator.com/item?id=7706882 https://news.ycombinator.com/item?id=7706870</p>
+<p>The 2 groups are not exactly balanced due to the simple randomization. One URL suffered a typo and I could not figure out what the original was, so for one block I randomized an extra link (a #6). The <em>n</em> should be divisible by 5, but is off by TODO 1; I think I must have failed to copy-paste one link at some point.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode Bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> URL <span class="kw">in</span> <span class="kw">`</span><span class="ex">xclip</span> <span class="at">-o</span><span class="kw">`;</span> <span class="cf">do</span> <span class="ex">elinks</span> <span class="at">-dump</span> <span class="va">$URL</span> <span class="kw">|</span> <span class="fu">egrep</span> <span class="st">&#39; points* by &#39;</span><span class="kw">;</span> <span class="fu">sleep</span> 2s<span class="kw">;</span> <span class="cf">done</span></span></code></pre></div>
+</section>
+<section id="analysis" class="level2">
+<h2><a href="#analysis" title="Link to section: § &#39;Analysis&#39;">Analysis</a></h2>
+<p>basic analysis:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>upvoted <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">27</span>,<span class="dv">2</span>,<span class="dv">19</span>,<span class="dv">60</span>,<span class="dv">2</span>,<span class="dv">69</span>,<span class="dv">2</span>,<span class="dv">14</span>,<span class="dv">6</span>,<span class="dv">72</span>,<span class="dv">9</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">57</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">31</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">32</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">33</span>,<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">4</span>,<span class="dv">55</span>,<span class="dv">2</span>,<span class="dv">10</span>,<span class="dv">7</span>,<span class="dv">327</span>,<span class="dv">35</span>,<span class="dv">58</span>,<span class="dv">70</span>,<span class="dv">6</span>,<span class="dv">14</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">79</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">100</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">7</span>,<span class="dv">72</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">158</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">73</span>,<span class="dv">59</span>,<span class="dv">54</span>,<span class="dv">2</span>,<span class="dv">76</span>,<span class="dv">7</span>,<span class="dv">141</span>,<span class="dv">2</span>,<span class="dv">424</span>,<span class="dv">11</span>,<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">126</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">42</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">77</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">13</span>,<span class="dv">85</span>,<span class="dv">19</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">6</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">30</span>,<span class="dv">72</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">17</span>,<span class="dv">2</span>) <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ignored <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">154</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">8</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">329</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">94</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">132</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">14</span>,<span class="dv">62</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">12</span>,<span class="dv">112</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">14</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">39</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">9</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">84</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">270</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">30</span>,<span class="dv">5</span>,<span class="dv">244</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">45</span>,<span class="dv">7</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">61</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">82</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">68</span>,<span class="dv">7</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">89</span>,<span class="dv">5</span>,<span class="dv">62</span>,<span class="dv">25</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">124</span>,<span class="dv">179</span>,<span class="dv">1</span>,<span class="dv">2</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wilcox.test</span>(upvoted, ignored)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>...W <span class="ot">=</span> <span class="dv">11758</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">0.09914</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>hn <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Scores =</span> <span class="fu">c</span>(upvoted, ignored), <span class="at">FrontPage =</span> <span class="fu">c</span>(upvoted<span class="sc">&gt;</span><span class="dv">10</span>, ignored<span class="sc">&gt;</span><span class="dv">10</span>), <span class="at">Upvoted =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="cn">TRUE</span>, <span class="fu">length</span>(upvoted)), <span class="fu">rep</span>(<span class="cn">FALSE</span>, <span class="fu">length</span>(ignored))))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(Scores), <span class="fu">sort</span>(Scores), <span class="at">color=</span> hn[<span class="fu">order</span>(hn<span class="sc">$</span>Scores, <span class="at">decreasing=</span><span class="cn">FALSE</span>),]<span class="sc">$</span>Upvoted, <span class="at">data=</span>hn)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotrix)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">histStack</span>(hn<span class="sc">$</span>Scores, hn<span class="sc">$</span>Upvoted, <span class="at">breaks=</span><span class="dv">25</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>g1 <span class="ot">&lt;-</span> <span class="fu">glm</span>(FrontPage <span class="sc">~</span> Upvoted, <span class="at">family=</span><span class="st">&quot;binomial&quot;</span>, <span class="at">data =</span> hn); <span class="fu">summary</span>(g1)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>...Coefficients<span class="sc">:</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>            Estimate Std. Error z value <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>(Intercept)   <span class="sc">-</span><span class="fl">1.742</span>      <span class="fl">0.221</span>   <span class="sc">-</span><span class="fl">7.87</span>  <span class="fl">3.5e-15</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>UpvotedTRUE    <span class="fl">0.723</span>      <span class="fl">0.296</span>    <span class="fl">2.44</span>    <span class="fl">0.015</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> <span class="fu">exp</span>(<span class="fu">coef</span>(g1))</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>(Intercept) UpvotedTRUE</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>     <span class="fl">0.1752</span>      <span class="fl">2.0597</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> <span class="fu">exp</span>(<span class="fu">confint</span>(g1))</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>             <span class="fl">2.5</span> <span class="sc">% 97.5 %</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>(Intercept) <span class="fl">0.1108</span> <span class="fl">0.2649</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>UpvotedTRUE <span class="fl">1.1579</span> <span class="fl">3.7167</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> <span class="fu">Reduce</span>(<span class="st">`</span><span class="at">*</span><span class="st">`</span>, <span class="fu">exp</span>(<span class="fu">coef</span>(g1)), <span class="dv">1</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.3608</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># a single upvote on /newest is currently estimated as increasing the odds of making the front page by 2.25x (from 16% to 36%)</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co"># or to put it another way, from a mean score of +16 to a mean score of +22</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="fu">glm</span>(Scores <span class="sc">~</span> Upvoted, <span class="at">family=</span><span class="st">&quot;poisson&quot;</span>, <span class="at">data =</span> hn); <span class="fu">summary</span>(g2)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>...Coefficients<span class="sc">:</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>            Estimate Std. Error z value <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>(Intercept)   <span class="fl">2.7907</span>     <span class="fl">0.0195</span>   <span class="fl">142.9</span>   <span class="sc">&lt;</span><span class="fl">2e-16</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>UpvotedTRUE   <span class="fl">0.2914</span>     <span class="fl">0.0270</span>    <span class="fl">10.8</span>   <span class="sc">&lt;</span><span class="fl">2e-16</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> <span class="fu">exp</span>(<span class="fu">coef</span>(g2))</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>(Intercept) UpvotedTRUE</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>     <span class="fl">16.292</span>       <span class="fl">1.338</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> <span class="fu">exp</span>(<span class="fu">Reduce</span>(<span class="st">`</span><span class="at">+</span><span class="st">`</span>, <span class="fu">coef</span>(g2), <span class="dv">0</span>))</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">21.28</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> <span class="fu">library</span>(flexmix)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>fit4 <span class="ot">&lt;-</span> (<span class="fu">stepFlexmix</span>(Scores <span class="sc">~</span> Upvoted, <span class="at">data=</span>hn, <span class="at">model =</span> <span class="fu">FLXMRglmfix</span>(<span class="at">family =</span> <span class="st">&quot;poisson&quot;</span>), <span class="at">k=</span><span class="dv">4</span>, <span class="at">nrep=</span><span class="dv">20</span>))</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fit4)</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="sc">:</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span> <span class="er">*</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>Call<span class="sc">:</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="fu">stepFlexmix</span>(Scores <span class="sc">~</span> Upvoted, <span class="at">data =</span> hn, <span class="at">model =</span> <span class="fu">FLXMRglmfix</span>(<span class="at">family =</span> <span class="st">&quot;poisson&quot;</span>),</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">k =</span> <span class="dv">4</span>, <span class="at">nrep =</span> <span class="dv">20</span>)</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>        prior size post<span class="sc">&gt;</span><span class="dv">0</span> ratio</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>Comp<span class="fl">.1</span> <span class="fl">0.0643</span>   <span class="dv">19</span>     <span class="dv">28</span> <span class="fl">0.679</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>Comp<span class="fl">.2</span> <span class="fl">0.4506</span>  <span class="dv">133</span>    <span class="dv">140</span> <span class="fl">0.950</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>Comp<span class="fl">.3</span> <span class="fl">0.1126</span>   <span class="dv">32</span>     <span class="dv">90</span> <span class="fl">0.356</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>Comp<span class="fl">.4</span> <span class="fl">0.3725</span>  <span class="dv">109</span>    <span class="dv">114</span> <span class="fl">0.956</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;log Lik.&#39;</span> <span class="sc">-</span><span class="dv">1154</span> (<span class="at">df=</span><span class="dv">11</span>)</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>AIC<span class="sc">:</span> <span class="dv">2330</span>   BIC<span class="sc">:</span> <span class="dv">2371</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">refit</span>(fit4))</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>Comp<span class="fl">.1</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>            Estimate Std. Error z value <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>(Intercept)    <span class="fl">2.485</span>      <span class="fl">0.120</span>    <span class="fl">20.7</span>   <span class="sc">&lt;</span><span class="fl">2e-16</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>UpvotedTRUE    <span class="fl">1.892</span>      <span class="fl">0.123</span>    <span class="fl">15.4</span>   <span class="sc">&lt;</span><span class="fl">2e-16</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>Comp<span class="fl">.2</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>            Estimate Std. Error z value <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>(Intercept)   <span class="fl">0.6002</span>     <span class="fl">0.0734</span>    <span class="fl">8.18</span>  <span class="fl">2.9e-16</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>UpvotedTRUE   <span class="fl">5.3254</span>     <span class="fl">0.0820</span>   <span class="fl">64.95</span>  <span class="sc">&lt;</span> <span class="fl">2e-16</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>Comp<span class="fl">.3</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>            Estimate Std. Error z value <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>(Intercept)   <span class="fl">4.3955</span>     <span class="fl">0.0309</span>   <span class="fl">142.4</span>   <span class="sc">&lt;</span><span class="fl">2e-16</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>UpvotedTRUE  <span class="sc">-</span><span class="fl">3.5918</span>     <span class="fl">0.0794</span>   <span class="sc">-</span><span class="fl">45.3</span>   <span class="sc">&lt;</span><span class="fl">2e-16</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>Comp<span class="fl">.4</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>            Estimate Std. Error z value <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>(Intercept)   <span class="fl">5.4605</span>     <span class="fl">0.0292</span>   <span class="fl">187.1</span>   <span class="sc">&lt;</span><span class="fl">2e-16</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>UpvotedTRUE  <span class="sc">-</span><span class="fl">2.3164</span>     <span class="fl">0.0712</span>   <span class="sc">-</span><span class="fl">32.5</span>   <span class="sc">&lt;</span><span class="fl">2e-16</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> <span class="fu">exp</span>(<span class="fl">0.6002</span>); <span class="fu">exp</span>(<span class="fl">2.485</span>); <span class="fu">exp</span>(<span class="fl">4.3955</span>); <span class="fu">exp</span>(<span class="fl">5.4605</span>)</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">1.822</span></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">12</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">81.09</span></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">235.2</span></span></code></pre></div>
+<p>Note that the submissions were chosen to maximize the impact of an upvote by upvoting the first 5 links on /newest and hence the most recently submitted: a submission at the very bottom, like #30, will benefit least from an upvote since its time is up and it’s almost vanished. If the effect on the first 5 is TODO, and the effect on the last link (#30) is 0, then a reasonable guess at the mean effect over all links is simply TODO/2.</p>
+</section>
+<section id="reddit-comparison" class="level2">
+<h2><a href="#reddit-comparison" title="Link to section: § &#39;Reddit comparison&#39;">Reddit Comparison</a></h2>
+<p>One might wonder if HN is uniquely aberrant in this lottery; the most natural comparison is the social news site Reddit. I picked /r/prog (a very large subreddit comparable to HN in size) and manipulated their <a href="http://www.reddit.com/r/programming/new/" id="_iy-5GAuy" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">/new/</a> the same way</p>
+<section id="data-1" class="level3">
+<h3><a href="#data-1" title="Link to section: § &#39;Data&#39;">Data</a></h3>
+<p>upvoted: http://www.reddit.com/r/programming/comments/20nypu/get_certified_and_become_a_real_licensed_software/ http://www.reddit.com/r/programming/comments/20nvtk/writing_the_perfect_question_by_jon_skeet/ http://www.reddit.com/r/programming/comments/20ns9t/wit_natural_language_for_the_internet_of_things/ http://www.reddit.com/r/programming/comments/20nowy/lazyrouter_translates_requests_into_method_calls/ http://www.reddit.com/r/programming/comments/20ofgx/hiring_front_and_back_end_dev_in_southern/ http://www.reddit.com/r/programming/comments/20ofbs/the_chinese_wikipedia_article_on_quicksort_has/ http://www.reddit.com/r/programming/comments/20o6vp/refreshing_part_of_a_page_using_jquery_load_and/ http://www.reddit.com/r/programming/comments/20o32o/i_have_been_in_my_current_job_for_a_while_and_i/ http://www.reddit.com/r/programming/comments/20q8zs/mozilla_and_unity_bring_unity_game_engine_to_webgl/ http://www.reddit.com/r/programming/comments/20q4la/native_interconnect_the_isthmus_in_the_jvm/ http://www.reddit.com/r/programming/comments/20qjp4/my_experience_with_mob_programming/ http://www.reddit.com/r/programming/comments/20qjeg/on_replacing_objective_c/ http://www.reddit.com/r/programming/comments/20r1ht/illconsidered_choices_coffee_and_its_effects_on/ http://www.reddit.com/r/programming/comments/20qukz/an_interesting_erlang_alternative_to_ruby_on_rails/ http://www.reddit.com/r/programming/comments/20qssi/how_to_nuget_jquery_1_the_right_way/ http://www.reddit.com/r/programming/comments/20rmuc/why_not_automate_your_development_environment_too/ http://www.reddit.com/r/programming/comments/20rl34/design_patterns_cheat_sheet/ http://www.reddit.com/r/programming/comments/20rbem/typesafe_go_reactive_with_java_8/ http://www.reddit.com/r/programming/comments/20r5n0/samsung_releases_sdk_for_wristwatch_apps/ http://www.reddit.com/r/programming/comments/20thjg/john_boyd_and_the_origins_of_agility/ http://www.reddit.com/r/programming/comments/20tghe/announcing_the_oculus_rift_development_kit_2_dk2/ http://www.reddit.com/r/programming/comments/20t58p/ubuntu_1404_now_runs_well_on_the_2013_macbook_air/ http://www.reddit.com/r/programming/comments/20tzve/a_dead_simple_terminal_version_of_2048_with_a/ http://www.reddit.com/r/programming/comments/20tvl3/views_in_java_collections_framework/ http://www.reddit.com/r/programming/comments/20tufm/there_is_no_single_mental_model_for_programming/ http://www.reddit.com/r/programming/comments/20ttvw/accelerated_development_not_planning_is_for_losers/ http://www.reddit.com/r/programming/comments/20trth/creating_a_better_nrpe_agent/ http://www.reddit.com/r/programming/comments/20ua1t/the_history_of_computing_lectures/ http://www.reddit.com/r/programming/comments/20u9gx/kirks_quest_online_coding_contest_the_future_of/ http://www.reddit.com/r/programming/comments/20u7sc/flash_is_dead_long_live_openfl/ http://www.reddit.com/r/programming/comments/20ulsv/refactoring_taming_the_bunnies/ http://www.reddit.com/r/programming/comments/20uezj/open_by_default_releasing_my_campaign_platform_a/ http://www.reddit.com/r/programming/comments/20ud73/not_sure_if_correct_subbreddit_but_heres_a_very/ http://www.reddit.com/r/programming/comments/20u1um/software_laws_2014_pdf/ http://www.reddit.com/r/programming/comments/20v0fq/the_inverted_software_datablock_quick_start/ http://www.reddit.com/r/programming/comments/20wqob/lessons_from_a_silicon_valley_job_search_robert/ http://www.reddit.com/r/programming/comments/20wnxf/you_cant_buy_agile/ http://www.reddit.com/r/programming/comments/20wk67/the_four_deadly_sins_of_linq_data_access_part/ http://www.reddit.com/r/programming/comments/20x6kc/dispelling_the_myth_of_the_floatingpoint_pdf/ http://www.reddit.com/r/programming/comments/20x4rs/changes_in_the_microsoft_mvp_program_mvps_for/ http://www.reddit.com/r/programming/comments/20x4eo/reset_element_css_to_blank_state/ http://www.reddit.com/r/programming/comments/20x1lr/poppy_an_opensource_software_hardware_humanoid/ http://www.reddit.com/r/programming/comments/20xk8y/microsoft_detailed_directx_12_promising_a/ http://www.reddit.com/r/programming/comments/20xhr9/discussion_about_programming_languages_with_the/ http://www.reddit.com/r/programming/comments/20xfqn/appmethod_builds_apps_for_android_ios_windows_and/ http://www.reddit.com/r/programming/comments/20y1vv/handling_nodejs_dependencies_at_box/ http://www.reddit.com/r/programming/comments/20xzc8/hey_freelancers_of_rprogramming_help_fill_out_a/ http://www.reddit.com/r/programming/comments/210540/a_software_engineers_life_in_developing_country/ http://www.reddit.com/r/programming/comments/21047p/efficient_dsp_filters_with_template_haskell/ http://www.reddit.com/r/programming/comments/210nru/get_all_the_things_or_how_not_to_write_a_web_api/ http://www.reddit.com/r/programming/comments/210lyk/the_road_coders_survival_kit/ http://www.reddit.com/r/programming/comments/211fum/a_small_project_i_made_for_implementing_sliders/ http://www.reddit.com/r/programming/comments/2119ag/perl_encryption_primer_block_ciphers/ http://www.reddit.com/r/programming/comments/2131cg/larry_page_id_rather_leave_my_billions_to_elon/ http://www.reddit.com/r/programming/comments/212pkq/mario_ai_using_multiple_random_reinforcement/ http://www.reddit.com/r/programming/comments/212lm8/npm_newly_paranoid_maintainers/ http://www.reddit.com/r/programming/comments/213do3/on_my_birthday_last_year_i_made_an_app_to/ http://www.reddit.com/r/programming/comments/213c7p/bit_gathering_and_base2tobase3_conversion_for/ http://www.reddit.com/r/programming/comments/212l84/programming_on_the_toilet/ http://www.reddit.com/r/programming/comments/215jmx/recursive_queries_in_postgresql/ http://www.reddit.com/r/programming/comments/215dvi/exploring_computergenerated_poetry_and_trying_to/ http://www.reddit.com/r/programming/comments/218z27/michael_feathers_ripeness_for_refactoring/ http://www.reddit.com/r/programming/comments/218yff/popcorn_time_goodbye/ http://www.reddit.com/r/programming/comments/219pvt/goodbye_firefox_marketplace_on_brendan_eich/ http://www.reddit.com/r/programming/comments/219lnd/this_week_in_rust/ http://www.reddit.com/r/programming/comments/219jg6/using_q_and_jquery_promises_to_compose_complex/ http://www.reddit.com/r/programming/comments/21bud5/now_anyone_in_the_world_can_learn_web_development/ http://www.reddit.com/r/programming/comments/21btl8/clojure_16_released/ http://www.reddit.com/r/programming/comments/21brwc/easy_money_code_html5_forms_and_sell_them_here/ http://www.reddit.com/r/programming/comments/21bq6i/solving_puzzles_with_f_or_how_to_impress_your/ http://www.reddit.com/r/programming/comments/21cd09/join_the_resistance_teaser_for_codingame_0426/ http://www.reddit.com/r/programming/comments/21c6r7/using_aws_apis_without_a_server/ http://www.reddit.com/r/programming/comments/21c6o5/how_to_build_speechtotext_chat_with_pubnub_and_wit/ http://www.reddit.com/r/programming/comments/21clv3/what_its_like_to_use_haskell_in_production/ http://www.reddit.com/r/programming/comments/21cos2/six_degrees_of_kevin_bacon_in_six_languages_over/ http://www.reddit.com/r/programming/comments/21ckx6/cooperative_zombies_programming_game/ http://www.reddit.com/r/programming/comments/21eznx/principles_of_good_data_analysis/ http://www.reddit.com/r/programming/comments/21ezh3/javascript_equality_table/ http://www.reddit.com/r/programming/comments/21fj3p/the_exponential_binary_chess_clock_countdown/ http://www.reddit.com/r/programming/comments/21fiz1/how_to_build_a_simple_voting_app_like_hacker_news/ http://www.reddit.com/r/programming/comments/21fhy7/ian_cooper_tdd_where_did_it_all_go_wrong/ http://www.reddit.com/r/programming/comments/21g31f/tip_seamless_restarts_with_unicorn_and_upstart/ http://www.reddit.com/r/programming/comments/21fz4o/google_io_2014/ http://www.reddit.com/r/programming/comments/21gnmn/text_mode_2048_game_in_c_for_your_linux_console/ http://www.reddit.com/r/programming/comments/21gim9/coding_interview_practice/ http://www.reddit.com/r/programming/comments/21gq5o/quick_start_test_driven_development_channel_9/ http://www.reddit.com/r/programming/comments/21g3iq/a_beginners_guide_to_contributing_to_open_source/ http://www.reddit.com/r/programming/comments/21icfm/facebook_with_help_from_google_linkedin_twitter/ http://www.reddit.com/r/programming/comments/21iav6/c_status/ http://www.reddit.com/r/programming/comments/21i7gd/ccv_06_open_sources_near_stateoftheart_image/ http://www.reddit.com/r/programming/comments/21i19h/a_generic_cc_makefile/ http://www.reddit.com/r/programming/comments/21ixzp/bram_cohens_patience_diff_a_brief_summary/ http://www.reddit.com/r/programming/comments/21iwup/programming_laws_and_reality_do_we_know_what_we/ http://www.reddit.com/r/programming/comments/21jron/switching_web_programming_paradigms_with_vertx/ http://www.reddit.com/r/programming/comments/21jpf5/show_reddit_my_own_little_reddit_clone_in_c_and/ http://www.reddit.com/r/programming/comments/21iza1/spatial_data_structures_for_better_map/ http://www.reddit.com/r/programming/comments/21l81x/perl_encryption_primer_hashes/ http://www.reddit.com/r/programming/comments/21l2ya/udi_dahan_looselycoupled_orchestration_with/ http://www.reddit.com/r/programming/comments/21lx00/cube_drone_consistent_hashing/ http://www.reddit.com/r/programming/comments/21lxd9/what_does_writing_directly_to_video_memory_really/ http://www.reddit.com/r/programming/comments/21n1zs/why_enterprise_java_beans/ http://www.reddit.com/r/programming/comments/21mx0b/marching_squares_for_procedural_tile_placement/ http://www.reddit.com/r/programming/comments/21mvuv/should_everybody_learn_to_code_computerphile/ http://www.reddit.com/r/programming/comments/21o6xt/the_software_equality_logo/ http://www.reddit.com/r/programming/comments/21o6bz/codeplay_introduction_to_sycl_abstraction_layer/ http://www.reddit.com/r/programming/comments/21o6bb/bannalia_trivial_notes_on_themes_diverse/ http://www.reddit.com/r/programming/comments/21o4et/artificial_intelligence_where_to_put_your_time/ http://www.reddit.com/r/programming/comments/21od4e/participate_in_10_hours_development_of_a_game/ http://www.reddit.com/r/programming/comments/21o21d/introduction_to_artificial_neural_networks_part_2/ http://www.reddit.com/r/programming/comments/21nxpv/working_without_fear_on_test_driven_code/ http://www.reddit.com/r/programming/comments/21ow20/introducing_rwolfram_a_subreddit_dedicated_to_the/ http://www.reddit.com/r/programming/comments/21ooex/wic_file_open_dialog_using_ifileopendialog/ http://www.reddit.com/r/programming/comments/21nwak/html5_and_javascript_game_engine_libraries/ http://www.reddit.com/r/programming/comments/21quwy/tools_for_building_a_better_software_development/ http://www.reddit.com/r/programming/comments/21rn0p/bringing_simd_to_javascript/ http://www.reddit.com/r/programming/comments/21rfyf/class_hierarchies_dont_do_that/ http://www.reddit.com/r/programming/comments/21r3tc/lawsuit_waze_owes_opensource_programmers_150/ http://www.reddit.com/r/programming/comments/21qvp8/write_your_own_ai_for_2048/ http://www.reddit.com/r/programming/comments/21s7tn/the_strangeness_of_scale_at_twitter/ http://www.reddit.com/r/programming/comments/21smyy/crittercism_provides_insight_into_why_your_app/ http://www.reddit.com/r/programming/comments/21skaq/scrubbed_digitalocean_droplets_still_recoverable/ http://www.reddit.com/r/programming/comments/21shnk/convert_your_generators_into_coroutines_with_a/ http://www.reddit.com/r/programming/comments/21se3g/how_do_i_convert_a_batch_file_into_a_powershell/ http://www.reddit.com/r/programming/comments/21ttxs/turings_sunflower/ http://www.reddit.com/r/programming/comments/21tszv/increasing_performance_with_static_polymorphism/ http://www.reddit.com/r/programming/comments/21tqge/summary_of_the_actor_model/ http://www.reddit.com/r/programming/comments/21tnkc/writing_micro_compiler_in_ocaml/ http://www.reddit.com/r/programming/comments/21ubo9/api_driven_development/ http://www.reddit.com/r/programming/comments/21uap9/programming_on_mobile_devices/ http://www.reddit.com/r/programming/comments/23zlqt/everything_in_javascript_is_a_value/ http://www.reddit.com/r/programming/comments/23zhe4/devs_and_depression_by_greg_baugues/ http://www.reddit.com/r/programming/comments/2417sh/how_to_upload_a_file_using_aspnet_mvc_and_ajax/ http://www.reddit.com/r/programming/comments/2410b0/hypermedia_as_the_engine_of_application_state/ http://www.reddit.com/r/programming/comments/240wbx/lazarus_free_pascal_ide_122_is_released_and_built/ http://www.reddit.com/r/programming/comments/240tkz/https_share_python_script_that_allows_you_to/ http://www.reddit.com/r/programming/comments/240r8r/teasafe_a_userspace_encrypted_filesystem_cc/ http://www.reddit.com/r/programming/comments/241fmb/dont_feel_guilty_about_not_contributing_to_open/ http://www.reddit.com/r/programming/comments/241jp9/spotify_engineering_culture_part_1/ http://www.reddit.com/r/programming/comments/241rx7/why_do_software_projects_fail/ http://www.reddit.com/r/programming/comments/241iav/accessing_standard_c_types_in_haskell/ http://www.reddit.com/r/programming/comments/241cnt/doing_ab_testing_with_apache_httpd/ http://www.reddit.com/r/programming/comments/240n7q/rust_by_example/ http://www.reddit.com/r/programming/comments/240k9o/c_tutorials/ http://www.reddit.com/r/programming/comments/242fp0/bramcohen_great_programmers_2004/ http://www.reddit.com/r/programming/comments/242dvm/xpost_rarduino_understand_arduino_developement/ http://www.reddit.com/r/programming/comments/242d9k/javascript_promises_there_and_back_again/ http://www.reddit.com/r/programming/comments/242byq/http2_explained/ http://www.reddit.com/r/programming/comments/243tlz/pdf_the_tex_tuneup_of_2014_donald_knuth/ http://www.reddit.com/r/programming/comments/243mv4/dont_underestimate_the_value_of_sitting_with_an/ http://www.reddit.com/r/programming/comments/243hy2/mostly_functional_programming_does_not_work/ http://www.reddit.com/r/programming/comments/24423q/how_to_use_a_chrootjail_for_software_development/ http://www.reddit.com/r/programming/comments/243xb9/sample_reactive_web_app_using_typescript_rxjs_and/ http://www.reddit.com/r/programming/comments/2457on/typed_tagless_final_interpreters_pdf/ http://www.reddit.com/r/programming/comments/24564y/why_most_crockford32_implementations_are_incorrect/ http://www.reddit.com/r/programming/comments/2454tw/some_thoughts_on_go_and_erlang/ http://www.reddit.com/r/programming/comments/244rqu/dsl_programmable_engine_for_high_frequency/ http://www.reddit.com/r/programming/comments/245jte/parsing_english_with_500_lines_of_python/ http://www.reddit.com/r/programming/comments/245ihj/rosetta_clone_rosetta_code_uibrowser/ http://www.reddit.com/r/programming/comments/245b8q/windows_azure_multifactor_authentication_overview/ http://www.reddit.com/r/programming/comments/246zxb/what_makes_intellij_idea_different/ http://www.reddit.com/r/programming/comments/246x5h/two_secure_coding_tools_for_analyzing_android_apps/ http://www.reddit.com/r/programming/comments/247ie2/build_a_voting_app_like_reddit_w_nodejs/ http://www.reddit.com/r/programming/comments/247c0s/hey_everybody_interested_in_wolfram_language/ http://www.reddit.com/r/programming/comments/247aql/introducing_pop_the_animation_engine_behind_paper/ http://www.reddit.com/r/programming/comments/2485ch/mostly_functional_programming_does_not_work/ http://www.reddit.com/r/programming/comments/2482r0/incomplete_list_of_mistakes_in_the_design_of_css/ http://www.reddit.com/r/programming/comments/2482b9/coding_school_reveals_job_placement_statistics/ http://www.reddit.com/r/programming/comments/2481gp/ndrill_navigate_lazily_and_nullsafely_through_c/ http://www.reddit.com/r/programming/comments/24a2uy/building_fastflow_c_library_on_windows_with/ http://www.reddit.com/r/programming/comments/24a2gq/how_disqus_went_realtime_with_165k_messages_per/ http://www.reddit.com/r/programming/comments/24b8h9/move_over_old_man_ruby_your_java_moment_has/ http://www.reddit.com/r/programming/comments/24b3y7/determining_if_a_number_is_either_a_multiple_of/ http://www.reddit.com/r/programming/comments/24b25t/been_working_on_a_flexible_pid_in_c_open_to/ http://www.reddit.com/r/programming/comments/24bt5o/combinatris_tetris_with_ski_combinators_instead/ http://www.reddit.com/r/programming/comments/24bgzr/software_development_is_mostly_horseshit_holman/ http://www.reddit.com/r/programming/comments/24def3/the_absurdity_of_linkedin/ http://www.reddit.com/r/programming/comments/24dd2p/slow_database_test_fallacy_dhh/ http://www.reddit.com/r/programming/comments/24dc71/iri_and_lps_partner_to_enhance_mainframe_to/ http://www.reddit.com/r/programming/comments/24dw0r/mosaic_algorithm/ http://www.reddit.com/r/programming/comments/24dvzz/distracerio_browser_distributed_ray_tracing/ http://www.reddit.com/r/programming/comments/24e69g/openssh_no_longer_has_to_depend_on_openssl/ http://www.reddit.com/r/programming/comments/24e2tk/parameterized_unit_tests_in_junit/ http://www.reddit.com/r/programming/comments/24h2m1/books_for_programmers_charles_perrows_normal/ http://www.reddit.com/r/programming/comments/24h1gd/how_a_florida_kids_stupid_app_saved_his_familys/ http://www.reddit.com/r/programming/comments/24gw1w/openbsd_55_released/ http://www.reddit.com/r/programming/comments/24hm3q/phps_triumphant_return_or_my_immediate/ http://www.reddit.com/r/programming/comments/24hlgt/the_culture_that_creates_the_problem_is_never_the/ http://www.reddit.com/r/programming/comments/24hdxx/pasteee_20_fast_pastebin_alternative_with_a/ http://www.reddit.com/r/programming/comments/24k7e9/thinking_in_types/ http://www.reddit.com/r/programming/comments/24jtem/driven_do_not_change_anything/ http://www.reddit.com/r/programming/comments/24jo2h/elm_0121_fast_immutable_arrays/ http://www.reddit.com/r/programming/comments/24lw4h/exporting_grid_view_or_div_to_excel_in_aspnet/ http://www.reddit.com/r/programming/comments/24mv17/my_raytracer_tutorial_series_2_parts_so_far/ http://www.reddit.com/r/programming/comments/24mpxg/a_cross_platform_zero_dependency_and_extendible/ http://www.reddit.com/r/programming/comments/24oz1r/the_bitshack_auctions_coinscript_32_bitcoin_dice/ http://www.reddit.com/r/programming/comments/24ox8s/github_monoculture/ http://www.reddit.com/r/programming/comments/24osgx/flogging_the_dead_horse_a_bit_but_it_was_an/ http://www.reddit.com/r/programming/comments/24os0u/getting_started_with_scala/ http://www.reddit.com/r/programming/comments/24pbms/the_great_works_of_software_a_software_canon/ http://www.reddit.com/r/programming/comments/24qd39/reddit_in_reactjs/ http://www.reddit.com/r/programming/comments/24q7nw/virtual_memory_and_you/ http://www.reddit.com/r/programming/comments/24q535/a_1000_users_upload_a_700_kb_picture_every_second/ http://www.reddit.com/r/programming/comments/24s0e7/firefox_29s_best_feature/ http://www.reddit.com/r/programming/comments/24rzww/how_steve_wozniak_wrote_basic_for_the_original/ http://www.reddit.com/r/programming/comments/24smdh/why_is_software_architecture_important/ http://www.reddit.com/r/programming/comments/24tnxq/a_crash_course_in_modern_hardware_excellent_talk/ http://www.reddit.com/r/programming/comments/24tm65/indymailer_by_independence_programming/ http://www.reddit.com/r/programming/comments/24tivs/ive_been_building_a_guibased_program_in_java_to/ http://www.reddit.com/r/programming/comments/24thja/googles_web_fundamentals_handbook_for_multidevice/ http://www.reddit.com/r/programming/comments/24w5xj/chemist_turns_software_developer_after_sons/</p>
+<p>ignored: http://www.reddit.com/r/programming/comments/20o0me/2048_4d/ http://www.reddit.com/r/programming/comments/20odeq/can_anyone_help_me_decode_this_cfltk/ http://www.reddit.com/r/programming/comments/20q7vg/5_things_you_can_build_with_pubnub_presence/ http://www.reddit.com/r/programming/comments/20q72f/is_goto_still_considered_harmful/ http://www.reddit.com/r/programming/comments/20q5xn/implementing_a_watch_only_bitcoin_wallet/ http://www.reddit.com/r/programming/comments/20qk8a/are_reactive_programming_microprocessors_our/ http://www.reddit.com/r/programming/comments/20qiu3/configure_before_you_boot/ http://www.reddit.com/r/programming/comments/20qiee/using_jpa_and_jta_with_spring/ http://www.reddit.com/r/programming/comments/20qs4k/setting_up_a_mysql_cluster_with_mariadb_galera/ http://www.reddit.com/r/programming/comments/20qrso/an_introduction_to_x86_64_assembly_language/ http://www.reddit.com/r/programming/comments/20rmhv/nodejs_backbone_wearther/ http://www.reddit.com/r/programming/comments/20rl34/design_patterns_cheat_sheet/ http://www.reddit.com/r/programming/comments/20rdrz/python_for_beginners_reading_manipulating_csv/ http://www.reddit.com/r/programming/comments/20rbem/typesafe_go_reactive_with_java_8/ http://www.reddit.com/r/programming/comments/20rdrz/python_for_beginners_reading_manipulating_csv/ http://www.reddit.com/r/programming/comments/20r8vu/factual_errors_in_<a href="https://en.wikipedia.org/wiki/Git" id="_s3TIMfHd" class="link-modified-recently link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Git#bodyContent" title="Git">git</a><span>_vs_mercurial_why_git_from/ http://www.reddit.com/r/programming/comments/20t9ri/concurrency_and_fault_tolerance_made_easy_an/ http://www.reddit.com/r/programming/comments/20t8zd/javascript_the_high_road_the_low_road_fluent_<span class="date-range">2014<sub><span title="2014 was 12 years ago.">12ya</span></sub></span>/ http://www.reddit.com/r/programming/comments/20u9rl/flappy_2048/ http://www.reddit.com/r/programming/comments/20u7h7/three_questions_for_leslie_lamport_winner_of/ http://www.reddit.com/r/programming/comments/20u75s/the_corruption_of_agile/ http://www.reddit.com/r/programming/comments/20uyd3/joel_spolsky_how_to_have_nice_things/ http://www.reddit.com/r/programming/comments/20uw2k/debug_31_miguel_de_icaza_on_mono/ http://www.reddit.com/r/programming/comments/20uuvm/lookalike_lightweight_kdtree_implementation_for/ http://www.reddit.com/r/programming/comments/20uubz/parsing_the_kafka_protocol_with_erlang_pattern/ http://www.reddit.com/r/programming/comments/20wpzc/cnile_a_simple_gcc_plugin_for_storing_the_build/ http://www.reddit.com/r/programming/comments/20woj5/how_to_abuse_a_c_compiler/ http://www.reddit.com/r/programming/comments/20wy5l/api_design_best_practices_part_2/ http://www.reddit.com/r/programming/comments/20xmmd/here_it_comes_c14/ http://www.reddit.com/r/programming/comments/20xjko/directx_12/ http://www.reddit.com/r/programming/comments/20y2ax/opencl_accelerated_sql_database_with_arm_mali_gpu/ http://www.reddit.com/r/programming/comments/20y01i/netbeans_ide_80_released/ http://www.reddit.com/r/programming/comments/20xyry/hjson_is_json_for_humans_less_commas_more_comments/ http://www.reddit.com/r/programming/comments/20yl1r/world_domination_with_hexapods_and_clojure/ http://www.reddit.com/r/programming/comments/20yhe2/if_each_programming_language_was_a_person_what/ http://www.reddit.com/r/programming/comments/20yeob/my_friend_rob_has_been_building_pulsar_nodejs/ http://www.reddit.com/r/programming/comments/20yaqp/arnoldc_programming_with_arnie_quotes_sublime/ http://www.reddit.com/r/programming/comments/20y7i3/neovim_is_close_to_hitting_30000/ http://www.reddit.com/r/programming/comments/2105nn/kcdc_<span class="date-range">2014<sub><span title="2014 was 12 years ago.">12ya</span></sub></span>_schedule_posted_looks_like_a_fantastic/ http://www.reddit.com/r/programming/comments/2102jt/opengl_approaching_zero_driver_overhead/ http://www.reddit.com/r/programming/comments/2101ti/functional_image_processing_in_d/ http://www.reddit.com/r/programming/comments/210oe6/the_optional_type_api_in_java_8/ http://www.reddit.com/r/programming/comments/210j7p/pixel_pixelate_images_with_js/ http://www.reddit.com/r/programming/comments/210da7/diagnose_server_issues_without_opening_5_tabs/ http://www.reddit.com/r/programming/comments/211ktl/blake2_harder_better_faster_stronger_than_md5/ http://www.reddit.com/r/programming/comments/211ejh/notes_on_boilerplate_detectection_using_shallow/ http://www.reddit.com/r/programming/comments/211eam/interactive_git_workflow_animations/ http://www.reddit.com/r/programming/comments/212zy5/how_to_add_a_column_to_an_existing_table_in_sql/ http://www.reddit.com/r/programming/comments/212wxy/on_understanding_types_data_abstraction_and/ http://www.reddit.com/r/programming/comments/212wxy/on_understanding_types_data_abstraction_and/ http://www.reddit.com/r/programming/comments/212gzx/w3csri_subresource_integrity_mechanism_by_which/ http://www.reddit.com/r/programming/comments/215ksz/cc_plus_programming_resources/ http://www.reddit.com/r/programming/comments/215a5y/everything_you_need_to_know_about_javascript/ http://www.reddit.com/r/programming/comments/2155u7/lessons_from_a_silicon_valley_job_search/ http://www.reddit.com/r/programming/comments/218zzx/cereal_a_crossplatform_c11_serialization_library/ http://www.reddit.com/r/programming/comments/218zp5/mozilla_leadership_changes_brendan_eich_becomes/ http://www.reddit.com/r/programming/comments/218yqw/using_and_abusing_macros/ http://www.reddit.com/r/programming/comments/219suc/2048_in_sed/ http://www.reddit.com/r/programming/comments/219ffp/tips_and_tricks_hidden_features_of_perl/ http://www.reddit.com/r/programming/comments/21bt86/learn_git_branching/ http://www.reddit.com/r/programming/comments/21cbby/jsdelivr_api_from_a_casual_experiment_to_success/ http://www.reddit.com/r/programming/comments/21c8k2/a_system_called_mylar_makes_it_possible_to_build/ http://www.reddit.com/r/programming/comments/21cpv0/text_cleverbot_from_your_phone/ http://www.reddit.com/r/programming/comments/21cpal/angularjs_one_framework_to_rule_them_all/ http://www.reddit.com/r/programming/comments/21cos2/six_degrees_of_kevin_bacon_in_six_languages_over/ http://www.reddit.com/r/programming/comments/21ckx6/cooperative_zombies_programming_game/ http://www.reddit.com/r/programming/comments/21d1s7/reverse_engineering_nand_flash_for_fun_and_profit/ http://www.reddit.com/r/programming/comments/21d3ry/google_awards_geohot_150000_for_revealing/ http://www.reddit.com/r/programming/comments/21f2j5/html_templates_in_clojure/ http://www.reddit.com/r/programming/comments/21f1lj/angularjs_a_retrospective/ http://www.reddit.com/r/programming/comments/21eyas/warnings_are_errors/ http://www.reddit.com/r/programming/comments/21fjfq/stupid_answers_to_stupid_puzzle_interview/ http://www.reddit.com/r/programming/comments/21fim0/application_development_backend_solution_with_java/ http://www.reddit.com/r/programming/comments/21g64n/an_overview_of_webkits_css_jit_compiler_a_gain_of/ http://www.reddit.com/r/programming/comments/21g3iq/a_beginners_guide_to_contributing_to_open_source/ http://www.reddit.com/r/programming/comments/21fwnn/cube_drone_hashing_for_data_structures_in_90/ http://www.reddit.com/r/programming/comments/21g7op/bringing_the_magic_of_qt_to_windows_runtime/ http://www.reddit.com/r/programming/comments/21gm76/boston_college_mba_brings_massive_open_online/ http://www.reddit.com/r/programming/comments/21g7op/bringing_the_magic_of_qt_to_windows_runtime/ http://www.reddit.com/r/programming/comments/21g64n/an_overview_of_webkits_css_jit_compiler_a_gain_of/ http://www.reddit.com/r/programming/comments/21fwnn/cube_drone_hashing_for_data_structures_in_90/ http://www.reddit.com/r/programming/comments/21idvi/regexr_v20_has_launched_and_will_soon_be_released/ http://www.reddit.com/r/programming/comments/21jdko/drop_all_your_shit_here_comes_the_64bit_temple/ http://www.reddit.com/r/programming/comments/21j6tf/f_functions_as_types_types_types_everywhere/ http://www.reddit.com/r/programming/comments/21iza1/spatial_data_structures_for_better_map/ http://www.reddit.com/r/programming/comments/21jnvj/99_problems_solved_in_ocaml/ http://www.reddit.com/r/programming/comments/21j6tf/f_functions_as_types_types_types_everywhere/ http://www.reddit.com/r/programming/comments/21la4n/the_complete_visual_guide_to_sublime_text_3/ http://www.reddit.com/r/programming/comments/21l9pr/i_created_a_replacement_new_tab_that_shows_a/ http://www.reddit.com/r/programming/comments/21l326/dataoriented_design_or_why_you_might_be_shooting/ http://www.reddit.com/r/programming/comments/21lz1x/quickfind_a_fuzzy_file_matcher_for_the_terminal/ http://www.reddit.com/r/programming/comments/21lymm/androids_overblown_fragmentation_problem_revisited/ http://www.reddit.com/r/programming/comments/21lyl2/composition_over_inheritance_object_oriented/ http://www.reddit.com/r/programming/comments/21mus2/advanced_redis_command_loading/ http://www.reddit.com/r/programming/comments/21mr8u/the_modern_test_lab_build_the_lab_team/ http://www.reddit.com/r/programming/comments/21o21d/introduction_to_artificial_neural_networks_part_2/ http://www.reddit.com/r/programming/comments/21o8jz/javascript_understanding_this/ http://www.reddit.com/r/programming/comments/21nwak/html5_and_javascript_game_engine_libraries/ http://www.reddit.com/r/programming/comments/21ozuc/a_simple_kernelspace_ondisk_filesystem_from_the/ http://www.reddit.com/r/programming/comments/21nsba/thoughts_on_xamarin_for_ios_development/ http://www.reddit.com/r/programming/comments/21r3tc/lawsuit_waze_owes_opensource_programmers_150/ http://www.reddit.com/r/programming/comments/21r1iv/ranking_functions_in_sql_server/ http://www.reddit.com/r/programming/comments/21r0zz/combining_the_awesomeness_of_valgrind_and_gdb/ http://www.reddit.com/r/programming/comments/21qzz2/an_overview_of_floating_point_realm/ http://www.reddit.com/r/programming/comments/21rlzz/vector_math_in_python_3_critique/ http://www.reddit.com/r/programming/comments/21rjjw/how_to_build_and_run_the_mojarra_automated_tests/ http://www.reddit.com/r/programming/comments/21s7bf/one_step_forward_two_steps_back_by_chris_done/ http://www.reddit.com/r/programming/comments/21s4oa/digest_a_tiny_program_to_compute_many_common_hash/ http://www.reddit.com/r/programming/comments/21s2sq/refactoring_with_lz77_compression_is_compilation/ http://www.reddit.com/r/programming/comments/21spg7/differences_in_mapreduce_between_ravendb_mongodb/ http://www.reddit.com/r/programming/comments/21tu9c/programming_is_a_knowledge_acquisition_activity/ http://www.reddit.com/r/programming/comments/21ubim/a_binary_chimera_3_headers_1_data_body_in_a/ http://www.reddit.com/r/programming/comments/21ua0s/api_days_berlin/ http://www.reddit.com/r/programming/comments/21u7zp/cron_in_production_that_is_a_double_edged_sword/ http://www.reddit.com/r/programming/comments/23zytx/meta_a_modern_c_data_sciences_toolkit/ http://www.reddit.com/r/programming/comments/23zw75/big_data_alone_wont_save_you/ http://www.reddit.com/r/programming/comments/23zdca/dont_tie_yourself_to_a_framework/ http://www.reddit.com/r/programming/comments/240r8r/teasafe_a_userspace_encrypted_filesystem_cc/ http://www.reddit.com/r/programming/comments/241iav/accessing_standard_c_types_in_haskell/ http://www.reddit.com/r/programming/comments/241cnt/doing_ab_testing_with_apache_httpd/ http://www.reddit.com/r/programming/comments/242dru/gos_power_is_in_emergent_behavior/ http://www.reddit.com/r/programming/comments/243jp2/code_generation_visual_smog_in_code_part_ii/ http://www.reddit.com/r/programming/comments/243ho4/an_erlang_postgres_driver_refurbishing_open_source/ http://www.reddit.com/r/programming/comments/24498l/how_to_write_sequential_nonblocking_io_code_in/ http://www.reddit.com/r/programming/comments/2441r9/syntax_extensions_and_regular_expressions_for_rust/ http://www.reddit.com/r/programming/comments/243jp2/code_generation_visual_smog_in_code_part_ii/ http://www.reddit.com/r/programming/comments/244xvq/the_perfect_int_float_comparison/ http://www.reddit.com/r/programming/comments/245nif/decompiling_clojure_part_iii_graph_all_the_things/ http://www.reddit.com/r/programming/comments/245m2l/shipping_the_libreoffice_hidpi_patches_or_how_i/ http://www.reddit.com/r/programming/comments/246ubc/unity_is_adding_a_il_to_c_compiler_goodbye_mono/ http://www.reddit.com/r/programming/comments/246t12/cryptocoinjs_javascript_library_to_program_with/ http://www.reddit.com/r/programming/comments/246rrl/what_got_me_started_as_a_software_developer/ http://www.reddit.com/r/programming/comments/247jtt/pencilblue_a_full_stack_online_publishing/ http://www.reddit.com/r/programming/comments/247isx/launch_your_angular_js_development_on_a_solid/ http://www.reddit.com/r/programming/comments/2482g0/the_unit_in_unittesting/ http://www.reddit.com/r/programming/comments/24a79x/think_os_a_brief_introduction_to_operating_systems/ http://www.reddit.com/r/programming/comments/24a2m8/how_to_decompile_and_analyze_android_applications/ http://www.reddit.com/r/programming/comments/24a1ti/how_to_set_up_a_phone_proxy_using_twilio_and_rails/ http://www.reddit.com/r/programming/comments/24b7z3/google_adsense_bans_publishers_nearing_cash_out/ http://www.reddit.com/r/programming/comments/24b7nk/dogecoinlive_readonly_dogecoin_wallet_demo_video/ http://www.reddit.com/r/programming/comments/24awrx/whats_new_in_mercurial_30/ http://www.reddit.com/r/programming/comments/24awi9/rip_tdd_by_kent_beck/ http://www.reddit.com/r/programming/comments/24asv7/weve_been_enjoying_this_talk_for_many_years_and/ http://www.reddit.com/r/programming/comments/24deew/mountainwest_rubyconf_<span class="date-range">2014<sub><span title="2014 was 12 years ago.">12ya</span></sub></span>_but_really_you_should/ http://www.reddit.com/r/programming/comments/24dbib/littleupdater_is_the_base_code_used_for/ http://www.reddit.com/r/programming/comments/24dvzi/migration_of_postgres_92_to_93_with_homebrew_and/ http://www.reddit.com/r/programming/comments/24dulq/making_adhoc_polymorphism_less_ad_hoc/ http://www.reddit.com/r/programming/comments/24duk7/bitcoins_lost_mongodb_and_eventual_consistency/ http://www.reddit.com/r/programming/comments/24e78o/porting_600k_map_views_to_openstreetmapmapbox/ http://www.reddit.com/r/programming/comments/24e4zj/michael_feathers_on_the_relationship_between/ http://www.reddit.com/r/programming/comments/24e215/when_tdd_does_not_work/ http://www.reddit.com/r/programming/comments/24giyq/introduction_to_markov_processes/ http://www.reddit.com/r/programming/comments/24gioo/the_golden_age_of_basic/ http://www.reddit.com/r/programming/comments/24gio9/etl_vs_elt_we_posit_you_judge/ http://www.reddit.com/r/programming/comments/24gg4n/the_insiders_guide_to_ruby_on_rails_interviewing/ http://www.reddit.com/r/programming/comments/24gesu/good_place_to_learn_java/ http://www.reddit.com/r/programming/comments/24h0kr/a_new_version_of_regex101_has_been_released_any/ http://www.reddit.com/r/programming/comments/24gyvv/python_web_crawling_with_beautifulsoup_example/ http://www.reddit.com/r/programming/comments/24hlgr/accu_slides_photos_blogs_via_accu<span class="date-range">2014<sub><span title="2014 was 12 years ago.">12ya</span></sub></span>/ http://www.reddit.com/r/programming/comments/24hitd/supermacros_highlevel_constructs_for_nasm/ http://www.reddit.com/r/programming/comments/24jmbl/lambda_expression_and_method_overloading/ http://www.reddit.com/r/programming/comments/24jlkd/developing_an_ios_app_in_4_days/ http://www.reddit.com/r/programming/comments/24jld5/abstracting_vs_isolating_dependencies/ http://www.reddit.com/r/programming/comments/24jkly/asp_net_tutorial_beginner_advance/ http://www.reddit.com/r/programming/comments/24jj7k/acm_hilt_<span class="date-range">2014<sub><span title="2014 was 12 years ago.">12ya</span></sub></span>_international_conference/ http://www.reddit.com/r/programming/comments/24jx3g/microsofts_new_open_source_direction_for_c_and/ http://www.reddit.com/r/programming/comments/24jp3u/adding_the_getcwd_system_call_and_the_pwd/ http://www.reddit.com/r/programming/comments/24meqs/peg_solitaire_solver_in_just_50_lines/ http://www.reddit.com/r/programming/comments/24mcgn/what_do_you_think_is_impeding_haskell_from/ http://www.reddit.com/r/programming/comments/24mabb/addressing_misconceptions_about_code_with/ http://www.reddit.com/r/programming/comments/24m0bv/letter_to_an_aspiring_developer/ http://www.reddit.com/r/programming/comments/24mxr3/how_do_languages_with_maybe_types_instead_of/ http://www.reddit.com/r/programming/comments/24mvym/why_does_auto_a1_compile_in_c/ http://www.reddit.com/r/programming/comments/24mp4f/pattern_matching_make_the_compiler_work_for_you/ http://www.reddit.com/r/programming/comments/24oz8m/the_9_best_free_fortran_books/ http://www.reddit.com/r/programming/comments/24pxoa/substring_matching_in_python_run_between_naive/ http://www.reddit.com/r/programming/comments/24pjqg/euclid_yet_another_minimalist_style_eventdriven/ http://www.reddit.com/r/programming/comments/24piap/linus_torvalds_receives_ieee_computer_pioneer/ http://www.reddit.com/r/programming/comments/24pdsq/simple_json_and_mongo_speed_test_between_perl/ http://www.reddit.com/r/programming/comments/24qh7d/announcing_clearcrypt_a_new_transport_encryption/ http://www.reddit.com/r/programming/comments/24qe23/what_should_i_be_looking_for_during_code_reviews/ http://www.reddit.com/r/programming/comments/24rzb3/the_codeless_code_143_monolith/ http://www.reddit.com/r/programming/comments/24rwib/a_post_about_unit_tests_by_martin_fowler_unittest/ http://www.reddit.com/r/programming/comments/24rw91/the_graduate_software_developers_reading_list/ http://www.reddit.com/r/programming/comments/24si82/full_crash_dumps_theyre_just_a_few_gigs/ http://www.reddit.com/r/programming/comments/24sg8g/not_quite_another_openssl_erratum/ http://www.reddit.com/r/programming/comments/24sfx6/if_you_like_puzzles_here_is_a_post_on_how_to/ http://www.reddit.com/r/programming/comments/24seep/exploit_mitigation_techniques_an_update_after_10/ http://www.reddit.com/r/programming/comments/24tpd4/grep_through_entire_source_tree_based_on_an/ http://www.reddit.com/r/programming/comments/24w5gv/go_deh_python_pypy_interpreter_in_javascript/ http://www.reddit.com/r/programming/comments/24w45o/drmfree_day_will_we_find_out_how_toxic_drm_can_be/ http://www.reddit.com/r/programming/comments/24w393/getting_proper_tail_calls_out_of_c/ http://www.reddit.com/r/programming/comments/24w2wa/increasing_engineering_throughput/</span></p>
+<p>No logistic regression; I’m not sure what the equivalent of ‘front page’ is for Reddit.</p>
+</section>
+</section>
+</section>
+
+      
+      <noscript><div id="noscript-warning-footer" class="admonition error" title="Warning to NoScript Users"><div class="admonition-title"><p>[<strong>Error</strong>: JavaScript disabled.]</p></div> <p>[Backlinks, similar links, and the bibliography require JS enabled to load.]</p></div></noscript>
+      
+      
+      
+      
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+    <!-- Footer (no SSI): injected by Hakyll from static/include/footer.html -->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"
+        ><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center" /></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Gwern Branwen">[&hairsp;Send Anonymous Feedback&hairsp;]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Gwern.net homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

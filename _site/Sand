@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inlined head (no SSI): injected by Hakyll from static/include/inlined-head.html -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #aaa;
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popins-popin-box-shadow-color: #aaa;
+
+    --GW-popins-popin-title-bar-background-color: #fff;
+    --GW-popins-popin-title-bar-button-color: #777;
+
+    --GW-popins-popin-scrollbar-thumb-color: #ccc;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #999;
+
+    --GW-popins-popin-stack-counter-text-color: #fff;
+    --GW-popins-popin-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #ccc;
+	--GW-back-to-top-link-hover-color: #999;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #7c7c7c;
+    --GW-popins-popin-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popins-popin-box-shadow-color: #7c7c7c;
+
+    --GW-popins-popin-title-bar-background-color: #000;
+    --GW-popins-popin-title-bar-button-color: #a6a6a6;
+
+    --GW-popins-popin-scrollbar-thumb-color: #5c5c5c;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popins-popin-stack-counter-text-color: #000;
+    --GW-popins-popin-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #5c5c5c;
+	--GW-back-to-top-link-hover-color: #8b8b8b;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popins-popin-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+div.poem span.caesura-mark {
+	opacity: 0.3;
+}
+@media all and (max-width: 649px) {
+	div.poem span.caesura-mark {
+		opacity: 0.4;
+	}
+}
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1770514858">
+<script src="/static/js/head.js?v=1770514858"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1768170615" as="image">
+
+
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="文化漂移：清洁方法">
+  <meta name="citation_title" content="文化漂移：清洁方法">
+  <meta name="og:title" content="文化漂移：清洁方法">
+  <meta name="twitter:title" content="文化漂移：清洁方法">
+  <meta name="generator" content="https://github.com/gwern/gwern.net/">
+  <meta name="creator" content="gwern.net">
+  
+  <meta name="author" content="Gwern">
+  <meta name="citation_author" content="Gwern">
+  
+  <meta name="contact" content="https://gwern.net/me#contact">
+  <link rel="index" title="Gwern.net homepage" href="https://gwern.net/index">
+  <link href="https://gwern.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Gwern.net newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="gwern">
+  <meta name="twitter:site" content="gwern.net">
+  <meta name="og:site" content="gwern.net">
+  <meta name="og:type" content="article">
+  <meta name="description" content="被遗忘的家务活及其在浪漫主义中的运用">
+  <meta name="og:description" content="被遗忘的家务活及其在浪漫主义中的运用">
+  <meta property="og:image" content="https://gwern.net/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail text: the Gwern.net site logo, a logotype of a large blackletter fraktur capital letter &#39;G&#39; on a white background.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content>
+  <meta name="keywords" content>
+  <meta name="dc.date.issued" content="7 May 2013">
+  
+  <meta name="citation_publication_date" content="7 May 2013">
+  <meta name="dcterms.modified" content>
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://gwern.net/Sand">
+  <meta name="citation_fulltext_html_url" content="https://gwern.net/Sand">
+  <meta name="og:url" content="https://gwern.net/Sand">
+  <link rel="alternate" type="text/markdown" href="https://gwern.net/Sand.md" title="Markdown source of ‘文化漂移：清洁方法’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-sand dropcaps-de-zs">
+  <meta name="citation_fulltext_world_readable" content>
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>文化漂移：清洁方法 · Gwern.net</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+
+  <!-- CSS for JS-disabled users: ensure that NoScripters know what they are missing even if they jump to a section & miss the warning at top/bottom. -->
+  <noscript>
+    <style>
+      #markdownBody #noscript-warning-header {
+          position: fixed; /* sticky */
+          top: 6px; /* at top */
+          width: 58%;
+          z-index: 99; /* Make sure it is on top */
+          background-color: #f8f8f8; /* Set a solid background color so legible while positioned over text */
+          border-color: var(--GW-abstract-border-color); /* Make look like theme-toggle/admonitions a bit more */
+          border-width: 6px 6px 6px 6px;
+          border-style: double;
+      }
+      #markdownBody #noscript-warning-header p { margin: 10px; }
+      nav#navbar { padding-top: 160px; } /* avoid overlap with page header */
+    </style>
+  </noscript>
+</head>
+
+<body class="page-sand dropcaps-de-zs">
+  <!-- Inlined asset links (no SSI): injected by Hakyll from static/include/inlined-asset-links.html -->
+  <link rel="stylesheet" href="/static/css/style.css?v=1770491984" media="print" onload="this.media=`all`">
+<script src="/static/js/script.js?v=1770491982" defer></script>
+
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <!-- Navbar (no SSI): injected by Hakyll from static/include/navbar.html -->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="design link-page link-annotated" href="/design" title="Design and implementation notes">Design</a>
+        <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="links link-page" href="/Links" title="Links page">Links</a>
+        <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+
+    <article>
+
+      <header>
+        <h1>文化漂移：清洁方法</h1>
+      </header>
+
+      
+      <div class="markdownBody" id="page-metadata">
+          
+        <div class="page-description"><p>被遗忘的家务活及其在浪漫主义中的运用</p></div>
+        <div class="page-metadata-fields">
+            
+            
+            <span class="page-status" title="Writing status of current page: ranges &#39;abandoned&#39;/&#39;notes&#39;/&#39;draft&#39;/&#39;in progress&#39;/&#39;finished&#39;"><em><span class="completion-status" data-progress-percentage="75">in progress</span></em></span>
+            <span class="page-confidence"><a href="/about#confidence-tags" title="Explanation of &#39;confidence&#39; metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: &#39;certain&#39;/&#39;highly likely&#39;/&#39;likely&#39;/&#39;possible&#39;/&#39;unlikely&#39;/&#39;highly unlikely&#39;/&#39;remote&#39;/&#39;impossible&#39;)">certainty</a>: <em><span class="completion-status" data-progress-percentage="67">likely</span></em></span>
+            <span class="page-importance"><a href="/about#importance-tags" title="Explanation of &#39;importance&#39; metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>0</em></span>
+            
+            
+            
+        </div>
+      </div>
+      
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#沙子" id="toc-沙子">沙子</a>
+<ul>
+<li><a href="#趋势" id="toc-趋势">趋势</a></li>
+<li><a href="#历史语境" id="toc-历史语境">历史语境</a></li>
+</ul></li>
+<li><a href="#投票" id="toc-投票">投票</a></li>
+<li><a href="#外部链接" id="toc-外部链接">外部链接</a></li>
+<li><a href="#附录" id="toc-附录">附录</a>
+<ul>
+<li><a href="#scanners-live-in-vain作为写实科幻小说" id="toc-scanners-live-in-vain作为写实科幻小说">“Scanners Live in Vain”作为写实科幻小说</a></li>
+</ul></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><p>我觉得很有趣的是，许多微小的文化变迁如何阻碍了我们对哪怕是近代材料的理解，这是一种不那么深奥的<a href="https://en.wikipedia.org/wiki/Commensurability_(philosophy_of_science)" id="_zVEg1rU0" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Commensurability_(philosophy_of_science)#bodyContent">不可通约性</a>形式。我相信历史学家能举出成千上万个例子，说明日常惯例、信念或技术已经失传，令阅读相关文献的现代人百思不得其解，但我想在此记录一些我自己发现的例子。比如：</p>
+<blockquote>
+<p>“Tu Mu relates a stratagem of Chu-ko Liang, who in 149 BC, when occupying Yang-p’ing and about to be attacked by Ssu-ma I, suddenly struck his colors, stopped the beating of the drums, and flung open the city gates, showing only a few men engaged in sweeping and sprinkling the ground. This unexpected proceeding had the intended effect; for Ssu-ma I, suspecting an ambush, actually drew off his army and retreated.” –<a href="https://en.wikipedia.org/wiki/Lionel_Giles" id="_xZzSRw5L" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Lionel_Giles#bodyContent">Lionel Giles</a> 编辑注释，<em><a href="https://en.wikipedia.org/wiki/The_Art_of_War" id="_UGDn31N5" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/The_Art_of_War#bodyContent">The Art of War</a></em>（<span class="date-range">1910<sub><span title="1910 was 116 years ago.">116ya</span></sub></span>年）</p>
+</blockquote>
+<p>在这个例子中，我与 Giles 的翻译仅隔了不到一个世纪，但我仍然需要仔细思考才能完全理解他所写的内容，特别是”sprinkling the ground”（洒水于地面）这一部分——他在写这个词时没有任何注释或进一步说明（好像这是显而易见的，或许在当时确实如此）。一些清洁方法已经被彻底遗忘了——如今谁能读到”sprinkling the ground”这样的句子并本能地理解其含义？</p>
+<p>不，这并不是说那些人在浇灌植物——这在引文所描述的城门语境中说不通。也不是说他们在建造某种水陷阱——诸葛亮计策的关键在于，这是一种看起来完全正常且无害的活动。这也不是宗教仪式。那到底是什么？正如与”sweeping”（扫地）的并列所暗示的那样，洒水的原因其实非常简单：是为了压住灰尘。在一座古代城市如此高流量的区域，地面上的植物早已死去，土壤被行人和车轮磨蚀殆尽，只剩下灰尘、粘土、粪便等物质，扬起的尘土令行人窒息、不胜其烦。简单、合理、实用，但对于习惯了混凝土、沥青和高度建设化城市环境的现代读者来说，这未必是自然而然就能想到的事情。</p>
+<p><!--
+> Yup, I'm from Bangalore. My parents are from a town in south India called Salem. That's where, when I was a boy and went visiting, I've seen this. But this habit of sprinkling water is quite common in Tamil Nadu (as far as I know), and you will still see it in smaller towns/villages there (Salem unfortunately has grown tremendously and lost any/all small town charm it had) -- I'm saying this because I'm sure someone somewhere has a flickr photo or more of women doing this, from their trip to south India. I tried a cursory search for web/photo hits but did not find any. The whitewashed walls and sanded floor, this will be harder (I think) to get hits on the web for. I remember my grandpa's house had this before it was torn down many years ago. If you have more specific questions, my email address is the same as my lw handle at gmail.
+
+I didn't find anything either, but I did discover something almost as good: apparently it's still a little niche ritual thing in Japan called 'uchimizu', and there's quite a few photos of it online:
+
+- https://secure.flickr.com/search/?w=all&q=uchimizu&m=text
+- http://www.world-insights.com/uchimizu-sprinkle-water-on-the-road/
+- http://www.dannychoo.com/post/en/1015/Uchimizu.html
+http://nezumiya.net/en/archives/45 "With Uchimizu, we can reduce the temperature about 2 degrees Celsius by the heat of evaporation."
+No dice on sanded floors though.
+--></p>
+<section id="沙子" class="level1">
+<h1><a href="#沙子" title="Link to section: § &#39;沙子&#39;">沙子</a></h1>
+<p>我记得在 Wallace Stevens（生于<span class="date-range">1879<sub><span title="1879 was 147 years ago.">147ya</span></sub></span>年）的诗中有一个类似的例子：在”<a href="https://en.wikipedia.org/wiki/The_Ordinary_Women" id="_Drs3fk5l" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/The_Ordinary_Women#bodyContent">The Ordinary Women</a>“中有一段关于穷苦女性（女仆？）和”beachy floor”（沙滩般的地板）的描写<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>，我曾向我的教授（他热爱 Stevens 的作品，教授了几十年）指出，“beachy”最明显的含义是”sandy”（沙质的），特别是在像宫殿这样的大型建筑中，这正是人们清洁木地板的方式——用沙子擦洗。他说他从未听说过用这种方式清洁地板。用沙子擦洗桌子的一个罕见视听描绘来自<a href="http://www.youtube.com/watch?v=nx6h4Dosu2M" id="_zYfe_WmN" data-link-icon="youtube" data-link-icon-type="svg" data-link-icon-color="#ff0033" title="Jon Snow - Bastard named Snow not a good life for a child"><em>Game of Thrones</em> 第一季第4集</a>，但更著名的是，木制帆船不一定随手就有沙子可用，所以他们使用砂岩石块或”<a href="https://en.wikipedia.org/wiki/Holystone" id="_yMplcrIK" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Holystone#bodyContent">holystones</a>“来擦洗甲板。</p>
+<p>我们可以找到其他关于沙子和地板的记载，往往带有赞赏之意；例如：</p>
+<blockquote>
+<p>“Simplicity of life, even the barest, is not a misery, but the very foundation of refinement: a sanded floor and whitewashed walls, and the green trees, and flowery meads, and living waters outside; or a grimy palace amid the smoke with a regiment of housemaids always working to smear the dirt together so that it may be unnoticed; which, think you, is the most refined, the most fit for a gentleman of those 2 dwellings?” –<a href="https://en.wikipedia.org/wiki/William_Morris" id="_3uvN64Eu" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/William_Morris#bodyContent">William Morris</a></p>
+</blockquote>
+<p>我特别感兴趣的是，我们不仅遗忘了，而且遗忘了我们曾经遗忘过。如果 Wade-Giles 或任何 Stevens 选集中包含了解释其使用水或沙子的脚注，那对我来说就远没有这么有趣了。它们只是已知的未知，而非未知的未知。</p>
+<section id="趋势" class="level2">
+<h2><a href="#趋势" title="Link to section: § &#39;趋势&#39;">趋势</a></h2>
+<p>“sanded floor”（撒沙地板）是何时变得如此冷僻的？追踪历史兴衰的一个有用工具是 Google 的 <a href="http://books.google.com/ngrams/" id="_hAAAZoSP" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Ngram Viewer</a>，我们可以在那里绘制该词组出现的频率图（请记住，许多现代搜索结果可能与建筑施工或家居装修有关），时间范围从<a href="http://books.google.com/ngrams/graph?content=sanded+floor&amp;year_start=1765&amp;year_end=2008&amp;corpus=15&amp;smoothing=1" id="_sRmylFp8" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">1765年到<span class="date-range">2008<sub><span title="2008 was 18 years ago.">18ya</span></sub></span>年</a>：</p>
+<figure>
+<p><img alt="使用 Ngram 在 Google Books 语料库中绘制3个世纪以来”sanded floor”一词的出现频率" data-aspect-ratio="866 / 209" decoding="async" height="209" id="_p2bInrjx" loading="lazy" src="/images/2013-ngram-sandstone.png" width="866"></img></p>
+<figcaption><p>使用 Ngram 在 Google Books 语料库中绘制3个世纪以来”sanded floor”一词的出现频率</p></figcaption>
+</figure>
+<p>也许部分增长可以用19世纪书籍可得性的增加来解释（或者只是这几个世纪中出版业无疑巨大的增长），但从<span class="date-range">1890<sub><span title="1890 was 136 years ago.">136ya</span></sub></span>年代开始的骤然下降很有意思。我们知道撒沙地板甚至在船上也不再常见，因为可以打磨的木地板大概已被<a href="https://en.wikipedia.org/wiki/Oilcloth" id="_6IvYcYzR" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Oilcloth#bodyContent">油布</a>或<a href="https://en.wikipedia.org/wiki/Linoleum#Use" id="_ONg0BmhU" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Linoleum#bodyContent">亚麻油毡</a><span>或其他产品所取代；<span class="date-range">1890<sub><span title="1890 was 136 years ago.">136ya</span></sub></span>年代是否标志着终结的开始和”沙子峰值”（Peak Sand）的十年？如果我们</span><a href="http://books.google.com/ngrams/graph?content=sanded+floor%2Clinoleum%2Coilcloth%2Coilskin&amp;year_start=1880&amp;year_end=2008&amp;corpus=15&amp;smoothing=1" id="_lqH_9iwp" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">将时间范围缩小到<span class="date-range" title="The date range 1880–2008 lasted 128 years, ending 18 years ago.">1880<span class="subsup"><sup>–</sup><sub>128</sub></span>2008<sub><span title="1880 was 146 years ago.">18ya</span></sub></span>年，并加入 sanded floors、oilcloth/oilskin 和 linoleum 进行对比</a><span>，我们会发现这似乎是合理的——linoleum 在<span class="date-range">1900<sub><span title="1900 was 126 years ago.">126ya</span></sub></span>年后取得了惊人的成功：</span></p>
+<figure>
+<p><img alt="同上，但范围缩小至1880146ya年后，并加入 linoleum 和 oilcloth 的对比" data-aspect-ratio="858 / 211" decoding="async" height="211" id="_gS4DI7jM" loading="lazy" src="/images/2013-ngram-sandstoneoilskinlinoleum.png" width="858"></img></p>
+<figcaption><p>同上，但范围缩小至<span class="date-range">1880<sub><span title="1880 was 146 years ago.">146ya</span></sub></span>年后，并加入 linoleum 和 oilcloth 的对比</p></figcaption>
+</figure>
+</section>
+<section id="历史语境" class="level2">
+<h2><a href="#历史语境" title="Link to section: § &#39;历史语境&#39;">历史语境</a></h2>
+<p>当时的人们如何描述或看待撒沙地板？在 <a href="https://encrypted.google.com/search?q=%22sanded+floor%22&amp;btnG=Search+Books&amp;tbm=bks" id="_N5G8HlNt" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Google Books 中搜索”sanded floor”</a>并浏览前几页的结果，会发现关于房屋建造与维修的现代材料，以及偶尔将其用作沙漠形容词的文学作品，但也有大量较早的日常用例——从旅行者的记述到精神病院会议记录，再到小说、短篇故事和诗歌（其中一首很难不被解读为露骨的贵格会宣传），特别是，如果我们按时间顺序排列，可以看到一些有趣的趋势：</p>
+<ol type="1">
+<li><p><em>The Poet’s Craft: A Course in the Critical Appreciation of Poetry</em>, <span class="cite"><span class="cite-author">Scott</span><span class="cite-date">1957</span></span>:</p>
+<blockquote>
+<p>Goldsmith’s most famous poem, <em>The Deserted Village</em>, was enthusiastically received when it first appeared in May, <span class="date-range">1770<sub><span title="1770 was 256 years ago.">256ya</span></sub></span>…It comes from a letter written to his brother…:</p>
+<blockquote>
+<p>Your last letter, I repeat it, was too short: you should have given me your opinion of the design of the heroicomical poem which I sent you…The room in which he lies, may be described somewhat in this way:</p>
+<blockquote>
+<p>The window, patch’d with paper, lent a ray,<br />
+That feebly shew’d the state in which he lay.<br />
+The sanded floor, that grits beneath the tread:<br />
+The humid wall with paltry pictures spread…</p>
+</blockquote>
+</blockquote>
+</blockquote></li>
+<li><p><a href="http://www.amazon.com/Clare-Community-Cambridge-Studies-Romanticism/dp/052188702X/" id="_Fpia_y0I" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>John Clare and Community</em></a>, John <span class="cite"><span class="cite-author">Goodridge</span><span class="cite-date">2012</span></span>:</p>
+<blockquote>
+<p>…The last of the group of four early ‘wish’ poems is “After reading in a Letter proposals for building a Cottage”, published in Clare’s second collection, <em>The Village Minstrel</em> (<span class="date-range">1821<sub><span title="1821 was 205 years ago.">205ya</span></sub></span>)…Clare is clearly determined to do things his own way. There are to be no redundant possessions or luxuries here, not even a library or a study, just “A cubboard for the books” (l. 32). He would like a sanded floor, though, as he points out in the concluding lines:</p>
+<blockquote>
+<p>Along the floor some sand Ill sift<br />
+to make it fit to live in<br />
+&amp; then Ill thank ye for the gift<br />
+As somthing worth the giving (ll. 33-6)<sup>25</sup></p>
+</blockquote>
+<p>This may merely reflect the common rural reality of a well-trodden earth floor in need of sand, but it might also recall the “nicely-sanded floor” of Goldsmith’s idealised alehouse in <em>The Deserted Village</em> (l.227), or perhaps Robinson Crusoe in his snug cave, an early literary hero whose story could always, as Clare puts it, “fill my fancys” (<em>By Himself</em>, 57).</p>
+</blockquote></li>
+<li><p><em>The London Literary Gazette and Journal of Belles Lettres, Arts, Sciences, Etc</em> <span class="date-range">1827<sub><span title="1827 was 199 years ago.">199ya</span></sub></span>年刊登了一首关于一个妄想症醉酒水手的幽默诗，结尾是：</p>
+<blockquote>
+<p>…The wet deception from his eyes / Kept fading more and more; / He only saw the bar-maid stand / With pouting lip, before / The small green parlour at The Ship / And little sanded floor!</p>
+</blockquote></li>
+<li><p><em>Three Courses and a Desert</em>, Clarke &amp; Cruikshank, <span class="date-range">1830<sub><span title="1830 was 196 years ago.">196ya</span></sub></span>年幽默小说：</p>
+<blockquote>
+<p>…“Honour them as much as you please, Waldron”, replied Archibald: “honour them, and welcome: but I beseech you, do not entrap me to honour another of them…conceive the misery, if you can, of dining in a room, falsely designated a parlour, with a sanded floor! My teeth were set on edge every time I moved a foot.”</p>
+<p>“Ay, but, brother, provided the table be well covered”, observed Reginald, “one might, methinks, even put up with a clean, dry, sanded floor.”</p>
+<p>…“<em>Pindaruum quisquis studet emulari</em>, brother Waldron”, exclaimed Reginald; but he was cut short, in his intended quotation, by Archibald, who said, “And if I plume myself on any merit of mine, - except, from my boyhood, always having balanced to a fraction, - it is on that of preferring a good carpet to a sanded floor; a Hoby’s boot to a hob-shoe; a tooth by Ruspini, to fill up a gap made by time, to no tooth at all…”</p>
+</blockquote></li>
+<li><p><em>The Spirit of the English Magazines</em> <span class="date-range">1832<sub><span title="1832 was 194 years ago.">194ya</span></sub></span>, “The Spy and the Traitor”:</p>
+<blockquote>
+<p>…It seemed to be an uninhabited building…His companion, however, soon joined him and silently led the way towards a low door. having entered, he made it secure, and requesting him to follow, he conducted the stranger along a narrow passage…He now stood in a low square room, slightly furnished, and with an unpainted wainscot, and a sanded floor. Here and there a coarse picture, in a black frame, under a triumphal arch of asparagus or evergreen, hung against the white wall…</p>
+</blockquote></li>
+<li><p>1839年1月的 <em>Southern Literary Messenger: Devoted to Every Department of Literature and the Fine Arts, Volume 5</em> 提供了这段建筑描写：</p>
+<blockquote>
+<p>…The room was illuminated by eight windows with not even a paper curtain - nothing but the dark scarlet bombazet demi-curtain, which seems the favorite ensign of our country inns…And further, this “delightful <em>Saxon</em>” apartment had a sanded floor, which, as my young companions chose to course up and down its fifty of length, was rather unfriendly to the sweet offices of sleep. But in spite of this - in spite of the windows rattling in their casements - in spite of a rising northeaster - of the blowing open of the door, and the pelting in of the rain, a king might have envied our sound sleep on the teamsters’ beds of this “delightful Saxon” apartment! Such wonderful transmuters are exercise and fatigue, of straw-beds and coarse coverings into down and fine linen.</p>
+</blockquote></li>
+<li><p><em>The Boston Quarterly Review</em> <span class="date-range">1841<sub><span title="1841 was 185 years ago.">185ya</span></sub></span>, “Conversations with a Radical”:</p>
+<blockquote>
+<p><em>R.</em>: …Poverty and wealth are merely relative terms. The only true method of judging of this matter is to ascertain whether the position of the producer, relatively to that of the accumulator, be higher or lower, than it was at the epoch of the Revolution, before the marvellous powers of machinery, of science, and capital had been made to bear on production, as they have been since. Grant that a yard of calico may be purchased now at an eighth of what it cost fifty years ago; what is gained, if in order to maintain the same relative social position, the blacksmith’s wife must put seven yards more into her gown, or have eight gowns to one then? You know, Sir, if you know anything about it, that, notwithstanding the general advance of wealth and the vast multiplication of the necessaries and conveniences of life, it is altogether more difficult for the common laborer to maintain the same social position now, than it was fifty years ago….The mechanic, it may be, receives two and even three times as much, nominally, for his labor now as he did then, and is required to pay two or three times less for what he purchases; but then he must have as much more as this difference implies in order to be a man of the same consequence that he was. The blacksmith’s wife must have a carpet now, where a nicely sanded floor was enough then; and a French calico instead of a homemade, copperas-dyed, two-and-linen gown, which was her pride then…</p>
+<p><em>C</em>. And I should suppose that with your great affection for blacksmiths, and especially for blacksmith’s wives, you would rejoice that it is so.</p>
+<p><em>R</em>. No. My friends, the blacksmith and his wife, the shoemaker and his wife, the housewright, and the wheelright and their wives, are all poorer than they were. Their houses may look better outwardly, but they are not so comfortable inside. They have more compared with what they then had, but less compared with what is now the general style of living. The sanded floor, the copperas gown, the checked apron, the butternut coat, and tow shirt, frock, and trowsers, were good enough for them then, for they were as good as their neighbor’s had…Each family manufactured for itself, and felt itself independent; and the feeling of independence, that we have within ourselves the means of providing for our own wants, is worth more than all the carpets, French calicoes, French silk, satin, lace, and the like things in the world. Those were happy times.</p>
+</blockquote></li>
+<li><p><em>Friendship’s Offering</em>, Phillips and Sampson, <span class="date-range">1843<sub><span title="1843 was 183 years ago.">183ya</span></sub></span>:</p>
+<blockquote>
+<p>The Sabbath morn called him to seek the meeting-house of his sect, which was situate at a short distance from the village. There it stood, with its gray walls and flagged roof - its bright small-paned windows, and weather-beaten door and shutters - its shade of arching lime trees, and its green graveyard, surrounded by a low wall and humble wicket, on which the peasant might lean and moralize; for the dread of desecration which encircles the burial places in cities with palisadoes and chevaux-de-frise had not reached the inhabitants of that peaceful land. Its interior corresponded with the neatness and simplicity of its outward appearance. The walls seemed to have been recently white-washed, and the sand on the floor cracked beneath his tread, as he sought a seat on one of the old oaken forms. Few were the assembled worshippers.</p>
+</blockquote>
+<blockquote>
+<p>…he marshalled us into the house. The <em>ben</em> end of the old-fashioned farmhouse, had exhibited the usual decorations of an <em>amrie</em>, a clock and a pair of press-beds, with a clean swept ingle, and carefully sanded floor, had underground a metamorphosis not less violent than some of Ovid’s or Harlequin’s. The <em>amrie</em> had given place to a satin-wood work-table, the clock to a mirror…and the once sanded floor was covered with an already soiled and faded carpet, to whose delicate colours, Peter, Fresh from the clay furrows, and his two sheep-dogs dripping from the pond, had nearly proved equally fatal.</p>
+</blockquote></li>
+<li><p><a href="http://www.amazon.com/Historical-Thoreau-Guides-American-Authors/dp/0195138635/" id="_dxsv8KbK" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>A Historical Guide to Henry David Thoreau</em></a> <span class="date-range">2000<sub><span title="2000 was 26 years ago.">26ya</span></sub></span>年提供了关于新英格兰地区（正是前面引用的诗歌所涉及的区域）用沙子清洁地板的有益讨论：</p>
+<blockquote>
+<p>…Additionally, Thoreau argues that kindness to the poor might best be shown by self-employment of heads of household in the kitchen (<em>Walden</em> <span class="date-range">1854<sub><span title="1854 was 172 years ago.">172ya</span></sub></span>, 76). He assents to [Harriet] Beecher’s notion that housework can be a “pleasant” pastime and offers his own guide to simplified cleaning:</p>
+<blockquote>
+<p>When my floor was dirty, I rose early, and, setting all my furniture out of doors on the grass, bed and bedstead making but one budget, dashed water on the floor, and sprinkled white sand from the pond on it, and then with a broom scrubbed it clean and white. (<em>Walden</em>, 112-113)</p>
+</blockquote>
+<p>The white wood floors, as Jane Nylander explains in her study of New England households, were those left unfinished, with sand the favored abrasive cleaning agent into the early nineteenth century. One New Hampshire woman recalled that in the 1830s, “It was all so very clean, the chairs, table, floor and all the woodwork was unpainted and was kept white by being scoured with sand” (Nylander, <a href="http://www.amazon.com/Our-Own-Snug-Fireside-1760-1860/dp/0300059531" id="_8C5zuEyD" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>Our Own Snug Fireside</em></a>, 118-119). Thoreau’s sand scrub implicitly rejects the latter days of carpeting and of paint (the latter surface easier to maintain, according to Beecher), and his example of housekeeping argues for a simpler domesticity practiced in the recent past, once again upholding the ethos of cleanliness.</p>
+</blockquote></li>
+<li><p><em>The recreations of a country parson</em>, <span class="cite"><span class="cite-author">Boyd</span><span class="cite-date">1866</span></span>:</p>
+<blockquote>
+<p>I like to think of the effect which tidiness has in equalising the real content of the rich and poor. If even you, my reader, find it pleasant to go into the humblest little dwelling where perfect neatness reigns, think what pleasure the inmates (perhaps the solitary inmate) of that dwelling must have in daily maintaining that speckless tidiness, and living in the midst of it. There is to me a perfect charm about a sanded floor, and about deal [“A slice sawn from a log of timber (now always of fir or pine), and usually understood to be more than seven inches wide, and not more than three thick”] furniture scrubbed into the perfection of cleanliness. How nice the table and the chairs look; how inviting that solitary big arm-chair by the little fire!…God has made us so that there is a racy enjoyment, a delightful smack, about extreme simplicity co-existing with extreme tidiness. I don’t mean to say that I should prefer that sanded floor and those chairs of deal to a Turkey carpet and carved oak or walnut; but I assert that there is a certain indefinable relish about the simpler furnitures…So if you gain something by having a grand house, you lose something too, and something which is the more constantly and sensibly felt - you lose the joy of simple tidiness; and your life grows so artificial, that many days you never think of your dwelling at all, nor remember what it looks like.</p>
+</blockquote></li>
+<li><p><a href="http://www.amazon.com/Sinful-Tunes-Spirituals-BLACK-American/dp/0252071506/" id="_fqLEskbC" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>Sinful Tunes and Spirituals: Black Folk Music to the Civil War</em></a>, Epstein 引用了<span class="date-range">1876<sub><span title="1876 was 150 years ago.">150ya</span></sub></span>年南卡罗来纳州一篇关于黑人”吉格舞”的旅行记述：</p>
+<blockquote>
+<p>…The feet moved about in the most grotesque manner stamping, slamming, and banging the floor, not unlike the pattering of hail on the housetop. The conflict between brogan [leather shoe] and the sanded floor was terrific. It was hard work, and at intervals of five or ten minutes, he was relieved…</p>
+</blockquote></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Henry_James" id="_ffHZJum4" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Henry_James#bodyContent">Henry James</a>, <a href="https://en.wikipedia.org/wiki/Washington_Square_(novel)" id="_CeVQpPkI" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Washington_Square_(novel)#bodyContent"><em>Washington Square</em></a> <span class="date-range">1880<sub><span title="1880 was 146 years ago.">146ya</span></sub></span>年</p>
+<blockquote>
+<p>The situation was really thrilling, and it scarcely seemed to her a false note when her companion asked for an oyster stew, and proceeded to consume it before her eyes…Morris looked some moments at the sanded floor of the shop; he seemed to be disposed to linger a moment.</p>
+</blockquote></li>
+<li><p><em>Poems</em>, David Atwood <span class="cite"><span class="cite-author">Wasson</span><span class="cite-date">1888</span></span>, “O’er The Sanded Floor”:</p>
+<blockquote>
+<p>…She sits o’er the sanded floor / By the fireplace wide and high; / And there she is sitting for me evermore, / Still and pure as a star in the sky. / A child of three summer seasons then, / Three dreaming summers, was I; and when / Another was gone of those long years, / Unmothered a month had I been…</p>
+</blockquote></li>
+<li><p><em>The Atlantic Monthly, Volume 65</em> <span class="date-range">1890<sub><span title="1890 was 136 years ago.">136ya</span></sub></span> “The Begum’s Daughter”:</p>
+<blockquote>
+<p>…“I will do nothing of the sort!” cried the daughter, in a sudden flutter. The matron, opening wide her small black eyes, started after the retreating maiden, and thereupon spent a good half hour puzzling over this trifling circumstance, as she paced to and fro upon the sanded floor.</p>
+</blockquote></li>
+<li><p><em>Hilton Hall, Or, A Thorn in the Flesh: A Novel</em>, Louise <span class="cite"><span class="cite-author">Dubois</span><span class="cite-date">1898</span></span></p>
+<blockquote>
+<blockquote>
+<p>“The whitewashed wall, the nicely sanded floor,<br />
+The varnished clock that click’d behind the door.”</p>
+</blockquote>
+<p>A charming, delightful spot on the banks of the Winnipisoegee river, is the little hamlet of the Bridge. On the crest of the hell, near the outskirts of the hamlet, stands the three roomed cottage of the blacksmith. His family, a wife, two sons and a daughter, Edward, Donnallen and Mary Hilton. The house contained a sitting-room, furnished with chairs, centre table, small mirror, fireplace adorned with ferns and cattails upon mantle, two brass candlesticks and snuffers, sanded floor. Bedroom, a rag carpet, tiny foot rest, chairs and bureau. Kitchen, a shade at the back, whitewashed and sanded floor, kept spotlessly clean by Donnallen, the youngest boy…The outdoor premises were equally clean…They lived frugally, as the mother wished to keep up the old custom of saving something to start the children in life. So Donnallen was a happy barefoot boy…</p>
+</blockquote></li>
+<li><p><em>Year Book, Volume 3</em>, <a href="http://ech.case.edu/cgi/article.pl?id=RC2" id="_ntTzWfXF">Rowfant Club</a> <span class="date-range">1899<sub><span title="1899 was 127 years ago.">127ya</span></sub></span>, “President’s Address”:</p>
+<blockquote>
+<p>…The best estate of the Rowfant Club is an alert, active, eager membership to plan, invent, suggest, adopt, and a willing, capable board of Fellowes to execute. We turn with fondest recollections to the vigorous days of this club, housed in a single scantily furnished room at Case Hall, on a sanded floor. But the sanded floor did not give it vigor. It existed in the men who trod the sanded floor. Our scant surroundings did not inspire its life, but the aims, the ambitions, the lively club aspirations of the men who sought these surroundings…</p>
+</blockquote></li>
+<li><p><em>House Beautiful</em>, Volume 15, “Our Colonial Room”, <span class="cite"><span class="cite-author">Stevens</span><span class="cite-date">1903</span></span></p>
+<blockquote>
+<p>…Joan gazed at me with a conviction that would have done credit to Molly Pitcher, or Betsey Ross, or any of those women. “Your colonial novels will never got out of fashion”, she said…She extracted from the file the description of the setting for the second act; over this she pondered a moment, running a finger along the lines, as her habit is when she considers a bit of manuscript critically. “Of course”, she said, “you had to change it for the stage. they could hardly be expected to use the sanded floor; but I liked it better in the book.” A pause. “Pictures in oval frames - striped wall - haircloth - long sofa - andirons - candlesticks -” she mused. “I suppose we shall have to give up the sanded floor, too”, she said ruefully. “It was considered common and out of date, even then”, said I. “I wouldn’t be thought so now.” “Let’s pass over the question.” She sighed delicately…“I will forget about the sanded floor”, she said.</p>
+</blockquote></li>
+<li><p><em>Gateway</em>, Volumes 5-6 <span class="date-range">1905<sub><span title="1905 was 121 years ago.">121ya</span></sub></span>, “A Legend of The Flag”:</p>
+<blockquote>
+<p>…Betsey Ross in her homespun dress / Has paused for a moment of idleness; / The little shop with the sanded floor / Looks bright from the half-way open door; / But Betsey watches with anxious eyes / A cloud of dust that sees arise. / Adown the street there’s a goodyly stir - / A party of horsemen are seeking her. / “Mistress Betsey”, the first one cries - / Low on his forehead the cocked h lies - / “In the name of Congress, we bid you leave / Your other labors a flag to weave:”…Then the years went by, and Betsey’s soul / Had fled ere the war-drum ceased to roll; / And Betsey’s daughter stood by the door / Of the little shop with the sanded floor. / “Give us more flags”, the soldiers cried; / “We have naught but rags where the stars are dyed / With the blood of foes, and the milk-white bars / Are torn, like our breasts, with ragged scars.” / But the maiden said, “Do you know the Friends [Quakers]? / They weave no banners for warlike ends. / …I can weave no flags that may wave in strife / Whose brother is seeking a brother’s life.” / Then silent the veterans turned away / From that quiet maid in the robe of gray, / Who after them closed the heavy door / Of the little shop with the sanded floor…</p>
+</blockquote></li>
+<li><p><em><a href="https://en.wikipedia.org/wiki/Our_Mr._Wrenn" id="_L8wxL--o" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Our_Mr._Wrenn#bodyContent">Our Mr. Wrenn: The Romantic Adventures of a Gentle Man</a></em>, Sinclair <span class="cite"><span class="cite-author">Lewis</span><span class="cite-date">1914</span></span>:</p>
+<blockquote>
+<p>As he stole into the car Dr. Mittyford seemed comparatively human, remarking: “I feel bored this evening. I thought I would give you a <em>nuit blanche</em>. How would you like to go to the Red Unicorn at Brempton - one of the few untouched old inns?” “That would be nice”, said Mr. Wrenn, unenthusiastically…The tap-room of the Red Unicorn was lighted by candles and a fireplace. That is a simple thing to say, but it was not a simple thing for Mr. Wrenn to see. As he observed the trembling shadows on the sanded floor he wriggled and excitedly murmured, “Gee!… gee whittakers!” The shadows slipped in arabesques over the dust-gray floor and scampered as bravely among rafters as though they were in such a tale as men told in believing days. Rustics in smocks drank ale from tankards; an in a corner was snoring an ear-ringed peddler with his beetle-black head propped on an oilcloth pack. Stamping in, chilly from the ride, Mr. Wrenn laughed aloud. With a comfortable feeling on the side toward the fire he stuck his slight legs straight out before the old-time settle, looked devil-may-care, made delightful ridges on the sanded floor with his toe, and clapped a pewter pot on his knee with a small emphatic “Wop!”</p>
+</blockquote></li>
+<li><p><em>Annual Report of the State Board of Insanity of the Commonwealth of Massachusetts</em> <span class="date-range">1915<sub><span title="1915 was 111 years ago.">111ya</span></sub></span>, 出人意料地在理事 Edmund A. Whitman 的评论中提到了一个例子：</p>
+<blockquote>
+<p>…I did, however, come to this meeting with some degree of enthusiasm, because at least one subject to be discussed was one in which I was interested at home; that is, the question of slippery floors…I think we can go to an excess of cleanliness. It has disturbed me on various occasions to see these demented patients travelling back and forth mopping or swabbing the floors with these wipers…If a chance could be made so that the rules will prevent any patients from touching one of these things, and that all the cleaning should be done by the attendants, you would get floors that would not be anywhere near as slippery. I have been, perhaps, brought up in as much horror of dirt as the rest of you. It is the very wealthy only who can afford to keep their floors in this highly polished condition in the outside world; mine are not, I know. It is not so very many years ago when our ancestors had a different kind of floor. You recall that old poem: -</p>
+<blockquote>
+<p>I never had a piece of bread, particularly good and wide,<br />
+But that it fell upon the sanded floor, and always on the buttered side.</p>
+</blockquote>
+<p>If we could go back to our sanded floor we would not have this trouble about falling down. If too much is done about keeping the floors clean they will be superclean…this constant rubbing is not necessary…</p>
+</blockquote></li>
+<li><p><em>Old-House Journal</em>, <span class="date-range">1988<sub><span title="1988 was 38 years ago.">38ya</span></sub></span>年3-4月; “The Bare Facts About Early Floors”, Cotton:</p>
+<blockquote>
+<p>Another technique, one that now seems particularly peculiar, was “sanding” the floors clean. Sand was sprinkled over the bare floors to collect dirt and grease, in the manner that dry-cleaning compounds are used in today’s automobile repair shops. When the sand was swept up, the week’s dirt went along with it. An occasional good scrubbing with sand and water kept floors looking relatively new. And in accordance with an early American naval tradition, floors also were “holy stoned” - that is, a porous, pumice-like stone (sometimes sandstone) was rubbed across a sanded floor to clean it.</p>
+<p>A less common, but not rare, practice was to create a “sand carpet”. Decorative patterns were created in sand spread across the floor. According to one account, the best parlors were “swept and garnished every morning with sand sifted through a ‘sand sieve’ and sometimes smoothed with a hair broom into quaint circles and fancy wreaths.” Herringbone patterns were also documented.</p>
+</blockquote></li>
+<li><p><em>Dictionary of Newfounland English</em> <span class="date-range">1990<sub><span title="1990 was 36 years ago.">36ya</span></sub></span>, 包含了”planching”一词的条目，其中部分内容为：</p>
+<blockquote>
+<p>…(a) Floor-boards; the floor of a dwelling; (b) planks laid down to form the floor of a barn, fishing-stage, or the cabin or engine-room of a vessel.</p>
+<p>1901 <em>Christmas Review</em> 5 “The Outharbour Planter”: his house the village meetin’ place, tho’ it not always was a mansion; / Its carpet was a sanded floor, with sometimes sawdust on the planchin’ <span class="date-range">1906<sub><span title="1906 was 120 years ago.">120ya</span></sub></span> <em>Nfld Qtly</em> Dec, p. 4 the floor or ‘planchio’<span>, as it is called, is well scrubbed and sprinkled with sand….<span class="date-range">1972<sub><span title="1972 was 54 years ago.">54ya</span></sub></span> MURRAY 188-9 Some early kitchens had the </span>‘planchen’ (floor) covered with tar paper, except for about a foot around each side which was left bare.</p>
+</blockquote></li>
+<li><p><a href="http://www.amazon.com/Encyclopedia-of-Kitchen-History-ebook/dp/B000SI8HYA/" id="_d2G6EByi" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>The Encyclopedia of Kitchen History</em></a>, ed <span class="cite"><span class="cite-author">Snodgrass</span><span class="cite-date">2004</span></span>, 正如人们对”从史前到现代食物和烹饪风格、食物储存、器具和设备演变概览”这样一本书的期望，多次提到沙子在铸造容器、建造烤炉、储存敏感蔬菜材料方面的用途，特别是提供了关于沙子在地板和清洁中使用的多条有用引文：</p>
+<blockquote>
+<p>…Because of the difficulty of removing congealed grease and baked-on crust from cooking and dining implements, dishwashing has traditionally been, as the essayist Christopher Morley described it, “an ignoble chore, a kind of hateful discipline.” (<span class="cite"><span class="cite-author">Franklin</span><span class="cite-date">1997</span></span>, 429) The job began in prehistory with sand-scouring of pottery and utensils at the nearest water source. In the Roman villa, slaves cleaned tabletops and scoured stone and tile floors with handfuls of sand. Another useful substance, cuttlefish bone, served as a cleaning abrasive, as did the horsetail (<em>Equisetum</em>), commonly called pewter wort, scouring rush, or shave grass, a plant with jointed stems suitable for scouring wooden utensils, dairy vessels, and pewter.</p>
+</blockquote>
+<blockquote>
+<p>…The first brickyard in the colonies, which opened in Salem in <span class="date-range">1629<sub><span title="1629 was 397 years ago.">397ya</span></sub></span>, produced square-cut, stackable materials to even out a floor and brick a chimney. By sweeping sand between the pavers, the housekeeper created a durable floor that absorbed kitchen waste and slops, yet dried quickly.</p>
+</blockquote>
+<blockquote>
+<p>…Humble homemakers kept a box of sand layered with grass or straw for scrubbing forks</p>
+</blockquote>
+<blockquote>
+<p>…In addition to a stiff broom, brushes, abrasive powder, and sand, the cleaner of floors relied on a homemade device composed of old rags sliced into strips and spiked onto a mop nail that was driven into a handle.</p>
+</blockquote>
+<blockquote>
+<p>…In <span class="date-range">1803<sub><span title="1803 was 223 years ago.">223ya</span></sub></span>, Dorothy Wordsworth visited humble Highland cottages that she described in <em>Recollections of a Tour Made in Scotland</em>. In one kitchen, she found a sanded floor and tiny dresser with benches along the wall, where the cook stored peat. Besides a bag of oatmeal at the hearth, the flour barrel doubled as a table with the addition of a baking board as tabletop.</p>
+</blockquote>
+<blockquote>
+<p>…In the South, Marseilles-born Antoine Alciatore launched a tradition of kitchen élan at his <a href="https://en.wikipedia.org/wiki/Antoine%27s" id="_DDLxkbXK" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Antoine%27s#bodyContent">Restaurant Antoine</a>, opened in New <span class="cite"><span class="cite-author">Orleans</span><span class="cite-date">1840</span></span><span>. An immaculate, sand-floored diner, it grew to rival the reputation of Delmonico’s and the Cafe Anglais in Paris from the skill of the master chef, who returned to France in <span class="date-range">1885<sub><span title="1885 was 141 years ago.">141ya</span></sub></span> and left son Jules Alciatore in charge.</span></p>
+</blockquote>
+<blockquote>
+<p>…In her <em>Cooking School Text Book and Housekeeper’s Guide to Cookery and Kitchen Management</em> (<span class="date-range">1879<sub><span title="1879 was 147 years ago.">147ya</span></sub></span>), the U.S. domestic authority Juliet Corson emphasized the importance of copper utensils…She reminded the thrifty cook that old copper had a higher resale value. On the matter of cleaning copper cookware, she cited the New York Cooking School’s best chef, who washed utensils in soda water and scoured them with a blend of soft soap and sand.</p>
+</blockquote></li>
+</ol>
+<p>从整体来看，这些摘录似乎讲述了这样一个故事：撒沙地板从生活中平淡无奇的寻常之物，逐渐变成与地毯等替代品相比越来越不受欢迎的东西（与经济增长和财富增加有关？），再到成为消费主义兴起的一个例证，然后出现了反弹——撒沙地板变成了对”美好旧时光”的怀旧象征，而真正的撒沙地板仅出现在繁忙的餐厅中，最终完全过时，成为被遗忘的历史片段，只在专业著作中被重新发掘。</p>
+<p>特别让我着迷的是，<span class="date-range">1840<sub><span title="1840 was 186 years ago.">186ya</span></sub></span>年后的许多引文采取了<em>说教化</em>的态度：在这些引文中，撒沙地板代表着新旧之争——被新兴消费主义者嘲笑为不舒适和原始，却被更保守的人士赞赏为更清洁、更纯粹、更简朴。谁能想到呢？我想清洁确实与神圣紧密相连——毕竟，纯洁/厌恶/清洁是<a href="https://en.wikipedia.org/wiki/%E9%81%93%E5%BE%B7%E5%BF%83%E7%90%86%E5%AD%A6" id="_WmqTyk0t" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E9%81%93%E5%BE%B7%E5%BF%83%E7%90%86%E5%AD%A6#bodyContent">道德心理学</a>如 <a href="https://en.wikipedia.org/wiki/Jonathan_Haidt" id="_C5AxRmm5" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Jonathan_Haidt#bodyContent">Jonathan Haidt</a>（<a href="http://www.amazon.com/Righteous-Mind-Divided-Politics-Religion/dp/0307455777/" id="_lPV3RbKr" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>The Righteous Mind</em></a>）所识别的道德驱动力之一，关于干净和纯洁的话语出现在各种种族主义或种族灭绝的宣传中，而关于朝鲜种族意识形态的最佳著作之所以叫 <a href="http://www.amazon.com/The-Cleanest-Race-Koreans-Themselves/dp/1935554344/" id="_ZmDJ2_CN" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>The Cleanest Race</em></a> 并非没有原因（中国人/日本人/韩国人描绘西方人的一个常见刻板印象不正是通过关注他们糟糕的个人卫生——他们体味大、不洗澡——来将他们描绘为低等的”蛮夷”吗？）</p>
+</section>
+</section>
+<section id="投票" class="level1">
+<h1><a href="#投票" title="Link to section: § &#39;投票&#39;">投票</a></h1>
+<p>出于好奇，想了解这些知识已经失传到什么程度，以及有多少受过良好教育的聪明西方人仍然能够正确解读其具体含义，我<a href="http://lesswrong.com/lw/hc0/open_thread_may_114_2013/8xi0#body_t1_8xi0" id="_4d_PMdYF">在 LessWrong 上发布了一项投票</a>，措辞如下：</p>
+<pre><code>This is a poll on a minor historical point which came up on `#lesswrong` where we wondered
+how obscure some trivia was; please do not look up anything mentioned here - knowing the
+answers does not make you a better person. I&#39;m just curious.
+
+1. Do you know what a &quot;holystone&quot; is and is used for?
+
+    - no
+    - unsure
+    - yes
+2. In this passage:
+
+    &gt; &quot;Tu Mu relates a stratagem of Chu-ko Liang, who in 149 BC, when occupying Yang-p&#39;ing
+      and about to be attacked by Ssu-ma I, suddenly struck his colors, stopped the beating
+      of the drums, and flung open the city gates, showing only a few men engaged in sweeping
+      and sprinkling the ground. This unexpected proceeding had the intended effect; for
+      Ssu-ma I, suspecting an ambush, actually drew off his army and retreated.&quot;
+
+   Do you know why the men are &quot;sprinkling the ground&quot;?
+
+   - no
+   - unsure
+   - yes
+
+   If yes, please reply to this comment using [rot13](!Wikipedia), with
+   what you believe they are doing and why.
+3. In this passage:
+
+    &gt; &quot;Simplicity of life, even the barest, is not a misery, but the very foundation of refinement:
+    a sanded floor and whitewashed walls, and the green trees, and flowery meads, and living
+    waters outside; or a grimy palace amid the smoke with a regiment of housemaids always working
+    to smear the dirt together so that it may be unnoticed; which, think you, is the most refined,
+    the most fit for a gentleman of those 2 dwellings?&quot;
+
+    Does &quot;sanded floor&quot; refer to...?
+
+    - a floor made of dirt
+    - a floor recently repainted
+    - a dirty floor
+    - a floor scrubbed with sand
+    - a floor made of sandstone</code></pre>
+<p>LessWrong 的用户往往聪明且博览群书，因此知道正确答案的人数可能是一般人群知识水平的上限。<a href="/docs/2013-07-22-sand-lwpoll.csv" id="_tdgiq8Ge" class="prefetch-not link-modified-recently" data-link-icon="csv" data-link-icon-type="svg" data-url-iframe="/docs/2013-07-22-sand-lwpoll.csv.html">投票结果</a><em>基本上</em>符合预期：</p>
+<ol type="1">
+<li><p>不知道：90%，知道：5%</p></li>
+<li><p>不知道：66%，知道：3%</p></li>
+<li><p>按降序排列：</p>
+<ul>
+<li><p>“a floor scrubbed with sand”（用沙子擦洗的地板）：82%</p></li>
+<li><p>“a floor made of dirt”（泥土地板）：13%</p></li>
+<li><p>“a floor made of sandstone”（砂岩地板）：3%</p></li>
+<li><p>“a dirty floor”（脏地板）：2%</p></li>
+</ul></li>
+</ol>
+<p>之所以说”基本上”，是因为虽然我们在 holystones 和洒水压尘这两个问题上获得了预期中的多数无知，但在第三个问题上大多数人猜对了正确答案。一些投票回复者同意我的看法，认为这意味着我在选项措辞或题目位置上出了问题，使得答案太容易猜到了。整整82%的 LessWrong 用户都知道用沙子擦洗地板，这似乎不太可能——因为他们<em>并不</em>知道用砂岩擦洗船甲板，也不知道同样已经变得冷僻的洒水压尘做法。</p>
+<p>所以，想必参加我这个小型 LW 投票的人要么是被前两个问题提了醒，要么是正确答案太显眼了，要么是引文本身提供了太多上下文并隐含地定义了”sanded floor”的含义。这三个假设都可以通过运行适当修改的投票来检验：</p>
+<ol type="1">
+<li><p>如果前两个问题提醒了投票者注意到规律，那么将关键问题放在<em>第一位</em>应该可以验证这一点</p></li>
+<li><p>如果正确答案太明显，那么用一个超集选项替换它：“none of the above”（以上皆不是）。任何知道 sanded floor 含义的人都会知道其他选项都不匹配，从而选择”none of the above”。</p></li>
+<li><p>如果引文本身太明显，那就使用一段不同的引文。Rowfant Club 的那段引文看起来是个不错的候选。</p></li>
+</ol>
+<p>因此我在 Toluna/QuickSurveys 上制作了3份调查（我之前在<a href="Nootropics#iodine-eye-color-changes" id="_wpQYbbpQ">碘与眼色调查</a>中使用过该平台）：第一份随机化了问题顺序，这将让我们比较将 Morris 引文放在第一位是否会产生影响；第二份除了将第三题的”a floor scrubbed with sand”替换为”other (none of the above)“之外，其余完全相同；第三份与第一份完全相同，只是将 Morris 引文替换为之前从 Google Books 引用的 Rowfant Club 引文。Toluna 似乎不太方便同时测试全部3种变体，所以我将分别运行每份调查约一周时间，并分别分析每个假设。如果某项修改消除了对”sanded floor”含义的异常高猜对率，这应该是显而易见的，因为正确回答率会从82%骤降至5%左右。</p>
+<p><!-- TODO: ping the following LW users as promised:
+http://lesswrong.com/message/compose/?to=abramdemski
+http://lesswrong.com/message/compose/?to=ahartell
+http://lesswrong.com/message/compose/?to=aleksiL
+http://lesswrong.com/message/compose/?to=ArisKatsaris
+http://lesswrong.com/message/compose/?to=arundelo
+http://lesswrong.com/message/compose/?to=ChristianKl
+http://lesswrong.com/message/compose/?to=DubiousTwizzler
+http://lesswrong.com/message/compose/?to=Emile
+http://lesswrong.com/message/compose/?to=Eneasz
+http://lesswrong.com/message/compose/?to=gwern
+http://lesswrong.com/message/compose/?to=iconreforged
+http://lesswrong.com/message/compose/?to=James_Miller
+http://lesswrong.com/message/compose/?to=Kaj_Sotala
+http://lesswrong.com/message/compose/?to=khafra
+http://lesswrong.com/message/compose/?to=mcallisterjp
+http://lesswrong.com/message/compose/?to=moreati
+http://lesswrong.com/message/compose/?to=moridinamael
+http://lesswrong.com/message/compose/?to=nicdevera
+http://lesswrong.com/message/compose/?to=oooo
+http://lesswrong.com/message/compose/?to=Oscar_Cunningham
+http://lesswrong.com/message/compose/?to=Qiaochu_Yuan
+http://lesswrong.com/message/compose/?to=quanticle
+http://lesswrong.com/message/compose/?to=rejuvyesh
+http://lesswrong.com/message/compose/?to=Sniffnoy
+http://lesswrong.com/message/compose/?to=TeMPOraL
+http://lesswrong.com/message/compose/?to=TodesBrot
+http://lesswrong.com/message/compose/?to=toner
+http://lesswrong.com/message/compose/?to=Vaniver --></p>
+</section>
+<section id="外部链接" class="level1">
+<h1><a href="#外部链接" title="Link to section: § &#39;外部链接&#39;">外部链接</a></h1>
+<ul>
+<li><p><a href="http://slatestarcodex.com/2013/06/17/the-what-youd-implicitly-heard-before-telling-thing/" id="_8g1tqYbt" data-link-icon="SSC" data-link-icon-type="text,tri" data-link-icon-color="#5175c2">“The What-You’d-Implicitly-Heard-Before Telling Thing”</a> -(Yvain)</p></li>
+</ul>
+</section>
+<section id="附录" class="level1">
+<h1><a href="#附录" title="Link to section: § &#39;附录&#39;">附录</a></h1>
+<section id="scanners-live-in-vain作为写实科幻小说" class="level2">
+<h2><a href="#scanners-live-in-vain作为写实科幻小说" title="Link to section: § &#39;Scanners Live in Vain作为写实科幻小说&#39;">“Scanners Live in Vain”作为写实科幻小说</a></h2>
+<p>著名科幻作家 <a href="https://en.wikipedia.org/wiki/Cordwainer_Smith" id="_1H6s1EzK" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Cordwainer_Smith#bodyContent">Cordwainer Smith</a> 的经典故事之一是他<span class="date-range">1945<sub><span title="1945 was 81 years ago.">81ya</span></sub></span>年发表的富有创意的短篇小说”<a href="https://en.wikipedia.org/wiki/Scanners_Live_in_Vain" id="_kcfZgqMQ" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Scanners_Live_in_Vain#bodyContent">Scanners Live in Vain</a>“（<a href="http://tvtropes.org/pmwiki/pmwiki.php/Literature/ScannersLiveInVain" id="_JZJMdF-0" data-link-icon="TV" data-link-icon-type="text" data-link-icon-color="#1c6486">TvTropes</a>），设定在 Smith 的”人类统治者”(Instrumentality of Mankind) 虚构宇宙中。故事描绘了一个行会成员，该行会的成员通过手术将大脑与感官切断，通过观察来机械地控制身体；行会的目的是使星际旅行成为可能，否则外太空会使人类发疯并自杀（“太空之痛”）；以及这位成员如何应对一项击败太空之痛的技术突破，这项突破使得行会及其所有牺牲都变得过时。这是 Smith 科幻作品中独有的哥特式与超现实幻想元素的典范，具有近乎视觉化的强度，为太空之痛和为应对它而建立的行会赢得了”概念的绝对原创性”等评价（后来，有人推测 Smith 也就是”<a href="https://en.wikipedia.org/wiki/Kirk_Allen" id="_5Sr7bFn2" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Kirk_Allen#bodyContent">Kirk Allen</a>“，其故事元素源自<a href="http://www.theatlantic.com/entertainment/archive/2013/03/remembering-cordwainer-smith-full-time-sci-fi-author-part-time-earthling/274344/" id="_7vB7udR7" data-link-icon="A" data-link-icon-type="text,italic" data-link-icon-color="#e7131a" title="Remembering Cordwainer Smith: Full-Time Sci-Fi Author, Part-Time Earthling; The author, born 100 years ago, shocked science-fiction readers with his extreme depictions of other worlds - and his rumored belief that he sometimes lived in one">未来生活的幻觉</a>）。</p>
+<p>太空之痛通常被解读为将对太空的隐喻性或哲学性反应，或 Smith 当时自身生活的具象化（这一主题也出现在其他作品中，参见 TvTropes 的 <a href="http://tvtropes.org/pmwiki/pmwiki.php/Literature/ScannersLiveInVain" id="_JZJMdF-0" data-link-icon="TV" data-link-icon-type="text" data-link-icon-color="#1c6486">“Space Madness”</a>），因为整体主题暗示行会的其他成员由于被切断了感官联系而变得疯狂（在道德意义上），这是经典的”理智与身体/心灵”冲突。<a href="http://www.sf-encyclopedia.com/entry/smith_cordwainer" id="_UyUmrH3y"><em>SF Encyclopedia</em></a> 将这种手术描述为”对行为的影响类似于严重的自闭症”，而 D’Ammassa 的 <a href="http://www.amazon.com/Encyclopedia-Science-Fiction-Library-Movements/dp/0816059241/" id="_t5Qm817a" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>Encyclopedia of Science Fiction</em></a>（第324页）评论道：“Smith 在这个故事中审视了多个主题：对小团体的义务与对整个社会的义务之间的冲突，将情感与理性分离、将同情与行动分离的不幸后果。”Hellekson（<a href="http://www.amazon.com/The-Science-Fiction-Cordwainer-Smith/dp/078641149X" id="_kTp9L3JP" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>The Science Fiction of Cordwainer Smith</em></a>，第87页）：</p>
+<blockquote>
+<p>The Great Pain of Space and Martel’s personal feelings of panic and despair are more mature expressions of the young Paul Linebarger’s [Cordwainer Smith] terror, when Smith’s self-understanding and maturity allowed him to write of the thing that as an adolescent he simply feared. Most critics have read the Great Pain of Space as a metaphorical working of the author’s psychological despair, though I would also link it to the terror of death that Paul Linebarger expressed sixteen years before he wrote “Scanners”. Perhaps Smith’s fundamental fear of the comprehension of death drove this psychological despair, which was likely exacerbated by his endemic health problems. Elms, in his entry on Cordwainer Smith in <a href="https://en.wikipedia.org/wiki/James_E._Gunn" id="_U0MRBcwD" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/James_E._Gunn#bodyContent">James Gunn’s</a> <a href="http://www.amazon.com/The-New-Encyclopedia-Science-Fiction/dp/067081041X" id="_zrEfkek1" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>New Encyclopedia of science Fiction</em></a> (<span class="date-range">1988<sub><span title="1988 was 38 years ago.">38ya</span></sub></span>), notes that “Scanners” is a “story remarkable for its depiction of the desperate steps necessary to control the psychological pain induced by long-distance space travel” (422), although I would note that in “Scanners”, the pain unprotected spacefarers experience is real and physical; this real pain is read as psychological. Gary K. Wolfe, in his analysis of “<a href="https://en.wikipedia.org/wiki/The_Game_of_Rat_and_Dragon" id="_OcqvJHGv" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/The_Game_of_Rat_and_Dragon#bodyContent">The Game of Rat and Dragon</a>”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, notes that “the ‘pain-of-space’ itself…and human vulnerability to the dragons are further evidences of man’s physical and psychological vulnerability and alienation in space” (<a href="http://www.depauw.edu/sfs/backissues/12/wolfe12.htm" id="_Q0YYT4zZ" title="&#39;Mythic Structures in Cordwainer Smith`s `The Game of Rat and Dragon`&#39;, [# 12 = Volume 4, Part 2 = July 1977]">“Mythic Structures”</a>, 148).</p>
+</blockquote>
+<p>这些看起来都是合理的解读。毕竟，每个人都清楚地知道，<a href="https://en.wikipedia.org/wiki/Hindsight_bias" id="_o3NjqTEL" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hindsight_bias#bodyContent">显然</a>人类可以毫无问题地去太空并在轨道上度过数年：虽然存在<a href="https://en.wikipedia.org/wiki/Effect_of_spaceflight_on_the_human_body" id="_DODoy9Vx" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Effect_of_spaceflight_on_the_human_body#bodyContent">负面健康影响</a>，如骨骼和心血管系统（血液减少）弱化，偶尔在高加速度或晕动症下出现急性问题，或与压力、封闭空间及缺乏自然环境相关的心理问题（<a href="https://en.wikipedia.org/wiki/Overview_effect" id="_4MqIijhu" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Overview_effect#bodyContent">并非全是负面的</a>），以及来自宇宙射线或太阳的普通辐射等众所周知的问题，但当然没有什么”太空之痛”。这是一个幻想元素，反映了对未知的原始恐惧和现状偏见。</p>
+<p>真的是这样吗？这里可能存在一个被遗忘的历史背景——这不是我第一次遇到<a href="https://en.wikipedia.org/wiki/Whig_history" id="_1zGT4RC7" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Whig_history#bodyContent">辉格史观式</a>的关于过去的说法，结果发现它们在其原始语境中是合理的、被夸大的或是错误的。</p>
+<p>（例如，<a href="https://en.wikipedia.org/wiki/Drapetomania" id="_a6Ro2xf7" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Drapetomania#bodyContent">逃跑狂</a>被引为南北战争前南方将奴隶医学化以更好地压迫他们的例子，但忽略了这一理论仅有其发明者一人支持、遭到嘲笑、没有实际后果，而且在当时的重要性还不如 <a href="https://en.wikipedia.org/wiki/Time_Cube" id="_1zirwcgz" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Time_Cube#bodyContent">Time Cube</a> 之于我们的时代。 英国科学作家 <a href="https://en.wikipedia.org/wiki/Dionysius_Lardner" id="_0qFKROfm" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Dionysius_Lardner#bodyContent">Dionysius Lardner</a> 据说嘲笑快速火车的想法，声称”高速铁路旅行是不可能的，因为乘客无法呼吸，会窒息而死”；但<a href="https://en.wikipedia.org/wiki/Talk:Dionysius_Lardner#Did_he_actually_say_that.3F" id="_ax5s_zP6" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Talk:Dionysius_Lardner#bodyContent">没有可靠来源表明他说过这话</a>，这似乎是<span class="date-range">1980<sub><span title="1980 was 46 years ago.">46ya</span></sub></span>年由一个连他名字都拼不对的人编造的。 <a href="https://en.wikipedia.org/wiki/Bicycling_and_feminism" id="_273R6PRE" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bicycling_and_feminism#bodyContent">自行车脸</a>据一本百科全书和其他几本书声称，是英国医学界为阻止女性骑自行车、控制她们而推广的一种疾病；但<a href="https://plus.google.com/103530621949492999968/posts/iX58s8HxY5k" id="_8BRjSppC" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">少量一手资料几乎不支持其存在</a>，它只是一个从几篇报纸专栏中得知的模糊概念，当然不是它被描绘成的那种反女权主义压迫工具。 在他有趣的著作 <em>Fragments of an Anarchist Anthropology</em> 中，Graeber 声称纳粹集会”受到了” Harvard 助威集会的”启发”，但没有提供任何来源；我对此进行了更深入的调查，得出结论认为这种联系是<a href="https://en.wikipedia.org/wiki/Talk:Pep_rally#Naziism_deletion:_reliability_of_info.3F" id="_e9OqpwDa" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Talk:Pep_rally#bodyContent">真实但非常薄弱的</a>。 一位女权主义者写道：“这是一个女性还没有投票权的时代。如果她们上大学的话，就有可能患上’神经痛、子宫疾病、歇斯底里症及其他神经系统紊乱’（据 Harvard 妇科医生 Edward H. Clarke 所言）”；这是一段严重断章取义的引用，诽谤了一位拥有高尚且进步信念的人，正如我在<a href="https://plus.google.com/+RajiniRao/posts/3PXGwCrkUAB" id="_oR4oJqQs" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">我的评论</a>中所指出的。 一个更当代的例子来自 <a href="https://en.wikipedia.org/wiki/Mt._Gox" id="_u8xiHXtM" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mt._Gox#bodyContent">Mt. Gox</a>：每个人都”知道”它最初是作为交易 <em>Magic: the Gathering</em> 卡牌的交易所而创建的，直到我注意到我的深入在线调查没有找到任何硬证据，只有无尽的以讹传讹；真相，正如创始人 Jed McCaleb <a href="/docs/2014-mccaleb" id="gwern-docs-2014-mccaleb" class="prefetch-not link-modified-recently link-page">所揭示的</a>，结果相当出人意料。 最后，我想提到几乎所有关于 <a href="https://en.wikipedia.org/wiki/Thomas_Robert_Malthus" id="_-hzpX1CE" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Thomas_Robert_Malthus#bodyContent">Thomas Robert Malthus</a> 的讨论都是错误的，表明说话者并没有真正读过 <em>An Essay</em>。）</p>
+<p>1945年时，人们对外太空的了解非常有限。没有人去过外太空并活着返回，无论是人类还是<a href="https://en.wikipedia.org/wiki/Monkeys_and_apes_in_space" id="_Cfzz2gM2" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Monkeys_and_apes_in_space#bodyContent">猿猴</a>还是狗。美国和苏联的太空计划才刚刚起步，正在争夺纳粹火箭计划的成果。从太空拍摄的照片要到一年后的<span class="date-range">1946<sub><span title="1946 was 80 years ago.">80ya</span></sub></span>年才有（使用 V-2 火箭，并验证了至少某些机械设备能在太空中工作），任何生命体要到<span class="date-range">1947<sub><span title="1947 was 79 years ago.">79ya</span></sub></span>年果蝇在 V-2 上成功存活后才会被发射升空，即两年后；猴子要到三年后才会被发射（Albert I，<span class="date-range">1948<sub><span title="1948 was 78 years ago.">78ya</span></sub></span>年6月）。因此，当我在 <span class="cite"><span class="cite-author">Roach</span><span class="cite-date">2010</span></span>年出版的 <a href="http://www.amazon.com/Packing-Mars-Curious-Science-Life/dp/B00AR2BCLW" id="_4k2Gw-Kk" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>Packing for Mars</em></a> 中”Star Crazy”一章读到大量讨论——甚至直到60年代，人们还严重担忧宇航员是否能在太空中保持理智而非自杀倾向——我感到非常着迷，这并非边缘猜测，而是基于航空领域令人不安的数据点所做的主流且合理的推断：</p>
+<blockquote>
+<p>There was a great deal of conjecture at the time - both at the Soviet space agency and at NASA - about the unique psychological consequences of breaching the cosmos. Would hurtling into “the black,” as pilots used to call it, blow the astronaut’s mind? Hear the ominous words of psychiatrist Eugene Brody, speaking at the <span class="date-range">1959<sub><span title="1959 was 67 years ago.">67ya</span></sub></span> Symposium on Space Psychiatry: “Separation from the earth with all of its unconscious symbolic significance for man,…might in theory at least be expected…to produce - even in a well-selected and trained pilot - something akin to the panic of <a href="https://en.wikipedia.org/wiki/Schizophrenia" id="_Gh5HccJm" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Schizophrenia#bodyContent">schizophrenia</a>.”</p>
+<p>There was worry that <a href="https://en.wikipedia.org/wiki/Yuri_Gagarin" id="_gqkXhBsF" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Yuri_Gagarin#bodyContent">Gagarin</a> might come unhinged and sabotage the history-making mission. It was enough of a worry that the powers-that-be locked the manual controls of the Vostok capsule before liftoff. What if something went awry and communications went dead and Pilot-Cosmonaut #1 needed to take control of the capsule? His superiors had thought about that too, and seemingly turned to game show hosts for advice. Gagarin was given a sealed envelope containing the secret combination to unlock the controls.</p>
+<p>The concerns were not altogether fatuous. In <a href="http://spacemedicineassociation.org/timeline/1957/28003.pdf" id="_1_EDo-QK" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="&#39;The Break-off Phenomenon: A Feeling of Separation from the Earth Experienced by Pilots at High Altitude&#39;, Clark &amp; Graybiel 1957">a study published in the April <span class="date-range">1957<sub><span title="1957 was 69 years ago.">69ya</span></sub></span> issue of <em>Aviation Medicine</em></a>, 35% of 137 pilots interviewed reported having experienced a strange feeling of detachment from Earth while flying at high altitudes, almost always during a solo flight. “I feel like I have broken the bonds from the terrestrial sphere,” said one pilot.</p>
+<p>The phenomenon was pervasive enough for psychologists to give it a name: the “breakaway effect”. For a majority of these pilots, the feeling wasn’t one of panic, but of euphoria. Only 18 of the 137 characterized their feelings as fear or anxiety. “It seems so peaceful, it seems like you are in another world.” “I feel like a giant.” “A king,” said another. Three commented that they felt nearer to God. A pilot named Mal Ross, who set a series of altitude records in experimental aircraft in the late 1950s, twice reported an eerie “feeling of exultation, of wanting to fly on and on.”</p>
+<p>The year the <em>Aviation Medicine</em> article ran, Colonel <a href="https://en.wikipedia.org/wiki/Joseph_Kittinger" id="_eTLwZXQy" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Joseph_Kittinger#bodyContent">Joe Kittinger</a> <a href="https://en.wikipedia.org/wiki/Project_Manhigh" id="_nUIgxfd6" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Project_Manhigh#bodyContent">ascended to 96,000 feet</a> in an upright, phone-booth-sized sealed capsule suspended beneath a helium balloon. With his oxygen dangerously low, Kittinger was ordered by his superior, David Simons, to begin his descent. “<code>COME AND GET ME</code>”, replied Kittinger, letter by letter in Morse code. Kittinger says it was a joke, but Simons didn’t take it that way. (Morse code has always been a tough medium for humor.) In his memoir <a href="http://www.amazon.com/Man-High-David-G-Simons/dp/B0007FU9NG" id="_81zrEVn1" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>Man High</em></a>, Simons recalls thinking that “the weird and little understood breakaway phenomenon could be taking hold of Kittinger’s mind,…that he…was gripped in this strange reverie and was hellbent on flying on and on without regard for the consequences.”</p>
+<p>Simons compared the breakaway phenomenon to “the deadly raptures of the deep.” “Rapture of the deep” is a medical condition - a feeling of calm and invulnerability that can steal over a diver, usually at depths below 100 feet. It is more prosaically known as <a href="https://en.wikipedia.org/wiki/Nitrogen_narcosis" id="_qdbdh_Vj" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Nitrogen_narcosis#bodyContent">nitrogen narcosis</a>, or as the Martini Effect (one drink for every 33 feet below 65 feet). Simons speculated that one day soon aerospace physicians would be talking about a condition “known as the deadly rapture of space.”</p>
+<p>He was right, though NASA preferred the less flowery term “space euphoria.” “Some NASA shrinks,” wrote astronaut <a href="https://en.wikipedia.org/wiki/Gene_Cernan" id="_J56Jpxxt" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Gene_Cernan#bodyContent">Gene Cernan</a> in <a href="%22&#39;The%20Last%20Man%20on%20the%20Moon&#39;,%20Cernan%20&amp;%20Davis%201999%22" id="_UIg8eoQv">his memoir</a>, “had warned that when I looked down and saw the Earth speeding past so far below, I might be swamped by space euphoria.” [see also the <a href="http://www.theoverviewblog.com/space-euphoria/" id="_Cdg35b7j">“overview effect”</a>] Cernan would soon be undertaking a spacewalk - history’s third - during <a href="https://en.wikipedia.org/wiki/Gemini_9A" id="_NIFbfoJO" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Gemini_9A#bodyContent">Gemini IX</a>. The psychologists were nervous because the first two spacewalkers had expressed not only an odd euphoria but a worrisome disinclination to go back inside the capsule. “I felt excellent and in a cheerful mood and reluctant to leave free space,” wrote <a href="https://en.wikipedia.org/wiki/Alexei_Leonov" id="_FJdMpSvn" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Alexei_Leonov#bodyContent">Alexei Leonov</a>, the first human to, in <span class="date-range">1965<sub><span title="1965 was 61 years ago.">61ya</span></sub></span>, float freely in the vacuum of space, attached to his <a href="https://en.wikipedia.org/wiki/Voskhod_(spacecraft)" id="_YaMs5091" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Voskhod_(spacecraft)#bodyContent">Vokshod capsule</a> by an air hose. “As for the so-called psychological barrier that was supposed to be insurmountable by man preparing to confront the cosmic abyss alone, I not only did not sense any barrier, but even forgot that there could be one.”</p>
+<p>Four minutes into NASA’s first spacewalk, <a href="https://en.wikipedia.org/wiki/Gemini_4" id="_Z7VUcPYy" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Gemini_4#bodyContent">Gemini IV</a> astronaut <a href="https://en.wikipedia.org/wiki/Ed_White" id="_lCHTSADt" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Ed_White#bodyContent">Ed White</a> gushed that he felt “like a million dollars.” He struggled to find the words for it. “I’ve…it’s just tremendous.” There are moments when the mission transcript reads like the transcript of a 1970s encounter group. Here are White and his commander, James McDivitt, a couple of Air Force guys, after it’s over:</p>
+<blockquote>
+<p><code>WHITE</code>: That was the most natural feeling, Jim.<br />
+<code>McDIVITT</code>: …You looked like you were in your mother’s womb.</p>
+</blockquote>
+<p>NASA’s concern was not that their astronaut was euphoric, but that euphoria might have overtaken good sense. During White’s twenty minutes of bliss, Mission Control repeatedly tries to break in. Finally the capsule communicator, <a href="https://en.wikipedia.org/wiki/Gus_Grissom" id="_VcyXQukY" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Gus_Grissom#bodyContent">Gus Grissom</a>, gets through to McDivitt.</p>
+<blockquote>
+<p><code>GRISSOM</code>: Gemini 4, get back in!<br />
+<code>McDIVITT</code>: They want you to come back in now.<br />
+<code>WHITE</code>: Back in?<br />
+<code>McDIVITT</code>: Back in.<br />
+<code>GRISSOM</code>: Roger, we’ve been trying to talk to you for awhile here.<br />
+<code>WHITE</code>: Aw, Cape, let me just [take] a few pictures.<br />
+<code>McDIVITT</code>: No, back in. Come on.<br />
+<code>WHITE</code>: …Listen, you could almost not drag me in, but I’m coming.</p>
+</blockquote>
+<p>But he wasn’t. Two more minutes passed. McDivitt starts to plead.</p>
+<blockquote>
+<p><code>McDIVITT</code>: Just come on in…<br />
+<code>WHITE</code>: Actually, I’m trying to get a better picture.<br />
+<code>McDIVITT</code>: No, come on in.<br />
+<code>WHITE</code>: I’m trying to get a picture of the spacecraft now.<br />
+<code>McDIVITT</code>: Ed, come on in here!</p>
+</blockquote>
+<p>Another minute passes before White makes a move toward the hatch, saying, “This is the saddest moment of my life.” Rather than worrying about astronauts not wanting to come back in, the space agencies should have been worrying about them not being able to. It took White twenty-five minutes to get back through the hatch and safely in.</p>
+<p>…After Ed White’s spacewalk, reports of space euphoria were rare, and soon the psychologists stopped worrying. They had something new to worry on: “<a href="!Wikipedia%22de-unicode%22" id="_Z34YdIuE">EVA</a> height vertigo.” (EVA is short for “extravehicular activity,” meaning spacewalking.) The image of Earth rushing by some 200 miles below can cause paralyzing fear. <a href="https://en.wikipedia.org/wiki/Mir" id="_QG3xBdEE" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mir#bodyContent">Mir</a> astronaut <a href="https://en.wikipedia.org/wiki/Jerry_M._Linenger" id="_2JLUb-D5" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Jerry_M._Linenger#bodyContent">Jerry Linenger</a> wrote in <a href="http://www.amazon.com/Off-Planet-Surviving-Perilous-Station/dp/007136112X" id="_oR4mYg6E" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="&#39;Off The Planet: Surviving Five Perilous Months Aboard The Space Station MIR&#39;, Linenger 2000">his memoir</a> about the “dreadful and persistent” feeling that he was “plummeting earthward…at ten times or a hundred times faster” than he’d experienced during parachute free falls. Which he was. (The difference, of course, is that the astronaut is falling in a huge circle around Earth and doesn’t hit the ground.)</p>
+<p>“White-knuckled, I gripped the handrail…,” wrote Linenger of his agonized moments on the end of Mir’s 50-foot telescoping arm, “forcing myself to keep my eyes open and not scream.” I once listened to a <a href="https://en.wikipedia.org/wiki/Hamilton_Sundstrand" id="_vAZ7OKVl" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hamilton_Sundstrand#bodyContent">Hamilton Sundstrand</a> suit engineer tell the story of an unnamed spacewalker exiting the hatch and then turning to wrap both spacesuited arms around a colleague’s legs.</p>
+<p>…Aerospace biologists had established that humans can function for a few seconds without gravity. But what about an hour, a day, a week? “People ask, Why?” says Britz of the era of the spacefaring chimp. “Mary, we just didn’t know.” What were the longer-term effects of space travel-not only of weightlessness, but of cosmic radiation? (High-energy atomic particles have been zinging through space at ferocious speeds since the Big Bang. Earth’s magnetic field protects us by deflecting cosmic rays, but in space, these invisible bullets smash unimpeded through cells, causing mutations. It’s serious enough that astronauts are classified as radiation workers.)</p>
+<p>Every mode of travel has its signature mental aberration. Eskimo hunters traveling alone on still, glassy waters are sometimes stricken by “kayak angst” - delusions that their boat is flooding or that the front end is either sinking or rising up out of the water. Of related interest: <a href="/docs/1963-gussow.pdf" id="_bY0lkYbA" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“A Preliminary Report of Kayak-Angst Among the Eskimo of West Greenland”</a> includes a discussion of Eskimo suicide motives and notes that 4 out of the 50 suicides investigated were elderly Eskimos who “took their lives as a direct result of uselessness due to old age.” No mention was made of whether they cast themselves adrift on ice floes, as you sometimes hear, and whether travel by ice floe has its own unique anxiety syndrome.</p>
+</blockquote>
+<p>我们在这里清楚地看到了对外太空影响的广泛且已知的恐惧、对辐射和自杀行为的担忧，以及与已知的航空极端情况的类比。虽然并非所有这些数据和推测在<span class="date-range">1945<sub><span title="1945 was 81 years ago.">81ya</span></sub></span>年都可供 Smith 参考（例如，航空调查是12年后才发表的），但合理地推测他在构思太空之痛时可能已将这些考虑在内。</p>
+<p>因此，任何对”Scanners Live in Vain”的解读都必须将这一历史科学背景作为该情节设定及其特征存在的充分解释来考虑，而不是无知地跳到”太空之痛必定是某种隐喻或象征”的结论。</p>
+</section>
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr></hr>
+<ol>
+<li id="fn1"><p>简短摘录：</p>
+<blockquote>
+<p>Then from their poverty they rose,<br />
+From dry catarrhs, and to guitars<br />
+They flitted<br />
+Through the palace walls.<br />
+</p>
+<p>…The gaunt guitarists on the strings<br />
+Rumbled a-day and a-day, a-day.<br />
+The moonlight<br />
+Rose on the beachy floors…</p>
+</blockquote>
+<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn2"><p>In the “The Game of Rat and Dragon”, space itself is not dangerous but in the darkness between solar systems lurk psychic monsters which turn ships’ passengers into “lunatics, damaged beyond repair, to be wakened, and fed, and cleaned, and put to sleep, wakened and fed again until their lives were ended.” As in “Scanners Live in Vain” and another striking Smith story, “<a href="https://en.wikipedia.org/wiki/Mother_Hitton%27s_Littul_Kittons" id="_yvw8uB8U" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mother_Hitton%27s_Littul_Kittons#bodyContent">Mother Hitton’s Littul Kittons</a>”, the solution is another form of life (oysters, <a href="https://en.wikipedia.org/wiki/Cat" id="_Y8GSfPDb" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Cat#bodyContent">cats</a>, and mink respectively). Animals and human-animal hybrids appear throughout Smith’s fiction.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+
+      
+      <noscript><div id="noscript-warning-footer" class="admonition error" title="Warning to NoScript Users"><div class="admonition-title"><p>[<strong>Error</strong>: JavaScript disabled.]</p></div> <p>[Backlinks, similar links, and the bibliography require JS enabled to load.]</p></div></noscript>
+      
+      
+      
+      
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+    <!-- Footer (no SSI): injected by Hakyll from static/include/footer.html -->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction"></use></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center"></use></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction"></use></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Gwern Branwen">[ Send Anonymous Feedback ]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Gwern.net homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

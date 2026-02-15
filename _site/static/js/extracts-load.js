@@ -1,0 +1,49 @@
+/*	This file should be loaded after all other extracts*.js files.
+ */
+
+Extracts.config = {
+    /*  Selector for containers within which targets may be found.
+     */
+    contentContainersSelector: [
+    	".markdownBody",
+    	"#TOC",
+    	"#navbar"
+    ].join(", "),
+
+	/*	Selector for containers within which targets may not be found.
+	 */
+    excludedContainerElementsSelector: "h1, h2, h3, h4, h5, h6",
+
+	/*	Selector for targets.
+	 */
+	targetElementsSelector: [
+		"a[href]"
+	].join(", "),
+
+	/*	Elements that shouldn’t be targets.
+	 */
+	excludedElementsSelector: [
+		".section-self-link",
+		".footnote-self-link",
+		".sidenote-self-link",
+		"[aria-hidden='true']",
+		"[href$='#top']",
+		".extract-not"
+	].join(", "),
+
+	/*	Don’t display indicator hooks on links in these containers.
+	 */
+	hooklessLinksContainersSelector: [
+		"body.page-index #markdownBody",
+		"div#new-popular-notable",
+		"#navbar",
+		".TOC",
+		"#floating-header",
+    	"#page-toolbar",
+    	".link-widget"
+    ].join(", ")
+};
+
+GW.notificationCenter.fireEvent("Extracts.didLoad");
+
+Extracts.setup();

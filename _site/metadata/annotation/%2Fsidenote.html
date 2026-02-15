@@ -1,0 +1,48 @@
+<p><a href="/sidenote" id="link-bibliography-gwern-sidenote" class="prefetch-not link-page link-annotated" data-filesize-bytes="0" data-filesize-percentage="64">“Sidenotes In Web Design”</a></p>
+<p> <span class="author cite-author"><a href="/index#abstract" id="_i198YQWg" class="prefetch-not link-page" data-filesize-bytes="1034" data-filesize-percentage="82">Gwern</a></span></p>
+<p><span class="date cite-date" title="2020-08-06">2020</span></p>
+<p><span class="link-tags"><a href="/doc/cs/css/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="64" rel="tag" title="Link to cs/css tag index">CSS</a>, <a href="/doc/cs/js/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="64" rel="tag" title="Link to cs/js tag index">JS</a>, <a href="/doc/design/typography/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="64" rel="tag" title="Link to design/typography tag index">typography</a></span></p>
+<blockquote>
+<figure>
+<img src="/doc/cs/css/sidenotes.png" title="Demonstration of sidenotes.js handling multiple large dense endnote annotations on an annotated novel which has many allusions and technical references." id="_Ll_-Y1j1" class="float-right page-thumbnail outline invert-not" width="0" height="0"></img>
+</figure>
+<div class="page-description-annotation">
+<p>In typography/design, ‘sidenotes’ place footnotes/endnotes in the margins for easier reading. I discuss design choices, HTML implementations and their pros/cons.</p>
+</div>
+<p><strong>Sidenotes</strong> &amp; <strong>margin notes</strong> are a typographic convention which improves on footnotes &amp; endnotes by instead putting the notes in the page margin to let the reader instantly read them without needing to refer back and forth to the end of the document (endnotes) or successive pages (footnotes spilling over).</p>
+<p>They are particularly useful for web pages, where ‘footnotes’ are de facto endnotes, and clicking back and forth to endnotes is a pain for readers. (Footnote variants, like “floating footnotes” which pop up on mouse hover, reduce the reader’s effort but don’t eliminate it.)</p>
+<p>However, they are not commonly used, perhaps because web browsers until relatively recently made it hard to implement sidenotes easily &amp; reliably. <a href="/doc/www/edwardtufte.github.io/e43d8239ed3fa1d513e2b4d071b6a7c0c8a98bff.html" id="_860KFPWU" class="link-live link-annotated-partial" data-filesize-bytes="3464089" data-filesize-percentage="75" data-link-icon="ET" data-link-icon-color="#b1282b" data-link-icon-type="text" data-url-archive="/doc/www/edwardtufte.github.io/e43d8239ed3fa1d513e2b4d071b6a7c0c8a98bff.html" data-url-original="https://edwardtufte.github.io/tufte-css/" title="Tufte CSS">Tufte-CSS</a> has popularized the idea and since then, there has been a proliferation of slightly variant approaches. I review some of the available implementations.</p>
+<p>For general users, I recommend <a href="/sidenote#tufte-css" id="gwern-sidenote--tufte-css" class="prefetch-not link-page">Tufte-CSS-style approaches</a>: it is fast &amp; simple (using only compile-time generation of sidenotes, rendered by static HTML/CSS), popular, and <a href="https://en.wikipedia.org/wiki/Edward_Tufte" id="_UkdQOR9z" class="link-live" data-url-iframe="https://en.m.wikipedia.org/wiki/Edward_Tufte#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg">Tufte</a>-CSS-esque libraries are easy to integrate into many website workflows. For heavy footnote users or users who want a drop-in, runtime JavaScript-based solutions like <a href="/sidenote#sidenotes-js" id="gwern-sidenote--sidenotes-js" class="prefetch-not link-page"><code>sidenotes.js</code></a> may be more useful.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/sidenote#examples" id="toc-examples" class="prefetch-not link-page">Examples</a></li>
+<li><a href="/sidenote#implementation-strategies" id="toc-implementation-strategies" class="prefetch-not link-page">Implementation Strategies</a></li>
+<li><a href="/sidenote#comparison" id="toc-comparison" class="prefetch-not link-page">Comparison</a></li>
+<li><a href="/sidenote#implementations" id="toc-implementations" class="prefetch-not link-page">Implementations</a>
+<ul>
+<li><a href="/sidenote#tufte-css" id="toc-tufte-css" class="prefetch-not link-page">Tufte-CSS</a></li>
+<li><a href="/sidenote#sidenotes-js" id="toc-sidenotes-js" class="prefetch-not link-page"><code>sidenotes.js</code></a>
+<ul>
+<li><a href="/sidenote#sidebar-tables" id="toc-sidebar-tables" class="prefetch-not link-page">Sidebar Tables</a></li>
+</ul></li>
+<li><a href="/sidenote#ink-switch" id="toc-ink-switch" class="prefetch-not link-page">Ink &amp; Switch</a></li>
+<li><a href="/sidenote#robert-nystrom" id="toc-robert-nystrom" class="prefetch-not link-page">Robert Nystrom</a></li>
+<li><a href="/sidenote#matthew-butterick" id="toc-matthew-butterick" class="prefetch-not link-page">Matthew Butterick</a></li>
+<li><a href="/sidenote#koos-looijesteijn" id="toc-koos-looijesteijn" class="prefetch-not link-page">Koos Looijesteijn</a></li>
+<li><a href="/sidenote#harvard-law-review" id="toc-harvard-law-review" class="prefetch-not link-page">Harvard Law Review</a></li>
+<li><a href="/sidenote#yale-law-journal" id="toc-yale-law-journal" class="prefetch-not link-page">Yale Law Journal</a></li>
+<li><a href="/sidenote#knight-institute" id="toc-knight-institute" class="prefetch-not link-page">Knight Institute</a></li>
+<li><a href="/sidenote#new-york" id="toc-new-york" class="prefetch-not link-page"><em>New York</em></a></li>
+<li><a href="/sidenote#jquery-sidenotes" id="toc-jquery-sidenotes" class="prefetch-not link-page">JQuery.sidenotes</a></li>
+<li><a href="/sidenote#sidenotes-js-correia" id="toc-sidenotes-js-correia" class="prefetch-not link-page">Sidenotes.js, Correia</a></li>
+<li><a href="/sidenote#the-india-forum" id="toc-the-india-forum" class="prefetch-not link-page"><em>The India Forum</em></a></li>
+<li><a href="/sidenote#tables" id="toc-tables" class="prefetch-not link-page">Tables</a></li>
+<li><a href="/sidenote#annotate-molly-white" id="toc-annotate-molly-white" class="prefetch-not link-page">Annotate, Molly White</a></li>
+<li><a href="/sidenote#george-pollard" id="toc-george-pollard" class="prefetch-not link-page">George Pollard</a></li>
+<li><a href="/sidenote#miscellaneous" id="toc-miscellaneous" class="prefetch-not link-page">Miscellaneous</a></li>
+</ul></li>
+<li><a href="/sidenote#see-also" id="toc-see-also" class="prefetch-not link-page">See Also</a></li>
+<li><a href="/sidenote#external-links" id="toc-external-links" class="prefetch-not link-page">External Links</a></li>
+</ul>
+</div>
+</blockquote>
