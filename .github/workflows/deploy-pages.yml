@@ -97,7 +97,7 @@ jobs:
           path: './_site'
 
   deploy:
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/gwern-style'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
