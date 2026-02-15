@@ -10,11 +10,60 @@ echo ""
 # 获取脚本所在目录的父目录 (项目根目录)
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 BUILD_DIR="$PROJECT_ROOT/build"
+HAKYLL_CACHE_BIN="$BUILD_DIR/.cache/hakyll/hakyll"
 
 # 参数解析
 DATE_ARG=""
 SKIP_CONVERT=false
 WATCH_MODE=false
+
+require_dependency() {
+    local cmd="$1"
+    local install_hint="$2"
+
+    if [ -f "$HOME/.ghcup/env" ]; then
+        # shellcheck disable=SC1090
+        . "$HOME/.ghcup/env"
+    fi
+
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        for candidate_dir in "$HOME/.ghcup/bin" "$HOME/.cabal/bin" "$HOME/.local/bin"; do
+            if [ -d "$candidate_dir" ] && [ -x "$candidate_dir/$cmd" ] && echo "$PATH" | tr ':' '\n' | grep -qx "$candidate_dir"; then
+                continue
+            fi
+            if [ -d "$candidate_dir" ] && [ -x "$candidate_dir/$cmd" ]; then
+                PATH="$candidate_dir:$PATH"
+                export PATH
+            fi
+        done
+    fi
+
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        echo "错误: 未找到命令 $cmd"
+        echo "请先安装依赖后重试："
+        echo "  $install_hint"
+        echo ""
+        echo "安装完成后可通过: $cmd --version 验证"
+        exit 1
+    fi
+}
+
+run_hakyll() {
+    local bin=""
+    if [ -n "${MAKO_HAKYLL_BIN:-}" ] && [ -x "$MAKO_HAKYLL_BIN" ]; then
+        bin="$MAKO_HAKYLL_BIN"
+    elif [ -x "$HAKYLL_CACHE_BIN" ]; then
+        bin="$HAKYLL_CACHE_BIN"
+    else
+        bin="$(cd "$BUILD_DIR" && cabal list-bin hakyll 2>/dev/null || true)"
+    fi
+
+    if [ -n "$bin" ] && [ -x "$bin" ]; then
+        "$bin" "$@"
+    else
+        (cd "$BUILD_DIR" && cabal run hakyll -- "$@")
+    fi
+}
 
 while [[ $# -gt 0 ]]; do
     case $1 in
@@ -37,6 +86,9 @@ while [[ $# -gt 0 ]]; do
             ;;
     esac
 done
+
+# 关键依赖检查
+require_dependency cabal "brew install ghc cabal-install  # 或通过 https://www.haskell.org/ghcup/ 安装"
 
 # 1. 转换格式 (如果不跳过)
 if [ "$SKIP_CONVERT" = false ]; then
@@ -90,12 +142,12 @@ if [ "$WATCH_MODE" = true ]; then
     GWERN_WRITE_MISSING_ANNOTATIONS=0 \
     GWERN_LINK_ANNOTATIONS=0 \
     GWERN_LINK_SIZES=0 \
-    cabal run hakyll -- watch
+    run_hakyll watch
 else
     echo "[3/4] 编译网站..."
     
     # 清理
-    cabal run hakyll -- clean
+    run_hakyll clean
     
     # 构建
     GWERN_ANNOTATIONS=0 \
@@ -103,7 +155,7 @@ else
     GWERN_WRITE_MISSING_ANNOTATIONS=0 \
     GWERN_LINK_ANNOTATIONS=0 \
     GWERN_LINK_SIZES=0 \
-    cabal run hakyll -- build
+    run_hakyll build
     
     # 4. 验证
     echo "[4/4] 验证构建..."

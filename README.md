@@ -13,15 +13,23 @@
 
 ## 快速开始 (WSL)
 
-构建（最直接的方式）:
-
-./scripts/build-production.sh
+在首次使用前先加载 ghcup 环境（可在 shell 重启后自动生效）:
 
 ```bash
-cd /build
-cabal update
-cabal run hakyll -- build
+source ~/.ghcup/env
+echo '[[ -f ~/.ghcup/env ]] && source ~/.ghcup/env' >> ~/.zshrc
 ```
+
+构建（最直接的方式）:
+
+```bash
+bash scripts/build-production.sh
+```
+
+`scripts/build-production.sh` 会按优先级执行：
+- `MAKO_HAKYLL_BIN`（如你手动指定）
+- `build/.cache/hakyll/hakyll`（缓存产物）
+- `cabal run hakyll -- ...`（降级方案）
 
 预览（在项目根目录跑，确保能处理无扩展名路由，比如 `/About`）:
 
@@ -52,13 +60,21 @@ bash scripts/build.sh --watch
 bash scripts/build-production.sh
 ```
 
-注: 生产模式也可以直接用 `build/site.hs` 的默认值:
+注: 如需手工确认二进制调用:
 
 ```bash
 cd build
-cabal run hakyll -- clean
-cabal run hakyll -- build +RTS -N -RTS
+mkdir -p .cache/hakyll
+cabal build hakyll
+cp "$(cabal list-bin hakyll)" .cache/hakyll/hakyll
+.cache/hakyll/hakyll clean
+.cache/hakyll/hakyll build +RTS -N -RTS
 ```
+
+## GitHub Actions（部署）
+
+`build` 步骤会先准备 `build/.cache/hakyll/hakyll`，并缓存到 `actions/cache`，
+随后用该二进制执行构建，减少每次 `cabal run hakyll` 的重复开销。
 
 ## Newsletter 生成
 
@@ -92,4 +108,8 @@ Newsletter 生成与清理说明见 `scripts/NEWSLETTER_QUICKSTART.md`。
 
 - `cabal update` 失败: 通常是 `~/.cabal` 写权限或网络问题，先检查 WSL 用户权限与网络连通性。
 - 构建报大量 “Link error … file does not exist”: 这是链接注解扫描阶段的提示，不一定会导致构建失败；真正会失败的错误会在最后以 `[ERROR]`/`CallStack` 形式出现。
-
+- `Store.set: does not exist` 错误: 这是 Hakyll 缓存并发写入的已知问题。解决方法是禁用并发构建：
+    ```bash
+    cabal run hakyll -- build +RTS -N1 -RTS
+    ```
+- `LM.annotateLink: empty link target (skipping)` 通常是内容里空链接导致的告警，不会中断构建；可手工补齐空链接锚点以减少噪音。

@@ -43,11 +43,17 @@ jobs:
             ~/.cabal/packages
             ~/.cabal/store
             build/dist-newstyle
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('build/*.cabal') }}-${{ hashFiles('build/cabal.project') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('build/*.cabal') }}-${{ hashFiles('build/cabal.project') }}-${{ hashFiles('build/**/*.hs') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+
+      - name: Cache hakyll executable
+        uses: actions/cache@v3
+        with:
+          path: build/.cache/hakyll/hakyll
+          key: ${{ runner.os }}-hakyll-bin-${{ hashFiles('build/*.cabal') }}-${{ hashFiles('build/cabal.project') }}-${{ hashFiles('build/**/*.hs') }}
 
       - name: Install Dependencies
         run: |
@@ -62,12 +68,27 @@ jobs:
           cabal update
           cabal build --only-dependencies
 
+      - name: Prepare hakyll executable
+        run: |
+          mkdir -p build/.cache/hakyll
+          if [ -x "build/.cache/hakyll/hakyll" ]; then
+            echo "Using cached hakyll executable"
+          else
+            cd build
+            cabal build hakyll
+            cp "$(cabal list-bin hakyll)" ".cache/hakyll/hakyll"
+          fi
+
       - name: Build Site
         run: |
           cd build
-          # 'cabal run hakyll -- build' runs the site generator.
-          # The generator (site.hs) changes directory to the project root and outputs to _site.
-          cabal run hakyll -- build
+          if [ -x ".cache/hakyll/hakyll" ]; then
+            ./.cache/hakyll/hakyll build
+          else
+            # 'cabal run hakyll -- build' runs the site generator.
+            # The generator (site.hs) changes directory to the project root and outputs to _site.
+            cabal run hakyll -- build
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
