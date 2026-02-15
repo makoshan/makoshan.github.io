@@ -170,7 +170,7 @@ Because it does work. Sort of. Cramming is a trade-off: you trade a strong memor
 
     > [Conway, Cohen & Stanhope 1992](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.56.6901&rep=rep1&type=pdf "Very Long Term Retention of Knowledge") looked at long term memory for the information presented on a psychology course. They found that some types of information, especially that relating to research methods, were remembered better than others. But in a follow up analysis, they found that the type of assessment used had an effect on memory. In essence, material assessed by continuous assessment was more likely to be remembered than information assessed by exams.
 
-As one would expect if the testing and spacing effects are real things, students who naturally test themselves and study well in advance of exams tend to have higher GPAs.[^Hartwig] If we interpret questions as tests, we are not surprised to see that 1-on-1 tutoring works [dramatically better](!W "Bloom’s 2 Sigma Problem") than regular teaching and that tutored students answer orders of magnitude more questions[^intelligence-ethnography].
+如果测验效应与间隔效应确实存在，那么我们会期待：那些会自发自测、并且提前很久开始复习的学生，往往有更高的 GPA。[^Hartwig] 如果把“提问”也视作一种测试，那么我们也就不意外：1 对 1 家教比普通教学[显著更有效](!W "Bloom’s 2 Sigma Problem")，并且在辅导中学生需要回答的问题数量会高出几个数量级[^intelligence-ethnography]。
 
 [^Hartwig]: ["Study strategies of college students: Are self-testing and scheduling related to achievement?"](https://gwern.net/doc/psychology/spaced-repetition/2012-hartwig.pdf), Hartwig & Dunlosky 2012:
 
@@ -251,24 +251,24 @@ As one would expect if the testing and spacing effects are real things, students
     >
     > We conclude therefore, that at present, there is no adequate evidence base to justify incorporating learning-styles assessments into general educational practice. Thus, limited education resources would better be devoted to adopting other educational practices that have a strong evidence base, of which there are an increasing number. However, given the lack of methodologically sound studies of learning styles, it would be an error to conclude that all possible versions of learning styles have been tested and found wanting; many have simply not been tested at all.
 
-#### Subjects
+#### 材料类型 {#subjects}
 
-The above studies often used pairs of words or words themselves. How well does the testing effect generalize?
+上述研究经常使用词对、或单个词作为材料。测验效应的适用范围到底有多广？
 
-Materials which benefited from testing:
+已知能从测试中获益的材料包括：
 
-- foreign vocabulary (eg. Karpicke & Roediger 2003, [Cepeda et al 2009](https://home.cs.colorado.edu/~mozer/Research/Selected%20Publications/reprints/Cepedaetal2009.pdf), Fritz et al 2007^[Fritz, C. O., Morris, P. E., Acton, M., Etkind, R., & Voelkel, A. R (2007). "Comparing and combining expanding retrieval practice and the keyword mnemonic for foreign vocabulary learning". _Applied Cognitive Psychology_, 21, 499-526.], [de la Rouviere 2012](https://scholar.sun.ac.za/server/api/core/bitstreams/6dfdb0ca-e7e5-403e-9a2b-4161e3d93385/content#pdf "Chinese Radicals in Spaced Repetition Systems: a pilot study on the acquisition of Chinese characters by students learning Chinese as a foreign language"))
-- [GRE](!W) materials (like vocab, [Kornell 2009](#kornell-2009 "'Optimising Learning Using Flashcards: Spacing Is More Effective Than Cramming', Kornell 2009")); prose passages on general scientific topics (Karpicke & Roediger, 2006a; Pashler et al, 2003)
-- trivia ([McDaniel & Fisher 1991](https://gwern.net/doc/psychology/spaced-repetition/1991-mcdaniel.pdf "Tests and Test Feedback as Learning Sources"))
-- elementary & middle school lessons with subjects such as biographical material and science ([Gates 1917](https://archive.org/details/recitationasafa00gategoog); [Spitzer 1939](https://gwern.net/doc/psychology/spaced-repetition/1939-spitzer.pdf)[^Spitzer] and Vlach & Sandhofer 2012[^Vlach], respectively)
-- Agarwal et al 2008: short-answer tests superior on textbook passages
-- history textbooks; retention better with initial short-answer test rather than multiple choice ([Nungester & Duchastel 1982](https://gwern.net/doc/psychology/spaced-repetition/1982-nungester.pdf))
-- [LaPorte & Voss 1975](https://gwern.net/doc/psychology/spaced-repetition/1975-laporte.pdf) also found better retention compared to multiple-choice or recognition problems
-- [Duchastel & Nungester, 1981](https://gwern.net/doc/psychology/spaced-repetition/1981-duchastel "'Long-term Retention of Prose Following Testing', Duchastel & Nungester 2012"): 6 months after testing, testing beat studying in retention of a history passage
-- [Duchastel 1981](https://gwern.net/doc/psychology/spaced-repetition/1981-duchastel.pdf): free recall decisively beat short-answer & multiple choice for reading comprehension of a history passage
-- [Glover 1989](https://gwern.net/doc/psychology/spaced-repetition/1989-glover.pdf): free recall self-test beat recognition or [Cloze deletions](!W); subject matter was the labels for parts of flowers
-- [Kang et al 2007](https://gwern.net/doc/psychology/spaced-repetition/2007-kang.pdf "Test format and corrective feedback modify the effect of testing on long-term retention"): prose passages; initial short answer testing produced superior results 3 days later on both multiple choice and short answer tests
-- [Leeming 2002](https://gwern.net/doc/psychology/spaced-repetition/2002-leeming.pdf "The Exam-A-Day Procedure Improves Performance in Psychology Classes"): tests in 2 psychology courses, introductory & memory/learning; "80% versus 74% for the introductory psychology course and 89% versus 80% for the learning and memory course"^[See also Balch 2006, who compared spacing & massed in an introductory psychology course as well.]
+- 外语词汇（如 Karpicke & Roediger 2003、[Cepeda et al 2009](https://home.cs.colorado.edu/~mozer/Research/Selected%20Publications/reprints/Cepedaetal2009.pdf)、Fritz et al 2007^[Fritz, C. O., Morris, P. E., Acton, M., Etkind, R., & Voelkel, A. R (2007). "Comparing and combining expanding retrieval practice and the keyword mnemonic for foreign vocabulary learning". _Applied Cognitive Psychology_, 21, 499-526.]、[de la Rouviere 2012](https://scholar.sun.ac.za/server/api/core/bitstreams/6dfdb0ca-e7e5-403e-9a2b-4161e3d93385/content#pdf "Chinese Radicals in Spaced Repetition Systems: a pilot study on the acquisition of Chinese characters by students learning Chinese as a foreign language")）
+- [GRE](!W) 材料（如词汇；[Kornell 2009](#kornell-2009 "'Optimising Learning Using Flashcards: Spacing Is More Effective Than Cramming', Kornell 2009")）；以及一般科学主题的散文段落（Karpicke & Roediger, 2006a；Pashler et al, 2003）
+- 知识问答/冷知识（trivia；[McDaniel & Fisher 1991](https://gwern.net/doc/psychology/spaced-repetition/1991-mcdaniel.pdf "Tests and Test Feedback as Learning Sources")）
+- 小学/初中课程内容，例如传记材料与科学知识（分别参见 [Gates 1917](https://archive.org/details/recitationasafa00gategoog)、[Spitzer 1939](https://gwern.net/doc/psychology/spaced-repetition/1939-spitzer.pdf)[^Spitzer]、Vlach & Sandhofer 2012[^Vlach]）
+- Agarwal et al 2008：在教科书段落上，简答题测试优于其他形式
+- 历史教科书：先做一次简答题测试相比选择题能获得更好的保持（[Nungester & Duchastel 1982](https://gwern.net/doc/psychology/spaced-repetition/1982-nungester.pdf)）
+- [LaPorte & Voss 1975](https://gwern.net/doc/psychology/spaced-repetition/1975-laporte.pdf) 也发现：相比选择题或再认题，保持更好
+- [Duchastel & Nungester, 1981](https://gwern.net/doc/psychology/spaced-repetition/1981-duchastel "'Long-term Retention of Prose Following Testing', Duchastel & Nungester 2012")：测试后 6 个月，在一段历史文章的保持上，测试优于学习
+- [Duchastel 1981](https://gwern.net/doc/psychology/spaced-repetition/1981-duchastel.pdf)：自由回忆在历史文章阅读理解上显著优于简答题与选择题
+- [Glover 1989](https://gwern.net/doc/psychology/spaced-repetition/1989-glover.pdf)：自由回忆式自测优于再认或 [Cloze deletions](!W)；材料是花朵部位的名称标签
+- [Kang et al 2007](https://gwern.net/doc/psychology/spaced-repetition/2007-kang.pdf "Test format and corrective feedback modify the effect of testing on long-term retention")：散文段落；初次简答题测试在 3 天后对选择题与简答题两类测验都更优
+- [Leeming 2002](https://gwern.net/doc/psychology/spaced-repetition/2002-leeming.pdf "The Exam-A-Day Procedure Improves Performance in Psychology Classes")：在两门心理学课程（导论与记忆/学习）中进行测试；“导论课 80% vs 74%，记忆/学习课 89% vs 80%”^[另见 Balch 2006，对心理学导论课中的间隔 vs 集中进行了比较。]
 
 [^Spitzer]: From Balota et al 2007, describing [Spitzer 1939, "Studies in retention"](https://gwern.net/doc/psychology/spaced-repetition/1939-spitzer.pdf):
 
@@ -277,30 +277,30 @@ Materials which benefited from testing:
 
     > The spacing effect describes the robust finding that long-term learning is promoted when learning events are spaced out in time, rather than presented in immediate succession. Studies of the spacing effect have focused on memory processes rather than for other types of learning, such as the acquisition and generalization of new concepts. In this study, early elementary school children (5-7 year-olds; _N_ = 36) were presented with science lessons on one of three schedules: massed, clumped, and spaced. The results revealed that spacing lessons out in time resulted in higher generalization performance for both simple and complex concepts. Spaced learning schedules promote several types of learning, strengthening the implications of the spacing effect for educational practices and curriculum.
 
-This covers a pretty broad range of what one might call 'declarative' knowledge. Extending testing to other fields is more difficult and may reduce to 'write many frequent analyses, not large ones' or 'do lots of small exercises', whatever those might mean in those fields:
+这涵盖了相当广泛的、可称为“陈述性知识”的范围。把“测试”扩展到其他领域会更困难，可能就会退化成“经常写很多小分析，而不是偶尔写一篇大分析”，或者“做大量小练习”之类——在不同领域里这可能意味着不同的事：
 
 > A third issue, which relates to the second, is whether our proposal of testing is really appropriate for courses with complex subject matters, such as the philosophy of Spinoza, Shakespeare's comedies, or creative writing. Certainly, we agree that most forms of objective testing would be difficult in these sorts of courses, but we do believe the general philosophy of testing (broadly speaking) would hold-students should be continually engaged and challenged by the subject matter, and there should not be merely a midterm and final exam (even if they are essay exams). Students in a course on Spinoza might be assigned specific readings and thought-provoking essay questions to complete every week. This would be a transfer-appropriate form of weekly 'testing' (albeit with take-home exams). Continuous testing requires students to continuously engage themselves in a course; they cannot coast until near a midterm exam and a final exam and begin studying only then.^[Roediger & Karpicke 2006b again.]
 
-#### Downsides
+#### 缺点 {#downsides}
 
-Testing does have some known flaws:
+测试确实有一些已知缺点：
 
-#. interference in recall - ability to remember tested items drives out ability to remember similar untested items
+#. 回忆干扰：记住被测试条目的能力，会挤出对相似但未被测试条目的记忆能力
 
-    Most/all studies were in laboratory settings and found relatively small effects:
+    大多数/几乎所有研究都在实验室环境进行，并发现效应相对较小：
 
     > In sum, although various types of recall interference are quite real (and quite interesting) phenomena, we do not believe that they compromise the notion of test-enhanced learning. At worst, interference of this sort might dampen positive testing effects somewhat. However, the positive effects of testing are often so large that in most circumstances they will overwhelm the relatively modest interference effects.
-#. multiple choice tests can accidentally lead to 'negative suggestion effects' where having previously seen a falsehood as an item on the test makes one more likely to believe it.
+#. 选择题可能会意外引发“负性暗示效应”：如果测试题目里出现过某个错误陈述，你之后更可能相信它。
 
-    This is mitigated or eliminated when there's quick feedback about the right answer (see Butler & Roediger 2008 ["Feedback enhances the positive effects and reduces the negative effects of multiple-choice testing"](https://gwern.net/doc/psychology/spaced-repetition/2008-butler.pdf)). Solution: don't use multiple choice; inferior in testing ability to free recall or short answers, anyway.
+    若能快速反馈正确答案，此问题可被缓解或消除（见 Butler & Roediger 2008 ["Feedback enhances the positive effects and reduces the negative effects of multiple-choice testing"](https://gwern.net/doc/psychology/spaced-repetition/2008-butler.pdf)）。解决方案：尽量别用选择题；无论如何，在测试能力上它本来也不如自由回忆或简答。
 
-Neither problem seems major.
+这两个问题看起来都不算严重。
 
-### Distributed
+### 分布式练习（间隔） {#distributed}
 
-A lot depends on *when* you do all your testing. Above we saw some benefits to testing a lot the moment you learn something, but the same number of tests could be spread out over time, to give us the *spacing effect* or *spaced repetition*. There are hundreds of studies involving the spacing effect:
+关键在于你把这些测试放在 *什么时候* 做。上面我们看到：在刚学会某个东西的当下多测试几次会有好处；但同样数量的测试也可以分散到更长时间里，从而形成所谓的*间隔效应*或*间隔重复*。关于间隔效应的研究有数百篇：
 
-- [Cepeda et al 2006](http://uweb.cas.usf.edu/~drohrer/pdfs/Cepeda_et_al_2006PsychBull.pdf "Distributed Practice in Verbal Recall Tasks: A Review and Quantitative Synthesis") is a review of 184 articles with 317 experiments; other reviews include:
+- [Cepeda et al 2006](http://uweb.cas.usf.edu/~drohrer/pdfs/Cepeda_et_al_2006PsychBull.pdf "Distributed Practice in Verbal Recall Tasks: A Review and Quantitative Synthesis") 综述了 184 篇论文、317 个实验；其他综述包括：
 - Ruch 1928, ["Factors influencing the relative economy of massed and distributed practice in learning"](https://gwern.net/doc/psychology/spaced-repetition/1928-ruch.pdf)
 - Crowder 1976, [_Principles of learning and memory_](https://www.amazon.com/Principles-Learning-Memory-Experimental-Psychology/dp/0898591155/)
 - Dempster 1989, ["Spacing effects and their implications for theory and practice"](https://gwern.net/doc/psychology/spaced-repetition/1989-dempster.pdf)
@@ -312,42 +312,42 @@ A lot depends on *when* you do all your testing. Above we saw some benefits to t
 - Balota et al 2007, ["Is Expanded Retrieval Practice a Superior Form of Spaced Retrieval? A Critical Review of the Extant Literature"](http://psychnet.wustl.edu/coglab/wp-content/uploads/2015/01/2007-Is-expanded.pdf "'Is Expanded Retrieval Practice a Superior Form of Spaced Retrieval? A Critical Review of the Extant Literature', Balota et al 2015")
 - Carpenter et al 2012, ["Using Spacing to Enhance Diverse Forms of Learning: Review of Recent Research and Implications for Instruction"](https://files.eric.ed.gov/fulltext/ED536925.pdf)
 
-Almost unanimously they find spacing out tests is superior to massed testing when the final test/measurement is conducted days or years later[^superiority], although the mechanism isn't clear[^mechanism]. Besides all the previously mentioned studies, we can throw in:
+几乎一致的结论是：当最终测验/评估发生在几天甚至几年之后时，把测试分散开来要优于集中测试[^superiority]，尽管其机制仍不清晰[^mechanism]。除了前述研究外，还可以补充：
 
 - Peterson, L. R., Wampler, R., Kirkpatrick, M., & Saltzman, D. (1963). ["Effect of spacing presentations on retention of a paired associate over short intervals"](https://gwern.net/doc/psychology/spaced-repetition/1963-peterson.pdf). _Journal of Experimental Psychology_, 66(2), 206-209
 - Glenberg, A. M. (1977). ["Influences of retrieval processes on the spacing effect in free recall"](https://gwern.net/doc/psychology/spaced-repetition/1977-glenberg.pdf). _Journal of Experimental Psychology: Human Learning and Memory_, 3(3), 282-294
 - Balota et al 1989, ["Age-related differences in the impact of spacing, lag and retention interval"](http://psychnet.wustl.edu/coglab/wp-content/uploads/2015/01/1989-Balota.pdf). _Psychology and Aging_, 4, 3-9
 
-[^mechanism]: The Balota et al 2007 review offers a synthesis of current theories on how massed and spaced differ, based on [memory encoding](!W "Encoding (memory)"):
+[^mechanism]: Balota et al 2007 的综述基于[记忆编码](!W "Encoding (memory)")，综合了关于“集中 vs 间隔”为何不同的主流理论：
 
     > According to encoding variability theory, performance on a memory test is dependent upon the overlap between the contextual information available at the time of test and the contextual information available during encoding. During massed study, there is relatively little time for contextual elements to fluctuate between presentations and so this condition produces the highest performance in an immediate memory test, when the test context strongly overlaps with the same contextual information encoded during both of the massed presentations. In contrast, when there is spacing between the items, there is time for fluctuation to take place between the presentations during study, and hence there is an increased likelihood of having multiple unique contexts encoded. Because a delayed test will also allow fluctuation of context, it is better to have multiple unique contexts encoded, as in the spaced presentation format, as opposed to a single encoded context, as in the massed presentation format.
 
-    Storm et al 2010 did 3 experiments on reading comprehension:
+    Storm et al 2010 针对阅读理解做了 3 个实验：
 
     > On a test 1 week later, recall was enhanced by the expanding schedule, but only when the task between successive retrievals was highly interfering with memory for the passage. These results suggest that the extent to which learners benefit from expanding retrieval practice depends on the degree to which the to-be-learned information is vulnerable to forgetting.
 
-The research literature focuses *extensively* on the question of *what kind* of spacing is best and what this implies about memory: a spacing that has static fixed intervals or a spacing which expands? This is important for understanding memory and building models of it, and would be helpful for integrating spaced repetition into classrooms (for example, [Kelley & Whatson 2013's](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2013.00589/full "Making long-term memories in minutes: a spaced learning pattern from memory research in education") 10 minutes studying / 10 minutes break schedule, repeating the same material 3 times, designed to trigger LTM formation on that block of material?) But for practical purposes, this is uninteresting; to sum it up, there are many studies pointing each way, and whatever difference in efficiency exists, is minimal. Most existing software follows SuperMemo in using an expanding spacing algorithm, so it's not worth worrying about; as Mnemosyne developer Peter Bienstman says, it's not clear the more complex algorithms really help[^Bienstman], and the Anki developers [were concerned about](https://faqs.ankiweb.net/what-spaced-repetition-algorithm.html) the complexity, difficulty of reimplementing SM's proprietary algorithms, lack of substantial gains, & larger errors SM3+ risks attempting to be more optimal. So too here.
+研究文献会*大量*讨论这样一个问题：哪一种“间隔形式”最好、以及这对记忆意味着什么——间隔应该是固定不变的，还是逐渐扩展的？这对于理解记忆与建立模型很重要，也有助于把间隔重复整合进课堂（例如 [Kelley & Whatson 2013](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2013.00589/full "Making long-term memories in minutes: a spaced learning pattern from memory research in education") 的“学习 10 分钟/休息 10 分钟”模式，重复相同材料 3 次，试图触发该材料块的 LTM 形成）。但从实用角度看，这个问题并不太有意思：概括来说，支持两边的研究都有，而效率差异（如果存在）也很小。大多数软件遵循 SuperMemo 使用“扩展间隔”算法，因此不必为此操心；正如 Mnemosyne 开发者 Peter Bienstman 所说，更复杂的算法是否真的更好并不明确[^Bienstman]；而 Anki 开发者也担心算法复杂度、难以复现 SM 的专有算法、收益不大，以及 SM3+ 为求最优而带来的更大误差风险（见其[说明](https://faqs.ankiweb.net/what-spaced-repetition-algorithm.html)）。这里同理。
 
 [^superiority]: Balota et al 2007 review:
 
     > No feedback or correction was given to subjects if they made errors or omitted answers. [Landauer & Bjork 1978](https://gwern.net/doc/psychology/spaced-repetition/1978-landauer.pdf "Optimum Rehearsal Patterns and Name Learning") found that the expanding-interval schedule produced better recall than equal-interval testing on a final test at the end of the session, and equal-interval testing, in turn, produced better recall than did initial massed testing. Thus, despite the fact that massed testing produced nearly errorless performance during the acquisition phase, the other two schedules produced better retention on the final test given at the end of the session. However, the difference favoring the expanding retrieval schedule over the equal-interval schedule was fairly small at around 10%. In research following up Landauer and Bjork's (1978) original experiments, practically all studies have found that spaced schedules of retrieval (whether equal-interval or expanding schedules) produce better retention on a final test given later than do massed retrieval tests given immediately after presentation (eg. Cull, 2000; Cull, Shaughnessy, & Zechmeister, 1996), although exceptions do exist. For example, in Experiments 3 and 4 of Cull et al 1996, massed testing produced performance as good as equal-interval testing on a 5-5-5 schedule, but most other experiments have found that any spaced schedule of testing (either equal-interval or expanding) is better than a massed schedule for performance on a delayed test. However, whether expanding schedules are better than equal-interval schedules for long-term retention-the other part of Landauer and Bjork's interesting findings-remains an open question. Balota, Duchek, and Logan (in press) have provided a thorough consideration of the relevant evidence and have shown that it is mixed at best, and that most researchers have found no difference between the two schedules of testing. That is, performance on a final test at the end of a session often shows no difference in performance between equal-interval and expanding retrieval schedules.
 
-    Cull, for those curious (Cull, W. L. (2000). ["Untangling the benefits of multiple study opportunities and repeated testing for cued recall"](https://gwern.net/doc/psychology/spaced-repetition/2000-cull.pdf). _Applied Cognitive Psychology_, 14, 215-235):
+    如果你感兴趣，这里还有 Cull（Cull, W. L. (2000). ["Untangling the benefits of multiple study opportunities and repeated testing for cued recall"](https://gwern.net/doc/psychology/spaced-repetition/2000-cull.pdf). _Applied Cognitive Psychology_, 14, 215-235)：
 
     > Cull (2000) compared expanded retrieval to equal interval spaced retrieval in a series of four experiments designed to mimic typical teaching or study strategies encountered by students. He examined the role of testing versus simply restudying the material, feedback, and various retention intervals on final test performance. Paired associates (an uncommon word paired with a common word, such as bairn-print) were presented in a manner similar to the flashcard techniques students often use to learn vocabulary words. The intervals between retrieval attempts of to-be-learned information ranged from minutes in some experiments to days in others. Interestingly, across four experiments, Cull did not find any evidence of an advantage of an expanded condition over a uniform spaced condition (ie. no [substantial] expanded retrieval effect), although both conditions consistently produced large advantages over massed presentations. He concluded that distributed testing of any kind, expanded or equal interval, can be an effective learning aid for teachers to provide for their students.
-[^Bienstman]: From Mnemosyne's [Principles](https://mnemosyne-proj.org/principles.php) page:
+[^Bienstman]: 引自 Mnemosyne 的[Principles](https://mnemosyne-proj.org/principles.php) 页面：
 
     > The Mnemosyne algorithm is very similar to [SM2](https://www.supermemo.com/en/blog/application-of-a-computer-to-improve-the-results-obtained-in-working-with-the-supermemo-method) used in one of the early versions of SuperMemo. There are some modifications that deal with early and late repetitions, and also to add a small, healthy dose of randomness to the intervals. Supermemo now uses SM11. However, we are a bit skeptical that the huge complexity of the newer SM algorithms provides for a statistically relevant benefit. But, that is one of the facts we hope to find out with our data collection. We will only make modifications to our algorithms based on common sense or if the data tells us that there is a statistically relevant reason to do so.
 
-For those interested, 3 of the studies that found fixed spacings better than expanding:
+如果你想看“固定间隔优于扩展间隔”的研究，这里列 3 项：
 
 #. Carpenter, S. K., & DeLosh, E. L. (2005). ["Application of the testing and spacing effects to name learning"](https://gwern.net/doc/psychology/spaced-repetition/2005-carpenter.pdf). _Applied Cognitive Psychology_, 19, 619-636[^carpenter]
 #. Logan, J. M. (2004). _Spaced and expanded retrieval effects in younger and older adults_. Unpublished doctoral dissertation, Washington University, St. Louis, MO
 
-    This thesis is interesting inasmuch as Logan found that young adults did considerably worse with an expanding spacing after a day.
+    这篇论文有趣之处在于：Logan 发现年轻人在一天之后用“扩展间隔”反而明显更差。
 #. Karpicke & Roediger, 2006a
 
-The fixed vs expanding issue aside, a list of additional generic studies finding benefits to spaced vs massed:
+先不纠结“固定 vs 扩展”，这里再列一些一般性研究：它们都发现间隔优于集中。
 
 - Cepeda et al 2006 (large review used elsewhere in this page)
 - Karpicke & Roediger 2006a
@@ -355,10 +355,10 @@ The fixed vs expanding issue aside, a list of additional generic studies finding
 - Seabrook et al 2005. ["Distributed and Massed Practice: From Laboratory to Classroom"](https://gwern.net/doc/psychology/spaced-repetition/2005-seabrook.pdf)
 - Keppel, Geoffrey. ["A Reconsideration of the Extinction-Recovery Theory"](https://gwern.net/doc/psychology/spaced-repetition/1967-keppel.pdf). _Journal of Verbal Learning & Verbal Behavior_. 6(4) 1967, 476-486
 
-    A week later, the massed reviewers went from 5.9 correct → 2.1; the spaced reviewers went from 5.5 → 5.0. (Note the usual observation: massed was initially better, and later much worse, less than half as good.)
+    一周后，集中复习组从 5.9 个正确降到 2.1；间隔复习组从 5.5 降到 5.0。（这符合常见观察：集中一开始更好，但之后会更糟，甚至不到一半。）
 - Bloom & Schuell 1981, ["Effects of massed and distributed practice on the learning and retention of second-language vocabulary"](https://gwern.net/doc/psychology/spaced-repetition/1981-bloom.pdf)
 
-    Four days after the 2 high school groups memorized 16 French words, the spaced group remembered 15 and the massed 11.
+    两个高中生小组记住 16 个法语单词后 4 天，间隔组还能记住 15 个，而集中组为 11 个。
 - Rea & Modigliani 1985, ["The effect of expanded versus massed practice on the retention of multiplication facts and spelling lists"](https://gwern.net/doc/psychology/spaced-repetition/1985-rea.pdf)[^multiplication]
 
     > A test immediately following the training showed superior performance for the distributed group (70% correct) compared to the massed group (53% correct). These results seem to show that the spacing effect applies to school-age children and to at least some types of materials that are typically taught in school.^[[Balota et al 2007](http://psychnet.wustl.edu/coglab/wp-content/uploads/2015/01/2007-Is-expanded.pdf "Is Expanded Retrieval Practice a Superior Form of Spaced Retrieval? A Critical Review of the Extant Literature").]
@@ -444,19 +444,19 @@ The domains are limited, however. Cepeda et al 2006:
 > ...[Donovan & Radosevich 1999] The largest effect sizes were seen in low rigor studies with low complexity tasks (eg. rotary pursuit, typing, and peg reversal), and retention interval failed to influence effect size. The only interaction Donovan and Radosevich examined was the interaction of ISI and task domain. It is important to note that task domain moderated the distributed practice effect; depending on task domain and lag, an increase in ISI either increased or decreased effect size. Overall, Donovan and Radosevich found that increasingly distributed practice resulted in larger effect sizes for verbal tasks like free recall, foreign language, and verbal discrimination, but these tasks also showed an inverse-U function, such that very long lags produced smaller effect sizes. In contrast, increased lags produced smaller effect sizes for skill tasks like typing, gymnastics, and music performance.
 
 Skills like gymnastics and music performance raise an important point about the testing effect and spaced repetition: they are for the maintenance of memories or skills, they do not increase it beyond what was already learned. If one is a gifted amateur when one starts reviewing, one remains a gifted amateur. Ericsson covers what is necessary to *improve* and attain new expertise: [deliberate practice](!W)^[The famous '10,000 hours of practice' figure may not be as true or important as Ericsson and publicizers like Malcolm Gladwell imply, given the high [variance](!W) of expertise against time, and results from sports showing [smaller](https://web.archive.org/web/20110809203726/http://www.sportsscientists.com/2011/08/talent-training-and-performance-secrets.html "Talent, training and performance: The secrets of success") time investments (see also [Hambrick's corpus](https://scholar.google.com/scholar?q=author%3AHambrick%20%22deliberate%20practice%22) cutting 'deliberate practice' down to size), and Ericsson absurdly deny the powerful role of genetics and the necessary condition of having talent but the insight of 'deliberate practice' helping talented people probably is real.
-One may be able to get away with 3,000 hours rather than 10,000, but one isn't going to do that with mindless repetition or no repetitions.]. From ["The Role of Deliberate Practice"](https://gwern.net/doc/psychology/writing/1993-ericsson.pdf "'The role of deliberate practice in the acquisition of expert performance', Ericsson et al 1993"):
+也许有人能用 3,000 小时而不是 10,000 小时达到目标，但无论如何，这都不可能靠无脑重复（或干脆不重复）做到。]. 引自 [“The Role of Deliberate Practice”](https://gwern.net/doc/psychology/writing/1993-ericsson.pdf "'The role of deliberate practice in the acquisition of expert performance', Ericsson et al 1993")：
 
 > The view that merely engaging in a sufficient amount of practice---regardless of the structure of that practice---leads to maximal performance, has a long and contested history. In their classic studies of Morse Code operators, Bryan and Harter ([1897](https://gwern.net/doc/psychology/spaced-repetition/1897-bryan.pdf "Studies In The Physiology And Psychology Of The Telegraphic Language"), [1899](https://gwern.net/doc/psychology/spaced-repetition/1899-william.pdf "Studies on the telegraphic language: The acquisition of a hierarchy of habits")) identified plateaus in skill acquisition, when for long periods subjects seemed unable to attain further improvements. However, with extended efforts, subjects could restructure their skill to overcome plateaus...Even very experienced Morse Code operators could be encouraged to dramatically increase their performance through deliberate efforts when further improvements were required...More generally, [Thorndike (1921)](https://gwern.net/doc/psychology/spaced-repetition/1921-thorndike-educationalpsychology-v2-thepsychologyoflearning.pdf#page=188 "_Educational Psychology volume 2: The Psychology of Learning_: pg178") observed that adults perform at a level far from their maximal level even for tasks they frequently carry out. For instance, adults tend to write more slowly and illegibly than they are capable of doing...The most cited condition [for optimal learning and improvement of performance] concerns the subjects' motivation to attend to the task and exert effort to improve their performance...The subjects should receive immediate informative feedback and knowledge of results of their performance...In the absence of adequate feedback, efficient learning is impossible and improvement only minimal even for highly motivated subjects. Hence mere repetition of an activity will not automatically lead to improvement in, especially, accuracy of performance...In contrast to play, deliberate practice is a highly structured activity, the explicit goal of which is to improve performance. Specific tasks are invented to overcome weaknesses, and performance is carefully monitored to provide cues for ways to improve it further. We claim that deliberate practice requires effort and is not inherently enjoyable.
 
 ##### Motor skills
 
 It should be noted that reviews conflict on how much spaced repetition applies to motor skills; Lee & Genovese 1988 find benefits, while Adams 1987 and earlier do not.
-The difference may be that simple motor tasks benefit from spacing as suggested by [Shea & Morgan 1979](https://gwern.net/doc/psychology/spaced-repetition/1979-shea.pdf "Contextual interference effects on the acquisition, retention, and transfer of a motor skill") (benefits to a randomized/spaced schedule), while *complex* ones where the subject is already operating at his limits do not benefit, suggested by [Wulf & Shea 2002](https://pdfs.semanticscholar.org/c747/336e77ce39f7f5cdbd937684a7f564e9e194.pdf "Principles derived from the study of simple skills do not generalize to complex skill learning").
+差异可能在于：简单的运动任务会从间隔中获益（如 [Shea & Morgan 1979](https://gwern.net/doc/psychology/spaced-repetition/1979-shea.pdf "Contextual interference effects on the acquisition, retention, and transfer of a motor skill") 所示：随机/间隔的练习安排更有利），而当任务*复杂*到被试已经在能力极限附近运作时，间隔可能就不再带来收益（如 [Wulf & Shea 2002](https://pdfs.semanticscholar.org/c747/336e77ce39f7f5cdbd937684a7f564e9e194.pdf "Principles derived from the study of simple skills do not generalize to complex skill learning") 所暗示）。
 Stambaugh 2009 mentions some divergent studies:
 
 > The contextual interference hypothesis (Shea and Morgan 1979, Battig 1966 ["Facilitation and interference" in [_Acquisition of skill_](https://archive.org/details/acquisitionofski00conf)]) predicted the blocked condition would exhibit superior performance immediately following practice (acquisition) but the random condition would perform better at delayed retention testing. This hypothesis is generally consistent in laboratory motor learning studies (eg. [Lee & Magill 1983](https://gwern.net/doc/psychology/spaced-repetition/1983-lee.pdf "The Locus of Contextual Interference in Motor-Skill Acquisition"), [Brady 2004](https://gwern.net/doc/psychology/spaced-repetition/2004-brady.pdf "Contextual interference: a meta-analytic study")), but less consistent in applied studies of sports skills (with a mix of positive & negative eg. [Landin & Hebert 1997](https://gwern.net/doc/psychology/spaced-repetition/1997-landin.pdf "A comparison of three practice schedules along the contextual interference continuum"), Hall et al 1994, [Regal 2013](http://digitalcommons.mtu.edu/cgi/viewcontent.cgi?article=1486&context=etds "Skill Acquisition and the Influence of Attentional Focus and Practice")) and fine-motor skills ([Ollis et al 2005](https://gwern.net/doc/psychology/spaced-repetition/2005-ollis.pdf "The influence of professional expertise and task complexity upon the potency of the contextual interference effect"), [Ste-Marie et al 2004](https://gwern.net/doc/psychology/spaced-repetition/2004-stemarie.pdf "High levels of contextual interference enhance handwriting skill acquisition")).
 
-Some of the positive spaced repetition studies (from Son & Simon 2012):
+一些支持“运动技能也受益于间隔”的研究（引自 Son & Simon 2012）：
 
 > Perhaps even prior to the empirical work on cognitive learning and the spacing effect, the benefits of spaced study had been apparent in an array of motor learning tasks, including maze learning (Culler 1912), typewriting (Pyle 1915), archery (Lashley 1915), and javelin throwing (Murphy 1916; see Ruch 1928, for a larger review of the motor learning tasks which reap benefits from spacing; see also Moss 1996, for a more recent review of motor learning tasks). Thus, as in the cognitive literature, the study of practice distribution in the motor domain is long established (see reviews by Adams 1987; Schmidt & Lee 2005), and most interest has centered around the impact of varying the separation of learning trials of motor skills in learning and retention of practiced skills. Lee & Genovese 1988 conducted a review and meta-analysis of studies on distribution of practice, and they concluded that massing of practice tends to depress both immediate performance and learning, where learning is evaluated at some removed time from the practice period. Their main finding was, as in the cognitive literature, that learning was relatively stronger after spaced than after massed practice (although see Ammons 1988; Christina & Shea 1988; Newell et al 1988 for criticisms of the review)...Probably the most widely cited example is Baddeley & Longman 1978's study concerning how optimally to teach postal workers to type. They had learners practice once a day or twice a day, and for session lengths of either 1 or 2 h at a time. The main findings were that learners took the fewest cumulative hours of practice to achieve a performance criterion in their typing when they were in the most distributed practice condition. This finding provides clear evidence for the benefits of spacing practice for enhancing learning. However, as has been pointed out (Newell et al 1988; Lee & Wishart 2005), there is also trade-off to be considered in that the total elapsed time (number of days) between the beginning of practice and reaching criterion was substantially longer for the most spaced condition....The same basic results have been repeatedly demonstrated in the decades since (see reviews by Magill & Hall 1990; Lee & Simon 2004), and with a wide variety of motor tasks including different badminton serves (Goode & Magill 1986), rifle shooting (Boyce & Del Rey 1990), a pre-established skill, baseball batting (Hall et al 1994), learning different logic gate configurations (Carlson et al 1989; Carlson & Yaure 1990), for new users of automated teller machines (Jamieson & Rogers 2000), and for solving mathematical problems as might appear in a class homework (Rohrer & Taylor 2007; Le Blanc & Simon 2008; Taylor & Rohrer 2010).
 >
@@ -483,12 +483,12 @@ Some of the positive spaced repetition studies (from Son & Simon 2012):
 > - Dayan & Cohen 2011, ["Neuroplasticity subserving motor skill learning"](https://www.sciencedirect.com/science/article/pii/S0896627311009184)
 > - Landin et al 1993, ["The Effects of Variable Practice on the Performance of a Basketball Skill"](https://gwern.net/doc/psychology/spaced-repetition/1993-landin.pdf)
 
-In this vein, it's interesting to note that interleaving may be helpful for tasks with a mental component as well: [Hatala et al 2003](https://gwern.net/doc/psychology/spaced-repetition/2003-hatala.pdf "Practice Makes Perfect: The Critical Role of Mixed Practice in the Acquisition of ECG Interpretation Skills"), [Helsdingen et al 2011](https://pdfs.semanticscholar.org/7e0c/1bb80cbc332f07bda26a75a163a9cf76d591.pdf "The effects of practice schedule and critical thinking prompts on learning and transfer of a complex judgment task"), and according to [Huang et al 2013](https://jeffhuang.com/papers/HaloLearning_CHI13.pdf "Mastering the Art of War: How Patterns of Gameplay Influence Skill in Halo") the rates at which Xbox _[Halo: Reach](!W)_ video game players advance in skill matches nicely predictions from distribution: players who play 4--8 matches a week advance more in skill per match, than players who play more (distributed); but advance slower per week than players who play many more matches / massed.
+顺着这个思路，还有一个有趣的点：交错练习（interleaving）对带有认知成分的技能任务也可能有帮助：[Hatala et al 2003](https://gwern.net/doc/psychology/spaced-repetition/2003-hatala.pdf "Practice Makes Perfect: The Critical Role of Mixed Practice in the Acquisition of ECG Interpretation Skills")、[Helsdingen et al 2011](https://pdfs.semanticscholar.org/7e0c/1bb80cbc332f07bda26a75a163a9cf76d591.pdf "The effects of practice schedule and critical thinking prompts on learning and transfer of a complex judgment task")；并且根据 [Huang et al 2013](https://jeffhuang.com/papers/HaloLearning_CHI13.pdf "Mastering the Art of War: How Patterns of Gameplay Influence Skill in Halo")，Xbox 游戏 _[Halo: Reach](!W)_ 玩家技能提升的速率与“练习分布”的预测相当吻合：每周玩 4--8 局的人，每局的技能增量更大（更分布）；但每周的总提升又慢于每周玩更多局（更集中）的人。
 (See also [Stafford & Haasnoot 2016](https://eprints.whiterose.ac.uk/97780/ "Testing sleep consolidation in skill learning: a field study using an online game").)
 
 ##### Abstraction
 
-Another potential objection is to argue^[Gentner, D., Loewenstein, J., & Thompson, L. (2003). ["Learning and transfer: A general role for analogical encoding"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.58.2647&rep=rep1&type=pdf). _Journal of Educational Psychology_, 95, 393-40] that spaced repetition inherently hinders any kind of abstract learning and thought because related materials are not being shown together - allowing for comparison and inference - but days or months apart. Ernst A. Rothkopf: "Spacing is the friend of recall, but the enemy of induction" (Kornell & Bjork 2008, p. 585). This is plausible based on some of the early studies[^abstraction] but the 4 recent studies I know of directly examining the issue both found spaced repetition helped abstraction as well as general recall:
+另一种可能的反对意见是：有人会主张^[Gentner, D., Loewenstein, J., & Thompson, L. (2003). ["Learning and transfer: A general role for analogical encoding"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.58.2647&rep=rep1&type=pdf). _Journal of Educational Psychology_, 95, 393-40]，间隔重复在本质上会妨碍抽象学习与思考，因为相关材料不会同时呈现（无法便于比较与推断），而是相隔数天甚至数月。Ernst A. Rothkopf 说：“间隔是回忆的朋友，却是归纳的敌人”（Kornell & Bjork 2008, p. 585）。基于一些早期研究，这种说法似乎有道理[^abstraction]；但我所知直接检验该问题的 4 项较新研究都发现：间隔重复不仅有助于一般回忆，也有助于抽象能力：
 
 [^abstraction]: From Kornell et al 2010:
 
@@ -512,48 +512,48 @@ Another potential objection is to argue^[Gentner, D., Loewenstein, J., & Thompso
 #. Vlach et al 2014, ["Equal spacing and expanding schedules in children's categorization and generalization"](https://gwern.net/doc/psychology/spaced-repetition/2014-vlach.pdf "'Equal spacing and expanding schedules in childrenâ€™s categorization and generalization', Vlach et al 2014")
 #. Gluckman et al, ["Spacing Simultaneously Promotes Multiple Forms of Learning in Children's Science Curriculum"](https://gwern.net/doc/psychology/spaced-repetition/2014-gluckman.pdf)
 
-### Review summary
+### 综述要点 {#review-summary}
 
-To bring it all together with the gist:
+把前面内容汇总成几条要点：
 
-- testing is effective and comes with minimal [negative factors](#downsides)
-- expanding spacing is roughly as good as or better than (wide) fixed intervals, but expanding is more convenient and the default
-- testing (and hence spacing) is best on intellectual, highly factual, verbal domains, but may still work in many low-level domains
-- the research favors questions which force the user to use their memory as much as possible; in descending order of preference:
+- 测试确实有效，并且[负面因素](#downsides)很少
+- 扩展间隔大致不逊于（较大跨度的）固定间隔，甚至可能更好；而扩展更方便，也是默认选择
+- 测试（因此也包括间隔）在“智力性、事实性强、偏语言”的领域效果最好，但在许多更低层级的领域也可能奏效
+- 研究更偏好那些尽可能迫使用户动用记忆的问题；按偏好从高到低依次为：
 
     #. free recall
     #. short answers
     #. multiple-choice
     #. Cloze deletion
     #. recognition
-- the research literature is comprehensive and most questions have been answered - somewhere.
-- the most common mistakes with spaced repetition are
+- 研究文献相当全面，多数问题在某处都已经有过回答。
+- 间隔重复最常见的错误包括：
 
-    #. formulating poor questions and answers
-    #. assuming it will help you learn, as opposed to maintain and preserve what one already learned^[High error rates - indicating one didn't actually learn the card contents in the first place - seem to be connected to failures of the spacing effect; there's [some evidence](https://www.columbia.edu/cu/psychology/metcalfe/PDFs/Son2010.pdf) that people naturally choose to mass study when they don't yet know the material.]. (It's hard to learn *from* cards, but if you have learned something, it's much easier to then devise a set of flashcards that will test your weak points.)
+    #. 题目与答案写得很差
+    #. 以为它能“替你学习”，而不是“维护与保存你已经学过的东西”^[High error rates - indicating one didn't actually learn the card contents in the first place - seem to be connected to failures of the spacing effect; there's [some evidence](https://www.columbia.edu/cu/psychology/metcalfe/PDFs/Son2010.pdf) that people naturally choose to mass study when they don't yet know the material.].（从卡片 *直接学新东西* 很难；但如果你已经学过某个主题，再围绕自己的薄弱点设计一组抽认卡就容易得多。）
 
-## Using it
+## 使用方法 {#using-it}
 
-One doesn't need to use SuperMemo, of course; there are plenty of free alternatives.
-I like [Mnemosyne](!W "Mnemosyne (software)") ([homepage](https://mnemosyne-proj.org/)) myself - [Free](!W "Free software"), packaged for [Ubuntu Linux](!W), easy to use, free mobile client, long track record of development and reliability (I've used it since ~2008).
-But the SRS [Anki](!W "Anki (software)") is also popular, and has advantages in being more feature-rich and a larger & more active community (and possibly better support for East Asian language material and a better but proprietary mobile client).
+当然，你不一定非要用 SuperMemo；免费的替代品很多。
+我个人更喜欢 [Mnemosyne](!W "Mnemosyne (software)")（[主页](https://mnemosyne-proj.org/)）：它是[自由软件](!W "Free software")，在 [Ubuntu Linux](!W) 上有现成包，易用，有免费的移动端客户端，并且开发历史很长、可靠性不错（我从 ~2008 年开始用）。
+不过，SRS 软件 [Anki](!W "Anki (software)") 也很流行；它的优势在于功能更丰富、社区更大且更活跃（并且可能对东亚语言材料支持更好，同时移动端客户端更好但为专有软件）。
 
-OK, but what does one do with it? It's a surprisingly difficult question, actually. It's akin to "the  tyranny of the blank page" (or blank wiki); now that I have all this power - a mechanical golem that will never forget and never let me forget whatever I chose to - what do I choose to remember?
+好，但关键问题来了：到底该怎么用？这其实出乎意料地难。它有点像“空白页的暴政”（或空白 wiki）：当你突然拥有了这么强的力量——一个机械魔像，既不会忘记，也绝不会让你忘掉你选择记住的东西——那你到底该选择记住什么？
 
-### How Much To Add
+### 该加多少内容 {#how-much-to-add}
 
-The most difficult task, beyond that of just persisting until the benefits become clear, is deciding what's valuable enough to add in.
-In a 3 year period, one can expect to spend ["30--40 seconds"](https://super-memory.com/articles/programming.htm "SuperMemo as a new tool increasing the productivity of a programmer. A case study: programming in Object Windows") on any given item.
-The long run [theoretical predictions](https://super-memory.com/articles/theory.htm) are a little hairier.
-Given a single item, the formula for daily time spent on it is Time = 1⁄500 × <em>n</em>thYear<sup>−1.5</sup> + 1⧸30,000. During our 20<sup>th</sup> year, we would spend _t_ = 1⁄500 × 20<sup>−1.5</sup> + 1⧸3,000, or `3.557e-4` minutes a day. This is the average daily time, so to recover the annual time spent, we simply multiply by 365.
-Suppose we were interested in how much time a flashcard would cost us over 20 years. The average daily time changes every year (the graph looks like an exponential decay, remember), so we have to run the formula for each year and sum them all; in Haskell:
+最困难的事情之一（除了坚持到收益变得明显）是：决定什么东西值得被加入。
+在 3 年跨度里，平均而言，每一条目大约会消耗你[“30--40 秒”](https://super-memory.com/articles/programming.htm "SuperMemo as a new tool increasing the productivity of a programmer. A case study: programming in Object Windows")。
+更长期的[理论预测](https://super-memory.com/articles/theory.htm)则会复杂一些。
+对于单个条目，其每日耗时的公式为：Time = 1⁄500 × <em>n</em>thYear<sup>−1.5</sup> + 1⧸30,000。在第 20<sup>th</sup> 年，我们每天花费 _t_ = 1⁄500 × 20<sup>−1.5</sup> + 1⧸3,000，约为 `3.557e-4` 分钟。这是平均每日时间；要得到年度耗时，只需乘以 365。
+假设我们关心一张抽认卡在 20 年里总共会花掉我们多少时间。平均每日时间每年都在变化（记得那张图看起来像指数衰减），因此需要对每一年计算一次并累加；用 Haskell 表示：
 
 ~~~{.Haskell}
 sum $ map (\year -> ((1/500 * year ** (-(1.5))) + 1/30000) * 365.25) [1..20]
 # 1.8291
 ~~~
 
-Which evaluates to 1.8 minutes. (This may seem too small, but one doesn't spend much time in the first year and the time drops off quickly^[The 20 years look like this (note the [scientific notation](!W)): `[0.742675, 0.27044575182838654, 0.15275979054767388, 0.10348750000000001, 7.751290630254386e-2, 6.187922936397532e-2, 5.161829250474865e-2, 4.445884397854832e-2, 3.923055555555555e-2, 3.5275438307530015e-2, 3.219809429218694e-2, 2.9748098818459235e-2, 2.7759942051635768e-2, 2.6120309801216147e-2, 2.474928593068675e-2, 2.35890625e-2, 2.2596898475825956e-2, 2.1740583401051353e-2, 2.0995431241707652e-2, 2.0342238287817983e-2]`].) [Anki user muflax's](https://gwern.net/doc/psychology/spaced-repetition/2012-muflax-dreamingofaworldundone.html.maff "Dreaming of a World Undone") statistics put his per-card time at 71s, for example. But maybe [Piotr Woźniak](!W "Piotr Wozniak (researcher)") was being optimistic or we're bad at [writing flashcards](https://www.supermemo.com/en/blog/twenty-rules-of-formulating-knowledge), so we'll double it to 5 minutes. That's our key rule of thumb that lets us decide what to learn and what to forget: if, over your lifetime, you will spend more than 5 minutes looking something up or will lose more than 5 minutes as a result of not knowing something, then it's worthwhile to memorize it with spaced repetition. 5 minutes is the line that divides trivia from useful data.[^memorizing] (There might seem to be thousands of flashcards that meet the 5 minute rule. That's fine. Spaced repetition can accommodate dozens of thousands of cards. See the [next section](#the-workload).)
+计算结果为 1.8 分钟。（这看起来也许太小了，但第一年本来就花不了多少时间，而且耗时会迅速下降^[20 年的序列大致如下（注意[科学记数法](!W)）：`[0.742675, 0.27044575182838654, 0.15275979054767388, 0.10348750000000001, 7.751290630254386e-2, 6.187922936397532e-2, 5.161829250474865e-2, 4.445884397854832e-2, 3.923055555555555e-2, 3.5275438307530015e-2, 3.219809429218694e-2, 2.9748098818459235e-2, 2.7759942051635768e-2, 2.6120309801216147e-2, 2.474928593068675e-2, 2.35890625e-2, 2.2596898475825956e-2, 2.1740583401051353e-2, 2.0995431241707652e-2, 2.0342238287817983e-2]`].）例如，[Anki 用户 muflax](https://gwern.net/doc/psychology/spaced-repetition/2012-muflax-dreamingofaworldundone.html.maff "Dreaming of a World Undone")的统计给出每张卡 71 秒。但也许 [Piotr Woźniak](!W "Piotr Wozniak (researcher)") 过于乐观，或者我们不擅长[编写抽认卡](https://www.supermemo.com/en/blog/twenty-rules-of-formulating-knowledge)，所以我们把它翻倍，按 5 分钟估算。于是得到一个关键的经验法则，用来决定“记什么/忘什么”：如果在你一生中，你会花超过 5 分钟去查某个东西，或因为不知道它而损失超过 5 分钟，那么就值得用间隔重复把它记住。5 分钟是区分无用冷知识与有用数据的界线。[^memorizing]（符合“5 分钟规则”的卡片可能会有成千上万张，这没关系。间隔重复可以容纳数万张卡。见[下一节](#the-workload)。）
 
 [^memorizing]: modulo things where knowing it is useful even if you don't need it often - it can be a brick in a pyramid of knowledge; cf. [page 3](https://www.wired.com/2008/04/ff-wozniak/ "‘Want to Remember Everything You’ll Ever Learn? Surrender to This Algorithm’, Wolf 2008") of Wolf:
 
@@ -561,44 +561,44 @@ Which evaluates to 1.8 minutes. (This may seem too small, but one doesn't spend 
      >
      > The disadvantage of this comforting notion is that it's false. "The people who criticize memorization - how happy would they be to spell out every letter of every word they read?" asks Robert Bjork, chair of UCLA's psychology department and one of the most eminent memory researchers. After all, Bjork notes, children learn to read whole words through intense practice, and every time we enter a new field we become children again. "You can't escape memorization," he says. "There is an initial process of learning the names of things. That's a stage we all go through. It's all the more important to go through it rapidly." The human brain is a marvel of associative processing, but in order to make associations, data must be loaded into memory.
 
-To a lesser extent, one might wonder when one is in a hurry, should one learn something with spaced repetition and with massed? How far away should the tests or deadlines be before abandoning spaced repetition? It's hard to compare since one would need a specific regimens to compare for the crossover point, but for massed repetition, the average time after memorization at which one has a 50% chance of remembering the memorized item seems to be 3-5 days.^[See Stephen R. Schmidt's webpage ["Theories of Forgetting"](https://frank.itlab.us/forgetting/mtsu_forgetting/#II.%20Decay%20Theory), which cites 'Woodworth & Schlosbeg (1961)' when presenting a [log graph](https://gwern.net/doc/psychology/spaced-repetition/1961-woodworth-forgettingcurveovertimein5studies.jpg) of various studies' forgetting curves.] Since there would be 2 or 3 repetitions in that period, presumably one would do better than 50% in recalling an item. 5 minutes and 5 days seems like a memorable enough rule of thumb: 'don't use spaced repetition if you need it sooner than 5 days or it's worth less than 5 minutes'.
+另外一个常见问题是：当你很赶时间时，应该用间隔重复还是集中重复？在什么样的考试/截止日期距离下，你应该放弃间隔重复？这很难精确比较，因为你需要一套明确的训练方案来找“交叉点”。但对于集中重复而言，平均来看，“记住之后还能以 50% 概率回忆出来”的时间大约是 3--5 天。^[见 Stephen R. Schmidt 的网页[“Theories of Forgetting”](https://frank.itlab.us/forgetting/mtsu_forgetting/#II.%20Decay%20Theory)，其中引用了 ‘Woodworth & Schlosbeg (1961)’，并给出多项研究遗忘曲线的[对数图](https://gwern.net/doc/psychology/spaced-repetition/1961-woodworth-forgettingcurveovertimein5studies.jpg)。] 在那段时间里你大概能做 2--3 次重复，因此实际回忆率很可能高于 50%。于是可以给出一个好记的经验法则：“5 分钟/5 天规则”：如果你需要它早于 5 天，或者它价值低于 5 分钟，就别用间隔重复。
 
-#### Overload
+#### 过载 {#overload}
 
-Spaced repetition is not infinite.
-Wozniak estimates [a maximum number of ~300,000 items](https://supermemo.guru/wiki/How_much_knowledge_can_human_brain_hold) can be learned.
+间隔重复并不是无限可扩展的。
+Wozniak 估计，人最多能学到大约[~300,000 个条目](https://supermemo.guru/wiki/How_much_knowledge_can_human_brain_hold)。
 
-One common experience of new users to spaced repetition is to add too much stuff---trivialities and things they don't really care about. But they soon learn the curse of [Borges's](!W "Jorge Luis Borges") [Funes the Memorious](!W). If they don't actually want to learn the material they put in, they will soon stop doing the daily reviews - which will cause reviews to pile up, which will be further discouraging, and so they stop. At least with physical fitness there isn't a precisely dismaying number indicating how far behind you are! But if you have too little at the beginning, you'll have few repetitions per day, and you'll see little benefit from the technique itself - it looks like boring flash card review.
+间隔重复新用户的常见经历是：一开始加得太多——尽是琐碎小事或自己并不真正在乎的东西。但他们很快就会体会到 [Borges](!W "Jorge Luis Borges") 的 [Funes the Memorious](!W) 式诅咒：如果你并不想真正学会你塞进来的材料，你很快就会停止每日复习；一旦停止，复习会迅速堆积；堆积又更让人泄气，于是更不想做，最终彻底放弃。至少在健身这件事上，没有一个精确到令人绝望的数字告诉你“你落后了多少”！不过，如果一开始加得太少，你每天的重复也会很少，难以从技术本身感受到明显收益——看起来就只是无聊的抽认卡复习。
 
-### What to add
+### 添加什么 {#what-to-add}
 
-I find one of the best uses for Mnemosyne is, besides the classic use of memorizing academic material such as geography or the periodic table or foreign vocabulary or Bible/Koran verses or the avalanche of medical school facts, to add in words from [A Word A Day](!W)^[which neatly addresses the issue of such mailing lists being useless ('who learns a word after just one exposure?').] and [Wiktionary](!W), memorable quotes I see^[Mnemosyne in this case constitutes both a way to learn the quotes so I can use them, and a [waste book](!W "Notebook (style)"); just the other day I had 3 or 4 apposite quotes for an essay because I had entered them into Mnemosyne months or years ago.], personal information such as birthdays (or license plates, a problem for me before), and so on.
-Quotidian uses, but all valuable to me.
-With a diversity of flashcards, I find my daily review interesting. I get all sorts of questions - now I'm trying to see whether a Haskell fragment is syntactically correct, now I'm pronouncing Korean [hangul](!W) and listening to the answer, now I'm trying to find the Ukraine on a map, now I'm enjoying some [A.E. Housman](!W) poetry, followed by a few quotes from [LessWrong](https://www.lesswrong.com/) quote threads, and so on.
-Other people use it for many other things; one application that impresses me for its simple utility is [memorizing names & faces](https://www.lesswrong.com/posts/YbCc3NRrr5avvWSHT/who-wants-to-start-an-important-startup?commentId=CyxaAxbokswt6ZyPh) [of](https://www.lesswrong.com/posts/YbCc3NRrr5avvWSHT/who-wants-to-start-an-important-startup?commentId=RC2TbuNbD9sXTiH9e) [students](https://www.lesswrong.com/posts/YbCc3NRrr5avvWSHT/who-wants-to-start-an-important-startup?commentId=qPQGQd6E3hZ5DsLz4) although [learning musical notes](https://gwern.net/doc/psychology/spaced-repetition/2012-chessdata-perfectpitchspacedrepetition.webm "Perfect Pitch (Absolute Pitch) training with Mnemosyne (spaced repetition software) [original: https://www.youtube.com/watch?v=y3F7cTEL4b8]") is also not bad.
+我发现 Mnemosyne 的最佳用途之一，除了经典的学术材料记忆（如地理、元素周期表、外语词汇、《圣经》/《古兰经》经文、以及医学院海量事实）之外，是加入一些来自 [A Word A Day](!W)^[这也顺便解决了这类邮件列表“无用”的问题（‘谁会只看一眼就学会一个新词？’）。]与 [Wiktionary](!W) 的单词、我看到的令人印象深刻的引文^[此时 Mnemosyne 既是一种让我学会并能使用这些引文的方式，也是一种[摘录本/随手本](!W "Notebook (style)")；就在前几天我写一篇文章时能随手用上 3--4 条恰当引文，就是因为我在几个月或几年前把它们录进了 Mnemosyne。]、个人信息（如生日；或者车牌号——这曾是我的一个问题），等等。
+这些都是日常用途，但对我而言都很有价值。
+当抽认卡足够多样化时，我会觉得每日复习很有趣：一会儿我在判断一段 Haskell 代码是否语法正确；一会儿我在读韩文 [hangul](!W) 并听答案的发音；一会儿我在地图上找乌克兰；一会儿我在欣赏 [A.E. Housman](!W) 的诗；随后又冒出来几条来自 [LessWrong](https://www.lesswrong.com/) 引用帖的句子……诸如此类。
+其他人还会用它做很多别的事情；一个让我觉得“简单但很有用”的应用是[记住学生的姓名与面孔](https://www.lesswrong.com/posts/YbCc3NRrr5avvWSHT/who-wants-to-start-an-important-startup?commentId=CyxaAxbokswt6ZyPh)（见[这里](https://www.lesswrong.com/posts/YbCc3NRrr5avvWSHT/who-wants-to-start-an-important-startup?commentId=RC2TbuNbD9sXTiH9e)与[这里](https://www.lesswrong.com/posts/YbCc3NRrr5avvWSHT/who-wants-to-start-an-important-startup?commentId=qPQGQd6E3hZ5DsLz4)）；另外，用它来[学习音高/音名](https://gwern.net/doc/psychology/spaced-repetition/2012-chessdata-perfectpitchspacedrepetition.webm "Perfect Pitch (Absolute Pitch) training with Mnemosyne (spaced repetition software) [original: https://www.youtube.com/watch?v=y3F7cTEL4b8]")也不坏。
 
-### The workload
+### 工作量 {#the-workload}
 
-On average, when I'm studying a new topic, I'll add 3--20 questions a day. Combined with my particular memory, I usually review about 90 or 100 items a day (out of the total >18,300). This takes under 20 minutes, which is not too bad. (I expect the time is expanded a bit by the fact that early on, my formatting guidelines were still being developed, and I hadn't the full panoply of categories I do now - so every so often I must stop and edit categories.)
+平均而言，当我在学习一个新主题时，我每天会新增 3--20 个问题。结合我自身的记忆情况，我通常每天复习大约 90 或 100 个条目（总量 >18,300）。这通常花费不到 20 分钟，并不算糟糕。（我猜我的耗时被略微拉长了：早期我的排版规范还在逐步成形，分类体系也不如现在完整，所以我时不时需要停下来修改分类。）
 
-If I haven't been studying something recently, the exponential decaying of reviews slowly drops the daily review.
-For example, in March 2011, I wasn't studying many things, so for 2011-03-24--2011-03-26, my scheduled daily reviews are 73, 83, and 74; after that, it will probably drop down into the 60s, and then after another week or two, into the 50s and so on until it hits the minimum plateau which will slowly shrink over years.
-(I haven't gone long enough without dumping cards in to know what that might be.)
-By February 2012, the daily reviews are in the 40s or sometimes 50s for similar reasons, but the gradual shrinkage will continue.
+如果我最近没有学新东西，复习数量会因为指数式衰减而缓慢下降。
+例如在 2011 年 3 月，我没怎么学新内容，于是 2011-03-24--2011-03-26 这三天的计划复习量分别是 73、83、74；之后它可能会降到六十多，再过一两周降到五十多……直到触及一个最低平台，而这个平台会在多年尺度上继续缓慢缩小。
+（我还没有长时间停止新增卡片到足以知道最低平台会是多少。）
+到 2012 年 2 月，由于类似原因，每日复习量降到四十多、偶尔五十多；但这种缓慢下降仍会继续。
 
-We can see this vividly, and we can even see a sort of analogue of the original forgetting curve, if we ask Mnemosyne 2.0 to graph the number of cards to review per day for the next year up to February 2013 (assuming no additions or missed reviews etc.):
+如果让 Mnemosyne 2.0 画出未来一年（直到 2013 年 2 月）每天需要复习的卡片数量（假设不再新增、也不漏复习等），我们就能非常直观地看到这一点；甚至还能看到一种“遗忘曲线”的类比形态：
 
-![A wildly varying but clearly decreasing graph of predicted cards per day](https://gwern.net/doc/psychology/spaced-repetition/gwern-scheduled-cards.png){.invert}
+![预测的每日卡片数量：波动很大但总体明显下降](https://gwern.net/doc/psychology/spaced-repetition/gwern-scheduled-cards.png){.invert}
 
-If Mnemosyne weren't using spaced repetition, it would be hard to keep up with 18,300+ flashcards.
-But because it is using spaced repetition, keeping up is easy.
+如果 Mnemosyne 不使用间隔重复，要跟上 18,300+ 张抽认卡会非常困难。
+但正因为它使用了间隔重复，跟上进度反而很轻松。
 
-Nor is 18.3k extraordinary.
-Many users have decks in the 6--7k range, Mnemosyne developer [Peter Bienstman](https://groups.google.com/g/mnemosyne-proj-users/c/QzhysVWtdFE) has >8.5k & Patrick Kenny >27k, [Hugh Chen](https://groups.google.com/g/mnemosyne-proj-users/c/7_RPX9sdc4s) has a 73k+ deck, and in `irc://irc.libera.chat#anki`, they tell me of one user who triggered bugs with his >200k deck.
-200,000 may be a bit much, but for regular humans, some amount smaller seems possible---it's interesting to compare SRS decks to the feat of [memorizing _Paradise Lost_](https://gwern.net/doc/psychology/spaced-repetition/2010-seamon.pdf "'Memorising Milton's Paradise Lost: A study of a septuagenarian exceptional memoriser', Seamon et al 2010") or to the Muslim title of ['hafiz'](!W "Hafiz (Qur’an)"), one who has memorized the ~80,000 words of the Koran, or the stricter 'hafid', one who had memorized the Koran *and* 100,000 [hadiths](!W) as well.
-Other forms of memory are still more powerful.[^visualization]
-(I suspect that spaced repetition is involved in one of the few well-documented cases of "[hyperthymesia](!W)", [Jill Price](!W): reading [_Wired_](https://web.archive.org/web/20131208072327/https://www.wired.com/medtech/health/magazine/17-04/ff_perfectmemory?currentPage=all "Total Recall: The Woman Who Can't Forget"), she has ordinary fallible powers of memorization for surprise demands with no observed anatomical differences and is restricted to "her own personal history and certain categories like television and airplane crashes"; further, she is a packrat with obsessive-compulsive traits who keeps >50,000 pages of detailed diaries---perhaps due to a childhood trauma---associates daily events nigh-involuntarily with past events.
-Marcus says the other instances of hyperthymesia resemble Price.)
+而且，18.3k 也并不算夸张。
+许多用户的牌组在 6--7k 之间；Mnemosyne 开发者 [Peter Bienstman](https://groups.google.com/g/mnemosyne-proj-users/c/QzhysVWtdFE) 有 >8.5k，Patrick Kenny 有 >27k，[Hugh Chen](https://groups.google.com/g/mnemosyne-proj-users/c/7_RPX9sdc4s) 有 73k+；在 `irc://irc.libera.chat#anki` 里，他们甚至告诉我有人用 >200k 的牌组触发过 bug。
+200,000 也许有点过头，但对普通人而言，“更小一些的规模”似乎是可能的——把 SRS 牌组与[背诵《失乐园》](https://gwern.net/doc/psychology/spaced-repetition/2010-seamon.pdf "'Memorising Milton's Paradise Lost: A study of a septuagenarian exceptional memoriser', Seamon et al 2010")这类壮举相比很有意思；或者对比穆斯林的称号 ['hafiz'](!W "Hafiz (Qur’an)")：背下约 80,000 词的《古兰经》；更严格的 'hafid' 则不仅背下《古兰经》，还背下 100,000 条 [hadiths](!W)。
+还有一些记忆形式更为强大。[^visualization]
+（我怀疑间隔重复也参与了少数有充分记录的“[超忆症](!W)”案例之一：[Jill Price](!W)。读一读 _Wired_ 的文章[_“Total Recall: The Woman Who Can't Forget”_](https://web.archive.org/web/20131208072327/https://www.wired.com/medtech/health/magazine/17-04/ff_perfectmemory?currentPage=all)：在没有观察到解剖学差异的情况下，她在突发要求下的记忆能力仍然是普通且会出错的，并且能力范围局限在“个人生活史与某些类别（如电视和空难）”；此外，她具有强迫特质的囤积倾向，保留了 >50,000 页的详细日记——也许源于童年创伤——几乎会不由自主地把日常事件与过去事件联想起来。
+Marcus 说，其他超忆症案例也与 Price 类似。）
 
 [^visualization]: It's well known that any speaker of a language understands many more words than they will ever use or be able to explicitly generate, that their "reading vocabulary" exceeds their "writing vocabulary"; less well-known is that on many problems, one can guess at well above random rates even while feeling unsure & ignorant, necessitating psychologists to employ forced-choice paradigms to reveal such ["dark knowledge"](https://gwern.net/doc/psychology/dark-knowledge/index). Even less known is the capacity of [recognition memory](!W) or "implicit memory" (cf. [McCollough effect](!W)); this memory can apply to things like recognizing images or text or music, typing, puzzle solving, etc. Andrew Drucker, in ["Multiplying 10-digit numbers using Flickr: The power of recognition memory"](https://people.csail.mit.edu/andyd/rec_method.pdf), employs visual memory to calculate 9,883,603,368 × 4,288,997,768 = 42,390,752,785,149,282,624; he cites as precedent [Standing 1973](https://gwern.net/doc/psychology/spaced-repetition/1973-standing.pdf "Learning 10,000 pictures"):
 
@@ -612,13 +612,13 @@ Marcus says the other instances of hyperthymesia resemble Price.)
 
     This system is even more interesting because the learning happens unconsciously, without volition, so the subject does not need to cooperate nor even know about it (they could be exposed to key images without realizing it, such as through 'advertising'). Further, recognition of an image also happens unconsciously, and can be observed by [EEG](https://gwern.net/doc/psychology/neuroscience/2007-rugg.pdf "‘Event-related potentials and recognition memory’, Rugg & Curran 2007") [ERPs](!W "Event-related potential") & fMRI (and probably other [neural correlates](https://scholar.google.com/scholar?as_sdt=0%2C21&q=%22recognition+memory%22+neurological+correlate) or modalities like [eyetracking](!W) or [skin galvanic response](!W)). Thus, messages can be stored & retrieved both *unconsciously & involuntarily* in brains!
 
-### When to review
+### 何时复习 {#when-to-review}
 
-When should one review? In the morning? In the evening? Any old time? The studies demonstrating the spacing effect do not control or vary the time of day, so in one sense, the answer is: it doesn't matter - if it did matter, there would be considerable variance in how effective the effect is based on when a particular study had its subjects do their reviews.
+应该什么时候复习？早上？晚上？随便什么时候？展示间隔效应的研究通常并不会控制或操纵一天中的具体时间，因此从某种意义上说答案是：无所谓——如果时间真的很关键，那么不同研究安排被试复习的时间不同，间隔效应的强弱就会出现很大的差异。
 
-So one reviews at whatever time is convenient. Convenience makes one more likely to stick with it, and sticking with it overpowers any temporary improvement.
+所以，就在最方便的时间复习即可。方便意味着你更可能坚持；而“能坚持”会压过任何短暂的微小改进。
 
-If one is not satisfied with that answer, then on general considerations, one ought to review before bedtime & sleep. [Memory consolidation](!W "Memory consolidation#Spacing effect") seems to be related, and [sleep](!W "Sleep and memory") is known to powerfully influence what memories enter long-term memory, [strengthening memories](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0033079 "Memory for Semantically Related and Unrelated Declarative Information: The Benefit of Sleep, the Cost of Wake") of material learned close to bedtime and [increasing creativity](https://www.pnas.org/doi/full/10.1073/pnas.0900271106 "'REM, not incubation, improves creativity by priming associative networks', Cai et al 2009"); interrupting sleep without affecting total sleep time or quality still [damages memory formation in mice](https://www.pnas.org/doi/10.1073/pnas.1015633108)[^polyphasic]. So reviewing before bedtime would be best. (Other mental exercises show improvement when trained before bedtime; for example, [[dual _n_-back](/dnb-faq#sleep)]{#gwern-dnb-faq}.) One possible mechanism is that it may be that the [*expectancy*](https://www.jneurosci.org/content/31/5/1563.full "Sleep Selectively Enhances Memory Expected to Be of Future Relevance") of future reviews/tests is enough to encourage memory consolidation during sleep; so if one reviews and goes to bed, presumably the expectancy is stronger than if one reviewed at breakfast and had an eventful day and forgot entirely about the reviewed flashcards. (See also the correlation between time of studying & GPA in Hartwig & Dunlosky 2012.) Neural growth may be related; from Stahl 2010:
+如果你对“随便什么时候都行”这个答案不满意，那么从一般性的考虑出发，你更应该在睡前复习然后入睡。[记忆巩固](!W "Memory consolidation#Spacing effect")似乎与之相关，而[睡眠](!W "Sleep and memory")被认为会强烈影响哪些记忆进入长期记忆：它会[强化](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0033079 "Memory for Semantically Related and Unrelated Declarative Information: The Benefit of Sleep, the Cost of Wake")那些靠近睡前学习的材料，并且还能[提升创造力](https://www.pnas.org/doi/full/10.1073/pnas.0900271106 "'REM, not incubation, improves creativity by priming associative networks', Cai et al 2009")；即使不影响总睡眠时长或质量，只要打断睡眠也会[损害小鼠的记忆形成](https://www.pnas.org/doi/10.1073/pnas.1015633108)[^polyphasic]。因此，睡前复习可能是最佳选择。（其他脑力训练也常见“睡前训练更好”的现象，例如 [[dual _n_-back](/dnb-faq#sleep)]{#gwern-dnb-faq}。）一种可能机制是：只要对未来复习/测验产生[*期待*](https://www.jneurosci.org/content/31/5/1563.full "Sleep Selectively Enhances Memory Expected to Be of Future Relevance")，就足以在睡眠中促进记忆巩固；所以如果你复习完就去睡，期待强度可能高于“早餐时复习、经历一天的活动、最后完全忘掉自己复习过什么抽认卡”的情况。（另见 Hartwig & Dunlosky 2012 中“学习时间与 GPA”的相关性。）神经生长也可能有关；引自 Stahl 2010：
 
 > Recent advances in our understanding of the neurobiology underlying normal human memory formation have revealed that learning is not an event, but rather a process that unfolds over time.^[16](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1876761/ "'Neurogenesis and the spacing effect: Learning over time enhances memory and the survival of new neurons', Sisti et al 2007"),[17](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3650827/ "'Reconsolidation: maintaining memory relevance', Lee 2009"),[18](https://gwern.net/doc/psychology/spaced-repetition/2010-oneill.pdf "'Play it again: reactivation of waking experience and memory', O'Neill et al 2010"),[Squire\ 2003\ _[Fundamental\ Neuroscience](https://www.amazon.com/Fundamental-Neuroscience-Second-Larry-Squire/dp/0126603030/)_],[20](http://davidjf.free.fr/new/Xtech_scientific%20american_%20making%20memories%20stick.pdf "'Making Memories Stick', Fields 2005")^ Thus, it is not surprising that learning strategies that repeat materials over time enhance their retention.^20,[21](https://gwern.net/doc/psychology/spaced-repetition/1980-glenberg.pdf "'Spacing repetitions over 1 week', Glenberg & Lehmann 1980"),[22](https://gwern.net/doc/psychology/spaced-repetition/1991-toppino.pdf "'The effect of spacing repetitions on the recognition memory of young children and adults', Toppino et al 1991"),[23](https://gwern.net/doc/psychology/spaced-repetition/1978-landauer.pdf "'Optimum rehearsal patterns and name learning', Landauer & Bjork 1978"),[24](http://www.wsu.edu/~fournier/Teaching/psych592/Readings/Karpicke_et_al_2008.pdf "'The Critical Importance of Retrieval for Learning', Karpicke & Roediger 2008"),[25](https://pdfs.semanticscholar.org/6698/bf91c9333faa0d333a800254b8063230d4f4.pdf "'Optimizing retrieval as a learning event: When and why expanding retrieval practice enhances long-term retention', Storm et al 2010"),[26](https://gwern.net/doc/psychology/spaced-repetition/2007-pashler.pdf "'Enhancing learning and retarding forgetting: Choices and consequences', Pashler et al 2007")^
 >
@@ -626,47 +626,47 @@ If one is not satisfied with that answer, then on general considerations, one ou
 >
 > ...Transferring memory from the encoding stage, which occurs during alert wakefulness, into consolidation must thus occur at a time when interference from ongoing new memory formation is reduced.^17,18^ One such time for this transfer is during sleep, especially during non-rapid eye movement sleep, when the hippocampus can communicate with other brain areas without interference from new experiences.^[32](https://pdfs.semanticscholar.org/d0a7/f06ed267f3193daab1175a65abb7a067bef4.pdf "'Sleep, Learning, and Dreams: Off-line Memory Reprocessing', Stickgold et al 2001"),[33](https://pdfs.semanticscholar.org/77fd/0cf03de8a6c4f56c5decc7c47ebe69cf98c1.pdf "'The contribution of sleep to hippocampus-dependent memory consolidation', Marshall & Born 2007"),[34](https://gwern.net/doc/psychology/spaced-repetition/2001-maquet.pdf "'The Role of Sleep in Learning and Memory', Maquet et al 2001")^ Maybe that is why some decisions are better made after a good night's rest and also why pulling an all-nighter, studying with sleep deprivation, may allow you to pass an exam an hour later but not remember the material a day later.
 
-[^polyphasic]: In this vein, I am reminded of what a former [polyphasic sleeper](!W "Polyphasic sleep") [told](https://www.lesswrong.com/posts/p7CrByygeAqomsJqy/optimizing-sleep?commentId=LsuDzoEcksvGMp9Tt) [me](https://www.lesswrong.com/posts/p7CrByygeAqomsJqy/optimizing-sleep?commentId=6nmQ5W7XucdXTqwJL):
+[^polyphasic]: 说到这里，我想起一位前[多相睡眠者](!W "Polyphasic sleep")在 LessWrong 上[对我说](https://www.lesswrong.com/posts/p7CrByygeAqomsJqy/optimizing-sleep?commentId=LsuDzoEcksvGMp9Tt)的[一段话](https://www.lesswrong.com/posts/p7CrByygeAqomsJqy/optimizing-sleep?commentId=6nmQ5W7XucdXTqwJL)：
 
     > I've been polyphasic for about a year. (Not anymore; kills my memory.)...Anki reps, mostly. I found that I could do proper review sessions for about 2--3 days and would hit an impenetrable wall. I couldn't learn a single new card and had total brain fog until I got 3 hours more sleep. That, however, would reset my adaptation. The whole effect is a bit less pronounced on Everyman, but not much. It is however easier to add sleep when you already have a core. I didn't notice any other major mental impairment after the initial sleep deprivation.
 
-#### Prospects: extended flashcards
+#### 展望：扩展型抽认卡 {#prospects-extended-flashcards}
 
-Let's step back for a moment. What are all our flashcards, small and large, doing for us? Why do I have a pair of flashcards for the word 'anent' among many others? I can just look it up.
+让我们先退后一步想想：我们那些大大小小的抽认卡到底在为我们做什么？例如，我为什么要在众多卡片里为单词 'anent' 做一对卡片？我明明可以直接查词典。
 
-But look ups take time compared to already knowing something. (Let's ignore the previously discussed 5 minute rule.) If we think about this abstractly in a computer science context, we might recognize it as an old concept in algorithms & optimization discussions---the [space-time tradeoff](!W). We trade off lookup time against limited skull space.
+但相较于“已经知道”，查找是需要时间的。（先忽略前面讨论过的 5 分钟规则。）如果用计算机科学的抽象视角来看，这对应的是算法与优化里一个老概念——[空间-时间权衡](!W)。我们用有限的大脑存储空间，换取更少的查找时间。
 
-Consider the sort of factual data already given as examples - we might one day need to know the average annual rainfall in Honolulu or Austin, but it would require too much space to memorize such data for all capitals. There are millions of English words, but in practice any more than 100,000 is excessive.
-More surprising is a sort of procedural knowledge. An extreme form of space-time tradeoffs in computers is when a computation is replaced by pre-calculated constants. We could take a math [function](!W "Function (mathematics)") and calculate its output for each possible input. Usually such a [lookup table](!W) of input to output is really large. Think about how many entries would be in such a table for all possible integer multiplications between 1 and 1 billion. But sometimes the table is really small (like binary Boolean functions) or small (like trigonometric tables) or large but still useful ([rainbow tables](!W) usually start in the gigabytes and easily reach terabytes).
+以我们前面举过的事实数据为例：也许有一天我们需要知道檀香山或奥斯汀的年平均降雨量，但把所有城市的这类数据都背下来会占用太多空间。英语单词有数百万个，但在实践中，记住超过 100,000 个往往就已经过量。
+更令人惊讶的是一种“程序性知识”。在计算机里，空间-时间权衡的一个极端形式是：把计算替换为预先计算好的常量。我们可以拿一个数学[函数](!W "Function (mathematics)")，为每一个可能的输入都计算出输出；于是就得到一个从输入到输出的[查找表](!W)。这种表通常非常大：想想看，如果要覆盖 1 到 10 亿之间所有整数乘法组合，这张表得有多少条目？但有时这张表又很小（如二元布尔函数），或不算大（如三角函数表），或虽然很大但依然有用（[彩虹表](!W)通常从 GB 起步，很容易涨到 TB）。
 
-Given an infinitely large lookup table, we could replace *completely* the skill of, say, addition or multiplication by the lookup table. No computation. The space-time tradeoff taken to the extreme of the space side of the continuum. (We could go the other way and define multiplication or addition as the slow computation which doesn't know any specifics like the [multiplication table](!W) - as if every time you wanted to add 2+2 you had to count on 4 fingers.)
+如果我们拥有一张无限大的查找表，那么我们就可以用它来*完全*替代加法或乘法这种技能：不需要计算，只要查表即可。这就是把空间-时间权衡推到“空间端”极致。（当然也可以反过来：把乘法/加法定义成一种完全不知道任何特定事实（如[乘法表](!W)）的缓慢计算过程——仿佛每次算 2+2 都要掰四根手指去数。）
 
-So suppose we were children who wanted to learn multiplication. SRS and Mnemosyne can't help because multiplication is not a specific factoid? The space-time tradeoff shows us that we can de-proceduralize multiplication and turn it partly into factoids. It wouldn't be hard for us to write a quick script or macro to generate, say, 500 random cards which ask us to multiply AB by XY, and import them to Mnemosyne.^[Presumably one would immediately give them all some high grade like 5 to avoid suddenly having a daily load of 500 cards for a while.]
+那么，假设我们是想学乘法的孩子。乘法不是某个具体事实点，所以 SRS/Mnemosyne 就帮不上忙吗？空间-时间权衡告诉我们：我们可以把“乘法”去程序化（de-proceduralize），把它部分转化为事实点。我们完全可以写个小脚本或宏，例如生成 500 张随机卡片，让我们计算 AB×XY，然后导入 Mnemosyne。^[大概会立刻把它们都打一个很高的分数（比如 5），避免突然一段时间内每天要复习 500 张卡。]
 
-After all, which is your mind going to do - get good at multiplying 2 numbers (generate on-demand), or memorize 500 different multiplication problems ([memoize](!W))? From my experience with multiple subtle variants on a card, the mind gives up after just a few and falls back on a problem-solving approach - which is exactly what one wants to exercise, in this case. Congratulations; you have done the impossible.
+毕竟，你的大脑会选择哪条路——擅长“当场算两个数相乘”（按需生成），还是记住 500 道不同的乘法题（[记忆化](!W)）？根据我在“同一张卡的多个细微变体”上的经验，大脑在试了几次后就会放弃死记硬背，转而回到“解题策略”——而在这个场景下，这恰恰就是你想训练的东西。恭喜，你做到了看似不可能的事。
 
-From a software engineering point of view, we might want to modify or improve the cards, and 500 snippets of text would be a tad hard to update. So coolest would be a 'dynamic card'. Add a markup type like `<eval src="​">`  , and then Mnemosyne feeds the `src` argument straight into the Python interpreter, which returns a [tuple](!W) of the question text and the answer text. The question text is displayed to the user as usual, the user thinks, requests the answer, and grades himself.
-In Anki, JavaScript is supported directly by the application in HTML `<script>` tags (currently [inline only](https://docs.ankiweb.net/templates/styling.html#javascript) but Anki could presumably import libraries by default), for example for kinds of [syntax highlighting](https://www.ojisanseiuchi.com/2016/03/12/JavaScript-in-Anki-cards/ "JavaScript in Anki cards"), so any kind of dynamic card could be written that one wants.
+从软件工程角度看，我们可能想修改/改进卡片；而 500 段文本更新起来会有点麻烦。最酷的做法是“动态卡片”（dynamic card）：增加一种标记，比如 `<eval src="​">`，然后 Mnemosyne 把 `src` 参数直接喂给 Python 解释器；解释器返回一个包含“问题文本”和“答案文本”的[元组](!W)。问题照常展示给用户，用户思考、请求答案、给自己打分。
+在 Anki 中，应用本身就支持在 HTML `<script>` 标签里直接写 JavaScript（目前[仅支持内联](https://docs.ankiweb.net/templates/styling.html#javascript)，但理论上 Anki 也可以默认导入库），例如用来做各种[语法高亮](https://www.ojisanseiuchi.com/2016/03/12/JavaScript-in-Anki-cards/ "JavaScript in Anki cards")；因此你可以写出各种你想要的动态卡片。
 
-So for multiplication, the dynamic card would get 2 random integers, print a question like `x * y = ?` and then print the result as the answer. Every so often you would get a new multiplication question, and as you get better at multiplication, you see it less often - exactly as you should. Still in a [math vein](https://www.reddit.com/r/math/comments/hvqzd/printable_math_flashcards_in_pdf_and_latex_source/c1yror5/), you could generate variants on formulas or programs where one version is the correct one and the others are subtly wrong; I do this by hand with my programming flashcards (especially if I make an error doing exercises, that signals a finer point to make several flashcards on), but it can be done automatically. [kpreid](https://www.lesswrong.com/posts/3r4GETDPMf335HfpA/memory-spaced-repetition-and-life?commentId=Mpc8rgQC4THkh38SF) [describes](https://www.lesswrong.com/posts/3r4GETDPMf335HfpA/memory-spaced-repetition-and-life?commentId=Mpc8rgQC4THkh38SF) one tool of his:
+以乘法为例，动态卡片可以随机取两个整数，打印出问题 `x * y = ?`，再把结果作为答案输出。你会不断遇到新的乘法题；随着你对乘法越来越熟练，你就会更少看到它——这正是你应该看到的行为。再举一个偏[数学](https://www.reddit.com/r/math/comments/hvqzd/printable_math_flashcards_in_pdf_and_latex_source/c1yror5/)的例子：你可以生成公式或程序的多个变体，其中一个正确、其他几个“微妙地错误”；我在编程抽认卡里会手工这么做（尤其当我做练习时犯错，通常意味着有个细节值得拆成多张卡），但这也可以自动化。[kpreid](https://www.lesswrong.com/posts/3r4GETDPMf335HfpA/memory-spaced-repetition-and-life?commentId=Mpc8rgQC4THkh38SF) [描述](https://www.lesswrong.com/posts/3r4GETDPMf335HfpA/memory-spaced-repetition-and-life?commentId=Mpc8rgQC4THkh38SF)了他的一个工具：
 
 > I have written [a program](https://github.com/kpreid/mathquiz/) (in the form of [a web page](https://kpreid.github.io/mathquiz/mathquiz.html)) which does a specialized form of this [generating 'damaged formulas']. It has a set of generators of formulas and damaged formulas, and presents you with a list containing several formulas of the same type (eg. ∫ 2x dx = x^2 + C) but with one damaged (eg. ∫ 2x dx = 2x^2 + C).
 
-This approach generalizes to anything you can generate random problems of or have large databases of examples of.
-Khan Academy apparently does something like this in associating large numbers of (algorithmicly-generated?) problems with each of its little modules and tracking retention of the skill in order to decide when to do further review of that module.
-For example, maybe you are studying Go and are interested in learning [life-and-death positions](!W "Life and death"). Those are things that can be generated by computer Go programs, or fetched from places like [GoProblems.com](https://www.goproblems.com/). For even more examples, Go is rotationally invariant - the best move remains the same regardless of which way the board is oriented and since there is no canonical direction for the board (like in chess) a good player ought to be able to play the same no matter how the board looks - so each specific example can be mirrored in 3 other ways. Or one could test one's ability to 'read' a board by writing a dynamic card which takes each example board/problem and adds some random pieces as long as some go-playing program like [GNU Go](!W) says the best move hasn't changed because of the added noise.
+这种思路可以推广到任何“你能生成随机题目”或“你拥有大量题库”的领域。
+Khan Academy 似乎就做了类似的事：把大量（可能是算法生成的？）题目关联到每个小模块，并追踪该技能的保持情况，以决定何时需要再次复习该模块。
+例如，你也许在学围棋并想掌握[死活题](!W "Life and death")：这些可以由围棋程序生成，或从 [GoProblems.com](https://www.goproblems.com/) 等网站获取。还可以做更多变体：围棋具有旋转对称性——棋盘怎么转，最佳着法通常不变；而且不像国际象棋那样有一个“棋盘的标准朝向”，所以一个好棋手应该能在任意朝向下都读出同样的棋。因此每个具体例题都可以再镜像出 3 个等价变体。你还可以写一个动态卡片，用它来测试自己“读棋”的能力：对每个例题棋局随机加一些棋子，只要像 [GNU Go](!W) 这样的围棋程序判断“加入噪声后最佳着法不变”，就保留该变体。
 
-One could learn an awful lot of things this way. Programming languages could be learned this way - someone learning [Haskell](!W "Haskell (programming language)") could take all the functions listed in the Prelude or his Haskell textbook, and ask [QuickCheck](!W) to generate random arguments for the functions and ask the [GHC](!W "Glasgow Haskell Compiler") interpreter `ghci` what the function and its arguments evaluate to. Games other than go, like chess, may work (a live example being [Chess Tempo](http://chesstempo.com/user-guide/en/probSearchSpacedRepetition.html) & [Listudy](https://listudy.org/en "With Listudy you can improve your chess skills with the help of spaced repetition. Better train openings, endgames and tactics with the help of systematic repetition."), and see the experience of [Dan Schmidt](https://dfan.org/blog/2013/07/07/mnemosyne-part-3/ "I'll mostly discuss my experience using it for chess, since that's what the majority of my 8000 cards are..."); or [_Super Smash Brothers_](https://blog.waleedkhan.name/smash-training-retrospective/ "Smash Training retrospective")). A fair bit of mathematics. If the dynamic card has Internet access, it can pull down fresh questions from an [RSS feed](!W) or just a website; this functionality could be quite useful in a foreign language learning context with every day bringing a fresh sentence to translate or another exercise.
+用这种方式可以学习非常多的东西。编程语言也可以这样学：学习 [Haskell](!W "Haskell (programming language)") 的人可以把 Prelude 或教材里列出的所有函数拿出来，让 [QuickCheck](!W) 为函数生成随机参数，再让 [GHC](!W "Glasgow Haskell Compiler") 的解释器 `ghci` 计算出“函数+参数”的结果。围棋之外的游戏也可能适用，例如国际象棋（在线例子包括 [Chess Tempo](http://chesstempo.com/user-guide/en/probSearchSpacedRepetition.html) 与 [Listudy](https://listudy.org/en "With Listudy you can improve your chess skills with the help of spaced repetition. Better train openings, endgames and tactics with the help of systematic repetition.")；另见 [Dan Schmidt](https://dfan.org/blog/2013/07/07/mnemosyne-part-3/ "I'll mostly discuss my experience using it for chess, since that's what the majority of my 8000 cards are...") 的经验；或者 [_Super Smash Brothers_](https://blog.waleedkhan.name/smash-training-retrospective/ "Smash Training retrospective")）。相当多的数学也可以。如果动态卡片能访问互联网，它就能从 [RSS feed](!W) 或网站拉取新题；在外语学习里，这可能很有用：每天都带来一句新的句子供你翻译，或一项新的练习。
 
-With some NLP software, one could write dynamic flashcards which test all sorts of things: if one confuses verbs, the program could take a template like "\$PRONOUN \$VERB \$PARTICLE \$OBJECT % {right: caresse, wrong: caresses}" which yields flashcards like "Je caresses le chat" or "Tu caresse le chat" and one would have to decide whether it was the correct conjugation. (The dynamicism here would help prevent memorizing specific sentences rather than the underlying conjugation.) In full generality, this would probably be difficult, but simpler approaches like templates may work well enough. Jack Kinsella:
+配合一些 NLP 软件，还可以写出测试各种能力的动态抽认卡：例如如果你常把动词变位搞混，程序可以使用类似 "\$PRONOUN \$VERB \$PARTICLE \$OBJECT % {right: caresse, wrong: caresses}" 的模板，生成诸如 "Je caresses le chat" 或 "Tu caresse le chat" 的卡片，然后你需要判断变位是否正确。（这种动态性有助于避免你记住具体句子，而不是掌握底层变位规则。）从完全一般性角度看，这可能很难，但像模板这种简化方案也许已经足够好。Jack Kinsella：
 
 > I wish there were dynamic SRS decks for language learning (or other disciplines). Such decks would count the number of times you have reviewed an instance of an underlying grammatical rule or an instance of a particular piece of vocabulary, for example its singular/plural/third person conjugation/dative form. These sophisticated decks would present users with fresh example sentences on every review, thereby preventing users from remembering specific answers and compelling them to learn the process of applying the grammatical rule afresh. Moreover, these decks would keep users entertained through novelty and would present users with tacit learning opportunities through rotating vocabulary used in non-essential parts of the example sentence. Such a system, with multiple-level review rotation, would not only prevent against overfit learning, but also increase the total amount of knowledge learned per minute, an efficiency I'd gladly invest in.
 
-Even though these things seem like 'skills' and not 'data'!
+尽管这些看起来更像“技能”而不是“数据”！
 
-# Popularity
+# 普及度 {#popularity}
 
-As of 2011-05-02:
+截至 2011-05-02：
 
 <div class="table-small">
  Metric            Mnemosyne            [Mnemododo][] [Anki][]                iSRS        [AnyMemo][]
@@ -707,18 +707,18 @@ As of 2011-05-02:
 [FANTASTIC]: https://play.google.com/store/apps/details?id=org.liberty.android.fantastischmemo
 </div>
 
-SuperMemo doesn't fall under the same ratings, but it has sold in the hundreds of thousands over its 2 decades:
+SuperMemo 不在同一套评价体系下，但在过去 20 年里，它的销量达到数十万份：
 
 > Biedalak is CEO of SuperMemo World, which sells and licenses Wozniak's invention. Today, SuperMemo World employs just 25 people. The venture capital never came through, and the company never moved to California. About 50,000 copies of SuperMemo were sold in 2006, most for less than [$30]($2006). Many more are thought to have been pirated.^[[_Wired_](https://www.wired.com/2008/04/ff-wozniak/ "‘Want to Remember Everything You’ll Ever Learn? Surrender to This Algorithm’, Wolf 2008")]
 
-It seems safe to estimate the combined market-share of Anki, Mnemosyne, iSRS and other SRS apps at somewhere under 50,000 users (making due allowance for users who install multiple times, those who install and abandon it, etc.). Relatively few users seem to have migrated from SuperMemo to those newer programs, so it seems fair to simply add that 50k to the other 50k and conclude that the worldwide population is somewhere around (but probably under) 100,000.
+一个相对稳妥的估计是：Anki、Mnemosyne、iSRS 等 SRS 应用合计的用户量可能低于 50,000（考虑到重复安装、安装后弃用等因素）。从 SuperMemo 迁移到这些新程序的用户似乎相对不多，因此把“SuperMemo 的 50k”与“其他程序的 50k”简单相加、得出全球用户量约为（但大概率低于）100,000，似乎也算合理。
 
-[^alexa]: Smaller is better.
+[^alexa]: 数字越小越好。
 [^imnemo]: ["For Mnemosyne 2.x, Ullrich is working on an official Mnemosyne iPhone client which will have very easy syncing."](https://groups.google.com/g/mnemosyne-proj-users/c/W74Pzq712rU)
 
-# Where was I going with this?
+# 我想说什么来着？ {#where-was-i-going-with-this}
 
-Nowhere, really. Mnemosyne/SR software in general are just one of my favorite tools: it's based on a famous effect[^proudest] discovered by science, and it exploits it elegantly[^me] and usefully. It's a testament to the Enlightenment ideal of improving humanity through reason and overcoming our human flaws; the idea of SR is seductive in its mathematical rigor[^splendor]. In this age where so often the ideal of 'self-improvement' and progress are decried, and gloom are espoused by even the common people, it's really nice to just have a small example like this in one's daily life, an example not yet so prosaic and boring as the lightbulb.
+其实也没想说什么。Mnemosyne/间隔重复软件只是我最喜欢的工具之一：它基于科学发现的著名效应[^proudest]，并以优雅[^me]且实用的方式加以利用。它体现了启蒙时代那种“以理性改善人类、克服自身缺陷”的理想；间隔重复在数学严谨性上也颇具诱惑力[^splendor]。在这个“自我提升”和进步常被嘲讽、连普通人都倾向于悲观的时代，日常生活里能有这样一个小例子，确实让人欣慰——它还没有像电灯泡那样变得过分日常与乏味。
 
 [^proudest]: See [Page 4](https://www.wired.com/2008/04/ff-wozniak/ "‘Want to Remember Everything You’ll Ever Learn? Surrender to This Algorithm’, Wolf 2008"), Wolf 2008:
 
@@ -728,20 +728,20 @@ Nowhere, really. Mnemosyne/SR software in general are just one of my favorite to
 
      > And yet now, as I grin broadly and wave to the gawkers, it occurs to me that the cold rationality of his approach may be only a surface feature and that, when linked to genuine rewards, even the chilliest of systems can have a certain visceral appeal. By projecting the achievement of extreme memory back along the forgetting curve, by provably linking the distant future - when we will know so much - to the few minutes we devote to studying today, Wozniak has found a way to condition his temperament along with his memory. He is making the future noticeable. He is trying not just to learn many things but to warm the process of learning itself with a draft of utopian ecstasy.
 
-# See Also
+# 参见 {#see-also}
 
-In the course of using Mnemosyne, I've written a number of scripts to generate repetitively varying cards.
+在使用 Mnemosyne 的过程中，我写过一些脚本来生成“带重复变化”的卡片。
 
-- [`mnemo.hs`](/haskell/mnemo.hs) will take any newline-delimited chunk of text, like a poem, and generates every possible [Cloze deletion](!W); that is, an ABC poem will become 3 questions: \_BC/ABC, A\_C/ABC, AB\_/ABC
-- [`mnemo2.hs`](/haskell/mnemo2.hs) works as above, but is more limited and is intended for long chunks of text where `mnemo.hs` would cause a combinatorial explosion of generated questions; it generates a subset: for ABCD, one gets \_\_CD/ABCD, A\_\_D/ABCD, and AB\_\_/ABCD (it removes 2 lines, and iterates through the list).
-- [`mnemo3.hs`](/haskell/mnemo3.hs) is intended for date or name-based questions. It'll take input like "Barack Obama is %47%." and spit out some questions based on this: "Barack Obama is \_7./47", "Barack Obama is 4\_./47" etc.
-- [`mnemo4.hs`](/haskell/mnemo4.hs) is intended for long lists of items. If one wants to memorize the list of US Presidents, the natural questions for flashcards goes something like "Who was the 3<sup>rd</sup> president?/Thomas Jefferson", "Thomas Jefferson was the \_rd president./3", "Who was president after John Adams?/Thomas Jefferson", "Who was president before James Madison?/Thomas Jefferson".
+- [`mnemo.hs`](/haskell/mnemo.hs)：输入任意按行分隔的文本块（如一首诗），生成所有可能的 [Cloze deletion](!W)。比如一首 ABC 诗会变成 3 个问题：\_BC/ABC、A\_C/ABC、AB\_/ABC。
+- [`mnemo2.hs`](/haskell/mnemo2.hs)：类似上面，但更受限，适用于较长文本（否则 `mnemo.hs` 会导致组合爆炸）。它生成一个子集：对于 ABCD，会得到 \_\_CD/ABCD、A\_\_D/ABCD、AB\_\_/ABCD（它删除两行，并在列表中迭代）。
+- [`mnemo3.hs`](/haskell/mnemo3.hs)：用于日期或姓名类问题。输入形如 "Barack Obama is %47%."，会生成类似问题："Barack Obama is \_7./47"、"Barack Obama is 4\_./47" 等。
+- [`mnemo4.hs`](/haskell/mnemo4.hs)：用于很长的条目列表。比如要背美国总统列表，自然会出现类似问题：“第 3<sup>rd</sup> 任总统是谁？/Thomas Jefferson”、“Thomas Jefferson 是第 \_ 任总统。/3”、“John Adams 之后的总统是谁？/Thomas Jefferson”、“James Madison 之前的总统是谁？/Thomas Jefferson”。
 
-    You note there's repetition if you do this for each president - one asks the ordinal position of the item both ways (item -> position, position -> item), what precedes it, and what succeeds it. `mnemo4.hs` automates this, given a list. In order to be general, the wording is a bit odd, but it's better than writing it all out by hand! (Example output is in the [comments](!W "Comment (computer programming)") to the source code).
+    你会注意到：如果对每一位总统都这样出题，会有大量重复——需要双向询问序号（条目→序号、序号→条目），还要问它的前驱与后继。`mnemo4.hs` 给定一个列表即可自动化这些问题。为了通用性，它的措辞略显别扭，但总比手写省事得多！（示例输出在源码的[注释](!W "Comment (computer programming)")里。）
 
-The reader might well be curious by this point what *my* Mnemosyne database looks like.
-I use Mnemosyne quite a bit, and as of 2020-02-02, I have 16,149 (active) cards in my deck.
-Said curious reader may find my cards & media at [`gwern.cards`](https://gwern.net/doc/psychology/spaced-repetition/2019-02-03-gwern-mnemosyne-export.cards.xz) (52M; Mnemosyne 2.x format).
+读到这里，读者很可能会好奇：*我的* Mnemosyne 数据库是什么样的。
+我使用 Mnemosyne 很多；截至 2020-02-02，我的牌组里有 16,149 张（活跃）卡片。
+如果你感兴趣，可以在 [`gwern.cards`](https://gwern.net/doc/psychology/spaced-repetition/2019-02-03-gwern-mnemosyne-export.cards.xz) 找到我的卡片与媒体（52M；Mnemosyne 2.x 格式）。
 
 <!-- the metadata:
 Gwern’s flashcards (~2008–2019)
@@ -751,9 +751,9 @@ English, Japanese, Korean, Haskell, R, Python, statistics, China, quotes, philos
 revision: 6 (increment each time)
 -->
 
-The Mnemosyne project has been collecting user-submitted spaced repetition statistical data for years. The full dataset as of 2014-01-27 [is available for download](https://groups.google.com/g/mnemosyne-proj-users/c/tPHlkTFVX_4/m/oF61BF44iQkJ "Mnemosyne data set available") by anyone who wishes to analyze it.
+Mnemosyne 项目多年来一直在收集用户提交的间隔重复统计数据。截至 2014-01-27 的完整数据集，任何想要分析的人都可以[下载](https://groups.google.com/g/mnemosyne-proj-users/c/tPHlkTFVX_4/m/oF61BF44iQkJ "Mnemosyne data set available")。
 
-# External Links
+# 外部链接 {#external-links}
 
 <span id="further-reading"></span>
 
@@ -825,10 +825,10 @@ The Mnemosyne project has been collecting user-submitted spaced repetition stati
 - [Glossika](https://ai.glossika.com/)
 - **Discussion**: [HN](https://news.ycombinator.com/item?id=13151790)/[2](https://news.ycombinator.com/item?id=24857437)
 
-## Flashcard sources
+## 抽认卡资源 {#flashcard-sources}
 
-- the [Mnemosyne deck collection](https://mnemosyne-proj.org/card-sets)
-- the [Anki deck collection](https://ankiweb.net/shared/decks)
+- [Mnemosyne 牌组集合](https://mnemosyne-proj.org/card-sets)
+- [Anki 牌组集合](https://ankiweb.net/shared/decks)
 - [FlashCardExchange.com](https://www.cram.com/)
 - [StudyStack.com](https://www.studystack.com/)
 - [Flashcarddb](https://www.cram.com/topics/popular)
