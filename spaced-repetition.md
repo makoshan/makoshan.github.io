@@ -81,10 +81,10 @@ css-extension: dropcaps-kanzlei
 
     > The superiority of spaced versus massed training is a fundamental feature of learning. Here, we describe unanticipated timing rules for the production of long-term potentiation (LTP) in adult rat hippocampal slices that can account for one temporal segment of the spaced trials phenomenon. Successive bouts of naturalistic theta burst stimulation of field CA1 afferents markedly enhanced previously saturated LTP if spaced apart by 1 h or longer, but were without effect when shorter intervals were used. Analyses of F-actin-enriched spines to identify potentiated synapses indicated that the added LTP obtained with delayed theta trains involved recruitment of synapses that were "missed" by the first stimulation bout. Single spine glutamate-uncaging experiments confirmed that less than half of the spines in adult hippocampus are primed to undergo plasticity under baseline conditions, suggesting that intrinsic variability among individual synapses imposes a repetitive presentation requirement for maximizing the percentage of potentiated connections. We propose that a combination of local diffusion from initially modified spines coupled with much later membrane insertion events dictate that the repetitions be widely spaced. Thus, the synaptic mechanisms described here provide a neurobiological explanation for one component of a poorly understood, ubiquitous aspect of learning.
 
-Even better, it's known that [active recall](!W) is a far superior method of learning than simply passively being exposed to information.[^mapping]
-Spacing also scales to huge quantities of information; gambler/financier [Edward O. Thorp](!W) harnessed "spaced learning" when he was a physics grad student "in order to be able to work longer and harder"[^Thorp], and [Roger Craig](!W "Roger Craig (Jeopardy! contestant)") set multiple records on the quiz show _[Jeopardy!](!W)_ 2010--2011 in part thanks to [using Anki](https://gwern.net/doc/psychology/spaced-repetition/2011-qs-rogercraigwinsjeopardy.html#comment-3004) to memorize chunks of a collection of [>200,000](https://www.j-archive.com/) past questions[^Craig]; a later Jeopardy winner, Arthur Chu, also used spaced repetition[^Chu].
-Med school students (who have become a major demographic for SRS due to the extremely large amounts of factual material they are expected to memorize during medical school) usually have thousands of cards, especially if using pre-made decks (more feasible for medicine due to fairly standardized curriculums & general lack of time to make custom cards).
-Foreign-language learners can easily reach 10-30,000 cards; [one Anki user](https://www.reddit.com/r/Anki/comments/a9s456/what_is_the_largest_anki_deck_you_have_read_about/) reports a deck of >765k [automatically-generated](https://subs2srs.sourceforge.net/ "subs2srs allows you to create import files for Anki or other Spaced Repetition Systems (SRS) based on your favorite foreign language movies and TV shows to aid in the language learning process: this utility will parse through subtitle files, extract the dialog and timing information and then use that information to generate audio clips, snapshots and video clips for each line of dialog.") cards filled with Japanese audio samples from many sources ("Youtube videos, video games, TV shows, etc.").
+更妙的是，研究早已表明，[主动回忆](!W)比单纯被动接触信息要强得多。[^mapping]
+而且，间隔重复还能扩展到极其庞大的信息量：赌徒/金融家 [Edward O. Thorp](!W) 在读物理研究生时就用“间隔学习”来“让自己能更久、更努力地学习”[^Thorp]；而 [Roger Craig](!W "Roger Craig (Jeopardy! contestant)") 在 2010--2011 年参加问答节目 _[Jeopardy!](!W)_ 时，部分依靠[使用 Anki](https://gwern.net/doc/psychology/spaced-repetition/2011-qs-rogercraigwinsjeopardy.html#comment-3004)记住了一个包含[>200,000](https://www.j-archive.com/)道往期题目的题库里的许多片段，从而创下多项纪录[^Craig]；后来的 _Jeopardy!_ 赢家 Arthur Chu 也使用了间隔重复[^Chu]。
+医学生（由于医学院需要记忆的事实材料极其庞大，他们已成为 SRS 的主要人群之一）通常会有数千张卡片，尤其是使用预制牌组时（在医学领域更可行，因为课程相对标准化，而且自制卡片时间往往不够）。
+外语学习者很容易达到 10--30,000 张卡片；[一位 Anki 用户](https://www.reddit.com/r/Anki/comments/a9s456/what_is_the_largest_anki_deck_you_have_read_about/)甚至报告过一个 >765k 的[自动生成](https://subs2srs.sourceforge.net/ "subs2srs allows you to create import files for Anki or other Spaced Repetition Systems (SRS) based on your favorite foreign language movies and TV shows to aid in the language learning process: this utility will parse through subtitle files, extract the dialog and timing information and then use that information to generate audio clips, snapshots and video clips for each line of dialog.")牌组，其中塞满了来自许多来源的日语音频样本（“Youtube 视频、电子游戏、电视节目等”）。
 
 [^mapping]: There are many studies to the effect that active recall is best. Here's one recent study, ["Retrieval Practice Produces More Learning than Elaborative Studying with Concept Mapping"](https://ses.enseigne.ac-lyon.fr/spip/IMG/pdf/2011_karpicke_blunt_science.pdf), Karpicke 2011 (covered in [_Science Daily_](https://www.sciencedaily.com/releases/2011/01/110121111216.htm "Learning science: Actively recalling information from memory beats elaborate study methods; Put down those science text books and work at recalling information from memory. That's the shorthand take away message of new research that says practicing memory retrieval boosts science learning far better than elaborate study methods.") and the [_NYT_](https://www.nytimes.com/2011/01/21/science/21memory.html "To Really Learn, Quit Studying and Take a Test")):
 
@@ -109,19 +109,19 @@ Foreign-language learners can easily reach 10-30,000 cards; [one Anki user](http
 
     > [Chu:] ..._Jeopardy!_ is aimed at the sort of average TV viewer, so they're not going to ask things that are pointlessly obscure...So I used a program called Anki which uses a method called "spaced repetition." It keeps track of where you're doing well or poorly, and pushes you to study the flashcards you don't know as well, until you develop an even knowledge base about a particular subject, and I just made flashcards for those specific things. I memorized all the world capitals, it wasn't that hard once I had the flashcards and was using them every day. I memorized the US State Nicknames (they're on Wikipedia), memorized the basic important facts about the 44 US Presidents. I really focused on those. But there's a lot more stuff to know. I went on _Jeopardy!_ knowing that there was stuff I didn't know. For instance, everyone laughs about sports - but I also knew that [sports clues] were the least likely to come up in Double Jeopardy and Final Jeopardy and be very important. So I decided I shouldn't sweat it too much, I should just recognize that I didn't know them and let that go, as long as I can get the high value clues. So that was how I prepared.
 
-A graphic might help; imagine here one can afford to review a given piece of information a few times (one is a busy person). By looking at the odds we can remember the item, we can see that cramming wins in the short term, but unexercised memories decay so fast that after not too long spacing is much superior:
+一张图或许更直观：设想你只能为某条信息复习几次（毕竟人很忙）。观察“我们还能记住它”的概率，就会发现突击在短期内获胜，但未经巩固的记忆衰减得太快，所以用不了多久，间隔复习就会显著占优：
 
 ![_Wired_ (original, Wozniak?); massed vs spaced ([alternative](https://gwern.net/doc/psychology/spaced-repetition/2013-memotrainerrr.png))](https://gwern.net/doc/psychology/spaced-repetition/forgetting-curve-wired-wozniak.jpg "https://www.wired.com/images/article/magazine/1605/ff_wozniak_graph_f.jpg"){.invert}
 
-It's more dramatic if we look at a video visualizing decay of a corpus of memory with [random review vs most-recent review vs spaced review](https://www.youtube.com/watch?v=ai2K3qHpC7c#t=2m40s).
+如果看一段可视化“记忆语料库衰减”的视频，会更有冲击力：对比[随机复习 vs 最近优先复习 vs 间隔复习](https://www.youtube.com/watch?v=ai2K3qHpC7c#t=2m40s)。
 
-## If you're so good, why aren't you rich
+## 既然这么好，为何没人靠它发财 {#if-youre-so-good-why-arent-you-rich}
 
 > Most people find the concept of programming obvious, but the doing impossible.^[Alan J. Perlis, ["Epigrams in Programming"](https://gwern.net/doc/cs/algorithm/1982-perlis.pdf "'Epigrams on Programming', Perlis 1982") (1982)]
 
-Of course, the latter strategy (cramming) is precisely what students do. They cram the night before the test, and a month later can't remember anything. So why do people do it? (I'm not innocent myself.) Why is spaced repetition so dreadfully unpopular, even among the people who try it once?[^sites]
+当然，后一种策略（突击）正是学生最常做的事：考试前一晚狂背，一个月后几乎什么都不记得了。那么，为什么大家仍然会这么做？（我自己也并不无辜。）为什么间隔重复如此令人沮丧地不受欢迎，哪怕是在那些尝试过一次的人之中？[^sites]
 
-[^sites]: Web developer Persol [writes in August 2012](https://www.lesswrong.com/posts/YbCc3NRrr5avvWSHT/who-wants-to-start-an-important-startup?commentId=cmjjdPpksrjgynF8z):
+[^sites]: 网页开发者 Persol 在 2012 年 8 月[写道](https://www.lesswrong.com/posts/YbCc3NRrr5avvWSHT/who-wants-to-start-an-important-startup?commentId=cmjjdPpksrjgynF8z)：
 
     > I actually wrote a site that did this [spaced repetition] a few months ago. I had about 4000 users who had actually gone through a complete session...As guessed, the problem is that I couldn't get people to start forming it as a habit. There is no immediate payback. Less than 20 people out of 4000 did more than one session...Additionally, there are at least 18 competitors. Here's the list I [made at the time](https://gwern.net/doc/psychology/spaced-repetition/2012-persol-srssitecomparison.pdf). Very few seem to be successful. I shut the site down about a month ago. There are numerous free competitors which don't have any great annoyances. I wouldn't suggest starting another of these sites unless you figured out an effective way to "gamify" it.
     >
@@ -187,53 +187,53 @@ As one would expect if the testing and spacing effects are real things, students
 
     Although Graesser & Person 1994 also found that sheer number of questions was not necessarily important, suggesting [diminishing marginal returns](!W) or perhaps bad question asking.
 
-This short-term perspective is not a good thing in the long term, of course. Knowledge builds on knowledge; one is not learning independent bits of trivia. [Richard Hamming](!W) recalls in ["You and Your Research"](https://gwern.net/doc/science/1986-hamming#conscientiousness) that  "You observe that most great scientists have tremendous drive....Knowledge and productivity are like [compound interest](!W)."
+当然，这种短期视角从长远看并不是好事。知识是在知识之上累积的；我们学习的并不是彼此独立的零散冷知识。[Richard Hamming](!W) 在[“You and Your Research”](https://gwern.net/doc/science/1986-hamming#conscientiousness)里回忆说：“你会发现大多数伟大的科学家都有惊人的驱动力……知识与生产力就像[复利](!W)。”
 
-Knowledge needs to accumulate, and flashcards with spaced repetition can aid in just that accumulation, fostering steady review even as the number of cards and intellectual prerequisites mounts into the [thousands](#the-workload).
+知识需要持续累积；而带间隔重复的抽认卡正可以帮助这种累积：即使卡片数量和先修知识堆到[成千上万](#the-workload)，它也能维持稳定的复习节奏。
 
-This long term focus may explain why explicit spaced repetition is an uncommon studying technique: the pay-off is distant & counterintuitive, the cost of self-control near & vivid. (See [hyperbolic discounting](!W).) It doesn't help that it's pretty difficult to figure out *when* one should review - the optimal point is when you're just about to forget about it, but that's the kicker: if you're just about to forget about it, how are you supposed to remember to review it? You only remember to review what you remember, and what you already remember isn't what you need to review![^wired1]
+这种长期导向或许解释了为什么“显式的间隔重复”并不是一种常见的学习技巧：收益遥远且反直觉，而自控的成本近在眼前且极其鲜明（参见[双曲贴现](!W)）。更糟的是，你很难判断自己到底应该 *何时* 复习：最佳时点恰恰是“你正要忘记它的时候”，但问题就在这里——如果你正要忘记它，你又怎么会想起来去复习？你只会记得去复习你还记得的东西；而你还记得的东西，往往并不是你最需要复习的！[^wired1]
 
 [^wired1]:  "SuperMemo is based on the insight that there is an ideal moment to practice what you've learned. Practice too soon and you waste your time. Practice too late and you've forgotten the material and have to relearn it. The right time to practice is just at the moment you're about to forget. Unfortunately, this moment is different for every person and each bit of information. Imagine a pile of thousands of flash cards. Somewhere in this pile are the ones you should be practicing right now. Which are they?" Gary Wolf, ["Want to Remember Everything You'll Ever Learn? Surrender to This Algorithm"](https://www.wired.com/2008/04/ff-wozniak/ "‘Want to Remember Everything You’ll Ever Learn? Surrender to This Algorithm’, Wolf 2008"), _[Wired Magazine](!W)_
 
-The paradox is resolved by letting a computer handle all the calculations. We can thank [Hermann Ebbinghaus](https://en.wikisource.org/wiki/Memory:_A_Contribution_to_Experimental_Psychology "'Memory: A Contribution to Experimental Psychology', Ebbinghaus 1885") for investigating in such tedious detail than we can, in fact, program a computer to calculate both the forgetting curve and optimal set of reviews^["Make no mistake about it: Computers process numbers - not symbols. We measure our understanding (and control) by the extent to which we can arithmetize an activity." Perlis, _ibid._]. This is the insight behind [spaced repetition](!W) software: ask the same question over and over, but over increasing spans of time. You start with asking it once every few days, and soon the human remembers it reasonably well. Then you expand intervals out to weeks, then months, and then years. Once the memory is formed and dispatched to long-term memory, it needs but occasional exercise to remain hale and hearty^[this exponential expansion is how a SR program can handle continual input of cards: if cards were scheduled at fixed intervals, like every other day, review would soon become quite impossible - I have >18000 items in Mnemosyne, but I don't have time to review 9000 questions a day!] - I remember well the large dinosaurs made of cardboard for my 4^th^ or 5^th^ birthday, or the tunnel made out of boxes, even though I recollect them once or twice a year at most.
+这个悖论可以通过让计算机来做全部计算而解决。我们要感谢 [Hermann Ebbinghaus](https://en.wikisource.org/wiki/Memory:_A_Contribution_to_Experimental_Psychology "'Memory: A Contribution to Experimental Psychology', Ebbinghaus 1885")：他以极其繁琐的细致程度验证了这样一件事——我们确实可以编程让计算机计算遗忘曲线与一组近似最优的复习时点^[“别搞错了：计算机处理的是数字——不是符号。我们对某个活动的理解（与控制）程度，取决于我们能在多大程度上把它算术化。”Perlis，同上。]。这正是[间隔重复](!W)软件背后的洞见：反复提问同一个问题，但时间间隔逐步拉长。起初每隔几天问一次，很快人就能记得相当牢；随后把间隔扩展到几周、几个月、再到几年。一旦记忆形成并转入长期记忆，它只需要偶尔“锻炼”就能保持健康^[这种指数式扩展也解释了 SR 程序为何能持续输入新卡：如果卡片固定每隔两天复习一次，那么复习很快就会变得不可能——我在 Mnemosyne 里有 >18000 条目，但我不可能每天复习 9000 道题！]——我至今仍清楚记得四五岁生日时那些纸板做的大恐龙，或箱子搭成的隧道，尽管我一年顶多想起它们一两次。
 
-## Literature review
+## 文献综述 {#literature-review}
 
-But don't take my word for it - _Nullius in verba_! We can look at the science. Of course, if you do take my word for it, you probably just want to read about how to use it and all the nifty things you can do, so I suggest you [skip all the way down](#using-it) to that section. Everyone else, we start at the beginning:
+但别只听我一面之词——_Nullius in verba_！我们可以直接看科学证据。当然，如果你愿意相信我的结论，你多半只是想知道如何使用它，以及它能玩出哪些花样；那我建议你直接[跳到后面](#using-it)的“使用方法”一节。否则，我们就从头开始：
 
-### Background: testing works!
+### 背景：测验确实有效！
 
 > "If you read a piece of text through twenty times, you will not learn it by heart so easily as if you read it ten times while attempting to recite from time to time and consulting the text when your memory fails." --_[The New Organon](!W)_, [Francis Bacon](!W)
 
-The [testing effect](!W) is the established psychological observation that the mere act of testing someone's memory will strengthen the memory (regardless of whether there is feedback). Since [spaced repetition](!W) is just testing on particular days, we ought to establish that testing works better than regular review or study, and that it works outside of memorizing random dates in history. To cover a few papers:
+[测验效应](!W)是心理学中一个相当稳固的观察：仅仅通过“测试某人的记忆”这一行为，就能强化记忆（不论是否提供反馈）。由于[间隔重复](!W)本质上就是在特定日期进行测试，我们应当先确认：测试确实比普通复习/学习更有效，而且它并不只适用于背诵历史年代这类随机事实。下面简单列几篇论文：
 
 #. Allen, G.A., Mahler, W.A., & Estes, W.K. (1969). ["Effects of recall tests on long-term retention of paired associates"](https://gwern.net/doc/psychology/spaced-repetition/1969-allen.pdf). _Journal of Verbal Learning and Verbal Behavior_, 8, 463-470
 
-    1 test results in memories as strong a day later as studying 5 times; intervals improve retention compared to massed presentation.
+    一次测试，在一天后的记忆强度上就能达到“学习 5 次”的效果；相比集中呈现，加入间隔能提升保持。
 
 #. Karpicke & Roediger (2003). ["The Critical Importance of Retrieval for Learning"](http://www.wsu.edu/~fournier/Teaching/psych592/Readings/Karpicke_et_al_2008.pdf "‘The Critical Importance of Retrieval for Learning’, Karpicke & Roediger 2008")
 
-    In learning Swahili vocabulary, students were given varying routines of testing or studying or testing and studying; this resulted in similar scores during the learning phase. Students were asked to predict what percentage they'd remember (average: 50% over all groups). One week later, the students who tested remembered ~80% of the vocabulary versus ~35% for non-testing students. Some students were tested or studied more than others; diminishing returns set in quickly once the memory had formed the first day. Students reported rarely testing themselves and not testing already learned items.
+    在学习斯瓦希里语词汇时，学生被分配到不同流程：只测试、只学习、或测试+学习。在学习阶段，各组表现相近。学生被要求预测自己能记住多少（各组平均：50%）。一周后，做过测试的学生还能记住约 80% 的词汇，而未测试组约为 35%。一些学生被测试/学习的次数更多；但一旦第一天形成记忆，边际收益很快开始递减。学生自述很少自测，也很少测试“已经学会的内容”。
 
-    Lesson: again, testing improves memory compared to studying. Also, no student knows this.
+    结论：再次验证，测试相比单纯学习能更好地增强记忆；而且学生普遍并不知道这一点。
 
 #. Roediger & Karpicke (2006a). ["Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention"](https://gwern.net/doc/psychology/spaced-repetition/2006-roediger.pdf "‘Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention’, Roediger & Karpicke 2006")
 
-    Students were tested (with no feedback) on reading comprehension of a passage over 5 minutes, 2 days, and 1 week. Studying beat testing over 5 minutes, but nowhere else; students believed studying superior to testing over all intervals. At 1 week, testing scores were ~60% versus ~40%.
+    学生在阅读一段文章后接受阅读理解测试（无反馈），测试发生在 5 分钟后、2 天后、以及 1 周后。5 分钟后“学习”优于“测试”，但在更长间隔上并非如此；学生主观上却认为各个间隔中学习都优于测试。到 1 周时，测试组约 60%，学习组约 40%。
 
-    Lesson: testing improves memory compared to studying. Everyone (teachers & students) 'knows' the opposite.
+    结论：测试相比学习能更好地增强记忆；而每个人（教师与学生）都“知道”相反的事。
 #. Karpicke & Roediger (2006a). ["Expanding retrieval promotes short-term retention, but equal interval retrieval enhances long-term retention"](https://gwern.net/doc/psychology/spaced-repetition/2007-karpicke.pdf "‘Expanding retrieval practice promotes short-term retention, but equally spaced retrieval enhances long-term retention’, Karpicke & Roediger 2007")
 
-    General scientific prose comprehension; from Roediger & Karpicke 2006b: "After 2 days, initial testing produced better retention than restudying (68% versus 54%), and an advantage of testing over restudying was also observed after 1 week (56% versus 42%)."
+    针对一般科学类散文的理解；引自 Roediger & Karpicke 2006b：“2 天后，初次测试的保持优于重复学习（68% vs 54%）；1 周后测试相对重复学习的优势仍然存在（56% vs 42%）。”
 #. Roediger & Karpicke (2006b). ["The Power of Testing Memory: Basic Research and Implications for Educational Practice"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.858.5753&rep=rep1&type=pdf)
 
-    Literature review; 7 studies before 1941 demonstrating testing improves retention, and 6 afterwards. See also the reviews ["Spacing Learning Events Over Time: What the Research Says"](https://gwern.net/doc/psychology/spaced-repetition/2006-thalheimer.pdf "Thalheimer 2006") & ["Using spacing to enhance diverse forms of learning: Review of recent research and implications for instruction"](https://laplab.ucsd.edu/articles/Carpenter_etal_EPR2012.pdf), Carpenter et al 2012.
+    文献综述；列举了 1941 年前的 7 项研究与之后的 6 项研究，均显示测试能提升保持。另见综述[“Spacing Learning Events Over Time: What the Research Says”](https://gwern.net/doc/psychology/spaced-repetition/2006-thalheimer.pdf "Thalheimer 2006")与[“Using spacing to enhance diverse forms of learning: Review of recent research and implications for instruction”](https://laplab.ucsd.edu/articles/Carpenter_etal_EPR2012.pdf)（Carpenter et al 2012）。
 #. Agarwal et al 2008, ["Examining the Testing Effect with Open- and Closed-Book Tests"](https://pdfs.semanticscholar.org/7521/c9adbe66cb2e777f37b6b00e97f5f95633c2.pdf)
 
-    As with #2, the purer forms of testing (in this case, open-book versus closed-book testing) did better over the long run, and students were deluded about what worked best.
+    类似 #2，越“纯粹”的测试形式（这里是开卷 vs 闭卷测试）在长期上表现越好；而学生对“什么更有效”仍然存在错觉。
 #. Bangert-Drowns et al 1991. ["Effects of frequent classroom testing"](https://gwern.net/doc/psychology/spaced-repetition/1991-bangertdrowns.pdf)
 
-    Meta-analysis of 35 studies (1929–1989) varying tests during school semesters. 29 found benefits; 5 found negatives; 1 null result. Meta-study found large benefits to testing even once, then diminishing returns.
+    对 35 项研究（1929--1989）进行元分析，这些研究操纵了学期内的测试安排：29 项发现收益，5 项发现负面影响，1 项无显著结果。元分析认为，即便只测试一次也有明显收益，随后则出现边际递减。
 #. Cook 2006, ["Impact of self-assessment questions and learning styles in Web-based learning: a randomized, controlled, crossover trial"](https://gwern.net/doc/psychology/spaced-repetition/2006-cook.pdf); final scores were higher when the doctors (residents) learned with questions.
 #. Johnson & Kiviniemi 2009, ["The Effect of Online Chapter Quizzes on Exam Performance in an Undergraduate Social Psychology Course"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2747780/) ("This study examined the effectiveness of compulsory, mastery-based, weekly reading quizzes as a means of improving exam and course performance. Completion of reading quizzes was related to both better exam and course performance."); see also [McDaniel et al 2012](https://gwern.net/doc/psychology/spaced-repetition/2012-mcdaniel.pdf "Using quizzes to enhance summative-assessment performance in a web-based class: An experimental study").
 #. Metsämuuronen 2013, ["Effect of Repeated Testing on the Development of Secondary Language Proficiency"](https://www.ccsenet.org/journal/index.php/jedp/article/download/19582/15080)
@@ -241,7 +241,7 @@ The [testing effect](!W) is the established psychological observation that the m
 #. Larsen & Butler 2013, ["Test-enhanced learning"](https://gwern.net/doc/psychology/spaced-repetition/2013-larsen.pdf "'Chapter 38: Test-Enhanced Learning', Larsen & Butler 2013")
 #. Yang et al 2021, ["Testing (Quizzing) Boosts Classroom Learning: A Systematic And Meta–Analytic Review"](https://gwern.net/doc/psychology/spaced-repetition/2021-yang.pdf)
 
-(One might be tempted to object that testing works for *some* [learning styles](!W), perhaps verbal styles. This is an unsupported assertion inasmuch as the experimental literature on learning styles is poor and the existing evidence mixed that there are such things as learning styles.[^style])
+（你可能会忍不住反驳：测试只对 *某些*[学习风格](!W)有效，比如偏语言型的人。但这缺乏支持：关于学习风格的实验文献质量不高，而且现有证据也相当混杂，甚至难以确认“学习风格”是否真以这种方式存在。[^style]）
 
 [^style]: See the 2008 meta-analysis, ["Learning Styles: Concepts and Evidence"](https://www.psychologicalscience.org/journals/pspi/PSPI_9_3.pdf) ([APS press release](https://www.psychologicalscience.org/news/releases/learning-styles-debunked-there-is-no-evidence-supporting-auditory-and-visual-learning-psychologists-say.html)); from the abstract:
 
