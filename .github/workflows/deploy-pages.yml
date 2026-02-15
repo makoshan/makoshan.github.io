@@ -20,6 +20,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      GWERN_LINK_SIZES: "0"
+      GWERN_ANNOTATIONS: "0"
+      GWERN_LINK_ANNOTATIONS: "0"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -47,6 +51,13 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+          if ! command -v convert >/dev/null 2>&1; then
+            if command -v magick >/dev/null 2>&1; then
+              sudo ln -s "$(command -v magick)" /usr/local/bin/convert
+            fi
+          fi
           cd build
           cabal update
           cabal build --only-dependencies

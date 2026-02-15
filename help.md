@@ -1,7 +1,7 @@
 ---
 title: 网站帮助
 description: "本站快捷键与功能的简明速查表。"
-thumbnail: /doc/cs/css/2023-11-08-gwern-gwernnet-essaypopup-catitecture-withanxiousblackcatatwindowsillthumbnail.png
+thumbnail: https://gwern.net/doc/cs/css/2023-11-08-gwern-gwernnet-essaypopup-catitecture-withanxiousblackcatatwindowsillthumbnail.png
 thumbnail-text: "Screenshot of Gwern.net popup features."
 created: 2024-04-05
 modified: 2024-12-04
@@ -68,7 +68,7 @@ backlink: False
     - [Chrome](https://support.google.com/chrome/answer/157179)
     - [Safari](https://support.apple.com/guide/safari/keyboard-and-other-shortcuts-cpsh003/mac#ibrw51086045)
 - 关于本站: [/About](/About "关于本站"), [/me](/me "关于我")
-- 浏览资料库: [/doc/index](/doc/index "全部资料"), 或 [/doc/newest/index](/doc/newest/index "最新链接")
+- 浏览资料库: [https://gwern.net/doc/index](https://gwern.net/doc/index "全部资料"), 或 [https://gwern.net/doc/newest/index](https://gwern.net/doc/newest/index "最新链接")
 - 浏览新页面: [/Changelog](/Changelog "更新日志")
 - Newsletter: [Substack](https://v2eth.substack.com/), [/newsletter/index](/newsletter/index "Newsletter 归档")
 - [Google `site:` search](https://www.google.com/search?q=site%3Agwern%2Enet)

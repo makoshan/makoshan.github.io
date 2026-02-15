@@ -9,22 +9,22 @@ importance: 7
 css-extension:  dropcaps-kanzlei
 ...
 
-Dual _n_-Back 是一种[认知训练](!W "工作记忆训练")，旨在扩展你的[工作记忆](!W) (WM)，并希望你的智力 (IQ^[By [IQ](!W))，我指的是流体智力，而不是结晶智力，因为任何通用训练都不太可能教你拉丁语词汇术语或中学几何。对于那些反对整个的人有关 IQ 可以预测的内容和例外情况的平衡概述，请参阅 Sternberg 等人 2001 年的评论，["IQ 的预测价值"](/doc/iq/2001-sternberg.pdf)。])。 
+Dual _n_-Back 是一种[认知训练](!W "工作记忆训练")，旨在扩展你的[工作记忆](!W) (WM)，并希望你的智力 (IQ^[By [IQ](!W))，我指的是流体智力，而不是结晶智力，因为任何通用训练都不太可能教你拉丁语词汇术语或中学几何。对于那些反对整个的人有关 IQ 可以预测的内容和例外情况的平衡概述，请参阅 Sternberg 等人 2001 年的评论，["IQ 的预测价值"](https://gwern.net/doc/iq/2001-sternberg.pdf)。])。 
 
-该理论最初很新颖^[经过大量训练后，一项任务可能会变得学会并不再强调瓶颈：例如。 ["双任务表现中几乎完美的时间共享：解锁中央认知瓶颈"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.7582&rep=rep1&type=pdf "Schumacher et al 2001")。]认知过程往往会重叠，并且似乎要经历[一个中央认知过程]瓶颈]（https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3158154/"'人脑中的统一注意力瓶颈'，Tombu et al 2011"）。事实上，WM 可以预测并与 IQ 相关联^[参见示例 ["工作记忆和对干扰的敏感性是否可以预测体液中的个体差异"智力？"](http://jtoomim.org/brain-training/Do%20working%20memory%20and%20susceptibility%20to%20interference%20predict%20differences%20in%20fluid%20intelligence.pdf)，Borella 2006； WM 比强烈的专注/注意力更好地预测智商，其相关性主要来自于专注，而执行控制上的负载很小（[Chuderski & Necka 2012](/doc/dual-n-back/2012-chuderski.pdf "工作记忆对流体推理的贡献：能力、控制或两者？"))。]并且可能使用相同的神经网络[^fMRI-IQ]，表明 WM 可能*是*智商^[例如。 ["推理=工作记忆≠注意力"](/doc/dual-n-back/2005-buehner.pdf)，Buehner & Krummb & Pick 2005；更多背景信息请参见["工作记忆、流体智力和科学学习"](https://web.stanford.edu/dept/SUSE/SEAL/Reports_Papers/YuanEtal_WorkingMemory.pdf "Yuan et al 2006")的第 10/92 页。但请参阅 [Ackerman et al 2005](/doc/dual-n-back/2005-ackerman.pdf "工作记忆和智力：相同或不同的结构？") 中的荟萃分析，发现 WM ≠ IQ。]。众所周知，WM 是可以训练的，因此改善 WM 有望提高智商。 N-back 是一系列强调注意力和 WM 的任务。
+该理论最初很新颖^[经过大量训练后，一项任务可能会变得学会并不再强调瓶颈：例如。 ["双任务表现中几乎完美的时间共享：解锁中央认知瓶颈"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.7582&rep=rep1&type=pdf "Schumacher et al 2001")。]认知过程往往会重叠，并且似乎要经历[一个中央认知过程]瓶颈]（https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3158154/"'人脑中的统一注意力瓶颈'，Tombu et al 2011"）。事实上，WM 可以预测并与 IQ 相关联^[参见示例 ["工作记忆和对干扰的敏感性是否可以预测体液中的个体差异"智力？"](http://jtoomim.org/brain-training/Do%20working%20memory%20and%20susceptibility%20to%20interference%20predict%20differences%20in%20fluid%20intelligence.pdf)，Borella 2006； WM 比强烈的专注/注意力更好地预测智商，其相关性主要来自于专注，而执行控制上的负载很小（[Chuderski & Necka 2012](https://gwern.net/doc/dual-n-back/2012-chuderski.pdf "工作记忆对流体推理的贡献：能力、控制或两者？"))。]并且可能使用相同的神经网络[^fMRI-IQ]，表明 WM 可能*是*智商^[例如。 ["推理=工作记忆≠注意力"](https://gwern.net/doc/dual-n-back/2005-buehner.pdf)，Buehner & Krummb & Pick 2005；更多背景信息请参见["工作记忆、流体智力和科学学习"](https://web.stanford.edu/dept/SUSE/SEAL/Reports_Papers/YuanEtal_WorkingMemory.pdf "Yuan et al 2006")的第 10/92 页。但请参阅 [Ackerman et al 2005](https://gwern.net/doc/dual-n-back/2005-ackerman.pdf "工作记忆和智力：相同或不同的结构？") 中的荟萃分析，发现 WM ≠ IQ。]。众所周知，WM 是可以训练的，因此改善 WM 有望提高智商。 N-back 是一系列强调注意力和 WM 的任务。
 
 [^fMRI-IQ]：["通过 fMRI 和DTI"](http://jtoomim.org/brain-training/Brain%20networks%20for%20working%20memory%20and%20factors%20of%20intelligence%20assessed%20in%20males%20and%20females%20with%20fMRI%20and%20DTI.pdf)，唐2010；研究发现，"n-back 任务期间激活的个体差异与一般智力因素 (_g_) 相关，并且与推理速度、数字能力和空间能力的精炼估计（删除 _g_）相关，但与记忆力无关"。
 
  最新的结果是功能磁共振成像研究 [Chein] 2011](http://jtoomim.org/brain-training/Domain%20general%20mechanisms%20of%20complex%20memory%20span.pdf)，"复杂工作记忆跨度的一般领域机制"，摘要说"对于任务的语言和空间版本，复杂工作记忆跨度的表现增加了在编码、维护和处理过程中外侧前额叶、前扣带皮层和顶叶皮质的活动。同时，前额叶和内侧颞叶区域的重叠活动与工作记忆中的言语和空间回忆相关。"
 
-后来的研究发现，N-back 的表现和改进似乎与智商相关，而不是与背诵数字列表等经典的 WM 测量相关，这提出了 N-back 是否通过增加 WM 或通过提高自我控制或改善对 WM 内容（而不是 WM 大小）的操纵或以某种方式训练来发挥作用的问题。直接智商。[^jaeggi2010] DNB 上的表现[具有复杂的相关性](/doc/dual-n-back/2010-jaeggi-2.pdf "'N-back 任务作为工作记忆测量的并发有效性'，Jaeggi et al 2010")与其他工作记忆或智商测试的表现，所以不清楚它正在利用什么。 （WM 与 IQ 测试表现之间的联系存在争议；OSPAN 测量的高 WM 与 Raven 难题的表现并没有很好的相关性[^unsworth]，并且 WM 训练的单一测试的有效性受到质疑[^shipstead]。）
+后来的研究发现，N-back 的表现和改进似乎与智商相关，而不是与背诵数字列表等经典的 WM 测量相关，这提出了 N-back 是否通过增加 WM 或通过提高自我控制或改善对 WM 内容（而不是 WM 大小）的操纵或以某种方式训练来发挥作用的问题。直接智商。[^jaeggi2010] DNB 上的表现[具有复杂的相关性](https://gwern.net/doc/dual-n-back/2010-jaeggi-2.pdf "'N-back 任务作为工作记忆测量的并发有效性'，Jaeggi et al 2010")与其他工作记忆或智商测试的表现，所以不清楚它正在利用什么。 （WM 与 IQ 测试表现之间的联系存在争议；OSPAN 测量的高 WM 与 Raven 难题的表现并没有很好的相关性[^unsworth]，并且 WM 训练的单一测试的有效性受到质疑[^shipstead]。）
 
 [^jaeggi2010]：来自 [Jaeggi et al 2010](#jaeggi-2010)：
 
  > 研究结果1 证实了文献中的其他发现（Jaeggi、Buschkuehl、Perrig 和 Meier，2010；Kane、Conway、Miura 和 Colflesh，2007）：与我们的假设一致，两种 n-back 任务变体都高度相关，并且都通过 _g~f~_ 进行了最佳预测。
  >
  > 一般来说，矩阵推理任务似乎是单 _n_-back 任务和双 _n_-back 任务的更好预测因子而非工作记忆容量的衡量标准。由于可靠性估计适用于 n-back 任务，因此 n-back 任务与工作记忆容量测量之间缺乏相关性不能归因于可靠性不足（Jaeggi、Buschkuehl、Perrig 和 Meier，2010）。相反，这两项任务的表现似乎依赖于不同的方差来源，这可能是由于这两项任务涉及的不同记忆过程造成的：而 n-back 任务依赖于被动识别过程，而工作记忆容量任务的表现需要主动和战略性回忆过程（Kane、Conway、Miura 和 Colflesh，2007）。
-[^unsworth]：["工作记忆容量和流动能力：检查操作跨度和操作范围之间的相关性" Raven"](/doc/dual-n-back/2005-unsworth.pdf), Unsworth, _Intelligence_ 2005:
+[^unsworth]：["工作记忆容量和流动能力：检查操作跨度和操作范围之间的相关性" Raven"](https://gwern.net/doc/dual-n-back/2005-unsworth.pdf), Unsworth, _Intelligence_ 2005:
 
  > 然而，如图 2 所示，每个项目的解精度与 Ospan 之间的相关性虽然波动很大，但似乎并没有随着难度的增加而以任何系统的方式增加。事实上，第一个问题的 Ospan 和准确度之间的相关性与问题 24 一样高（即问题 1 r=0.26，问题 24 r=0.26）。这些结果与 Salthouse (1993) 的结果惊人地相似，后者显示了解精度与 WM 复合材料之间大致相同的相关模式。两组结果都表明，Raven 难度的项目变化与 WM 测量之间没有明确的关系。
  >
@@ -38,7 +38,7 @@ Dual _n_-Back 是一种[认知训练](!W "工作记忆训练")，旨在扩展你
 
 Brain Workshop 提供了多种模式，其中一些模式比简单的 Dual N-back 更加复杂；尚未对它们进行任何研究，因此很少有人知道它们有什么用处、它们训练什么或它们可以提供哪些改进； [Jaeggi 2010](#jaeggi-2010) 似乎发现单 N-back 比双 N-back 更好。一些更复杂的模式似乎重点关注在各种模式之间转移正确的响应 - 不仅仅是声音，还有左/右，例如。 - 所以强调[上下文切换]（！W"任务切换（心理学）"）；有结果表明任务切换可以被训练并且转移[^switching]，但是这有多大用处以及 BW 模式训练它的效果如何是未知的。
 
-[^switching]：参见 [Minear & Shah 2008](/doc/dual-n-back/2008-minear.pdf "任务切换中的训练和转移效果")：
+[^switching]：参见 [Minear & Shah 2008](https://gwern.net/doc/dual-n-back/2008-minear.pdf "任务切换中的训练和转移效果")：
 
  > 任务切换的性能（通常用于测量执行功能的范式）已被证明可以提高通过实践。然而，没有研究测试这些好处是否特定于所学的任务或是否可以转移到新的情况。我们报告了通过混合成本衡量的提示随机切换范例中可转移改进的证据，但我们报告了切换成本没有一致的改进。混合成本的改进源于在切换试验之后立即执行切换和非切换试验的时间的相对减少，这意味着从意外切换中恢复的能力是改进的源泉。这些结果为越来越多的研究提供了证据，证明执行处理训练可带来普遍的改善。
 
@@ -48,7 +48,7 @@ Brain Workshop 提供了多种模式，其中一些模式比简单的 Dual N-bac
 
 [^NYT]: ["客座专栏：我们可以提高我们的智力吗？"](https://archive.nytimes.com/opinionator.blogs.nytimes.com/2009/03/10/guest-column-can-we-increase-our-intelligence/); Sam Wang 和 Sandra Aamodt； _《纽约时报》_
 
- > 在各种荟萃分析中，工作记忆容量的差异占流体智力（抽象推理能力）个体差异的 50-70%，这表明它是智商的主要组成部分之一。 （Ackerman 等人；Kane 等人；[Süss 等人 2002](/doc/dual-n-back/2002-suss.pdf "工作记忆容量解释推理能力 - 以及更多")）这个想法很有趣，因为工作记忆可以通过训练得到改善。
+ > 在各种荟萃分析中，工作记忆容量的差异占流体智力（抽象推理能力）个体差异的 50-70%，这表明它是智商的主要组成部分之一。 （Ackerman 等人；Kane 等人；[Süss 等人 2002](https://gwern.net/doc/dual-n-back/2002-suss.pdf "工作记忆容量解释推理能力 - 以及更多")）这个想法很有趣，因为工作记忆可以通过训练得到改善。
 
  另请参阅 2012 年《纽约时报》后续报道，["Can You Make Yourself"更聪明吗？"](https://www.nytimes.com/2012/04/22/magazine/can-you-make-yourself-smarter.html)
 
@@ -62,7 +62,7 @@ Brain Workshop 提供了多种模式，其中一些模式比简单的 Dual N-bac
 
 令人惊讶的是，错误与代码行数有密切关系 - 无论该语言是像汇编程序一样低级还是像 Haskell 一样高级（幽默地，[Norris'号](https://www.johndcook.com/blog/2011/11/22/norris-number/));这是因为每行占用相似数量的工作内存和短期内存，并且只有这么多内存可供使用吗？[^WM-bugs]
 
-[^WM-bugs]：这是对的吗？我不知道。但这是一个奇怪的研究集合和一个有趣的提出模型：[Hatton 1997](/doc/dual-n-back/1997-hatton.pdf "重新检查故障密度-组件大小连接")：
+[^WM-bugs]：这是对的吗？我不知道。但这是一个奇怪的研究集合和一个有趣的提出模型：[Hatton 1997](https://gwern.net/doc/dual-n-back/1997-hatton.pdf "重新检查故障密度-组件大小连接")：
 
  > 多年来我一直坚持这样一个原则：模块化或结构分解是一个很好的设计概念，因此总是可以改进系统。这种信念如此普遍，几乎无可质疑。它负责编译模型的重要编程语言概念——这些模型要么是独立的，具有保证接口一致性的（例如 C++、Ada 和 Modula-2），要么是独立的，系统是分段构建的，然后再粘合在一起（例如 C 和 Fortran）。这是一个非常有吸引力的概念，深深植根于传统工程的"分而治之"原则。然而，这种传统观念可能是错误的。只有那些最适合人类短期记忆缓存的组件似乎才能有效地使用它，从而产生最低的故障密度。较大和较小的平均组件尺寸似乎会降低可靠性。
  >
@@ -104,11 +104,11 @@ Brain Workshop 提供了多种模式，其中一些模式比简单的 Dual N-bac
 
 事情是，多个显示器，触摸打字，快速阅读[^快速阅读] -它们都是为了让外部世界成为你思想的一部分。在您的短期记忆中拥有[类型签名](!W) 或在第二台显示器上突出显示之间的真正区别是什么？在你的脑海中写下一条[评论](!W "评论(计算机编程)")与在创建它时快速打字之间有什么"真正"的区别？
 
-![WM问题](/doc/dual-n-back/2010-gwern-scumbagbrain.jpg "Scumbag Brain meme：需要编写100kloc系统/无法在内存中保留>7个项目"){.float-right .invert}
+![WM问题](https://gwern.net/doc/dual-n-back/2010-gwern-scumbagbrain.jpg "Scumbag Brain meme：需要编写100kloc系统/无法在内存中保留>7个项目"){.float-right .invert}
 
 [^速读]：当我年轻的时候，我认为生命早期是学习快速阅读的最佳时机，因为一个人在尽可能长的时间内获得最大的收获（我仍然同意我之前的推理），因此大量阅读了[速读](!W)和相关学术文献，并花了几个小时以上的时间使用速读式软件。我的最终结论是，它很好地利用了我的时间，因为它将我的 WPM 从普通的 300 WPM 提高到了约 400-500 WPM，但这些技术不会提供除此之外的任何有用的能力，因为更快的速度表明人们正在阅读太简单的材料，或者应该使用更复杂的搜索功能。特别是，[测速镜](!W) 对于非练习阅读不是很有用，并且对于深度或大量超链接的内容最没有用处。然而，"读图"只是一个骗局或非常浅薄的浏览。不幸的是，我忽略了对具体研究或项目做笔记，因为我还太年轻，不关心以后能否解释和捍卫我的信仰——但这也好，因为现在所有的网站都会消失，程序会被破坏，链接也会被破坏。如果读者关心的话，他们只需对这个主题进行自己的研究（在维基百科的这个时代容易得多）。一个起点：[Scott Young](https://www.scotthyoung.com/blog/2015/01/19/speed-reading-redo/ "我对快速阅读的看法是错误的：事实如下")。
 
-只是一些速度。只需一点时间。类型签名越明显，您输入注释的速度就越快，您的"记忆"就越大。你的记忆力越大，你就越聪明/更有效率。 （将此视为应用于编程的[扩展思维]（！W"扩展思维"）论文！）伟大的程序员经常[^codersatwork][^knuth]含糊地谈论"在头脑中保留一个系统"或"拥有一个模型"，并且讨厌干扰[^programming-distractions]，说它们破坏了一个人的[精心发展的思想]（https://paulgraham.com/head.html）；我认为他们所说的是试图将所有相关细节存储在他们的短期或工作记忆中。学习编程与 WM 相关。[^shute]（一旦你开始寻找，你会发现到处都是这样的。例如游戏。[^angrybirds]）或者错误率 - WM 被认为是小块或大块程序比中型程序块具有更多比例错误的原因[^Hatton]。不过，[设计的编程工具](/doc/dual-n-back/2012-parnin.pdf "'内存故障后需要程序员信息'，Parnin & Rugaber 2012")着眼于记忆是否会有帮助，还有待观察。
+只是一些速度。只需一点时间。类型签名越明显，您输入注释的速度就越快，您的"记忆"就越大。你的记忆力越大，你就越聪明/更有效率。 （将此视为应用于编程的[扩展思维]（！W"扩展思维"）论文！）伟大的程序员经常[^codersatwork][^knuth]含糊地谈论"在头脑中保留一个系统"或"拥有一个模型"，并且讨厌干扰[^programming-distractions]，说它们破坏了一个人的[精心发展的思想]（https://paulgraham.com/head.html）；我认为他们所说的是试图将所有相关细节存储在他们的短期或工作记忆中。学习编程与 WM 相关。[^shute]（一旦你开始寻找，你会发现到处都是这样的。例如游戏。[^angrybirds]）或者错误率 - WM 被认为是小块或大块程序比中型程序块具有更多比例错误的原因[^Hatton]。不过，[设计的编程工具](https://gwern.net/doc/dual-n-back/2012-parnin.pdf "'内存故障后需要程序员信息'，Parnin & Rugaber 2012")着眼于记忆是否会有帮助，还有待观察。
 
 [^knuth]：来自[Donald]给出的[采访](https://github.com/kragen/knuth-interview-2006) Knuth](!W) 致 CSLI Publications 总监 Dikran Karagueuzian：
 
@@ -162,11 +162,11 @@ Brain Workshop 提供了多种模式，其中一些模式比简单的 Dual N-bac
 
  从第 440 页开始：
 
- > [[David Deutsch](!W):] "我喜欢 Python 的第二个原因是——也许这就是我的大脑多年来发生的变化——我不能像以前那样在我的脑海中保留那么多的东西，对我来说更重要的是，在 Smalltalk 中，你实际上不能在屏幕上同时显示多个方法，这一点让我感到抓狂，因为我可以一次看到超过十行的内容。"虽然很难从这种惊人的相关性中推断出因果关系。摘自 ["新群体思维的兴起"](https://www.nytimes.com/2012/01/15/opinion/sunday/the-rise-of-the-new-groupthink.html)，苏珊·凯恩 (Susan Cain)，_《纽约时报》_（借鉴 1987 年的书 _[Peopleware：富有成效的项目和团队](!W)_ 或相关摘录 ["为什么要衡量" Performance"](/doc/cs/algorithm/2001-demarco-peopleware-whymeasureperformance.pdf "'Peopleware: Why Measure Performance', DeMarco & Lister 2001")):
+ > [[David Deutsch](!W):] "我喜欢 Python 的第二个原因是——也许这就是我的大脑多年来发生的变化——我不能像以前那样在我的脑海中保留那么多的东西，对我来说更重要的是，在 Smalltalk 中，你实际上不能在屏幕上同时显示多个方法，这一点让我感到抓狂，因为我可以一次看到超过十行的内容。"虽然很难从这种惊人的相关性中推断出因果关系。摘自 ["新群体思维的兴起"](https://www.nytimes.com/2012/01/15/opinion/sunday/the-rise-of-the-new-groupthink.html)，苏珊·凯恩 (Susan Cain)，_《纽约时报》_（借鉴 1987 年的书 _[Peopleware：富有成效的项目和团队](!W)_ 或相关摘录 ["为什么要衡量" Performance"](https://gwern.net/doc/cs/algorithm/2001-demarco-peopleware-whymeasureperformance.pdf "'Peopleware: Why Measure Performance', DeMarco & Lister 2001")):
 
  > 隐私也使我们富有成效。在一项名为"编码战争游戏"的引人入胜的研究中，顾问 Tom DeMarco 和 Timothy Lister 对 92 家公司 600 多名计算机程序员的工作进行了比较。他们发现，来自同一家公司的员工的绩效水平大致相同，但组织之间却存在巨大的绩效差距。表现最好的公司中程序员的杰出之处并不是更多的经验或更高的薪水。这是他们享受多少隐私、个人工作空间和不受干扰的自由。 62% 的最佳员工表示他们的工作空间足够私密，而只有 19% 的最差员工表示这一比例。 76% 的最差程序员（但只有 38% 的最佳程序员）表示他们经常被不必要的打扰。
 
-[^shute]：["谁有可能获得编程技能？"](/doc/dual-n-back/1991-shute.pdf)，Shute 1991； Shute 测量了学习 [Pascal](!W "Pascal (programming language)") 的学生的 WM，当然发现较高的 WM 与更快的学习相关，但尽管使用了 _g_-loaded [ASVAB](!W "Armed Services Vocational Aptitude Battery")，不幸的是她显然没有直接衡量 IQ，所以可能只是 IQ 与编程技能相关：
+[^shute]：["谁有可能获得编程技能？"](https://gwern.net/doc/dual-n-back/1991-shute.pdf)，Shute 1991； Shute 测量了学习 [Pascal](!W "Pascal (programming language)") 的学生的 WM，当然发现较高的 WM 与更快的学习相关，但尽管使用了 _g_-loaded [ASVAB](!W "Armed Services Vocational Aptitude Battery")，不幸的是她显然没有直接衡量 IQ，所以可能只是 IQ 与编程技能相关：
 
  > 按照指示，进行了一系列在线标准测试来测量编程从导师那里获得的知识和技能。结果表明，大量（68%）的结果方差可以通过工作记忆因素、特定的应用题解决能力（即问题识别和元素排序）和一些学习风格测量（即询问提示和运行程序）来预测。
 [^angrybirds]：在["为什么愤怒的小鸟如此成功和受欢迎：对用户的认知拆解"中体验"](https://www.mauronewmedia.com/blog/why-angry-birds-is-so-successful-a-cognitive-teardown-of-the-user-experience/)，[人体工程学](!W) 作家 Charles L. Mauro 指出，选择性强调工作记忆是_[愤怒的小鸟](!W)_ 管理谜题难度的关键：
@@ -179,7 +179,7 @@ Brain Workshop 提供了多种模式，其中一些模式比简单的 Dual N-bac
  >
  > 在 iPad（而不是较小的 iPhone）上玩《愤怒的小鸟》的主要好处之一是能够缩小窗口尺寸，这样您就可以始终保持整个游戏空间（房屋中的鸟和猪）的完整视图。将游戏界面的各个方面保持在完整视图中可以防止短期记忆丧失，并提高您获得升级到更高游戏级别所需技能的速度。
  > 旁注：如果您想要终极的《愤怒的小鸟》体验，请在 iPad 上使用 POGO 笔，并按住显示屏以查看整个游戏空间。这为您提供了更精细的控制、更好的瞄准和快速变化的游戏玩法。从认知角度来看，其净影响是获得极其优越的技能。然而，您也会发现长时间玩该游戏会变得不太有趣。为什么会发生这种情况？
-[^Hatton]：["重新检查故障密度-组件大小连接"](/doc/dual-n-back/1997-hatton.pdf)，Les Hatton（[扩展摘录](https://groups.google.com/g/brain-training/browse_thread/thread/8053035600aa5d5d))：
+[^Hatton]：["重新检查故障密度-组件大小连接"](https://gwern.net/doc/dual-n-back/1997-hatton.pdf)，Les Hatton（[扩展摘录](https://groups.google.com/g/brain-training/browse_thread/thread/8053035600aa5d5d))：
 
  > 对于多年来我一直坚持这样一个原则：模块化或结构分解是一个很好的设计理念，因此总是可以改进系统。这种信念如此普遍，几乎无可质疑。它负责编译模型的重要编程语言概念——这些模型要么是独立的，具有保证的接口一致性（例如 C++、Ada 和 [Modula-2](!W)），要么是独立的，即系统被分段构建并随后粘合在一起（例如 C 和 Fortran）。这是一个非常有吸引力的概念，深深植根于传统工程的"分而治之"原则。然而，这种传统观念可能是错误的。只有那些最适合人类短期记忆缓存的组件似乎才能有效地使用它，从而产生最低的故障密度。较大和较小的平均组件尺寸似乎会降低可靠性。
  >
@@ -194,15 +194,15 @@ Brain Workshop 提供了多种模式，其中一些模式比简单的 Dual N-bac
 
 ## 训练
 
-不幸的是，一般来说，IQ/[_g_]（！W"一般智力因素"）和记忆力似乎不可训练。许多明显的效果都被运动、营养或简单的练习所淹没。当练习确实能在任务或昂贵的游戏中带来收益时^["步行是免费的，但美国人去年在大脑健身软件和游戏上花费了 1300 万美元[2009]……"；来自_[Newsweek](https://www.newsweek.com/2010/06/18/this-is-your-brain-aging.print.html)_]，说好处往往不[_transfer_](!W "转移学习")；许多流行的"脑力游戏"和练习都未能达到这一标准，或者至少没有被证明可以转移^[例如《自然》杂志对剑桥研究的报道，["大脑训练没有任何好处：计算机化的心理锻炼不会提高心理技能，研究声称"](https://www.nature.com/articles/4641111a)；或_Discover_的[博客讨论](https://www.discovermagazine.com/planet-earth/brain-training-games-get-a-d-at-brain-training-tests)。][^newsweekactive][^newsweeksalthouse]，甚至像[音乐](/doc/dual-n-back/2013-elpus.pdf "'这是音乐还是它'这样的聪明技巧练习选择偏差？全国音乐和非音乐学生 SAT 分数分析'，Elpus 2013")[^Elpus-music] 或 [国际象棋](https://www.brunel.ac.uk/~hsstffg/preprints/chess_and_education.PDF "'国际象棋教学的教育效益：批判性评论'，Gobet & Campitelli 2005")^[具体示例： [Schneider et al 1993](/doc/dual-n-back/1993-schneider.pdf "儿童和成人的国际象棋专业知识和国际象棋位置的记忆")——下棋的棋盘记忆力比成人优越，但成人对数字的记忆力仍然更好。完全符合无迁移训练的预期。]或记忆竞赛[^Foer]。 _[第 22 条军规](!W)_ 总结道：
+不幸的是，一般来说，IQ/[_g_]（！W"一般智力因素"）和记忆力似乎不可训练。许多明显的效果都被运动、营养或简单的练习所淹没。当练习确实能在任务或昂贵的游戏中带来收益时^["步行是免费的，但美国人去年在大脑健身软件和游戏上花费了 1300 万美元[2009]……"；来自_[Newsweek](https://www.newsweek.com/2010/06/18/this-is-your-brain-aging.print.html)_]，说好处往往不[_transfer_](!W "转移学习")；许多流行的"脑力游戏"和练习都未能达到这一标准，或者至少没有被证明可以转移^[例如《自然》杂志对剑桥研究的报道，["大脑训练没有任何好处：计算机化的心理锻炼不会提高心理技能，研究声称"](https://www.nature.com/articles/4641111a)；或_Discover_的[博客讨论](https://www.discovermagazine.com/planet-earth/brain-training-games-get-a-d-at-brain-training-tests)。][^newsweekactive][^newsweeksalthouse]，甚至像[音乐](https://gwern.net/doc/dual-n-back/2013-elpus.pdf "'这是音乐还是它'这样的聪明技巧练习选择偏差？全国音乐和非音乐学生 SAT 分数分析'，Elpus 2013")[^Elpus-music] 或 [国际象棋](https://www.brunel.ac.uk/~hsstffg/preprints/chess_and_education.PDF "'国际象棋教学的教育效益：批判性评论'，Gobet & Campitelli 2005")^[具体示例： [Schneider et al 1993](https://gwern.net/doc/dual-n-back/1993-schneider.pdf "儿童和成人的国际象棋专业知识和国际象棋位置的记忆")——下棋的棋盘记忆力比成人优越，但成人对数字的记忆力仍然更好。完全符合无迁移训练的预期。]或记忆竞赛[^Foer]。 _[第 22 条军规](!W)_ 总结道：
 
 > ...德里德尔将军希望他的[飞行员]在设施和航班时刻表允许的情况下，在双向飞碟射击场上花费尽可能多的时间。 [射击双向飞碟](!W) 每月八小时对他们来说是极好的训练。它训练他们射击双向飞碟。
 
 [^Elpus-music]：音乐与 SAT 分数的提高相关，这被认为是教学生音乐的理由，但它表现出远转移主张的常见模式：它出现在简单的分析中，在随机实验中消失（例如[Mehr et al] 2013]（https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082007"两项随机试验没有提供关于短暂学前音乐丰富的非音乐认知益处的一致证据"）），最后，包括 Elpus 2013 等广泛协变量的彻底分析发现相关性消失了，因为它是由于某些因素造成的就像表现较好的学生也更富有一样令人困惑。音乐背景：
 
- > 2000 年《美育杂志》(JAE) 有一整期特刊，题为"艺术与学术成就：证据显示的内容"，致力于考察艺术和非艺术学生的学术表现。在该卷中，[Winner & Cooper 2000](/doc/dual-n-back/2000-winner.pdf "忽略这些主张：尚无证据表明艺术研究与学术成就之间存在因果关系")对约 31 项已发表和未发表的研究进行了荟萃分析，产生了 66 个独立的效应大小，检验了广泛定义的艺术教育是否对学术成就产生积极影响的一般研究问题。荟萃分析的结果表明，艺术教育与数学、语言和数学-语言综合成绩的较高成绩呈中度正相关。在同一期期刊中，[Vaughan & Winner 2000](/doc/dual-n-back/2000-vaughan.pdf "学习艺术的学生的 SAT 分数：我们可以和不能得出关于该关联的结论") 试图具体分析艺术课程作业与 SAT 分数之间的联系。沃恩和维纳利用美国大学委员会在年度《大学毕业生概况》报告中报告的 12 年全国 SAT 平均值数据发现，在 SAT 学生描述性问卷中自我报告曾修读过艺术课程的学生的得分高于那些报告自己未修过任何艺术课程的学生。对音乐学生在语言（[Butzlaff, 2000](/doc/dual-n-back/2000-butzlaff.pdf"音乐可以用来教阅读吗？"））和数学（Vaughan, 2000）标准化测试方面的表现进行荟萃分析有些不确定：尽管在相关研究文献中发现了正相关性，但对文献中少数实验研究结果的荟萃分析表明，音乐对语言或语言的影响几乎没有影响。数学考试成绩...在加拿大不列颠哥伦比亚省（[Gouzouasis, Guhn, & Kishor, 2007](/doc/dual-n-back/2007-gouzouasis.pdf"音乐成绩和参与程度以及 12 年级核心学术科目成绩之间的预测关系"），一项观察性研究的结果表明，高中生的音乐入学率与较高学科领域标准化考试成绩之间存在关联。加拿大蒙特利尔的一项随机实验结果显示，钢琴教学对社会经济背景较低的小学生的学科领域标准化测试没有影响（[Costa-Giomi, 2004](/doc/dual-n-back/2004-costagiomi.pdf "三年钢琴教学对儿童学业成绩、学校表现和自尊的影响")。
+ > 2000 年《美育杂志》(JAE) 有一整期特刊，题为"艺术与学术成就：证据显示的内容"，致力于考察艺术和非艺术学生的学术表现。在该卷中，[Winner & Cooper 2000](https://gwern.net/doc/dual-n-back/2000-winner.pdf "忽略这些主张：尚无证据表明艺术研究与学术成就之间存在因果关系")对约 31 项已发表和未发表的研究进行了荟萃分析，产生了 66 个独立的效应大小，检验了广泛定义的艺术教育是否对学术成就产生积极影响的一般研究问题。荟萃分析的结果表明，艺术教育与数学、语言和数学-语言综合成绩的较高成绩呈中度正相关。在同一期期刊中，[Vaughan & Winner 2000](https://gwern.net/doc/dual-n-back/2000-vaughan.pdf "学习艺术的学生的 SAT 分数：我们可以和不能得出关于该关联的结论") 试图具体分析艺术课程作业与 SAT 分数之间的联系。沃恩和维纳利用美国大学委员会在年度《大学毕业生概况》报告中报告的 12 年全国 SAT 平均值数据发现，在 SAT 学生描述性问卷中自我报告曾修读过艺术课程的学生的得分高于那些报告自己未修过任何艺术课程的学生。对音乐学生在语言（[Butzlaff, 2000](https://gwern.net/doc/dual-n-back/2000-butzlaff.pdf"音乐可以用来教阅读吗？"））和数学（Vaughan, 2000）标准化测试方面的表现进行荟萃分析有些不确定：尽管在相关研究文献中发现了正相关性，但对文献中少数实验研究结果的荟萃分析表明，音乐对语言或语言的影响几乎没有影响。数学考试成绩...在加拿大不列颠哥伦比亚省（[Gouzouasis, Guhn, & Kishor, 2007](https://gwern.net/doc/dual-n-back/2007-gouzouasis.pdf"音乐成绩和参与程度以及 12 年级核心学术科目成绩之间的预测关系"），一项观察性研究的结果表明，高中生的音乐入学率与较高学科领域标准化考试成绩之间存在关联。加拿大蒙特利尔的一项随机实验结果显示，钢琴教学对社会经济背景较低的小学生的学科领域标准化测试没有影响（[Costa-Giomi, 2004](https://gwern.net/doc/dual-n-back/2004-costagiomi.pdf "三年钢琴教学对儿童学业成绩、学校表现和自尊的影响")。
 
-事实上，尝试提高智商的一般历史任何儿童或成人本质上仍与 [Arthur Jensen](!W) 撰写他 1969 年论文 ["我们能提高多少智商和学术成就？"](/doc/iq/1969-jensen.pdf) 时一样——一段失败的历史。例外情况通过适用于具有特定缺陷的狭窄群体或仅在出生前起作用来证明这一规则，例如[碘化](/iodine "'碘和成人智商荟萃分析'，Gwern 2012")。 （另请参阅[阿尔吉农定律](/drug-heuristic"阿尔吉农论证"，Gwern 2010)：如果有一种简单的增强适应性的方法可以让我们变得更聪明，那么进化就已经使用了它。）
+事实上，尝试提高智商的一般历史任何儿童或成人本质上仍与 [Arthur Jensen](!W) 撰写他 1969 年论文 ["我们能提高多少智商和学术成就？"](https://gwern.net/doc/iq/1969-jensen.pdf) 时一样——一段失败的历史。例外情况通过适用于具有特定缺陷的狭窄群体或仅在出生前起作用来证明这一规则，例如[碘化](/iodine "'碘和成人智商荟萃分析'，Gwern 2012")。 （另请参阅[阿尔吉农定律](/drug-heuristic"阿尔吉农论证"，Gwern 2010)：如果有一种简单的增强适应性的方法可以让我们变得更聪明，那么进化就已经使用了它。）
 
 
 [^Foer]：全国记忆冠军[Tatiana Cooley](https://www.nytimes.com/2007/06/28/garden/28post-it.html?pagewanted=2 "当你外出时，便利贴回家了")："我非常心不在焉。我靠便利贴生活。"或者[_华盛顿邮报_](https://www.washingtonpost.com/wp-dyn/content/article/2011/03/04/AR2011030402772.html "Joshua Foer 的'与爱因斯坦一起月球漫步'，论记忆的本质")，回顾 Joshua Foer 的 2011 年_[与爱因斯坦一起月球漫步](!W)_：
@@ -217,32 +217,32 @@ Brain Workshop 提供了多种模式，其中一些模式比简单的 Dual N-bac
 
 但希望是永恒的，并且也有*可能的*例外。本常见问题解答重点关注的是双 [N-back](!W)，它是旧工作记忆测试的一种变体。
 
-N-back 的好处之一是，虽然它可能会或[可能不会](#criticism) 提高您的智商，但它可能会以其他方式帮助您。 WM 训练可帮助酗酒者减少饮酒量[^jansen]，并增强戒除兴奋剂成瘾者（可卡因和甲基苯丙胺）[^bickel] 的耐心。学生的自律或意志力与成绩的相关性甚至比 IQ[^纪律]、WM [与成绩的相关性](/doc/dual-n-back/2005-aronen.pdf "'工作记忆、精神症状和学校成绩', Aronen et al 2005") 以及较低的行为问题[^情绪] 和 WM 更能预测 6 年后的成绩5 岁儿童和 2 岁以后的大龄儿童[^alloway]。 WM 训练已被证明可以帮助患有 ADHD 的儿童[^klingberg] 以及没有 ADHD 的学龄前儿童^[["学龄前儿童执行功能的训练和转移效应"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.577.7471&rep=rep1&type=pdf), Thorell et al 2009]； [Lucas 2008](https://www.cdzjesenik.cz/APA_Poster_Lucas_May_2008.pdf) 在夏令营中发现了行为改善。另一项对年幼（7-9 岁）贫困儿童使用各种"推理"游戏的干预措施发现了向前数字跨度（但不是向后）和智商提高，而玩需要"快速视觉检测和快速运动反应"的游戏的受试者没有获得任何收益[^mackey2011]，但值得记住的是，智商分数在童年时期[^sternbergChildhood]或可能作为青少年脑成像研究是不可靠的表示[^adolescentImaging]，他们在这一点上更具可塑性。 （对青少年的 WM 训练似乎没有太多研究，但考虑到他们的问题，可能会有所帮助；请参阅 ["美丽的大脑"](https://www.nationalgeographic.com/magazine/article/beautiful-brains) 或 ["The Trouble With青少年"](https://www.discovermagazine.com/2011/mar/24-the-brain-the-trouble-with-teens/article_view?b_start:int=1&-C=)。)
+N-back 的好处之一是，虽然它可能会或[可能不会](#criticism) 提高您的智商，但它可能会以其他方式帮助您。 WM 训练可帮助酗酒者减少饮酒量[^jansen]，并增强戒除兴奋剂成瘾者（可卡因和甲基苯丙胺）[^bickel] 的耐心。学生的自律或意志力与成绩的相关性甚至比 IQ[^纪律]、WM [与成绩的相关性](https://gwern.net/doc/dual-n-back/2005-aronen.pdf "'工作记忆、精神症状和学校成绩', Aronen et al 2005") 以及较低的行为问题[^情绪] 和 WM 更能预测 6 年后的成绩5 岁儿童和 2 岁以后的大龄儿童[^alloway]。 WM 训练已被证明可以帮助患有 ADHD 的儿童[^klingberg] 以及没有 ADHD 的学龄前儿童^[["学龄前儿童执行功能的训练和转移效应"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.577.7471&rep=rep1&type=pdf), Thorell et al 2009]； [Lucas 2008](https://www.cdzjesenik.cz/APA_Poster_Lucas_May_2008.pdf) 在夏令营中发现了行为改善。另一项对年幼（7-9 岁）贫困儿童使用各种"推理"游戏的干预措施发现了向前数字跨度（但不是向后）和智商提高，而玩需要"快速视觉检测和快速运动反应"的游戏的受试者没有获得任何收益[^mackey2011]，但值得记住的是，智商分数在童年时期[^sternbergChildhood]或可能作为青少年脑成像研究是不可靠的表示[^adolescentImaging]，他们在这一点上更具可塑性。 （对青少年的 WM 训练似乎没有太多研究，但考虑到他们的问题，可能会有所帮助；请参阅 ["美丽的大脑"](https://www.nationalgeographic.com/magazine/article/beautiful-brains) 或 ["The Trouble With青少年"](https://www.discovermagazine.com/2011/mar/24-the-brain-the-trouble-with-teens/article_view?b_start:int=1&-C=)。)
 
 [^jansen]：["控制饮酒行为：训练工作记忆以减少酒精摄入"滥用"](https://eatlab.nl/publikaties/Houben%20et%20al%20Psychological%20Science.11.pdf)，Houben 等人 2011：
 
  > 酒精滥用会破坏核心执行功能，包括工作记忆 (WM)——维持和操纵目标相关信息的能力。当 WM 等执行功能减弱时，饮酒行为就会失控，并更容易受到自动冲动的引导。这项研究调查了 WM 训练是否可以恢复对饮酒行为的控制。 48 名有问题的饮酒者在至少 25 天内的 25 次训练中执行了 WM 训练任务或控制任务。训练前后，我们测量了 WM 和饮酒行为。 WM 训练在训练后 1 个多月内改善了 WM，并减少了酒精摄入量。此外，训练通过改善 WM 对饮酒产生的间接影响受到参与者自动冲动水平的调节：对于酒精自动偏好相对较强的参与者，WM 的增加会减少饮酒量。这些发现与理论框架一致，并表明训练 WM 可能是通过加强对饮酒冲动的控制来减少饮酒的有效策略。
 [^bickel]：["记住未来：工作记忆训练减少兴奋剂成瘾者的延迟贴现"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3015021/"记住未来：工作记忆训练减少延迟贴现"在兴奋剂成瘾者中"，Bickel 等人 2011"），Bickel 等人 2011； WM 任务包括数字跨度、反向数​​字跨度和单词列表匹配任务。降低他们的[折扣率]（！W"时间偏好"）实际上并没有显示出任何药物滥用的减少或更好的康复机会，但它是有希望的。
-[^纪律]：["自律在预测青少年学业表现方面胜过智商"](/doc/dual-n-back/2005-duckworth.pdf)，Duckworth 2006；摘要：
+[^纪律]：["自律在预测青少年学业表现方面胜过智商"](https://gwern.net/doc/dual-n-back/2005-duckworth.pdf)，Duckworth 2006；摘要：
 
  > 在一项针对 140 名八年级学生的纵向研究中，通过秋季的自我报告、家长报告、教师报告和金钱选择问卷来衡量自律程度，预测了最终成绩、学校出勤率、标准化成绩测试分数以及明年春天进入竞争性高中项目的情况。在对 164 名八年级学生进行的重复实验中，添加了行为延迟满足任务、学习习惯调查问卷和小组智商测试。秋季测量的自律在期末成绩、高中选择、入学率、做作业的时间、看电视的时间（相反）以及学生开始做作业的时间方面所造成的差异是智商的两倍多。即使控制了第一评分期成绩、成绩测试分数和测量的智商，自律对最终成绩的影响仍然存在。这些发现表明学生智力潜力不足的一个主要原因是：他们未能锻炼自律。
-[^alloway]：["调查工作记忆和智商在学业成就中的预测作用"](/doc/dual-n-back/2010-alloway.pdf)，Alloway 2010：
+[^alloway]：["调查工作记忆和智商在学业成就中的预测作用"](https://gwern.net/doc/dual-n-back/2010-alloway.pdf)，Alloway 2010：
 
  > ...研究结果表明，儿童 5 岁时的工作记忆技能是读写能力和智商的最佳预测指标。 6年后算数。相比之下，智商在这些学习成果的独特差异中只占一小部分。结果表明，工作记忆并不是智商的代表，而是代表一种与学术成就有着独特联系的分离认知技能。至关重要的是，我们发现正规教育开始时的工作记忆比智商更能有力地预测随后的学业成功......
 
 
-不太引人注目但仍然相关的是["工作记忆，但不是智商，预测有学习困难的儿童的后续学习"](/doc/dual-n-back/2009-alloway.pdf)，Alloway 2009：
+不太引人注目但仍然相关的是["工作记忆，但不是智商，预测有学习困难的儿童的后续学习"](https://gwern.net/doc/dual-n-back/2009-alloway.pdf)，Alloway 2009：
 
  > 本研究的目的是比较工作记忆和智商对被确定有学习困难的儿童的预测能力...7 至 11 岁的儿童在时间 1 进行了工作测量的测试记忆力、智商和学习能力。两年后，他们对学习指标进行了重新测试。研究结果表明，在时间 1 时的工作记忆能力和特定领域的知识，而不是智商，是在时间 2 时学习的重要预测因素。
-[^情绪]：这可能并不奇怪，因为即使在成年人中，那些具有较高 WM 的人在被要求时也能更好地控制自己的情绪；摘要 ["工作记忆容量和自发情绪调节：高容量可预测对负面反馈的自我增强"](/doc/dual-n-back/2010-schmeichel.pdf "Schmeichel & Demaree 2010")：
+[^情绪]：这可能并不奇怪，因为即使在成年人中，那些具有较高 WM 的人在被要求时也能更好地控制自己的情绪；摘要 ["工作记忆容量和自发情绪调节：高容量可预测对负面反馈的自我增强"](https://gwern.net/doc/dual-n-back/2010-schmeichel.pdf "Schmeichel & Demaree 2010")：
 
  > 虽然之前的证据表明工作记忆容量 (WMC) 对于情绪调节的成功很重要，但该证据可能只是表明，WMC 较高的人比 WMC 较低的人更好地遵循指示。本研究检验了这样的假设：相对于 WMC 较低的人，WMC 较高的人在负反馈后更有效地进行自发情绪调节。参与者被随机分配接受关于他们情商的没有反馈或负面反馈。然后，他们完成了一项变相的自我增强测量和自我报告情感测量。实验条件和 WMC 相互作用，较高的 WMC 预示着更多的自我增强和更少的负面反馈后的负面影响。这项研究为 WMC 中个体差异的后果提供了新颖的见解，并说明认知能力可能促进情绪的自发自我调节。
 [^klingberg]：["ADHD 儿童工作记忆的计算机化训练 - 随机对照试验"](https://www.klingberglab.se/pub/CompTrainWM.pdf), Klingberg et al 2005；摘要：
 
  > ...对于跨板任务，干预后和随访时都有显着的治疗效果。此外，测量言语 WM、反应抑制和复杂推理的次要结果任务也有显着影响。家长评分显示，干预后和随访期间注意力不集中和多动/冲动症状均显着减轻。结论：本研究表明，通过对 ADHD 儿童进行训练可以改善 WM。这种训练还改善了反应抑制和推理，并减少了家长评价的 ADHD 注意力不集中症状。
 
- 另请参阅 [Green et al 2012](/doc/dual-n-back/2012-green.pdf "工作记忆训练是否会推广到改善注意力缺陷/多动症儿童的任务外行为？")。
-[^mackey2011]：["儿童推理和速度训练"](/doc/dual-n-back/2011-mackey.pdf)（推理游戏列表，第 5 页，似乎不包括任何与 n-back 直接类似的游戏）：
+ 另请参阅 [Green et al 2012](https://gwern.net/doc/dual-n-back/2012-green.pdf "工作记忆训练是否会推广到改善注意力缺陷/多动症儿童的任务外行为？")。
+[^mackey2011]：["儿童推理和速度训练"](https://gwern.net/doc/dual-n-back/2011-mackey.pdf)（推理游戏列表，第 5 页，似乎不包括任何与 n-back 直接类似的游戏）：
 
  > 这项研究的目标是确定强化训练是否可以改善儿童的认知技能。来自低社会经济背景的 7 至 9 岁儿童参加了两个认知训练项目之一，每天 60 分钟，每周 2 天，总共 8 周。两个培训项目都包括市售的计算机化和非计算机化游戏。推理训练强调计划性和关系整合；速度训练强调快速视觉检测和快速运动反应。推理能力的标准评估——非语言智力测试（TONI-3）和认知速度（WISC IV 的编码 B）——在训练前后对所有儿童进行了评估。两组在训练期间都没有接受这些标准化测试。推理组的孩子在TONI（Cohen's d = 1.51）上有显着提高，表现智商平均提高了10分，但在编码上没有改善。相比之下，速度组的孩子在编码方面有显着提高（d = 1.15），但在 TONI 方面没有提高。与普遍的看法相反，这些结果表明流体推理和处理速度都可以通过训练来改变。
 [^sternbergChildhood]：再次参见 Sternberg 等人 2001 年的评论，"智商的预测价值"：
@@ -263,7 +263,7 @@ N-back 的好处之一是，虽然它可能会或[可能不会](#criticism) 提�
 
 > 经验能够最好地重新连接这些连接的窗口对于每个大脑区域来说都是高度特定的。因此，在孩子学习语言的头 13 年里，大脑的语言中枢获得了最强烈的隔离。完成的隔离巩固了这些成果，但也使得获得第二语言等进一步的成果变得更加困难。青少年末期和二十出头时前脑的髓鞘形成也是如此。当我们面对并进入我们作为成年人将要面对的世界时，这种延迟完成（拒绝准备）增强了灵活性。
 
-WM 训练有很多种。一篇值得一读的评论是["工作记忆训练有效吗？通过训练工作记忆增强认知的承诺和挑战"，Morrison & Chein 2011](/doc/dual-n-back/2010-morrison.pdf "'工作记忆训练有效吗？通过训练工作记忆增强认知的承诺和挑战'，Morrison & Chein 2010")； ["工作记忆训练有效吗？"，Shipstead et al 2012](/doc/dual-n-back/2012-shipstead.pdf) 讨论了设计 WM 训练实验的多种方法论困难（至少，如果您想展示可转移到非 WM 技能的*真正的*改进，那么这些困难是很困难的）。
+WM 训练有很多种。一篇值得一读的评论是["工作记忆训练有效吗？通过训练工作记忆增强认知的承诺和挑战"，Morrison & Chein 2011](https://gwern.net/doc/dual-n-back/2010-morrison.pdf "'工作记忆训练有效吗？通过训练工作记忆增强认知的承诺和挑战'，Morrison & Chein 2010")； ["工作记忆训练有效吗？"，Shipstead et al 2012](https://gwern.net/doc/dual-n-back/2012-shipstead.pdf) 讨论了设计 WM 训练实验的多种方法论困难（至少，如果您想展示可转移到非 WM 技能的*真正的*改进，那么这些困难是很困难的）。
 
 <!-- Chooi 2011
 
@@ -295,7 +295,7 @@ Briner et al 2011 http://drum.lib.umd.edu/bitstream/1903/11386/2/COGNITIVE%20TRA
 -->
 
 <!--
-[Bomyea & Amir 2011](/doc/dual-n-back/2011-bomyea.pdf"执行功能训练计划对工作记忆能力和侵入性的影响 "想法")
+[Bomyea & Amir 2011](https://gwern.net/doc/dual-n-back/2011-bomyea.pdf"执行功能训练计划对工作记忆能力和侵入性的影响 "想法")
 
 > 许多研究记录了 WMC 任务表现与抑制控制之间的关系。例如，具有较高 WMC 的个体在认知任务期间受到先前学到的信息的主动干扰较少（例如 Rosen 和 Engle 1998）。此外，具有较高 WMC 的个体在思想抑制任务期间能够更好地刻意抑制中立的（Brewin 和 Beaton 2002）和消极的、与个人相关的想法（Brewin 和 Smart 2005）。然而，现有文献受到相关研究设计的限制，无法说明 WMC 与侵入性思想之间的因果关系。
 
@@ -314,7 +314,7 @@ https://dept.wofford.edu/ScienceResearch/fall2009/4.pdf
 
 ### N-back
 
-最初的 N-back 测试只是要求你记住单个字母流，并指示是否有任何字母精确地相距 2 个位置。 "A S S R"不值得发出信号，但"_A_ S _A_ R"会发出信号，因为"A"字符彼此之间正好有 2 个位置的距离。该程序会给你另一封信，你是否会发出信号，等等。一旦你理解了，这很简单，但解释起来有点困难。最好阅读 [Brain Workshop 教程](https://brainworkshop.sourceforge.net/tutorial.html)，或[观看视频](/doc/dual-n-back/2013-03-30-brainworkshop-brainworkshop481tutorialwindows.webm "https://www.youtube.com/watch?v=C1blFZoJSuQ")。
+最初的 N-back 测试只是要求你记住单个字母流，并指示是否有任何字母精确地相距 2 个位置。 "A S S R"不值得发出信号，但"_A_ S _A_ R"会发出信号，因为"A"字符彼此之间正好有 2 个位置的距离。该程序会给你另一封信，你是否会发出信号，等等。一旦你理解了，这很简单，但解释起来有点困难。最好阅读 [Brain Workshop 教程](https://brainworkshop.sourceforge.net/tutorial.html)，或[观看视频](https://gwern.net/doc/dual-n-back/2013-03-30-brainworkshop-brainworkshop481tutorialwindows.webm "https://www.youtube.com/watch?v=C1blFZoJSuQ")。
 
 ### Dual N-back
 
@@ -322,7 +322,7 @@ https://dept.wofford.edu/ScienceResearch/fall2009/4.pdf
 
 > 对于单一任务，前额叶皮层 (PFC) 的激活通常会随着记忆负载的增加而增加，而对于双重任务，之前已经假设，面对过度的处理需求，PFC 会降低，即如果超出工作记忆中央执行系统的容量。然而，我们的结果表明，在单任务和双任务期间，前额叶激活随着记忆负载的变化而不断增加。正如行为准确性测量所表明的，即使在最困难的情况下处理需求过多，在双重任务中仍观察到前额叶激活的增加。关于前额叶激活减少的假设无法得到支持，并根据动机因素进行了讨论。[^jaeggi2003]
 
-[^jaeggi2003]：Jaeggi, S. M., Seewer, R., Nirkko, A. C., Eckstein, D., Schroth, G., Groner, R., et al, (2003)。 ["过多的记忆负荷会减弱前额皮质的激活吗？单任务和双任务中的负荷依赖性处理：功能磁共振成像研究"](/doc/dual-n-back/2003-jaeggi.pdf), _Neuroimage_ 19(2) 210-225。
+[^jaeggi2003]：Jaeggi, S. M., Seewer, R., Nirkko, A. C., Eckstein, D., Schroth, G., Groner, R., et al, (2003)。 ["过多的记忆负荷会减弱前额皮质的激活吗？单任务和双任务中的负荷依赖性处理：功能磁共振成像研究"](https://gwern.net/doc/dual-n-back/2003-jaeggi.pdf), _Neuroimage_ 19(2) 210-225。
 
 在这个称为"*dual* N-back"的版本中（以区别于经典的单 N-back），人们仍在玩回合制游戏。在 [Brain Workshop](https://brainworkshop.sourceforge.net/) 版本中，您会看到一个 3x3 网格，其中每回合都会在 9 个空格中的 1 个空格中出现一个方块，并大声说出一个字母。 （有多种变体：北约拼音字母、钢琴键等。Brain Workshop 有多种模式，如"算术 N-back"或"五重 N-back"。）
 
@@ -375,7 +375,7 @@ N-back 训练有许多变体。以"B"结尾的 3 个字母的首字母缩略词�
 
 人们可以走得更远。口语字母、位置、颜色和*几何形状*。这将是"Quad N-back"，因此人们可能会讨论"Q3B"上的表现。 （目前还不清楚如何比较各种模式，但从 D2B 到 T3B 似乎比从 D2B 到 D3B 困难得多。） 
 
-过去的 QNB，有 Brain Workshop 4.7 中添加的 Pentuple N-back (PNB)（[视频演示](/doc/dual-n-back/2009-argumzio-pentuple-nback.mp4)）。第 5 种模式是通过第二个音频通道添加的 - 也就是说，现在声音是立体声的。
+过去的 QNB，有 Brain Workshop 4.7 中添加的 Pentuple N-back (PNB)（[视频演示](https://gwern.net/doc/dual-n-back/2009-argumzio-pentuple-nback.mp4)）。第 5 种模式是通过第二个音频通道添加的 - 也就是说，现在声音是立体声的。
 
 其他缩写词也很常用："WM"表示"工作记忆"，"_g~f~_"表示"[流体智力](!W)"，"_g_"表示通过智商测试测量的[一般智力因素](!W "一般智力因素")。
 
@@ -420,7 +420,7 @@ N-back 训练有许多变体。以"B"结尾的 3 个字母的首字母缩略词�
 
 您必须持怀疑态度地阅读本文，因为围绕[邮件列表](https://groups.google.com/g/brain-training) 形成的 N-back 社区*是*一个社区。这意味着它很容易受到社区的所有偏见和问题的影响。人们期望围绕某项技术或实践形成的社区仅由发现其中价值的人组成；由于诸如[承诺或沉没成本偏差]（！W"承诺升级"）之类的偏见，任何材料（例如此常见问题解答或包含的推荐）都会自动受到怀疑。想象一下，如果科学家只发表显示新结果的论文，而不发表报告无法[复制]（！W"再现性"）的论文！为什么那些发现 DNB 没有用或者是骗局的 N 支持者还会留下来呢？球迷们当然不会感谢他。 （[Eliezer Yudkowsky](!W) 有一篇关于这个主题的优秀文章，名为["群体信仰的蒸发冷却"](https://www.lesswrong.com/posts/ZQG9cwKbct2LtmL3p/evaporative-cooling-of-group-beliefs)；幸运的是，与一些"其他"例子相比，双_n_-back造成的损害是有限的。蒸发冷却，如 [pro-ana](!W) 或 [精神控制受害者](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.99.9838&rep=rep1&type=pdf "互联网上的精神控制体验：对妄想精神病诊断的影响"，Bell 等人2006"）。）
 
-最后，你必须持怀疑态度阅读，因为这是关于心理学的。众所周知，心理学是最难获得可靠结果的科学领域之一，因为每个人都是[怪异](https://www.lesswrong.com/posts/33YYcoWwtmqzAq9QR/beware-of-weird-psychological-samples)并且不同。正如我的一位教授开玩笑说的那样："如果你有两篇心理学论文报告了相同的结果，那么其中一篇就是错误的"；从表面上看心理学研究存在很多问题（我专门对此进行了讨论[附录，"主流科学（和心理学）的缺陷"](#flaws-in-mainstream-science-and-psychology)）。参与["从一个例子概括"](https://www.lesswrong.com/posts/baTWMegR42PAsH9qJ/generalizing-from-one-example "'从一个例子概括[典型的思维谬误]'，Alexander 2009")是很诱人的，但你不能这样做。每个人都是不同的；您的阳性（或阴性）结果可能是由于[安慰剂效应](!W)，可能是由于最近您的睡眠时间表变得更好[^睡眠]，或者您午睡[^小睡]，可能是您正在进行的锻炼[^运动]，可能是轻微的[季节性抑郁](!W "季节性情感障碍")解除（或开始），也可能是[钙](https://www.lesswrong.com/posts/9ZodFr54FtpLThHZh/experiential-pica)或[锌](!W "缺锌")[^锌]或[碘缺乏](/nootropic/nootropics#iodine)， [低血糖](!W)[^血糖][^血糖-2][^血糖-3]，[动机]的变化(/doc/dual-n-back/2010-moe.pdf "'心理旋转测试表现中的超越遗传学：努力归因的力量'，Moe & Pazzaglia 2010") 
+最后，你必须持怀疑态度阅读，因为这是关于心理学的。众所周知，心理学是最难获得可靠结果的科学领域之一，因为每个人都是[怪异](https://www.lesswrong.com/posts/33YYcoWwtmqzAq9QR/beware-of-weird-psychological-samples)并且不同。正如我的一位教授开玩笑说的那样："如果你有两篇心理学论文报告了相同的结果，那么其中一篇就是错误的"；从表面上看心理学研究存在很多问题（我专门对此进行了讨论[附录，"主流科学（和心理学）的缺陷"](#flaws-in-mainstream-science-and-psychology)）。参与["从一个例子概括"](https://www.lesswrong.com/posts/baTWMegR42PAsH9qJ/generalizing-from-one-example "'从一个例子概括[典型的思维谬误]'，Alexander 2009")是很诱人的，但你不能这样做。每个人都是不同的；您的阳性（或阴性）结果可能是由于[安慰剂效应](!W)，可能是由于最近您的睡眠时间表变得更好[^睡眠]，或者您午睡[^小睡]，可能是您正在进行的锻炼[^运动]，可能是轻微的[季节性抑郁](!W "季节性情感障碍")解除（或开始），也可能是[钙](https://www.lesswrong.com/posts/9ZodFr54FtpLThHZh/experiential-pica)或[锌](!W "缺锌")[^锌]或[碘缺乏](/nootropic/nootropics#iodine)， [低血糖](!W)[^血糖][^血糖-2][^血糖-3]，[动机]的变化(https://gwern.net/doc/dual-n-back/2010-moe.pdf "'心理旋转测试表现中的超越遗传学：努力归因的力量'，Moe & Pazzaglia 2010") 
 
 [^sleep]：睡眠影响智商，而不仅仅是警觉性或精力：["青少年睡眠和流体智力表现"](http://jtoomim.org/brain-training/fluid%20intelligence%20and%20sleep.pdf)，Johnstone et al 2010；摘要：
 
@@ -444,10 +444,10 @@ N-back 训练有许多变体。以"B"结尾的 3 个字母的首字母缩略词�
  > 事实证明，欲望是常态，而不是例外。一半的人在手机关机时感到某种渴望——吃零食、偷懒、向老板表达自己的真实感受——还有四分之一的人表示，他们在过去的半小时内感受到了某种渴望。其中许多欲望是男人和女人试图抵制的欲望，人们消耗的意志力越多，他们就越有可能屈服于下一个出现的诱惑。当面对一种新的欲望时，这种欲望会产生一些"我想要但我真的不应该"的内心冲突，如果他们已经抵制住了先前的诱惑，特别是如果新的诱惑在先前报告的诱惑之后不久出现，他们会更容易屈服。结果表明，人们每天花三到四个小时来抵制欲望。换句话说，如果你在一天中的任意时刻点击四五个人，其中一个人会用意志力来抵制欲望。电话研究中最常被抵制的欲望是吃饭和睡觉的冲动，其次是休闲的冲动，比如在工作中休息一下，做拼图或玩游戏而不是写备忘录。性冲动位列最受抵制的欲望列表中的第二位，稍微领先于其他类型互动的冲动，比如查看 Facebook。据报道，为了抵御诱惑，人们使用了各种策略。最受欢迎的是寻找消遣或进行新的活动，尽管有时他们会尝试直接压制它或只是艰难地完成它。他们的成功显然是好坏参半。他们非常擅长避免睡眠、性行为和花钱的冲动，但不太擅长抵制电视或网络的诱惑，或者放松而不是工作的普遍诱惑。
  >
  > ..."良好的决策并不是一个人的特质，因为它总是存在，"鲍迈斯特说。 "这是一种波动的状态。"他的研究表明，自我控制能力最强的人会通过规划自己的生活来保存意志力。他们不会安排无休止的连续会议。他们避免自助餐这样的诱惑，并养成习惯，消除做出选择的脑力劳动。他们没有每天早上决定是否强迫自己锻炼，而是定期约朋友一起锻炼。他们不是依靠意志力来保持一整天的强健，而是保存意志力，以便在紧急情况和重要决策时可以使用……"即使是最聪明的人，在没有休息和血糖较低的情况下也不会做出好的选择，"鲍迈斯特指出。这就是为什么真正明智的人不会在下午 4 点重组公司。他们不会在鸡尾酒时间做出重大承诺。如果必须在当天晚些时候做出决定，他们知道不能空着肚子做。鲍迈斯特说，"最好的决策者是那些知道何时不相信自己的人。"
-[^blood-sugar-3]：尽管如此，请注意血糖范式似乎已成为[复制危机]的受害者（/复制"'复制危机：主流科学的缺陷'，Gwern 2010"）：["主观努力和任务的机会成本模型"表现"](/doc/psychology/willpower/2013-kurzban.pdf)，Kurzban 等人 2013；  ["血糖对人类决策影响的荟萃分析"](/doc/psychology/willpower/2016-orquin.pdf)，Orquin & Kurzban 2016；  ["自我损耗是一种可复制的效应吗？对 165 篇自我损耗文章的法医荟萃分析"](https://replicationindex.com/2016/04/18/is-replicability-report-ego-depletionreplicability-report-of-165-ego-depletion-articles/)。
+[^blood-sugar-3]：尽管如此，请注意血糖范式似乎已成为[复制危机]的受害者（/复制"'复制危机：主流科学的缺陷'，Gwern 2010"）：["主观努力和任务的机会成本模型"表现"](https://gwern.net/doc/psychology/willpower/2013-kurzban.pdf)，Kurzban 等人 2013；  ["血糖对人类决策影响的荟萃分析"](https://gwern.net/doc/psychology/willpower/2016-orquin.pdf)，Orquin & Kurzban 2016；  ["自我损耗是一种可复制的效应吗？对 165 篇自我损耗文章的法医荟萃分析"](https://replicationindex.com/2016/04/18/is-replicability-report-ego-depletionreplicability-report-of-165-ego-depletion-articles/)。
 
-[^运动]：[有氧运动](!W)已被[显示](https://archive.nytimes.com/well.blogs.nytimes.com/2009/09/16/what-sort-of-exercise-can-make-you-smarter/)可以改善心理健康。一项针对老年糖尿病患者的[小型研究](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3088429/ "'慢性中风患者的运动和执行功能：一项试点研究'，Kluding et al 2011")发现，有氧运动养生法可以改善工作记忆/执行功能，另一项研究发现[大脑功能增强]体积](/doc/dual-n-back/2006-colcombe.pdf "'有氧运动训练增加老年人的脑容量'，Colcombe et al 2006")和[增加海马体积和 BDNF 分泌](https://www.pnas.org/doi/full/10.1073/pnas.1015950108 "'运动训练增加大脑容量)海马体并改善健康老年人的记忆力'，Erickson et al 2011")； a [Cochrane Collaboration](!W) 发现 [8 of 11](/doc/dual-n-back/2008-angevaren.pdf "'身体活动和增强体能可改善无已知认知障碍的老年人的认知功能，Angevaren 等人 2008") 对老年人进行有氧干预的益处。运动可以改善[工作记忆]（https://education.msu.edu/kin/HBCL/_articles/Pontifex_2009_TheEffectOfAcute.pdf"'急性有氧运动和抗阻运动对工作记忆的影响'，Pontifex et al 2009"）（或至少[相关](https://www.pnas.org/doi/10.1073/pnas.0905307106)与双胞胎的智力和教育)，并且有一些[暗示性证据](https://archive.nytimes.com/well.blogs.nytimes.com/2011/01/19/phys-ed-brains-and-brawn/)表明[力量训练](!W)或[抗阻训练](!W) 也可能有帮助。一种可能的机制（无论如何，在大鼠中）是[大脑中化学能量储存的增加](https://physoc.onlinelibrary.wiley.com/doi/pdf/10.1113/jphysiol.2011.217919 "'力竭运动后的脑糖原超级补偿'，Matsui et al 2012")。如需进一步阅读，请参阅["锻炼与儿童智力、认知和学术成就"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2748863/ "Tomporowski et al 2008")和[维基百科](!W "体育锻炼#大脑功能")中引用的评论和评论。
-[^zinc]：例如参见["锌状态和认知"埃塞俄比亚南部孕妇的功能"](/doc/dual-n-back/2009-stoecker.pdf "Stoecker et al 2009")或["锌补充剂改善了印度少女的认知表现和味觉敏锐度"](https://www.tandfonline.com/doi/abs/10.1080/07315724.2009.10718101 "Tupe & Chiplonkar 2009")
+[^运动]：[有氧运动](!W)已被[显示](https://archive.nytimes.com/well.blogs.nytimes.com/2009/09/16/what-sort-of-exercise-can-make-you-smarter/)可以改善心理健康。一项针对老年糖尿病患者的[小型研究](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3088429/ "'慢性中风患者的运动和执行功能：一项试点研究'，Kluding et al 2011")发现，有氧运动养生法可以改善工作记忆/执行功能，另一项研究发现[大脑功能增强]体积](https://gwern.net/doc/dual-n-back/2006-colcombe.pdf "'有氧运动训练增加老年人的脑容量'，Colcombe et al 2006")和[增加海马体积和 BDNF 分泌](https://www.pnas.org/doi/full/10.1073/pnas.1015950108 "'运动训练增加大脑容量)海马体并改善健康老年人的记忆力'，Erickson et al 2011")； a [Cochrane Collaboration](!W) 发现 [8 of 11](https://gwern.net/doc/dual-n-back/2008-angevaren.pdf "'身体活动和增强体能可改善无已知认知障碍的老年人的认知功能，Angevaren 等人 2008") 对老年人进行有氧干预的益处。运动可以改善[工作记忆]（https://education.msu.edu/kin/HBCL/_articles/Pontifex_2009_TheEffectOfAcute.pdf"'急性有氧运动和抗阻运动对工作记忆的影响'，Pontifex et al 2009"）（或至少[相关](https://www.pnas.org/doi/10.1073/pnas.0905307106)与双胞胎的智力和教育)，并且有一些[暗示性证据](https://archive.nytimes.com/well.blogs.nytimes.com/2011/01/19/phys-ed-brains-and-brawn/)表明[力量训练](!W)或[抗阻训练](!W) 也可能有帮助。一种可能的机制（无论如何，在大鼠中）是[大脑中化学能量储存的增加](https://physoc.onlinelibrary.wiley.com/doi/pdf/10.1113/jphysiol.2011.217919 "'力竭运动后的脑糖原超级补偿'，Matsui et al 2012")。如需进一步阅读，请参阅["锻炼与儿童智力、认知和学术成就"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2748863/ "Tomporowski et al 2008")和[维基百科](!W "体育锻炼#大脑功能")中引用的评论和评论。
+[^zinc]：例如参见["锌状态和认知"埃塞俄比亚南部孕妇的功能"](https://gwern.net/doc/dual-n-back/2009-stoecker.pdf "Stoecker et al 2009")或["锌补充剂改善了印度少女的认知表现和味觉敏锐度"](https://www.tandfonline.com/doi/abs/10.1080/07315724.2009.10718101 "Tupe & Chiplonkar 2009")
 [^nap]: ["NASA 小睡：NASA 支持的睡眠研究人员正在学习有关小睡的新的、令人惊讶的事情。"](https://science.nasa.gov/science-news/science-at-nasa/2005/03jun_naps/), 2005-06-03:
 
  > "令我们惊讶的是，工作记忆表现受益于小睡，[但是] Dinges 说："警惕性和基本警觉性并没有多大好处。"
@@ -523,13 +523,13 @@ Jaeggi 本人在 2008 年的表现[更温和](https://groups.google.com/g/brain-
 
 更加集中注意力。多玩玩。睡得好，吃得健康。使用自然光[^照明]。间隔练习。压力越小，你就能做得越好。
 
-[^光照]：请参阅["先前光照对傍晚表现、主观睡意和荷尔蒙分泌的影响"](/doc/melatonin/2012-munch.pdf) ([覆盖范围](https://www.goodtherapy.org/blog/natural-lighting-increases-productivity-0104112/))，Münch 等人2012:
+[^光照]：请参阅["先前光照对傍晚表现、主观睡意和荷尔蒙分泌的影响"](https://gwern.net/doc/melatonin/2012-munch.pdf) ([覆盖范围](https://www.goodtherapy.org/blog/natural-lighting-increases-productivity-0104112/))，Münch 等人2012:
 
  > ...对于认知表现，我们发现光照条件、精神负荷（2 或 3 背任务）和光照管理顺序之间存在显着的交互作用。在第一个晚上，受试者在两种光照条件下的表现都具有相似的准确性，但在第二天晚上，与 AL 组相比，受试者在 DL 后的两个 n-back 版本中表现明显更准确，并且在 2-back 任务中误报更少。晚上较低的睡意与更好的认知表现显着相关 (p < .05)。
 
 ### Spacing
 
-[Penner et al 2012](/doc/dual-n-back/2012-penner.pdf "健康成年人的计算机化工作记忆训练：两种不同训练计划的比较")
+[Penner et al 2012](https://gwern.net/doc/dual-n-back/2012-penner.pdf "健康成年人的计算机化工作记忆训练：两种不同训练计划的比较")
 
 > 这项研究比较了高强度工作记忆训练（45 分钟，每周 4 次，持续 4 周）对中年健康成年人进行分布式训练（45 分钟，每周 2 次，持续 8 周）...我们的结果表明，与高强度训练和未训练的对照组相比，分布式训练提高了所有认知领域的表现。交互对比揭示的最显着差异是言语和视觉工作记忆、言语短期记忆和心智速度。
 
@@ -576,7 +576,7 @@ N-back 的关键在于您正在强调您的工作记忆，仅此而已。实际�
 
 > 图 1b 说明了与非接触对照组相比，训练转移到表面上不同（且未经训练）的言语工作记忆测量的程度。训练不仅显着增加了言语工作记忆，而且这些收益在停止训练后持续了 3 个月！
 
-类似地，[Dahlin 2008](/doc/dual-n-back/2008-dahlin.pdf "年轻人和老年人执行功能的可塑性：立即训练收益、转移和长期维持")发现 WM 训练收益可以持续一年多：
+类似地，[Dahlin 2008](https://gwern.net/doc/dual-n-back/2008-dahlin.pdf "年轻人和老年人执行功能的可塑性：立即训练收益、转移和长期维持")发现 WM 训练收益可以持续一年多：
 
 > 作者调查在对年轻和年长受试者进行 5 周基于计算机的工作记忆信息更新培训后，立即获得的培训收益、迁移效果和 18 个月的维持。受过训练的年轻人和老年人在标准任务（字母记忆）方面的进步显着高于对照组，并且这些进步在 18 个月后仍保持不变。迁移效果一般来说是有限的，仅限于年轻参与者，他们表现出迁移到需要更新（3-back）的未经训练的任务... 
 
@@ -600,7 +600,7 @@ Ashirgo [提供up](https://groups.google.com/g/brain-training/browse_thread/thre
 训练 WM 任务已经产生了好坏参半的结果 - 似乎每一个积极的结果都有一个消极的结果。以下正面和无效结果部分说明了这一点，论文本身也说明了这一点；来自 [Nutley 2011](#nutley-2011):
 
 
-> 然而，有一些使用多个 WM 任务进行训练的研究也显示了推理任务的转移效应（[Klingberg, Fernell, Olesen, Johnson, Gustafsson, Dahlstrçm, Gillberg, Forssberg & Westerberg, 2005](https://www.klingberglab.se/pub/CompTrainWM.pdf); [Klingberg, Forssberg & Westerberg, 2002](https://www.teach-the-brain.org/learn/data/Klingberg.pdf))，而其他 WM 训练研究未能证明这种迁移([Dahlin, Neely, Larsson, Backman & Nyberg, 2008](/doc/dual-n-back/2008-dahlin.pdf "纹状体介导的更新训练后的学习迁移")；[Holmes, Gathercole, Place, Dunning, Hilton & Elliott, 2009](/doc/dual-n-back/2009-holmes.pdf "工作记忆缺陷是可以克服的：训练和药物治疗对多动症儿童工作记忆的影响")Thorell, Lindqvist, Bergman Nutley, Bohlin & Klingberg, 2009)；因此，目前还不清楚在什么条件下 WM 训练的效果会转移到 _g~f~_。
+> 然而，有一些使用多个 WM 任务进行训练的研究也显示了推理任务的转移效应（[Klingberg, Fernell, Olesen, Johnson, Gustafsson, Dahlstrçm, Gillberg, Forssberg & Westerberg, 2005](https://www.klingberglab.se/pub/CompTrainWM.pdf); [Klingberg, Forssberg & Westerberg, 2002](https://www.teach-the-brain.org/learn/data/Klingberg.pdf))，而其他 WM 训练研究未能证明这种迁移([Dahlin, Neely, Larsson, Backman & Nyberg, 2008](https://gwern.net/doc/dual-n-back/2008-dahlin.pdf "纹状体介导的更新训练后的学习迁移")；[Holmes, Gathercole, Place, Dunning, Hilton & Elliott, 2009](https://gwern.net/doc/dual-n-back/2009-holmes.pdf "工作记忆缺陷是可以克服的：训练和药物治疗对多动症儿童工作记忆的影响")Thorell, Lindqvist, Bergman Nutley, Bohlin & Klingberg, 2009)；因此，目前还不清楚在什么条件下 WM 训练的效果会转移到 _g~f~_。
 >
 > 其他干预研究包括注意力或执行功能的训练。 Rueda 和同事对 4 岁和 6 岁儿童的样本进行了注意力训练，发现 4 岁儿童的智力（通过考夫曼简短智力测试测量）显着提高，但只有 6 岁儿童组中出现这种趋势（[Rueda、Rothbart、McCandliss、Saccomanno 和 Posner， 2005]（https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1253585/"训练、成熟和遗传对执行注意力发展的影响"））。一项有 11,430 名参与者参与的大型训练研究表明，经过 6 周干预（每天 10 分钟⧸，每周 3 天）后，更广泛的任务（包括推理和计划或记忆、视觉空间技能、数学和注意力）几乎没有转移（[Owen, Hampshire, Grahn, Stenton, Dajani, Burns, Howard & Ballard, 2010]（https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2884087/"对大脑训练进行测试"））。然而，这项研究缺乏对样本选择和依从性的控制。总之，通过有针对性的训练可以在多大程度上改善 _g~f~_ 仍然是一个悬而未决的问题。
 
@@ -608,7 +608,7 @@ Ashirgo [提供up](https://groups.google.com/g/brain-training/browse_thread/thre
 
 身体变化与 WM 训练和 n-backing 相关。例如，Olesen PJ、Westerberg H、Klingberg T (2004) 工作记忆训练后前额叶和顶叶活动增加。自然神经科学 7:75-79；关于这项研究，Kuriyama 写道：
 
-> "Olesen 等人 2004 年提出了通过功能磁共振成像获得的渐进证据，表明重复训练可以提高空间 WM 表现 [准确性和响应时间 (RT)]，这与中额回和顶叶上皮层和下顶叶皮质活动的增加有关。这一发现表明，训练引起的 WM 表现改善可能基于神经可塑性，类似于其他技能学习的神经可塑性Westerberg 2007，["工作记忆训练后皮质活动的变化——单受试者分析"](/doc/dual-n-back/2007-westerberg.pdf)：
+> "Olesen 等人 2004 年提出了通过功能磁共振成像获得的渐进证据，表明重复训练可以提高空间 WM 表现 [准确性和响应时间 (RT)]，这与中额回和顶叶上皮层和下顶叶皮质活动的增加有关。这一发现表明，训练引起的 WM 表现改善可能基于神经可塑性，类似于其他技能学习的神经可塑性Westerberg 2007，["工作记忆训练后皮质活动的变化——单受试者分析"](https://gwern.net/doc/dual-n-back/2007-westerberg.pdf)：
 
 > "...WM 任务的练习逐渐提高了表现，这种效果持续了几个月。训练后，练习的效果也普遍提高了未经训练的 WM 任务和推理任务的表现。中额叶回和额下回中与 WM 相关的大脑活动显着增加，这种变化并不是由于训练前未激活的任何其他区域的激活所致，相反，这种变化可以通过激活皮层区域的小幅增加来描述。因此，WM 训练的效果在几个方面类似于灵长类动物技能学习研究中观察到的功能图的变化，尽管 WM 训练的生理效果位于前额叶关联中。 
 
@@ -637,7 +637,7 @@ Ashirgo [提供up](https://groups.google.com/g/brain-training/browse_thread/thre
 
 > 基于工作记忆容量的执行注意理论（WMC；例如 M. J. Kane、A. R. A. Conway、D. Z. Hambrick 和 R. W. Engle，2007），作者在持续注意响应任务（SART；进行/不进行任务）中测试了 WMC、走神和目标忽视之间的关系。在 3 个 SART 版本中，提出了概念性与感知性处理要求，当被试追随罕见的禁止目标时，受试者会定期表明他们的思想内容。 SART 处理需求不会影响走神率，但走神率随 WMC 和任务中预测的目标忽视错误而变化；此外，走神率部分介导了 WMC-SART 关系，表明与 WMC 相关的目标忽视差异部分是由于意识思维控制的变化所致。
 
-- ["工作记忆容量及其与一般智力的关系"](/doc/dual-n-back/2003-conway.pdf)；安德鲁·R.A.康威等人； _认知科学趋势_ Vol.7 No.2003-12-12
+- ["工作记忆容量及其与一般智力的关系"](https://gwern.net/doc/dual-n-back/2003-conway.pdf)；安德鲁·R.A.康威等人； _认知科学趋势_ Vol.7 No.2003-12-12
 
  > 最近的一些潜在变量分析表明，（工作记忆容量）至少占（智力）方差的三分之一，甚至可能多达二分之一。WM跨度任务似乎很重要，因为它们需要在面对并发处理和干扰时主动维护信息，因此需要一种执行注意力控制机制来对抗干扰。此外，这种能力似乎是由前额皮质的部分介导的。 
 
@@ -655,7 +655,7 @@ Ashirgo [提供up](https://groups.google.com/g/brain-training/browse_thread/thre
 
 #### Jaeggi 2008
 
-["通过工作记忆训练提高流体智力"](/doc/dual-n-back/2008-jaeggi.pdf)，Jaeggi et al 2008 ([补充](/doc/dual-n-back/2008-jaeggi-transfer.pdf)；Jaeggi 中的所有数据2005 年也用于此）；这篇文章被广泛报道（例如，[科学日报]（！W"科学日报"）["大脑训练提高记忆力增强流体智力"]（https://www.sciencedaily.com/releases/2008/05/080505075642.htm）或[_Wired_'s]（！W"连线（杂志）"）["忘记_Brain Age_：研究人员开发了让你更聪明的软件"](https://www.wired.com/2008/04/forget-researchers-develop-software-that-makes-you-smarter/))并激发了大多数人对该主题的兴趣。摘要：
+["通过工作记忆训练提高流体智力"](https://gwern.net/doc/dual-n-back/2008-jaeggi.pdf)，Jaeggi et al 2008 ([补充](https://gwern.net/doc/dual-n-back/2008-jaeggi-transfer.pdf)；Jaeggi 中的所有数据2005 年也用于此）；这篇文章被广泛报道（例如，[科学日报]（！W"科学日报"）["大脑训练提高记忆力增强流体智力"]（https://www.sciencedaily.com/releases/2008/05/080505075642.htm）或[_Wired_'s]（！W"连线（杂志）"）["忘记_Brain Age_：研究人员开发了让你更聪明的软件"](https://www.wired.com/2008/04/forget-researchers-develop-software-that-makes-you-smarter/))并激发了大多数人对该主题的兴趣。摘要：
 
 
 > 流体智力（_g~f~_）是指独立于先前获得的知识进行推理和解决新问题的能力。 _g~f~_ 对于多种认知任务至关重要，它被认为是学习中最重要的因素之一。此外，_g~f~_ 与职业和教育成功密切相关，尤其是在复杂和苛刻的环境中。虽然 _g~f~_ 测试的表现可以通过测试本身的直接练习来提高，但没有证据表明任何其他方案的训练会增加成人的 _g~f~_ 。此外，对认知训练的长期研究表明，尽管训练任务的表现可以显着提高，但这种学习到其他任务的迁移仍然很差。在这里，我们提供了从要求较高的工作记忆任务训练转移到 _g~f~_ 测量的证据。即使训练的任务与智力测试本身完全不同，这种转移也会产生。此外，我们证明智力增益的程度关键取决于训练量：训练越多，_g~f~_ 的改善就越大。也就是说，训练效果是剂量依赖性的。因此，与之前的许多研究相比，我们得出的结论是，无需练习测试任务本身就可以改进 _g~f~_，从而开启了广泛的应用程序。
@@ -666,15 +666,15 @@ Brain Workshop 包括一个特殊的"Jaeggi 模式"，它几乎完全复制了�
 
 ### Qiu 2009
 
-["通过基于 Gabor 的认知训练系统提高流体智力的研究" Stimulus"](/doc/dual-n-back/2009-qiu.pdf)，2009第一届信息科学与工程国际会议，摘要：
+["通过基于 Gabor 的认知训练系统提高流体智力的研究" Stimulus"](https://gwern.net/doc/dual-n-back/2009-qiu.pdf)，2009第一届信息科学与工程国际会议，摘要：
 
 > 一般流体智能（_g~f~_）是人类独立于先前获得的知识和经验来推理和解决新问题的能力。它被认为是学习中最重要的因素之一。成人的_g~f~_能否得到改善是学界人士关注的问题之一。根据Dual N-back工作记忆理论和视觉知觉学习的特点，提出基于Gabor刺激的认知训练模式。共有20名24岁的本科生参加了实验，共10次培训，为期10天。通过以Raven标准渐进矩阵为评价方法，得到并分析实验结果，证明训练模式可以提高成人的流体智力。这将促进在成人智力教育领域的广泛应用。
 
 这篇中文[^china][^china-2]论文的讨论和批评发生在[2](https://groups.google.com/g/brain-training/browse_frm/thread/7321c36dca3dcfad/3eb3ac6bd64498f0) [线程](https://groups.google.com/g/brain-training/c/gGE5IMD71CI); SPM 在 25 分钟内完成，虽然没有 Jaeggi 2008 快，但仍然不是正常的长度。另一个异常现象是，根据最终图表，对照组的智商在测试后大幅下降（推动了大部分改善）。作为我的[元分析](/dnb-meta-analysis "'双_n_-Back元分析'，Gwern 2012")的一部分，我试图在2012年5月、6月、7月和9月联系这4位作者； 
 
-[^china]: _[新人文主义者](!W)_, ["谎言，该死的谎言和中国科学：中华人民共和国正在成为一个技术超级大国，但谁在检查事实？萨姆·吉尔寻找中国科学警察"](https://new humanist.org.uk/2365/lies-damn-lies-and-chinese-science)（另请参阅[_Lancet_](https://news.bbc.co.uk/2/hi/8448731.stm), [_Nature_](/doc/statistics/bias/2010-zhang.pdf "'中国期刊发现 31% 的投稿存在抄袭'，Zhang 2010")， [_NYT_](https://www.nytimes.com/2010/10/07/world/asia/07fraud.html)、[Joe Hilgard](https://crystalprisonzone.blogspot.com/2021/01/i-tried-to-report-scientific-misconduct.html))：
+[^china]: _[新人文主义者](!W)_, ["谎言，该死的谎言和中国科学：中华人民共和国正在成为一个技术超级大国，但谁在检查事实？萨姆·吉尔寻找中国科学警察"](https://new humanist.org.uk/2365/lies-damn-lies-and-chinese-science)（另请参阅[_Lancet_](https://news.bbc.co.uk/2/hi/8448731.stm), [_Nature_](https://gwern.net/doc/statistics/bias/2010-zhang.pdf "'中国期刊发现 31% 的投稿存在抄袭'，Zhang 2010")， [_NYT_](https://www.nytimes.com/2010/10/07/world/asia/07fraud.html)、[Joe Hilgard](https://crystalprisonzone.blogspot.com/2021/01/i-tried-to-report-scientific-misconduct.html))：
 
- > 这种"不发布就灭亡"的文化导致中国大学制定了不切实际的目标 - 并且可以预见的后果是，[猖獗](https://news.bbc.co.uk/1/hi/world/asia-pacific/4755861.stm)[抄袭](https://news.bbc.co.uk/2/hi/asia-pacific/8442147.stm)。一月份，同行评审的国际期刊_[晶体学报](!W) E 部分_[宣布](https://www.nature.com/articles/463142a "在中国出版或灭亡：有人说，在高影响力期刊上发表论文的压力可能会鼓励不当行为")撤回了 70 多篇由伪造数据的中国科学家发表的论文。三个月后，该出版物宣布删除另外 39 篇文章，"由于数据集问题或原子分配不正确"，其中 37 篇完全由中国大学撰写。总部位于新泽西州的森特纳里学院 (Centenary College) 于 7 月关闭了其附属的中国商学院项目，此前的一项审查"发现了存在广泛抄袭等问题的证据，其程度通常会导致学生立即被学院开除"。 《自然》杂志援引一项政府研究发现，在中国六家顶尖机构接受调查的 6000 多名科学家中，约有三分之一存在"剽窃、伪造或捏造"行为。但损害中国科学质量的不仅仅是对数量的重视。众所周知，发表偏见是普遍存在的，即倾向于优先考虑显示重大发现的研究结果，而不是不确定的结果。一项[对 1998 年针灸研究的系统回顾，发表在_对照临床试验_](/doc/statistics/bias/publication/1998-vickers.pdf "'某些国家只产生积极结果吗？对对照试验的系统回顾'，Vickers 等人 1998")发现，源自中国的每一项临床试验都是积极的——换句话说，在中国发表的试验没有发现一种治疗方法是有效的。无效。
+ > 这种"不发布就灭亡"的文化导致中国大学制定了不切实际的目标 - 并且可以预见的后果是，[猖獗](https://news.bbc.co.uk/1/hi/world/asia-pacific/4755861.stm)[抄袭](https://news.bbc.co.uk/2/hi/asia-pacific/8442147.stm)。一月份，同行评审的国际期刊_[晶体学报](!W) E 部分_[宣布](https://www.nature.com/articles/463142a "在中国出版或灭亡：有人说，在高影响力期刊上发表论文的压力可能会鼓励不当行为")撤回了 70 多篇由伪造数据的中国科学家发表的论文。三个月后，该出版物宣布删除另外 39 篇文章，"由于数据集问题或原子分配不正确"，其中 37 篇完全由中国大学撰写。总部位于新泽西州的森特纳里学院 (Centenary College) 于 7 月关闭了其附属的中国商学院项目，此前的一项审查"发现了存在广泛抄袭等问题的证据，其程度通常会导致学生立即被学院开除"。 《自然》杂志援引一项政府研究发现，在中国六家顶尖机构接受调查的 6000 多名科学家中，约有三分之一存在"剽窃、伪造或捏造"行为。但损害中国科学质量的不仅仅是对数量的重视。众所周知，发表偏见是普遍存在的，即倾向于优先考虑显示重大发现的研究结果，而不是不确定的结果。一项[对 1998 年针灸研究的系统回顾，发表在_对照临床试验_](https://gwern.net/doc/statistics/bias/publication/1998-vickers.pdf "'某些国家只产生积极结果吗？对对照试验的系统回顾'，Vickers 等人 1998")发现，源自中国的每一项临床试验都是积极的——换句话说，在中国发表的试验没有发现一种治疗方法是有效的。无效。
 
  - 晶体学：[1](https://retractionwatch.com/2011/02/28/crystal-myth-11-more-retractions-from-crystallography-journal-after-2010-fakery/)， [2](https://retractionwatch.com/2022/07/26/crystallography-database-flags-nearly-1000-structs-linked-to-a-paper-mill/)
  _[科学新闻](!W)_, ["传统中医：大问题：有关益处的期刊报道往往缺乏方法论严谨性或详情"](https://www.sciencenews.org/view/generic/id/330930/title/Traditional_Chinese_medicine_Big_questions):
@@ -695,7 +695,7 @@ Brain Workshop 包括一个特殊的"Jaeggi 模式"，它几乎完全复制了�
 
 ### Jaeggi 2010
 
-["n-back 性能与矩阵推理之间的关系 - 对训练和迁移的影响"](/doc/dual-n-back/2010-jaeggi.pdf "'<em>n</em>-back 性能与矩阵之间的关系推理——对训练和迁移的影响'，Jaeggi et al 2010"），Jaeggi et al（在荟萃分析中编码为"Jaeggi2"）；摘要：
+["n-back 性能与矩阵推理之间的关系 - 对训练和迁移的影响"](https://gwern.net/doc/dual-n-back/2010-jaeggi.pdf "'<em>n</em>-back 性能与矩阵之间的关系推理——对训练和迁移的影响'，Jaeggi et al 2010"），Jaeggi et al（在荟萃分析中编码为"Jaeggi2"）；摘要：
 
 > ...在第一项研究中，我们证明了双和单 n-back 任务的表现与测量 _g~f~_ 的两个不同任务的表现大致具有相同的相关性，而与评估工作记忆容量的任务的相关性较小。基于这些结果，第二项研究旨在检验这样的假设：单个 n-back 任务的训练与双 n_back 任务的训练在 _g~f~_ 上产生相同的改进，但对工作记忆容量的转移应该更少。我们对两组学生进行了四个星期的培训，采用单背干预或双背干预。我们研究了转移对工作记忆容量的影响，并将两个训练组的表现与未接受任何训练的对照组进行比较。我们的结果表明，两个训练组在 _g~f~_ 方面的进步均高于对照组，从而复制并扩展了我们之前的结果。
 
@@ -708,7 +708,7 @@ Brain Workshop 包括一个特殊的"Jaeggi 模式"，它几乎完全复制了�
 
 #### Studer-Luethi 2012
 
-第二项研究的数据被重复用于 Studer-Luethi、Jaeggi 等人 2012 年的大五人格因素分析，["神经质和神经质的影响"尽责性对工作记忆训练结果的影响"](/doc/dual-n-back/2012-studerluethi.pdf).[^Studer]
+第二项研究的数据被重复用于 Studer-Luethi、Jaeggi 等人 2012 年的大五人格因素分析，["神经质和神经质的影响"尽责性对工作记忆训练结果的影响"](https://gwern.net/doc/dual-n-back/2012-studerluethi.pdf).[^Studer]
 
 [^Studer]: 摘要：
 
@@ -729,7 +729,7 @@ n-back 分数与 WM 分数缺乏相关性似乎与早期的研究一致； ["工
 #### Stephenson & Halpern 2013
 
 
-["改进的矩阵推理仅限于具有视觉空间成分的任务训练"](/doc/dual-n-back/2013-stephenson.pdf)，Stephenson & Halpern 2013：
+["改进的矩阵推理仅限于具有视觉空间成分的任务训练"](https://gwern.net/doc/dual-n-back/2013-stephenson.pdf)，Stephenson & Halpern 2013：
 
 > 最近的研究（例如 Jaeggi 等人 2008 年、2010 年）提供的证据表明，通过让参与者使用双重矩阵完成为期 4 周的训练计划，可以提高流体智力测试的分数。 _n_-返回任务。双回任务是一种同时呈现听觉和视觉刺激的工作记忆任务。我们研究的主要目标是确定培训计划中是否需要视觉空间部分，以便参与者在流体智力测试中体验到收益。我们让参与者完成双背任务或短期记忆任务的变体作为训练。参与者接受了四项流体智力测试和四项认知测试的评估。我们成功地证实了 Jaeggi 等人的结果，然而，对于完成双正背任务、视觉正背任务或短期记忆任务训练计划的参与者，只有四分之二的流体智力测试中观察到分数有所提高。我们的结果提出了这样一个问题：这些测试是否专门衡量流体智力的结构，或者它们是否可能对其他因素敏感。这些发现对概念化和评估流体智力的影响进行了讨论......本文中的数据是 Clayton Stephenson 博士论文的一部分。 
 
@@ -739,7 +739,7 @@ Jaeggi, Buschkuehl, Jonides & Shah 2011 ["认知的短期和长期益处训练"]
 
 > 我们通过类似视频游戏的工作记忆任务来训练中小学生。我们发现，只有在训练任务上取得显着进步的孩子在未经训练的流体智力任务上表现出明显的提高。这一改进大于对照组的改进，该对​​照组接受了不涉及工作记忆的基于知识的任务训练；此外，即使在训练中断 3 个月后，这种差异模式仍然完好无损。我们的结论是，认知训练可以有效且持久，但在评估这种训练的效果时必须考虑一些限制因素，其中之一是训练表现的个体差异。我们建议未来的研究不应该调查认知训练是否有效，而应该确定什么样的训练方案和训练条件可以产生最佳的迁移效果，调查潜在的神经和认知机制，最后调查认知训练对谁最有用。
 
-（不要将本文与 2011 年的海报混淆，["工作记忆训练和转移到 _g~f~_。领域的证据"）特异性？"](/doc/dual-n-back/2011-jaeggi-poster.pdf), Jaeggi et al 2011.)
+（不要将本文与 2011 年的海报混淆，["工作记忆训练和转移到 _g~f~_。领域的证据"）特异性？"](https://gwern.net/doc/dual-n-back/2011-jaeggi-poster.pdf), Jaeggi et al 2011.)
 
 值得注意的是，该研究使用了 Single N-back（视觉）。与 Jaeggi 2008 不同，"尽管实验组有明显的训练效果，但我们观察到在转移到 _g~f~_ 测量时没有显着的组 × 测试会话交互作用。（因此，训练时间可能足够长，足以让受试者达到上限）。根据最终 IQ 和 n-back 分数，可以将进行 n-back 的组分为 2 组；有趣的是，"对 n-back 训练表现的检查表明，在训练的前 3 周内没有组间差异。培训；因此，随着时间的推移，群体差异似乎变得更加明显[前 3 周：t(30) < 1； P = 纳秒；上周：t(16) = 3.00； P < 0.01]（图 3）。"3 周约为 21 天，或 >19 天（Jaeggi 2008 中最长的周期）。还值得注意的是，Jaeggi 2011 似乎避免了穆迪最有说服力的批评，即智商测试的加速；来自论文的"材料和方法"部分；
 
@@ -778,7 +778,7 @@ UoM 与 Jonides 制作的[视频](https://www.youtube.com/watch?v=-sPOgbz_gq4)�
 
 [^affectiveIQ]：DNB 组获得约 1 分（问题），而对照组在开始高约 2 分后下降约 2 分。换句话说，如果对照组没有下降那么多，DNB 组的得分绝不会更高！
 
- > 重复他们的结果，我们发现训练组的 _g~f~_ 分数在统计上显着增加，超过了数字跨度任务 F(1, 26) = 3.00, _p_ = 0.05, η<span类="subsup"><sub>p</sub><sup>2</sup></span> = 0.10。相比之下，对照组的 _g~f~_ 显示出非统计显着性下降。 F < 1，并且按时间划分的关键组交互作用具有统计显着性，F(1, 40) = 7.47，_p_ = 0.01，η<span class="subsup"><sub>p</sub><sup>2</sup></span> = 0.16。从图 3 中可以看出，训练前的 _g~f~_（RPM 分数）存在统计学上显着的组间差异趋势，p≤0.10。这提出了一种可能性，即训练组与对照组的 _g~f~_ 相对增益在某种程度上可能是基线差异的人为因素。然而，即使在训练前 RPM 分数更接近地匹配训练组和对照组（通过删除得分最高的对照组）F(1, 30) = 3.66，_p_ = 0.032，η<span class="subsup"><sub>p</sub><sup>2</sup></span> = 0.10 后，作为组函数的迁移的交互效应仍然具有统计显着性。对照组和训练组的调整后平均值（标准差）在训练前分别为 27.20 (1.93)、26.63 (2.60) (t(43) = 1.29，P>0.05)，在训练后分别为 26.50 (4.50)、27.07 (2.16)。此外，在 _p_ = 0.057 时，_g~f~_ 的增益与训练 r(29) = 0.36 时的 n-back 性能改进呈正相关，这表明这种增益确实是训练的函数......尽管我们发现 _g~f~_ 可转移增益似乎与训练增益有些相关，并且当我们修剪组以提供与预训练 _g~f~_ 更好的匹配时，效果仍然存在。值得注意的是，某种程度的[回归](/doc/statistics/bayes/regression-to-mean/index "'回归均值谬误', Gwern 2021") 均值可能会影响结果。
+ > 重复他们的结果，我们发现训练组的 _g~f~_ 分数在统计上显着增加，超过了数字跨度任务 F(1, 26) = 3.00, _p_ = 0.05, η<span类="subsup"><sub>p</sub><sup>2</sup></span> = 0.10。相比之下，对照组的 _g~f~_ 显示出非统计显着性下降。 F < 1，并且按时间划分的关键组交互作用具有统计显着性，F(1, 40) = 7.47，_p_ = 0.01，η<span class="subsup"><sub>p</sub><sup>2</sup></span> = 0.16。从图 3 中可以看出，训练前的 _g~f~_（RPM 分数）存在统计学上显着的组间差异趋势，p≤0.10。这提出了一种可能性，即训练组与对照组的 _g~f~_ 相对增益在某种程度上可能是基线差异的人为因素。然而，即使在训练前 RPM 分数更接近地匹配训练组和对照组（通过删除得分最高的对照组）F(1, 30) = 3.66，_p_ = 0.032，η<span class="subsup"><sub>p</sub><sup>2</sup></span> = 0.10 后，作为组函数的迁移的交互效应仍然具有统计显着性。对照组和训练组的调整后平均值（标准差）在训练前分别为 27.20 (1.93)、26.63 (2.60) (t(43) = 1.29，P>0.05)，在训练后分别为 26.50 (4.50)、27.07 (2.16)。此外，在 _p_ = 0.057 时，_g~f~_ 的增益与训练 r(29) = 0.36 时的 n-back 性能改进呈正相关，这表明这种增益确实是训练的函数......尽管我们发现 _g~f~_ 可转移增益似乎与训练增益有些相关，并且当我们修剪组以提供与预训练 _g~f~_ 更好的匹配时，效果仍然存在。值得注意的是，某种程度的[回归](https://gwern.net/doc/statistics/bayes/regression-to-mean/index "'回归均值谬误', Gwern 2021") 均值可能会影响结果。
 [^affectiveSpeeded]：至少，他们似乎在管理整个事情，但没有提到这样的变化：
 
  > 我们用乌鸦渐进式评估了 _g~f~_矩阵（RPM；_标准渐进矩阵指南_，Raven 1960）——文献中的标准度量。每个 RPM 项目向参与者提供了一个视觉模式矩阵，其中缺少一个模式。参与者通过从一系列备选方案中选择一种模式来选择如何完成矩阵。我们使用 RPM 的并行版本（偶数页和奇数页），我们在参与者之间以及训练前后进行平衡。 RPM 的评分范围为 0-30，每个正确的矩阵为参与者赢得一分。
@@ -804,7 +804,7 @@ UoM 与 Jonides 制作的[视频](https://www.youtube.com/watch?v=-sPOgbz_gq4)�
 
 ###zhong 2011
 
-["训练工作记忆和注意力对学生流体智力的影响"](https://www.doc88.com/p-397166703921.html) ([摘要](https://www.globethesis.com/?t=2155330335456903))，钟2011； [原始加密文件](/doc/dual-n-back/2012-zhong.ebt) (8M)、[论文所有页面截图](/doc/dual-n-back/2011-zhong.tar) (20M)； [讨论](https://groups.google.com/g/brain-training/c/V_msD2vUjy4)
+["训练工作记忆和注意力对学生流体智力的影响"](https://www.doc88.com/p-397166703921.html) ([摘要](https://www.globethesis.com/?t=2155330335456903))，钟2011； [原始加密文件](https://gwern.net/doc/dual-n-back/2012-zhong.ebt) (8M)、[论文所有页面截图](https://gwern.net/doc/dual-n-back/2011-zhong.tar) (20M)； [讨论](https://groups.google.com/g/brain-training/c/V_msD2vUjy4)
 
 使用非接触对照组似乎发现智商有所提高，但没有剂量反应效应。难以理解：希望中文人士提供翻译帮助。
 
@@ -885,7 +885,7 @@ Jaeggi et al 2011 根据第一次和最后一次训练之间的表现改进对�
 
 ### Jaeggi et al 2013
 
-["个体差异在认知训练和迁移中的作用"](/doc/dual-n-back/2013-jaeggi.pdf):
+["个体差异在认知训练和迁移中的作用"](https://gwern.net/doc/dual-n-back/2013-jaeggi.pdf):
 
 > 工作记忆 (WM) 训练最近成为人们强烈关注和争议的话题。尽管最近的几项研究报告了训练 WM 相关技能所带来的近迁移和远迁移效应，但其他研究未能显示远迁移，这表明泛化效应难以捉摸。此外，许多早期的干预尝试都因方法论而受到批评。本研究解决了先前研究的一些方法学局限性，并将个体差异视为跨研究不同转移效应的潜在解释。我们招募了具有内在动机的参与者，并在训练前评估了他们的认知需求（NFC；Cacioppo & Petty Journal of Personality and Social Psychology 42:116-131, 1982）以及他们的隐含智力理论（Dweck, 1999）。我们通过将参与者在一系列流体智力测试中的进步与主动对照组的进步进行比较来评估两种干预措施的效果。我们观察到，两种 WM 干预措施都导致了向流体推理综合测量的转变。此外，我们还发现了有助于训练成功的因素，包括动机、认知需求、预先存在的能力和有关智力的隐含理论。
 
@@ -946,7 +946,7 @@ n=27，平均值=14.74，SD=2.80
 
 ### Stepankova et al 2013
 
-["工作记忆和视觉空间技能的可塑性：一项针对老年人的随机对照研究" Adults"](/doc/dual-n-back/2013-stepankova.pdf)，Stepankova 等人 2013：
+["工作记忆和视觉空间技能的可塑性：一项针对老年人的随机对照研究" Adults"](https://gwern.net/doc/dual-n-back/2013-stepankova.pdf)，Stepankova 等人 2013：
 
 > 越来越多的证据表明，工作记忆 (WM) 训练可以推广到其他未训练领域，并且有报告称转移效应甚至延伸到流体智力的测量。尽管已经在年轻人和儿童中多次证明了这种转移效应，但在老年人中却很难证明。在这项研究中，我们研究了适应性 WM 干预对未经训练的 WM 和视觉空间技能测量的普遍影响。我们随机分配健康的老年人在一个月内接受 10 或 20 次言语 n-back 任务训练。他们的表现变化与对照组进行了比较。我们的结果揭示了未经训练的 WM 和视觉空间技能标准临床测量中可靠的群体效应，两个训练组都优于对照组。我们还观察到剂量反应效应，即训练频率与视觉空间技能的增益之间存在正相关关系；培训改进与转移之间的正相关性进一步证实了这一发现。尽管干预仅限于言语领域，但视觉空间技能仍出现了改善。我们的工作具有重要意义，因为我们的数据为老年认知功能的可塑性提供了进一步的证据。
 
@@ -987,7 +987,7 @@ MR 听起来最接近我一直喜欢的 RAPM。没有时间限制。
 
 ### Horvat 2014
 
-["工作记忆训练对认知能力的影响"](/doc/dual-n-back/2014-horvat.pdf), Horvat 2014年；斯洛文尼亚语，英文摘要：
+["工作记忆训练对认知能力的影响"](https://gwern.net/doc/dual-n-back/2014-horvat.pdf), Horvat 2014年；斯洛文尼亚语，英文摘要：
 
 > 在过去的几年里，心理学文献中越来越多的证据表明，工作记忆训练可以作为一种有用的工具，以提高未经训练的任务的表现，从而衡量更高的认知能力；然而，不同研究的结果仍然不一致。本硕士论文的目的是探索工作记忆训练是否可以提高正常发育儿童的短期记忆能力并提高流体智力测试的分数。
 >
@@ -999,7 +999,7 @@ MR 听起来最接近我一直喜欢的 RAPM。没有时间限制。
 
 ### Heinzel et al 2016
 
-["老年人工作记忆中训练和转移效应的神经相关性"](/doc/dual-n-back/2016-heinzel.pdf), Heinzel et al 2016:
+["老年人工作记忆中训练和转移效应的神经相关性"](https://gwern.net/doc/dual-n-back/2016-heinzel.pdf), Heinzel et al 2016:
 
 > 正如之前的研究表明，衰老与工作记忆 (WM) 功能下降有关，而工作记忆功能又与额顶叶神经激活的改变有关。同时，之前的研究表明，老年人的 WM 训练可以提高训练任务中的表现（训练效果），更重要的是，还可以提高未经训练的 WM 任务中的表现（迁移效果）。然而，这些转移效应的神经相关性可以提高对其潜在机制的理解，但尚未在老年参与者中得到证实。在这项研究中，我们研究了老年人在进行 12 次适应性 n-back 训练（每次 45 分钟）后，在 n-back 表现和未经训练的延迟识别 (Sternberg) 任务中血氧水平依赖性 (BOLD) 信号的变化。本研究中使用的 Sternberg 任务允许测试独立于训练任务的特定任务可供性的神经训练效果，并将维护与更新过程分开。 32 名健康的老年参与者（60-75 岁）被分配到 n-back 训练组或非接触对照组。在训练/等待期之前 (t1) 和之后 (t2)，进行 n-back 任务和 Sternberg 任务，同时使用功能磁共振成像 (fMRI) 对所有参与者测量 BOLD 信号。此外，神经心理学测试是在扫描仪外进行的。研究发现，通过训练和行为转移到测量执行功能、处理速度和流体智力的测试，WM 性能得到改善。在训练组中，与对照组相比，在经过训练的 n-back 和未经训练的 Sternberg 任务的 t2 更新条件下，右侧额中回/尾部额上沟（布罗德曼区，BA 6/8）的 BOLD 信号均有所下降。 FMRI 结果表明，WM 网络处理效率与训练相关，这可能与 WM 更新过程有关。未经训练的任务中的表现提高表明，在衰老过程中，转移到其他认知任务仍然是可能的。
 
@@ -1061,13 +1061,13 @@ Shipstead、Redick 和 Engle 2012 详细阐述了虽然矩阵式 IQ 测试被认
 
 明确测量速度的尝试：
 
-- Chuderski 2013，["什么时候流体智力和工作记忆同构，什么时候不是？"](/doc/dual-n-back/2013-chuderski.pdf)
-- Colom et al 2015，["流体智力和工作记忆能力：是同构的"解决与解释其重大关系相关的智力问题的时间？"](/doc/dual-n-back/2015-colom.pdf)
-- Chuderski 2015，["工作记忆的广泛因素实际上与时间压力下测试的流体智力同构"](/doc/dual-n-back/2015-chuderski.pdf)
+- Chuderski 2013，["什么时候流体智力和工作记忆同构，什么时候不是？"](https://gwern.net/doc/dual-n-back/2013-chuderski.pdf)
+- Colom et al 2015，["流体智力和工作记忆能力：是同构的"解决与解释其重大关系相关的智力问题的时间？"](https://gwern.net/doc/dual-n-back/2015-colom.pdf)
+- Chuderski 2015，["工作记忆的广泛因素实际上与时间压力下测试的流体智力同构"](https://gwern.net/doc/dual-n-back/2015-chuderski.pdf)
 
 ### Seidler 2010
 
-["认知训练作为提高老年人驾驶能力的干预措施"](/doc/dual-n-back/2010-seidler.pdf "'M-CASTL 综合报告'，SBA 2010")，由 Susanne Jaeggi 等在内的一个小组撰写的[技术报告](!W)，研究了 DNB 对年轻人/老年人驾驶能力的影响。作为前后测试电池的一部分，Raven 的管理：
+["认知训练作为提高老年人驾驶能力的干预措施"](https://gwern.net/doc/dual-n-back/2010-seidler.pdf "'M-CASTL 综合报告'，SBA 2010")，由 Susanne Jaeggi 等在内的一个小组撰写的[技术报告](!W)，研究了 DNB 对年轻人/老年人驾驶能力的影响。作为前后测试电池的一部分，Raven 的管理：
 
 > 2 类测试包括 Raven 矩阵（Raven 等人 1990），这是一种标准化的流体智力测试，以及 BOMAT 和言语类比智力测试（Hossiep 等人 1995）。我们之前已经表明工作记忆训练会转移到这项任务的表现（Jaeggi 等人 2008），我们将其包含在此处是为了复制。
 
@@ -1105,7 +1105,7 @@ Shipstead、Redick 和 Engle 2012 详细阐述了虽然矩阵式 IQ 测试被认
 #。总共使用了 30 名受试者，即每组 15 名受试者
 #。训练时间超过5-6天，每天16-20分钟（尽管DNB受试者的分数确实有所提高），这可能还不够；尽管 Jonasson 评论（第 44-45 页）：
 
- > 尽管如此，五天或更短的训练也导致转移任务表现的显着提高（[Damos & Wickens, 1980](/doc/dual-n-back/1980-damos.pdf"分时技能的识别和转移"）；[Kramer 等人1995](/doc/dual-n-back/1995-kramer.pdf "双重任务环境中的注意力控制训练：年轻人和老年人的比较")；[Rueda et al 2005](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1253585/ "训练、成熟和遗传对执行注意力发展的影响"))。然而，Kramer 等人 1995 年的研究可能转移了一种策略，而不是训练特定的组成部分，而 Rueda 等人 2005 年的研究发现这种转移发生在 4 岁到 6 岁之间的儿童中，儿童可能比成人更容易接受训练。
+ > 尽管如此，五天或更短的训练也导致转移任务表现的显着提高（[Damos & Wickens, 1980](https://gwern.net/doc/dual-n-back/1980-damos.pdf"分时技能的识别和转移"）；[Kramer 等人1995](https://gwern.net/doc/dual-n-back/1995-kramer.pdf "双重任务环境中的注意力控制训练：年轻人和老年人的比较")；[Rueda et al 2005](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1253585/ "训练、成熟和遗传对执行注意力发展的影响"))。然而，Kramer 等人 1995 年的研究可能转移了一种策略，而不是训练特定的组成部分，而 Rueda 等人 2005 年的研究发现这种转移发生在 4 岁到 6 岁之间的儿童中，儿童可能比成人更容易接受训练。
 #.乔纳森认为，受试者没有动力，可能是因为在家中通过"Lumosity.com"进行训练；只有一个人完成了整整 6 天的培训，而激励措施通常会提高智商和其他测试的表现。
 
 ### Chooi 2011
@@ -1114,7 +1114,7 @@ Shipstead、Redick 和 Engle 2012 详细阐述了虽然矩阵式 IQ 测试被认
 
 > ...当前的研究旨在复制和扩展 Jaeggi 等人 2008 年在一项控制良好的实验中进行的原始研究，该实验可以解释这种转移的原因（如果确实如此）。共有 93 名参与者完成了这项研究，他们被随机分配到三组之一：被动对照组、主动对照组和实验组。一半的参与者被随机分配到 8 天的条件下，另一半被分配到 20 天的条件下。所有参与者在测试前和测试后都完成了一系列测试，其中包括短时测试、复杂的工作记忆范围和[不定时]矩阵推理任务。主动对照组的参与者练习 8 天或 20 天，执行与实验组中使用的任务相同的任务，即双_n_-back，但采用最简单的水平来控制霍桑效应。目前的研究结果表明，经过 8 天或 20 天的训练后，测试的心理能力没有任何显着改善，尤其是流体智力和工作记忆能力。由此得出的结论是，通过训练和练习提高工作记忆能力并不会像 Jaeggi 和她的同事 (2008, 2010) 所声称的那样转化为流体智力的提高。
 
-[Jonathan Toomim](https://groups.google.com/g/brain-training/c/_an75e7Nnfc/m/tqgz6-Zf4S8J) 指出了对[统计数据]的担忧power](!W)：多个对照组意味着进行实际 n-backing 的受试者数量很少，并且只有当人们预计 n-backing 会产生戏剧性的效果（取自 Jaeggi 2010 的巨大效应量（但不是 Jaeggi 2008 的较小效应量））时，无效结果才可信。他评论道："DNB 训练的[效果大小](!W) 可能小于 0.98。（当然，这就是我在看到这个之前所相信的。）效果大小仍然可以相当合理地高达 0.75。" Chooi 2011似乎被总结为[Choi & Thompson 2012](/doc/dual-n-back/2012-chooi.pdf "工作记忆训练不会提高健康年轻人的智力")，其中进一步讨论了功率问题：
+[Jonathan Toomim](https://groups.google.com/g/brain-training/c/_an75e7Nnfc/m/tqgz6-Zf4S8J) 指出了对[统计数据]的担忧power](!W)：多个对照组意味着进行实际 n-backing 的受试者数量很少，并且只有当人们预计 n-backing 会产生戏剧性的效果（取自 Jaeggi 2010 的巨大效应量（但不是 Jaeggi 2008 的较小效应量））时，无效结果才可信。他评论道："DNB 训练的[效果大小](!W) 可能小于 0.98。（当然，这就是我在看到这个之前所相信的。）效果大小仍然可以相当合理地高达 0.75。" Chooi 2011似乎被总结为[Choi & Thompson 2012](https://gwern.net/doc/dual-n-back/2012-chooi.pdf "工作记忆训练不会提高健康年轻人的智力")，其中进一步讨论了功率问题：
 
 
 > 该研究的一个主要限制是样本量小以及可能的样本特征，这可能降低了所进行的分析的功效。当 Jaeggi 等人 2010 年对 25 名接受 Raven 高级渐进矩阵 (RAPM) 训练 20 天的学生重复这项研究时，他们获得了 0.98 的效应值（Cohen's _d_）。此外，Jaeggi 等人 2010 年研究的参与者与当前研究的参与者在文化上有所不同。前一项研究的参与者是台湾一所大学的本科生（平均年龄=19.4），而当前研究的参与者主要是就读于中西部大学的美国学生。目前的研究是根据 Jaeggi 等人 2008 年提出的作为复制和延伸研究的主张而设计的。在该研究中，参与者是健康的年轻人，他们比当前样本（平均年龄 = 20.0 岁）稍大（平均年龄 = 25.6 岁），他们是从瑞士伯尔尼的一所大学招募的。从我们的 RAPM 研究中获得的效应大小并不像 Jaeggi 等人（2008 年、2010 年）报道的那么高 - 分别为 _d_ = 0.65 和 _d_ = 0.98。由于效应量如此之大，配对 t 检验的分析在 10-12 名参与者中可以达到 0.80 的功效。参考表 4，最高的 RAPM 效应大小 (_d_ = 0.50) 来自 8 天被动对照组，该组有 22 名参与者，其功效为 0.83。 20 天的训练组 (_n_ = 13) 在 RAPM 中的效应大小为 0.06，要达到 0.80 的功效，该组需要超过 1700 名参与者。另一方面，由 11 名参与者组成的 20 天主动对照组的效应大小为 0.40，并且可以通过将参与者数量增加到 34 来提高功效。这些观察结果使我们相信，测试变量缺乏改善可能是由于样本量较小和样本特征差异的综合作用，其中我们研究中的参与者的智力范围受到限制。
@@ -1131,7 +1131,7 @@ Shipstead、Redick 和 Engle 2012 详细阐述了虽然矩阵式 IQ 测试被认
 
 ### Kundu 等人 2012
 
-["工作记忆的行为和脑电图影响"培训"](https://psych.wisc.edu/postlab/posters/bornali_cns_2012.pdf) ([RAPM 补充](/doc/dual-n-back/2012-05-30-kundu-dnbrapm.xls)); 13 个对照组和 13 个实验组在 Dual _n_-back（大脑工作室）或俄罗斯方块上训练了 1000 分钟。 "训练似乎没有转移到 _g~f~_ [RAPM] 或复杂跨度 [OSPAN]。"这不是已发表的研究，而是会议海报，因此不包括 RAPM 分数等详细信息。它可能与 [Kundu et al 2011](#kundu-et-al-2011) 有关。
+["工作记忆的行为和脑电图影响"培训"](https://psych.wisc.edu/postlab/posters/bornali_cns_2012.pdf) ([RAPM 补充](https://gwern.net/doc/dual-n-back/2012-05-30-kundu-dnbrapm.xls)); 13 个对照组和 13 个实验组在 Dual _n_-back（大脑工作室）或俄罗斯方块上训练了 1000 分钟。 "训练似乎没有转移到 _g~f~_ [RAPM] 或复杂跨度 [OSPAN]。"这不是已发表的研究，而是会议海报，因此不包括 RAPM 分数等详细信息。它可能与 [Kundu et al 2011](#kundu-et-al-2011) 有关。
 
 #### Kundu et al 2013
 
@@ -1149,7 +1149,7 @@ Shipstead、Redick 和 Engle 2012 详细阐述了虽然矩阵式 IQ 测试被认
 
 ### Redick 等人 2012
 
-["工作记忆训练后没有转移的证据：一项对照的随机研究"](https://scottbarrykaufman.com/wp-content/uploads/2012/05/Redick-et-al-final-JEPG.pdf) （[补充](/doc/dual-n-back/2012-redick-figure2.xlsx))，Redick 等人 2012；摘要：
+["工作记忆训练后没有转移的证据：一项对照的随机研究"](https://scottbarrykaufman.com/wp-content/uploads/2012/05/Redick-et-al-final-JEPG.pdf) （[补充](https://gwern.net/doc/dual-n-back/2012-redick-figure2.xlsx))，Redick 等人 2012；摘要：
 
 
 > 最近的大量研究似乎为工作记忆训练的一般智力益处提供了证据。在对培训文献的评论中，Shipstead、Redick 和 Engle（2010 年，出版中）认为，该领域应该以批判的眼光对待最近的结果。许多已发表的工作记忆训练研究都存在设计局限性（非接触对照组、认知结构的单一测量）、混合结果（将训练收益转移到某些任务而不是其他任务、跨研究转移到相同任务的不一致）以及缺乏理论基础（确定导致观察到的转移的机制）。目前的研究将接受 20 次适应性双背计划（工作记忆训练组）或适应性视觉搜索计划（主动安慰剂对照组）练习的年轻人与未接受练习的非接触对照组进行了比较。此外，所有受试者都完成了测试前、测试中和测试后的课程，包括流体智力、多任务处理、工作记忆能力、结晶智力和感知速度的多项测量。尽管通过练习，双回和视觉搜索任务都得到了改善，并且尽管统计功效很高，但任何认知能力测试都没有积极的转移。我们在以前的工作记忆训练研究的背景下讨论这些结果，并解决未来工作记忆训练研究的问题。
@@ -1166,7 +1166,7 @@ Shipstead、Redick 和 Engle 2012 详细阐述了虽然矩阵式 IQ 测试被认
 
 ### Heinzel et al 2013
 
-["工作记忆训练在年轻人和老年人中未经训练的认知任务中的改进和增益"](/doc/dual-n-back/2013-heinzel.pdf)，Heinzel et al 2013：
+["工作记忆训练在年轻人和老年人中未经训练的认知任务中的改进和增益"](https://gwern.net/doc/dual-n-back/2013-heinzel.pdf)，Heinzel et al 2013：
 
 > 以前关于工作记忆训练的研究表明，转移到其他认知领域的非训练任务也是可能的。本研究的目的是比较年轻人和老年人 (<em>n</em> = 60) 之间的工作记忆训练和转移效果。通过改变工作记忆负载和呈现速度，实现了一种新颖的自适应 n-back 训练（12 次训练）方法。所有参与者在训练前后都完成了一系列神经心理学测试。平均而言，年轻的培训参与者在培训后达到了难度级别 12，而年龄较大的培训参与者仅达到了难度级别 5。在年轻的参与者中，发现转移到语言流利度和数字符号替换测试。在年长的参与者中，我们观察到转移到数字跨度向前、CERAD 延迟回忆和数字符号替换测试。结果表明，工作记忆训练可能是维持和改善老年认知功能的有益干预措施。被动对照组；年轻或年老训练组中没有转移到"雷文标准渐进矩阵（Raven's SPM）和德国智力测试的图形关系子测试（Leistungspruefsystem，LPS，Horn，1983）"（增加，但样本量太小，无法在年轻组中达到统计显着性）； RPM 加快（7.5 分钟）。有关 IQ 测试表现的图表，请参阅第 19 页。
 
@@ -1205,7 +1205,7 @@ Studer-Luethi 2012 中的人格相关性也不起作用：
 
 ### Smith et al 2013
 
-["探索商业和定制游戏对认知训练的有效性"](/doc/dual-n-back/2013-smith.pdf), Smith et al 2013
+["探索商业和定制游戏对认知训练的有效性"](https://gwern.net/doc/dual-n-back/2013-smith.pdf), Smith et al 2013
 
 > 人们对量化非娱乐领域电脑游戏的有效性越来越感兴趣。我们使用商业现成 (COTS) 游戏 [_Brain Age_]、用于工作记忆任务的自定义 DIY (DIY) 训练系统 [DNB] 或针对对照组的在线策略游戏（未经训练），探索了参与者的一般智力改进。四十名大学级别的参与者被分为四组（COTS、DIY、游戏、[被动]控制），并在三周的培训中进行三次评估（干预前、干预后、1 周随访）。在一般智力测试中，与对照组或游戏组相比，两种认知训练系统（COTS 组和 DIY 组）都未能产生[统计]显着的改善。此外，在干预或随访期间，认知训练系统都没有产生[统计]显着的改善。
 
@@ -1233,7 +1233,7 @@ n=29 13.69 (2.54)
 
 ### Oelhafen 等人2013
 
-["干扰控制训练后顶叶活动增加"](/doc/dual-n-back/2013-oelhafen.pdf),
+["干扰控制训练后顶叶活动增加"](https://gwern.net/doc/dual-n-back/2013-oelhafen.pdf),
 
 > ...在当前的研究中，我们检查了自适应双_n_-back任务的两种变体的训练是否会影响未经训练的任务表现和相应的电生理事件相关电位（ERP）。 43 名健康的年轻人接受了为期三周的双背任务高干扰或低干扰训练变体的训练，或者将他们分配到被动对照组。虽然高干扰的 n-back 训练导致了注意力网络测试（ANT）的部分改善，但我们没有发现对工作记忆和流体智力测量的转移。 n-back 任务和 ANT 中的 ERP 分析表明 P3 时间范围内存在重叠过程。此外，在 ANT 中，我们检测到单独干扰训练组的顶叶活动增加。相比之下，我们没有发现低干扰训练组和对照组之间的电生理差异。这些发现表明，干扰控制任务训练会导致顶叶皮层电生理活动增强，这可能与处理速度和/或注意力控制的改善有关。
 
@@ -1258,7 +1258,7 @@ BOMAT，n=43
 
 ### Sprenger et al 2013
 
-["训练工作记忆：极限转移"](/doc/dual-n-back/2013-sprenger.pdf), Sprenger 等人 2013;摘要：
+["训练工作记忆：极限转移"](https://gwern.net/doc/dual-n-back/2013-sprenger.pdf), Sprenger 等人 2013;摘要：
 
 > 在两项实验（总共 253 名成人参与者）中，我们研究了强化工作记忆训练在多大程度上改善了未经训练的认知能力指标。尽管参与者在接受训练的任务以及共享任务特征或刺激的任务上表现出改善，但我们没有发现任何证据表明训练会导致工作记忆的总体改善。使用贝叶斯因子分析，我们表明数据普遍支持工作记忆训练对于提高一般认知能力无效的假设。即使在控制了许多个体差异（包括认知需求、对智力可塑性的信念和年龄）后，这一结论仍然成立。
 
@@ -1295,7 +1295,7 @@ RAPM 分数，后测，来自附录 B：
 ### Colom 等人 2013
 
 
-["自适应 n-back 训练不会提高构建水平的流体智力；个人测试的收益表明训练可能会增强视觉空间处理"](/doc/dual-n-back/2013-colom.pdf"自适应<em>n</em>-back 训练不会提高构建水平的流体智力：个体测试的收益表明训练可能会增强视觉空间处理"，Colom 等人 2013")，Colom 等人2013:
+["自适应 n-back 训练不会提高构建水平的流体智力；个人测试的收益表明训练可能会增强视觉空间处理"](https://gwern.net/doc/dual-n-back/2013-colom.pdf"自适应<em>n</em>-back 训练不会提高构建水平的流体智力：个体测试的收益表明训练可能会增强视觉空间处理"，Colom 等人 2013")，Colom 等人2013:
 
 > 据报道，基于 n-back 任务的短期适应性认知训练可以提高个人能力测试的分数，但这种提高是否推广到智力结构的关键问题尚不清楚。在这里，我们使用不同的测量方法和等效版本来评估流体/抽象智力（_g~f~_）、结晶/语言智力（Gc）、工作记忆能力（WMC）和注意力控制（ATT），以估计训练后结构水平上的任何变化。从 169 名参与者的样本开始，选择了两组，每组 28 名女性，并根据她们的一般认知能力得分和人口统计变量进行匹配。在实验室的严格监督下，训练组完成了基于 n-back 任务（视觉、听觉和双版本）的强化适应性训练计划，共 24 节课，分布在 12 周内。结果显示，随着时间的推移，该小组的 n-back 性能取得了预期的系统性改进；这种表现在不同会话中与 _g~f~_ 系统地相关。 Gc 和 WMC，但不包括 ATT。然而，主要发现表明，与对照组相比，训练组的评估心理结构没有显着变化。然而，事后分析表明，利用视觉空间处理的特定测试和任务可能对训练很敏感。 
 
@@ -1325,7 +1325,7 @@ PMA-R
 
 ### Burki et al 2014
 
-["认知可塑性的个体差异：一项调查年轻人和老年人的训练曲线"](/doc/dual-n-back/2014-burki.pdf)，Burki 等人 2014
+["认知可塑性的个体差异：一项调查年轻人和老年人的训练曲线"](https://gwern.net/doc/dual-n-back/2014-burki.pdf)，Burki 等人 2014
 
 
 > 迄今为止，关于认知训练对未经训练的任务（迁移）的影响，认知干预研究提供了混合但仍然有希望的证据。然而，学习、训练效果及其预测因素背后的机制尚不完全清楚。此外，个体差异可能构成影响训练结果的重要因素，但通常被忽视。我们建议一方面调查各个培训课程中的个人培训表现，以便获得更细粒度的培训收益知识，另一方面评估年龄和流体智力等预测因素对学习率的潜在影响。为此，我们建议对个体学习曲线进行建模，以检查训练中的个体内部变化以及个体内部变化的个体间差异。我们建议引入潜在增长曲线模型（LGCM）分析，这种方法经常应用于学习数据，但很少用于认知训练研究。这种对培训阶段的高级分析可以确定在设计有效的定制培训干预措施时需要考虑的因素。为了说明所提出的方法，报告了使用针对年轻人和老年人的 10 天工作记忆训练研究数据进行的 LGCM 分析。
@@ -1474,7 +1474,7 @@ RAPM 数据：
 
 ### Kuper & Karbach 2015
 
-["训练复杂性的增加降低了短暂工作记忆训练的有效性：来自短期单背和双背训练干预的证据"，Kuper & Karbach 2015](/doc/dual-n-back/2015-kuper.pdf "'训练复杂性的增加降低了短暂工作记忆训练的有效性：来自短期单背训练干预和双背训练干预的证据'，Küper & Karbach 2015")：
+["训练复杂性的增加降低了短暂工作记忆训练的有效性：来自短期单背和双背训练干预的证据"，Kuper & Karbach 2015](https://gwern.net/doc/dual-n-back/2015-kuper.pdf "'训练复杂性的增加降低了短暂工作记忆训练的有效性：来自短期单背训练干预和双背训练干预的证据'，Küper & Karbach 2015")：
 
 > 由于与训练相关的一般流体智力改善的报告，N-back 训练最近受到了严格的科学审查。然而，到目前为止，人们对短期正背训练干预措施的效果知之甚少。在预测试-训练-后测试设计中，我们比较了简短的双重和单次 n-back 训练方案相对于被动对照组的训练增益和转移效果。迁移效应表明，在短期内，单次 n-back 训练可能是更有效的训练任务：在我们采用的较短训练持续时间下，训练组对特定任务切换成本、Stroop 抑制或索引流体智力的矩阵推理表现出远迁移。然而，这两种类型的训练都导致了一般任务转换成本的减少，表明在持续维持竞争任务集期间认知控制得到了改善。单而非双 _n_-back 训练还产生了接近转移到未经训练的工作记忆更新任务的效果。
 
@@ -1494,7 +1494,7 @@ RAPM，20 分钟
 
 ### Lindeløv et al 2016 {#lindelov-et-al-2016}
 
-["N-back 训练对脑损伤和健康受试者的训练和转移效果"](/doc/dual-n-back/2016-lindelov.pdf "'N-back 训练对脑损伤和健康受试者的训练和转移效果', Lindeløv et al 2016"), Lindeløv et al 2016 年：
+["N-back 训练对脑损伤和健康受试者的训练和转移效果"](https://gwern.net/doc/dual-n-back/2016-lindelov.pdf "'N-back 训练对脑损伤和健康受试者的训练和转移效果', Lindeløv et al 2016"), Lindeløv et al 2016 年：
 
 > 工作记忆障碍在获得性脑损伤 (ABI) 患者中普遍存在。针对工作记忆的计算机化训练已经使用健康人群的样本进行了广泛的研究，但该领域仍然与 ABI 患者的类似研究相隔离。我们报告了一项主动对照随机对照试验的结果，其中 17 名患者和 18 名健康受试者完成了 N-back 任务的训练。健康组在两项训练任务上都有显着的改善（SMD = 6.1 和 3.3），而 ABI 组的改善则要少得多（SMD = 0.5 和 1.1）。两组都没有表现出可以转移到未经训练的任务。我们的结论是，在健康和 ABI 受试者中，计算机化培训有助于提高特定技能，而不是高水平认知。这些特定技能的获得似乎会因脑损伤而受到损害。基于计算机的认知训练最有效的用途可能是使任务与目标行为非常相似，以便利用学习的刺激特异性。
 
@@ -1590,7 +1590,7 @@ VT：0.91 (3.1)
 
 ### Studer-Luethi 等人 2015
 
-["儿童工作记忆训练：有效性取决于气质"](/doc/dual-n-back/2013-studerleuthi.pdf)，Studer-Luethi 等人 2015 年：
+["儿童工作记忆训练：有效性取决于气质"](https://gwern.net/doc/dual-n-back/2013-studerleuthi.pdf)，Studer-Luethi 等人 2015 年：
 
 > 揭示工作转移效应的研究对未经训练的儿童认知表现进行记忆（WM）训练对学业学习具有良好的影响。然而，现有训练研究的结果并不一致，引发了关于认知增强的潜力和局限性的争论。检查个体差异对训练结果的影响是寻找这种不一致原因的一种有前途的方法。在这项研究中，我们在小学环境中实施了 WM 培训。目的是调查近转移和远转移对认知能力和学业成绩的影响，并检查性格和调节性气质因素、神经质和努力控制的调节作用。 99 名二年级学生被随机分配到 20 节基于计算机的自适应 WM 训练、基于计算机的阅读训练或非接触对照组。对于 WM 训练组，我们的分析揭示了视觉 WM 任务上的近迁移、词汇任务上的远迁移（作为结晶智力的代表）以及阅读和数学方面的学术成绩按趋势增加。考虑到气质的个体差异，我们发现，努力控制预示着更大的训练均值和增益分数，并且两种气质因素对训练后的改善都有调节作用：只有在高度努力控制或低神经质的儿童中，与两种控制条件相比，WM 训练条件才预测更高的训练后增益。我们的研究结果表明，短期但强化的 WM 训练计划可以增强儿童的认知能力，但足够的自我调节能力和情绪稳定性对于 WM 训练的有效性是必要的。...我们发现，在乌鸦渐进矩阵中，训练小组的互动对表现没有显着影响 (F(2,92) = 1.57, p = .22, η<span class="subsup"><sub>p</sub><sup>2</sup></span> = .004)...我们发现变量记忆广度、认知控制、_g~f~_ 没有显着的长期影响。 Gc 和学术测试（所有 T < 1.4）。
 
@@ -1602,7 +1602,7 @@ RPM 10 分钟
 
 ### Minear 等人 2016
 
-["同时检查两种形式的工作记忆训练：近迁移的证据only"](/doc/dual-n-back/2016-minear.pdf), Minear et al 2016
+["同时检查两种形式的工作记忆训练：近迁移的证据only"](https://gwern.net/doc/dual-n-back/2016-minear.pdf), Minear et al 2016
 
 > 工作记忆训练的功效是一个备受争议的话题，一些研究表明可以转移到流体智力等措施，而另一些研究则没有。我们报告了一项研究的结果，该研究旨在检查两种形式的工作记忆训练，一种使用空间 n-back，另一种使用言语复合体跨度。 31 名本科生完成了 4 周的 n-back 训练，32 名本科生完成了 4 周的言语复杂跨度训练。我们还包括两个主动对照组。一组接受非自适应版本的 n-back 训练，另一组接受实时策略视频游戏训练。所有参与者都完成了大量转移任务的训练前和训练后测量，这些任务用于创建言语和视觉空间领域以及言语推理和流体智力的短期记忆和工作记忆的综合测量。我们只找到了从空间 n-back 训练到新形式 n-back 的近迁移的明确证据，自适应和非自适应 n-back 都是如此。
 
@@ -1636,7 +1636,7 @@ IQ：RPM，15 分钟
 
 > 我对超过 19 项研究进行荟萃分析，这些研究在 n-back 干预后测量智商，确认存在中小效应大小的[增益](/dnb-meta-analysis#analysis)。我还调查了一些 n-back 主张、批评和偏差指标，发现：
 >
-> - [主动与被动对照组](/dnb-meta-analysis#control-groups) 批评：发现，它占总效应大小的一半（类似于 [Zehdner et al 2009](/doc/dual-n-back/2009-zehdner.pdf "老年记忆训练效果作为可塑性的标志：a荟萃分析") & [Melby-Lervåg & Hulme 2013](https://www.apa.org/pubs/journals/releases/dev-49-2-270.pdf "工作记忆训练有效吗？荟萃分析回顾"))
+> - [主动与被动对照组](/dnb-meta-analysis#control-groups) 批评：发现，它占总效应大小的一半（类似于 [Zehdner et al 2009](https://gwern.net/doc/dual-n-back/2009-zehdner.pdf "老年记忆训练效果作为可塑性的标志：a荟萃分析") & [Melby-Lervåg & Hulme 2013](https://www.apa.org/pubs/journals/releases/dev-49-2-270.pdf "工作记忆训练有效吗？荟萃分析回顾"))
 > - n-back 训练时间和智商增益的[剂量-反应关系](/dnb-meta-analysis#training-time) 声明：不是发现
 > - <span id=" paymentextrinsic-motivation">[付款降低绩效](/dnb-meta-analysis# paymentextrinsic-motivation)声明：未找到</span>
 > - [某种n-back](/dnb-meta-analysis#training-type)问题：未找到
@@ -1906,7 +1906,7 @@ Jttoto 在回复 moe 时进一步写道：
 在 2008 年到 2011 年间，我收集了一些关于 n-backing 效果的轶事报告；还有许多其他轶事，但以下是很好的代表 - 它们的价值。
 </div>
 
-除了这些收集的报告之外，还有一项小组调查：[电子表格结果](/doc/dual-n-back/2014-brainworkshopgooglegroup-survey.ods)。
+除了这些收集的报告之外，还有一项小组调查：[电子表格结果](https://gwern.net/doc/dual-n-back/2014-brainworkshopgooglegroup-survey.ods)。
 
 #### 好处
 
@@ -1915,7 +1915,7 @@ Jttoto 在回复 moe 时进一步写道：
 [^轶事]: [Shipstead et al 2012]{#shipstead-et-al-2012} 提到了一项我以前从未听说过的有趣研究：
 
 
-> [Greenwald et al 1991](/doc/psychology/1991-greenwald.pdf "潜意识自助录音带的双盲测试")提供了与主观报告相关的问题的有用演示。这项研究的参与者收到了商业制作的录音带，其中包含旨在提高自尊或记忆力的潜意识信息。参与者不知道的是，一半旨在提高记忆力的磁带被重新标记为"自尊"，反之亦然。在为期 5 周的后测试中，参与者在自尊和记忆力的多项标准衡量指标上的得分均有所提高，但这种变化与录音带上的信息和标签无关（即参与者表现出全面的改善）。然而，在回答有关感知效果的简单问题时，大约 50% 的参与者报告称体验到了与录音带标签一致的改进，而只有 15% 的参与者报告了相反领域的改进。自我报告措施既与转移任务绩效的实际改善无关，也与干预内容无关。相反，它们归因于对结果的期望。
+> [Greenwald et al 1991](https://gwern.net/doc/psychology/1991-greenwald.pdf "潜意识自助录音带的双盲测试")提供了与主观报告相关的问题的有用演示。这项研究的参与者收到了商业制作的录音带，其中包含旨在提高自尊或记忆力的潜意识信息。参与者不知道的是，一半旨在提高记忆力的磁带被重新标记为"自尊"，反之亦然。在为期 5 周的后测试中，参与者在自尊和记忆力的多项标准衡量指标上的得分均有所提高，但这种变化与录音带上的信息和标签无关（即参与者表现出全面的改善）。然而，在回答有关感知效果的简单问题时，大约 50% 的参与者报告称体验到了与录音带标签一致的改进，而只有 15% 的参与者报告了相反领域的改进。自我报告措施既与转移任务绩效的实际改善无关，也与干预内容无关。相反，它们归因于对结果的期望。
 
 
 - Ashirgo："说实话，我没有感觉到任何明显的差异。不过，有些时候我感觉到了显着的进步，而且现在更容易完成特定的任务。"
@@ -2003,11 +2003,11 @@ DNB 还帮助我玩桌上足球（！）：在高水平上，这项运动涉及�
 
 > 个人可能很难记住替代方案，因为多种可能性可能超出他们的工作记忆容量（Byrne 2005；Johnson-Laird & Byrne） 1991 年，约翰逊-莱尔德和伯恩 2002 年）。他们还需要能够在不同的可能性之间转移注意力，以达成解决方案。因此，解决洞察问题所需的关键组成技能包括注意力转换和工作记忆技能……注意力和工作记忆对于成功解决洞察问题的不同方面可能至关重要。提前计划一些动作对于解决洞察力问题（例如著名的九点问题）可能很重要（Chronicle et al 2001）。注意力可能在帮助人们决定关注问题的哪些要素或帮助他们引导内部和外部相关信息的搜索方面发挥作用。
 >
-> ...善于解决洞察问题的人也善于转移注意力。洞察力问题的正确表现与视觉电梯任务的正确表现相关（r=.515，p<.01）。洞察力问题的正确表现与正负问题的正确表现相关（r=-.511，n=32，p<.001）...与此一致，善于在工作记忆中存储和处理信息的人更擅长解决洞察力问题。 [与问题得分的相关性：数字跨度 r=.39，句子跨度 r=.511] ^[["洞察问题解决中的注意力和工作记忆"](/doc/dual-n-back/2005-murray.pdf), Murray 2011。这项研究似乎没有控制智商，所以很难说 WM/注意力是否有助于提高表现或]
+> ...善于解决洞察问题的人也善于转移注意力。洞察力问题的正确表现与视觉电梯任务的正确表现相关（r=.515，p<.01）。洞察力问题的正确表现与正负问题的正确表现相关（r=-.511，n=32，p<.001）...与此一致，善于在工作记忆中存储和处理信息的人更擅长解决洞察力问题。 [与问题得分的相关性：数字跨度 r=.39，句子跨度 r=.511] ^[["洞察问题解决中的注意力和工作记忆"](https://gwern.net/doc/dual-n-back/2005-murray.pdf), Murray 2011。这项研究似乎没有控制智商，所以很难说 WM/注意力是否有助于提高表现或]
 
 主要的实验证据是 [Takeuchi 2011](#takeuchi-2011) & Vartanian 2013，在下一小节中进行了详细处理，非常值得考虑；本节的其余部分将讨论其他证据。
 
-[多巴胺](!W) 与 n-backing 引起的变化有关（参见 [McNab](#whats-some-relevant-research) 受体研究和一般回顾，[Söderqvist et al 2011](/doc/dual-n-back/2011-soderqvist.pdf"多巴胺、工作记忆和训练诱导"可塑性：对发展研究的影响"）），并且多巴胺的增加已被证明会导致[启动]（！W"启动（心理学）"）任务[^ldopa]中的焦点/关联缩小。与此相关的还有其他相关性；例如，Cassimjee 2010^[["神经心理学表现的气质和性格相关"](http://jtoomim.org/brain-training/n-back%20and%20novelty%20seeking.pdf)，2010年6月，_南非心理学会_]报告说"......[新奇寻求](!W)的气质维度与表现成反比LNB2（Letter-N-Back）的精度。"但一如既往，[相关性不是因果关系](!W)；这个结果可能并不意味着某人有意通过练习来提高表现准确性——我们可能会认为它只是意味着狭隘的不感兴趣的人在刚开始时在 n-backing 方面有一个小小的优势。 Cassimjee 2010 引用了另外两项研究表明了这种相关性的含义："......具有较高冲动性的参与者可能缺乏注意力资源来保留关键信息并抑制不相关的信息。反应性控制的激活是一个监视、调节和调节性情反应性方面的系统，在寻求新奇事物的个体中受到抑制......"这表明绩效差异是一个可以加强的弱点，而不是一个根本的弱点。 
+[多巴胺](!W) 与 n-backing 引起的变化有关（参见 [McNab](#whats-some-relevant-research) 受体研究和一般回顾，[Söderqvist et al 2011](https://gwern.net/doc/dual-n-back/2011-soderqvist.pdf"多巴胺、工作记忆和训练诱导"可塑性：对发展研究的影响"）），并且多巴胺的增加已被证明会导致[启动]（！W"启动（心理学）"）任务[^ldopa]中的焦点/关联缩小。与此相关的还有其他相关性；例如，Cassimjee 2010^[["神经心理学表现的气质和性格相关"](http://jtoomim.org/brain-training/n-back%20and%20novelty%20seeking.pdf)，2010年6月，_南非心理学会_]报告说"......[新奇寻求](!W)的气质维度与表现成反比LNB2（Letter-N-Back）的精度。"但一如既往，[相关性不是因果关系](!W)；这个结果可能并不意味着某人有意通过练习来提高表现准确性——我们可能会认为它只是意味着狭隘的不感兴趣的人在刚开始时在 n-backing 方面有一个小小的优势。 Cassimjee 2010 引用了另外两项研究表明了这种相关性的含义："......具有较高冲动性的参与者可能缺乏注意力资源来保留关键信息并抑制不相关的信息。反应性控制的激活是一个监视、调节和调节性情反应性方面的系统，在寻求新奇事物的个体中受到抑制......"这表明绩效差异是一个可以加强的弱点，而不是一个根本的弱点。 
 
 [^ldopa]：来自 Sanderberg/Bostrom 2006：
 
@@ -2042,7 +2042,7 @@ Ashirgo、chinmi04 和 putomayo 在同一个线程中请求不同，Biped 丰满
 > 顺便说一句，在接受 dnb 培训后，我对艺术产生了兴趣 - 我下载了很多古典和其他艺术图片（以前从未有过），并且非常喜欢选择我喜欢的。或者你看过《时时刻刻》吗？我爱上了那部电影，甚至开始阅读弗吉尼亚·伍尔夫的作品"
 
 
-Pheonexia 还指出，[McNab 2008](https://www.klingberglab.se/pub/McNab2008.pdf "抑制和工作记忆的常见和独特成分：功能磁共振成像，受试者内调查") & McNab 2009 证明，由于 DNB，与[多巴胺](!W) 相关的各种事物有所增加，并且有一项研究表明["多巴胺激动剂会破坏视觉潜伏"使用受试者内范式对正常男性的抑制作用"](/doc/dual-n-back/2009-swerdlow.pdf "Swerdlow et al 2009")。
+Pheonexia 还指出，[McNab 2008](https://www.klingberglab.se/pub/McNab2008.pdf "抑制和工作记忆的常见和独特成分：功能磁共振成像，受试者内调查") & McNab 2009 证明，由于 DNB，与[多巴胺](!W) 相关的各种事物有所增加，并且有一项研究表明["多巴胺激动剂会破坏视觉潜伏"使用受试者内范式对正常男性的抑制作用"](https://gwern.net/doc/dual-n-back/2009-swerdlow.pdf "Swerdlow et al 2009")。
 
 ##### Takeuchi 2011
 
@@ -2066,7 +2066,7 @@ Takeuchi 2011 有很多有趣的点：
 
 ##### Vartanian 2013
 
-["工作记忆训练与发散性思维任务中的下前额皮质激活相关"](/doc/dual-n-back/2013-vartanian.pdf "'工作记忆训练与发散性思维任务中的下前额皮质激活相关'，Vartanian 等人2013年"）；强调：
+["工作记忆训练与发散性思维任务中的下前额皮质激活相关"](https://gwern.net/doc/dual-n-back/2013-vartanian.pdf "'工作记忆训练与发散性思维任务中的下前额皮质激活相关'，Vartanian 等人2013年"）；强调：
 
 > 工作记忆 (WM) 训练已被证明可以提高 WM 能力和流体智力。考虑到发散思维对 WM 和流体智力的影响，我们在替代用途任务 (AUT)（发散思维的经典测试）中测试了 WM 训练将提高表现并调节神经功能的假设。我们通过在短期 WM 训练方案（实验条件）后在功能性磁共振成像扫描仪中管理 AUT 来测试这一假设，或者参与预计不会参与 WM 的选择反应时间任务（主动控制条件）。经过训练，实验组的参与者在 WM 任务中的表现表现出显着改善，并且流体智力也显着提高。尽管*两组在 AUT 上的表现没有差异*，但实验组腹外侧前额叶和背外侧前额叶皮层的激活显着较低，这两个大脑区域已知在发散思维中发挥分离和关键作用。此外，流体智力的提高介导了训练对腹外侧前额叶皮层大脑激活的影响。这些结果表明，短期的 WM 训练方案与发散性思维中较低的前额叶激活（神经效率的标志）相关。
 
@@ -2080,7 +2080,7 @@ Takeuchi 2011 有很多有趣的点：
 
 ### Chein 2010
 
-["扩展思维工作空间：训练和转移效果复杂的工作记忆跨度任务"](/doc/dual-n-back/2010-chein.pdf) ([FLOSS实现](https://github.com/BXQ/CWM));摘自简介：
+["扩展思维工作空间：训练和转移效果复杂的工作记忆跨度任务"](https://gwern.net/doc/dual-n-back/2010-chein.pdf) ([FLOSS实现](https://github.com/BXQ/CWM));摘自简介：
 
 
 > 在本研究中，使用一种新颖的工作记忆 (WM) 训练范例来测试 WM 能力的可塑性，并确定这种训练的好处可以在多大程度上转移到其他认知技能。培训涉及复杂 WM 跨度任务的语言和空间版本，旨在强调同时存储和处理的要求。完成 4 周 WM 培训的参与者在临时记忆测量方面表现出显着改善。这些 WM 训练的好处可以推广到斯特鲁普任务的表现上，而且一项新颖的发现还促进了阅读理解能力的显着提高。讨论结果与以下假设相关：WM 训练影响领域一般注意力控制机制，从而可以带来深远的认知益处。其含义包括使用 WM 训练作为增强重要认知技能的通用工具。
@@ -2104,7 +2104,7 @@ doi:10.3758/PBR.17.2.193
 
 ### Colom 2010
 
-["工作记忆的改善与智力分数的提高无关"](/doc/dual-n-back/2010-colom.pdf) 对 173 名学生进行了 WM 任务（例如[阅读跨度任务](!W)) 具有随机难度，并且没有发现与智商提高相关；智商测试是"高级渐进矩阵测试（APM）以及来自差异能力倾向测试电池的抽象推理（DAT-AR）、言语推理（DAT-VR）和空间关系（DAT-SR）子测试"。没有一个像 Jaeggi 2008 中那样被加速。 摘要：
+["工作记忆的改善与智力分数的提高无关"](https://gwern.net/doc/dual-n-back/2010-colom.pdf) 对 173 名学生进行了 WM 任务（例如[阅读跨度任务](!W)) 具有随机难度，并且没有发现与智商提高相关；智商测试是"高级渐进矩阵测试（APM）以及来自差异能力倾向测试电池的抽象推理（DAT-AR）、言语推理（DAT-VR）和空间关系（DAT-SR）子测试"。没有一个像 Jaeggi 2008 中那样被加速。 摘要：
 
 > 公认的工作记忆和智力之间的高度关系表明共同的潜在认知机制，或许还有共享的生物基础。如果是这样的话，通过反复接触具有挑战性的跨度任务来改善工作记忆可能会反映在智力分数的提高上。在这里，我们报告了一项研究，其中 288 名大学本科生在时间 1 完成了四项智力测试的奇数项目，并在一个月后（时间 2）完成了相同测试的偶数项目。在此期间，173 名参与者完成了三场课程，间隔整整一周，包括言语、数字和空间短期记忆 (STM) 以及工作记忆 (WMC) 任务，这些任务对处理要求很高（STM-WMC 组）。 115 名参与者还完成了三场课程，间隔正好一周，但包括语言、数字和空间简单速度任务（处理速度，PS 和注意力，ATT），处理要求非常低（PS-ATT 组）。主要发现揭示了从测试前到测试后智力测试的分数有所增加（平均超过标准差的一半）。然而，STM-WMC 和 PS-ATT 组之间的智力没有差异性改善。
 
@@ -2118,7 +2118,7 @@ doi:10.3758/PBR.17.2.193
 
 ### Loosli et al 2011
 
-["工作记忆训练改善典型发育儿童的阅读过程"](/doc/dual-n-back/2011-loosli.pdf)，Loosli、Buschkuehl、Perrig 和 Jaeggi：
+["工作记忆训练改善典型发育儿童的阅读过程"](https://gwern.net/doc/dual-n-back/2011-loosli.pdf)，Loosli、Buschkuehl、Perrig 和 Jaeggi：
 
 > 本研究的目标该研究的目的是调查短暂的认知训练干预是否会导致训练任务的具体表现提高，以及是否对其他未经训练的措施有转移效应。对 9 至 11 岁发育正常的儿童进行了计算机化的适应性工作记忆干预。孩子们在训练后的工作记忆任务中的表现显着提高。此外，与匹配的对照组相比，实验组在训练后显着提高了他们的阅读表现，为工作记忆和阅读之间的共享过程提供了进一步的证据。
 
@@ -2126,9 +2126,9 @@ doi:10.3758/PBR.17.2.193
 
 > 由于训练时间短，我们预计不会对 _g~f~_ 产生很大影响（参见 Jaeggi 等人，2008 年），另外两项训练 ADHD 儿童的研究仅在 5 周后才观察到对 _g~f~_ 的转移效应，每次训练 40 分钟（Klingberg 等人，2002 年，2005 年）。
 >
-> 此外，同一组未能在 _g~f~_ 上显示转移效应_g~f~_ 训练时间较短（Thorell et al 2008）。因此，考虑到我们的训练干预只有 10 个疗程，我们没有转移到 _g~f~_ 也就不足为奇了；尽管现在有证据表明，只需很少的训练时间就可以转移到 _g~f~_ ([Karbach & Kray 2009](/doc/dual-n-back/2009-karbach.pdf "执行控制训练有多大用处？任务切换训练的近端和远端转移的年龄差异")；[海报](/doc/dual-n-back/2008-karbach.pdf "'CAC08_Karbach'， 2008 年过去了"))。然而，我们的结果与 Chein & Morrison 2010 的结果相当，他们也对参与者进行了复杂的 WM 任务的培训，但发现没有转移到 _g~f~_。
+> 此外，同一组未能在 _g~f~_ 上显示转移效应_g~f~_ 训练时间较短（Thorell et al 2008）。因此，考虑到我们的训练干预只有 10 个疗程，我们没有转移到 _g~f~_ 也就不足为奇了；尽管现在有证据表明，只需很少的训练时间就可以转移到 _g~f~_ ([Karbach & Kray 2009](https://gwern.net/doc/dual-n-back/2009-karbach.pdf "执行控制训练有多大用处？任务切换训练的近端和远端转移的年龄差异")；[海报](https://gwern.net/doc/dual-n-back/2008-karbach.pdf "'CAC08_Karbach'， 2008 年过去了"))。然而，我们的结果与 Chein & Morrison 2010 的结果相当，他们也对参与者进行了复杂的 WM 任务的培训，但发现没有转移到 _g~f~_。
 
-（类似的研究也发现 WM 培训后阅读技能有所提高，例如。[Dahlin] 2011](https://mondo.su.se/access/content/group/87a78313-bf21-438a-842a-a4d680ccf6f9/Dahlin%20artikel%202010.pdf "工作记忆训练对有特殊需要的儿童阅读的影响")和[Shiran & Breznitz 2011](/doc/dual-n-back/2011-shiran.pdf "认知训练对诵读困难和熟练读者的工作记忆中的回忆范围和信息处理速度的影响")，但我不相信其他人使用 n-back 或寻找可能的智商增益。)
+（类似的研究也发现 WM 培训后阅读技能有所提高，例如。[Dahlin] 2011](https://mondo.su.se/access/content/group/87a78313-bf21-438a-842a-a4d680ccf6f9/Dahlin%20artikel%202010.pdf "工作记忆训练对有特殊需要的儿童阅读的影响")和[Shiran & Breznitz 2011](https://gwern.net/doc/dual-n-back/2011-shiran.pdf "认知训练对诵读困难和熟练读者的工作记忆中的回忆范围和信息处理速度的影响")，但我不相信其他人使用 n-back 或寻找可能的智商增益。)
 
 ### Nutley 2011
 
@@ -2144,7 +2144,7 @@ doi:10.3758/PBR.17.2.193
  > "WM 训练与 Cogmed Systems Inc 开发的 [Thorell 等人 2009](https://www.klingberglab.se/pub/Thorell2009.pdf) 中描述的相同。视觉空间 WM 任务有七个不同版本，其中三个每天轮流训练。简而言之，这些任务都包含许多以不同形式呈现的动画人物。一些场景（例如，在游泳池里游泳，乘坐过山车）一些人物（从两个人物开始，然后根据孩子的表现增加数量）在短时间内发出声音并改变颜色，然后任务包括记住哪些人物改变了颜色以及发生的顺序。"
 #. _g~f~_ 增加的幅度并不大得令人怀疑：
 
- > "无论是通过单一测试估计，还是将 _g~f~_ 作为潜在变量进行测量，NVR 训练组都显示出转移。这种改善的幅度约为 8%（与安慰剂组相比），这与之前报道的 _g~f~_ 5-13.5% 的增益相当（[Hamers et al 1998](/doc/iq/1998-hamers.pdf "'三年级归纳推理：干预承诺和约束'，Hamers et al 1998")；[Jaeggi et al 2008](#jaeggi-2008)；[Klauer & Willmes，2002](/doc/dual-n-back/2002-klauer.pdf归纳推理：它会转化为流体智力吗？"); [Stankov, 1986](/doc/dual-n-back/1986-stankov.pdf "Kvashchev 的实验：我们能提高智力吗？"))。"
+ > "无论是通过单一测试估计，还是将 _g~f~_ 作为潜在变量进行测量，NVR 训练组都显示出转移。这种改善的幅度约为 8%（与安慰剂组相比），这与之前报道的 _g~f~_ 5-13.5% 的增益相当（[Hamers et al 1998](https://gwern.net/doc/iq/1998-hamers.pdf "'三年级归纳推理：干预承诺和约束'，Hamers et al 1998")；[Jaeggi et al 2008](#jaeggi-2008)；[Klauer & Willmes，2002](https://gwern.net/doc/dual-n-back/2002-klauer.pdf归纳推理：它会转化为流体智力吗？"); [Stankov, 1986](https://gwern.net/doc/dual-n-back/1986-stankov.pdf "Kvashchev 的实验：我们能提高智力吗？"))。"
 #.对于仅使用 WM 的组中缺乏 _g~f~_ 增益的概括，存在一些可能的反驳意见，主要与年轻有关：
 
  > "这可能意味着 WM 不是 4 岁儿童解决推理问题（例如 Raven 的 CPM 和块设计）的限制因素。网格任务和推理测试之间的中等相关性（在 0.3 和 0.6 之间，请参阅表 1）表明在某种程度上违反直觉的结论是，两种潜在能力之间的相关性不足以确定这些能力之间的训练效果转移量。在训练抑制功能后，WM 缺乏训练效果，得出了类似的结论（Thorell 等人，2009）。一项成像研究还表明，WM 网格任务和抑制任务的表现会激活皮质的重叠部分。 Leroux, Strand, Thorell, Bergman & Klingberg, 2008](https://www.klingberglab.se/pub/McNab2008.pdf "'抑制和工作记忆的常见和独特组成部分：一项功能磁共振成像，受试者内调查'，McNab 等人 2008"))。 
@@ -2153,13 +2153,13 @@ doi:10.3758/PBR.17.2.193
 
 ###Zhao et al 2011
 
-["更新训练对儿童流体智力的影响"](/doc/dual-n-back/2011-zhao.pdf)，_中国科学通报_：
+["更新训练对儿童流体智力的影响"](https://gwern.net/doc/dual-n-back/2011-zhao.pdf)，_中国科学通报_：
 
 > 最近的研究表明，工作记忆（WM）训练可以提高流体智力。然而，这些早期研究混淆了 WM 存储和中枢执行功能对训练效果的影响。目前的研究采用双盲对照设计，利用运行记忆任务来训练[33]9-11岁儿童的更新能力。结果显示，通过记忆更新训练，儿童的流体智力得到显着提高。总体而言，我们的研究结果表明，通过 WM 训练实现的流体智力的提高与改善中枢执行功能有关。
 
 ### Roughan & Hadwin 2011
 
-["工作记忆训练对有社交、情感和行为困难的年轻人的影响"](/doc/dual-n-back/2011-roughan.pdf)，Laura Roughan & Julie A. Hadwin 2011：
+["工作记忆训练对有社交、情感和行为困难的年轻人的影响"](https://gwern.net/doc/dual-n-back/2011-roughan.pdf)，Laura Roughan & Julie A. Hadwin 2011：
 
 > 这项研究考察了工作记忆（WM）培训计划，包括工作记忆、智商、行为抑制、自我报告测试和特质焦虑的测量，教师报告工作记忆训练前后以及 3 个月的随访时的情绪和行为困难以及注意力控制情况。与非干预被动对照组（N=8）相比，WM 训练组（N=7）在训练后的智商、抑制、考试焦虑以及教师报告的行为、注意力和情绪症状方面表现出明显更好的表现。随访时 WM 的组间差异也很明显。结果表明，WM 培训具有一定的潜力，可用于减少年轻人在学校中遇到的困难和相关的心理健康问题。需要使用更大的样本量和更长时间段的监测进行进一步研究来复制和扩展这些结果。
 
@@ -2194,7 +2194,7 @@ Ashirgo [写道](https://groups.google.com/g/brain-training/browse_thread/thread
 
 （请注意，非常重要的警告：这*仅*对于惯用右手的人来说是一种有用的技术；弱右撇子和左撇子会受到这种技术的彻底伤害。）
 
-另请参阅["半球间相互作用和扫视水平眼球运动：对情景记忆、EMDR 和创伤后应激障碍"](/doc/psychiatry/2008-propper.pdf "Propper & Christman 2008"); ["眼动脱敏和再处理（EMDR）中双重注意任务的功效和心理生理学相关性"](/doc/dual-n-back/2011-schubert.pdf "Schubert et al 2011")； ["水平扫视眼球运动增强了地标形状和位置信息的检索"](/doc/dual-n-back/2009-brunye.pdf "Brunyé et al 2009")； ["减少双侧眼球扫视运动后的错误信息影响"](/doc/dual-n-back/2009-parker.pdf "Parker et al 2009")； ["扫视引起的检索增强是改善目击者证据的潜在手段吗？"](/doc/dual-n-back/2010-lyle.pdf "Lyle & Jacob 2010")
+另请参阅["半球间相互作用和扫视水平眼球运动：对情景记忆、EMDR 和创伤后应激障碍"](https://gwern.net/doc/psychiatry/2008-propper.pdf "Propper & Christman 2008"); ["眼动脱敏和再处理（EMDR）中双重注意任务的功效和心理生理学相关性"](https://gwern.net/doc/dual-n-back/2011-schubert.pdf "Schubert et al 2011")； ["水平扫视眼球运动增强了地标形状和位置信息的检索"](https://gwern.net/doc/dual-n-back/2009-brunye.pdf "Brunyé et al 2009")； ["减少双侧眼球扫视运动后的错误信息影响"](https://gwern.net/doc/dual-n-back/2009-parker.pdf "Parker et al 2009")； ["扫视引起的检索增强是改善目击者证据的潜在手段吗？"](https://gwern.net/doc/dual-n-back/2010-lyle.pdf "Lyle & Jacob 2010")
 
 ### 自我实验
 
@@ -2202,9 +2202,9 @@ Brain Workshop 现在已实现扫视记录；这是应我的要求添加的，�
 
 #### 分析 
 
-我的 [BW 数据](/doc/dual-n-back/gwern-bw-stats.txt) 必须手动解析和一些 Emacs 宏，因为我无法找到一种干净的编程方式来解析它并吐出分数，根据它们是否在白天或休息日的扫视（所以如果您想复制我的分析，您必须自己做）。使用 [BEST](https://cran.r-project.org/web/packages/BEST/index.html) 的分析[^R-best-saccading] 显示每轮的差异小于 1% (+0.4%)，并且效果大小的估计值几乎与正值一样频繁地为负值：
+我的 [BW 数据](https://gwern.net/doc/dual-n-back/gwern-bw-stats.txt) 必须手动解析和一些 Emacs 宏，因为我无法找到一种干净的编程方式来解析它并吐出分数，根据它们是否在白天或休息日的扫视（所以如果您想复制我的分析，您必须自己做）。使用 [BEST](https://cran.r-project.org/web/packages/BEST/index.html) 的分析[^R-best-saccading] 显示每轮的差异小于 1% (+0.4%)，并且效果大小的估计值几乎与正值一样频繁地为负值：
 
-![贝叶斯 MCMC 眼跳和非眼跳差异的估计Scores](/doc/dual-n-back/gwern-saccading.png){.invert}
+![贝叶斯 MCMC 眼跳和非眼跳差异的估计Scores](https://gwern.net/doc/dual-n-back/gwern-saccading.png){.invert}
 
 [^R-best-saccading]: R 代码:
 
@@ -2251,7 +2251,7 @@ Brain Workshop 现在已实现扫视记录；这是应我的要求添加的，�
 
 ##睡眠
 
-["睡眠加速工作记忆性能的改善"](/doc/dual-n-back/2008-kuriyama.pdf)，Kuriyama 2008：
+["睡眠加速工作记忆性能的改善"](https://gwern.net/doc/dual-n-back/2008-kuriyama.pdf)，Kuriyama 2008：
 
 
 > 工作记忆（WM）表现是决定问题解决和推理能力的重要因素，人们坚信它是恒定的。然而，最近的研究结果表明，WM 表现有可能通过重复训练得到提高。尽管据报道睡眠可以提高各种技能，但睡眠对 WM 表现的有益影响尚未明确。在这里，我们表明训练后的自然睡眠有助于提高 WM 表现。 29 名健康的年轻人执行了 _n_-back WM 任务的空间变体，他们被随机分配到三个不同的实验组，这三个实验组有不同的重复 _n_-back WM 任务会话时间安排，有或没有干预睡眠。 WM 表现（准确度和反应时间）概况的组间和会话间比较表明，训练后睡眠后的 n-back 准确度与同一清醒时间段后相比显着提高，且与睡眠时间、受试者的警觉水平或昼夜节律影响无关。另一方面，反应时间不受睡眠或重复训练计划的影响。目前的研究表明，可以反映 WM 能力的_n_-back 准确性的提高本质上受益于训练后睡眠。
@@ -2273,7 +2273,7 @@ Brain Workshop 现在已实现扫视记录；这是应我的要求添加的，�
 然后建议说，n-back 训练将能够实现更好的梦识别和回忆，这对于任何潜在的清醒梦者来说都是至关重要的技能。
 许多人们报告*仅*做梦和清醒梦是n-back训练的结果（例如[Boris & Michael](https://marginalrevolution.com/marginalrevolution/2011/06/does-this-reliously-increase-your-fluid-intelligence.html#comment-157452725))。
 
-[^fmri]：["差异背外侧"根据感觉方式进行言语 n-back 任务期间前额叶皮层的激活"](/doc/dual-n-back/2009-rodriguezjimenez.pdf "Rodriguez-Jimenez et al 2009");摘要：
+[^fmri]：["差异背外侧"根据感觉方式进行言语 n-back 任务期间前额叶皮层的激活"](https://gwern.net/doc/dual-n-back/2009-rodriguezjimenez.pdf "Rodriguez-Jimenez et al 2009");摘要：
 
  > 对健康志愿者在执行不同的 n-back 任务时进行的功能神经影像研究显示，双侧额顶叶激活的共同模式，尤其是背外侧前额叶皮层 (DLPFC)。我们的目标是使用功能磁共振成像 (fMRI) 来比较执行两个相似的 n-back 任务（但呈现方式不同）时的大脑激活模式。 13 名健康志愿者完成了呈现听觉刺激的口头 2-back 任务，以及呈现视觉刺激的类似 2-back 任务。联合分析显示包括 DLPFC 在内的额顶叶双侧激活。左侧 DLPFC 和颞上回在听觉任务中表现出比在视觉任务中更大的激活，而后脑区域和前扣带回在视觉任务中表现出比听觉任务中更大的激活。因此，参与 n-back 任务的视觉和听觉版本的大脑区域显示出它们之间的重要重叠，反映了工作记忆的超模态特征。然而，应该考虑两种方式之间发现的差异，以便为未来的临床研究选择最合适的任务。
 

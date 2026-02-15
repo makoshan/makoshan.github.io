@@ -1,7 +1,7 @@
 ---
 title: 本网站的设计
 description: "描述 Gwern.net 的元页面，这个自我文档化的网站不仅实现了超文本‘语义缩放’的实验，还采用了 Markdown 和静态托管的技术决策。"
-thumbnail: /doc/design/2020-12-25-gwern-gwernnet-recursivepopups.png
+thumbnail: https://gwern.net/doc/design/2020-12-25-gwern-gwernnet-recursivepopups.png
 thumbnail-text: Gwern.net 的截图，展示了递归弹窗功能，允许对参考资料和链接进行任意深度的超文本探索。
 thumbnail-css: "outline invert-not"
 created: 2010-10-01
@@ -103,7 +103,7 @@ Gwern.net 专为具有深度引用的长篇内容而设计。
 > [Alan Kay](https://en.wikipedia.org/wiki/Alan%20Kay), ["Creative Think"](https://www.folklore.org/StoryView.py?project=Macintosh&story=Creative_Think.txt) 1982
 </div>
 
-![时间花得值。](/doc/design/2001-10-19-spongebob-s2e37-procrastination-thecalligraphy.jpg "《海绵宝宝》‘拖延症’一集（第 2 季第 37 集）的截图：海绵宝宝花了几个小时写了一个花哨的书法首字‘the’，却没能写完他关于‘在红灯前不该做什么’的 800 字家庭作业论文，说明了作家在琐事和排版设计上的危险。"){.float-right}
+![时间花得值。](https://gwern.net/doc/design/2001-10-19-spongebob-s2e37-procrastination-thecalligraphy.jpg "《海绵宝宝》‘拖延症’一集（第 2 季第 37 集）的截图：海绵宝宝花了几个小时写了一个花哨的书法首字‘the’，却没能写完他关于‘在红灯前不该做什么’的 800 字家庭作业论文，说明了作家在琐事和排版设计上的危险。"){.float-right}
 
 网页设计和排版的[悲哀](http://thecodelesscode.com/case/96 "无代码代码：案例 96：‘无状态’")在于，你如何展示你的页面可能只起一点点作用。
 一个页面可能设计得很糟糕，呈现为 80 列 ASCII 等宽字体的打字机文本，读者仍然会阅读它，即使他们会抱怨。
@@ -187,17 +187,17 @@ Gwern.net 专为具有深度引用的长篇内容而设计。
 <div class="epigraph">
 > 56\. 软件处于持续的张力之下。作为符号，它是任意可完善的；但也它是任意可变的。
 >
-> [Alan Perlis](/doc/cs/algorithm/1982-perlis.pdf "‘Epigrams on Programming’, Perlis 1982")
+> [Alan Perlis](https://gwern.net/doc/cs/algorithm/1982-perlis.pdf "‘Epigrams on Programming’, Perlis 1982")
 </div>
 
 显著功能（与标准 Markdown 静态网站相比）：
 
 <noscript><div class="admonition error"><div class="admonition-title">需要启用 JavaScript</div></div></noscript>
 
-- 链接弹窗注释（[所有类型演示](/doc/cs/js/2023-09-14-gwern-gwernnet-popups-allpopuptypes.png)；在小屏幕或移动设备上为 ['弹出层'](/doc/design/2021-03-30-gwern-sidenotes-gwernnet-popins.png)）：
+- 链接弹窗注释（[所有类型演示](https://gwern.net/doc/cs/js/2023-09-14-gwern-gwernnet-popups-allpopuptypes.png)；在小屏幕或移动设备上为 ['弹出层'](https://gwern.net/doc/design/2021-03-30-gwern-sidenotes-gwernnet-popins.png)）：
 
     注释可以从来源自动提取（例如 Arxiv/BioRxiv/MedRxiv/Crossref），或手工编写（通过一系列广泛的重写规则和检查保持格式一致，包括 [使用机器学习分解](/static/build/paragraphizer.py "‘<code>paragraphizer.py</code>’, Gwern 2022") 单体摘要以提高可读性）；弹窗可以是递归的，并可以以多种方式操作——移动、全屏、'固定'（锚定在原地）等。
-    [维基百科页面](/doc/design/2021-04-01-gwern-gwernnet-annotations-popups-recursivewikipediapopups.png) 受到特别支持，使它们也可以递归导航。
+    [维基百科页面](https://gwern.net/doc/design/2021-04-01-gwern-gwernnet-annotations-popups-recursivewikipediapopups.png) 受到特别支持，使它们也可以递归导航。
     本地 Gwern.net 页面和白名单域名可以弹出并完整查看；PDF 可以在 PDF 查看器中阅读；支持的源代码格式可以弹出语法高亮版本（[例如 `LinkMetadata.hs`](/static/build/LinkMetadata.hs)）。
 - 客户端包含
 
@@ -213,7 +213,7 @@ Gwern.net 专为具有深度引用的长篇内容而设计。
 - 真正的双向 [反向链接](#backlink)，可以弹出上下文
 
     - 也在章节级别支持，因此人们可以轻松看到别处对页面特定部分的讨论，而不仅仅是整个页面
-- **阅读模式**（移除大多数 UX 如超链接的替代视图，[例如](/doc/design/2023-03-19-gwern-gwernnet-desktop-designpagescreenshot-readermode.png)；切换：[<!-- non-empty span placeholder -->]{.reader-mode-selector-inline}）
+- **阅读模式**（移除大多数 UX 如超链接的替代视图，[例如](https://gwern.net/doc/design/2023-03-19-gwern-gwernnet-desktop-designpagescreenshot-readermode.png)；切换：[<!-- non-empty span placeholder -->]{.reader-mode-selector-inline}）
 - 源代码语法高亮
 
     - 使用自定义的 [灵感来自 ALGOL 的单色主题](#syntax-highlighting-algol)
@@ -265,7 +265,7 @@ Gwern.net 实现了 ["双向"](https://maggieappleton.com/bidirectionals) [Hyper
 在 Gwern.net 上，页面/注释（及其上的所有 [锚点](https://en.wikipedia.org/wiki/HTML%20element%23Anchor)/[ID](https://en.wikipedia.org/wiki/URI%20fragment)）的反向链接在每一项的底部作为包含的折叠附录提供。
 这些部分列出了每个反向链接，此外，还包含了该反向链接的来源：
 
-![例如 [此页面](#backlinks)，可以看到对 ["语义缩放"](/design#semantic-zoom){.backlink-not} 新词作为更有用的设计概念的暗示，或对涉足排版新颖性如 [下标符号](#gwern-subscript){.backlink-not} 的理由（[另一个例子](/doc/design/2023-04-02-gwern-gwernnet-backlinks-backlinksinsection-ideatimeghostsectionexample.png)）。](/doc/design/2023-04-14-gwern-gwernnet-backlinks-designexample.png)
+![例如 [此页面](#backlinks)，可以看到对 ["语义缩放"](/design#semantic-zoom){.backlink-not} 新词作为更有用的设计概念的暗示，或对涉足排版新颖性如 [下标符号](#gwern-subscript){.backlink-not} 的理由（[另一个例子](https://gwern.net/doc/design/2023-04-02-gwern-gwernnet-backlinks-backlinksinsection-ideatimeghostsectionexample.png)）。](https://gwern.net/doc/design/2023-04-14-gwern-gwernnet-backlinks-designexample.png)
 
 反向链接也被重载以提供作者作品的书目：注释的作者链接（如他们的主页或传记或 WP 文章）本身就是一个带注释的链接，因此，它的反向链接将包括所有已知的作者链接。
 为方便起见，当反向链接是作者链接时，它通过排序到反向链接列表的前面来优先显示，因此滚动作者的反向链接将首先显示他们的出版物，然后才是对他们的提及。
@@ -277,20 +277,20 @@ Gwern.net 实现了 ["双向"](https://maggieappleton.com/bidirectionals) [Hyper
 
 [^Wikipedia-bad-backlinks]: 这修复了 [MediaWiki](https://en.wikipedia.org/wiki/MediaWiki) wiki 系统的‘链接至此’反向链接实现的最大问题——这是实现它的简单方法，因此已成为显示反向链接的标准 wiki 软件方法。
 
-    WhatLinksHere 页面（[例如 En WP](/doc/wikipedia/2023-04-18-mediawiki-englishwikipedia-georgewashington-whatlinkshere.png "https://en.wikipedia.org/wiki/Special:WhatLinksHere/George_Washington 的截图，显示了按字母顺序排序（！）的反向链接列表，没有上下文或查看上下文的方式，使其大部分无用。")）会告诉你几百个其他维基百科文章链接到你当前的维基百科文章，是的，但你不知道 *上下文* 是什么（在任何一个页面上！），以及它是一个重要链接还是次要链接，甚至它可能在文章的哪里——它可能隐藏在一些不可预测的显示文本下，你必须搜索 MediaWiki 标记本身才能找到它！
+    WhatLinksHere 页面（[例如 En WP](https://gwern.net/doc/wikipedia/2023-04-18-mediawiki-englishwikipedia-georgewashington-whatlinkshere.png "https://en.wikipedia.org/wiki/Special:WhatLinksHere/George_Washington 的截图，显示了按字母顺序排序（！）的反向链接列表，没有上下文或查看上下文的方式，使其大部分无用。")）会告诉你几百个其他维基百科文章链接到你当前的维基百科文章，是的，但你不知道 *上下文* 是什么（在任何一个页面上！），以及它是一个重要链接还是次要链接，甚至它可能在文章的哪里——它可能隐藏在一些不可预测的显示文本下，你必须搜索 MediaWiki 标记本身才能找到它！
 
     这只能通过像 [Lupin's Tool](https://en.wikipedia.org/wiki/Wikipedia:Tools/Navigation_popups) 这样的工具部分修复，这些工具试图通过加载另一个页面来定位链接，因为只有少数编辑使用这些工具，而且仍然需要努力。因为 MediaWiki 在服务器端渲染所有内容，没有理由它不能做类似的事情并在每个链接旁边显示上下文摘录。它只是没有这样做。（它不需要真正的双向链接——即使是假设每篇文章中的第一个链接是‘真实’链接并忽略重复项的启发式黑客行为，也将是一个重大改进。）
 
 这也意味着我们可以在任何相关的地方显示这些相同的反向链接条目。
 例如，如果反向链接是指向一个部分，我们不必满足于仅仅是一个大的全页反向链接列表，我们可以将该部分的反向链接放在该部分 *内部* 以方便读者：你读完一个部分，然后通过弹窗看到其他地方已链接到它：
 
-![包含语义缩放 ID 的部分还包括“语义缩放”链接的反向链接，读者可以取消折叠阅读。](/doc/design/2023-04-14-gwern-gwernnet-backlinks-designexample-insectionbacklinkexample.png)
+![包含语义缩放 ID 的部分还包括“语义缩放”链接的反向链接，读者可以取消折叠阅读。](https://gwern.net/doc/design/2023-04-14-gwern-gwernnet-backlinks-designexample-insectionbacklinkexample.png)
 
 这对于其他反向链接系统应该是可能的，但 Gwern.net 在像这样‘内联’反向链接方面几乎是独一无二的。[^alternative-inlined-backlinks]
 
 [^alternative-inlined-backlinks]: Roam 显然可能会做类似我们‘内联’的事情，但我对它了解太少，无法确定。Maggie Appleton 模拟了这样的 [“推测性界面”](https://maggieappleton.com/transcopyright-dreams#designing-speculative-interfaces)，但似乎不知道有任何实现。
 
-    一个有限的例子是 [GreaterWrong](https://www.greaterwrong.com/)，它在 [帖子](/doc/design/2023-04-14-gwern-greaterwrong-backlinks-postexample.png) 和 [个人评论](/doc/design/2023-04-14-gwern-greaterwrong-backlinks-commentexample.png) 上做反向链接。然而，虽然个人评论上的反向链接相当原子化，但它们不显示调用上下文，并且链接上的弹窗仅显示标准的整体项目视图。（GW 的反向链接是应 Wei Dai 的要求于 2019 年引入的，远早于 Gwern.net 的反向链接于 2021 年引入以利用新的包含功能，并且它们在设计上大部分是独立的。）
+    一个有限的例子是 [GreaterWrong](https://www.greaterwrong.com/)，它在 [帖子](https://gwern.net/doc/design/2023-04-14-gwern-greaterwrong-backlinks-postexample.png) 和 [个人评论](https://gwern.net/doc/design/2023-04-14-gwern-greaterwrong-backlinks-commentexample.png) 上做反向链接。然而，虽然个人评论上的反向链接相当原子化，但它们不显示调用上下文，并且链接上的弹窗仅显示标准的整体项目视图。（GW 的反向链接是应 Wei Dai 的要求于 2019 年引入的，远早于 Gwern.net 的反向链接于 2021 年引入以利用新的包含功能，并且它们在设计上大部分是独立的。）
 
 （类似的前向链接功能是链接书目，它按顺序聚合所有前向链接。
 然而，几乎不需要‘上下文内’的前向链接，因为文章或注释已经提供了该上下文。）
@@ -303,7 +303,7 @@ Gwern.net 反向链接的另一个独特功能是它们与注释弹窗集成。
 这通过简单地将注释包含在解析链接的文件中，并将注释中的链接归因于其各自的 URL，然后照常进行来完成。
 例如，我在许多关于深度学习的注释中链接了我的 GPT-3 页面，因为它描述了我认为解释深度学习结果的关键概念，如 ["提示工程"](/gpt-3#prompts-as-programming "‘GPT-3 Creative Fiction § Prompts As Programming’, Gwern 2020"){.backlink-not}，即使它们不是‘Gwern.net 页面’或‘wiki 文章’，它们也会出现在其反向链接中：
 
-![GPT-3 页面的反向链接，显示了来自链接到它的研究文章的反向链接，而不仅仅是顶层页面（[另一个例子](/doc/design/2023-04-02-gwern-gwernnet-backlinks-backlinksinsection-gpt3roleplayingfootnoteexample.png)）。](/doc/design/2023-04-14-gwern-gwernnet-backlinks-gpt3example-backlinksfromannotations.png)
+![GPT-3 页面的反向链接，显示了来自链接到它的研究文章的反向链接，而不仅仅是顶层页面（[另一个例子](https://gwern.net/doc/design/2023-04-02-gwern-gwernnet-backlinks-backlinksinsection-gpt3roleplayingfootnoteexample.png)）。](https://gwern.net/doc/design/2023-04-14-gwern-gwernnet-backlinks-gpt3example-backlinksfromannotations.png)
 
 但是，注释也可以相互链接，创建一个隐式的 [Citation graph (引用图)](https://en.wikipedia.org/wiki/Citation%20graph)（比像 [Google Scholar](https://en.wikipedia.org/wiki/Google%20Scholar) 这样的论文分析和书目创建的要小，但因此更针对我的用途）：
 
@@ -328,7 +328,7 @@ Gwern.net 反向链接的另一个独特功能是它们与注释弹窗集成。
 
     事实上，这是处理复杂注释的好方法：你可以将它们分解为多个注释并链接每个版本。例如，一篇复杂、深入的机器学习论文，如 [BigGAN 论文](https://arxiv.org/abs/1809.11096#deepmind "‘Large Scale GAN Training for High Fidelity Natural Image Synthesis’, Brock et al 2018"){.backlink-not}，其中摘要很重要，但省略了 [第 6 页](https://arxiv.org/pdf/1809.11096#page=6&org=deepmind "‘BigGAN: Large Scale GAN Training for High Fidelity Natural Image Synthesis § 4.2 Characterizing Instability: The Discriminator’, Brock et al 2019 (page 6)"){.backlink-not} 上的关键部分，以及我想为其他目的强调的 [第 8 页](https://arxiv.org/pdf/1809.11096#page=8&org=deepmind "‘BigGAN: Large Scale GAN Training For High Fidelity Natural Image Synthesis § 5.2 Additional Evaluation On JFT-300M’, Brock et al 2018 (page 8)"){.backlink-not}。
 
-    我可以满足于根本不注释它们；或者我可以试着把它们全部塞进一个注释里；或者由于缺乏任何注释可能，我可以利用 [`#page=n`](/doc/cs/css/2007-adobe-parametersforopeningpdffiles.pdf#page=5) 技巧链接到论文 PDF 中的确切页面 & 满足于 PDF 弹出（如果你仅为了编写多个不同的注释而创建任意 ID，这也有效）；*或者* 我可以为确切的页面链接创建注释并简单地交叉引用它们！反向链接使交叉引用一目了然，并在悬停时导航。由于这都是完全递归的，注释是一等公民，目标可以是任意 URL 或 `<div>`/`<span>` 的任意 ID，反向链接和链接互操作等，对于作者和读者来说，这一切都无缝地 Just Works™。
+    我可以满足于根本不注释它们；或者我可以试着把它们全部塞进一个注释里；或者由于缺乏任何注释可能，我可以利用 [`#page=n`](https://gwern.net/doc/cs/css/2007-adobe-parametersforopeningpdffiles.pdf#page=5) 技巧链接到论文 PDF 中的确切页面 & 满足于 PDF 弹出（如果你仅为了编写多个不同的注释而创建任意 ID，这也有效）；*或者* 我可以为确切的页面链接创建注释并简单地交叉引用它们！反向链接使交叉引用一目了然，并在悬停时导航。由于这都是完全递归的，注释是一等公民，目标可以是任意 URL 或 `<div>`/`<span>` 的任意 ID，反向链接和链接互操作等，对于作者和读者来说，这一切都无缝地 Just Works™。
 
     但是，丢弃锚点和 ID 元数据的系统很难做到这一点：1:1 链接或不同的 URL-锚点将崩溃为无可救药的模棱两可的多对多映射。
 
@@ -390,9 +390,9 @@ Gwern.net 为所有链接实现了一个简单的分层/DAG [标签](https://en.
 
 <noscript><div class="admonition error"><div class="admonition-title">需要启用 JavaScript</div></div></noscript>
 
-这些分层标签对应于文件系统层次结构：URL 可以被‘标记’为字符串 `foo`，在这种情况下，它被分配到 `/doc/foo/` 目录。^[这取代了早期的 [基于 Hakyll 的标签系统](https://jaspervdj.be/hakyll/reference/Hakyll-Web-Tags.html)。Hakyll 方法非常简单，仅适用于小型博客，无法处理本地文件标记，更不用说任意 URL。（标签代码也是我无法修改的黑魔法。）与此同时，我本地文件的不断演变的文件系统层次结构已经 *看起来* 像一个标签系统，演变很容易。]
-如果标签字符串中有斜杠，则它指的是嵌套标签，如 `foo/bar` → `/doc/foo/bar/`。
-因此，添加到 Gwern.net 目录如 `/doc/foo/bar/2023-smith.pdf` 的文件被推断为自动标记为 `foo/bar`。
+这些分层标签对应于文件系统层次结构：URL 可以被‘标记’为字符串 `foo`，在这种情况下，它被分配到 `https://gwern.net/doc/foo/` 目录。^[这取代了早期的 [基于 Hakyll 的标签系统](https://jaspervdj.be/hakyll/reference/Hakyll-Web-Tags.html)。Hakyll 方法非常简单，仅适用于小型博客，无法处理本地文件标记，更不用说任意 URL。（标签代码也是我无法修改的黑魔法。）与此同时，我本地文件的不断演变的文件系统层次结构已经 *看起来* 像一个标签系统，演变很容易。]
+如果标签字符串中有斜杠，则它指的是嵌套标签，如 `foo/bar` → `https://gwern.net/doc/foo/bar/`。
+因此，添加到 Gwern.net 目录如 `https://gwern.net/doc/foo/bar/2023-smith.pdf` 的文件被推断为自动标记为 `foo/bar`。
 （因为它是分层的，它不能同时标记为 `foo` 和 `foo/bar`；这被解释为仅仅是 `foo/bar`。）
 将文件复制/符号链接到各处是个坏主意，因此给定的 URL（如文件）可以被任意多次标记。
 这在与注释相同的元数据数据库中跟踪，并且可以像注释的任何其他部分一样进行编辑。
@@ -405,9 +405,9 @@ Gwern.net 为所有链接实现了一个简单的分层/DAG [标签](https://en.
 
 #. 标签作为 **页面**：
 
-    标签可以有关于主题的介绍/讨论，用于标签含义可能不明显的情况（例如 ["内心独白"](/doc/psychology/inner-voice/index) 或 ["暗知识"](/doc/psychology/dark-knowledge/index)）。
+    标签可以有关于主题的介绍/讨论，用于标签含义可能不明显的情况（例如 ["内心独白"](https://gwern.net/doc/psychology/inner-voice/index) 或 ["暗知识"](https://gwern.net/doc/psychology/dark-knowledge/index)）。
 
-    这些介绍像文章一样处理，实际上，可能只是从常规页面 *包含*（例如 [鼻屎标签](/doc/biology/booger/index "‘Booger Picking’, Gwern 2021") 或 [高效 Transformer 注意力](/doc/ai/nn/transformer/attention/index "‘Efficient Attention: Breaking The Quadratic Transformer Bottleneck’, Gwern 2020")）。
+    这些介绍像文章一样处理，实际上，可能只是从常规页面 *包含*（例如 [鼻屎标签](https://gwern.net/doc/biology/booger/index "‘Booger Picking’, Gwern 2021") 或 [高效 Transformer 注意力](https://gwern.net/doc/ai/nn/transformer/attention/index "‘Efficient Attention: Breaking The Quadratic Transformer Bottleneck’, Gwern 2020")）。
 #. **被标记** 的标签：
 
     标签本身可以被“标记”，并出现在该标签下（反之亦然）；然而，这些标签不是递归的，也不试图避免循环。它们更多地是出于‘另见’交叉引用的精神。
@@ -419,16 +419,16 @@ Gwern.net 为所有链接实现了一个简单的分层/DAG [标签](https://en.
 
     当我链接该 URL 时，该链接将获得 DeepMind 徽标作为其链接图标，如果我能记住它与 DM 相关，我更容易搜索。这不会破坏链接，因为锚点仅在客户端（不像如果你想以这种方式滥用查询参数——许多服务器会忽略像 `foo?deepmind` 这样格式错误的 url，但许多其他服务器会抛出错误）；因此，我可以在 Gwern.net 和 Reddit 或 Twitter 之间来回复制粘贴，后者将继续正常工作（它们跟踪完整的 URL，但通常为了搜索等目的而删除锚点）。因为它重载了锚点，我可以随时定义新的隶属关系，截至 2023-04-19 已达 51 个隶属关系；我可以通过使用新约定来编码我可能想要编码的任何其他内容。我可以通过写 `#2023-04-19` 来编码日期，或作者 `#john-smith`，或像 `#todo` 这样的小笔记。只要它们不碰巧是 *真正* 的锚点，它们就会工作。（这就是为什么许多过去的网页设计黑客行为，如 [`#!'](https://en.wikipedia.org/wiki/URI_fragment#Proposals) [URL](https://en.wikipedia.org/wiki/Single-page_application) 或 ["文本片段"](https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments)（粗糙的 [内容寻址 URL](https://en.wikipedia.org/wiki/Content%20centric%20networking)）也利用了锚点，为了它们的后向兼容性。）
 
-    这种黑客行为确实有代价。首先，它会产生虚假的锚点，我的链接检查器会警告这些锚点，但必须作为故意错误忽略。其次，更严重的是，虽然它在外部 URL 上工作正常，但在本地 URL 上开始引起问题：考虑像 `/doc/reinforcement-learning/model-free/2016-graves.pdf#deepmind` 这样的情况——这个 URL 对于注释本身不是问题，注释通过 URL 做所有事情，但对于文件级别的任何东西都是问题，它只看到 `.../2016-graves.pdf`。文件级别没有 `#deepmind`！这需要不稳定的黑客行为，如查找以文件为前缀的每个注释，看看是否有带有某种锚点的注释。我打算移除这个黑客行为，转而在注释元数据中存储隶属关系；然而，我可能会保留它作为输入隶属关系的便捷方式。
+    这种黑客行为确实有代价。首先，它会产生虚假的锚点，我的链接检查器会警告这些锚点，但必须作为故意错误忽略。其次，更严重的是，虽然它在外部 URL 上工作正常，但在本地 URL 上开始引起问题：考虑像 `https://gwern.net/doc/reinforcement-learning/model-free/2016-graves.pdf#deepmind` 这样的情况——这个 URL 对于注释本身不是问题，注释通过 URL 做所有事情，但对于文件级别的任何东西都是问题，它只看到 `.../2016-graves.pdf`。文件级别没有 `#deepmind`！这需要不稳定的黑客行为，如查找以文件为前缀的每个注释，看看是否有带有某种锚点的注释。我打算移除这个黑客行为，转而在注释元数据中存储隶属关系；然而，我可能会保留它作为输入隶属关系的便捷方式。
 
 ### 使用 & 外观
 
 浏览标签的主要方式是通过带注释的 URL 上的弹窗：
 
-![一张有 3 个标签打开的研究论文的示例，这些标签本身也被标记，带有用于快速弹出特定标签条目的目录。](/doc/design/2023-04-18-gwern-gwernnet-popups-examplesofmultipletagpopups.png)
+![一张有 3 个标签打开的研究论文的示例，这些标签本身也被标记，带有用于快速弹出特定标签条目的目录。](https://gwern.net/doc/design/2023-04-18-gwern-gwernnet-popups-examplesofmultipletagpopups.png)
 
 标签弹窗提供了整个标签的概览：有多少带标记的项目是什么类型的，它是如何被标记的 & 访问其更广泛的父标签，原始标签名称，图像缩略图（从最近的带图像的注释中提取），以及紧凑的目录，将弹出这些注释。
-支持链接书目等标准功能，并且全部通过弹出和/或包含实现。^[标签弹窗过去只是简单地包含/加载标签页面到弹窗中。结果证明这对于像 [`psychology`](/doc/psychology/index) 这样有数百到数千个条目（并且迫切需要重构）的大型标签来说是不可预测且缓慢的，这些标签当时也不是包含，因此可能需要 >10s 才能加载。]
+支持链接书目等标准功能，并且全部通过弹出和/或包含实现。^[标签弹窗过去只是简单地包含/加载标签页面到弹窗中。结果证明这对于像 [`psychology`](https://gwern.net/doc/psychology/index) 这样有数百到数千个条目（并且迫切需要重构）的大型标签来说是不可预测且缓慢的，这些标签当时也不是包含，因此可能需要 >10s 才能加载。]
 像反向链接一样，标签和其他一切之间几乎没有区别——从读者的角度来看，这一切都 Just Works™。
 
 如果想进行更深入的阅读，标签作为独立的 HTML 页面提供。
@@ -449,8 +449,8 @@ Gwern.net 为所有链接实现了一个简单的分层/DAG [标签](https://en.
 
 #. **生成的** 标签：有两个特殊的标签是‘生成的’（更多是）：
 
-    - [`newest`](/doc/newest/index)，列出了最近添加的注释（作为 [每月通讯](https://gwern.substack.com/ "‘Gwern.net newsletter (Substack letter)’, Gwern 2013") 的一种实时等价物 & 让我轻松校对最近写的注释）
-    - 以及根标签目录本身，[`doc`](/doc/index)，按路径 & 人类可读的短名称列出 *所有* 标签（向读者展示可用标签的全部广度）。
+    - [`newest`](https://gwern.net/doc/newest/index)，列出了最近添加的注释（作为 [每月通讯](https://gwern.substack.com/ "‘Gwern.net newsletter (Substack letter)’, Gwern 2013") 的一种实时等价物 & 让我轻松校对最近写的注释）
+    - 以及根标签目录本身，[`doc`](https://gwern.net/doc/index)，按路径 & 人类可读的短名称列出 *所有* 标签（向读者展示可用标签的全部广度）。
 #. **短 ↔ 长** 标签名：
 
     为了简洁起见，Gwern.net 标签分类法并不试图成为完美的分类金字塔。
@@ -461,19 +461,19 @@ Gwern.net 为所有链接实现了一个简单的分层/DAG [标签](https://en.
 #. 推断或 **自动标签**：
 
     - 为了引导标签分类法，我定义了规则，即页面链接的任何 URL 都会获得特定标签；例如，[DNB FAQ](/dnb-faq "‘Dual n-Back FAQ’, Gwern 2009"){.backlink-not} 将强加 `dual-n-back` 标签。事实证明这对标签太随意了，已被移除。
-    - 本地托管的文件通常在路径中编码了一个标签，如前所述。（这排除了 `/doc/www/` 中的本地镜像的特殊情况，以及一些镜像或项目。）
-    - 域名匹配可以触发标签，在域名本身就是一个标签的情况下（例如，[_The Public Domain Review_](https://publicdomainreview.org/) 在 [`history/public-domain-review`](/doc/history/public-domain-review/index) 有自己的标签，因此方便自动标记任何匹配 `publicdomainreview.org` 的 URL），或者网站是单一主题的（任何指向 [EvaMonkey.com](https://www.evamonkey.com/) 的链接都将是 [`anime/eva`](/doc/anime/eva/index) 标签）。
+    - 本地托管的文件通常在路径中编码了一个标签，如前所述。（这排除了 `https://gwern.net/doc/www/` 中的本地镜像的特殊情况，以及一些镜像或项目。）
+    - 域名匹配可以触发标签，在域名本身就是一个标签的情况下（例如，[_The Public Domain Review_](https://publicdomainreview.org/) 在 [`history/public-domain-review`](https://gwern.net/doc/history/public-domain-review/index) 有自己的标签，因此方便自动标记任何匹配 `publicdomainreview.org` 的 URL），或者网站是单一主题的（任何指向 [EvaMonkey.com](https://www.evamonkey.com/) 的链接都将是 [`anime/eva`](https://gwern.net/doc/anime/eva/index) 标签）。
 #. CLI 工具：[`changeTag.hs`](/static/build/changeTag.hs) 和 `upload` 允许批量编辑 & 创建注释，[`annotation-dump.hs`](/static/build/annotation-dump.hs) 启用搜索/浏览：
 
-    我使用 `changeTag.hs`（快捷键：`gwt`）作为一种 [Bookmark (书签)](https://en.wikipedia.org/wiki/Bookmark%20%28digital%29) [tool (工具)](https://en.wikipedia.org/wiki/Social%20bookmarking) 来‘标记’我遇到的任何 URL。（通过列出所有目录名并将其转换为标签，很容易提供 [Tab completion (Tab 补全)](https://en.wikipedia.org/wiki/Command-line%20completion)。）例如，一个有趣的 [Arxiv](https://en.wikipedia.org/wiki/ArXiv) 链接将获得快速的 `gwt https://arxiv.org/abs/2106.11297 attention/compression t5`；这将创建 [它的注释](https://arxiv.org/abs/2106.11297 "‘TokenLearner: What Can 8 Learned Tokens Do for Images and Videos?’, Ryoo et al 2021"){.backlink-not}，从 Arxiv 拉取所有元数据，运行所有格式化通道如分段，为其生成嵌入，该嵌入将包含在所有未来的相似链接推荐中，将其添加到本地存档队列，并在 [`ai/nn/transformer/attention/compression`](/doc/ai/nn/transformer/attention/compression/index) & [`ai/nn/transformer/t5`](/doc/ai/nn/transformer/t5/index) 下标记它。比手动做要好！
+    我使用 `changeTag.hs`（快捷键：`gwt`）作为一种 [Bookmark (书签)](https://en.wikipedia.org/wiki/Bookmark%20%28digital%29) [tool (工具)](https://en.wikipedia.org/wiki/Social%20bookmarking) 来‘标记’我遇到的任何 URL。（通过列出所有目录名并将其转换为标签，很容易提供 [Tab completion (Tab 补全)](https://en.wikipedia.org/wiki/Command-line%20completion)。）例如，一个有趣的 [Arxiv](https://en.wikipedia.org/wiki/ArXiv) 链接将获得快速的 `gwt https://arxiv.org/abs/2106.11297 attention/compression t5`；这将创建 [它的注释](https://arxiv.org/abs/2106.11297 "‘TokenLearner: What Can 8 Learned Tokens Do for Images and Videos?’, Ryoo et al 2021"){.backlink-not}，从 Arxiv 拉取所有元数据，运行所有格式化通道如分段，为其生成嵌入，该嵌入将包含在所有未来的相似链接推荐中，将其添加到本地存档队列，并在 [`ai/nn/transformer/attention/compression`](https://gwern.net/doc/ai/nn/transformer/attention/compression/index) & [`ai/nn/transformer/t5`](https://gwern.net/doc/ai/nn/transformer/t5/index) 下标记它。比手动做要好！
 
     与此同时，`annotation-dump.hs`（快捷键：`gwa`）帮助我实际利用标记来重新查找东西，例如 `gwa https://arxiv.org/abs/2106.11297 | fold --spaces --width=100`：
 
-    ![在 [Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) 中查询注释的示例，显示了 [语法高亮](https://en.wikipedia.org/wiki/Syntax_highlighting)，如查看注释的完整 Gwern.net URL 的快捷方式、标签、所在的 YAML 文件数据库等。](/doc/cs/shell/2023-04-18-gwern-gwernnet-commandline-annotationdump-queryexample.png)
+    ![在 [Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) 中查询注释的示例，显示了 [语法高亮](https://en.wikipedia.org/wiki/Syntax_highlighting)，如查看注释的完整 Gwern.net URL 的快捷方式、标签、所在的 YAML 文件数据库等。](https://gwern.net/doc/cs/shell/2023-04-18-gwern-gwernnet-commandline-annotationdump-queryexample.png)
 
     这些可以被 grep、管道传输、在文本编辑器中编辑等。这可以与 `gwt` 结合用于批量编辑：grep 特定关键词，过滤掉已标记的注释，管道传输到 `less`，手工审查，并复制要标记/取消标记的 URL。这可以进一步与 `link-extractor.hs` 结合，从给定的 Markdown 页面提取链接，查看它们是否已经被标记了某个标签，并仅呈现未标记的以供审查。
 
-    例如，当我想要填充我的 [Frank Herbert](/doc/fiction/science-fiction/frank-herbert/index) 标签时，我从我的两个 _Dune_ 相关页面提取了链接，grep 了任何 *提到* 任何这些链接的注释，过滤掉任何已标记为 'Frank Herbert' 的注释，并打印出剩余的 URL 以供审查，并标记了其中许多：
+    例如，当我想要填充我的 [Frank Herbert](https://gwern.net/doc/fiction/science-fiction/frank-herbert/index) 标签时，我从我的两个 _Dune_ 相关页面提取了链接，grep 了任何 *提到* 任何这些链接的注释，过滤掉任何已标记为 'Frank Herbert' 的注释，并打印出剩余的 URL 以供审查，并标记了其中许多：
 
     ~~~{.Bash .collapse}
     TMP=$(mktemp /tmp/urls.txt.XXXX)
@@ -548,7 +548,7 @@ Archive of Our Own 同样以其广泛的标签系统而闻名，该系统被狂�
 
     选择了聚类 & 标签后，标签可以自动重构为新标签。重构标签的工作从‘几个小时极其乏味的工作，主动阅读数千个项目以试图推断一些好的标签，然后逐个应用’变成了‘一分钟愉快的考虑向人们展示的几个选项’。
 
-    随着标签数量的增加，必要的重构数量将减少（[幂律](/doc/design/2007-halpin.pdf "‘The complex dynamics of collaborative tagging’, Halpin et al 2007")，显然，鉴于 [Zipf's law (齐普夫定律)](https://en.wikipedia.org/wiki/Zipf%27s%20law) 这很有意义），未来项目的自动标记将改进（既因为语义变得更丰富，也因为如果可以通过聚类嵌入在无监督的方式下找到标签聚类，那么给定标记数据集预测这些标签聚类将更容易），再次奖励用户并随着时间的推移提高质量。
+    随着标签数量的增加，必要的重构数量将减少（[幂律](https://gwern.net/doc/design/2007-halpin.pdf "‘The complex dynamics of collaborative tagging’, Halpin et al 2007")，显然，鉴于 [Zipf's law (齐普夫定律)](https://en.wikipedia.org/wiki/Zipf%27s%20law) 这很有意义），未来项目的自动标记将改进（既因为语义变得更丰富，也因为如果可以通过聚类嵌入在无监督的方式下找到标签聚类，那么给定标记数据集预测这些标签聚类将更容易），再次奖励用户并随着时间的推移提高质量。
 
     （频率低得多的是，我们将想要合并标签。但这很容易自动化。）
 #. <span id="active-learning"></span> **填充稀有标签**：
@@ -643,7 +643,7 @@ Archive of Our Own 同样以其广泛的标签系统而闻名，该系统被狂�
 
         - 浮动脚注由广义工具提示弹窗处理（最初通过 [`footnotes.js`](https://ignorethecode.net/blog/2010/04/20/footnotes/) 实现）；当浏览器窗口足够宽时，浮动脚注被替换为边缘笔记/*侧边注*[^sidenotes-history]，使用自定义库 [`sidenotes.js`](/static/js/sidenotes.js)（Said Achmiz, MIT）
 
-            ![在 [_Radiance_](/doc/radiance/2002-scholz-radiance "'Radiance: A Novel', Scholz et al 2013") 上演示侧边注。](/doc/cs/css/sidenotes.png "单栏布局网页的图像，但在左右页边空白处排版脚注为‘侧边注’，靠近它们注释的文本。"){.invert}
+            ![在 [_Radiance_](https://gwern.net/doc/radiance/2002-scholz-radiance "'Radiance: A Novel', Scholz et al 2013") 上演示侧边注。](https://gwern.net/doc/cs/css/sidenotes.png "单栏布局网页的图像，但在左右页边空白处排版脚注为‘侧边注’，靠近它们注释的文本。"){.invert}
     - 图像大小：全尺寸图像（图形）可以点击进入幻灯片模式放大——对于不适合窄正文的图形或图表很有用——使用另一个自定义库 [`image-focus.js`](/static/js/image-focus.js)（Said Achmiz; GPL）
 - 错误检查：像断链这样的问题分 3 个阶段检查：
 
@@ -653,7 +653,7 @@ Archive of Our Own 同样以其广泛的标签系统而闻名，该系统被狂�
 
 [^sidenotes-history]: 侧边注长期以来一直被用作像 [日内瓦圣经](https://en.wikipedia.org/wiki/Geneva%20Bible%23Format) ([前 2 页](https://github.com/raphink/geneve_1564/releases/download/2015-07-08_01/geneve_1564.pdf)) 这样的密集注释文本的排版解决方案，但在网上还没怎么出现。
 
-    ![[Pierre Bayle's](https://en.wikipedia.org/wiki/Pierre%20Bayle) [_Historical and Critical Dictionary_](https://en.wikipedia.org/wiki/Dictionnaire%20Historique%20et%20Critique)，演示递归脚注/侧边注（1737，第 4 卷，第 901 页；来源：Google Books）](/doc/design/typography/sidenote/1737-bayle-dictionary-vol4-pg901.jpg "Google Books https://books.google.com/books?id=JmtXAAAAYAAJ&pg=PA900 的截图，显示了 Pierre Bayle 著名的启蒙文本‘历史和批判词典’（1737 年英文版第 4 卷第 900 页）单个页面中的高级排版，其中包含正文、脚注和（递归地）脚注的侧边注。")
+    ![[Pierre Bayle's](https://en.wikipedia.org/wiki/Pierre%20Bayle) [_Historical and Critical Dictionary_](https://en.wikipedia.org/wiki/Dictionnaire%20Historique%20et%20Critique)，演示递归脚注/侧边注（1737，第 4 卷，第 901 页；来源：Google Books）](https://gwern.net/doc/design/typography/sidenote/1737-bayle-dictionary-vol4-pg901.jpg "Google Books https://books.google.com/books?id=JmtXAAAAYAAJ&pg=PA900 的截图，显示了 Pierre Bayle 著名的启蒙文本‘历史和批判词典’（1737 年英文版第 4 卷第 900 页）单个页面中的高级排版，其中包含正文、脚注和（递归地）脚注的侧边注。")
 
     边距/侧边注的早期 & 鼓舞人心的使用。
 
@@ -760,7 +760,7 @@ Archive of Our Own 同样以其广泛的标签系统而闻名，该系统被狂�
 > 我对 Gwern.net 设计改进的经验是，读者我很早就赞赏使其内容更令人愉快的更改（哪怕只是与互联网的其他部分相比！），但在某一点之后，这一切都‘结合在一起’，在某种意义上，读者开始对设计赞不绝口，并指向 Gwern.net 的 *设计* 而不是其内容。
 > 这与‘收益递减’的默认直观模型不一致，在该模型中，每一个连续的设计调整都应该比前一个价值低。
 >
-> 是否存在‘[完美](/doc/psychology/collecting/2020-isaac.pdf "'The Perfection Premium', Isaac & Spangenberg 2020") [溢价](/doc/psychology/writing/2020-blunden.pdf "'Beyond the Emoticon: Are There Unintentional Cues of Emotion in Email?', Blunden & Brodsky 2020")’（也许作为 [潜在不可观察质量](/doc/statistics/bayes/regression-to-mean/index "'Regression To The Mean Fallacies', Gwern 2021") 的信号，或者也许读者互动就像 [O 形环过程](/doc/statistics/order/selection/pipeline/index "'Leaky Pipelines', Gwern 2014")）？
+> 是否存在‘[完美](https://gwern.net/doc/psychology/collecting/2020-isaac.pdf "'The Perfection Premium', Isaac & Spangenberg 2020") [溢价](https://gwern.net/doc/psychology/writing/2020-blunden.pdf "'Beyond the Emoticon: Are There Unintentional Cues of Emotion in Email?', Blunden & Brodsky 2020")’（也许作为 [潜在不可观察质量](https://gwern.net/doc/statistics/bayes/regression-to-mean/index "'Regression To The Mean Fallacies', Gwern 2021") 的信号，或者也许读者互动就像 [O 形环过程](https://gwern.net/doc/statistics/order/selection/pipeline/index "'Leaky Pipelines', Gwern 2014")）？
 </div>
 
 <div class="epigraph">

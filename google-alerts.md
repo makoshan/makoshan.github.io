@@ -1,7 +1,7 @@
 ---
 title: Google Alerts 的结果变化
 description: Google Alerts 近几年返回更少结果吗？一项统计调查
-thumbnail: /doc/technology/google/alerts/gwern-linksperemail.png
+thumbnail: https://gwern.net/doc/technology/google/alerts/gwern-linksperemail.png
 thumbnail-text: 每封 Google Alerts 邮件中的链接数，随时间变化（2007–2013）
 created: 2013-07-01
 modified: 2013-11-26
@@ -41,7 +41,7 @@ mv `cat alerts.txt` 2013-09-25-gwern-googlealertsemails/
 
 <!-- find 2013-09-25-gwern-googlealertsemails/ -type f -exec grep -l aaktgeb {} \; | xargs rm -->
 
-我删除了几条涉及隐私的提醒；剩下 72MB 邮件打包在 [`2013-09-25-gwern-googlealertsemails.tar.xz`](/doc/personal/2013-09-25-gwern-googlealertsemails.tar.xz)。然后我写了个临时 shell 脚本，提取每封邮件的主题、日期和其中 `"http://"` 的出现次数：
+我删除了几条涉及隐私的提醒；剩下 72MB 邮件打包在 [`2013-09-25-gwern-googlealertsemails.tar.xz`](https://gwern.net/doc/personal/2013-09-25-gwern-googlealertsemails.tar.xz)。然后我写了个临时 shell 脚本，提取每封邮件的主题、日期和其中 `"http://"` 的出现次数：
 
 ~~~{.Bash}
 cd 2013-09-25-gwern-googlealertsemails/
@@ -89,7 +89,7 @@ length(unique(alerts$Search))
 plot(Links ~ Date, data=alerts)
 ~~~
 
-![每封邮件中的链接数，按时间绘图](/doc/technology/google/alerts/gwern-linksperemail.png){.width-full}
+![每封邮件中的链接数，按时间绘图](https://gwern.net/doc/technology/google/alerts/gwern-linksperemail.png){.width-full}
 
 第一眼可以看到两件事：其一，链接数似乎随时间上升，2010 年中有一次峰值；其二，不同邮件差异很大——多数在 0 附近，但也有高到 300 的；其三，早期出现一个奇怪异常：有些邮件显示 0 链接；查看这些邮件后发现它们无端以 [base64](!W) 编码，之后后续邮件才变成更常规的 HTML/文本格式。难道这是 Google 的一次失败实验？我说不清楚。最大值是 563，虽然不算很大，因此即便分布偏态明显我也没把 `Links` 做对数变换。
 
@@ -122,7 +122,7 @@ plot(Links ~ Date, data=alerts)
 abline(lm)
 ~~~
 
-![每月按检索词汇总的总链接数](/doc/technology/google/alerts/gwern-linkspermonth.jpg){.width-full}
+![每月按检索词汇总的总链接数](https://gwern.net/doc/technology/google/alerts/gwern-linkspermonth.jpg){.width-full}
 
 与原始图一致：总体仍是上升趋势。这个回归的关键问题是：这种增长是来自我订阅的提醒数量增加、我每个提醒返回更多结果的参数调整（从旧提醒切到新提醒），还是每个**独立提醒**返回更多链接？我们只关心最后一种解释，但这三者或其他机制都可能造成上升。
 
@@ -139,7 +139,7 @@ qplot(Date, Links, color=Search, data=alerts) +
     theme(legend.position = "none")
 ~~~
 
-![按提醒拆分后分别回归](/doc/technology/google/alerts/gwern-monthlylinks-individuallinearregression.png){.width-full}
+![按提醒拆分后分别回归](https://gwern.net/doc/technology/google/alerts/gwern-monthlylinks-individuallinearregression.png){.width-full}
 
 结果十分混乱。各提醒指向方向各异。把全部提醒混在一起回归会掩盖问题，而分别回归也无法给出一致结论。我们需要一种中间方法：既承认提醒之间行为不同，又能给出总体上有意义的结论。
 
@@ -237,7 +237,7 @@ max(abs(coef(mlm2)$Search$Date))
 
 这一最大斜率来自 `"Frank Herbert" -mason` 的搜索，可能因为这个关键词比较新，或者因为我给原始 `"Frank Herbert"` 搜索增加了过滤规则。总体来看斜率非常接近，正负斜率的数量也大体均衡；在二层模型里整体斜率是轻微负值（约 -0.01），但毛毛虫图显示大多数提醒的斜率区间都远离 0：
 
-![`qqmath(ranef(mlm2, postVar=TRUE))`](/doc/technology/google/alerts/gwern-mlm2-slopes.png){.width-full}
+![`qqmath(ranef(mlm2, postVar=TRUE))`](https://gwern.net/doc/technology/google/alerts/gwern-mlm2-slopes.png){.width-full}
 
 这让我认为各提醒内部并没有文章中描述的“大幅时间变化”，但确实有某种东西在起作用。叠加总体回归与单提醒回归后可见：
 
@@ -253,7 +253,7 @@ p +
   theme(legend.position = "none")
 ~~~
 
-![多层回归的总体拟合与个体拟合](/doc/technology/google/alerts/gwern-monthlylinks-individualmlm.png){.width-full}
+![多层回归的总体拟合与个体拟合](https://gwern.net/doc/technology/google/alerts/gwern-monthlylinks-individualmlm.png){.width-full}
 
 这比逐个提醒回归更合理，因为当样本邮件只有少量时，极端斜率会被整体回归“拉回”——这避免了过度陡峭的回归。我们也看不到提醒整体上存在统计上显著的显著变化：有些提醒上升，有些下降，总体上只有微小下滑，可能更像 Google 内部问题造成的影响。
 
@@ -273,7 +273,7 @@ quantile(fixef.mlm2.sim[,2], probs = c(0, 0.025, 0.975, 1))
 hist(fixef.mlm2.sim[,2], main="Change in hits per month, 100k simulations", xlab="Coefficient")
 ~~~
 
-![Distribution of slopes estimated from 100k simulation runs ] ( /doc/technology/google/alerts/gwern-mlm2-simulation.png )
+![Distribution of slopes estimated from 100k simulation runs ] ( https://gwern.net/doc/technology/google/alerts/gwern-mlm2-simulation.png )
 -->
 
 ### 那次下跌呢？
@@ -341,7 +341,7 @@ library(changepoint)
 plot(cpt.meanvar(alertsRecent$Links), ylab="Links")
 ~~~
 
-![链接数量（2010–2013），图示 2011 年5/6月制度变化](/doc/technology/google/alerts/gwern-changepoint.jpg){.width-full}
+![链接数量（2010–2013），图示 2011 年5/6月制度变化](https://gwern.net/doc/technology/google/alerts/gwern-changepoint.jpg){.width-full}
 
 采用这一新分界点后，检验显著性更强：
 

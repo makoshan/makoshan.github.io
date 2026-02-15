@@ -29,7 +29,7 @@ backlink: False
 <div class="epigraph">
 > 读者过得比生活快，作者过得比生活慢。
 >
-> 詹姆斯·里查森, ["甚至更多格言和来自 Vectors 3.0 的十秒文章"](/doc/philosophy/2010-richardson-bythenumbers-vectors30 "'Vectors 3.0: Even More Aphorisms and Ten-Second Essays', Richardson 2018")
+> 詹姆斯·里查森, ["甚至更多格言和来自 Vectors 3.0 的十秒文章"](https://gwern.net/doc/philosophy/2010-richardson-bythenumbers-vectors30 "'Vectors 3.0: Even More Aphorisms and Ten-Second Essays', Richardson 2018")
 </div>
 
 ## 工作
@@ -99,12 +99,12 @@ backlink: False
 
     - [LessWrong.com](https://www.lesswrong.com/): 我的 [提交的帖子](https://www.lesswrong.com/users/gwern)[^LW-submissions][^LW-disagreements] & [评论](https://www.lesswrong.com/users/gwern)
     - [Reddit](!W): 我的 [提交](https://old.reddit.com/user/gwern/submitted/) & [评论](https://old.reddit.com/user/gwern/comments/) ([按分数](https://old.reddit.com/user/gwern/?sort=top))
-    - [RSS 订阅 (OPML)](/doc/personal/rss-subscriptions.opml)
+    - [RSS 订阅 (OPML)](https://gwern.net/doc/personal/rss-subscriptions.opml)
     - [Hacker News](!W): [提交](https://news.ycombinator.com/submitted?id=gwern) & [评论](https://news.ycombinator.com/threads?id=gwern)
 
 - [PredictionBook](https://predictionbook.com/users/gwern)
 - [书评](/review/book) (失效: [Goodreads](https://www.goodreads.com/user/show/11004626-gwern))
-- [动漫评论](/review/anime) ([MyAnimeList](https://myanimelist.net/profile/gwern) 评分: [anime](https://myanimelist.net/animelist/gwern&status=2&show=0&order=4) ([XML](/doc/personal/gwern-myanimelist-export-anime.xml)) / [manga](https://myanimelist.net/mangalist/gwern&status=2&show=0&order=4) ([XML](/doc/personal/gwern-myanimelist-export-manga.xml)))
+- [动漫评论](/review/anime) ([MyAnimeList](https://myanimelist.net/profile/gwern) 评分: [anime](https://myanimelist.net/animelist/gwern&status=2&show=0&order=4) ([XML](https://gwern.net/doc/personal/gwern-myanimelist-export-anime.xml)) / [manga](https://myanimelist.net/mangalist/gwern&status=2&show=0&order=4) ([XML](https://gwern.net/doc/personal/gwern-myanimelist-export-manga.xml)))
 - 我有一首 [主题曲](https://reddragdiva.dreamwidth.org/556568.html) ([MP3](https://web.archive.org/web/20110711231247/http://reddragdiva.co.uk/lj/gwern.mp3)), 由 [David Gerard](https://davidgerard.co.uk/) 提供^[有一个[有点好笑的故事](https://www.lesswrong.com/posts/Cq4KKE4Xg6xdeoSJZ/what-are-you-working-on#LYPBs8L4S74hu44yJ) 关于 Gerard 是如何写这首歌的，基于我的音乐无能。]
 
 [^LW-submissions]: 以下我认为实质性或特别好的 LW 提交列表，不包括可以在 Gwern.net 上找到的内容，按时间顺序排列，有趣的已突出显示：
@@ -164,7 +164,7 @@ backlink: False
 [^sock]: 也就是说，总结了我多年来各种账户的（幸存）编辑：[User:Gwern](!W), [User:Marudubshinki](!W), & User:Rhwawn
 
 我还运行了一个 [自定义 Google 搜索工具](!W "Google Co-op")，名为 ["维基百科动漫和漫画的可靠来源"](https://cse.google.com/cse?cx=009114923999563836576:1eorkzz2gp4)；这是一个自定义 Google 搜索，其[黑名单](!W "Blacklist (computing)")和[白名单](!W)上有超过 4542 个网站。
-（来源/列表是[公开可用的](/doc/personal/google-cse.xml)。）
+（来源/列表是[公开可用的](https://gwern.net/doc/personal/google-cse.xml)。）
 由于主题是流行文化，正如名字所示，特别是动漫和漫画，它返回的结果要有用得多^[比较动漫 _[王立宇宙军](!W)_ 的 [CSE 结果](https://cse.google.com/cse?cx=009114923999563836576%3A1eorkzz2gp4&q=Wings+of+Honneamise) 与 [Google 结果](https://www.google.com/search?q=Wings+of+Honneamise)。哪个对编辑更有用？
 有关更多详细信息，请参阅我的 [发布公告](https://www.mail-archive.com/wikien-l@lists.wikimedia.org/msg09145.html)。]。
 
@@ -213,7 +213,7 @@ backlink: False
 
 - 机箱: [Phanteks Enthoo Pro M 拉丝黑色钢化玻璃窗 ATX 中塔](https://www.amazon.com/Phanteks-Tempered-Glass-Black-PH-ES515PTG_BK/dp/B01LRVHH6K/ "Phanteks Enthoo Pro M Series PH-ES515PTG_BK Brushed Black Tempered Glass Window ATX Mid Tower, $128")
 
-    !["黑暗中显示 GPU 的工作站照片。"](/doc/personal/2018-06-26-gwern-workstation-gpusatnight.jpg "2018 年 6 月我工作站的一张“时尚”夜间照片，2 个 Nvidia 1080ti GPU 照亮了透明玻璃电脑机箱，看起来很“酷”。"){.float-right}
+    !["黑暗中显示 GPU 的工作站照片。"](https://gwern.net/doc/personal/2018-06-26-gwern-workstation-gpusatnight.jpg "2018 年 6 月我工作站的一张“时尚”夜间照片，2 个 Nvidia 1080ti GPU 照亮了透明玻璃电脑机箱，看起来很“酷”。"){.float-right}
 - 主板: [GIGABYTE X399 Designare EX](https://www.amazon.com/GIGABYTE-X399-Designare-EX-Motherboard/dp/B07662S766/ "$394")
 - CPU: [AMD Ryzen Threadripper 1950X 16-Core (3.4 GHz)](https://www.amazon.com/AMD-Threadripper-32-thread-Processor-YD195XA8AEWOF/dp/B074CBH3R4/ "$800") ([导热膏](https://www.amazon.com/Arctic-Silver-AS5-3-5G-Thermal-Paste/dp/B0087X728K/ "Arctic Silver 5 High-Density Polysynthetic Silver Thermal Compound AS5-3.5G, $6"))
 
@@ -241,7 +241,7 @@ backlink: False
 为了减少 RSI，我保留了一个 [握力练习器](https://www.amazon.com/Hand-Finger-Exerciser-Heavy-Tension/dp/B000UMHURY/ "Gripmaster Pro Hand Strengthening System") 以便在观看视频等空闲时刻使用。
 为了制作 [茶](/review/tea "'Tea Reviews', Gwern 2011")，我在一个简单的可调节 [电热水壶](https://www.amazon.com/T-fal-Balanced-1750-Watt-Electric-Temperature/dp/B0086UJQN8 "T-fal BF6138US Balanced Living 1-Liter 1750-Watt Electric, $24") 中烧水，我通过钻孔进入透明塑料并插入一个 [肉类温度计](https://www.amazon.com/Taylor-Precision-Products-Classic-Thermometer/dp/B00004XSC4/ "Taylor Classic Instant Read Pocket Thermometer, $5.14") 使其“可编程” (这种组合比电子水壶便宜得多且更值得信赖)；然后我在一个大的殖民地威廉斯堡陶瓷狐狸马克杯中的 [Finum 过滤器](https://www.amazon.com/gp/product/B000I68NCS/ "Finum Brewing Basket, medium, black, $9") 中浸泡茶。
 
-![我的猫想提醒你每小时休息一次打字 & 电脑。](/doc/personal/2018-10-08-gwern-cat-keyboardbreak.jpg)
+![我的猫想提醒你每小时休息一次打字 & 电脑。](https://gwern.net/doc/personal/2018-10-08-gwern-cat-keyboardbreak.jpg)
 
 ### 邮件列表
 
@@ -287,8 +287,8 @@ backlink: False
 <span id="iq"></span>
 
 简要描述我的个性：我内向、冷静、既不特别勤奋也不懒惰、逆反且病态地好奇。
-我也制作了一份 [我 2011--2014 年对 YourMorals.org 语料库的回复副本](/doc/personal/2011-2014-yourmorals.maff); 在下面有更详细的讨论。
-我在 "大五人格量表" ([1](/doc/personal/2012-gwern-personalityproject.html "Personality-project long Big Five report; early 2012")/[2](/doc/personal/2012-gwern-personalityproject-2.html "Personality-project long Big Five report; late 2012")/[3](/doc/personal/2013-gwern-personalityproject.html "Personality-project long Big Five report: early 2013")) 上的得分:
+我也制作了一份 [我 2011--2014 年对 YourMorals.org 语料库的回复副本](https://gwern.net/doc/personal/2011-2014-yourmorals.maff); 在下面有更详细的讨论。
+我在 "大五人格量表" ([1](https://gwern.net/doc/personal/2012-gwern-personalityproject.html "Personality-project long Big Five report; early 2012")/[2](https://gwern.net/doc/personal/2012-gwern-personalityproject-2.html "Personality-project long Big Five report; late 2012")/[3](https://gwern.net/doc/personal/2013-gwern-personalityproject.html "Personality-project long Big Five report: early 2013")) 上的得分:
 
 #. [经验开放性](!W)^[另见 "Actively Open-Minded Thinking Scale", "Clarity Scale", "Engagement with Beauty", & "a measure of what types of stories you enjoy".]: 高 (短) 或 87/87^th^ [百分位](!W) (长)
 #. [尽责性](!W "Conscientiousness#Personality models")^[另见 "Zimbardo Time Perspective Inventory". Brent W. Roberts 批评这两个量表用于衡量尽责性。]: 中等 或 64/69^th^
@@ -303,23 +303,23 @@ backlink: False
 相关结果
 
 <div class="columns">
-- ["道德基础问卷"](/doc/personal/2011-gwern-yourmorals.org/5f_new2_process.html)
-- ["道德基础神圣性量表"](/doc/personal/2011-gwern-yourmorals.org/sacredness_cartoon_process.html)
-- ["伦理立场问卷"](/doc/personal/2011-gwern-yourmorals.org/epq_process.html)
-- ["道德认同量表"](/doc/personal/2011-gwern-yourmorals.org/mis_process.html)
-- ["施瓦茨价值观调查"](/doc/personal/2011-gwern-yourmorals.org/schwartz_process.html)
-- ["厌恶量表"](/doc/personal/2011-gwern-yourmorals.org/disgust_process.html)
-- ["道德和人际关系问卷"](/doc/personal/2011-gwern-yourmorals.org/rel_norms_process.html)
-- [商业道德](/doc/personal/2011-gwern-yourmorals.org/busethics_process.html)
+- ["道德基础问卷"](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/5f_new2_process.html)
+- ["道德基础神圣性量表"](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/sacredness_cartoon_process.html)
+- ["伦理立场问卷"](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/epq_process.html)
+- ["道德认同量表"](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/mis_process.html)
+- ["施瓦茨价值观调查"](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/schwartz_process.html)
+- ["厌恶量表"](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/disgust_process.html)
+- ["道德和人际关系问卷"](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/rel_norms_process.html)
+- [商业道德](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/busethics_process.html)
 </div>
 
 #### 政治
 
-- [来自 Polling Report 的问题](/doc/personal/2011-gwern-yourmorals.org/current_events_process.html)
-- ["美国政治的一般政治知识量表"](/doc/personal/2011-gwern-yourmorals.org/general_political_knowledge_process.html)
-- ["关于政府是否应基于宏观经济或基本预算原则管理其预算的态度的衡量标准"](/doc/personal/2011-gwern-yourmorals.org/gov_econ_process.html)
-- ["综合正义量表"](/doc/personal/2011-gwern-yourmorals.org/justice_process.html)
-- ["激进主义取向量表"](/doc/personal/2011-gwern-yourmorals.org/aos_process.html)
+- [来自 Polling Report 的问题](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/current_events_process.html)
+- ["美国政治的一般政治知识量表"](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/general_political_knowledge_process.html)
+- ["关于政府是否应基于宏观经济或基本预算原则管理其预算的态度的衡量标准"](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/gov_econ_process.html)
+- ["综合正义量表"](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/justice_process.html)
+- ["激进主义取向量表"](https://gwern.net/doc/personal/2011-gwern-yourmorals.org/aos_process.html)
 
 # 联系方式
 
@@ -394,7 +394,7 @@ p5IV9yhbHXXHKYyLpLwJN8KpBO4oM0s=
 <div class="abstract-collapse">
 我主要为 Haskell 项目（我最喜欢的语言）做贡献；我也为非 Haskell 项目做过贡献，如 [StumpWM](!W), [Mnemosyne](!W "Mnemosyne (software)"), [GNU Emacs](!W)[^emacs] 等，但不是主要方式，所以我不在这里列出它们。
 在这个网站开始后，我逐渐停止了常规编码活动，转而专注于写作；当我编码时，现在倾向于是在这个网站上记录或托管的工具 (例如 [归档 URL](/archiving "'Archiving URLs', Gwern 2011"), [重新排序](/resorter "'Resorting Media Ratings', Gwern 2015")) 或集成到文章中 (例如 [使用 StyleGAN 生成动漫面孔](/face "'Making Anime Faces With StyleGAN', Gwern 2019"))。
-对于那些代码，你可以按语言标签浏览：[C](/doc/cs/c/index)/[CSS](/doc/cs/css/index)/[Haskell](/doc/cs/haskell/index)/[JS](/doc/cs/js/index)/[Python](/doc/cs/python/index)/[R](/doc/cs/r/index)/[Scheme](/doc/cs/lisp/scheme/index)/[shell](/doc/cs/shell/index).
+对于那些代码，你可以按语言标签浏览：[C](https://gwern.net/doc/cs/c/index)/[CSS](https://gwern.net/doc/cs/css/index)/[Haskell](https://gwern.net/doc/cs/haskell/index)/[JS](https://gwern.net/doc/cs/js/index)/[Python](https://gwern.net/doc/cs/python/index)/[R](https://gwern.net/doc/cs/r/index)/[Scheme](https://gwern.net/doc/cs/lisp/scheme/index)/[shell](https://gwern.net/doc/cs/shell/index).
 
 下面是我的旧 Haskell 贡献的更详细列表，其中大部分现在仅具有历史意义。
 </div>

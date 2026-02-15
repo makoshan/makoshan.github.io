@@ -1,0 +1,56 @@
+<p><a href="/spaced-repetition" id="link-bibliography-gwern-spaced-repetition" class="prefetch-not link-page link-annotated" data-filesize-bytes="180692" data-filesize-percentage="100">“Spaced Repetition for Efficient Learning”</a></p>
+<p> <span class="author cite-author"><a href="/index#abstract" id="_i198YQWg" class="prefetch-not link-page" data-filesize-bytes="4146" data-filesize-percentage="91">Gwern</a></span></p>
+<p><span class="date cite-date" title="2009-03-11">2009</span></p>
+<p><span class="link-tags"><a href="/doc/cs/haskell/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to cs/haskell tag index">Haskell</a>, <a href="/doc/nootropic/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to nootropic tag index">nootropic</a>, <a href="/doc/psychedelic/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to psychedelic tag index">psychedelics</a>, <a href="/doc/psychology/spaced/repetition/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to psychology/spaced/repetition tag index">psych/spaced/repetition</a></span></p>
+<blockquote>
+<figure>
+<img src="/doc/psychology/spaced-repetition/2013-memotrainerrr.png" title="Conceptual graph comparing massed review and spaced repetition review effects on the probability of remembering a fact: massed works better initially, but the memory steadily decays away, while spaced repetition restores it regularly, locking it in place." id="_wm60j2oo" class="image-modified-recently float-right page-thumbnail invert-not outline" width="0" height="0"></img>
+</figure>
+<div class="page-description-annotation">
+<p>Efficient memorization using the spacing effect: literature review of widespread applicability, tips on use &amp; what it’s good for.</p>
+</div>
+<p>Spaced repetition is a centuries-old psychological technique for efficient memorization &amp; practice of skills where instead of attempting to memorize by ‘cramming’, memorization can be done far more efficiently by instead spacing out each review, with increasing durations as one learns the item, with the scheduling done by software.</p>
+<p>Because of the greater efficiency of its slow but steady approach, spaced repetition can scale to memorizing hundreds of thousands of items (while crammed items are almost immediately forgotten) and is especially useful for foreign languages &amp; medical studies. (When there’s still too many to ever feasibly memorize, see <a href="/anti-spaced-repetition" id="gwern-anti-spaced-repetition" class="prefetch-not link-modified-recently link-annotated link-page" data-filesize-bytes="17453" data-filesize-percentage="25" title="‘Anti-Spaced Repetition for Serendipity’, Gwern 2014">my “anti-spaced repetition”</a> proposal.)</p>
+<p>I review what this technique is useful for, some of the large research literature on it and the testing effect (up to ~2013, primarily), the available software tools and use patterns, and miscellaneous ideas &amp; observations on it.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/spaced-repetition#spacing-effect" id="toc-spacing-effect" class="prefetch-not link-page">Spacing Effect</a>
+<ul>
+<li><a href="/spaced-repetition#if-youre-so-good-why-arent-you-rich" id="toc-if-youre-so-good-why-arent-you-rich" class="prefetch-not link-page">If You’re so Good, Why Aren’t You Rich</a></li>
+<li><a href="/spaced-repetition#literature-review" id="toc-literature-review" class="prefetch-not link-page">Literature Review</a>
+<ul>
+<li><a href="/spaced-repetition#background-testing-works" id="toc-background-testing-works" class="prefetch-not link-page">Background: Testing Works!</a>
+<ul>
+<li><a href="/spaced-repetition#subjects" id="toc-subjects" class="prefetch-not link-page">Subjects</a></li>
+<li><a href="/spaced-repetition#downsides" id="toc-downsides" class="prefetch-not link-page">Downsides</a></li>
+</ul></li>
+<li><a href="/spaced-repetition#distributed" id="toc-distributed" class="prefetch-not link-page">Distributed</a>
+<ul>
+<li><a href="/spaced-repetition#generality-of-spacing-effect" id="toc-generality-of-spacing-effect" class="prefetch-not link-page">Generality of Spacing Effect</a></li>
+</ul></li>
+<li><a href="/spaced-repetition#review-summary" id="toc-review-summary" class="prefetch-not link-page">Review Summary</a></li>
+</ul></li>
+<li><a href="/spaced-repetition#using-it" id="toc-using-it" class="prefetch-not link-page">Using It</a>
+<ul>
+<li><a href="/spaced-repetition#how-much-to-add" id="toc-how-much-to-add" class="prefetch-not link-page">How Much To Add</a>
+<ul>
+<li><a href="/spaced-repetition#overload" id="toc-overload" class="prefetch-not link-page">Overload</a></li>
+</ul></li>
+<li><a href="/spaced-repetition#what-to-add" id="toc-what-to-add" class="prefetch-not link-page">What to Add</a></li>
+<li><a href="/spaced-repetition#the-workload" id="toc-the-workload" class="prefetch-not link-page">The Workload</a></li>
+<li><a href="/spaced-repetition#when-to-review" id="toc-when-to-review" class="prefetch-not link-page">When to Review</a>
+<ul>
+<li><a href="/spaced-repetition#prospects-extended-flashcards" id="toc-prospects-extended-flashcards" class="prefetch-not link-page">Prospects: Extended Flashcards</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="/spaced-repetition#popularity" id="toc-popularity" class="prefetch-not link-page">Popularity</a></li>
+<li><a href="/spaced-repetition#where-was-i-going-with-this" id="toc-where-was-i-going-with-this" class="prefetch-not link-page">Where Was I Going With This?</a></li>
+<li><a href="/spaced-repetition#see-also" id="toc-see-also" class="prefetch-not link-page">See Also</a></li>
+<li><a href="/spaced-repetition#external-links" id="toc-external-links" class="prefetch-not link-page">External Links</a>
+<ul>
+<li><a href="/spaced-repetition#flashcard-sources" id="toc-flashcard-sources" class="prefetch-not link-page">Flashcard Sources</a></li>
+</ul></li>
+</ul>
+</div>
+</blockquote>

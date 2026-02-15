@@ -73,7 +73,7 @@ css-extension: dropcaps-de-zs
 <div class="epigraph">
 > 互联网是自毁的纸张。在这个地方，任何写下的东西很快就会被贪婪的竞争所破坏，唯一的保存方法是以比它们燃烧更快的速度将写作从一张纸复制到另一张纸。如果值得写，就值得保存。如果可以保存，可能就值得写……如果你将你的写作存储在像 [Blogger](https://en.wikipedia.org/wiki/Blogger%20%28service%29)、[LiveJournal](https://en.wikipedia.org/wiki/LiveJournal) 这样的第三方网站上，甚至在你自己的网站上，但是是以当时流行的博客/维基软件使用的复杂格式，一旦互联网劳动流的高超音速翅膀将人们的精力引向别处，你会 *永远失去它*。对于在互联网上发布的大多数信息，也许这 *并不算太快*，但是当短暂的燃烧刷过每一根羽毛时，原创性的缪斯如何翱翔？
 >
-> [Julian Assange](https://en.wikipedia.org/wiki/Julian%20Assange) (朱利安·阿桑奇") (["自毁的纸张"](/doc/technology/2007-assange-iq.org.html#Selfdestructingpaper "https://web.archive.org/web/20071020051936/http://iq.org/"), 2006-12-05)
+> [Julian Assange](https://en.wikipedia.org/wiki/Julian%20Assange) (朱利安·阿桑奇") (["自毁的纸张"](https://gwern.net/doc/technology/2007-assange-iq.org.html#Selfdestructingpaper "https://web.archive.org/web/20071020051936/http://iq.org/"), 2006-12-05)
 </div>
 
 我的个人兴趣之一是应用 [Long Now](https://en.wikipedia.org/wiki/Long%20Now%20Foundation) (长今) 的想法。考虑到长期，你写什么以及如何写个人网站？我们生活的绝大部分时间都在未来，精算表给我的时间直到 2070--2080 年代，不包括 [Caloric restriction](https://en.wikipedia.org/wiki/Caloric%20restriction) (热量限制)/[Intermittent fasting](https://en.wikipedia.org/wiki/Intermittent%20fasting) (间歇性禁食) 或像 [SENS](https://en.wikipedia.org/wiki/Strategies%20for%20Engineered%20Negligible%20Senescence) 这样的项目带来的任何好处。长寿会导致广泛的风险规避在科幻小说中是司空见惯的^[例如 [Larry Niven](https://en.wikipedia.org/wiki/Larry%20Niven) (拉里·尼文) 的 [Known Space](https://en.wikipedia.org/wiki/Known%20Space) (已知空间) 宇宙；考虑该背景下按时间顺序排列的最后一个故事的介绍，“任何速度都安全” (_已知空间故事集_)。]。但另一方面，它可能会产生相反的效果：你活得越久，你能负担得起的投资就越多。拥有 70 年时间跨度的人有理由防范黑天鹅---但也有时间寻找它们。[^Fromm] 值得注意的是，老年人做出许多短期选择，反映在自杀率增加和对教育或新爱好的投资减少上，这不仅仅是由于年龄的摧残，而是死亡的临近---感染艾滋病毒（但在其他方面完全健康）的人也表现出类似的短期行为。[^Posner]
@@ -93,7 +93,7 @@ css-extension: dropcaps-de-zs
 
 保持网站运行这么长时间是一个挑战，并导致了对 [弹性 Haskell 软件](/resilient-software) 的建议：100% [Free and open-source software (FLOSS)](https://en.wikipedia.org/wiki/Free%20and%20open-source%20software) 软件[^zeroth]，数据的 [Open strict (开放标准)](https://en.wikipedia.org/wiki/Open%20format)，[文本](http://catb.org/~esr/writings/taoup/html/ch05s01.html) 人类可读性，避免外部依赖[^bitly-1][^bitly-2]，以及静态性[^staticness]。
 
-[^zeroth]: [Mark Pilgrim](https://en.wikipedia.org/wiki/Mark%20Pilgrim), ["自由 0"](/doc/technology/2004-pilgrim-freedom0.html "https://web.archive.org/web/20110726001925/http://diveintomark.org/archives/2004/05/14/freedom-0"):
+[^zeroth]: [Mark Pilgrim](https://en.wikipedia.org/wiki/Mark%20Pilgrim), ["自由 0"](https://gwern.net/doc/technology/2004-pilgrim-freedom0.html "https://web.archive.org/web/20110726001925/http://diveintomark.org/archives/2004/05/14/freedom-0"):
 
     > 从长远来看，所有非自由软件的效用都趋近于零。所有非自由软件都是死胡同。
 [^bitly-1]: 这些依赖可能是微妙的。计算机档案管理员 Jason Scott [写道](https://ascii.textfiles.com/archives/3029) 关于 [URL shortening (URL 缩短)](https://en.wikipedia.org/wiki/URL%20shortening%23Disadvantages) 服务：
@@ -125,7 +125,7 @@ css-extension: dropcaps-de-zs
 > Gary Taylor ([_The Clock of the Long Now_](https://www.amazon.com/Clock-Long-Now-Responsibility-Computer/dp/0465007805/); 强调添加)^[我勤奋地备份我的文件，定期从 [Cloud computing](https://en.wikipedia.org/wiki/Cloud%20computing) (云) 复制我的内容，并保存浏览过的互联网内容；我为什么要这么做？因为我想相信我的记忆是珍贵的，我看到和说过的东西是有价值的；“我想再次见到它们，因为我相信那时的感受是真实的。”我的过去对我来说不是垃圾，不是用完即弃的。]
 </div>
 
-‘博客文章’可能是答案。但我读了很多年博客，大多数博客文章是兔子战胜乌龟的胜利。它们是为了在 2004 年的一个工作日被少数人阅读而写的，之后再也不会被阅读，并且 [很快](https://www.nytimes.com/2009/06/07/fashion/07blogs.html "Blogs Falling in an Empty Forest") [被遗弃](/doc/sociology/technology/2009-arnold-bloggingstatisticsanddemographics.html "'blog statistics and demographics', Bruce Arnold 2009")---也许正如阿桑奇所说，并不算太快。（但这不是很可悲吗？这对于一个人的时间来说不是一个糟糕的 [ROI](https://en.wikipedia.org/wiki/Return_on_investment) 吗？）另一方面，最好的博客似乎总是在建立某种东西：它们是草稿---正在进行的工作[^books]。所以我不想写博客。那么什么呢？不仅仅是“常青内容”，什么将构成 *长* 内容，以区别于现有的短内容文化？一个人如何以长今的方式生活？[^Kelly]
+‘博客文章’可能是答案。但我读了很多年博客，大多数博客文章是兔子战胜乌龟的胜利。它们是为了在 2004 年的一个工作日被少数人阅读而写的，之后再也不会被阅读，并且 [很快](https://www.nytimes.com/2009/06/07/fashion/07blogs.html "Blogs Falling in an Empty Forest") [被遗弃](https://gwern.net/doc/sociology/technology/2009-arnold-bloggingstatisticsanddemographics.html "'blog statistics and demographics', Bruce Arnold 2009")---也许正如阿桑奇所说，并不算太快。（但这不是很可悲吗？这对于一个人的时间来说不是一个糟糕的 [ROI](https://en.wikipedia.org/wiki/Return_on_investment) 吗？）另一方面，最好的博客似乎总是在建立某种东西：它们是草稿---正在进行的工作[^books]。所以我不想写博客。那么什么呢？不仅仅是“常青内容”，什么将构成 *长* 内容，以区别于现有的短内容文化？一个人如何以长今的方式生活？[^Kelly]
 
 [^books]: 此类博客的例子：
 
@@ -133,7 +133,7 @@ css-extension: dropcaps-de-zs
      #. [John Robb](https://en.wikipedia.org/wiki/John_Robb_%28military_theorist%29) 的 [Global Guerrillas](https://globalguerrillas.typepad.com/) 导致了他的 [_Brave New War: The Next Stage of Terrorism and the End of Globalization_](https://www.amazon.com/exec/obidos/ASIN/0471780790/)
      #. [Kevin Kelly](https://en.wikipedia.org/wiki/Kevin%20Kelly%20%28editor%29) 的 [Technium](https://kk.org/thetechnium/) 变成了 [_What Technology Wants_](https://www.amazon.com/What-Technology-Wants-Kevin-Kelly/dp/0670022152/)。
 
-     如何 *不* 做的一个例子是 [Robin Hanson](https://en.wikipedia.org/wiki/Robin%20Hanson) 的 [Overcoming Bias](https://www.overcomingbias.com/) 博客；它充满了迷人的引用 & 想法草图，但除了他在 2016 年最终作为 [_The Age of Em_](https://ageofem.com/) 出版的心智模拟经济帖子外，它们从未有过任何进展。仅他在 [医学](https://web.archive.org/web/20230101001643/https://www.overcomingbias.com/tag/medicine) 上的帖子就可以成为一篇迷人的文章或仅仅是列表---但他从未做过。（["表明你在乎：健康利他主义的演变"](/doc/economics/2008-hanson.pdf "'Showing that you care: The evolution of health altruism', Hanson 2008") 将是他许多帖子内容的天然家园，但永远不会更新。）Kevin Simler 站出来帮助写了 [_The Elephant in the Brain: Hidden Motives in Everyday Life_](https://www.amazon.com/Elephant-Brain-Hidden-Motives-Everyday/dp/163388481X/)，这似乎是我们能得到的最接近的东西。
+     如何 *不* 做的一个例子是 [Robin Hanson](https://en.wikipedia.org/wiki/Robin%20Hanson) 的 [Overcoming Bias](https://www.overcomingbias.com/) 博客；它充满了迷人的引用 & 想法草图，但除了他在 2016 年最终作为 [_The Age of Em_](https://ageofem.com/) 出版的心智模拟经济帖子外，它们从未有过任何进展。仅他在 [医学](https://web.archive.org/web/20230101001643/https://www.overcomingbias.com/tag/medicine) 上的帖子就可以成为一篇迷人的文章或仅仅是列表---但他从未做过。（["表明你在乎：健康利他主义的演变"](https://gwern.net/doc/economics/2008-hanson.pdf "'Showing that you care: The evolution of health altruism', Hanson 2008") 将是他许多帖子内容的天然家园，但永远不会更新。）Kevin Simler 站出来帮助写了 [_The Elephant in the Brain: Hidden Motives in Everyday Life_](https://www.amazon.com/Elephant-Brain-Hidden-Motives-Everyday/dp/163388481X/)，这似乎是我们能得到的最接近的东西。
 [^Kelly]: ["凯文·凯利回答你的问题"](https://interviews.slashdot.org/story/11/09/06/1458254/Kevin-Kelly-Answers-Your-Questions), 2011-09-06:
 
     > [问题:] "[Clock of the Long Now (长今钟)](https://en.wikipedia.org/wiki/Clock%20of%20the%20Long%20Now) 的一个目的是鼓励长期思维。除了钟之外，你认为人们在日常生活中可以做什么来采纳或促进长期思维？"
@@ -208,7 +208,7 @@ DNB FAQ 的开始是因为我很恼火人们在 dual _n_-back 邮件列表中重
 > "我的搭档佩恩和我曾经在大卫·莱特曼的脱口秀节目的桌子上从大礼帽里变出了 500 只活蟑螂。准备这花了几个星期。我们雇了一位昆虫学家，他提供了行动缓慢、适合拍照的蟑螂（你炉子下面的那种不会在特写镜头前闲逛），并教我们如何在不尖叫得像青春期前女孩那样拿起虫子。然后我们用泡沫芯（少数蟑螂无法抓住的材料之一）建造了一个秘密隔间，并通过一种狡猾的程序将隔间偷偷带进帽子里。比戏法更麻烦？对你来说，可能是。但对魔术师来说不是。"
 
 除此之外，我认为一段时间后，写作/研究可以是一个良性循环或自动催化。
-如果看看 [我的回购统计](/doc/gwern.net-gitstats/index.html)，你会发现我并非一直在写那么多。
+如果看看 [我的回购统计](https://gwern.net/doc/gwern.net-gitstats/index.html)，你会发现我并非一直在写那么多。
 似乎发生的情况是，随着我写得更多：
 
 - 我学到了更多工具
@@ -223,7 +223,7 @@ DNB FAQ 的开始是因为我很恼火人们在 dual _n_-back 邮件列表中重
     例如，2013 年 3 月冥想时：“我想知道当失业率上升，人们可能更多空闲时间或找不到工作时，是否会发布更多的同人音乐？嘿！我下载的那个巨大的东方音乐种子，它的 45000 首歌都有发行年份标签，可能能回答这个问题！”（有人可能会争辩说，这些问题可能 *应该* 被忽略，不深入调查---又是 Teller---然而，这就是事情对我来说运作的方式。）
 - 如果你不写作，你会忽略有用的链接或引用；但如果你在注意到它们时将它们放入小的旁白或脚注中，最终你会得到更大的东西。
 
-    我抓取我在 Google Alerts & Scholar, Pubmed, Reddit, Hacker News, 我的 RSS 提要，我读的书上看到的东西，并把它们记在某个地方，直到它们达到某种程度。（一个例子是我关于 [IQ 和经济学](/doc/iq/ses/index) 的缓慢积累的引用。）
+    我抓取我在 Google Alerts & Scholar, Pubmed, Reddit, Hacker News, 我的 RSS 提要，我读的书上看到的东西，并把它们记在某个地方，直到它们达到某种程度。（一个例子是我关于 [IQ 和经济学](https://gwern.net/doc/iq/ses/index) 的缓慢积累的引用。）
 - 人们留下评论，在 IRC 上 ping 我，给我发邮件，或者留下匿名信息，所有这些都有帮助
 
     这方面的一些例子来自我最受欢迎的关于丝绸之路 1 的页面：
@@ -319,7 +319,7 @@ DNB FAQ 的开始是因为我很恼火人们在 dual _n_-back 邮件列表中重
 
 [^graphomania]: 批评者有时嘲笑我 & [Scott Alexander](https://www.reddit.com/r/slatestarcodex/comments/8e2838/ama_request_with_scott/dxv9let/ "‘Q: How do you write so quickly?’, Alexander") & [Eliezer Yudkowsky (Eliezer Yudkowsky)](https://en.wikipedia.org/wiki/Eliezer%20Yudkowsky) 冗长到 [Hypergraphia (强迫写作)](https://en.wikipedia.org/wiki/Hypergraphia)/[Graphomania (多写症)](https://en.wikipedia.org/wiki/Graphomania)/[多言症](https://en.wikipedia.org/wiki/Logorrhea_(psychology))。
 
-    虽然作为精神病诊断这是错误的---我们都可以轻松地不写，在日常生活中没有因为想写的欲望而遇到困难，并且没有 *被迫* 这样做，更不用说在纸上乱涂乱画（例如 [Charles Crumb](https://www.lambiek.net/artists/c/crumb_charles.htm)）的极端了---但更弱的说法可能有点道理，即存在写作动机的 *谱系*（多写症是病理极端），我们远高于平均水平，而这就是 [ur-迷恋](https://slatestarcodex.com/2013/06/30/the-lottery-of-fascinations/)，它对我们的 ["写作管道"](/doc/statistics/order/selection/pipeline/index "‘Leaky Pipelines’, Gwern 2014") 至关重要（而在那里其他人会泄漏出去）。
+    虽然作为精神病诊断这是错误的---我们都可以轻松地不写，在日常生活中没有因为想写的欲望而遇到困难，并且没有 *被迫* 这样做，更不用说在纸上乱涂乱画（例如 [Charles Crumb](https://www.lambiek.net/artists/c/crumb_charles.htm)）的极端了---但更弱的说法可能有点道理，即存在写作动机的 *谱系*（多写症是病理极端），我们远高于平均水平，而这就是 [ur-迷恋](https://slatestarcodex.com/2013/06/30/the-lottery-of-fascinations/)，它对我们的 ["写作管道"](https://gwern.net/doc/statistics/order/selection/pipeline/index "‘Leaky Pipelines’, Gwern 2014") 至关重要（而在那里其他人会泄漏出去）。
 
     因为我们不知道做别人是什么感觉，所以很容易误解写作对其他人来说是什么感觉---我想起了 [Donald Knuth (Donald Knuth)](https://en.wikipedia.org/wiki/Donald%20Knuth) & [Charles H. Moore (Chuck Moore)](https://en.wikipedia.org/wiki/Charles%20H.%20Moore) 难以理解我们其他人如何挣扎着读或写计算机程序。
 
@@ -338,7 +338,7 @@ DNB FAQ 的开始是因为我很恼火人们在 dual _n_-back 邮件列表中重
 
 “信心”标签有点不寻常。
 我从 [Muflax 的 "认知状态"](https://web.archive.org/web/20110927151625/http://muflax.com/episteme/ "'I wanted a way to show whether I still believe something I have written or not, and if so, how strongly.' (original: http://muflax.com/episteme/)") 标签中偷了这个想法；我使用相同的含义将“日志”用于数据或链接集合（“简单描述发生的事情而没有任何判断或反思的日志条目”），个人或反思性写作可以标记为“情感”（“一些想法集群与复杂的情感状态纠缠在一起，我需要将其外化才能看它；绝不认可，但偶尔必要（类似于小说）”），而“小说”不需要解释（每个作者都有 *某种* 理由写他们写的故事或诗歌，但即使是他们也不总是知道这是否是他们最深的恐惧、欲望、历史或仅仅是随机想法的表达）。
-我放弃了他的其他标签，转而使用 ["Kesselman 估计词列表"](/doc/statistics/bayes/2008-kesselman.pdf "'Verbal probability expressions in National Intelligence Estimates: a comprehensive analysis of trends from the fifties through post 9/11', Kesselman 2008") 给出我的主观概率：
+我放弃了他的其他标签，转而使用 ["Kesselman 估计词列表"](https://gwern.net/doc/statistics/bayes/2008-kesselman.pdf "'Verbal probability expressions in National Intelligence Estimates: a comprehensive analysis of trends from the fifties through post 9/11', Kesselman 2008") 给出我的主观概率：
 
 #. "certain" (确定)
 #. "highly likely" (极有可能)
@@ -386,7 +386,7 @@ DNB FAQ 的开始是因为我很恼火人们在 dual _n_-back 邮件列表中重
 - 内容:
 
     - 在 [我的预测 & 预测市场文章](/prediction-market "'Prediction Markets', Gwern 2009") 中提到任何 PredictionBook 的使用
-    - 在 [费米计算](/doc/science/fermi-problem/index "'Fermi Calculation Examples', Gwern 2019") 中提到任何费米估计的使用
+    - 在 [费米计算](https://gwern.net/doc/science/fermi-problem/index "'Fermi Calculation Examples', Gwern 2019") 中提到任何费米估计的使用
     - 安排未来结果的通知（当决定做长期后续时，例如 dual _n_-back 研究）：
 
         #. [Google Alerts](https://www.google.com/alerts)
@@ -398,7 +398,7 @@ DNB FAQ 的开始是因为我很恼火人们在 dual _n_-back 邮件列表中重
         - 使用报告/质量清单：
 
              - 横截面 & 其他非随机分析：[STROBE](https://journals.plos.org/plosmedicine/article/info%3Adoi%2F10.1371%2Fjournal.pmed.0040297 "'Strengthening the Reporting of Observational Studies in Epidemiology (STROBE): Explanation and Elaboration', Vandenbroucke et al 2007")
-             - 随机实验：[CONSORT](/doc/statistics/2010-consort-checklist.jpg) ([声明](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2860339/ "'CONSORT 2010 Statement: Updated Guidelines for Reporting Parallel Group Randomized Trials', Schulz et al 2010"))
+             - 随机实验：[CONSORT](https://gwern.net/doc/statistics/2010-consort-checklist.jpg) ([声明](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2860339/ "'CONSORT 2010 Statement: Updated Guidelines for Reporting Parallel Group Randomized Trials', Schulz et al 2010"))
              - 元分析：[PRISMA](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097 "'Preferred Reporting Items for Systematic Reviews and Meta-Analyses: The PRISMA Statement', Moher et al 2009")
 - 出版后，宣传；目前：
 

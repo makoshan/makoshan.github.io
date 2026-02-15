@@ -2365,42 +2365,48 @@ addContentLoadHandler("iconifyUnicodeIconGlyphs", (eventInfo) => {
 
     Requires Hyphenopoly_Loader.js to be loaded prior to this file.
  */
-Hyphenopoly.config({
-    require: {
-        "en-us": "FORCEHYPHENOPOLY"
-    },
-    setup: {
-        hide: "none",
-        keepAlive: true,
-        safeCopy: false
-    }
-});
-
-/**********************************************/
-/*  Hyphenate with Hyphenopoly.
-
-    Requires Hyphenopoly_Loader.js to be loaded prior to this file.
- */
-addContentInjectHandler("hyphenate", (eventInfo) => {
-    if (Hyphenopoly.hyphenators == null)
+(() => {
+    let pageLang = (document.documentElement.lang || "").toLowerCase();
+    if (pageLang.startsWith("en") == false)
         return;
 
-    if (GW.isX11())
-        return;
-
-    let selector = (GW.isMobile()
-                    ? ".markdownBody p"
-                    : (eventInfo.document == document
-                       ? ".sidenote p, .abstract blockquote p"
-                       : "p"));
-    let blocks = eventInfo.container.querySelectorAll(selector);
-    Hyphenopoly.hyphenators.HTML.then((hyphenate) => {
-        blocks.forEach(block => {
-            hyphenate(block);
-            Typography.processElement(block, Typography.replacementTypes.NONE, true);
-        });
+    Hyphenopoly.config({
+        require: {
+            "en-us": "HYPHENOPOLY"
+        },
+        setup: {
+            hide: "none",
+            keepAlive: true,
+            safeCopy: false
+        }
     });
-}, "rewrite");
+
+    /**********************************************/
+    /*  Hyphenate with Hyphenopoly.
+
+        Requires Hyphenopoly_Loader.js to be loaded prior to this file.
+     */
+    addContentInjectHandler("hyphenate", (eventInfo) => {
+        if (Hyphenopoly.hyphenators == null)
+            return;
+
+        if (GW.isX11())
+            return;
+
+        let selector = (GW.isMobile()
+                        ? ".markdownBody p"
+                        : (eventInfo.document == document
+                           ? ".sidenote p, .abstract blockquote p"
+                           : "p"));
+        let blocks = eventInfo.container.querySelectorAll(selector);
+        Hyphenopoly.hyphenators.HTML.then((hyphenate) => {
+            blocks.forEach(block => {
+                hyphenate(block);
+                Typography.processElement(block, Typography.replacementTypes.NONE, true);
+            });
+        });
+    }, "rewrite");
+})();
 
 /************************************************************************/
 /*  Remove soft hyphens and other extraneous characters from copied text.

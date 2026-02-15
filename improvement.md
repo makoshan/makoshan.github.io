@@ -1,7 +1,7 @@
 ---
 title: "我的普通生活：1990 年以来的改善"
 description: 一份关于1990年代以来普通生活质量提升的清单，这些变化通常超越了“计算机”本身。
-thumbnail: /doc/technology/2015-11-harvard-innovationlabs-bestreviews-evolutionofthedesk-vi.jpg
+thumbnail: https://gwern.net/doc/technology/2015-11-harvard-innovationlabs-bestreviews-evolutionofthedesk-vi.jpg
 thumbnail-text: "《桌面进化》视频的照片，展示了许多办公室和家庭工具如何被家用电脑取代。"
 created: 2018-04-28
 modified: 2022-12-20
@@ -26,7 +26,7 @@ css-extension: dropcaps-de-zs
 
 [^tuberculosis]: <span id="tuberculosis"></span> 几年前我奶奶随口提起自己过世的同胞名单时让我一阵发怵：2位在乡下养活期间因“夏季腹泻”去世（未巴氏杀菌奶导致的 [牛结核](!W "Mycobacterium bovis")），这是当地常见命运；接着又有3位在青少年到20多岁时迁到城里去纺织工厂打工而去世。其余人则更晚去世。相比之下，她到目前为止只失去了5个孩子中的1个（死产），在她 >12 个孙辈/重孙辈里则是0%。
 
-![1980年代的桌面](https://www.designboom.com/technology/evolution-desk-harvard-innovation-lab-09-30-2014/ "Harvard Innovation Lab visualizes 'The Evolution Of The Desk'")^[有个相似例子是[1991年 Radio Shack 的广告](https://www.trendingbuffalo.com/life/uncle-steves-buffalo/everything-from-1991-radio-shack-ad-now/ "Everything from 1991 Radio Shack ad I now do with my phone")。顺带一提，原视频（[Evolution Of The Desk](https://www.youtube.com/watch?v=uGI00HV7Cfw "Evolution Of The Desk")）有个较少被提及的续作：[Evolution of the City](https://www.youtube.com/watch?v=9YBOn-Fxg_4)。](/doc/technology/2015-11-harvard-innovationlabs-bestreviews-evolutionofthedesk-vi.jpg "一张1980年代风格的桌面照片，由哈佛创新实验室于2015年制作，展示了‘办公桌进化’：桌面上摆满了后来被电脑软硬件与互联网取代的工具。画面里有白胶、保鲜膜、杂志、报纸、卷笔刀、传真机、车钥匙、剪刀、便签本、Macintosh、闹钟、牛津英语词典、百科全书、黄页、填字游戏、本子、电话、便签纸、钱包、相机、修正液、计算器、滚动电话本、地球仪、软木板等。"){: .float-right}
+![1980年代的桌面](https://www.designboom.com/technology/evolution-desk-harvard-innovation-lab-09-30-2014/ "Harvard Innovation Lab visualizes 'The Evolution Of The Desk'")^[有个相似例子是[1991年 Radio Shack 的广告](https://www.trendingbuffalo.com/life/uncle-steves-buffalo/everything-from-1991-radio-shack-ad-now/ "Everything from 1991 Radio Shack ad I now do with my phone")。顺带一提，原视频（[Evolution Of The Desk](https://www.youtube.com/watch?v=uGI00HV7Cfw "Evolution Of The Desk")）有个较少被提及的续作：[Evolution of the City](https://www.youtube.com/watch?v=9YBOn-Fxg_4)。](https://gwern.net/doc/technology/2015-11-harvard-innovationlabs-bestreviews-evolutionofthedesk-vi.jpg "一张1980年代风格的桌面照片，由哈佛创新实验室于2015年制作，展示了‘办公桌进化’：桌面上摆满了后来被电脑软硬件与互联网取代的工具。画面里有白胶、保鲜膜、杂志、报纸、卷笔刀、传真机、车钥匙、剪刀、便签本、Macintosh、闹钟、牛津英语词典、百科全书、黄页、填字游戏、本子、电话、便签纸、钱包、相机、修正液、计算器、滚动电话本、地球仪、软木板等。"){: .float-right}
 
 [可见与不可见。]{.marginnote} 回头看，生活中消失了很多麻烦，也冒出了很多好东西。
 我记得以前我的桌子总是堆满字典和卷笔刀，但在智能手机和电脑共同作用下，如今大部分桌面空间都留给了猫。
@@ -56,7 +56,7 @@ css-extension: dropcaps-de-zs
 
     现在网上总有人抱怨 RAM 或半导体短缺（每隔十年左右就会发生，这是行业“周期性繁荣衰退”导致的）时还要付近几年一样的价格，但长期趋势非常明显。
 
-    ![今天我对“会算力”的反应：["Ehhh‽"](https://www.youtube.com/watch?v=x2ypDDYDl70 "<em>Nichijou</em>—Ehhh‽ (Episode 10, Part 41, <em>nagashi somen</em> in the park)")](/doc/anime/2011-06-11-nichijou-episode10-part41-nagashisomeninthepark-ehhh.jpg "一个动画女生角色（安原あるな Haruna Annaka）震惊又困惑的表情截图；《日常》第一季第十集第41段（2011-06-11）"){: .float-right}
+    ![今天我对“会算力”的反应：["Ehhh‽"](https://www.youtube.com/watch?v=x2ypDDYDl70 "<em>Nichijou</em>—Ehhh‽ (Episode 10, Part 41, <em>nagashi somen</em> in the park)")](https://gwern.net/doc/anime/2011-06-11-nichijou-episode10-part41-nagashisomeninthepark-ehhh.jpg "一个动画女生角色（安原あるな Haruna Annaka）震惊又困惑的表情截图；《日常》第一季第十集第41段（2011-06-11）"){: .float-right}
 
     你现在能买到的顶级 VR 头显或智能手机，按实时通胀折算，价格低于任一款任天堂 NES/Famicom 在 [1983年日本发布](https://en.wikipedia.org/wiki/History_of_the_Nintendo_Entertainment_System#Famicom_release_in_Japan_(1983%E2%80%931984)) 时的价格（[$150]($1983)[^inflation]，或者我们家那台美版“Action” [$149.99]($1988)），也低于1979年的索尼 Walkman（[$150]($1979)）。到了2020年，孩子们都无法想象要为一份新买的[_超级马里奥兄弟3_](!W)付出 [$50]($1990)。更不用说更便宜的 [_Atari 2600 Centipede_](!W "Centipede (video game)")[$34.99]($1983)，远低于今天 Steam 大促时买同等级PC游戏的 [$5]($2019) 甚至许多热门游戏比如 [_Fortnite_](!W)甚至免费。 (当然，很多时候你还要再买配件、外设或软件，金额常常超过主机本身。)
 - **互联网/人类遗传学/AI/VR**已经真正变成现实
@@ -78,7 +78,7 @@ css-extension: dropcaps-de-zs
 - **以太网**：上网不再需要区分 PLIP、SLIP、IRQ、TCP/IP、PPP
 - **20xx 是 Linux 桌面元年吗**：虽未成真，但 Linux 桌面/X/WiFi/笔记本如今通常可用
 - **洁净鼠标**：激光鼠标让你不再需要每周清洁鼠标
-- **助听器**体积大幅变小、可在柜台直接购买、数字化后配有多麦克风（更高质量、可定制、降噪）^[我预期随着更高级信号处理技术在电池寿命约束内变得可行并结合[深度学习](/doc/ai/nn/2016-wang-2.pdf "Deep Learning Reinvents the Hearing Aid: Finally, wearers of hearing aids can pick out a voice in a crowded room")，它会更进一步。同时我也很在意：许多人机型较便宜的 Apple [AirPods](!W) 就能做 iPhone 联合处理（得益于专用 ASIC 与大电池），这让我想起下一代助听器/耳机（甚至年轻人）是否会比自然听力更好？], 价格下降一半以上，具备防水，甚至能做蓝牙。
+- **助听器**体积大幅变小、可在柜台直接购买、数字化后配有多麦克风（更高质量、可定制、降噪）^[我预期随着更高级信号处理技术在电池寿命约束内变得可行并结合[深度学习](https://gwern.net/doc/ai/nn/2016-wang-2.pdf "Deep Learning Reinvents the Hearing Aid: Finally, wearers of hearing aids can pick out a voice in a crowded room")，它会更进一步。同时我也很在意：许多人机型较便宜的 Apple [AirPods](!W) 就能做 iPhone 联合处理（得益于专用 ASIC 与大电池），这让我想起下一代助听器/耳机（甚至年轻人）是否会比自然听力更好？], 价格下降一半以上，具备防水，甚至能做蓝牙。
 - **[降噪耳机](!W)**：尽管某种形式的降噪技术长期在原型和专用系统中存在，[Bose](!W "Bose Corporation") 1989年推出的首个体积庞大的飞行员降噪耳机售价高达[$995]($1989)才面向普通用户，约十年后消费者才有更低价格的选择。长途航班上，它们的价值可能接近头等舱（尤其能配上好电影时）。
 - **GPS**：高速行驶时不再害怕迷路^[大家常挑剔 GPS 拿到“错误路线”，但我想它是否长期提升了道路安全？似乎 GPS 必定帮助降低事故率：我还记得有人争论地图路线，或在即将错过转弯时做出极端掉头；亦或开车时心不在焉地问“我现在在哪？”]
 - **统一接口**：用 [USB](!W) 电缆就可以，连线和充电只需记住大约10种插头，而不是每对设备一根，共上千种组合
@@ -107,7 +107,7 @@ css-extension: dropcaps-de-zs
 
 [^subtitles]: <span id="subtitles"></span> 字幕有许多有趣的二阶效应。尽管它本来只是为了听障群体，也似乎带来了：
 
-    - 帮助**英语识字率**提升（有研究显示不同国家之间存在差异，例如 [Micola 等人 2018 的研究](/doc/culture/2018-micola.pdf "‘TV or not TV? The impact of subtitling on English skills’, Micola et al 2018)，和“配音 vs 字幕”分布相关）；我采访过的说英语的斯堪的纳维亚人都表示，从英语配音视频里读取到的本地字幕对其帮助巨大；印度、韩国、日本等文化输出方也大概率类似）
+    - 帮助**英语识字率**提升（有研究显示不同国家之间存在差异，例如 [Micola 等人 2018 的研究](https://gwern.net/doc/culture/2018-micola.pdf "‘TV or not TV? The impact of subtitling on English skills’, Micola et al 2018)，和“配音 vs 字幕”分布相关）；我采访过的说英语的斯堪的纳维亚人都表示，从英语配音视频里读取到的本地字幕对其帮助巨大；印度、韩国、日本等文化输出方也大概率类似）
     - 改变了**观看电视文化**：如今18–24岁群体多数（[YouGov 2023 调查](https://yougov.co.uk/topics/entertainment/survey-results/daily/2023/02/24/9a34f/3)）使用字幕，这可能部分源于且推动了节目表达方式向更“听不懂式”方向发展——制作者知道观众可以或已经习惯通过字幕理解，于是进一步促成这类风格。
 
         它也让“**分心/背景听**”成为更常态：观众可在公共场合或和他人共处时静音观看，电视新闻频道如 [CNN](!W) 和社交视频如 [TikTok](!W) 是典型。
@@ -142,7 +142,7 @@ css-extension: dropcaps-de-zs
 
     - 一个不太被强调的后果是**出行民主化**：如今“出国”（和去尼亚加拉并非同一概念）远没现在人想象得遥远。
 
-        ![想拿到[护照](https://en.wikipedia.org/wiki/United_States_passport)还得感谢图表。[^passports]](/doc/technology/2018-01-statista-numberofvaliduspassportsdividedbytotalusadultpopulationaccordingtodepartmentofstate.png)
+        ![想拿到[护照](https://en.wikipedia.org/wiki/United_States_passport)还得感谢图表。[^passports]](https://gwern.net/doc/technology/2018-01-statista-numberofvaliduspassportsdividedbytotalusadultpopulationaccordingtodepartmentofstate.png)
 
         比如我最爱的90年代电影《[_Home Alone_](!W)》（后者）里小主角 Macaulay Culkin（4年后又演了《里奇·里奇》）需要全家飞巴黎时，其他家庭只能留守；电影里能发生的“全家富可敌国、都去巴黎度假”的情景，在当时反而是现实里少数家庭才有的奢侈。
 - **激光指示笔**不再是高端会议道具或行星馆才有玩意儿，现在在 eBay 可买到1美元给猫玩的版本（多买几支可得不同颜色；我建议买蓝色或紫色）[见示例](/review/cat#far-from-the-madding-crowd)
@@ -243,7 +243,7 @@ css-extension: dropcaps-de-zs
 - **讨论**：Reddit: [1](https://www.reddit.com/r/slatestarcodex/comments/b0h2hp/in_what_ways_has_life_in_the_western_world/), [2](https://www.reddit.com/r/slatestarcodex/comments/pe218h/what_productsthings_do_you_really_enjoy_that/); HN: [1](https://news.ycombinator.com/item?id=22441865)/[2](https://news.ycombinator.com/item?id=28155072)/[3](https://news.ycombinator.com/item?id=38689459)/[4](https://news.ycombinator.com/item?id=43765332), [Lobste.rs](https://lobste.rs/s/9wfpsd/my_ordinary_life_improvements_since), [The Totebag](https://thetotebag.wordpress.com/2020/06/03/its-getting-better-all-the-time/), [Twitter](https://x.com/search?q=https%3A%2F%2Fwww.gwern.net%2FImprovements&src=typed_query&f=live "Here’s to the cultivators of better apples, pasteurizers of guacamole, innovators of board games, vanquishers of radio static, process optimizers of distribution networks, and refiners of HVAC systems.")
 - ["The Problems the Past versus The Problems of the Present"](https://www.wearenotsaved.com/2021/11/27/the-problems-the-past-vs-the-problems-of-the-present/)
 - ["过去与现在的困境"](https://www.wearenotsaved.com/2021/11/27/the-problems-the-past-vs-the-problems-of-the-present/)
-- ["过去五十年的美国消费、收入与工资增长"](/doc/economics/2017-sacerdote.pdf "‘50 Years Of Growth In American Consumption, Income, And Wages’, Sacerdote 2017"), Sacerdote 2017
+- ["过去五十年的美国消费、收入与工资增长"](https://gwern.net/doc/economics/2017-sacerdote.pdf "‘50 Years Of Growth In American Consumption, Income, And Wages’, Sacerdote 2017"), Sacerdote 2017
 - ["什么是经济增长，为什么它如此重要？"](https://ourworldindata.org/what-is-economic-growth), Max Roser
 - [" Ideas of India: 文本工业的历史：Shruti Rajagopalan 和 Virginia Postrel 讨论纺织业发展与其在印度及全球经济中的意义"](https://www.mercatus.org/ideasofindia/ideas-india-history-textiles); ["一件衬衫过去到底要多少钱？"](https://www.bookandsword.com/2017/12/09/how-much-did-a-shirt-really-cost-in-the-middle-ages/)
 - ["A Plea for Culinary Modernism: 我们对“自然/手工”的执着并非历史真实；我们应要求更高品质的工业食品。"](https://jacobin.com/2015/05/slow-food-artisanal-natural-preservatives)

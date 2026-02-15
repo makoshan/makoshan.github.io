@@ -15,8 +15,10 @@
 
 构建（最直接的方式）:
 
+./scripts/build-production.sh
+
 ```bash
-cd /mnt/c/Users/ROG/.openclaw/workspace/projects/daily-intel/build
+cd /build
 cabal update
 cabal run hakyll -- build
 ```

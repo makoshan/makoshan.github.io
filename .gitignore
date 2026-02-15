@@ -53,12 +53,6 @@ desktop.ini
 
 # Build artifacts
 *.exe
-static/build/convert
-metadata/annotation/
-metadata/annotations/
-metadata/auto.gtx
-metadata/auto.yaml
-metadata/archive.hs
 
 # Build output
 _site_deploy/
@@ -67,5 +61,4 @@ _site_deploy/
 .claude/
 _layouts/
 _static/
-build
-blog
+build_site/

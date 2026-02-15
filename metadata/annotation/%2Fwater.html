@@ -1,0 +1,37 @@
+<p><a href="/water" id="link-bibliography-gwern-water" class="prefetch-not link-page link-annotated" data-filesize-bytes="0" data-filesize-percentage="90">“Self-Blinded Mineral Water Taste Test”</a></p>
+<p> <span class="author cite-author"><a href="/index#abstract" id="_i198YQWg" class="prefetch-not link-page" data-filesize-bytes="4146" data-filesize-percentage="91">Gwern</a></span></p>
+<p><span class="date cite-date" title="2017-02-15">2017</span></p>
+<p><span class="link-tags"><a href="/doc/nootropic/quantified/self/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to nootropic/quantified/self tag index">nootropic/quantified/self</a>, <a href="/doc/statistics/bayes/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to statistics/bayes tag index">Bayes</a>, <a href="/doc/statistics/decision/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to statistics/decision tag index">decision theory</a>, <a href="/doc/tea/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to tea tag index">tea</a></span></p>
+<blockquote>
+<figure>
+<img src="/doc/nootropic/quantified-self/gwern-tea-mineralwater-posteriors.jpg" title="Statistical chart: results of &lt;em&gt;n&lt;/em&gt; = 67 blinded randomized paired taste-testing comparisons of 8 mineral, distilled, and tap waters, using an adaptive racing algorithm to choose comparisons to maximize accuracy: final estimated posterior distributions of win probability in a comparison, showing the poor taste of Evian mineral water but likely similar tastes of most of the others. Final winner: Fiji Water." id="_Q9UO7stq" class="float-right page-thumbnail invert-not" width="0" height="0"></img>
+</figure>
+<div class="page-description-annotation">
+<p>Blind randomized taste-test of mineral/distilled/tap waters using Bayesian best-arm finding; no large differences in preference.</p>
+</div>
+<p>The kind of water used in <a href="/review/tea" id="gwern-review-tea" class="prefetch-not link-annotated link-page" data-filesize-bytes="327742" data-filesize-percentage="85" title="&#39;Tea Reviews&#39;, Gwern 2011">tea</a> is claimed to make a difference in the flavor: mineral water being better than tap water or distilled water. However, mineral water is vastly more expensive than tap water.</p>
+<p>To test the claim, I run a preliminary test of pure water to see if any water differences are detectable at all.</p>
+<p>I compared my tap water, 3 distilled water brands (Great Value, Nestle Pure Life, &amp; Poland Spring), 1 osmosis-purified brand (Aquafina), and 3 non-carbonated mineral water brands (Evian, Voss, &amp; Fiji) in a series of <em>n</em> = 67 blinded randomized comparisons of water flavor. The comparisons are modeled using a <a href="https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model" id="_NRofBr5v" class="link-live link-annotated-partial" data-url-iframe="https://en.m.wikipedia.org/wiki/Bradley%E2%80%93Terry_model#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bradley%E2%80%93Terry_model#bodyContent" title="Bradley–Terry model">Bradley-Terry competitive model</a> implemented in Stan; comparisons were chosen using an adaptive Bayesian best-arm sequential trial (racing) method designed to locate the best-tasting water in the minimum number of samples by preferentially comparing the best-known arm to potentially superior arms. Blinding &amp; randomization are achieved by using a Lazy Susan to physically randomize two identical (but marked in a hidden spot) cups of water.</p>
+<p>The <a href="/water#final-ranking" id="gwern-water--final-ranking" class="prefetch-not link-page">final posterior distribution of rankings</a> indicates that some differences between waters are likely to exist, with #1 being Fiji Water, but are small &amp; imprecisely estimated and of little practical concern.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/water#waters" id="toc-waters" class="prefetch-not link-page">Waters</a></li>
+<li><a href="/water#design" id="toc-design" class="prefetch-not link-page">Design</a>
+<ul>
+<li><a href="/water#best-arm-racing-algorithms" id="toc-best-arm-racing-algorithms" class="prefetch-not link-page">Best Arm Racing Algorithms</a>
+<ul>
+<li><a href="/water#dynamic-programming" id="toc-dynamic-programming" class="prefetch-not link-page">Dynamic Programming</a></li>
+</ul></li>
+<li><a href="/water#blinding" id="toc-blinding" class="prefetch-not link-page">Blinding</a></li>
+</ul></li>
+<li><a href="/water#implementation" id="toc-implementation" class="prefetch-not link-page">Implementation</a></li>
+<li><a href="/water#experiment" id="toc-experiment" class="prefetch-not link-page">Experiment</a></li>
+<li><a href="/water#analysis" id="toc-analysis" class="prefetch-not link-page">Analysis</a></li>
+<li><a href="/water#conclusion" id="toc-conclusion" class="prefetch-not link-page">Conclusion</a></li>
+<li><a href="/water#appendix" id="toc-appendix" class="prefetch-not link-page">Appendix</a>
+<ul>
+<li><a href="/water#daniel-weyandt" id="toc-daniel-weyandt" class="prefetch-not link-page">Daniel Weyandt</a></li>
+</ul></li>
+</ul>
+</div>
+</blockquote>

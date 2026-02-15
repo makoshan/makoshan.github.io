@@ -314,9 +314,9 @@ cat("\nResorting complete")
 
 ## 评分膨胀 (Rating Inflation)
 
-在像 [GoodReads](!W)、亚马逊、[MyAnimeList](https://myanimelist.net/)、[Uber/Lyft](https://www.youtube.com/watch?v=iu6eWy7BKKI "'吉格经济中的服务质量', Athey 等人 2018")、[自由职业市场](/doc/statistics/order/comparison/2022-filippas.pdf "'声誉膨胀', Filippas 等人 2018") 等评论网站上对数百种媒体进行评分时，分布往往会变得“结块”并集中在少数几个可能的最高评分上：如果是 10 分制，你通常不会看到很多低于 7 分的，或者如果是 5 星制，[那么任何](https://xkcd.com/325/) [低于 4 星的都表示极度厌恶](https://xkcd.com/1098/)，导致 J 形分布和互联网版本的 [分数膨胀](!W)。
+在像 [GoodReads](!W)、亚马逊、[MyAnimeList](https://myanimelist.net/)、[Uber/Lyft](https://www.youtube.com/watch?v=iu6eWy7BKKI "'吉格经济中的服务质量', Athey 等人 2018")、[自由职业市场](https://gwern.net/doc/statistics/order/comparison/2022-filippas.pdf "'声誉膨胀', Filippas 等人 2018") 等评论网站上对数百种媒体进行评分时，分布往往会变得“结块”并集中在少数几个可能的最高评分上：如果是 10 分制，你通常不会看到很多低于 7 分的，或者如果是 5 星制，[那么任何](https://xkcd.com/325/) [低于 4 星的都表示极度厌恶](https://xkcd.com/1098/)，导致 J 形分布和互联网版本的 [分数膨胀](!W)。
 经过足够长的时间和膨胀后，评级已经退化为无信息的二元评级量表，一些网站认识到了这一点，放弃了伪装，如 [YouTube](https://blog.youtube/news-and-events/five-stars-dominate-ratings/ "五星主导评级") 或 [Netflix 从 5 星切换到喜欢/不喜欢](https://variety.com/2017/digital/news/netflix-thumbs-vs-stars-1202010492/ "Netflix 用拇指向上和拇指向下取代星级评级")。
-现有评级中的自我选择和其他问题，如 [发表偏差](https://datacolada.org/72 "Metacritic 有一个（抽屉）问题") 会产生一些反常的后果：例如，获奖实际上可能 *降低* 一本书的 Good<!-- -->Reads 平均评分，因为该奖项导致更广泛、更不包容的受众去阅读这本书 ([Kovács & Sharkey 2014](/doc/culture/2014-kovacs.pdf "宣传的悖论：奖项如何负面影响质量评估"))。
+现有评级中的自我选择和其他问题，如 [发表偏差](https://datacolada.org/72 "Metacritic 有一个（抽屉）问题") 会产生一些反常的后果：例如，获奖实际上可能 *降低* 一本书的 Good<!-- -->Reads 平均评分，因为该奖项导致更广泛、更不包容的受众去阅读这本书 ([Kovács & Sharkey 2014](https://gwern.net/doc/culture/2014-kovacs.pdf "宣传的悖论：奖项如何负面影响质量评估"))。
 
 如果你想向其他人提供评分和评论并表明你的真实偏好，这是不幸的；当我在 [MALgraph](https://anime.plus/gwern/ratings,anime) 上点赞并看到我的一半以上的动漫评分都在 8--10 范围内时，那么，我的评分已经退化为大约 1--3 的量表（垃圾/好/很棒），这使得很难看出哪些真正值得一看，以及哪些我可能想回去重看。
 因此，评级所携带的信息比人们可能从量表中猜测的要少得多（10 分制在每个评级中有 3.32 位信息，但如果它实际上退化为 3 分制，那么信息量已减半至 1.58 位）。
@@ -406,17 +406,17 @@ cat("\nResorting complete")
 
 一些参考文献：
 
-- Slater 1961, ["Inconsistencies in a schedule of paired comparisons"](/doc/statistics/order/comparison/1961-slater.pdf)
+- Slater 1961, ["Inconsistencies in a schedule of paired comparisons"](https://gwern.net/doc/statistics/order/comparison/1961-slater.pdf)
 - David 1963, ["The method of paired comparisons"](https://apps.dtic.mil/sti/pdfs/ADA417190.pdf#page=15)
 - Adler et al 1994, ["Selection in the presence of noise: The design of playoff systems"](http://www-cgi.cs.cmu.edu/afs/cs.cmu.edu/Web/People/harchol/Papers/SODA94-ranking.pdf)
 - Feige et al 1994, ["Computing with noisy information"](https://cadmo.ethz.ch/education/lectures/HS18/SAADS/papers/computing_noisy_information.pdf)
 - Glickman 1999, ["Parameter estimation in large dynamic paired comparison experiments"](https://math.bu.edu/individual/mg/research/glicko.pdf)
-- Pelc 2002, ["Searching games with errors---fifty years of coping with liars"](/doc/statistics/order/comparison/2002-pelc.pdf)
+- Pelc 2002, ["Searching games with errors---fifty years of coping with liars"](https://gwern.net/doc/statistics/order/comparison/2002-pelc.pdf)
 - Chu & Ghahramani 2005, ["Preference learning with Gaussian processes"](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.437.20&rep=rep1&type=pdf)
-- Karp & Kleinberg 2007, ["Noisy binary search and its application"](/doc/statistics/order/comparison/2007-karp.pdf "‘Noisy binary search and its applications’, Karp & Kleinberg 2007")
+- Karp & Kleinberg 2007, ["Noisy binary search and its application"](https://gwern.net/doc/statistics/order/comparison/2007-karp.pdf "‘Noisy binary search and its applications’, Karp & Kleinberg 2007")
 - Radlinski & Joachims 2007, ["Active exploration for learning rankings from clickthrough data"](https://www.cs.cornell.edu/~tj/publications/radlinski_joachims_07a.pdf)
 - Kenyon-Mathieu & Schudy 2007, ["How to rank with few errors"](https://cs.brown.edu/research/pubs/theses/masters/2007/schudy.pdf)
-- Ailon et al 2008, ["Aggregating inconsistent information: ranking and clustering"](/doc/statistics/order/comparison/2008-ailon.pdf "'Aggregating inconsistent information: Ranking and clustering', Ailon et al 2008")
+- Ailon et al 2008, ["Aggregating inconsistent information: ranking and clustering"](https://gwern.net/doc/statistics/order/comparison/2008-ailon.pdf "'Aggregating inconsistent information: Ranking and clustering', Ailon et al 2008")
 - Braverman & Mossel 2008, ["Noisy sorting without resampling"](https://arxiv.org/abs/0707.1051 "'Noisy Sorting Without Resampling', Braverman & Mossel 2007") / Braverman & Mossel 2009, ["Sorting from noisy information"](https://arxiv.org/abs/0910.1191 "'Sorting from Noisy Information', Braverman & Mossel 2009")
 - Yue & Joachims 2011, ["Beat the mean bandit"](http://www.yisongyue.com/publications/icml2011_beat_the_mean.pdf)
 - Houlsby et al 2011, ["Bayesian Active Learning for Classification and Preference Learning"](https://arxiv.org/abs/1112.5745)
@@ -470,7 +470,7 @@ R 中至少有两个用于处理 Bradley-Terry 模型的包，[`BradleyTerry2`](
 由于 BF-2 本质上是一个频率主义库，它永远不会给我们这种答案；它在这方面所能提供的只有 _p_ 值——这是对我从未问过的问题的回答——以及标准误差，这 *某种程度上* 是不确定性的指标，比没有好，但仍然不完美。
 在我们对顺序试验方法的兴趣和我们对产生有意义的误差概率的兴趣（以及我自己对贝叶斯方法的偏好）之间，这激发了寻找贝叶斯实现的动力。
 
-Bradley-Terry 模型可以在 JAGS/Stan 中轻松拟合；两个较少和较详尽的例子分别在 [Jim Albert 的实现](https://web.archive.org/web/20160102165131/http://bayes.bgsu.edu/webinar.11.2012/R%20output/Rcode.part4.html "Part 4: Introduction to JAGS") 和 [Shawn E. Hallinan](/doc/statistics/order/comparison/2005-hallinan.pdf "Paired Comparison Models for Ranking National Soccer Teams")，以及 [`btstan`](https://github.com/nxskok/btstan/blob/master/R/btstan.R) 中。
+Bradley-Terry 模型可以在 JAGS/Stan 中轻松拟合；两个较少和较详尽的例子分别在 [Jim Albert 的实现](https://web.archive.org/web/20160102165131/http://bayes.bgsu.edu/webinar.11.2012/R%20output/Rcode.part4.html "Part 4: Introduction to JAGS") 和 [Shawn E. Hallinan](https://gwern.net/doc/statistics/order/comparison/2005-hallinan.pdf "Paired Comparison Models for Ranking National Soccer Teams")，以及 [`btstan`](https://github.com/nxskok/btstan/blob/master/R/btstan.R) 中。
 虽然它没有实现带有平局的扩展 B-T，但 Albert 的例子很容易修改，我们可以尝试像这样推断排名：
 
 ~~~{.R}
@@ -521,7 +521,7 @@ j1 <- autorun.jags(model=model1, monitor=c("a", "y"), data=data); j1
 这将产生合理的评分，但 MCMC 与快速迭代的最大似然算法相比不可避免地有开销，后者只估计参数——在示例数据上运行大约需要 1 秒。
 这种开销大部分来自 JAGS 的设置和解释模型，也许通过使用 Stan 可以减半（因为它缓存编译的模型），但无论如何，0.5 秒对于特别愉快的交互式使用来说太长了（从响应到下一个问题的总时间应 <0.1 秒以获得最佳用户体验），但如果我们可以获得更好的问题，这就值得付出吗？
 可能会有加速的方法；这涉及到估计潜在的正态/高斯变量，这通常有快速的实现。
-例如，如果发现贝叶斯推断可以通过解析解在 MCMC 之外完成，或者更有可能的是，通过拉普拉斯近似，例如在支持 [潜在高斯](/doc/statistics/order/comparison/2010-martino.pdf "'Case Studies in Bayesian Computation using INLA', Martino & Rue 2010") 的 [INLA](https://www.r-inla.org/) 中实现的，我不会感到惊讶。
+例如，如果发现贝叶斯推断可以通过解析解在 MCMC 之外完成，或者更有可能的是，通过拉普拉斯近似，例如在支持 [潜在高斯](https://gwern.net/doc/statistics/order/comparison/2010-martino.pdf "'Case Studies in Bayesian Computation using INLA', Martino & Rue 2010") 的 [INLA](https://www.r-inla.org/) 中实现的，我不会感到惊讶。
 最近，Stan 支持基于优化的 [梯度下降](!W) 贝叶斯推断（[变分推断](!W)），它提供了足够准确的后验，同时对于交互式使用来说足够快。
 
 #### 最优探索 (Optimal Exploration)

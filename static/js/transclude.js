@@ -1644,7 +1644,18 @@ Transclude = {
     },
 
     allIncludeLinksInContainer: (container) => {
-        return Array.from(container.querySelectorAll("a[class*='include']")).filter(link => Transclude.isIncludeLink(link));
+        let links = Array.from(container.querySelectorAll("a[class*='include']")).filter(link => Transclude.isIncludeLink(link));
+
+        const today = new Date().toISOString().slice(0, 10);
+        links.forEach(link => {
+            let url = new URL(link.href);
+            if (url.pathname == "/metadata/today-quote.html" || url.pathname == "/metadata/today-site.html") {
+                url.searchParams.set("d", today);
+                link.href = url.toString();
+            }
+        });
+
+        return links;
     },
 
 	isContentTransclude: (link) => {

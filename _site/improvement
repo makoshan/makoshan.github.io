@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-cn">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -876,23 +876,23 @@ div.poem span.caesura-mark {
   <meta name="citation_title" content="我的普通生活：1990 年以来的改善">
   <meta name="og:title" content="我的普通生活：1990 年以来的改善">
   <meta name="twitter:title" content="我的普通生活：1990 年以来的改善">
-  <meta name="generator" content="https://github.com/gwern/gwern.net/">
-  <meta name="creator" content="gwern.net">
+<meta name="generator" content="https://github.com/makoshan/makoshan.github.io/">
+<meta name="creator" content="Mako Shan">
   
-  <meta name="author" content="Gwern">
-  <meta name="citation_author" content="Gwern">
+  <meta name="author" content="Mako Shan">
+  <meta name="citation_author" content="Mako Shan">
   
-  <meta name="contact" content="https://gwern.net/me#contact">
-  <link rel="index" title="Gwern.net homepage" href="https://gwern.net/index">
-  <link href="https://gwern.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Gwern.net newsletters with additions and links.">
+  <meta name="contact" content="/me#contact">
+  <link rel="index" title="Mako Shan homepage" href="/index">
+  <link href="https://v2eth.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Mako Shan newsletters with additions and links.">
 
-  <meta name="twitter:creator" content="gwern">
-  <meta name="twitter:site" content="gwern.net">
-  <meta name="og:site" content="gwern.net">
+  <meta name="twitter:creator" content="makoshan">
+  <meta name="twitter:site" content="makoshan.github.io">
+  <meta name="og:site" content="makoshan.github.io">
   <meta name="og:type" content="article">
   <meta name="description" content="一份关于1990年代以来普通生活质量提升的清单，这些变化通常超越了“计算机”本身。">
   <meta name="og:description" content="一份关于1990年代以来普通生活质量提升的清单，这些变化通常超越了“计算机”本身。">
-  <meta property="og:image" content="https://gwern.net/doc/technology/2015-11-harvard-innovationlabs-bestreviews-evolutionofthedesk-vi.jpg">
+  <meta property="og:image" content="https://makoshan.github.iohttps://gwern.net/doc/technology/2015-11-harvard-innovationlabs-bestreviews-evolutionofthedesk-vi.jpg">
   <meta property="og:image:alt" content="《桌面进化》视频的照片，展示了许多办公室和家庭工具如何被家用电脑取代。">
   
   <meta property="og:image:height" content="530">
@@ -906,16 +906,16 @@ div.poem span.caesura-mark {
   <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
   <meta name="dcterms.rights" content="CC PD-0">
   <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
-  <link rel="canonical" href="https://gwern.net/improvement">
-  <meta name="citation_fulltext_html_url" content="https://gwern.net/improvement">
-  <meta name="og:url" content="https://gwern.net/improvement">
-  <link rel="alternate" type="text/markdown" href="https://gwern.net/improvement.md" title="Markdown source of ‘我的普通生活：1990 年以来的改善’ page"> <!-- Also available via Accept header -->
+  <link rel="canonical" href="https://makoshan.github.io/improvement">
+  <meta name="citation_fulltext_html_url" content="https://makoshan.github.io/improvement">
+  <meta name="og:url" content="https://makoshan.github.io/improvement">
+  <link rel="alternate" type="text/markdown" href="https://makoshan.github.io/improvement.md" title="Markdown source of ‘我的普通生活：1990 年以来的改善’ page"> <!-- Also available via Accept header -->
   <meta name="page-body-classes" content="page-improvement dropcaps-de-zs">
   <meta name="citation_fulltext_world_readable" content>
   <meta name="color-scheme" content="light dark">
 
   
-  <title>我的普通生活：1990 年以来的改善 · Gwern.net</title>
+  <title>我的普通生活：1990 年以来的改善 · Mako Shan</title>
   
 
   <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
@@ -961,8 +961,8 @@ div.poem span.caesura-mark {
         <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
         <a class="blog link-page link-annotated" href="/blog/index" title="Blog index: short posts">Blog</a>
         <a class="links link-page" href="/Links" title="Links page">Links</a>
-        <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
-        <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+        <a class="patreon" href="https://www.patreon.com/makoshan" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://v2eth.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
       </div>
     </nav>
 
@@ -1009,7 +1009,7 @@ div.poem span.caesura-mark {
 </blockquote>
 </div>
 <p><span class="marginnote">小事也很重要。</span> 进步通常被讨论为“改变世界的大事”：把第三世界国家从贫困中拯救出来、消灭婴儿死亡率<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>、或 <a href="https://en.wikipedia.org/wiki/List_of_years_in_science#2000s" id="_UD1WFaqA" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/List_of_years_in_science#bodyContent">科技</a> 与科学上的重大突破，例如发现引力波、打造世界级 AI、将艾滋病从致命病变为可治疗疾病、征服丙肝，甚至用基因工程 T 细胞治愈致命癌症。 但尽管这些巨大的成就既“炫”又关系生死死活，但它们通常离普通人生活较远，也不太像“日常”的东西（至少我希望如此）。 那么普通日常生活里的<em>小事</em>呢？</p>
-<p><img src="https://www.designboom.com/technology/evolution-desk-harvard-innovation-lab-09-30-2014/" title="Harvard Innovation Lab visualizes &#39;The Evolution Of The Desk&#39;" id="_eAqcj6tF" alt="1980年代的桌面"></img><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>(/doc/technology/2015-11-harvard-innovationlabs-bestreviews-evolutionofthedesk-vi.jpg “一张<span class="date-range">1980<sub><span title="1980 was 46 years ago.">46ya</span></sub></span>年代风格的桌面照片，由哈佛创新实验室于<span class="date-range">2015<sub><span title="2015 was 11 years ago.">11ya</span></sub></span>年制作，展示了‘办公桌进化’：桌面上摆满了后来被电脑软硬件与互联网取代的工具。画面里有白胶、保鲜膜、杂志、报纸、卷笔刀、传真机、车钥匙、剪刀、便签本、Macintosh、闹钟、牛津英语词典、百科全书、黄页、填字游戏、本子、电话、便签纸、钱包、相机、修正液、计算器、滚动电话本、地球仪、软木板等。”){: .float-right}</p>
+<p><img src="https://www.designboom.com/technology/evolution-desk-harvard-innovation-lab-09-30-2014/" title="Harvard Innovation Lab visualizes &#39;The Evolution Of The Desk&#39;" id="_eAqcj6tF" alt="1980年代的桌面"></img><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>(https://gwern.net/doc/technology/2015-11-harvard-innovationlabs-bestreviews-evolutionofthedesk-vi.jpg “一张<span class="date-range">1980<sub><span title="1980 was 46 years ago.">46ya</span></sub></span>年代风格的桌面照片，由哈佛创新实验室于<span class="date-range">2015<sub><span title="2015 was 11 years ago.">11ya</span></sub></span>年制作，展示了‘办公桌进化’：桌面上摆满了后来被电脑软硬件与互联网取代的工具。画面里有白胶、保鲜膜、杂志、报纸、卷笔刀、传真机、车钥匙、剪刀、便签本、Macintosh、闹钟、牛津英语词典、百科全书、黄页、填字游戏、本子、电话、便签纸、钱包、相机、修正液、计算器、滚动电话本、地球仪、软木板等。”){: .float-right}</p>
 <p><span class="marginnote">可见与不可见。</span> 回头看，生活中消失了很多麻烦，也冒出了很多好东西。 我记得以前我的桌子总是堆满字典和卷笔刀，但在智能手机和电脑共同作用下，如今大部分桌面空间都留给了猫。 普通生活本身也有很多麻烦，我一旦认真回忆便会记起不少。 （“过去是第三世界”<span>，但<span class="date-range">1990<sub><span title="1990 was 36 years ago.">36ya</span></sub></span>年代的美国也确实还有不少有待改善之处。）</span></p>
 <p>这类变化很少被提起，因为它们更多是在“去除烦恼”或“创造新可能”——比如“不会吵闹的狗”、以及“可见与不可见”，而且我们很容易忘记现状并非一直如此。 最难看见的，通常是你已经不再看见的东西。 当人们早已习惯于 <a href="https://en.wikipedia.org/wiki/June_McCarroll#Highway_marking" id="_VIn8lbEX" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/June_McCarroll#bodyContent">路面划线</a>、<a href="https://en.wikipedia.org/wiki/911_(emergency_telephone_number)#History" id="_sbE15iaA" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/911_(emergency_telephone_number)#bodyContent">“911”</a> 变成可拨打号码，或<a href="https://en.wikipedia.org/wiki/History_of_the_ambulance#Move_to_on-scene_care" id="_z7R7aaag" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/History_of_the_ambulance#bodyContent">救护车</a>不再只是给临终患者改造的灵车时，谁还会问为什么？ 我想把被遗忘的东西找出来是很有意思的。 我把范围限制在我自己最清晰的回忆（<span class="date-range">1990<sub><span title="1990 was 36 years ago.">36ya</span></sub></span>年代中期）时，仍能列出一份不算小的普通生活改善清单。<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <div class="horizontal-rule-nth-1">
@@ -1024,7 +1024,7 @@ div.poem span.caesura-mark {
 <ul>
 <li><p><strong>更便宜</strong>：电子产品价格持续下跌。</p>
 <p>现在网上总有人抱怨 RAM 或半导体短缺（每隔十年左右就会发生，这是行业“周期性繁荣衰退”导致的）时还要付近几年一样的价格，但长期趋势非常明显。</p>
-<p><img src="/doc/anime/2011-06-11-nichijou-episode10-part41-nagashisomeninthepark-ehhh.jpg" title="一个动画女生角色（安原あるな Haruna Annaka）震惊又困惑的表情截图；《日常》第一季第十集第41段（2011-06-11）" id="_5LimJaAc" alt="今天我对“会算力”的反应：“Ehhh‽”"></img>{: .float-right}</p>
+<p><img src="https://gwern.net/doc/anime/2011-06-11-nichijou-episode10-part41-nagashisomeninthepark-ehhh.jpg" title="一个动画女生角色（安原あるな Haruna Annaka）震惊又困惑的表情截图；《日常》第一季第十集第41段（2011-06-11）" id="_JgLcYleg" alt="今天我对“会算力”的反应：“Ehhh‽”"></img>{: .float-right}</p>
 <p>你现在能买到的顶级 VR 头显或智能手机，按实时通胀折算，价格低于任一款任天堂 NES/Famicom 在 <a href="https://en.wikipedia.org/wiki/History_of_the_Nintendo_Entertainment_System#Famicom_release_in_Japan_(1983%E2%80%931984)" id="_EOfDKTRt" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/History_of_the_Nintendo_Entertainment_System#bodyContent">1983年日本发布</a> 时的价格（<span class="inflation-adjusted" data-year-original="1983" data-amount-original="150" data-year-current="2026" data-amount-current="569.82" title="CPI inflation-adjusted US dollar: from nominal $150 in 1983 → real $569.82 in 2026">$569.82<span class="subsup"><sup>$150</sup><sub>1983</sub></span></span><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>，或者我们家那台美版“Action” <span class="inflation-adjusted" data-year-original="1988" data-amount-original="149.99" data-year-current="2026" data-amount-current="452.08" title="CPI inflation-adjusted US dollar: from nominal $149.99 in 1988 → real $452.08 in 2026">$452.08<span class="subsup"><sup>$149.99</sup><sub>1988</sub></span></span><span>），也低于<span class="date-range">1979<sub><span title="1979 was 47 years ago.">47ya</span></sub></span>年的索尼 Walkman（</span><span class="inflation-adjusted" data-year-original="1979" data-amount-original="150" data-year-current="2026" data-amount-current="598.74" title="CPI inflation-adjusted US dollar: from nominal $150 in 1979 → real $598.74 in 2026">$598.74<span class="subsup"><sup>$150</sup><sub>1979</sub></span></span><span>）。到了2020年，孩子们都无法想象要为一份新买的</span><a href="https://en.wikipedia.org/wiki/%E8%B6%85%E7%BA%A7%E9%A9%AC%E9%87%8C%E5%A5%A5%E5%85%84%E5%BC%9F3" id="_6X8Mx_e-" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E8%B6%85%E7%BA%A7%E9%A9%AC%E9%87%8C%E5%A5%A5%E5%85%84%E5%BC%9F3#bodyContent"><em>超级马里奥兄弟3</em></a>付出 <span class="inflation-adjusted" data-year-original="1990" data-amount-original="50" data-year-current="2026" data-amount-current="140.55" title="CPI inflation-adjusted US dollar: from nominal $50 in 1990 → real $140.55 in 2026">$140.55<span class="subsup"><sup>$50</sup><sub>1990</sub></span></span>。更不用说更便宜的 <a href="https://en.wikipedia.org/wiki/Centipede_(video_game)" id="_iD1WUZRZ" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Centipede_(video_game)#bodyContent"><em>Atari 2600 Centipede</em></a><span class="inflation-adjusted" data-year-original="1983" data-amount-original="34.99" data-year-current="2026" data-amount-current="132.92" title="CPI inflation-adjusted US dollar: from nominal $34.99 in 1983 → real $132.92 in 2026">$132.92<span class="subsup"><sup>$34.99</sup><sub>1983</sub></span></span>，远低于今天 Steam 大促时买同等级PC游戏的 <span class="inflation-adjusted" data-year-original="2019" data-amount-original="5" data-year-current="2026" data-amount-current="6.38" title="CPI inflation-adjusted US dollar: from nominal $5 in 2019 → real $6.38 in 2026">$6.38<span class="subsup"><sup>$5</sup><sub>2019</sub></span></span> 甚至许多热门游戏比如 <a href="https://en.wikipedia.org/wiki/Fortnite" id="_DIG7VGkc" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Fortnite#bodyContent"><em>Fortnite</em></a>甚至免费。 (当然，很多时候你还要再买配件、外设或软件，金额常常超过主机本身。)</p></li>
 <li><p><strong>互联网/人类遗传学/AI/VR</strong>已经真正变成现实</p>
 <p>想象一下，若在<span class="date-range">1989<sub><span title="1989 was 37 years ago.">37ya</span></sub></span>年应对 <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" id="_0RlZwkxO" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/COVID-19_pandemic#bodyContent">2019—2023年冠状病毒疫情</a>，会是什么体验。</p></li>
@@ -1102,7 +1102,7 @@ div.poem span.caesura-mark {
 <ul>
 <li><p>一个不太被强调的后果是<strong>出行民主化</strong>：如今“出国”（和去尼亚加拉并非同一概念）远没现在人想象得遥远。</p>
 <figure>
-<p><img src="/doc/technology/2018-01-statista-numberofvaliduspassportsdividedbytotalusadultpopulationaccordingtodepartmentofstate.png" id="_PZmZN7pL" alt="想拿到护照还得感谢图表。"></img></p>
+<p><img src="https://gwern.net/doc/technology/2018-01-statista-numberofvaliduspassportsdividedbytotalusadultpopulationaccordingtodepartmentofstate.png" id="_oKLMDHA2" alt="想拿到护照还得感谢图表。"></img></p>
 <figcaption><p>想拿到<a href="https://en.wikipedia.org/wiki/United_States_passport" id="_MMuRc7xg" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/United_States_passport#bodyContent">护照</a>还得感谢图表。<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a></p></figcaption>
 </figure>
 <p>比如我最爱的90年代电影《<a href="https://en.wikipedia.org/wiki/Home_Alone" id="_heAu_jA3" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Home_Alone#bodyContent"><em>Home Alone</em></a>》（后者）里小主角 Macaulay Culkin（4年后又演了《里奇·里奇》）需要全家飞巴黎时，其他家庭只能留守；电影里能发生的“全家富可敌国、都去巴黎度假”的情景，在当时反而是现实里少数家庭才有的奢侈。</p></li>
@@ -1199,7 +1199,7 @@ div.poem span.caesura-mark {
 <li><p><strong>讨论</strong>：Reddit: <a href="https://www.reddit.com/r/slatestarcodex/comments/b0h2hp/in_what_ways_has_life_in_the_western_world/" id="_Hav_uJ34" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">1</a>, <a href="https://www.reddit.com/r/slatestarcodex/comments/pe218h/what_productsthings_do_you_really_enjoy_that/" id="_WD3PwTeQ" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">2</a>; HN: <a href="https://news.ycombinator.com/item?id=22441865" id="_HLhadhzT" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">1</a>/<a href="https://news.ycombinator.com/item?id=28155072" id="_37FoP2DQ" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">2</a>/<a href="https://news.ycombinator.com/item?id=38689459" id="_zvQGnP_c" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">3</a>/<a href="https://news.ycombinator.com/item?id=43765332" id="_Pf4ZH6LC" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">4</a>, <a href="https://lobste.rs/s/9wfpsd/my_ordinary_life_improvements_since" id="_Bz59E_cH">Lobste.rs</a>, <a href="https://thetotebag.wordpress.com/2020/06/03/its-getting-better-all-the-time/" id="_WYjaTVqQ" class="link-live">The Totebag</a>, <a href="https://x.com/search?q=https%3A%2F%2Fwww.gwern.net%2FImprovements&amp;src=typed_query&amp;f=live" id="_AAyXMU6_" data-link-icon="twitter" data-link-icon-type="svg" data-link-icon-color="#1da1f2" data-href-mobile="https://nitter.net/search?q=https%3A%2F%2Fwww.gwern.net%2FImprovements&amp;src=typed_query&amp;f=live" title="Here’s to the cultivators of better apples, pasteurizers of guacamole, innovators of board games, vanquishers of radio static, process optimizers of distribution networks, and refiners of HVAC systems.">Twitter</a></p></li>
 <li><p><a href="https://www.wearenotsaved.com/2021/11/27/the-problems-the-past-vs-the-problems-of-the-present/" id="_4E35-wca">“The Problems the Past versus The Problems of the Present”</a></p></li>
 <li><p><a href="https://www.wearenotsaved.com/2021/11/27/the-problems-the-past-vs-the-problems-of-the-present/" id="_4E35-wca">“过去与现在的困境”</a></p></li>
-<li><p><a href="/doc/economics/2017-sacerdote.pdf" id="sacerdote-2017" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘50 Years Of Growth In American Consumption, Income, And Wages’, Sacerdote 2017">“过去五十年的美国消费、收入与工资增长”</a>, <span class="cite"><span class="cite-author">Sacerdote</span><span class="cite-date">2017</span></span></p></li>
+<li><p><a href="https://gwern.net/doc/economics/2017-sacerdote.pdf" id="sacerdote-2017" class="link-live link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘50 Years Of Growth In American Consumption, Income, And Wages’, Sacerdote 2017">“过去五十年的美国消费、收入与工资增长”</a>, <span class="cite"><span class="cite-author">Sacerdote</span><span class="cite-date">2017</span></span></p></li>
 <li><p><a href="https://ourworldindata.org/what-is-economic-growth" id="_DxIt7IBA" class="link-live" data-link-icon="OWID" data-link-icon-type="text,quad,mono">“什么是经济增长，为什么它如此重要？”</a>, Max Roser</p></li>
 <li><p><a href="https://www.mercatus.org/ideasofindia/ideas-india-history-textiles" id="_-xUnE5gF">” Ideas of India: 文本工业的历史：Shruti Rajagopalan 和 Virginia Postrel 讨论纺织业发展与其在印度及全球经济中的意义”</a>; <a href="https://www.bookandsword.com/2017/12/09/how-much-did-a-shirt-really-cost-in-the-middle-ages/" id="_eGG88hy9">“一件衬衫过去到底要多少钱？”</a></p></li>
 <li><p><a href="https://jacobin.com/2015/05/slow-food-artisanal-natural-preservatives" id="_vO6xpX-l">“A Plea for Culinary Modernism: 我们对“自然/手工”的执着并非历史真实；我们应要求更高品质的工业食品。”</a></p></li>
@@ -1231,11 +1231,11 @@ div.poem span.caesura-mark {
 </p>
 </div>
 <a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></li>
-<li id="fn5"><p>我预期随着更高级信号处理技术在电池寿命约束内变得可行并结合<a href="/doc/ai/nn/2016-wang-2.pdf" id="_a0M1fc-H" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="Deep Learning Reinvents the Hearing Aid: Finally, wearers of hearing aids can pick out a voice in a crowded room">深度学习</a>，它会更进一步。同时我也很在意：许多人机型较便宜的 Apple <a href="https://en.wikipedia.org/wiki/AirPods" id="_ElIeM5hV" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/AirPods#bodyContent">AirPods</a> 就能做 iPhone 联合处理（得益于专用 ASIC 与大电池），这让我想起下一代助听器/耳机（甚至年轻人）是否会比自然听力更好？<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>我预期随着更高级信号处理技术在电池寿命约束内变得可行并结合<a href="https://gwern.net/doc/ai/nn/2016-wang-2.pdf" id="_IrnFZnai" class="link-live link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="Deep Learning Reinvents the Hearing Aid: Finally, wearers of hearing aids can pick out a voice in a crowded room">深度学习</a>，它会更进一步。同时我也很在意：许多人机型较便宜的 Apple <a href="https://en.wikipedia.org/wiki/AirPods" id="_ElIeM5hV" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/AirPods#bodyContent">AirPods</a> 就能做 iPhone 联合处理（得益于专用 ASIC 与大电池），这让我想起下一代助听器/耳机（甚至年轻人）是否会比自然听力更好？<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>大家常挑剔 GPS 拿到“错误路线”，但我想它是否长期提升了道路安全？似乎 GPS 必定帮助降低事故率：我还记得有人争论地图路线，或在即将错过转弯时做出极端掉头；亦或开车时心不在焉地问“我现在在哪？”<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p><span id="subtitles"></span> 字幕有许多有趣的二阶效应。尽管它本来只是为了听障群体，也似乎带来了：</p>
 <ul>
-<li><p>帮助<strong>英语识字率</strong>提升（有研究显示不同国家之间存在差异，例如 [Micola 等人 2018 的研究](/doc/culture/2018-micola.pdf “‘TV or not TV? The impact of subtitling on English skills’, <span class="cite"><span class="cite-author-plural" title="et al">Micola</span><span class="cite-joiner"> et al </span><span class="cite-date">2018</span></span>)，和“配音 vs 字幕”分布相关）；我采访过的说英语的斯堪的纳维亚人都表示，从英语配音视频里读取到的本地字幕对其帮助巨大；印度、韩国、日本等文化输出方也大概率类似）</p></li>
+<li><p>帮助<strong>英语识字率</strong>提升（有研究显示不同国家之间存在差异，例如 [Micola 等人 2018 的研究](https://gwern.net/doc/culture/2018-micola.pdf “‘TV or not TV? The impact of subtitling on English skills’, <span class="cite"><span class="cite-author-plural" title="et al">Micola</span><span class="cite-joiner"> et al </span><span class="cite-date">2018</span></span>)，和“配音 vs 字幕”分布相关）；我采访过的说英语的斯堪的纳维亚人都表示，从英语配音视频里读取到的本地字幕对其帮助巨大；印度、韩国、日本等文化输出方也大概率类似）</p></li>
 <li><p>改变了<strong>观看电视文化</strong>：如今18–24岁群体多数（<a href="https://yougov.co.uk/topics/entertainment/survey-results/daily/2023/02/24/9a34f/3" id="_zbtYylCr">You<span class="cite"><span class="cite-author">Gov</span><span class="cite-date">2023</span></span> 调查</a>）使用字幕，这可能部分源于且推动了节目表达方式向更“听不懂式”方向发展——制作者知道观众可以或已经习惯通过字幕理解，于是进一步促成这类风格。</p>
 <p>它也让“<strong>分心/背景听</strong>”成为更常态：观众可在公共场合或和他人共处时静音观看，电视新闻频道如 <a href="https://en.wikipedia.org/wiki/CNN" id="_D98iNJOT" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/CNN#bodyContent">CNN</a> 和社交视频如 <a href="https://en.wikipedia.org/wiki/TikTok" id="_25WINAB3" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/TikTok#bodyContent">TikTok</a> 是典型。</p></li>
 <li><p>通过持续扩大的字幕语料库推动了 <a href="https://en.wikipedia.org/wiki/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB" id="_Ga2VzoZW" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB#bodyContent">语音识别</a>/<a href="https://en.wikipedia.org/wiki/%E5%90%88%E6%88%90" id="_iulApjWP" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%90%88%E6%88%90#bodyContent">合成</a> 的 AI 进步（许多来自盗版网站），这些语料能与音频对齐。</p>
@@ -1282,7 +1282,7 @@ div.poem span.caesura-mark {
     </nav>
     <div class="markdownBody" id="footer">
       <p id="footer-anonymous-feedback">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Gwern Branwen">[ Send Anonymous Feedback ]</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Mako Shan">[ Send Anonymous Feedback ]</a>
       </p>
       <div id="x-of-the-day" class="dark-mode-invert">
         <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
@@ -1295,7 +1295,7 @@ div.poem span.caesura-mark {
     <!-- FOOTER-END -->
     
     <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
-      <a rel="home me contents" title="Gwern.net homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
+      <a rel="home me contents" title="Mako Shan homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
     </div>
 
   </main>

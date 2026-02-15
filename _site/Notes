@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-cn">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -876,24 +876,24 @@ div.poem span.caesura-mark {
   <meta name="citation_title" content="Notes">
   <meta name="og:title" content="Notes">
   <meta name="twitter:title" content="Notes">
-  <meta name="generator" content="https://github.com/gwern/gwern.net/">
-  <meta name="creator" content="gwern.net">
+<meta name="generator" content="https://github.com/makoshan/makoshan.github.io/">
+<meta name="creator" content="Mako Shan">
   
-  <meta name="author" content="Gwern">
-  <meta name="citation_author" content="Gwern">
+  <meta name="author" content="Mako Shan">
+  <meta name="citation_author" content="Mako Shan">
   
-  <meta name="contact" content="https://gwern.net/me#contact">
-  <link rel="index" title="Gwern.net homepage" href="https://gwern.net/index">
-  <link href="https://gwern.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Gwern.net newsletters with additions and links.">
+  <meta name="contact" content="/me#contact">
+  <link rel="index" title="Mako Shan homepage" href="/index">
+  <link href="https://v2eth.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Mako Shan newsletters with additions and links.">
 
-  <meta name="twitter:creator" content="gwern">
-  <meta name="twitter:site" content="gwern.net">
-  <meta name="og:site" content="gwern.net">
+  <meta name="twitter:creator" content="makoshan">
+  <meta name="twitter:site" content="makoshan.github.io">
+  <meta name="og:site" content="makoshan.github.io">
   <meta name="og:type" content="article">
   <meta name="description" content="杂项想法、记忆、原始文章、沉思等。">
   <meta name="og:description" content="杂项想法、记忆、原始文章、沉思等。">
-  <meta property="og:image" content="https://gwern.net/static/img/logo/logo-whitebg-large-border.png">
-  <meta property="og:image:alt" content="Default thumbnail text: the Gwern.net site logo, a logotype of a large blackletter fraktur capital letter &#39;G&#39; on a white background.">
+  <meta property="og:image" content="https://makoshan.github.io/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail: site logo.">
   <meta property="og:image:height" content="530">
   <meta property="og:image:width" content="441">
   <meta property="gwern:thumbnail:css-classes" content>
@@ -905,16 +905,16 @@ div.poem span.caesura-mark {
   <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
   <meta name="dcterms.rights" content="CC PD-0">
   <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
-  <link rel="canonical" href="https://gwern.net/Notes">
-  <meta name="citation_fulltext_html_url" content="https://gwern.net/Notes">
-  <meta name="og:url" content="https://gwern.net/Notes">
-  <link rel="alternate" type="text/markdown" href="https://gwern.net/Notes.md" title="Markdown source of ‘Notes’ page"> <!-- Also available via Accept header -->
+  <link rel="canonical" href="https://makoshan.github.io/Notes">
+  <meta name="citation_fulltext_html_url" content="https://makoshan.github.io/Notes">
+  <meta name="og:url" content="https://makoshan.github.io/Notes">
+  <link rel="alternate" type="text/markdown" href="https://makoshan.github.io/Notes.md" title="Markdown source of ‘Notes’ page"> <!-- Also available via Accept header -->
   <meta name="page-body-classes" content="page-notes dropcaps-de-zs">
   <meta name="citation_fulltext_world_readable" content>
   <meta name="color-scheme" content="light dark">
 
   
-  <title>Notes · Gwern.net</title>
+  <title>Notes · Mako Shan</title>
   
 
   <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
@@ -960,8 +960,8 @@ div.poem span.caesura-mark {
         <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
         <a class="blog link-page link-annotated" href="/blog/index" title="Blog index: short posts">Blog</a>
         <a class="links link-page" href="/Links" title="Links page">Links</a>
-        <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
-        <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+        <a class="patreon" href="https://www.patreon.com/makoshan" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://v2eth.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
       </div>
     </nav>
 
@@ -2945,7 +2945,7 @@ Luke: That paragraph and its footnote is a rough draft from Anna on the Laplacia
     </nav>
     <div class="markdownBody" id="footer">
       <p id="footer-anonymous-feedback">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Gwern Branwen">[ Send Anonymous Feedback ]</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Mako Shan">[ Send Anonymous Feedback ]</a>
       </p>
       <div id="x-of-the-day" class="dark-mode-invert">
         <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
@@ -2958,7 +2958,7 @@ Luke: That paragraph and its footnote is a rough draft from Anna on the Laplacia
     <!-- FOOTER-END -->
     
     <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
-      <a rel="home me contents" title="Gwern.net homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
+      <a rel="home me contents" title="Mako Shan homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
     </div>
 
   </main>
