@@ -18741,7 +18741,7 @@ addContentInjectHandler("rewriteDropcaps", (eventInfo) => {
     });
 
     //  A letter (capital or lowercase), optionally preceded by an opening quotation mark.
-    let initialRegexp = new RegExp(/^(\s*[“‘]?)?([a-zA-Z])/);
+    let initialRegexp = new RegExp(/^(\s*[“”‘’„"']?)?([a-zA-Z\u4E00-\u9FFF\u3400-\u4DBF\u3041-\u309F\u30A0-\u30FF\uAC00-\uD7AF])/);
 
     processContainerNowAndAfterBlockLayout(eventInfo.container, (container) => {
         container.querySelectorAll(GW.dropcaps.dropcapBlockSelector).forEach(dropcapBlock => {
