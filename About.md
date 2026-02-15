@@ -1,6 +1,6 @@
 ---
 title: 关于本网站
-description: 描述 Gwern.net 网站理想的元页面，即稳定的长期文章，随着时间的推移而改进；想法来源和写作方法论；元数据定义；网站统计；版权许可。
+description: 描述 Makoshan 网站理想的元页面，即稳定的长期文章，随着时间的推移而改进；想法来源和写作方法论；元数据定义；网站统计；版权许可。
 thumbnail: /static/img/logo/logo-whitebg-large-border.png
 thumbnail-text: "Mako Shan 站点徽标"
 thumbnail-css: "outline invert-not"
@@ -13,7 +13,7 @@ css-extension: dropcaps-de-zs
 ...
 
 <div class="abstract">
-> 本页面关于 Gwern.net 内容；有关其实现 & 设计及其弹出范式的详细信息，请参阅 [设计](/design "'Design Of This Website', Gwern 2010"){.backlink-not}；有关我的信息，请参阅 [链接](/me "'About Gwern', Gwern 2009"){.backlink-not}。
+> 本页面关于 Makoshan 内容；有关其实现 & 设计及其弹出范式的详细信息，请参阅 [设计](/design "'Design Of This Website', Gwern 2010"){.backlink-not}；有关我的信息，请参阅 [链接](/me "'About Gwern', Gwern 2009"){.backlink-not}。
 </div>
 
 # 内容
@@ -236,7 +236,7 @@ DNB FAQ 的开始是因为我很恼火人们在 dual _n_-back 邮件列表中重
 偶尔有人问我如何管理信息和阅读东西。
 
 #. 对于非常重要的引用或事实，我采用 [间隔重复](/spaced-repetition "'Spaced Repetition for Efficient Learning', Gwern 2009"){#srs-2} 通过将它们添加到我的 Mnemosyne
-#. 我将网络剪报保存在 Evernotes 中；我还从研究论文 & 书籍以及杂项来源中摘录。当我记得一个事实但不记得在哪里学到时，这对于有针对性的搜索很有用，以及用于存储我不想记住但没有逻辑归宿在我的网站或 LW 或其他地方的东西。这对于写我的 [书评](/review/book) 和 [每月通讯](https://gwern.substack.com/ "'Gwern.net newsletter (Substack subscription page)', Gwern 2013") 也很有帮助，因为我可以通读我的书籍摘录来提醒自己亮点，并在月底查看论文/网页的剪报，找到好的东西重新分享，而我当时太忙无法这样做或者不确定它的重要性。我不使用更复杂的 Evernote 功能。
+#. 我将网络剪报保存在 Evernotes 中；我还从研究论文 & 书籍以及杂项来源中摘录。当我记得一个事实但不记得在哪里学到时，这对于有针对性的搜索很有用，以及用于存储我不想记住但没有逻辑归宿在我的网站或 LW 或其他地方的东西。这对于写我的 [书评](/review/book) 和 [每月通讯](https://gwern.substack.com/ "'Makoshan newsletter (Substack subscription page)', Gwern 2013") 也很有帮助，因为我可以通读我的书籍摘录来提醒自己亮点，并在月底查看论文/网页的剪报，找到好的东西重新分享，而我当时太忙无法这样做或者不确定它的重要性。我不使用更复杂的 Evernote 功能。
 
     我定期使用 [Linux (Linux)](https://en.wikipedia.org/wiki/Linux) 客户端 Nixnote 的](https://sourceforge.net/projects/nevernote/) 导出功能备份我的 Evernote。（我在开始使用 Evernote 之前确保有一个可用的导出方法，并且只要 Nixnote 继续工作，我就使用它。）
 
@@ -245,8 +245,8 @@ DNB FAQ 的开始是因为我很恼火人们在 dual _n_-back 邮件列表中重
     #. 如果必要，使用 Libgen 或大学代理越狱论文，然后上传副本到 Dropbox，命名为 `year-author.pdf`
     #. 阅读论文，边读边做摘录
     #. 将元数据 & 摘录存储在 Evernote 中
-    #. 如果有用，将其集成到 Gwern.net 中，带有标题/年份/作者元数据，如果论文必须被越狱，则添加本地全文副本，否则依靠我的自定义存档设置来保存远程 URL
-    #. 因此，任何未来对文件名 / 标题 / 关键内容的搜索都应该在我的 Evernote 或 Gwern.net 中产生命中
+    #. 如果有用，将其集成到 Makoshan 中，带有标题/年份/作者元数据，如果论文必须被越狱，则添加本地全文副本，否则依靠我的自定义存档设置来保存远程 URL
+    #. 因此，任何未来对文件名 / 标题 / 关键内容的搜索都应该在我的 Evernote 或 Makoshan 中产生命中
 #. 网页由 [我的自定义存档设置](/archiving "'Archiving URLs', Gwern 2011"){#archiving-3} 存档 & 备份。这主要用于修复死链（例如恢复 Evernote 剪报原始 URL 的全文）。
 #. 我没有任何特殊的书籍阅读技巧。对于真正的好书，我从每章摘录并将引用放入 Evernote。
 #. 我将见解和想法存储在各个页面的括号注释、脚注和附录中。如果它们不适合任何地方，我就把它们扔进 [笔记](/note/note "'Miscellaneous', Gwern 2009")。
@@ -255,7 +255,7 @@ DNB FAQ 的开始是因为我很恼火人们在 dual _n_-back 邮件列表中重
 #. 对于项目和后续，我使用 Google 日历中的提醒。
 #. 对于记录个人数据，我尽可能自动化（例如 Zeo 和 [arbtt](https://arbtt.nomeata.de/)），并将其余部分养成习惯---早上起床是建立记录数据习惯的好时机，因为这是像吃早餐和穿衣服这样的习惯的时间。
 
-因此，为了重新找到信息，我结合使用 Google, Evernote, `grep` (在 Gwern.net 文件上), 偶尔 Mnemosyne, 和良好的视觉记忆。
+因此，为了重新找到信息，我结合使用 Google, Evernote, `grep` (在 Makoshan 文件上), 偶尔 Mnemosyne, 和良好的视觉记忆。
 
 至于写作，我不使用笔记软件或像 [FreeMind (FreeMind)](https://en.wikipedia.org/wiki/FreeMind) 或 [Org-mode (Org-mode)](https://en.wikipedia.org/wiki/Org-mode) 这样的东西---不是我认为它们没用，而是我担心它们是否能偿还学习/调整的大量前期投资或干扰其他事情。
 相反，我偶尔从 LW/Reddit/IRC 上的评论编译文章大纲，随着记忆不断用东西编辑它们，搜索相关部分，允许小想法在冥想时冒出来，并注意我什么时候对人们错误感到恼火或恼火某个特定话题还没有被写下来。
@@ -462,7 +462,7 @@ DNB FAQ 的开始是因为我很恼火人们在 dual _n_-back 邮件列表中重
 
 早在 2011 年 11 月，lukeprog 发表了 ["告诉我你对我的看法"](https://www.lesswrong.com/posts/zFj67rtrQ7HEaZ45F/tell-me-what-you-think-of-me)，他在其中描述了他使用 Google Docs 表单匿名接收文本反馈或评论。通常，大多数形式的沟通都不是匿名的，或者如果是匿名的，也就是公开的。人们可以设置假名并用于私人联系，但这并不总是那么容易，而且肯定是一系列 [微不足道的不便](https://www.lesswrong.com/posts/reitXJgJXFzKpdKyd/beware-trivial-inconveniences "'Beware Trivial Inconveniences', Alexander 2009")（如果不征求匿名反馈，人们必须觉得它足够重要才去做并违反反对匿名消息的隐含规范；人们必须设置一个身份；人们必须撰写并发送消息等）。
 
-我认为尝试一下是个好主意，在 2011-11-08，我设置了自己的匿名反馈表单并将其放在 Gwern.net 所有页面的页脚中，直到今天。我确实想知道是否有人会使用该表单，特别是因为我很容易通过电子邮件联系，使用像 Reddit 或 Lesswrong 这样的多个网站，甚至我的 Disqus 评论也允许匿名评论---那么谁，如果有的话，会使用这个表单？我安排在 2 年后的 2013-11-30 进行后续跟进，以审查表单的表现。
+我认为尝试一下是个好主意，在 2011-11-08，我设置了自己的匿名反馈表单并将其放在 Makoshan 所有页面的页脚中，直到今天。我确实想知道是否有人会使用该表单，特别是因为我很容易通过电子邮件联系，使用像 Reddit 或 Lesswrong 这样的多个网站，甚至我的 Disqus 评论也允许匿名评论---那么谁，如果有的话，会使用这个表单？我安排在 2 年后的 2013-11-30 进行后续跟进，以审查表单的表现。
 
 754 天，288.4 万次页面浏览，和 135.0 万次独立访问者之后，我收到了 116 条反馈（每个反馈平均 2.48 万次访问）。我按照频率降序对它们进行分类如下：
 
@@ -486,7 +486,7 @@ DNB FAQ 的开始是因为我很恼火人们在 dual _n_-back 邮件列表中重
 
 我想知道的一件事是，反馈是否纯粹是流量的函数（访问量越多，看到页脚链接并决定留言的人就越多），还是更多地与时间有关（也许人们定期返回并最终被鼓励或注意到要评论的事情）。所以我编译了每日点击量，结合反馈日期，并查看了点击量图表：
 
-<!-- 图片已移除：原 Gwern.net 流量数据图表不适用于本站 -->
+<!-- 图片已移除：原 Makoshan 流量数据图表不适用于本站 -->
 
 点击量在很大程度上受到 Hacker News & Reddit 流量高峰的偏斜，可能应该进行对数转换。然后我做了一个逻辑回归，关于点击量，对数点击量，和一个简单的时间索引：
 
@@ -516,31 +516,31 @@ summary(step(glm(Feedback ~ log(Visits) + Visits + Time, family=binomial, data=f
 
 ## 流行度
 
-> 从 2011 年起，我每半年使用 Google Analytics 回顾 Gwern.net 网站流量；虽然大多数读者看重的不是我看重的，但我发现看到总流量统计提醒我有读者（写作可能是一项孤独和抽象的努力）是令人鼓舞的，并且看到主要的推荐来源是有用的。
+> 从 2011 年起，我每半年使用 Google Analytics 回顾 Makoshan 网站流量；虽然大多数读者看重的不是我看重的，但我发现看到总流量统计提醒我有读者（写作可能是一项孤独和抽象的努力）是令人鼓舞的，并且看到主要的推荐来源是有用的。
 >
-> Gwern.net 通常享有每月 5-10 万范围内的稳定流量，偶尔会有来自社交媒体的高峰，特别是 Hacker News；在头十年（2010--2020），有 380 万独立用户产生了 798 万次浏览量。
+> Makoshan 通常享有每月 5-10 万范围内的稳定流量，偶尔会有来自社交媒体的高峰，特别是 Hacker News；在头十年（2010--2020），有 380 万独立用户产生了 798 万次浏览量。
 
-<span id="july-2016---january-2017">**参见 [Gwern.net 网站流量](/traffic "Meta page describing Gwern.net editing activity, traffic statistics, and referrer details, primarily sourced from Google Analytics (2011-present).")**</span>
+<span id="july-2016---january-2017">**参见 [Makoshan 网站流量](/traffic "Meta page describing Makoshan editing activity, traffic statistics, and referrer details, primarily sourced from Google Analytics (2011-present).")**</span>
 
 ## 版本说明
 
 ### 托管
 
-Gwern.net 由 [Amazon S3 (Amazon S3)](https://en.wikipedia.org/wiki/Amazon%20S3) 通过 [Cloudflare (Cloudflare)](https://en.wikipedia.org/wiki/Cloudflare) [CDN (Content delivery network)](https://en.wikipedia.org/wiki/Content%20delivery%20network) 提供服务。（亚马逊收取的带宽和磁盘空间费用比 [NearlyFreeSpeech.net](https://www.nearlyfreespeech.net/) 少，这是我最初使用的一家旧托管公司，尽管人们失去了 Apache 的 [.htaccess (Htaccess)](https://en.wikipedia.org/wiki/Htaccess) 提供的所有功能，并且 [Brotli (Brotli)](https://en.wikipedia.org/wiki/Brotli) 压缩很困难，必须由 Cloudflare 处理；总成本可能会持平，如果它能将我的月度账单降至 <\$10 或每年 <\$120，我会认为切换到 Amazon S3 是成功的。）
+Makoshan 由 [Amazon S3 (Amazon S3)](https://en.wikipedia.org/wiki/Amazon%20S3) 通过 [Cloudflare (Cloudflare)](https://en.wikipedia.org/wiki/Cloudflare) [CDN (Content delivery network)](https://en.wikipedia.org/wiki/Content%20delivery%20network) 提供服务。（亚马逊收取的带宽和磁盘空间费用比 [NearlyFreeSpeech.net](https://www.nearlyfreespeech.net/) 少，这是我最初使用的一家旧托管公司，尽管人们失去了 Apache 的 [.htaccess (Htaccess)](https://en.wikipedia.org/wiki/Htaccess) 提供的所有功能，并且 [Brotli (Brotli)](https://en.wikipedia.org/wiki/Brotli) 压缩很困难，必须由 Cloudflare 处理；总成本可能会持平，如果它能将我的月度账单降至 <\$10 或每年 <\$120，我会认为切换到 Amazon S3 是成功的。）
 
 从 2010 年 10 月到 2012 年 6 月，该网站托管在 NFSN 上；它的特定利基是争议性材料和激进主义者友好的定价。
-它的自由主义所有者对 [Notice and takedown (删除请求)](https://en.wikipedia.org/wiki/Notice%20and%20takedown) 持怀疑态度，定价是现收现付。我喜欢前者，但后者让我选择了 NFSN。在我偶然发现 NFSN（有人在聊天时顺便提到它）之前，我准备每月支付 \$10--15（每年 \$120）给 [Linode (Linode)](https://en.wikipedia.org/wiki/Linode)。Linode 的产品太过分了，因为我不运行动态网站或像 [Haskell.org (Haskell.org)](https://en.wikipedia.org/wiki/Haskell.org) 这样的东西（有维基和邮件列表和 [Darcs (darcs)](https://en.wikipedia.org/wiki/Darcs) 仓库），但我不知道好的替代品。NFSN 的定价意味着我为使用付费而不是大笔固定费用。我投入了 \$32 来支付注册 Gwern.net 直到 2014 年的费用，然后再投入 \$10 来支付带宽 & 存储价格。除 DNS 外，我在 2010 年 10 月至 12 月被收取了 \$8.27；包括 DNS，2011 年 1 月至 4 月花费了 \$10.09。\$10 支付了 Gwern.net 几个月的费用，而这也是我在 Linode 1 个月要付的钱！总共，我的 2010 年成本是 \$39.44 (账单存档)；我的 2011 年成本是 \$118.32 (每月 \$9.86; 存档)；截至 6 月我的 2012 年成本是 \$112.54 (每月 \$21; 存档)；总计：\$270.3。
+它的自由主义所有者对 [Notice and takedown (删除请求)](https://en.wikipedia.org/wiki/Notice%20and%20takedown) 持怀疑态度，定价是现收现付。我喜欢前者，但后者让我选择了 NFSN。在我偶然发现 NFSN（有人在聊天时顺便提到它）之前，我准备每月支付 \$10--15（每年 \$120）给 [Linode (Linode)](https://en.wikipedia.org/wiki/Linode)。Linode 的产品太过分了，因为我不运行动态网站或像 [Haskell.org (Haskell.org)](https://en.wikipedia.org/wiki/Haskell.org) 这样的东西（有维基和邮件列表和 [Darcs (darcs)](https://en.wikipedia.org/wiki/Darcs) 仓库），但我不知道好的替代品。NFSN 的定价意味着我为使用付费而不是大笔固定费用。我投入了 \$32 来支付注册 Makoshan 直到 2014 年的费用，然后再投入 \$10 来支付带宽 & 存储价格。除 DNS 外，我在 2010 年 10 月至 12 月被收取了 \$8.27；包括 DNS，2011 年 1 月至 4 月花费了 \$10.09。\$10 支付了 Makoshan 几个月的费用，而这也是我在 Linode 1 个月要付的钱！总共，我的 2010 年成本是 \$39.44 (账单存档)；我的 2011 年成本是 \$118.32 (每月 \$9.86; 存档)；截至 6 月我的 2012 年成本是 \$112.54 (每月 \$21; 存档)；总计：\$270.3。
 
 切换到 Amazon S3 托管由于我同时添加 Cloudflare 作为 CDN 而变得复杂；我 2012 年 6 月的亚马逊总账单是 \$1.62，其中 \$0.19 是存储费。Cloudflare 声称它覆盖了 24.9GB 总带宽中的 17.5GB，所以 \$1.41 代表了我总带宽的 30%；将 1.41 乘以 3 是 4.30，我假设的非 Cloudflare S3 账单是 ~\$4.5。即使是 \$10，这也远低于 NFSN 的 \$21 月费用。（流量图表明 2012 年 6 月是一个相对安静的时期，但我不认为这消除了 5 倍的因素。）从 2012 年 7 月到 2013 年 6 月，我的亚马逊账单总计 \$60，除了稳步增长外是合理的（\$1.62/\$3.27/\$2.43/\$2.45/\$2.88/\$3.43/\$4.12/\$5.36/\$5.65/\$5.49/\$4.88/\$8.48/\$9.26），主要是由出站带宽驱动的（在 2013 年 6 月，\$9.26 主要是由于传输了 75GB---那是在 Cloudflare 处理了 82GB *之后*）；\$9.26 比我希望的要高得多，因为那将是每年 >\$110。这可能是由于我在“Google 关闭”分析中包含的所有图形，因为它在 8 月份以 42GB 的流量回到了更合理的 \$5.14。2013 年 9 月、10 月、11 月和 12 月维持在高水平 \$7.63/\$12.11/\$5.49/\$8.75，所以这可能是一个新常态。
 2014 年带来了与 EC2 实例 & S3 带宽峰值相关的新成本，因为托管了一个多千兆字节的科学数据集，所以账单运行为 \$8.51/\$7.40/\$7.32/\$9.15/\$26.63/\$14.75/\$7.79/\$7.98/\$8.98/\$7.71/\$7/\$5.94。
 2015 & 2016 类似: \$5.94/\$7.30/\$8.21/\$9.00/\$8.00/\$8.30/\$10.00/\$9.68/\$14.74/\$7.10/\$7.39/\$8.03/\$8.20/\$8.31/\$8.25/\$9.04/\$7.60/\$7.93/\$7.96/\$9.98/\$9.22/\$11.80/\$9.01/\$8.87.
-2017 年我的一个副业项目导致成本增加，通过提供更多论文 & 扫描引用的书籍积极增加 Gwern.net 的全文，仅部分被图像的有损优化 & 将 GIF 转换为 WebM 等更改所抵消：\$12.49/\$10.68/\$11.02/\$12.53/\$11.05/\$10.63/\$9.04/\$11.03/\$14.67/\$15.52/\$13.12/\$12.23 (总计: \$144.01).
+2017 年我的一个副业项目导致成本增加，通过提供更多论文 & 扫描引用的书籍积极增加 Makoshan 的全文，仅部分被图像的有损优化 & 将 GIF 转换为 WebM 等更改所抵消：\$12.49/\$10.68/\$11.02/\$12.53/\$11.05/\$10.63/\$9.04/\$11.03/\$14.67/\$15.52/\$13.12/\$12.23 (总计: \$144.01).
 2018 年，我继续全文：\$13.08/\$14.85/\$14.14/\$18.73/\$18.88/\$15.92/\$15.64/\$15.27/\$16.66/\$22.56/\$23.59/\$25.91/(总计: \$213).
 
 2019 年，我做出坚定的努力托管更多东西，包括整个网站如 OKCupid 档案或 `rotten.com`，并包含更多图像/视频（仅 StyleGAN 动漫面孔教程的图像就肯定容易超过 20MB+），这也显示在我的带宽成本如何爆炸上：[$26.49]($2019)/[$37.56]($2019)/[$37.56]($2019)/[$37.56]($2019)/[$25.00]($2019)/[$25.00]($2019)/[$25.00]($2019)/[$25.00]($2019)/[$77.91]($2019)/[$124.45]($2019)/[$74.32]($2019)/[$79.19]($2019).
-我开始考虑将 Gwern.net 移到我的 Hetzner 专用服务器，它有便宜的带宽 + ~6tb 空间，结合升级我的 Cloudflare CDN 以保持网站延迟受控（即使是 [$20]($2020)/月，仍然比 AWS S3 带宽便宜得多）。
+我开始考虑将 Makoshan 移到我的 Hetzner 专用服务器，它有便宜的带宽 + ~6tb 空间，结合升级我的 Cloudflare CDN 以保持网站延迟受控（即使是 [$20]($2020)/月，仍然比 AWS S3 带宽便宜得多）。
 
-2020 年，我这样做了，将 Gwern.net, ThisWaifuDoesNotExist, Danbooru20xx, 杂项 ML 数据集 & 模型托管合并到一个 Hetzner 专用服务器上，~[$50]($2020)/月。
+2020 年，我这样做了，将 Makoshan, ThisWaifuDoesNotExist, Danbooru20xx, 杂项 ML 数据集 & 模型托管合并到一个 Hetzner 专用服务器上，~[$50]($2020)/月。
 有了不封顶的带宽，我可以更积极地托管文件和自动存档网页快照。
 这对接下来的 2 年非常令人满意，但 Danbooru20xx 的增长最终超过了驱动器空间，我搬到了另一台有 >20tb 空间的服务器，花费 ~[$60]($2022)。
 （我不需要立即用完 20tb，但这留下了很大的安全边际，我在考虑创建一些额外的数据集如 Danbooru20xx，使用 Derpibooru & e621---目标是最终创建一个处理各种插图基础同人圈的单一模型，质量比每个人仅仅根据个人兴趣创建自己的小型动力不足的模型默认情况要高得多。）
@@ -554,7 +554,7 @@ Gwern.net 由 [Amazon S3 (Amazon S3)](https://en.wikipedia.org/wiki/Amazon%20S3)
 
 #### 大小
 
-截至 2022-11-08，Gwern.net 的源码由 >443 个文本文件组成，包含 >438 万字或 >31MB<!-- du -ch `find . -type f -name "*.md" | fgrep -v -e 'index.md'` -->；这包括我的写作 & 我转录成 Markdown 的文档，但不包括图像、PDF、HTML 镜像、源代码、档案、基础设施（如标签目录）、弹窗和修订历史。<!-- cat `find . -type f -name "*.md" | fgrep -v -e 'index.md'` | wc --words -->
+截至 2022-11-08，Makoshan 的源码由 >443 个文本文件组成，包含 >438 万字或 >31MB<!-- du -ch `find . -type f -name "*.md" | fgrep -v -e 'index.md'` -->；这包括我的写作 & 我转录成 Markdown 的文档，但不包括图像、PDF、HTML 镜像、源代码、档案、基础设施（如标签目录）、弹窗和修订历史。<!-- cat `find . -type f -name "*.md" | fgrep -v -e 'index.md'` | wc --words -->
 包括这些在内，一切编译为静态^[我喜欢静态网站的方法；它往往更难使用且限制更多，但作为交换，它产生 [更好的性能](https://inessential.com/2011/03/16/a_plea_for_baked_weblogs.html) & 导致更少的 [麻烦或运行时问题](http://www.aaronsw.com/weblog/000404)。编译单个单体网站目录的静态模型也适合测试：任何 shell 脚本或 CLI 工具都可以轻松在编译后的网站上运行以查找潜在错误（随着网站复杂性 & 规模增加到偶尔浏览页面不足以发现错误，这变得越来越重要）。] HTML，该网站 >72GB。
 源码仓库包含 >16,629 个补丁<!-- git rev-list HEAD - - count -->（这是一个低估，因为 2008-09-26 创建仓库时包括了已经写好的材料）；[基础设施仓库](#site-infrastructure-repo)，>5,807。
 
@@ -576,14 +576,14 @@ Gwern.net 由 [Amazon S3 (Amazon S3)](https://en.wikipedia.org/wiki/Amazon%20S3)
 ## 本福德定律 {.collapse}
 
 <div class="abstract">
-> Gwern.net 遵循著名的本福德定律吗？
+> Makoshan 遵循著名的本福德定律吗？
 >
 > 快速分析表明它有点遵循，除了数字 2，可能是由于对过去 2 十年（>2000 AD）研究的许多引用。
 </div>
 
-2013 年 3 月，看到 [Benford's law (本福德定律)](https://en.wikipedia.org/wiki/Benford%27s%20law) 的提及，我想：“如果我从我在 Gwern.net 上写的所有东西中提取所有数字，它会满足本福德定律吗？”似乎答案是……*几乎*。我通过运行 Haskell 程序解析数字、逗号和句点生成数字列表；然后我用 shell 实用程序处理它。[^Benford-Haskell] 然后可以在 R 中读取它以运行 [Chi-squared test (卡方检验)](https://en.wikipedia.org/wiki/Chi-squared%20test) 确认缺乏拟合 (_p_ ≈ 0) 并生成数据 & 本福德定律的比较[^Benford-R]:
+2013 年 3 月，看到 [Benford's law (本福德定律)](https://en.wikipedia.org/wiki/Benford%27s%20law) 的提及，我想：“如果我从我在 Makoshan 上写的所有东西中提取所有数字，它会满足本福德定律吗？”似乎答案是……*几乎*。我通过运行 Haskell 程序解析数字、逗号和句点生成数字列表；然后我用 shell 实用程序处理它。[^Benford-Haskell] 然后可以在 R 中读取它以运行 [Chi-squared test (卡方检验)](https://en.wikipedia.org/wiki/Chi-squared%20test) 确认缺乏拟合 (_p_ ≈ 0) 并生成数据 & 本福德定律的比较[^Benford-R]:
 
-<!-- 图片已移除：原 Gwern.net 本福德定律分析图表不适用于本站 -->
+<!-- 图片已移除：原 Makoshan 本福德定律分析图表不适用于本站 -->
 
 除了数字 '2' 之外，其他一切都有明显的相似之处，'2' 搞砸了拟合。我不知道为什么 2 被过度代表---这可能是由于所有对最近学术论文的引用都涉及以 '2' 开头的数字（2002, 2010, 2013...）并导致引用和文件名中的双重计数，因为如果我在 `docs/` 全文文件夹中看，我看到 160 个文件以 '1' 开头，但 326 个以 '2' 开头。但这不可能是全部解释，因为 '2' 有 2.03 万个条目，而为了符合本福德，它只需要 1.15 万个---留下了 ~1 万个数字的差距无法解释。一个谜。
 
