@@ -63,20 +63,10 @@ index.generated.page
 
 # Build output
 _site_deploy/
-_site/
-
-# Haskell build artifacts
-build/dist-newstyle/
-
-# Newsletter specific - keep sources, ignore temp
-newsletter/*.html
-newsletter/temp/
-
-# Keep these
-!newsletter/*.page
-!newsletter/*.json
-!newsletter/*.md
 
 # Claude Code
 .claude/
+_layouts/
+_static/
+build
 blog

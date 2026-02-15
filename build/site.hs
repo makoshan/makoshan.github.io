@@ -57,7 +57,7 @@ import Test (testAll)
 import qualified Config.Misc as C (cd, currentYear, todayDayStringUnsafe, isOlderThan, isNewWithinNDays, pageMetadataFieldsMandatory, pageTitleMaxWords, pageDescriptionMaxLength, pageDescriptionMinLength, yamlValidStatuses, yamlValidConfidences, yamlValidCssExtensions, root)
 import Metadata.Date (dateRangeDuration, isDate, isDatePossibleGwernnet)
 import LinkID ()
-import Blog (writeOutBlogEntries)
+-- import Blog (writeOutBlogEntries)
 
 -- imports just to write 'symlinkFileCompiler':
 import Hakyll.Core.Writable (Writable(write))
@@ -93,8 +93,8 @@ main =
 
     sizes <- annotationSizeDB meta am :: IO SizeDB
 
-    printGreen ("Writing blog entries…" :: String)
-    writeOutBlogEntries meta
+    -- printGreen ("Writing blog entries…" :: String)
+    -- writeOutBlogEntries meta
 
     -- NOTE: reset the `getArgs` to pass through just the first argument (ie. "build", converting it back to `hakyll build`), as `hakyll` internally calls `getArgs` and will fatally error out if we don't delete our own arguments:
     withArgs [head args] $ hakyll $ do
@@ -110,7 +110,7 @@ main =
              -- Only compile a small, known set of Markdown sources. This repo has many
              -- non-page .md files (notes, skills, docs) without required YAML metadata.
              let targetsMd =
-                  fromGlob "blog/**/*.md"
+                  -- fromGlob "blog/**/*.md"
                   .||. fromGlob "_posts/**/*.md"
                   .||. fromGlob "posts/**/*.md"
                   .||. fromGlob "about.md"
