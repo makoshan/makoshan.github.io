@@ -334,7 +334,7 @@ write.csv(touhou, file="2013-vgmdb-touhou.csv", row.names=FALSE)
 ## 个人下载
 ### 4chan /jp/ C83 主题帖
 
-一群松散的 [4chan](!Wikipedia) 用户在 [/jp/](https://boards.4chan.org/jp/) 子版块每次 Comiket 期间合作上传和分发该次 Comiket 发布的同人漫画、游戏和音乐；有些由 Comiket 参加者上传，有些从 [Comic Toranoana](!Wikipedia) 等经销商购买，许多文件则从日本 P2P 文件共享网络如 [Winny](!Wikipedia)/[Share](!Wikipedia "Share (P2P)")/[Perfect Dark](!Wikipedia "Perfect Dark (P2P)") 收集而来。我从 [/r/TouhouMusic](http://www.reddit.com/r/TOUHOUMUSIC/comments/15pp33/c83_resource_thread/) 的 C83 主题帖（主要来自 4chan 链接）和博客 [All Doujin Music](http://alldoujinmusic.wordpress.com) 中汇编了约 400 个文件的列表，并在 2013 年 1 月至 3 月间逐步下载。去除死链后，剩余 400-500 个文件。其中很多不是音乐，甚至与东方无关，因此我手动筛选专辑，寻找东方同人作品的特征（致谢 ZUN、封面中的东方角色、我认出的东方主题等）；当我不确定时，宁可排除。[最终合集](/docs/touhou/2013-c83-downloads.txt)产出 3503 个文件（大致均分：1776 个东方 vs 1728 个"其他"），其中有 953 个东方音乐文件。
+一群松散的 [4chan](!Wikipedia) 用户在 [/jp/](https://boards.4chan.org/jp/) 子版块每次 Comiket 期间合作上传和分发该次 Comiket 发布的同人漫画、游戏和音乐；有些由 Comiket 参加者上传，有些从 [Comic Toranoana](!Wikipedia) 等经销商购买，许多文件则从日本 P2P 文件共享网络如 [Winny](!Wikipedia)/[Share](!Wikipedia "Share (P2P)")/[Perfect Dark](!Wikipedia "Perfect Dark (P2P)") 收集而来。我从 [/r/TouhouMusic](http://www.reddit.com/r/TOUHOUMUSIC/comments/15pp33/c83_resource_thread/) 的 C83 主题帖（主要来自 4chan 链接）和博客 [All Doujin Music](http://alldoujinmusic.wordpress.com) 中汇编了约 400 个文件的列表，并在 2013 年 1 月至 3 月间逐步下载。去除死链后，剩余 400-500 个文件。其中很多不是音乐，甚至与东方无关，因此我手动筛选专辑，寻找东方同人作品的特征（致谢 ZUN、封面中的东方角色、我认出的东方主题等）；当我不确定时，宁可排除。[最终合集](https://gwern.net/docs/touhou/2013-c83-downloads.txt)产出 3503 个文件（大致均分：1776 个东方 vs 1728 个"其他"），其中有 953 个东方音乐文件。
 
 ~~~{.R}
 # exiftool -extension ogg -json -forcePrint -Title -Year -Album -Artist -Duration -Genre -TrackNumber -Directory

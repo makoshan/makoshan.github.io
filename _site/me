@@ -1028,7 +1028,8 @@ div.poem span.caesura-mark {
 <li><a href="#cabal-化" id="toc-cabal-化">Cabal 化</a></li>
 </ul></li>
 </ul></li>
-</ul></div> <div id="markdownBody" class="markdownBody"><p>本页面关于我；有关 Gwern.net 的信息，请参阅 <a href="/about" id="gwern-about" class="prefetch-not link-annotated link-page" title="&#39;About This Website&#39;, Gwern 2010">关于本网站</a>。</p>
+</ul></div> <div id="markdownBody" class="markdownBody"><p class="dropcap-de-zs"><span class="dropcap">本</span>页面关于我；有关 Gwern.net 的信息，请参阅
+<a href="/about" id="gwern-about" class="prefetch-not link-annotated link-page" title="&#39;About This Website&#39;, Gwern 2010">关于本网站</a>。</p>
 <section id="个人" class="level1">
 <h1><a href="#个人" title="Link to section: § &#39;个人&#39;">个人</a></h1>
 <div class="epigraph">

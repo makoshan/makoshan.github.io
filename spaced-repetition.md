@@ -1,8 +1,8 @@
 ---
-title: Spaced Repetition for Efficient Learning
-description: "Efficient memorization using the spacing effect: literature review of widespread applicability, tips on use & what it's good for."
+title: 间隔重复：高效学习与记忆
+description: "利用间隔效应实现高效记忆：回顾其广泛适用性、使用技巧，以及它擅长解决什么问题。"
 thumbnail: https://gwern.net/doc/psychology/spaced-repetition/2013-memotrainerrr.png
-thumbnail-text: "Conceptual graph comparing massed review and spaced repetition review effects on the probability of remembering a fact: massed works better initially, but the memory steadily decays away, while spaced repetition restores it regularly, locking it in place."
+thumbnail-text: "概念图对比集中复习与间隔重复对记忆概率的影响：集中复习在短期内更强，但记忆会稳定衰减；而间隔重复会定期将其拉回并逐渐锁定。"
 thumbnail-css: "outline"
 created: 2009-03-11
 modified: 2019-05-17
@@ -13,65 +13,67 @@ css-extension: dropcaps-kanzlei
 ...
 
 <div class="abstract">
-> Spaced repetition is a centuries-old psychological technique for efficient memorization & practice of skills where instead of attempting to memorize by 'cramming', memorization can be done far more efficiently by instead spacing out each review, with increasing durations as one learns the item, with the scheduling done by software.
+> 间隔重复（spaced repetition）是一种有数百年历史的心理学技巧，用于高效记忆与技能练习：它不依赖“临时抱佛脚/突击背诵”，而是把每次复习分散开，并随着掌握程度的提高逐步延长间隔，通常由软件来安排复习日程。
 >
-> Because of the greater efficiency of its slow but steady approach, spaced repetition can scale to memorizing hundreds of thousands of items (while crammed items are almost immediately forgotten) and is especially useful for foreign languages & medical studies. (When there's still too many to ever feasibly memorize, see [my "anti-spaced repetition"](/anti-spaced-repetition "‘Anti-Spaced Repetition for Serendipity’, Gwern 2014") proposal.)
+> 因为这种“慢但稳”的方法效率更高，间隔重复可以扩展到记忆几十万条信息（而突击记住的内容几乎会立刻遗忘），对外语学习与医学生尤其有用。（如果信息量仍然大到不可能全部记住，可参阅我提出的[“反间隔重复”](/anti-spaced-repetition "‘Anti-Spaced Repetition for Serendipity’, Gwern 2014")方案。）
 >
-> I review what this technique is useful for, some of the large research literature on it and the testing effect (up to ~2013, primarily), the available software tools and use patterns, and miscellaneous ideas & observations on it.
+> 本文回顾：这种技术适合解决什么问题；关于它与“测验效应”（testing effect）的研究文献（主要截至 ~2013）；现有软件与使用模式；以及一些杂想与观察。
 </div>
 
-One of the most fruitful areas of computing is making up for human frailties. They do arithmetic perfectly because we can't^[<span id="foref1">"One does not learn computing by using a hand calculator, but one can forget arithmetic."</span> ---[Perlis 1982](#perlis-1982)]. They remember terabytes because we'd forget. They make the best calendars, because they always check what there is to do today.
-Even if we do not remember exactly, merely remembering a reference can be just as good, like the point of reading a manual or textbook all the way through: it is not to remember everything that is in it for later but to later remember *that* something is in it (and skimming them, you learn the right words to search for when you actually need to know more about a particular topic).
+计算领域最富成果的方向之一，是弥补人类的脆弱。它们能把算术做得完美，因为我们做不到^[<span id="foref1">“人们并不是靠手摇计算器来学习计算机，但人们会忘掉算术。”</span>——[Perlis 1982](#perlis-1982)]。它们能记住 TB 级数据，因为我们会忘。它们是最好的日历，因为它们永远会去检查“今天有什么事要做”。
+即便我们不记得细节，只要记得一个“出处/参考”也几乎同样有用——这就像把一本手册或教材从头读到尾的意义：并不是为了将来能背出书里的一切，而是为了将来记得 *有这么个东西*（而在浏览时，你还会学到合适的关键词，等真的需要深入某个主题时就知道该搜什么）。
 
-We use any number of such [neuroprosthetics](!W)[^my-neuroprosthetics], but there are always more to be discovered. They're worth looking for because they are so valuable: a shovel is much more effective than your hand, but a [power shovel](!W) is orders of magnitude better than both - even if it requires training and expertise to use.
+我们已经在使用许多这样的[神经假肢](!W)[^my-neuroprosthetics]，但总还有更多可以被发现。它们值得投入，因为价值极高：铲子当然比徒手高效得多，但[电铲](!W)又比两者高出好几个数量级——即使它需要训练与技巧才能驾驭。
 
-[^my-neuroprosthetics]: Listing other neuroprosthetics is hard. It's an interesting idea, but as proponents of [externalism](!W) like [Andy Clark](!W) have found, it's easier to feel that externalism is meaningful than to nail down a clear definition which separates a neuroprosthetic or part of one's mind from a random tool you like or find useful. Consider whether a pencil and paper a neuroprosthetic: clearly it is not for a child learning to write, who must carefully compose the words in his mind and put them down one after another, but it is not so clear for an adult who has been writing all his life and can doodle or write down thoughts without thinking about them and may even be surprised at what they happened to write.
+[^my-neuroprosthetics]: 要把其他神经假肢都列出来并不容易。这个想法很有趣，但正如[外在论](!W)的支持者（如 [Andy Clark](!W)）所发现的：你很容易“感觉外在论很有意义”，但要给出一个清晰定义，把“神经假肢/心智的一部分”和“你恰好喜欢或觉得有用的随机工具”区分开来就很难。比如，纸笔算不算神经假肢？对于一个刚学写字的孩子来说显然不是——他必须在脑中谨慎组织词句，再一笔一画写下来；但对一个写了一辈子字的成年人来说就不那么清楚了：他可以不经思考地涂鸦或记下念头，甚至会惊讶于自己“居然写出了那样的话”。
 
-    I like this definition: "a neuroprosthetic is anything whose results you use without further thought". So in the classic example, when Otto needs to go somewhere, he never thinks "I am an amnesiac who stores locations in my notepad, and I must look up the location" - he just looks up the location. A good heuristic would be anything whose destruction leaves one feeling lost, slow, stupid, or ignorant.
+    我喜欢这样一个定义：“神经假肢是任何一种工具——它的结果会被你在无需进一步思考的情况下直接使用”。因此在经典例子里，当 Otto 要去某个地方时，他不会想“我是个把地点记在笔记本里的失忆者，我现在必须去查地点”——他只会直接查。一个不错的经验法则是：凡是被摧毁后会让人感到迷失、迟钝、愚笨或无知的东西，大概都算。
 
-    By this standard, I can think of only a few tools I use without noticeable thought:
+    按这个标准，我能想到的、真正会在不加思索的情况下使用其结果的工具其实并不多：
 
-    - keybindings such as window manager shortcuts, in particular shortcuts for Google searches; on occasion, [XMonad's](!W "XMonad") Prompt gets inscrutably wedged, locking it. When this happens, I *have* to restart X because I Google everything and the keybinding is *so* engrained that not using it is unbearable. It would be like trying to write with your weak hand.
-    - [Google Calendar](!W) and [PredictionBook](/prediction-market#predictionbook-nights "‘Prediction Markets § 1001 PredictionBook Nights’, Gwern 2009"): it is incredible how many followups or reminders or regularly happening tasks I can put into Google Calendar or PB. I have outsourced many habits or thoughts to them, and I no longer think of it as anything special. If either were gone, I would feel frightened - what events were passing, what beliefs falsified, what opportunities opening up (or closing!) that I had suddenly become ignorant of?
-    - [Evernote](!W), for a similar reason; many of my memories have ceased to be things like "octopuses see too fast to watch TV and so only HDTV or [UHDTV](!W) works for them; I read this in _Orion Magazine_" and become things like "octopus TV Evernote", and if I want to know what it was about octopuses & TV, well, I'll have to look it up in Evernote. Mnemosyne plays a similar role for me, but there the memories are much clearer on their own because of the spaced repetition.
-    - my website Gwern.net; I've had to say many times that I don't know what I think about something, but whatever that is, it's on my website. (A more extreme form of the Evernote/Mnemosyne neuroprosthetic.) A commenter once wrote that reading Gwern.net felt like he was crawling around in my head. He was more right than he realized.
+    - 各种快捷键，比如窗口管理器的快捷键，尤其是 Google 搜索快捷键；有时 [XMonad](!W "XMonad") 的 Prompt 会莫名其妙地卡死并锁住输入。遇到这种情况我 *必须* 重启 X，因为我几乎什么都要 Google，而这个快捷键已经 *深到骨子里*，不用它会让我难以忍受——就像试图用非惯用手写字一样。
+    - [Google Calendar](!W) 与 [PredictionBook](/prediction-market#predictionbook-nights "‘Prediction Markets § 1001 PredictionBook Nights’, Gwern 2009")：我能把多少跟进事项、提醒、周期性任务扔进 GC 或 PB 里，这简直不可思议。我把许多习惯与念头外包给它们，久而久之甚至不觉得这有什么特别；但只要其中一个消失，我就会感到恐惧——有哪些事件正在发生、哪些信念已被证伪、哪些机会正在打开（或关闭！）而我突然一无所知？
+    - [Evernote](!W) 也是类似原因：我的许多“记忆”不再是“章鱼看得太快所以只有 HDTV 或 [UHDTV](!W) 适合它们；我在 _Orion Magazine_ 里读到的”这样的完整句子，而变成了“章鱼 电视 Evernote”这种索引；如果我想知道章鱼与电视到底有什么关系，那么我就得去 Evernote 里查。Mnemosyne 对我也起着类似作用，但在那里面，很多记忆因为间隔重复而更“自带清晰度”。
+    - 我的网站 Gwern.net；我经常不得不说“我不知道我对某件事到底怎么想”，但无论我怎么想，它都在我网站上。（这是 Evernote/Mnemosyne 神经假肢更极端的形态。）有位评论者曾写道，读 Gwern.net 像是在我脑子里爬来爬去；他比自己意识到的更接近事实。
 
-# Spacing effect
+# 间隔效应 {#spacing-effect}
 
 <div class="epigraph poem">
-> You can get a good deal from rehearsal,  \
->  If it just has the proper dispersal.  \
->  You would just be an ass,  \
->  To do it _en masse_,  \
->  Your remembering would turn out much worsal.
+> 排练能带来很多收获， \
+> 只要它分散得恰到好处。 \
+> 若要一口气全做完， \
+> 你可真是个傻瓜， \
+> 记忆只会更糟糕。
 >
-> Ulrich Neisser^[as quoted in ["Retrieval practice and the maintenance of knowledge"](https://gwern.net/doc/psychology/spaced-repetition/1988-bjork.pdf), Bjork 1988]
+> Ulrich Neisser^[引自 ["Retrieval practice and the maintenance of knowledge"](https://gwern.net/doc/psychology/spaced-repetition/1988-bjork.pdf)，Bjork 1988]
 </div>
 
-My current favorite prosthesis is the class of software that exploits the [spacing effect](!W), a centuries-old observation in cognitive psychology, to achieve results in studying or memorization much better than conventional student techniques; it is, alas, obscure[^efficiency].
+我目前最喜欢的假肢，是一类利用[间隔效应](!W)的软件。间隔效应是认知心理学里一个古老的观察：它能让学习与记忆取得远胜传统学生技巧的效果；遗憾的是，它仍然相当冷门[^efficiency]。
 
-[^efficiency]: From ["Close the Book. Recall. Write It Down: That old study method still works, researchers say. So why don't professors preach it?"](https://web.archive.org/web/20090430093950/http://chronicle.com/free/v55/i34/34a00101.htm); _[The Chronicle of Higher Education](!W)_
+[^efficiency]: 引自 ["Close the Book. Recall. Write It Down: That old study method still works, researchers say. So why don't professors preach it?"](https://web.archive.org/web/20090430093950/http://chronicle.com/free/v55/i34/34a00101.htm)；_[The Chronicle of Higher Education](!W)_
 
-    > Two psychology journals have recently published papers showing that this strategy works, the latest findings from a decades-old body of research. When students study on their own, "active recall" - recitation, for instance, or flashcards and other self-quizzing - is the most effective way to inscribe something in long-term memory. Yet many college instructors are only dimly familiar with that research...
+    > 两本心理学期刊最近发表的论文表明，这种策略确实有效——这是一个持续数十年的研究传统中的最新发现。当学生自学时，“主动回忆”（比如复述、抽认卡，以及各种自测）是把知识刻进长期记忆里最有效的方法。然而，许多大学教师对这些研究也只是略知一二……
 
-    From ["The Spacing Effect: A Case Study in the Failure to Apply the Results of Psychological Research"](https://andrewvs.blogs.com/usu/files/the_spacing_effect.pdf) (Dempster 1988), whose title alone summarizes the situation (see also Kelley 2007, [_Making Minds: What's Wrong with Education - and What Should We Do About It?_](https://www.amazon.com/Making-Minds-Whats-Education-Should/dp/0415414113/)):
+    引自 ["The Spacing Effect: A Case Study in the Failure to Apply the Results of Psychological Research"](https://andrewvs.blogs.com/usu/files/the_spacing_effect.pdf)（Dempster 1988），光看标题就足以概括现状（另见 Kelley 2007，[_Making Minds: What's Wrong with Education - and What Should We Do About It?_](https://www.amazon.com/Making-Minds-Whats-Education-Should/dp/0415414113/)）：
 
-     > Second, it [the spacing effect] is remarkably robust. In many cases, two spaced presentations are about twice as effective as two massed presentations (eg. Hintzman, 1974; [Melton, 1970](https://gwern.net/doc/psychology/spaced-repetition/1970-melton.pdf "The Situation with Respect to the Spacing of Repetitions and Memory")), and the difference between them increases as the frequency of repetition increases (Underwood, 1970)...
+     > 第二，间隔效应异常稳健。在许多情形中，两次“有间隔”的呈现，大约相当于两次“集中”的呈现效果的两倍（如 Hintzman 1974；[Melton 1970](https://gwern.net/doc/psychology/spaced-repetition/1970-melton.pdf "The Situation with Respect to the Spacing of Repetitions and Memory")），并且两者差距会随着重复次数的增加而进一步拉大（Underwood 1970）……
      >
-     > The spacing effect was known as early as 1885 when Ebbinghaus published the results of his seminal work on memory. With himself as the subject, Ebbinghaus found that for a single 12-syllable series, 68 immediately successive repetitions had the effect of making possible an errorless recital after seven additional repetitions on the following day. However, the same effect was achieved by only 38 distributed repetitions spread over 3 days. On the basis of this and other related findings, Ebbinghaus concluded that 'with any considerable number of repetitions a suitable distribution of them over a space of time is decidedly more advantageous than the massing of them at a single time' (Ebbinghaus, 1885/1913. p. 89)
+     > 间隔效应早在 1885 年就已为人所知，当时 Ebbinghaus 发表了他关于记忆的奠基性研究结果。以自己为被试，Ebbinghaus 发现：对于一个 12 音节的序列，如果立刻连续重复 68 次，可以在第二天再追加 7 次后做到无误背诵；但同样的效果，只需要把 38 次重复分散到 3 天里就能达到。基于这一点和其他相关发现，Ebbinghaus 总结道：“当重复次数达到一定规模时，把重复合理地分布在一段时间里，显然比把重复堆在同一时刻更有优势”（Ebbinghaus 1885/1913，p. 89）。
 
-     Son & Simon 2012:
+     Son & Simon 2012：
 
-    > Furthermore, even after acknowledging the benefits of spacing, changing teaching practices proved to be enormously difficult. Delaney et al 2010 wrote: "Anecdotally, high school teachers and college professors seem to teach in a linear fashion without repetition and give three or four noncumulative exams." (p. 130). Focusing on the math domain, where one might expect a very easy-to-review-and-to-space strategy, Rohrer (2009) points out that mathematics textbooks usually present topics in a non-spaced, non-mixed fashion. Even much earlier, Vash (1989) had written: "Education policy setters know perfectly well that [spaced practice] works better [than massed practice]. They don't care. It isn't tidy. It doesn't let teachers teach a unit and dust off their hands quickly with a nice sense of 'Well, that's done.'" (p. 1547).
+    > 更进一步：即便已经承认了间隔的好处，改变教学实践仍然极其困难。Delaney 等人 2010 写道：“据轶事所见，高中教师与大学教授似乎常以线性方式教学，缺乏重复，并给出三四次互不累积的考试。”（p. 130）聚焦数学领域——按理说数学应当很容易实施“可复习、可间隔”的策略——Rohrer（2009）指出数学教材通常以不间隔、也不混合的方式呈现主题。甚至更早，Vash（1989）就写道：“教育政策制定者非常清楚，[间隔练习] 比 [集中练习] 更有效。他们不在乎。它不整齐。它不能让教师教完一个单元就拍拍手，舒舒服服地说‘好了，这就结束了。’”（p. 1547）
     >
-    > - Rohrer, D. (2009). "The effects of spacing and mixing practice problems". Journal for Research in Mathematics Education, 40, 4-17
-    > - Vash, C. L. (1989). "The spacing effect: A case study in the failure to apply the results of psychological research". American Psychologist, 44, 1547 (a comment on Dempster's article?)
+     > - Rohrer, D. (2009). "The effects of spacing and mixing practice problems". Journal for Research in Mathematics Education, 40, 4-17
+     > - Vash, C. L. (1989). "The spacing effect: A case study in the failure to apply the results of psychological research". American Psychologist, 44, 1547（对 Dempster 文章的评论？）
 
-     From [_Psychology: An Introduction_](https://www.psywww.com/intropsych/ch06-memory/what-should-a-student-do.html#spacingeffect):
+     引自 [_Psychology: An Introduction_](https://www.psywww.com/intropsych/ch06-memory/what-should-a-student-do.html#spacingeffect)：
 
-     > In one practical demonstration of the spacing effect, [Bahrick, Bahrick, Bahrick, & Bahrick (1993)](https://gwern.net/doc/psychology/spaced-repetition/1993-bahrick.pdf "Maintenance of foreign language vocabulary and the spacing effect") showed that retention of foreign language vocabulary was greatly enhanced if practice sessions were spaced far apart. For example, "Thirteen retraining sessions spaced at 56 days yielded retention comparable to 26 sessions spaced at 14 days." In other words, subjects could use *half as many study sessions*, if the study sessions were spread over a time period *four times as long*.
+     > 在一个关于间隔效应的实用演示中，[Bahrick, Bahrick, Bahrick, & Bahrick（1993）](https://gwern.net/doc/psychology/spaced-repetition/1993-bahrick.pdf "Maintenance of foreign language vocabulary and the spacing effect")显示：如果练习间隔拉得很开，外语词汇的保持率会显著提升。比如，“把 13 次再训练间隔设置为 56 天，其保持效果可与把 26 次训练间隔设置为 14 天相当。”换言之，如果把训练分布在 *四倍长* 的时间跨度里，被试可以用 *一半* 的学习次数达到类似效果。
 
-The spacing effect essentially says that if you have a question ("What is the fifth letter in this random sequence you learned?"), and you can only study it, say, 5 times, then your memory of the answer ('e') will be strongest if you spread your 5 tries out over a long period of time - days, weeks, and months. One of the worst things you can do is blow your 5 tries within a day or two. You can think of the '[forgetting curve](!W)' as being like a chart of a radioactive [half-life](!W): each review bumps your memory up in strength 50% of the chart, say, but review doesn't do much in the early days because the memory simply hasn't decayed much! (*Why* does the spacing effect work, on a biological level? There are clear neurochemical differences between massed and spaced [in animal models](https://onlinelibrary.wiley.com/doi/epdf/10.1155/2012/581291 "'Molecular Determinants of the Spacing Effect', Naqib et al 2012") with spacing (>1 hour) enhancing [long-term potentiation](!W) but not massed[^Kramar-2012], but the why and wherefore - that's an open question; see the concept of [memory traces](!W "Engram (neuropsychology)") or the [sleep](#when-to-review) studies.) A graphical representation of the forgetting curve:
+间隔效应本质上是在说：如果你有一个问题（比如“我学过的这段随机序列里，第五个字母是什么？”），你最多只能学习它 5 次，那么把这 5 次尝试分散到更长的时间跨度——几天、几周、甚至几个月——会让你对答案（比如 ‘e’）的记忆最牢。你能做的最糟糕的事之一，就是把这 5 次机会全砸在一两天里。
+你可以把[遗忘曲线](!W)想象成放射性[半衰期](!W)的曲线图：每次复习都把记忆强度“抬回去”（比如抬回到曲线高度的 50%），但在最初几天里，复习看起来并不怎么“赚”，因为记忆还没怎么衰减！
+（从生物学层面看，间隔效应 *为什么* 会起作用？在[动物模型](https://onlinelibrary.wiley.com/doi/epdf/10.1155/2012/581291 "'Molecular Determinants of the Spacing Effect', Naqib et al 2012")中，集中与间隔确实存在明确的神经化学差异：间隔（>1 小时）能增强[长时程增强](!W)，而集中则不会[^Kramar-2012]；但其更深层的因果机制仍是开放问题，可参阅[记忆痕迹](!W "Engram (neuropsychology)")概念或与[睡眠](#when-to-review)相关的研究。）下面是遗忘曲线的一个图示：
 
 ![Stahl et al 2010; _CNS Spectrums_](https://gwern.net/doc/psychology/spaced-repetition/forgetting-curve-stahl.jpg "http://www.cnsspectrums.com/userdocs/ArticleImages/Stahl_figure1.jpg")
 

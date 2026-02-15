@@ -1,0 +1,62 @@
+<p><a href="/archiving#preemptive-local-archiving" id="link-bibliography-gwern-archiving--preemptive-local-archiving" class="prefetch-not link-page link-annotated" data-filesize-bytes="0" data-filesize-percentage="90">“Archiving URLs § Preemptive Local Archiving”</a></p>
+<p> <span class="author cite-author"><a href="/index#abstract" id="_i198YQWg" class="prefetch-not link-page" data-filesize-bytes="4146" data-filesize-percentage="91">Gwern</a></span></p>
+<p><span class="date cite-date" title="2011-03-10">2011</span></p>
+<blockquote>
+<div class="page-description-annotation">
+<p>Archiving the Web, because nothing lasts forever: statistics, online archive services, extracting URLs automatically from browsers, and creating a daemon to regularly back up URLs to multiple sources.</p>
+</div>
+<p>In 2020-02, because of the increasing difficulty of repairing old links, I switched Gwern.net’s primary linkrot defense to <strong>preemptive local archiving</strong>: automatically mirroring locally all PDFs &amp; web pages using manually-reviewed (and edited) <a href="https://github.com/gildas-lormeau/SingleFile/" id="_FNxhcGu8" class="link-annotated" data-link-icon="github" data-link-icon-type="svg" title="&#39;SingleFile&#39;, Lormeau 2026">SingleFile</a> snapshots converted into <a href="/gwtar" id="gwern-gwtar" class="prefetch-not link-modified-recently link-annotated link-page" data-filesize-bytes="34123" data-filesize-percentage="38" title="‘Gwtar: a static efficient single-file HTML format’, Gwern 2026">Gwtar</a> for efficiency.</p>
+<p>While it costs more time upfront (and presented some subtle UX problems like the <a href="/archiving#the-arxiv-problem" id="gwern-archiving--the-arxiv-problem" class="prefetch-not link-page">“Arxiv problem”</a>), it reduces total linkrot work.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/archiving#link-rot" id="toc-link-rot" class="prefetch-not link-page">Link Rot</a></li>
+<li><a href="/archiving#linkrot-quantities" id="toc-linkrot-quantities" class="prefetch-not link-page">Linkrot Quantities</a></li>
+<li><a href="/archiving#detection" id="toc-detection" class="prefetch-not link-page">Detection</a></li>
+<li><a href="/archiving#prevention" id="toc-prevention" class="prefetch-not link-page">Prevention</a>
+<ul>
+<li><a href="/archiving#remote-caching" id="toc-remote-caching" class="prefetch-not link-page">Remote Caching</a></li>
+<li><a href="/archiving#local-caching" id="toc-local-caching" class="prefetch-not link-page">Local Caching</a>
+<ul>
+<li><a href="/archiving#caching-proxy" id="toc-caching-proxy" class="prefetch-not link-page">Caching Proxy</a></li>
+<li><a href="/archiving#batch-job-downloads" id="toc-batch-job-downloads" class="prefetch-not link-page">Batch Job Downloads</a></li>
+<li><a href="/archiving#daemon" id="toc-daemon" class="prefetch-not link-page">Daemon</a></li>
+<li><a href="/archiving#cryptographic-timestamping-local-archives" id="toc-cryptographic-timestamping-local-archives" class="prefetch-not link-page">Cryptographic Timestamping Local Archives</a></li>
+<li><a href="/archiving#resource-consumption" id="toc-resource-consumption" class="prefetch-not link-page">Resource Consumption</a></li>
+<li><a href="/archiving#url-sources" id="toc-url-sources" class="prefetch-not link-page">URL Sources</a>
+<ul>
+<li><a href="/archiving#browser-history" id="toc-browser-history" class="prefetch-not link-page">Browser History</a></li>
+<li><a href="/archiving#document-links" id="toc-document-links" class="prefetch-not link-page">Document Links</a></li>
+<li><a href="/archiving#website-spidering" id="toc-website-spidering" class="prefetch-not link-page">Website Spidering</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/archiving#fixing-redirects" id="toc-fixing-redirects" class="prefetch-not link-page">Fixing Redirects</a>
+<ul>
+<li><a href="/archiving#gwern-net-redirect-fixing" id="toc-gwern-net-redirect-fixing" class="prefetch-not link-page">Gwern.net Redirect Fixing</a></li>
+</ul></li>
+<li><a href="/archiving#preemptive-local-archiving" id="toc-preemptive-local-archiving" class="prefetch-not link-annotated link-page" data-filesize-bytes="0" data-filesize-percentage="90" title="&#39;Archiving URLs § Preemptive Local Archiving&#39;, Gwern 2011">Preemptive Local Archiving</a>
+<ul>
+<li><a href="/archiving#local-snapshots" id="toc-local-snapshots" class="prefetch-not link-page">Local Snapshots</a></li>
+<li><a href="/archiving#workflow" id="toc-workflow" class="prefetch-not link-page">Workflow</a></li>
+<li><a href="/archiving#the-arxiv-problem" id="toc-the-arxiv-problem" class="prefetch-not link-page">The Arxiv Problem</a>
+<ul>
+<li><a href="/archiving#every-cs-problem" id="toc-every-cs-problem" class="prefetch-not link-page">Every CS Problem…</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="/archiving#reacting-to-broken-links" id="toc-reacting-to-broken-links" class="prefetch-not link-page">Reacting To Broken Links</a>
+<ul>
+<li><a href="/archiving#automatic-internet-archive-repairs" id="toc-automatic-internet-archive-repairs" class="prefetch-not link-page">Automatic Internet Archive Repairs</a>
+<ul>
+<li><a href="/archiving#why-not-internet-archive" id="toc-why-not-internet-archive" class="prefetch-not link-page">Why Not Internet Archive?</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/archiving#external-links" id="toc-external-links" class="prefetch-not link-page">External Links</a></li>
+<li><a href="/archiving#appendices" id="toc-appendices" class="prefetch-not link-page">Appendices</a>
+<ul>
+<li><a href="/archiving#filter-urls" id="toc-filter-urls" class="prefetch-not link-page"><code>filter-urls</code></a></li>
+<li><a href="/archiving#sort-key-compression-trick" id="toc-sort-key-compression-trick" class="prefetch-not link-page"><code>sort</code> Key Compression Trick</a></li>
+<li><a href="/archiving#cryptographic-timestamping" id="toc-cryptographic-timestamping" class="prefetch-not link-page">Cryptographic Timestamping</a></li>
+</ul></li>
+</ul>
+</div>
+</blockquote>

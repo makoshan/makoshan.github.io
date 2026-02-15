@@ -41,7 +41,7 @@ created: 07 Nov 2008
 # 综合
 
 - 研究飞刀投掷作为射箭的补充爱好
-- 编写一个类似于 "[Suzanne Delage]()" 的等价作品，但针对 _Peace_？
+- 编写一个类似于 "[Suzanne Delage](https://gwern.net/Suzanne-Delage)" 的等价作品，但针对 _Peace_？
 - 编纂一个 [SL4 精选](http://lesswrong.com/r/discussion/lw/5n2/sl4_meta_list_closure_2_month_followup/452r)邮件/阅读列表
 - 翻阅 Akadot 档案中与 _Eva_ 相关的材料：<http://wayback.archive.org/web/*/akadot.com/*>
 - 学习一些[物理学](http://ocw.mit.edu/courses/physics/8-01sc-physics-i-classical-mechanics-fall-2010/)（参见 _SCIM_）

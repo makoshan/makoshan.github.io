@@ -9,20 +9,21 @@
 --    for immediate sub-children, it can't count elements *globally*, and since Pandoc nests horizontal
 --    rulers and other block elements within each section, it is not possible to do the usual trick
 --    like with blockquotes/lists).
-module Typography (linebreakingTransform, typographyTransformTemporary, typesetHtmlFieldPermanent, titlecase', titlecaseInline, identUniquefy, mergeSpaces, C.titleCaseTestCases, titleCaseTest, typesetHtmlField, titleWrap, completionProgressHTML, completionProgressInline) where
+module Typography (linebreakingTransform, typographyTransformTemporary, typesetHtmlFieldPermanent, titlecase', titlecaseInline, identUniquefy, mergeSpaces, C.titleCaseTestCases, titleCaseTest, typesetHtmlField, titleWrap, completionProgressHTML, completionProgressInline, addDropCap) where
 
 import Control.Monad.State.Lazy (evalState, get, modify, put, State)
 import Data.Char (isPunctuation, isSpace, toUpper, toLower)
 import Data.List (isPrefixOf, isSuffixOf)
-import qualified Data.Text as T (append, concat, pack, unpack, replace, splitOn, strip, Text, head, null)
+import qualified Data.Text as T (append, concat, pack, unpack, replace, splitOn, strip, Text, head, null, isPrefixOf, singleton, tail)
 import Data.Text.Read (decimal)
 import Text.Regex.TDFA (Regex, makeRegex, match)
 import qualified Data.Map.Strict as M (empty, insert, lookup, Map)
 import Text.Read (readMaybe)
 
 import Data.Text.Titlecase (titlecase)
+import Debug.Trace (trace)
 
-import Text.Pandoc (Inline(..), Block(..), Pandoc(Pandoc), nullAttr, readerExtensions, runPure, readHtml, def, runPure, writeHtml5String, pandocExtensions, nullMeta) -- Caption(Caption),
+import Text.Pandoc (Inline(..), Block(..), Pandoc(Pandoc), nullAttr, readerExtensions, runPure, readHtml, def, runPure, writeHtml5String, pandocExtensions, nullMeta, Format(..)) -- Caption(Caption),
 import Text.Pandoc.Walk (walk, walkM)
 
 import Metadata.Date (dateRangeDuration)
@@ -441,3 +442,44 @@ completionProgressSpan :: String -> String -> Inline
 completionProgressSpan "" s = error $ "Typography.completionProgressSpan: passed empty string as one of two arguments, that should never happen. The non-empty argument was: " ++ show s
 completionProgressSpan n "" = error $ "Typography.completionProgressSpan: passed empty string as one of two arguments, that should never happen. The non-empty argument was: " ++ show n
 completionProgressSpan n s  = Span ("", ["completion-status"], [("progress-percentage", T.pack n)]) [Str (T.pack s)]
+
+-- | Add a dropcap to the first paragraph of the document, if the CSS extension is set to a dropcap style.
+--   The CSS extension is expected to be something like "dropcaps-kanzlei", which is mapped to the class "dropcap-kanzlei".
+--   The first letter of the first paragraph is wrapped in a span with class "dropcap", and the paragraph itself is
+--   given the class "dropcap-kanzlei" (or whatever the extension specifies, with "dropcaps-" replaced by "dropcap-").
+addDropCap :: String -> Pandoc -> Pandoc
+addDropCap cssExt doc@(Pandoc meta blocks)
+  | "dropcaps-" `isPrefixOf` cssExt =
+      trace ("addDropCap called with: " ++ cssExt) $
+      let style = if "dropcaps-" `isPrefixOf` cssExt
+                  then T.replace "dropcaps-" "dropcap-" (T.pack cssExt)
+                  else T.pack cssExt
+      in Pandoc meta (addDropCapToBlocks style blocks)
+  | otherwise = doc
+
+addDropCapToBlocks :: T.Text -> [Block] -> [Block]
+addDropCapToBlocks style (Para (Str t : restInlines) : restBlocks)
+  | not (T.null t) =
+    trace ("Matched Para with Str: " ++ show t) $
+    let firstChar = T.head t
+
+        restText = T.tail t
+        spanDropCap = Span ("", ["dropcap"], []) [Str (T.singleton firstChar)]
+        newInlines = spanDropCap : (if T.null restText then [] else [Str restText]) ++ restInlines
+        
+        -- Render the paragraph content to HTML so we can wrap it in a <p> with the correct class.
+        -- We use a RawBlock because Pandoc's Para doesn't support attributes.
+        res = runPure $ writeHtml5String def (Pandoc nullMeta [Para newInlines])
+    in case res of
+         Right html ->
+            -- writeHtml5String wraps the content in <p>...</p>. We want to replace that P with our own P with class.
+            let plainRes = runPure $ writeHtml5String def (Pandoc nullMeta [Plain newInlines])
+            in case plainRes of
+                 Right plainHtml ->
+                    let rawHtml = "<p class=\"" <> style <> "\">" <> plainHtml <> "</p>"
+                    in RawBlock (Format "html") rawHtml : restBlocks
+                 Left _ -> Para (Str t : restInlines) : restBlocks -- Fallback on error
+         Left _ -> Para (Str t : restInlines) : restBlocks
+addDropCapToBlocks style (block : restBlocks) = block : addDropCapToBlocks style restBlocks
+addDropCapToBlocks _ [] = []
+

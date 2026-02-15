@@ -1,0 +1,156 @@
+/*  Elements to be deleted completely.
+ */
+body.reader-mode-active .reader-mode-not,
+body.reader-mode-active #navbar,
+body.reader-mode-active #page-metadata .page-status,
+body.reader-mode-active #page-metadata .page-confidence,
+body.reader-mode-active #page-metadata .page-importance,
+body.reader-mode-active #page-metadata .page-backlinks,
+body.reader-mode-active #page-metadata .page-link-bibliography,
+body.reader-mode-active #page-metadata .page-similars,
+body.reader-mode-active #page-metadata .page-date-range::after,
+body.reader-mode-active #page-metadata .page-metadata-fields::after,
+body.reader-mode-active #TOC ul li::before,
+body.reader-mode-active #TOC .toc-collapse-toggle-button,
+body.reader-mode-active #sidenote-column-left,
+body.reader-mode-active #sidenote-column-right,
+body.reader-mode-active #navigation,
+body.reader-mode-active #footer,
+body.reader-mode-active .annotation.blog-post .data-field.aux-links,
+body.reader-mode-active .annotation.blog-post .aux-links-field-container .separator,
+body.reader-mode-active .inflation-adjusted .subsup,
+body.reader-mode-active .has-recently-modified-icon .recently-modified-icon-hook
+body.reader-mode-active .date-range sub,
+body.reader-mode-active .file-includes {
+    display: none;
+}
+
+/*  Link icons in reader mode just don’t work well, sadly.
+        —SA 2024-11-27
+ */
+body.reader-mode-active .markdownBody a .link-icon-hook {
+    display: none;
+}
+
+body.reader-mode-active .markdownBody a .recently-modified-icon-hook {
+    display: none;
+}
+
+/*  Preserve the positioning of related elements by hiding visibility, instead
+    of deleting entirely.
+ */
+body.reader-mode-active .date-range .subsup sub {
+    visibility: hidden;
+}
+
+body.reader-mode-active.masked-links-hidden .footnote-ref,
+body.reader-mode-active.masked-links-hidden .footnote-back,
+body.reader-mode-active.masked-links-hidden .footnote-back-block {
+    opacity: 0;
+}
+
+body.reader-mode-active #navbar a.logo {
+    border-color: transparent;
+}
+
+body.reader-mode-active #TOC ul li {
+    padding-left: 0.125em;
+}
+
+/*  Links.
+ */
+body.reader-mode-active .markdownBody a.has-indicator-hook {
+    margin: 0;
+    position: relative;
+    z-index: 111;
+}
+
+body.reader-mode-active .markdownBody a .indicator-hook {
+    background-image: inherit;
+    background-size: inherit;
+    background-repeat: inherit;
+    background-position: inherit;
+    background-color: var(--link-underline-background-color);
+    box-shadow: -2px 0 0 0 var(--link-underline-background-color);
+    margin-left: -0.3em;
+}
+body.reader-mode-active.masked-links-hidden .markdownBody a .indicator-hook {
+    visibility: hidden;
+}
+
+body.reader-mode-active.masked-links-hidden .markdownBody a:not(.popup-open):not(.popin-open),
+body.reader-mode-active.masked-links-hidden .markdownBody a:not(.popup-open):not(.popin-open):visited,
+body.reader-mode-active.masked-links-hidden .markdownBody a:not(.popup-open):not(.popin-open):hover {
+    color: inherit;
+    background: none;
+    cursor: text;
+}
+
+body.reader-mode-active.masked-links-hidden .markdownBody a:link,
+body.reader-mode-active.masked-links-hidden .markdownBody a:link * {
+    text-shadow: none;
+}
+
+body.reader-mode-active.masked-links-hidden .markdownBody a code {
+    border-bottom-width: 1px;
+}
+
+/*  Footnotes section self-link.
+ */
+body.reader-mode-active .markdownBody section.footnotes .section-self-link:hover {
+    position: absolute !important;
+    cursor: pointer !important;
+}
+
+/*  Citations.
+ */
+body.reader-mode-active .markdownBody .cite-joiner {
+    display: initial;
+}
+body.reader-mode-active .markdownBody .cite-date::before {
+    content: " ";
+}
+
+body.reader-mode-active .markdownBody .cite-date {
+    vertical-align: unset;
+    font-size: unset;
+    line-height: unset;
+    font-variant-numeric: unset;
+    margin-left: unset;
+}
+body.reader-mode-active .markdownBody .cite-author-plural::after {
+    content: " ";
+}
+
+/*  Misc.
+ */
+body.reader-mode-active .markdownBody p code {
+    --background-color: inherit;
+
+    border-color: transparent;
+}
+
+body.reader-mode-active .date-range .subsup {
+    margin: -0.5em 0 0 0;
+}
+
+body.reader-mode-active .reader-mode-disable-when-clicked {
+	cursor: pointer;
+}
+
+/*  Anti-style zone.
+ */
+body.reader-mode-active .reader-mode-style-not * {
+    font-weight: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    color: inherit;
+}
+
+/*  Mobile layout adjustments.
+ */
+@media all and (max-width: 649px) {
+    body.reader-mode-active article {
+        margin-top: 0;
+    }
+}

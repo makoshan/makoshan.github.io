@@ -170,7 +170,7 @@ Arthur 的主要批评之一是：如果数据里只包含已停服产品，你�
 
 ## 处理
 
-如果产品未结束，终止日期定义为 2013 年 4 月 1 日（我停止汇编产品的时间）；于是总寿命=终止日期-起始日期。最终 CSV 在 [docs/2013-google.csv](/docs/2013-google.csv)。欢迎 Googler 或 Xoogler 就发布/关闭时间、直接变现项目等变量纠错。
+如果产品未结束，终止日期定义为 2013 年 4 月 1 日（我停止汇编产品的时间）；于是总寿命=终止日期-起始日期。最终 CSV 在 [docs/2013-google.csv](https://gwern.net/docs/2013-google.csv)。欢迎 Googler 或 Xoogler 就发布/关闭时间、直接变现项目等变量纠错。
 
 # 分析
 
@@ -616,9 +616,10 @@ Translate      92%               [95%][T]       0.78
 
 # 参见
 
-- [Archiving URLs]()
+- [Archiving URLs](https://gwern.net/archiving)
 - [survival analysis of _MoR_ readers](hpmor#survival-analysis)
-- [Wikipedia and Knol]()
+- [Wikipedia and Knol](https://gwern.net/wikipedia-and-knol)
+
 
 # 外部链接
 

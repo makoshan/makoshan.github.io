@@ -36,8 +36,8 @@ belief: log
 
 比特币：
 
-- [Wei Dai/中本聪邮件](/docs/2008-nakamoto)
-- [McCaleb 关于 MtGox 的邮件采访](/docs/2014-mccaleb)
+- [Wei Dai/中本聪邮件](https://gwern.net/docs/2008-nakamoto)
+- [McCaleb 关于 MtGox 的邮件采访](https://gwern.net/docs/2014-mccaleb)
 - [Evolution 尝试勒索](Blackmail#march)
 
 技术：
@@ -69,7 +69,7 @@ belief: log
 
 _Radiance_：
 
-- [diff of](/docs/2002-radiance#diff) "Radiance" 和 _Radiance_ 第一部分
+- [diff of](https://gwern.net/docs/2002-radiance#diff) "Radiance" 和 _Radiance_ 第一部分
 
 站点：
 
@@ -92,9 +92,9 @@ _Radiance_：
 
 _Radiance_：
 
-- 转录了[中篇小说 "Radiance"](/docs/2002-radiance#radiance-1)
-- 转录并注释了自传随笔 ["Old Legends"](/docs/2002-radiance#old-legends)，作者 Gregory Benford 谈及他的物理学生涯、科幻与科学、"星球大战"计划、爱德华·泰勒等
-- 找到并扫描了一份 ["The _Astounding_ Investigation: The Manhattan Project's Confrontation with Science Fiction"](/docs/1984-berger.pdf) (Berger 1984, _Analog_ )
+- 转录了[中篇小说 "Radiance"](https://gwern.net/docs/2002-radiance#radiance-1)
+- 转录并注释了自传随笔 ["Old Legends"](https://gwern.net/docs/2002-radiance#old-legends)，作者 Gregory Benford 谈及他的物理学生涯、科幻与科学、"星球大战"计划、爱德华·泰勒等
+- 找到并扫描了一份 ["The _Astounding_ Investigation: The Manhattan Project's Confrontation with Science Fiction"](https://gwern.net/docs/1984-berger.pdf) (Berger 1984, _Analog_ )
 
 个人：
 
@@ -111,7 +111,7 @@ _Radiance_：
 又是一个繁忙的月份：
 
 - DNB 元分析：根据 Redick 的审阅修正了多处错误
-- [月球睡眠](): 拆分出来，获取了另外 2 位 Zeo 用户的数据，扩展为多层模型及功效分析（Cajochen 本人仍未回应）
+- 月球睡眠：拆分出来，获取了另外 2 位 Zeo 用户的数据，扩展为多层模型及功效分析（Cajochen 本人仍未回应）
 - 莫达非尼：[价格表更新](Modafinil#modafinil-table)
 - 丝绸之路 (Silk Road)：
 
@@ -136,7 +136,7 @@ _Radiance_：
 
 十月份我的重点都在处理 Silk Road 被查封后的余波——应对披露的信息，复制 SR 论坛内容，追踪线索，与各方交谈，记录随后的逮捕行动，追踪随之涌现的黑市……我还有很多材料要处理，但也完成了一些事情：
 
-- [_Drugs 2.0_: "Your Crack's in the Post"](/docs/sr/2013-power) (书籍章节)
+- [_Drugs 2.0_: "Your Crack's in the Post"](https://gwern.net/docs/sr/2013-power) (书籍章节)
 - 抢救[供应商公开资料](https://archive.org/details/2013_06_07_SilkRoad_Vendors)并在我的页面中使用了一些
 - 和所有人打赌 BlackMarket Reloaded & Sheep Marketplace 将在[一年内被查封或关闭](http://www.reddit.com/r/SilkRoad/comments/1pko9y/the_bet_bmr_and_sheep_to_die_in_a_year/)（无人接盘）
 - 研究 ["digitalink" 抓捕案](http://www.reddit.com/r/SilkRoad/comments/1pfptu/maryland_man_charged_in_silk_road_drug/cd289fr)
@@ -156,7 +156,7 @@ A/B 测试一直很活跃，Hacker News 的流量提供了大量样本：
 - 编译了一份关于[肌酸对智力影响](Creatine)的小型元分析
 - 将之前的进度报告全部合并到一个页面（本页）并添加到侧边栏。应该能帮到那些总是询问主要变更 RSS 订阅而不仅仅是所有变更的人。
 - 开始了一个新的[前景色/背景色](AB testing#text-background-color) A/B 测试
-- 扩展了 [Google Alerts]() 分析，加入了过去半年的新邮件，用于 Hacker News 提交
+- 扩展了 [Google Alerts](/Google-Alerts) 分析，加入了过去半年的新邮件，用于 Hacker News 提交
 - 开始了一个[更大的 Noopept 自我实验](Nootropics#followup-experiment)
 - 利用 [Mnemosyne 日志](https://groups.google.com/forum/#!msg/mnemosyne-proj-users/8yZz9BbqKl4/BxAIjo_2WscJ)做了一些间隔重复研究：发现了记忆表现的周效应和时间效应——具有明显的昼夜节律
 
@@ -166,7 +166,7 @@ A/B 测试一直很活跃，Hacker News 的流量提供了大量样本：
 
 - A/B 测试：[行高测试](/AB-testing#line-height)未发现差异，所以我做了一个快速测试，[测试一种空测试](/AB-testing#null-test)以检查我使用的 A/B 测试工具；成功未能拒绝零假设。下一个测试是超链接下划线是否会惹恼用户。
 - [书评](/Book reviews)：我写了一个 Haskell 程序将我的 GoodReads 评分和评论解析为扁平的 Pandoc Markdown；效果还行，但似乎有些吃掉引用块和破坏超链接，不知道为什么。这也是清理一些评论的机会：内联一些评论，拼写检查，扩展参考和链接，工作量很大。但把我的评论集中在一个有可读界面的地方挺好的。kiba 认为这可能会通过亚马逊的联盟收入回本，但我表示怀疑。
-- [Scholz 的 _Radiance_](/docs/2002-radiance)：增加了一百页左右。注释其中一部分非常困难；Scholz 对瓦格纳歌剧的熟悉是个挑战，因为我只读过他的指环系列。
+- [Scholz 的 _Radiance_](https://gwern.net/docs/2002-radiance)：增加了一百页左右。注释其中一部分非常困难；Scholz 对瓦格纳歌剧的熟悉是个挑战，因为我只读过他的指环系列。
 - 我开始了两个新的自我实验：
 
     - [柠檬酸镁](/Nootropics#citrate) 对情绪/生产力的影响
@@ -174,7 +174,7 @@ A/B 测试一直很活跃，Hacker News 的流量提供了大量样本：
 - [东方 Project 音乐增长率](Touhou#growth-over-time)：在该项目上取得了一些进展，分析发布数量与时间的关系：看起来我们可能在 2009 年达到了东方 Project 的顶峰。
 - [Silk Road 镜像](Silk Road#archives-of-sr-pages)：我已开始托管部分黑市的公开副本；这些是特定事件或时间序列的备份
 - [间隔重复统计](https://groups.google.com/forum/#!msg/mnemosyne-proj-users/8yZz9BbqKl4/BxAIjo_2WscJ)：我一直在分析我的 Mnemosyne 数据和巨大的公共数据库中的时间效应。虽然我的结果尚无定论，但我对公共数据库中 4800 万次闪卡复习的分析发现，学习闪卡的最佳时间似乎是中午。有点令人惊讶，你可能会以为睡前的深夜是最佳时间。
-- 我的 [Sand]() 投票还没完成，因为回复率比我希望的低得多，前几天只有最后的投票得到了足够的回复。
+- 我的 [Sand](/Sand) 投票还没完成，因为回复率比我希望的低得多，前几天只有最后的投票得到了足够的回复。
 
 ## 七月
 
@@ -182,12 +182,12 @@ A/B 测试一直很活跃，Hacker News 的流量提供了大量样本：
 
 七月我写的一些有趣的东西：
 
-- [Google Alerts]()：对我所有 Google Alerts 邮件的统计分析，看看它们是否/何时开始变得不太有用。
+- [Google Alerts](/Google-Alerts)：对我所有 Google Alerts 邮件的统计分析，看看它们是否/何时开始变得不太有用。
 - [2013 Lewis 冥想准实验](Lewis meditation)：一位量化自我者和其他几个人在玩算术游戏时做了一些冥想；结果证明这是多层建模的完美应用
 - [睡眠与月相](Zeo#phases-of-the-moon)：最近一篇论文声称月相对昼夜节律有影响；既然我有这么多自己的睡眠数据，我想看看是否有任何影响...
-- [Sand]()：继续推进；我关闭了 LW 投票，并在 `gwern.net` 上设立了 3 个新投票以测试原投票的问题。
+- [Sand](/Sand)：继续推进；我关闭了 LW 投票，并在 `gwern.net` 上设立了 3 个新投票以测试原投票的问题。
 - [打赌](Prediction%20markets#personal-bets) 列了一张我与人打赌或尝试打赌的清单（有别于使用预测市场）。短得令人失望。
-- [Scholz 的 _Radiance_](/docs/2002-radiance)：我已开始转录并注释我最喜欢的科技/文学小说之一。大部分已完成；希望八月能完成 Radiance。
+- [Scholz 的 _Radiance_](https://gwern.net/docs/2002-radiance)：我已开始转录并注释我最喜欢的科技/文学小说之一。大部分已完成；希望八月能完成 Radiance。
 - [晚餐吃蝉](Notes#cicadas)：我终于有机会吃了最近马里兰州周期蝉爆发期间抓到的蝉；所以我当然要把这次离奇的进餐经历写下来。
 
 目前，我正在听 Reitaisai 10 下载的音乐（更多东方 Project 音乐工作）；并与一位教练合作，他对预测大学运动员的三级跳远成绩感兴趣，并收集了一堆关于三级跳远运动员的数据。

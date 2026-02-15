@@ -1,0 +1,38 @@
+<p><a href="/resorter" id="link-bibliography-gwern-resorter" class="prefetch-not link-page link-annotated" data-filesize-bytes="47124" data-filesize-percentage="95">“Resorting Media Ratings”</a></p>
+<p> <span class="author cite-author"><a href="/index#abstract" id="_i198YQWg" class="prefetch-not link-page" data-filesize-bytes="4146" data-filesize-percentage="91">Gwern</a></span></p>
+<p><span class="date cite-date" title="2015-09-07">2015</span></p>
+<p><span class="link-tags"><a href="/doc/cs/algorithm/sorting/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to cs/algorithm/sorting tag index">sorting</a>, <a href="/doc/reinforcement/learning/model/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to reinforcement/learning/model tag index">reinforcement/learning/model</a>, <a href="/doc/statistics/bayes/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to statistics/bayes tag index">Bayes</a>, <a href="/doc/statistics/order/comparison/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to statistics/order/comparison tag index">statistical comparison</a></span></p>
+<blockquote>
+<div class="page-description-annotation">
+<p>Commandline tool providing interactive statistical pairwise ranking and sorting of items</p>
+</div>
+<p>User-created datasets using ordinal scales (such as media ratings) have tendencies to drift or ‘clump’ towards the extremes and fail to be informative as possible, falling prey to <a href="https://en.wikipedia.org/wiki/Ceiling_effect_(statistics)" id="_Ae5u5CjD" class="link-live link-annotated-partial" data-url-iframe="https://en.m.wikipedia.org/wiki/Ceiling_effect_(statistics)#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Ceiling_effect_(statistics)#bodyContent" title="Ceiling effect (statistics)">ceiling effects</a> and making it difficult to distinguish between the mediocre &amp; excellent.</p>
+<p>This can be counteracted by rerating the dataset to create a uniform (and hence, informative) distribution of ratings—but such manual rerating is difficult.</p>
+<p>I provide an anytime CLI program, <code>resorter</code>, written in R (should be cross-platform but only tested on Linux) which keeps track of comparisons, infers underlying ratings assuming that they are noisy in the ELO-like <a href="https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model" id="_NRofBr5v" class="link-live link-annotated-partial" data-url-iframe="https://en.m.wikipedia.org/wiki/Bradley%E2%80%93Terry_model#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bradley%E2%80%93Terry_model#bodyContent" title="Bradley–Terry model">Bradley-Terry model</a>, and interactively &amp; intelligently queries the user with comparisons of the media with the most uncertain current ratings, until the user ends the session and a fully rescaled set of ratings are output.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/resorter#use" id="toc-use" class="prefetch-not link-page">Use</a></li>
+<li><a href="/resorter#source-code" id="toc-source-code" class="prefetch-not link-page">Source Code</a></li>
+<li><a href="/resorter#background" id="toc-background" class="prefetch-not link-page">Background</a>
+<ul>
+<li><a href="/resorter#rating-inflation" id="toc-rating-inflation" class="prefetch-not link-page">Rating Inflation</a></li>
+<li><a href="/resorter#what-distribution-should-ratings-be" id="toc-what-distribution-should-ratings-be" class="prefetch-not link-page">What Distribution <em>Should</em> Ratings Be?</a></li>
+<li><a href="/resorter#rescaling" id="toc-rescaling" class="prefetch-not link-page">Rescaling</a>
+<ul>
+<li><a href="/resorter#interactive-ranking-through-sorting" id="toc-interactive-ranking-through-sorting" class="prefetch-not link-page">Interactive Ranking Through Sorting</a></li>
+<li><a href="/resorter#noisy-sorting" id="toc-noisy-sorting" class="prefetch-not link-page">Noisy Sorting</a></li>
+</ul></li>
+<li><a href="/resorter#implementation" id="toc-implementation" class="prefetch-not link-page">Implementation</a>
+<ul>
+<li><a href="/resorter#why-not-bayes" id="toc-why-not-bayes" class="prefetch-not link-page">Why Not Bayes?</a>
+<ul>
+<li><a href="/resorter#bayesian-improvements" id="toc-bayesian-improvements" class="prefetch-not link-page">Bayesian Improvements</a></li>
+<li><a href="/resorter#optimal-exploration" id="toc-optimal-exploration" class="prefetch-not link-page">Optimal Exploration</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="/resorter#see-also" id="toc-see-also" class="prefetch-not link-page">See Also</a></li>
+<li><a href="/resorter#external-links" id="toc-external-links" class="prefetch-not link-page">External Links</a></li>
+</ul>
+</div>
+</blockquote>

@@ -51,7 +51,7 @@ import LinkBacklink (getBackLinkCheck, getLinkBibLinkCheck, getSimilarLinkCheck)
 import LinkMetadata (addPageLinkWalk, readLinkMetadataSlow, writeAnnotationFragments, createAnnotations, hasAnnotation, addCanPrefetch, annotationSizeDB, addSizeToLinks)
 import LinkMetadataTypes (Metadata, SizeDB)
 import Tags (tagsToLinksDiv)
-import Typography (linebreakingTransform, typographyTransformTemporary, titlecaseInline, completionProgressHTML)
+import Typography (linebreakingTransform, typographyTransformTemporary, titlecaseInline, completionProgressHTML, addDropCap)
 import Utils (printGreen, replace, deleteMany, replaceChecked, safeHtmlWriterOptions, simplifiedHTMLString, inlinesToText, flattenLinksInInlines, delete, toHTML, getMostRecentlyModifiedDir)
 import Test (testAll)
 import qualified Config.Misc as C (cd, currentYear, todayDayStringUnsafe, isOlderThan, isNewWithinNDays, pageMetadataFieldsMandatory, pageTitleMaxWords, pageDescriptionMaxLength, pageDescriptionMinLength, yamlValidStatuses, yamlValidConfidences, yamlValidCssExtensions, root)
@@ -144,12 +144,16 @@ main =
                                   if toFilePath ident == "index.generated.md"
                                   then constField "safe-url" "index"
                                   else mempty
+                            compileExt <- getMetadataField ident "css-extension"
+                            let cssExt = fromMaybe "" compileExt
                             inlinedHead <- unsafeCompiler $ readFile "static/include/inlined-head.html"
                             inlinedAssets <- unsafeCompiler $ readFile "static/include/inlined-asset-links.html"
                             navbarHtml <- unsafeCompiler $ readFile "static/include/navbar.html"
                             footerHtml <- unsafeCompiler $ readFile "static/include/footer.html"
                             -- unsafeCompiler $ validateYAMLMetadata hakyllMeta (toFilePath ident)
-                            pandocCompilerWithTransformM readerOptions woptions (unsafeCompiler . pandocTransform meta am sizes indexp)
+                            pandocCompilerWithTransformM readerOptions woptions (\p -> do
+                                 p' <- unsafeCompiler $ pandocTransform meta am sizes indexp p
+                                 return $ addDropCap cssExt p')
                               >>= loadAndApplyTemplate
                                     "static/template/default.html"
                                     ( constField "inlined-head" inlinedHead <>

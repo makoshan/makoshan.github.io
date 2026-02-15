@@ -1,0 +1,74 @@
+<p><a href="/death-note-script" id="link-bibliography-gwern-death-note-script" class="prefetch-not link-page link-annotated" data-filesize-bytes="0" data-filesize-percentage="90">“Who Wrote The <em>Death Note</em> Script?”</a></p>
+<p> <span class="author cite-author"><a href="/index#abstract" id="_i198YQWg" class="prefetch-not link-page" data-filesize-bytes="4146" data-filesize-percentage="91">Gwern</a></span></p>
+<p><span class="date cite-date" title="2009-11-02">2009</span></p>
+<p><span class="link-tags"><a href="/doc/anime/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to anime tag index">anime</a>, <a href="/doc/cs/haskell/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to cs/haskell tag index">Haskell</a>, <a href="/doc/cs/r/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to cs/r tag index">CS/r</a>, <a href="/doc/statistics/bayes/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to statistics/bayes tag index">Bayes</a>, <a href="/doc/statistics/stylometry/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to statistics/stylometry tag index">stylometry</a></span></p>
+<blockquote>
+<div class="page-description-annotation">
+<p>Internal, external, stylometric evidence point to live-action leak of <em>Death Note</em> Hollywood script being real.</p>
+</div>
+<p>I give a history of the <span class="date-range">2009<sub><span title="2009 was 17 years ago.">17ya</span></sub></span> leaked script, discuss internal &amp; external evidence for its realness including stylometrics; and then give a simple step-by-step <a href="https://en.wikipedia.org/wiki/Bayesian_statistics" id="_yza4YDhb" class="link-live link-annotated-partial" data-url-iframe="https://en.m.wikipedia.org/wiki/Bayesian_statistics#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bayesian_statistics#bodyContent" title="Bayesian statistics">Bayesian analysis</a> of each point. We finish with high confidence in the script being real, discussion of how this analysis was surprisingly enlightening, and what followup work the analysis suggests would be most valuable.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/death-note-script#plot-summary" id="toc-plot-summary" class="prefetch-not link-page">Plot Summary</a></li>
+<li><a href="/death-note-script#evidence" id="toc-evidence" class="prefetch-not link-page">Evidence</a>
+<ul>
+<li><a href="/death-note-script#internal" id="toc-internal" class="prefetch-not link-page">Internal</a>
+<ul>
+<li><a href="/death-note-script#pdf-metadata" id="toc-pdf-metadata" class="prefetch-not link-page">PDF Metadata</a></li>
+<li><a href="/death-note-script#writingformatting" id="toc-writingformatting" class="prefetch-not link-page">Writing/formatting</a></li>
+<li><a href="/death-note-script#stylometrics" id="toc-stylometrics" class="prefetch-not link-page">Stylometrics</a></li>
+</ul></li>
+<li><a href="/death-note-script#external" id="toc-external" class="prefetch-not link-page">External</a>
+<ul>
+<li><a href="/death-note-script#dating" id="toc-dating" class="prefetch-not link-page">Dating</a></li>
+<li><a href="/death-note-script#credit" id="toc-credit" class="prefetch-not link-page">Credit</a></li>
+<li><a href="/death-note-script#official-statements" id="toc-official-statements" class="prefetch-not link-page">Official Statements</a></li>
+<li><a href="/death-note-script#legal-takedowns" id="toc-legal-takedowns" class="prefetch-not link-page">Legal Takedowns</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/death-note-script#analysis" id="toc-analysis" class="prefetch-not link-page">Analysis</a>
+<ul>
+<li><a href="/death-note-script#priors" id="toc-priors" class="prefetch-not link-page">Priors</a></li>
+<li><a href="/death-note-script#internal-evidence" id="toc-internal-evidence" class="prefetch-not link-page">Internal Evidence</a>
+<ul>
+<li><a href="/death-note-script#authorship" id="toc-authorship" class="prefetch-not link-page">Authorship</a>
+<ul>
+<li><a href="/death-note-script#author-spelling" id="toc-author-spelling" class="prefetch-not link-page">Author Spelling</a></li>
+<li><a href="/death-note-script#corporate-address" id="toc-corporate-address" class="prefetch-not link-page">Corporate Address</a></li>
+<li><a href="/death-note-script#pdf-date" id="toc-pdf-date" class="prefetch-not link-page">PDF Date</a></li>
+<li><a href="/death-note-script#pdf-creator-tool" id="toc-pdf-creator-tool" class="prefetch-not link-page">PDF Creator Tool</a></li>
+<li><a href="/death-note-script#pdf-timezone" id="toc-pdf-timezone" class="prefetch-not link-page">PDF Timezone</a></li>
+<li><a href="/death-note-script#writingformatting-1" id="toc-writingformatting-1" class="prefetch-not link-page">Writing/formatting</a></li>
+<li><a href="/death-note-script#plot" id="toc-plot" class="prefetch-not link-page">Plot</a></li>
+<li><a href="/death-note-script#stylometrics-1" id="toc-stylometrics-1" class="prefetch-not link-page">Stylometrics</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/death-note-script#external-evidence" id="toc-external-evidence" class="prefetch-not link-page">External Evidence</a>
+<ul>
+<li><a href="/death-note-script#dating-1" id="toc-dating-1" class="prefetch-not link-page">Dating</a></li>
+<li><a href="/death-note-script#credit-1" id="toc-credit-1" class="prefetch-not link-page">Credit</a>
+<ul>
+<li><a href="/death-note-script#hope-function" id="toc-hope-function" class="prefetch-not link-page">Hope Function</a></li>
+</ul></li>
+<li><a href="/death-note-script#credit-hope-function" id="toc-credit-hope-function" class="prefetch-not link-page">Credit &amp; Hope Function</a></li>
+<li><a href="/death-note-script#official-statements-1" id="toc-official-statements-1" class="prefetch-not link-page">Official Statements</a></li>
+<li><a href="/death-note-script#legal-takedowns-1" id="toc-legal-takedowns-1" class="prefetch-not link-page">Legal Takedowns</a></li>
+</ul></li>
+<li><a href="/death-note-script#results" id="toc-results" class="prefetch-not link-page">Results</a></li>
+<li><a href="/death-note-script#likelihood-ratio-tweaking" id="toc-likelihood-ratio-tweaking" class="prefetch-not link-page">Likelihood Ratio Tweaking</a></li>
+<li><a href="/death-note-script#benefits" id="toc-benefits" class="prefetch-not link-page">Benefits</a></li>
+</ul></li>
+<li><a href="/death-note-script#the-truth" id="toc-the-truth" class="prefetch-not link-page">The Truth?</a>
+<ul>
+<li><a href="/death-note-script#no-comment" id="toc-no-comment" class="prefetch-not link-page">No Comment</a></li>
+</ul></li>
+<li><a href="/death-note-script#conclusion" id="toc-conclusion" class="prefetch-not link-page">Conclusion</a></li>
+<li><a href="/death-note-script#see-also" id="toc-see-also" class="prefetch-not link-page">See Also</a></li>
+<li><a href="/death-note-script#external-links" id="toc-external-links" class="prefetch-not link-page">External Links</a></li>
+<li><a href="/death-note-script#appendix" id="toc-appendix" class="prefetch-not link-page">Appendix</a>
+<ul>
+<li><a href="/death-note-script#conditional-independence" id="toc-conditional-independence" class="prefetch-not link-page">Conditional Independence</a></li>
+</ul></li>
+</ul>
+</div>
+</blockquote>

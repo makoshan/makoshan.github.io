@@ -488,9 +488,24 @@ annotateLink md x@(Link (_,_,_) _ (targetT,_))
          let target' = replace "https://gwern.net/" "/" target
          let target'' = if head target' == '.' then drop 1 target' else target'
 
+         -- Links into /doc or /docs are always externalized to gwern.net, since this repo no longer ships the full /doc tree.
+         -- Also, if a root-level local link does not exist on disk, treat it as a gwern.net link
+         -- (preserves old wiki links in a reduced repo).
+         isRemotePath <- if not (null target'') && head target'' == '/' && ("/doc/" `isPrefixOf` target'' || "/docs/" `isPrefixOf` target'')
+                           then return True
+                           else do
+                             let (pathPart, _) = break (=='#') target''
+                             let pathPart' = if null pathPart then "" else drop 1 pathPart
+                             isDir <- if null pathPart' then return False else doesDirectoryExist pathPart'
+                             let pathWithExt = if '.' `elem` pathPart' then pathPart' else pathPart' ++ ".md"
+                             isFile <- if null pathPart' then return False else doesFileExist pathWithExt
+                             return (not isDir && not isFile)
+
          -- Allow directory-style links like "/foo/" or "/foo" by normalizing them to "/foo/index".
          -- (The site serves directory paths as index pages; annotations should not hard-fail the build.)
-         targetNorm <- if not (null target'') && head target'' == '/' && target'' /= "/"
+         targetNorm <- if isRemotePath
+                         then return $ "https://gwern.net" ++ target''
+                         else if not (null target'') && head target'' == '/' && target'' /= "/"
                          then do
                            let (pathPart, fragPart) = break (=='#') target''
                            let pathPart' = dropWhileEnd (=='/') pathPart
@@ -502,7 +517,7 @@ annotateLink md x@(Link (_,_,_) _ (targetT,_))
                          else return target''
 
          -- check local link validity: every local link except tags should exist on-disk:
-         when (head targetNorm == '/' && not ("/metadata/annotation/" `isPrefixOf` targetNorm)) $
+         when (not isRemotePath && head targetNorm == '/' && not ("/metadata/annotation/" `isPrefixOf` targetNorm)) $
            unless (targetNorm == "/") $ do
              isDirectory <- doesDirectoryExist (takeWhile (/='#') $ tail targetNorm)
              when isDirectory $

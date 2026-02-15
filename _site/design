@@ -1039,7 +1039,7 @@ div.poem span.caesura-mark {
 <p>此外还讨论了沿途进行的<a href="/design-graveyard" id="gwern-design-graveyard" class="prefetch-not link-modified-recently link-page" title="&#39;设计墓地&#39;, Gwern 2010">许多失败的实验/更改</a>。</p>
 </blockquote>
 </div>
-<p>如何才能尽可能有效地在线长期展示复杂的、引用密集的、链接密集的长篇文本，同时节省读者的时间和注意力？</p>
+<p class="dropcap-kanzlei"><span class="dropcap">如</span>何才能尽可能有效地在线长期展示复杂的、引用密集的、链接密集的长篇文本，同时节省读者的时间和注意力？</p>
 <p><!--
 # 读者指南
 ## 快速入门

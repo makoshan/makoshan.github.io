@@ -1,0 +1,56 @@
+<p><a href="/haskell/summer-of-code" id="link-bibliography-gwern-haskell-summer-of-code" class="prefetch-not link-page link-annotated" data-filesize-bytes="0" data-filesize-percentage="90">“Summers of Code, <span class="Date-Range" Title="The Date Range 2006–2013 Lasted 7 Years, Ending 13 Years Ago.">2006<span class="SUbsup"><sup>–</sup><sub>7</sub></span>2013<sub><span Title="2006 Was 20 Years Ago.">13ya</span></sub></span>”</a></p>
+<p> <span class="author cite-author"><a href="/index#abstract" id="_i198YQWg" class="prefetch-not link-page" data-filesize-bytes="4146" data-filesize-percentage="91">Gwern</a></span></p>
+<p><span class="date cite-date" title="2009-02-11">2009</span></p>
+<p><span class="link-tags"><a href="/doc/cs/haskell/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to cs/haskell tag index">Haskell</a>, <a href="/doc/statistics/prediction/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to statistics/prediction tag index">forecasting</a>, <a href="/doc/survey/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to survey tag index">survey</a></span></p>
+<blockquote>
+<div class="page-description-annotation">
+<p>A retrospective of 8 years of SoC, and lessons learned</p>
+</div>
+<p>A compilation of <a href="https://en.wikipedia.org/wiki/Haskell" id="_AC8VbUc5" class="link-live link-annotated-partial" data-url-iframe="https://en.m.wikipedia.org/wiki/Haskell#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Haskell#bodyContent" title="Haskell">Haskell</a>-related student projects <span class="date-range" title="The date range 2006–2013 lasted 7 years, ending 13 years ago.">2006<span class="subsup"><sup>–</sup><sub>7</sub></span>2013<sub><span title="2006 was 20 years ago.">13ya</span></sub></span>, with evaluations of their usefulness to the Haskell community, thoughts on what makes a good project, and predictions for <span class="date-range" title="The date range 2011–2013 lasted 2 years, ending 13 years ago."><span class="date-range" title="The date range 2011–2013 lasted 2 years, ending 13 years ago.">2011–2013<sub><span title="2011 was 15 years ago.">13ya</span></sub></span><sub><span title="2011 was 15 years ago.">13ya</span></sub></span>.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/haskell/summer-of-code#example-retrospective-debian" id="toc-example-retrospective-debian" class="prefetch-not link-page">Example Retrospective: Debian</a></li>
+<li><a href="/haskell/summer-of-code#judging-haskell-socs" id="toc-judging-haskell-socs" class="prefetch-not link-page">Judging Haskell SoCs</a>
+<ul>
+<li><a href="/haskell/summer-of-code#haskell-retrospective" id="toc-haskell-retrospective" class="prefetch-not link-page">Haskell Retrospective</a>
+<ul>
+<li><a href="/haskell/summer-of-code#section" id="toc-section" class="prefetch-not link-page">2006</a></li>
+<li><a href="/haskell/summer-of-code#section-1" id="toc-section-1" class="prefetch-not link-page">2007</a>
+<ul>
+<li><a href="/haskell/summer-of-code#see-also" id="toc-see-also" class="prefetch-not link-page">See Also</a></li>
+</ul></li>
+<li><a href="/haskell/summer-of-code#section-2" id="toc-section-2" class="prefetch-not link-page">2008</a>
+<ul>
+<li><a href="/haskell/summer-of-code#don-stewarts-view" id="toc-don-stewarts-view" class="prefetch-not link-page">Don Stewart’s View</a></li>
+<li><a href="/haskell/summer-of-code#see-also-1" id="toc-see-also-1" class="prefetch-not link-page">See Also</a></li>
+</ul></li>
+<li><a href="/haskell/summer-of-code#section-3" id="toc-section-3" class="prefetch-not link-page">2009</a></li>
+<li><a href="/haskell/summer-of-code#section-4" id="toc-section-4" class="prefetch-not link-page">2010</a>
+<ul>
+<li><a href="/haskell/summer-of-code#predicting-2010-results" id="toc-predicting-2010-results" class="prefetch-not link-page">Predicting <span class="date-range">2010<sub><span title="2010 was 16 years ago.">16ya</span></sub></span> Results</a></li>
+<li><a href="/haskell/summer-of-code#results" id="toc-results" class="prefetch-not link-page">2010 Results</a></li>
+</ul></li>
+<li><a href="/haskell/summer-of-code#section-5" id="toc-section-5" class="prefetch-not link-page">2011</a>
+<ul>
+<li><a href="/haskell/summer-of-code#predicting-2011-results" id="toc-predicting-2011-results" class="prefetch-not link-page">Predicting <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> Results</a></li>
+<li><a href="/haskell/summer-of-code#results-1" id="toc-results-1" class="prefetch-not link-page">2011 Results</a></li>
+</ul></li>
+<li><a href="/haskell/summer-of-code#section-6" id="toc-section-6" class="prefetch-not link-page">2012</a>
+<ul>
+<li><a href="/haskell/summer-of-code#predictions" id="toc-predictions" class="prefetch-not link-page">2012 Predictions</a></li>
+<li><a href="/haskell/summer-of-code#results-2" id="toc-results-2" class="prefetch-not link-page">2012 Results</a></li>
+</ul></li>
+<li><a href="/haskell/summer-of-code#section-7" id="toc-section-7" class="prefetch-not link-page">2013</a>
+<ul>
+<li><a href="/haskell/summer-of-code#predictions-1" id="toc-predictions-1" class="prefetch-not link-page">2013 Predictions</a></li>
+<li><a href="/haskell/summer-of-code#results-3" id="toc-results-3" class="prefetch-not link-page">2013 Results</a></li>
+</ul></li>
+<li><a href="/haskell/summer-of-code#lessons-learned" id="toc-lessons-learned" class="prefetch-not link-page">Lessons Learned</a></li>
+<li><a href="/haskell/summer-of-code#future-soc-proposals" id="toc-future-soc-proposals" class="prefetch-not link-page">Future SoC Proposals</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/haskell/summer-of-code#see-also-2" id="toc-see-also-2" class="prefetch-not link-page">See Also</a></li>
+<li><a href="/haskell/summer-of-code#external-links" id="toc-external-links" class="prefetch-not link-page">External Links</a></li>
+</ul>
+</div>
+</blockquote>

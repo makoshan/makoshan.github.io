@@ -234,7 +234,7 @@ No dice on sanded floors though.
         - a floor scrubbed with sand
         - a floor made of sandstone
 
-LessWrong 的用户往往聪明且博览群书，因此知道正确答案的人数可能是一般人群知识水平的上限。[投票结果](/docs/2013-07-22-sand-lwpoll.csv)*基本上*符合预期：
+LessWrong 的用户往往聪明且博览群书，因此知道正确答案的人数可能是一般人群知识水平的上限。[投票结果](https://gwern.net/docs/2013-07-22-sand-lwpoll.csv)*基本上*符合预期：
 
 1. 不知道：90%，知道：5%
 2. 不知道：66%，知道：3%
@@ -307,7 +307,7 @@ http://lesswrong.com/message/compose/?to=Vaniver -->
 [自行车脸](!Wikipedia "Bicycle face")据一本百科全书和其他几本书声称，是英国医学界为阻止女性骑自行车、控制她们而推广的一种疾病；但[少量一手资料几乎不支持其存在](https://plus.google.com/103530621949492999968/posts/iX58s8HxY5k)，它只是一个从几篇报纸专栏中得知的模糊概念，当然不是它被描绘成的那种反女权主义压迫工具。
 在他有趣的著作 _Fragments of an Anarchist Anthropology_ 中，Graeber 声称纳粹集会"受到了" Harvard 助威集会的"启发"，但没有提供任何来源；我对此进行了更深入的调查，得出结论认为这种联系是[真实但非常薄弱的](https://en.wikipedia.org/wiki/Talk:Pep_rally#Naziism_deletion:_reliability_of_info.3F)。
 一位女权主义者写道："这是一个女性还没有投票权的时代。如果她们上大学的话，就有可能患上'神经痛、子宫疾病、歇斯底里症及其他神经系统紊乱'（据 Harvard 妇科医生 Edward H. Clarke 所言）"；这是一段严重断章取义的引用，诽谤了一位拥有高尚且进步信念的人，正如我在[我的评论](https://plus.google.com/+RajiniRao/posts/3PXGwCrkUAB)中所指出的。
-一个更当代的例子来自 [Mt. Gox](!Wikipedia)：每个人都"知道"它最初是作为交易 _Magic: the Gathering_ 卡牌的交易所而创建的，直到我注意到我的深入在线调查没有找到任何硬证据，只有无尽的以讹传讹；真相，正如创始人 Jed McCaleb [所揭示的](/docs/2014-mccaleb)，结果相当出人意料。
+一个更当代的例子来自 [Mt. Gox](!Wikipedia)：每个人都"知道"它最初是作为交易 _Magic: the Gathering_ 卡牌的交易所而创建的，直到我注意到我的深入在线调查没有找到任何硬证据，只有无尽的以讹传讹；真相，正如创始人 Jed McCaleb [所揭示的](https://gwern.net/docs/2014-mccaleb)，结果相当出人意料。
 最后，我想提到几乎所有关于 [Thomas Robert Malthus](!Wikipedia) 的讨论都是错误的，表明说话者并没有真正读过 _An Essay_。）
 
 1945年时，人们对外太空的了解非常有限。没有人去过外太空并活着返回，无论是人类还是[猿猴](!Wikipedia "Monkeys and apes in space")还是狗。美国和苏联的太空计划才刚刚起步，正在争夺纳粹火箭计划的成果。从太空拍摄的照片要到一年后的1946年才有（使用 V-2 火箭，并验证了至少某些机械设备能在太空中工作），任何生命体要到1947年果蝇在 V-2 上成功存活后才会被发射升空，即两年后；猴子要到三年后才会被发射（Albert I，1948年6月）。因此，当我在 Roach 2010年出版的 [_Packing for Mars_](http://www.amazon.com/Packing-Mars-Curious-Science-Life/dp/B00AR2BCLW) 中"Star Crazy"一章读到大量讨论——甚至直到60年代，人们还严重担忧宇航员是否能在太空中保持理智而非自杀倾向——我感到非常着迷，这并非边缘猜测，而是基于航空领域令人不安的数据点所做的主流且合理的推断：
@@ -358,7 +358,7 @@ http://lesswrong.com/message/compose/?to=Vaniver -->
 >
 > ...Aerospace biologists had established that humans can function for a few seconds without gravity. But what about an hour, a day, a week? "People ask, Why?" says Britz of the era of the spacefaring chimp. "Mary, we just didn't know." What were the longer-term effects of space travel-not only of weightlessness, but of cosmic radiation? (High-energy atomic particles have been zinging through space at ferocious speeds since the Big Bang. Earth's magnetic field protects us by deflecting cosmic rays, but in space, these invisible bullets smash unimpeded through cells, causing mutations. It's serious enough that astronauts are classified as radiation workers.)
 >
-> Every mode of travel has its signature mental aberration. Eskimo hunters traveling alone on still, glassy waters are sometimes stricken by "kayak angst" - delusions that their boat is flooding or that the front end is either sinking or rising up out of the water. Of related interest: ["A Preliminary Report of Kayak-Angst Among the Eskimo of West Greenland"](/docs/1963-gussow.pdf) includes a discussion of Eskimo suicide motives and notes that 4 out of the 50 suicides investigated were elderly Eskimos who "took their lives as a direct result of uselessness due to old age." No mention was made of whether they cast themselves adrift on ice floes, as you sometimes hear, and whether travel by ice floe has its own unique anxiety syndrome.
+> Every mode of travel has its signature mental aberration. Eskimo hunters traveling alone on still, glassy waters are sometimes stricken by "kayak angst" - delusions that their boat is flooding or that the front end is either sinking or rising up out of the water. Of related interest: ["A Preliminary Report of Kayak-Angst Among the Eskimo of West Greenland"](https://gwern.net/docs/1963-gussow.pdf) includes a discussion of Eskimo suicide motives and notes that 4 out of the 50 suicides investigated were elderly Eskimos who "took their lives as a direct result of uselessness due to old age." No mention was made of whether they cast themselves adrift on ice floes, as you sometimes hear, and whether travel by ice floe has its own unique anxiety syndrome.
 
 我们在这里清楚地看到了对外太空影响的广泛且已知的恐惧、对辐射和自杀行为的担忧，以及与已知的航空极端情况的类比。虽然并非所有这些数据和推测在1945年都可供 Smith 参考（例如，航空调查是12年后才发表的），但合理地推测他在构思太空之痛时可能已将这些考虑在内。
 

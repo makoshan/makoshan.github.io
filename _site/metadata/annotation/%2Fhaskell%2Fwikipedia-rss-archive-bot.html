@@ -1,0 +1,31 @@
+<p><a href="/haskell/wikipedia-rss-archive-bot" id="link-bibliography-gwern-haskell-wikipedia-rss-archive-bot" class="prefetch-not link-page link-annotated" data-filesize-bytes="0" data-filesize-percentage="90">“Writing a Wikipedia RSS Link Archive Bot”</a></p>
+<p> <span class="author cite-author"><a href="/index#abstract" id="_i198YQWg" class="prefetch-not link-page" data-filesize-bytes="4146" data-filesize-percentage="91">Gwern</a></span></p>
+<p><span class="date cite-date" title="2009-11-02">2009</span></p>
+<p><span class="link-tags"><a href="/doc/cs/haskell/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to cs/haskell tag index">Haskell</a>, <a href="/doc/cs/linkrot/archiving/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to cs/linkrot/archiving tag index">Internet archiving</a>, <a href="/doc/tutorial/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to tutorial tag index">tutorial</a>, <a href="/doc/wikipedia/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to wikipedia tag index">Wikipedia</a></span></p>
+<blockquote>
+<div class="page-description-annotation">
+<p>Archiving using Wikipedia Recent Changes RSS feed (obsolete).</p>
+</div>
+<p>Continuation of the <span class="date-range">2009<sub><span title="2009 was 17 years ago.">17ya</span></sub></span> <a href="https://en.wikipedia.org/wiki/Haskell" id="_AC8VbUc5" class="link-live link-annotated-partial" data-url-iframe="https://en.m.wikipedia.org/wiki/Haskell#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Haskell#bodyContent" title="Haskell">Haskell</a> Wikipedia link archiving bot tutorial, extending it from operating on a pre-specified list of articles to instead archiving links <em>live</em> by using TagSoup parsing Wikipedia Recent Changes for newly-added external links which can be archived using WebCite in parallel. (<em>Note</em>: these tutorials are obsolete. WebCite is largely defunct, doing archiving this way is not advised, and WP link archiving is currently handled by <a href="https://en.wikipedia.org/wiki/Internet_Archive" id="_ECwLZp68" class="link-live" data-url-iframe="https://en.m.wikipedia.org/wiki/Internet_Archive#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg">Internet Archive</a>-specific plugins by the WMF. For a more general approach suitable for personal use, see the writeup of <code>archiver-bot</code> in <a href="/archiving" id="gwern-archiving" class="prefetch-not link-annotated link-page" data-filesize-bytes="88086" data-filesize-percentage="56" title="&#39;Archiving URLs&#39;, Gwern 2011">Archiving URLs</a>.)</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/haskell/wikipedia-rss-archive-bot#task" id="toc-task" class="prefetch-not link-page">Task</a></li>
+<li><a href="/haskell/wikipedia-rss-archive-bot#design" id="toc-design" class="prefetch-not link-page">Design</a>
+<ul>
+<li><a href="/haskell/wikipedia-rss-archive-bot#parsing-html" id="toc-parsing-html" class="prefetch-not link-page">Parsing HTML</a></li>
+<li><a href="/haskell/wikipedia-rss-archive-bot#rss" id="toc-rss" class="prefetch-not link-page">RSS</a></li>
+<li><a href="/haskell/wikipedia-rss-archive-bot#cli-interface" id="toc-cli-interface" class="prefetch-not link-page">CLI Interface</a>
+<ul>
+<li><a href="/haskell/wikipedia-rss-archive-bot#putting-things-together" id="toc-putting-things-together" class="prefetch-not link-page">Putting Things Together</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/haskell/wikipedia-rss-archive-bot#improving" id="toc-improving" class="prefetch-not link-page">Improving</a>
+<ul>
+<li><a href="/haskell/wikipedia-rss-archive-bot#hlint" id="toc-hlint" class="prefetch-not link-page">Hlint</a></li>
+<li><a href="/haskell/wikipedia-rss-archive-bot#parallelism" id="toc-parallelism" class="prefetch-not link-page">Parallelism</a></li>
+<li><a href="/haskell/wikipedia-rss-archive-bot#looping" id="toc-looping" class="prefetch-not link-page">Looping</a></li>
+<li><a href="/haskell/wikipedia-rss-archive-bot#rewriting-network-code" id="toc-rewriting-network-code" class="prefetch-not link-page">Rewriting Network Code</a></li>
+</ul></li>
+</ul>
+</div>
+</blockquote>

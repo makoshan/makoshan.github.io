@@ -281,7 +281,8 @@ imageLinkHeightWidthSet x@(Link (htmlid, classes, kvs) xs (p,t)) =
      let p' = T.unpack $ T.takeWhile (/='#') $ T.replace "https://gwern.net/" "/" p in
       if p' == "" then return x -- if it was an empty string after the `takeWhile` but wasn't before, then `p` was an anchor self-link, presumably, and we skip it.
       else
-        if (isImageFilename p' || isVideoFilename p') && isLocal (T.pack p') then
+        let isRemoteDocPath = "/doc/" `isPrefixOf` p' || "/docs/" `isPrefixOf` p' || "https://gwern.net/" `isPrefixOf` p' in
+        if (isImageFilename p' || isVideoFilename p') && isLocal (T.pack p') && not isRemoteDocPath then
         do exists <- doesFileExist $ tail p'
            if not exists then printRed "imageLinkHeightWidthSet: " >> putStr (show x) >> printRed " does not exist?" >> return x else
              do let p'' = if isVideoFilename p' then p' ++ "-poster.jpg" else p'
