@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
+      - main
+      - master
       - gwern-style
   workflow_dispatch:
 
@@ -59,7 +61,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # The _site directory is generated in the project root
+          # Use only the compiled Hakyll output directory as the Pages artifact.
           path: './_site'
 
   deploy:
