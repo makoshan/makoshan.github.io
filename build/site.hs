@@ -81,7 +81,7 @@ main =
 
     C.cd
 
-    -- Ensure index.generated.page exists before Hakyll scans the filesystem.
+    -- Ensure index.generated.md exists before Hakyll scans the filesystem.
     -- (Creating it inside `preprocess` is too late: the provider snapshot is already built.)
     writeOutHomepageIndexGenerated
 
@@ -108,23 +108,24 @@ main =
              preprocess $ printGreen ("Begin site compilation…" :: String)
 
              -- Only compile a small, known set of Markdown sources. This repo has many
-             -- non-page .md files (notes, skills, docs) without required YAML metadata.
+             -- non-page .md files without required YAML metadata.
              let targetsMd =
-                  -- fromGlob "blog/**/*.md"
-                  .||. fromGlob "_posts/**/*.md"
-                  .||. fromGlob "posts/**/*.md"
-                  .||. fromGlob "about.md"
-                  .||. fromGlob "resorter.md"
-             -- NOTE: include both top-level + nested pages (this glob implementation
-             -- does not treat `**/*.page` as matching top-level `*.page`).
-             let targetsPage = (fromGlob "*.page" .||. fromGlob "**/*.page")
-                                 .&&. complement "doc/www/**.page"
-                                 .&&. complement "gwern.net/**"
-                                 .&&. complement "scripts/**"
-                                 .&&. complement "build/**"
-                                 .&&. complement "static/**"
-                                 .&&. complement "index.page"
-                                 .&&. complement "index.generated.page"
+                  (fromGlob "*.md" .||. fromGlob "**/*.md")
+                  .&&. complement "README.md"
+                  .&&. complement "BUILD_INSTRUCTIONS.md"
+                  .&&. complement "Evolutionary-License.md"
+                  .&&. complement "docs/**" -- docs is mostly handled by explicit nested patterns below
+                  .&&. complement "index.md"
+                  .&&. complement "index.generated.md"
+                  .&&. complement "doc/www/**"
+                  .&&. complement "gwern.net/**"
+                  .&&. complement "scripts/**"
+                  .&&. complement "build/**"
+                  .&&. complement "static/**"
+                  .&&. complement "metadata/**"
+             let targetsPage = (fromGlob "docs/**/*.md" .||. fromGlob "blockchain/**/*.md" .||. fromGlob "newsletter/**/*.md")
+                                 .||. targetsMd
+                                 .&&. complement "index.generated.md"
              let targetsSingle = fromGlob $ head args'
 
              unless (null args') $
@@ -135,7 +136,14 @@ main =
                             _hakyllMeta <- getMetadata ident
                             indexpM <- getMetadataField ident "index"
                             let indexp = fromMaybe "" indexpM
-                            let indexSafeUrlCtx = if null indexp then mempty else constField "safe-url" "index"
+                            -- Only the homepage uses a generated source (`index.generated.md`)
+                            -- while routing to `/index`; force `$safe-url$` there so page-specific
+                            -- CSS/JS conditions behave as if the page were named `index`.
+                            -- Other index-like pages (eg. `/blog/index`) should not inherit this.
+                            let indexSafeUrlCtx =
+                                  if toFilePath ident == "index.generated.md"
+                                  then constField "safe-url" "index"
+                                  else mempty
                             inlinedHead <- unsafeCompiler $ readFile "static/include/inlined-head.html"
                             inlinedAssets <- unsafeCompiler $ readFile "static/include/inlined-asset-links.html"
                             navbarHtml <- unsafeCompiler $ readFile "static/include/navbar.html"
@@ -154,10 +162,10 @@ main =
                               >>= imgUrls
 
              -- Homepage: compile /index and /index.html from the generated source.
-             match "index.generated.page" $ do
+             match "index.generated.md" $ do
                  route $ constRoute "index"
                  compile compileMarkdown
-             version "html-index" $ match "index.generated.page" $ do
+             version "html-index" $ match "index.generated.md" $ do
                  route $ constRoute "index.html"
                  compile compileMarkdown
 
@@ -171,10 +179,10 @@ main =
                  route $ constRoute "design.html"
                  compile compileMarkdown
 
-             version "alias-changelog" $ match "Changelog copy.page" $ do
+             version "alias-changelog" $ match "Changelog copy.md" $ do
                  route $ constRoute "changelog"
                  compile compileMarkdown
-             version "alias-changelog-html" $ match "Changelog copy.page" $ do
+             version "alias-changelog-html" $ match "Changelog copy.md" $ do
                  route $ constRoute "changelog.html"
                  compile compileMarkdown
 
@@ -186,14 +194,14 @@ main =
                    setExtension ""
 
              if null args'
-               then do
+                 then do
                  match targetsMd $ do
                    route pageRoute
                    compile compileMarkdown
                  match targetsPage $ do
                    route pageRoute
                    compile compileMarkdown
-               else do
+                 else do
                  match targetsSingle $ do
                    route pageRoute
                    compile compileMarkdown
@@ -323,33 +331,31 @@ rawMetadataField k = field k $ \item -> do
 stripSourceExt :: FilePath -> FilePath
 stripSourceExt p
   | ".md" `isSuffixOf` p   = delete ".md" p
-  | ".page" `isSuffixOf` p = delete ".page" p
   | otherwise              = p
 
 sourcePathToHtml :: FilePath -> FilePath
 sourcePathToHtml p
   | ".md" `isSuffixOf` p   = replaceChecked ".md" ".html" p
-  | ".page" `isSuffixOf` p = replaceChecked ".page" ".html" p
   | otherwise              = p
 
--- Generate index.generated.page from index.page, appending an index of all *.page
--- files in the repo (excluding build/output directories). This keeps the homepage
+-- Generate index.generated.md from index.md, appending an index of all *.md files in the
+-- repo (excluding build/output directories). This keeps the homepage
 -- up to date without hardcoding links.
 writeOutHomepageIndexGenerated :: IO ()
 writeOutHomepageIndexGenerated = do
-  src <- readFile "index.page"
+  src <- readFile "index.md"
   files <- listFilesRec "."
   let pages = sort $ filter isIndexablePage files
   let rendered = ensureIndexMeta src ++ "\n\n" ++ renderAutoIndex pages ++ "\n"
-  writeFile "index.generated.page" rendered
+  writeFile "index.generated.md" rendered
   where
     isIndexablePage :: FilePath -> Bool
     isIndexablePage p =
-      takeExtension p == ".page" &&
-      p /= "./index.page" &&
-      p /= "./index.generated.page" &&
+      takeExtension p == ".md" &&
+      p /= "./index.md" &&
+      p /= "./index.generated.md" &&
       not ("./doc/www/" `isPrefixOf` p) &&
-      takeFileName p /= "index.generated.page"
+      takeFileName p /= "index.generated.md"
 
     skipDirName :: FilePath -> Bool
     skipDirName d = d `elem` ["_site", "_cache", "dist-newstyle", ".git", "build", "static", "metadata", "gwern.net", "scripts"]

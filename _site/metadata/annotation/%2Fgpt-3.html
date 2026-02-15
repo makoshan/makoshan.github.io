@@ -1,0 +1,157 @@
+<p><a href="/gpt-3" id="link-bibliography-gwern-gpt-3" class="prefetch-not link-page link-annotated" data-filesize-bytes="0" data-filesize-percentage="90">“GPT-3 Creative Fiction”</a></p>
+<p> <span class="author cite-author"><a href="/index#abstract" id="_i198YQWg" class="prefetch-not link-page" data-filesize-bytes="4146" data-filesize-percentage="91">Gwern</a></span></p>
+<p><span class="date cite-date" title="2020-06-19">2020</span></p>
+<p><span class="link-tags"><a href="/doc/ai/nn/transformer/gpt/fiction/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to ai/nn/transformer/gpt/fiction tag index">GPT fiction</a>, <a href="/doc/ai/nn/transformer/gpt/poetry/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to ai/nn/transformer/gpt/poetry tag index">GPT poetry</a>, <a href="/doc/ai/scaling/index" class="prefetch-not link-tag link-page link-annotated icon-not" rel="tag" title="Link to ai/scaling tag index">AI scaling</a>, <a href="/doc/fiction/humor/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to fiction/humor tag index">humor</a>, <a href="/doc/philosophy/mind/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to philosophy/mind tag index">mind</a></span></p>
+<blockquote>
+<figure>
+<img src="/doc/ai/text-style-transfer/2020-brown-gpt3-figure12-largermodelsmetalearn.jpg" title="Figure 1.2 from the OpenAI GPT-3 paper Brown et al 2020, showing how the instructability of GPT models using examples of desired results increases greatly for the larger models, showing the emergence of learning how to learn tasks (meta-learning) and the blessings of scale." id="_ApC85Cbq" class="float-right page-thumbnail invert-not outline" width="0" height="0" />
+</figure>
+<div class="page-description-annotation">
+<p>Creative writing by OpenAI’s <a href="https://arxiv.org/abs/2005.14165#openai" id="_qIz3Xzu3" data-href-mobile="https://arxiv.org/html/2005.14165?fallback=original#openai" data-link-icon="openai" data-link-icon-type="svg">GPT-3</a> model, demonstrating poetry, dialogue, puns, literary parodies, and storytelling. Plus advice on effective GPT-3 prompt programming &amp; avoiding common errors.</p>
+</div>
+<p>I continue my AI poetry generation experiments with OpenAI’s GPT-3 (released mid-2020), which is 116× larger, and much more powerful, than the 2019 <a href="/doc/ai/nn/transformer/gpt/2/2019-radford.pdf#openai" id="gpt-2-paper" class="prefetch-not link-annotated" data-filesize-bytes="347127" data-filesize-percentage="49" data-link-icon="openai" data-link-icon-type="svg" title="&#39;Language Models are Unsupervised Multitask Learners&#39;, Radford et al 2019">GPT-2</a>. GPT-3, however, is not merely a quantitative tweak yielding “GPT-2 but better”—it is qualitatively different, exhibiting eerie runtime learning capabilities allowing even the raw model, with zero finetuning, to “meta-learn” many textual tasks purely by example or instruction. One does not train or program GPT-3 in a normal way, but one engages in dialogue and writes prompts to teach GPT-3 what one wants.</p>
+<p>Experimenting through the <a href="https://en.wikipedia.org/wiki/OpenAI" id="_ZGqmYOZx" class="link-live link-annotated-partial" data-url-iframe="https://en.m.wikipedia.org/wiki/OpenAI#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/OpenAI#bodyContent" title="OpenAI">OpenAI</a> Beta API in June 2020, I find that GPT-3 does not just match my <a href="/gpt-2#gpt-2-1-5b" id="gwern-gpt-2--gpt-2-1-5b" class="prefetch-not link-page" data-filesize-bytes="406164" data-filesize-percentage="88">finetuned GPT-2-1.5b-poetry</a> for poem-writing quality, but exceeds it, while being versatile in handling <a href="/gpt-3#poetry" id="gwern-gpt-3--poetry" class="prefetch-not link-page">poetry</a>, <a href="/gpt-3#tom-swifties" id="gwern-gpt-3--tom-swifties" class="prefetch-not link-page">Tom Swifty puns</a>, science fiction, dialogue like Turing’s <a href="/gpt-3#turing-dialogue" id="gwern-gpt-3--turing-dialogue" class="prefetch-not link-page">Turing-test dialogue</a>, <a href="/gpt-3#literary-parodies" id="gwern-gpt-3--literary-parodies" class="prefetch-not link-page">literary style parodies</a>… As the <em>pièce de résistance</em>, I recreate Stanislaw Lem’s <em>Cyberiad</em>’s <a href="/gpt-3#stanislaw-lems-cyberiad" id="gwern-gpt-3--stanislaw-lems-cyberiad" class="prefetch-not link-page">“Trurl’s Electronic Bard”</a> poetry using GPT-3. (Along the way, I document instances of how the BPE text encoding <a href="/gpt-3#bpes" id="gwern-gpt-3--bpes" class="prefetch-not link-page">unnecessarily damages</a> GPT-3’s performance on a variety of tasks, how to best elicit the highest-quality responses, common errors people make in using GPT-3, and test out GPT-3’s improvements in NN weak points like logic or commonsense knowledge.)</p>
+<p>GPT-3’s samples are not just close to human level: they are creative, witty, deep, meta, and often beautiful. They demonstrate an ability to handle abstractions, like style parodies, I have not seen in GPT-2 at all. Chatting with GPT-3 feels uncannily like chatting with a human. I was impressed by the results reported in the GPT-3 paper, and after spending a week trying it out, I remain impressed.</p>
+<p>This page records GPT-3 samples I generated in my explorations, and thoughts on <a href="/gpt-3#prompts-as-programming" id="gwern-gpt-3--prompts-as-programming" class="prefetch-not link-annotated link-page" data-filesize-bytes="0" data-filesize-percentage="90" title="&#39;GPT-3 Creative Fiction § Prompts As Programming&#39;, Gwern 2020">how to use GPT-3</a> and its remaining <a href="/gpt-3#weaknesses" id="gwern-gpt-3--weaknesses" class="prefetch-not link-page">weaknesses</a>. I hope you enjoy them even a tenth as much as I enjoyed testing GPT-3 and watching the completions scroll across my screen.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/gpt-3#what-benchmarks-miss-demos" id="toc-what-benchmarks-miss-demos" class="prefetch-not link-page">What Benchmarks Miss: Demos</a></li>
+<li><a href="/gpt-3#gpt-3-implications" id="toc-gpt-3-implications" class="prefetch-not link-page">GPT-3 Implications</a></li>
+<li><a href="/gpt-3#quality" id="toc-quality" class="prefetch-not link-page">Quality</a></li>
+<li><a href="/gpt-3#prompts-as-programming" id="toc-prompts-as-programming" class="prefetch-not link-annotated link-page" data-filesize-bytes="0" data-filesize-percentage="90" title="&#39;GPT-3 Creative Fiction § Prompts As Programming&#39;, Gwern 2020">Prompts As Programming</a>
+<ul>
+<li><a href="/gpt-3#finetuning" id="toc-finetuning" class="prefetch-not link-page">Finetuning</a></li>
+<li><a href="/gpt-3#playground" id="toc-playground" class="prefetch-not link-page">Playground</a></li>
+<li><a href="/gpt-3#effective-prompt-programming" id="toc-effective-prompt-programming" class="prefetch-not link-page">Effective Prompt Programming</a></li>
+</ul></li>
+<li><a href="/gpt-3#weaknesses" id="toc-weaknesses" class="prefetch-not link-page">Weaknesses</a>
+<ul>
+<li><a href="/gpt-3#small-context-window" id="toc-small-context-window" class="prefetch-not link-page">Small Context Window</a></li>
+<li><a href="/gpt-3#repetitiondivergence-sampling" id="toc-repetitiondivergence-sampling" class="prefetch-not link-page">Repetition/Divergence Sampling</a></li>
+<li><a href="/gpt-3#bpes" id="toc-bpes" class="prefetch-not link-page">BPEs</a></li>
+</ul></li>
+<li><a href="/gpt-3#copyright" id="toc-copyright" class="prefetch-not link-page">Copyright</a></li>
+<li><a href="/gpt-3#format" id="toc-format" class="prefetch-not link-page">Format</a></li>
+<li><a href="/gpt-3#failure-cases" id="toc-failure-cases" class="prefetch-not link-page">Failure Cases</a></li>
+<li><a href="/gpt-3#nonfiction" id="toc-nonfiction" class="prefetch-not link-page">Nonfiction</a></li>
+<li><a href="/gpt-3#dialogue" id="toc-dialogue" class="prefetch-not link-page">Dialogue</a>
+<ul>
+<li><a href="/gpt-3#shoggoth-cat" id="toc-shoggoth-cat" class="prefetch-not link-page">Shoggoth-Cat</a></li>
+<li><a href="/gpt-3#pun-explanations" id="toc-pun-explanations" class="prefetch-not link-page">Pun Explanations</a></li>
+<li><a href="/gpt-3#turing-dialogue" id="toc-turing-dialogue" class="prefetch-not link-page">Turing Dialogue</a></li>
+<li><a href="/gpt-3#folktales" id="toc-folktales" class="prefetch-not link-page">Folktales</a></li>
+<li><a href="/gpt-3#miscellaneous-dialogues" id="toc-miscellaneous-dialogues" class="prefetch-not link-page">Miscellaneous Dialogues</a></li>
+</ul></li>
+<li><a href="/gpt-3#humor" id="toc-humor" class="prefetch-not link-page">Humor</a>
+<ul>
+<li><a href="/gpt-3#tom-swifties" id="toc-tom-swifties" class="prefetch-not link-page">Tom Swifties</a></li>
+<li><a href="/gpt-3#navy-seal-copypasta" id="toc-navy-seal-copypasta" class="prefetch-not link-page">Navy Seal Copypasta</a>
+<ul>
+<li><a href="/gpt-3#navy-seal-copypasta-parodies" id="toc-navy-seal-copypasta-parodies" class="prefetch-not link-page">Navy Seal Copypasta Parodies</a></li>
+</ul></li>
+<li><a href="/gpt-3#magical-realism-story-premises" id="toc-magical-realism-story-premises" class="prefetch-not link-page">Magical Realism Story Premises</a></li>
+<li><a href="/gpt-3#job-application-letters" id="toc-job-application-letters" class="prefetch-not link-page">Job Application Letters</a></li>
+<li><a href="/gpt-3#horoscopes" id="toc-horoscopes" class="prefetch-not link-page">Horoscopes</a></li>
+<li><a href="/gpt-3#dad-jokes" id="toc-dad-jokes" class="prefetch-not link-page">Dad Jokes</a></li>
+<li><a href="/gpt-3#literary-parodies" id="toc-literary-parodies" class="prefetch-not link-page">Literary Parodies</a>
+<ul>
+<li><a href="/gpt-3#failure-cases-1" id="toc-failure-cases-1" class="prefetch-not link-page">Failure Cases</a></li>
+<li><a href="/gpt-3#successes" id="toc-successes" class="prefetch-not link-page">Successes</a></li>
+<li><a href="/gpt-3#single-line-style-transfer" id="toc-single-line-style-transfer" class="prefetch-not link-page">Single Line Style Transfer</a></li>
+<li><a href="/gpt-3#zero-shot-style-transfer" id="toc-zero-shot-style-transfer" class="prefetch-not link-page">Zero-Shot Style Transfer</a></li>
+<li><a href="/gpt-3#beowulf-wodehouse" id="toc-beowulf-wodehouse" class="prefetch-not link-page"><em>Beowulf</em>, Wodehouse</a></li>
+<li><a href="/gpt-3#book-of-jobs" id="toc-book-of-jobs" class="prefetch-not link-page">Book of Jobs</a></li>
+</ul></li>
+<li><a href="/gpt-3#devils-dictionary-of-science" id="toc-devils-dictionary-of-science" class="prefetch-not link-page">Devil’s Dictionary Of Science</a></li>
+<li><a href="/gpt-3#but-for-me-it-was-tuesday" id="toc-but-for-me-it-was-tuesday" class="prefetch-not link-page">But For Me It Was Tuesday</a></li>
+<li><a href="/gpt-3#rick-morty-high-iq-copypasta" id="toc-rick-morty-high-iq-copypasta" class="prefetch-not link-page"><em>Rick &amp; Morty</em> High IQ Copypasta</a></li>
+<li><a href="/gpt-3#major-generals-song" id="toc-major-generals-song" class="prefetch-not link-page">Major-General’s Song</a></li>
+<li><a href="/gpt-3#the-robots-marching-song" id="toc-the-robots-marching-song" class="prefetch-not link-page">The Robots’ Marching Song</a></li>
+<li><a href="/gpt-3#indiana-jones-tenure-denial" id="toc-indiana-jones-tenure-denial" class="prefetch-not link-page">Indiana Jones Tenure Denial</a></li>
+<li><a href="/gpt-3#a-license-to-x" id="toc-a-license-to-x" class="prefetch-not link-page">A License To X</a></li>
+</ul></li>
+<li><a href="/gpt-3#poetry" id="toc-poetry" class="prefetch-not link-page">Poetry</a>
+<ul>
+<li><a href="/gpt-3#miscellaneous-poetry" id="toc-miscellaneous-poetry" class="prefetch-not link-page">Miscellaneous Poetry</a></li>
+<li><a href="/gpt-3#the-owl-and-the-pussycat-leer" id="toc-the-owl-and-the-pussycat-leer" class="prefetch-not link-page">“The Owl and the Pussycat”, Leer</a></li>
+<li><a href="/gpt-3#uber-poem" id="toc-uber-poem" class="prefetch-not link-page">Uber-Poem</a></li>
+<li><a href="/gpt-3#the-universe-is-a-glitch" id="toc-the-universe-is-a-glitch" class="prefetch-not link-page">The Universe Is A Glitch</a></li>
+<li><a href="/gpt-3#allen-ginsberg" id="toc-allen-ginsberg" class="prefetch-not link-page">Allen Ginsberg</a>
+<ul>
+<li><a href="/gpt-3#moloch" id="toc-moloch" class="prefetch-not link-page">Moloch</a></li>
+<li><a href="/gpt-3#howl" id="toc-howl" class="prefetch-not link-page">Howl</a></li>
+</ul></li>
+<li><a href="/gpt-3#ee-cummings" id="toc-ee-cummings" class="prefetch-not link-page">E.E. Cummings</a>
+<ul>
+<li><a href="/gpt-3#all-in-green-went-my-love-riding" id="toc-all-in-green-went-my-love-riding" class="prefetch-not link-page">All In Green Went My Love Riding</a></li>
+<li><a href="/gpt-3#grasshopper" id="toc-grasshopper" class="prefetch-not link-page">Grasshopper</a></li>
+</ul></li>
+<li><a href="/gpt-3#the-library-of-babel" id="toc-the-library-of-babel" class="prefetch-not link-page">The Library of Babel</a></li>
+<li><a href="/gpt-3#transformer-poetry" id="toc-transformer-poetry" class="prefetch-not link-page">Transformer Poetry</a>
+<ul>
+<li><a href="/gpt-3#percy-bysshe-shelley" id="toc-percy-bysshe-shelley" class="prefetch-not link-page">Percy Bysshe Shelley</a></li>
+<li><a href="/gpt-3#elizabeth-bishop" id="toc-elizabeth-bishop" class="prefetch-not link-page">Elizabeth Bishop</a></li>
+<li><a href="/gpt-3#robert-frost" id="toc-robert-frost" class="prefetch-not link-page">Robert Frost</a></li>
+<li><a href="/gpt-3#shel-silverstein" id="toc-shel-silverstein" class="prefetch-not link-page">Shel Silverstein</a></li>
+<li><a href="/gpt-3#emily-dickinson" id="toc-emily-dickinson" class="prefetch-not link-page">Emily Dickinson</a></li>
+<li><a href="/gpt-3#dante-alighieri" id="toc-dante-alighieri" class="prefetch-not link-page">Dante Alighieri</a></li>
+<li><a href="/gpt-3#john-mccrae" id="toc-john-mccrae" class="prefetch-not link-page">John McCrae</a></li>
+<li><a href="/gpt-3#walt-whitman" id="toc-walt-whitman" class="prefetch-not link-page">Walt Whitman</a></li>
+<li><a href="/gpt-3#william-blake" id="toc-william-blake" class="prefetch-not link-page">William Blake</a></li>
+<li><a href="/gpt-3#ursula-k-le-guin" id="toc-ursula-k-le-guin" class="prefetch-not link-page">Ursula K. Le Guin</a></li>
+<li><a href="/gpt-3#chuang-tzu" id="toc-chuang-tzu" class="prefetch-not link-page">Chuang Tzu</a></li>
+<li><a href="/gpt-3#william-shakespeare" id="toc-william-shakespeare" class="prefetch-not link-page">William Shakespeare</a></li>
+<li><a href="/gpt-3#dr-seuss-oh-the-places-youll-go" id="toc-dr-seuss-oh-the-places-youll-go" class="prefetch-not link-page">Dr. Seuss (<em>Oh, The Places You’ll Go</em>)</a></li>
+<li><a href="/gpt-3#t-s-eliot" id="toc-t-s-eliot" class="prefetch-not link-page">T.S. Eliot</a></li>
+<li><a href="/gpt-3#mary-oliver" id="toc-mary-oliver" class="prefetch-not link-page">Mary Oliver</a></li>
+<li><a href="/gpt-3#rumi" id="toc-rumi" class="prefetch-not link-page">Rumi</a></li>
+<li><a href="/gpt-3#henry-wadsworth-longfellow" id="toc-henry-wadsworth-longfellow" class="prefetch-not link-page">Henry Wadsworth Longfellow</a></li>
+<li><a href="/gpt-3#maya-angelou" id="toc-maya-angelou" class="prefetch-not link-page">Maya Angelou</a></li>
+<li><a href="/gpt-3#william-butler-yeats" id="toc-william-butler-yeats" class="prefetch-not link-page">William Butler Yeats</a></li>
+<li><a href="/gpt-3#dylan-thomas" id="toc-dylan-thomas" class="prefetch-not link-page">Dylan Thomas</a></li>
+<li><a href="/gpt-3#samuel-taylor-coleridge" id="toc-samuel-taylor-coleridge" class="prefetch-not link-page">Samuel Taylor Coleridge</a></li>
+<li><a href="/gpt-3#sylvia-plath" id="toc-sylvia-plath" class="prefetch-not link-page">Sylvia Plath</a></li>
+<li><a href="/gpt-3#edgar-allen-poe" id="toc-edgar-allen-poe" class="prefetch-not link-page">Edgar Allen Poe</a></li>
+<li><a href="/gpt-3#sara-teasdale" id="toc-sara-teasdale" class="prefetch-not link-page">Sara Teasdale</a></li>
+<li><a href="/gpt-3#dr-seuss-the-lorax" id="toc-dr-seuss-the-lorax" class="prefetch-not link-page">Dr. Seuss (<em>The Lorax</em>)</a></li>
+</ul></li>
+<li><a href="/gpt-3#seven-secular-sermons" id="toc-seven-secular-sermons" class="prefetch-not link-page">Seven Secular Sermons</a></li>
+<li><a href="/gpt-3#acrostics" id="toc-acrostics" class="prefetch-not link-page">Acrostics</a></li>
+<li><a href="/gpt-3#chinese-translation" id="toc-chinese-translation" class="prefetch-not link-page">Chinese Translation</a></li>
+<li><a href="/gpt-3#finance-acrostics" id="toc-finance-acrostics" class="prefetch-not link-page">Finance Acrostics</a></li>
+<li><a href="/gpt-3#cateban-upon-setebos" id="toc-cateban-upon-setebos" class="prefetch-not link-page">Cateban Upon Setebos</a></li>
+<li><a href="/gpt-3#tanka-fujiwara-no-teika" id="toc-tanka-fujiwara-no-teika" class="prefetch-not link-page">Tanka: Fujiwara No Teika</a></li>
+</ul></li>
+<li><a href="/gpt-3#stanislaw-lems-cyberiad" id="toc-stanislaw-lems-cyberiad" class="prefetch-not link-page">Stanislaw Lem’s <em>Cyberiad</em></a>
+<ul>
+<li><a href="/gpt-3#general" id="toc-general" class="prefetch-not link-page">General</a></li>
+<li><a href="/gpt-3#s-poems" id="toc-s-poems" class="prefetch-not link-page">‘S’ Poems</a>
+<ul>
+<li><a href="/gpt-3#s-poems-the-second-sally" id="toc-s-poems-the-second-sally" class="prefetch-not link-page">‘S’ Poems: The Second Sally</a></li>
+</ul></li>
+<li><a href="/gpt-3#g-poems" id="toc-g-poems" class="prefetch-not link-page">‘G’ Poems</a></li>
+<li><a href="/gpt-3#love-and-tensor-algebra" id="toc-love-and-tensor-algebra" class="prefetch-not link-page">Love And Tensor Algebra</a></li>
+<li><a href="/gpt-3#omake" id="toc-omake" class="prefetch-not link-page">Omake</a></li>
+</ul></li>
+<li><a href="/gpt-3#rhyming" id="toc-rhyming" class="prefetch-not link-page">Rhyming</a>
+<ul>
+<li><a href="/gpt-3#ipa-rhyme-annotations" id="toc-ipa-rhyme-annotations" class="prefetch-not link-page">IPA Rhyme Annotations</a></li>
+<li><a href="/gpt-3#prompted-rhymes" id="toc-prompted-rhymes" class="prefetch-not link-page">Prompted Rhymes</a></li>
+</ul></li>
+<li><a href="/gpt-3#miscellaneous" id="toc-miscellaneous" class="prefetch-not link-page">Miscellaneous</a>
+<ul>
+<li><a href="/gpt-3#dare-to-be-stupid" id="toc-dare-to-be-stupid" class="prefetch-not link-page">Dare To Be Stupid?</a></li>
+<li><a href="/gpt-3#my-little-pony" id="toc-my-little-pony" class="prefetch-not link-page"><em>My Little Pony</em></a></li>
+<li><a href="/gpt-3#harry-potter-and-the-methods-of-rationality" id="toc-harry-potter-and-the-methods-of-rationality" class="prefetch-not link-page"><em>Harry Potter And The Methods Of Rationality</em></a></li>
+<li><a href="/gpt-3#illuminatus-band-names" id="toc-illuminatus-band-names" class="prefetch-not link-page"><em>Illuminatus!</em> Band Names</a></li>
+<li><a href="/gpt-3#it-was-the-best-of-times-it-was-the-blurst-of-times" id="toc-it-was-the-best-of-times-it-was-the-blurst-of-times" class="prefetch-not link-page">’It Was The Best Of Times, It Was The <em>Blurst</em> Of Times’‽</a></li>
+<li><a href="/gpt-3#twdne" id="toc-twdne" class="prefetch-not link-page">TWDNE</a></li>
+<li><a href="/gpt-3#the-author-of-the-don-quixote" id="toc-the-author-of-the-don-quixote" class="prefetch-not link-page">The Author Of The <em>Don Quixote</em></a></li>
+<li><a href="/gpt-3#fanfiction-crossover-dbznarnia" id="toc-fanfiction-crossover-dbznarnia" class="prefetch-not link-page">Fanfiction Crossover (DBZ/<em>Narnia</em>)</a></li>
+<li><a href="/gpt-3#a-new-kind-of-scribing" id="toc-a-new-kind-of-scribing" class="prefetch-not link-page">A New Kind of Scribing</a></li>
+<li><a href="/gpt-3#bad-analogies" id="toc-bad-analogies" class="prefetch-not link-page">Bad Analogies</a></li>
+</ul></li>
+<li><a href="/gpt-3#external-links" id="toc-external-links" class="prefetch-not link-page">External Links</a></li>
+</ul>
+</div>
+</blockquote>

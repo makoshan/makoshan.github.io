@@ -31,11 +31,15 @@ root = unsafePerformIO $ do
       mRoot2 <- findRootMaybe (takeDirectory exe)
       case mRoot2 of
         Just r  -> return r
-        Nothing -> error "Config.Misc.root: could not find site root (missing index.page in all parent directories)"
+        Nothing -> error "Config.Misc.root: could not find site root (missing index.md/index.page in all parent directories)"
   where
     findRootMaybe :: FilePath -> IO (Maybe FilePath)
     findRootMaybe d = do
-      ok <- doesFileExist (d </> "index.page")
+      -- The upstream Gwern.net build expects `index.page`. This fork has migrated
+      -- many sources to Markdown and uses `index.md` instead.
+      okPage <- doesFileExist (d </> "index.page")
+      okMd   <- doesFileExist (d </> "index.md")
+      let ok = okPage || okMd
       if ok
         then return (Just d)
         else do

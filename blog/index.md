@@ -1,6 +1,6 @@
 ---
 title: Blog Posts
-description: 'Index of my shorter or off-site writings, presented as annotations. (Sorted in reverse chronological order.)'
+description: 'Index of my shorter writings. (Sorted in reverse chronological order.)'
 created: 2009-01-27
 modified: 2024-01-01
 status: finished
@@ -11,7 +11,7 @@ placeholder: True
 index: True
 ...
 
-Reverse-chronological index of my short-form writings (including off-site):
+Reverse-chronological index of my short-form writings:
 
 # 2024 {#2024}
 
@@ -29,3 +29,4 @@ Reverse-chronological index of my short-form writings (including off-site):
 .include-even-when-collapsed
 data-include-selector-not="#return-to-blog-index-link"}**
 :::
+

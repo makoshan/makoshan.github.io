@@ -872,10 +872,10 @@ div.poem span.caesura-mark {
   <!-- Hint at necessary third-party domains -->
   <link rel="preconnect" href="https://www.googletagmanager.com">
 
-  <meta name="title" content="警报数据的时间趋势">
-  <meta name="citation_title" content="警报数据的时间趋势">
-  <meta name="og:title" content="警报数据的时间趋势">
-  <meta name="twitter:title" content="警报数据的时间趋势">
+  <meta name="title" content="Google Alerts 的结果变化">
+  <meta name="citation_title" content="Google Alerts 的结果变化">
+  <meta name="og:title" content="Google Alerts 的结果变化">
+  <meta name="twitter:title" content="Google Alerts 的结果变化">
   <meta name="generator" content="https://github.com/gwern/gwern.net/">
   <meta name="creator" content="gwern.net">
   
@@ -890,31 +890,32 @@ div.poem span.caesura-mark {
   <meta name="twitter:site" content="gwern.net">
   <meta name="og:site" content="gwern.net">
   <meta name="og:type" content="article">
-  <meta name="description" content="Google Alerts 每年返回的结果是否在减少？一项统计调查">
-  <meta name="og:description" content="Google Alerts 每年返回的结果是否在减少？一项统计调查">
-  <meta property="og:image" content="https://gwern.net/static/img/logo/logo-whitebg-large-border.png">
-  <meta property="og:image:alt" content="Default thumbnail text: the Gwern.net site logo, a logotype of a large blackletter fraktur capital letter &#39;G&#39; on a white background.">
+  <meta name="description" content="Google Alerts 近几年返回更少结果吗？一项统计调查">
+  <meta name="og:description" content="Google Alerts 近几年返回更少结果吗？一项统计调查">
+  <meta property="og:image" content="https://gwern.net/doc/technology/google/alerts/gwern-linksperemail.png">
+  <meta property="og:image:alt" content="每封 Google Alerts 邮件中的链接数，随时间变化（2007–2013）">
+  
   <meta property="og:image:height" content="530">
   <meta property="og:image:width" content="441">
   <meta property="gwern:thumbnail:css-classes" content>
   <meta name="keywords" content>
-  <meta name="dc.date.issued" content="1 July 2013">
+  <meta name="dc.date.issued" content="2013-07-01">
   
-  <meta name="citation_publication_date" content="1 July 2013">
-  <meta name="dcterms.modified" content>
+  <meta name="citation_publication_date" content="2013-07-01">
+  <meta name="dcterms.modified" content="2013-11-26">
   <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
   <meta name="dcterms.rights" content="CC PD-0">
   <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
-  <link rel="canonical" href="https://gwern.net/Google-Alerts">
-  <meta name="citation_fulltext_html_url" content="https://gwern.net/Google-Alerts">
-  <meta name="og:url" content="https://gwern.net/Google-Alerts">
-  <link rel="alternate" type="text/markdown" href="https://gwern.net/Google-Alerts.md" title="Markdown source of ‘警报数据的时间趋势’ page"> <!-- Also available via Accept header -->
-  <meta name="page-body-classes" content="page-google alerts dropcaps-de-zs">
+  <link rel="canonical" href="https://gwern.net/google-alerts">
+  <meta name="citation_fulltext_html_url" content="https://gwern.net/google-alerts">
+  <meta name="og:url" content="https://gwern.net/google-alerts">
+  <link rel="alternate" type="text/markdown" href="https://gwern.net/google-alerts.md" title="Markdown source of ‘Google Alerts 的结果变化’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-google-alerts dropcaps-yinit">
   <meta name="citation_fulltext_world_readable" content>
   <meta name="color-scheme" content="light dark">
 
   
-  <title>警报数据的时间趋势 · Gwern.net</title>
+  <title>Google Alerts 的结果变化 · Gwern.net</title>
   
 
   <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
@@ -941,7 +942,7 @@ div.poem span.caesura-mark {
   </noscript>
 </head>
 
-<body class="page-google alerts dropcaps-de-zs">
+<body class="page-google-alerts dropcaps-yinit">
   <!-- Inlined asset links (no SSI): injected by Hakyll from static/include/inlined-asset-links.html -->
   <link rel="stylesheet" href="/static/css/style.css?v=1770491984" media="print" onload="this.media=`all`">
 <script src="/static/js/script.js?v=1770491982" defer></script>
@@ -958,7 +959,7 @@ div.poem span.caesura-mark {
         <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
         <a class="design link-page link-annotated" href="/design" title="Design and implementation notes">Design</a>
         <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
-        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="blog link-page link-annotated" href="/blog/index" title="Blog index: short posts">Blog</a>
         <a class="links link-page" href="/Links" title="Links page">Links</a>
         <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
         <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
@@ -969,19 +970,19 @@ div.poem span.caesura-mark {
     <article>
 
       <header>
-        <h1>警报数据的时间趋势</h1>
+        <h1>Google Alerts 的结果变化</h1>
       </header>
 
       
       <div class="markdownBody" id="page-metadata">
           
-        <div class="page-description"><p>Google Alerts 每年返回的结果是否在减少？一项统计调查</p></div>
+        <div class="page-description"><p>Google Alerts 近几年返回更少结果吗？一项统计调查</p></div>
         <div class="page-metadata-fields">
             
-            
+            <span class="page-date-range"><span class="date-range" title="The date range 2013-07-01–2013-11-26 lasted 149 days, ending 13 years ago.">2013-07-01–2013-11-26<sub><span title="2013-07-01 was 13 years ago.">13ya</span></sub></span></span>
             <span class="page-status" title="Writing status of current page: ranges &#39;abandoned&#39;/&#39;notes&#39;/&#39;draft&#39;/&#39;in progress&#39;/&#39;finished&#39;"><em><span class="completion-status" data-progress-percentage="100">finished</span></em></span>
             <span class="page-confidence"><a href="/about#confidence-tags" title="Explanation of &#39;confidence&#39; metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: &#39;certain&#39;/&#39;highly likely&#39;/&#39;likely&#39;/&#39;possible&#39;/&#39;unlikely&#39;/&#39;highly unlikely&#39;/&#39;remote&#39;/&#39;impossible&#39;)">certainty</a>: <em><span class="completion-status" data-progress-percentage="67">likely</span></em></span>
-            <span class="page-importance"><a href="/about#importance-tags" title="Explanation of &#39;importance&#39; metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>0</em></span>
+            <span class="page-importance"><a href="/about#importance-tags" title="Explanation of &#39;importance&#39; metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>4</em></span>
             
             
             
@@ -996,52 +997,50 @@ div.poem span.caesura-mark {
 <li><a href="#描述性统计" id="toc-描述性统计">描述性统计</a></li>
 <li><a href="#线性模型" id="toc-线性模型">线性模型</a>
 <ul>
-<li><a href="#每个警报单独分析" id="toc-每个警报单独分析">每个警报单独分析</a></li>
+<li><a href="#每个提醒" id="toc-每个提醒">每个提醒</a></li>
 </ul></li>
-<li><a href="#多层次模型" id="toc-多层次模型">多层次模型</a></li>
-<li><a href="#那下降呢" id="toc-那下降呢">那下降呢？</a>
+<li><a href="#多层模型" id="toc-多层模型">多层模型</a>
 <ul>
-<li><a href="#转折点在-2011-年中期" id="toc-转折点在-2011-年中期">转折点在 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年中期</a>
+<li><a href="#那次下跌呢" id="toc-那次下跌呢">那次下跌呢？</a>
 <ul>
-<li><a href="#稳健性" id="toc-稳健性">稳健性</a></li>
-</ul></li>
-<li><a href="#是-panda-算法吗" id="toc-是-panda-算法吗">是 Panda 算法吗？</a></li>
+<li><a href="#鲁棒性检验" id="toc-鲁棒性检验">鲁棒性检验</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#结论" id="toc-结论">结论</a></li>
-<li><a href="#参见" id="toc-参见">参见</a></li>
+</ul></li>
+<li><a href="#相关内容" id="toc-相关内容">相关内容</a></li>
 <li><a href="#外部链接" id="toc-外部链接">外部链接</a></li>
-</ul></div> <div id="markdownBody" class="markdownBody"><blockquote>
-<p>过去几年 Google Alerts 发送的结果是否在减少？是的。针对关于其即将消亡的传言，我调查了我个人 Google Alerts 通知在 <span class="date-range" title="The date range 2007–2013 lasted 6 years, ending 13 years ago.">2007<span class="subsup"><sup>–</sup><sub>6</sub></span>2013<sub><span title="2007 was 19 years ago.">13ya</span></sub></span> 年间的结果数量，发现在查看<a href="#it-was-mid-2011">2011年中期</a>的转变之前没有整体下降趋势，而在该时间点之后结果数量急剧下降。我对<a href="#panda">原因</a>和对 Alerts 未来的<a href="#conclusion">影响</a>进行了推测。</p>
+</ul></div> <div id="markdownBody" class="markdownBody"><div class="abstract">
+<blockquote>
+<p>Google Alerts 近几年是否发回更少结果？是的。回应其是否会终止服务的谣言，我分析了个人 Google Alerts 通知（<span class="date-range" title="The date range 2007–2013 lasted 6 years, ending 13 years ago.">2007<span class="subsup"><sup>–</sup><sub>6</sub></span>2013<sub><span title="2007 was 19 years ago.">13ya</span></sub></span>）中的结果数量，发现直到 <a href="#it-was-mid-2011">2011 年中</a>之前并没有整体下降趋势，但在那里出现了结果显著下滑。我推测了其 <a href="#panda">原因</a> 以及对 Alerts 未来的 <a href="#conclusion">含义</a>。</p>
 </blockquote>
-<p>在研究我的 <a href>Google shutdowns</a> 文章（关于 Google 产品在被关闭之前能存活多久，灵感来自 Reader 的关闭）时，我发现了关于 <a href="https://en.wikipedia.org/wiki/Google_Alerts" id="_eRD0smNr" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Google_Alerts#bodyContent">Google Alerts</a> 服务的一些猜测。Google Alerts 是一项代替你运行搜索查询并通过电子邮件通知你任何新的匹配网页的服务（对于跟踪话题非常有用，也是最古老的 Google 服务之一），据报道它在 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span> 年<a href="http://searchengineland.com/google-alerts-arent-working-148642" id="_qXAuxOX3" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Dear Google Alerts: Why Aren&#39;t You Working?">出现了</a><a href="http://searchengineland.com/google-alerts-still-broken-152444" id="_RCyZB6yh" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Google Alerts: Still Broken">严重的</a><a href="http://thefinancialbrand.com/28346/google-alerts-broken/" id="_qW1xaTo5" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="An Open Letter to Google: Google Alerts Broken, Now Useless To Financial Marketers">故障</a>。当我看到这些信息时，我回忆起自己的警报确实似乎不像以前那样有用了，但我无法确定这是 Alerts 本身的问题还是我的特定关键词只是没有过去那么活跃。Google 对此话题的官方评论极为有限<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>。</p>
-<p>Alerts 的消亡对我来说将是一个严重的问题，因为我自 <span class="date-range">2007<sub><span title="2007 was 19 years ago.">19ya</span></sub></span> 年 1 月 28 日以来（2347 天）一直大量使用 Alerts，目前有 23 个活跃的 Alerts（过去还有更多）——在我总共 501,662 封电子邮件中，有 3,815 封是 Alert 邮件——而且似乎没有任何可用的替代方案<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>。令人担忧的是，Alerts 的 RSS 订阅源在 <a href="http://googlesystem.blogspot.com/2013/07/google-alerts-drops-rss-feeds.html" id="_Ap7-gF98" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Google Alerts Drops RSS Feeds">2013 年 7 月</a>至 <a href="http://thenextweb.com/google/2013/09/11/google-alerts-regains-rss-delivery-option-it-lost-after-google-readers-demise/" id="_NWUOpjXi" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Google Alerts regains RSS delivery option it lost after Google Reader&#39;s demise">2013 年 9 月</a>期间无法使用。</p>
-<p>事实上，生存模型表明 Alerts 有很大机会长期存活，我暂时放下了这个问题，直到我想起，既然我使用 Alerts 这么多年并且有这么多邮件，我可以轻松地凭经验检验这些说法——Alerts <em>真的</em>突然停止返回大量结果了吗？这是一个简单明了的问题：从每封 Alerts 邮件中提取主题/日期/链接数量，按独立的警报分层，然后对时间进行回归分析。所以我就这样做了。</p>
+</div>
+<p>在研究我那篇关于 Google 服务寿命分布的文章《<a href="/google-shutdown" id="gwern-google-shutdown" class="prefetch-not link-annotated link-page" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Predicting Google closures">预测 Google 关闭</a>》（Gwern, <span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span>）时，我看到 <a href="https://en.wikipedia.org/wiki/Google_Alerts" id="_eRD0smNr" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Google_Alerts#bodyContent">Google Alerts</a><span>（代你运行查询并邮件推送新匹配页面——这是跟进主题的极佳工具，也是 Google 最古老的服务之一）在 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span> 年间被传言</span><a href="https://searchengineland.com/google-alerts-arent-working-148642" id="_fCJ-aPZn" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Dear Google Alerts: Why Aren&#39;t You Working?">坏掉了</a><a href="https://searchengineland.com/google-alerts-still-broken-152444" id="_O4pJEqJU" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Google Alerts: Still Broken">“不正常地坏掉”</a><a href="https://web.archive.org/web/20131218052436/https://thefinancialbrand.com/28346/google-alerts-broken/" id="_K1Sn6Bk0" class="link-live" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" data-url-iframe="https://web.archive.org/web/20131218052436if_/https://thefinancialbrand.com/28346/google-alerts-broken/" title="An Open Letter to Google: Google Alerts Broken, Now Useless To Financial Marketers">到不能用了</a>。看到这点时，我想起自己的 Alerts 似乎也没以前好用，但不确定是服务问题还是我搜索词本身变得不活跃。Google 对该问题的官方回应极少。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>在我看来，若 Alerts 挂掉会很麻烦，因为我自 2007-01-28（2347 天）以来长期使用它（目前有 23 个 Alerts，过去还更多），在总计 501,662 封邮件里有 3,815 封是 Alerts；而且我似乎也没有发现可替代方案<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a><span>。更麻烦的是，从 <span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span> 年 </span><a href="https://googlesystem.blogspot.com/2013/07/google-alerts-drops-rss-feeds.html" id="_4rPjLfZG" class="link-live" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Google Alerts Drops RSS Feeds">7 月</a> 到 <a href="https://thenextweb.com/news/google-alerts-regains-rss-delivery-option-it-lost-after-google-readers-demise" id="_GDzso5rz" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Google Alerts regains RSS delivery option it lost after Google Reader&#39;s demise">9 月</a>，Alerts 的 RSS 推送一度不可用。</p>
+<p>后来我做的生存模型显示 Alerts 有很大概率能够长期存在，我也就把这件事放了一边。后来我又想到，既然用了这么多年、收了这么多邮件，我其实可以直接验算：<em>Alerts 的结果是不是突然暴跌了？</em> 这其实是个直接的问题：抽取每封 Alerts 邮件的主题、日期和链接数，按不同提醒分层，再做时间回归。于是我就做了。</p>
 <section id="数据" class="level1">
 <h1><a href="#数据" title="Link to section: § &#39;数据&#39;">数据</a></h1>
-<p>作为备份程序的一部分，我每天使用 <a href="http://pyropus.ca/software/getmail/" id="_WljZfvCJ"><code>getmail4</code></a> 将 Gmail 邮件抓取到一个 <a href="https://en.wikipedia.org/wiki/Maildir" id="_qcQSOOmy" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Maildir#bodyContent">maildir</a> 中。Alerts 使用不变的主题行，例如 <code>Subject: Google Alert - &quot;Frank Herbert&quot; -mason</code>，因此很容易找到所有的 Alerts 邮件并将它们分离出来。</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode Bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">~/mail/</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> find ~/mail/ <span class="at">-type</span> f <span class="at">-exec</span> fgrep <span class="at">-l</span> {} <span class="st">&#39;Google Alert -&#39;</span> <span class="dt">\;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/gwern/mail/new/1282125775.M532208P12203Q683Rb91205f53b0fec0d.craft</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/gwern/mail/new/1282125789.M55800P12266Q737Rd98db4aa1e58e9ed.craft</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> find ~/mail/ <span class="at">-type</span> f <span class="at">-exec</span> fgrep <span class="at">-l</span> <span class="st">&#39;Google Alert -&#39;</span> {} <span class="dt">\;</span> <span class="op">&gt;</span> alerts.txt</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir 2013-09-25-gwern-googlealertsemails/</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mv <span class="kw">`</span><span class="fu">cat</span> alerts.txt<span class="kw">`</span> 2013-09-25-gwern-googlealertsemails/</span></code></pre></div>
+<p>按我的备份流程，我把 Gmail 每日邮件通过 <a href="https://pyropus.ca./software/getmail/" id="_RzJ1PGBD"><code>getmail4</code></a> 存进一个 <a href="https://en.wikipedia.org/wiki/Maildir" id="_qcQSOOmy" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Maildir#bodyContent">maildir</a>。Alerts 的主题行固定为如 <code>Subject: Google Alert - &quot;Frank Herbert&quot; -mason</code>，因此很容易找出所有相关邮件并分离出来。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode Bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> ~/mail/ <span class="at">-type</span> f <span class="at">-exec</span> grep <span class="at">-F</span> <span class="at">-l</span> {} <span class="st">&#39;Google Alert -&#39;</span> <span class="dt">\;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># /home/gwern/mail/new/1282125775.M532208P12203Q683Rb91205f53b0fec0d.craft</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># /home/gwern/mail/new/1282125789.M55800P12266Q737Rd98db4aa1e58e9ed.craft</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> ~/mail/ <span class="at">-type</span> f <span class="at">-exec</span> grep <span class="at">-F</span> <span class="at">-l</span> <span class="st">&#39;Google Alert -&#39;</span> {} <span class="dt">\;</span> <span class="op">&gt;</span> alerts.txt</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> 2013-09-25-gwern-googlealertsemails/</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> <span class="kw">`</span><span class="fu">cat</span> alerts.txt<span class="kw">`</span> 2013-09-25-gwern-googlealertsemails/</span></code></pre></div>
 <p><!-- find 2013-09-25-gwern-googlealertsemails/ -type f -exec grep -l aaktgeb {} \; | xargs rm --></p>
-<p>我删除了一些私人警报的邮件；剩余的 72M 邮件可在 <a href="/docs/2013-09-25-gwern-googlealertsemails.tar.xz" id="gwern-2013" class="prefetch-not link-modified-recently" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Gwern 2013"><code>2013-09-25-gwern-googlealertsemails.tar.xz</code></a> 获取。然后通过循环和临时 Shell 脚本提取主题行、日期以及每封邮件中 “http://” 出现的次数：</p>
+<p>我删除了几条涉及隐私的提醒；剩下 72MB 邮件打包在 <a href="/doc/personal/2013-09-25-gwern-googlealertsemails.tar.xz" id="gwern-2013" class="prefetch-not link-modified-recently" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Gwern 2013"><code>2013-09-25-gwern-googlealertsemails.tar.xz</code></a>。然后我写了个临时 shell 脚本，提取每封邮件的主题、日期和其中 <code>&quot;http://&quot;</code> 的出现次数：</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode Bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> 2013-09-25-gwern-googlealertsemails/</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Search,Date,Links&quot;</span> <span class="op">&gt;&gt;</span> alerts.csv <span class="co"># 设置标题行</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Search,Date,Links&quot;</span> <span class="op">&gt;&gt;</span> alerts.csv <span class="co"># set up the header</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> EMAIL <span class="kw">in</span> <span class="pp">*</span>.craft <span class="pp">*</span>.elan<span class="kw">;</span> <span class="cf">do</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="va">SUBJECT</span><span class="op">=</span><span class="st">&quot;</span><span class="kw">`</span><span class="fu">egrep</span> <span class="st">&#39;^Subject: Google Alert - &#39;</span> <span class="va">$EMAIL</span>  <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-e</span> <span class="st">&#39;s/Subject: Google Alert - //&#39;</span><span class="kw">`</span><span class="st">&quot;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="va">DATE</span><span class="op">=</span><span class="st">&quot;</span><span class="kw">`</span><span class="fu">egrep</span> <span class="st">&#39;^Date: &#39;</span> <span class="va">$EMAIL</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&#39; &#39;</span> <span class="at">-f</span> 3-5 <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-e</span> <span class="st">&#39;s/&lt;b&gt;..*/ /&#39;</span><span class="kw">`</span><span class="st">&quot;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="va">COUNT</span><span class="op">=</span><span class="st">&quot;</span><span class="kw">`</span><span class="fu">fgrep</span> <span class="at">--no-filename</span> <span class="at">--count</span> <span class="st">&#39;http://&#39;</span> <span class="va">$EMAIL</span><span class="kw">`</span><span class="st">&quot;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="va">SUBJECT</span><span class="op">=</span><span class="st">&quot;</span><span class="kw">`</span><span class="fu">grep</span> <span class="at">-E</span> <span class="st">&#39;^Subject: Google Alert - &#39;</span> <span class="va">$EMAIL</span>  <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-e</span> <span class="st">&#39;s/Subject: Google Alert - //&#39;</span><span class="kw">`</span><span class="st">&quot;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="va">DATE</span><span class="op">=</span><span class="st">&quot;</span><span class="kw">`</span><span class="fu">grep</span> <span class="at">-E</span> <span class="st">&#39;^Date: &#39;</span> <span class="va">$EMAIL</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&#39; &#39;</span> <span class="at">-f</span> 3-5 <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-e</span> <span class="st">&#39;s/&lt;b&gt;..*/ /&#39;</span><span class="kw">`</span><span class="st">&quot;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="va">COUNT</span><span class="op">=</span><span class="st">&quot;</span><span class="kw">`</span><span class="fu">grep</span> <span class="at">-F</span> <span class="at">--no-filename</span> <span class="at">--count</span> <span class="st">&#39;http://&#39;</span> <span class="va">$EMAIL</span><span class="kw">`</span><span class="st">&quot;</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="va">$SUBJECT</span>,<span class="va">$DATE</span>,<span class="va">$COUNT</span> <span class="op">&gt;&gt;</span> alerts.csv</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code></pre></div>
-<p>脚本并不完美，在将其读入 R 并格式化为干净的 CSV 之前，我不得不删除几行错误数据：</p>
+<p>脚本并不完美，我还删掉了几行脏数据后，才把它导入 R 并整理为干净 CSV：</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>alerts <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;alerts.csv&quot;</span>, <span class="at">quote=</span><span class="fu">c</span>(), <span class="at">colClasses=</span><span class="fu">c</span>(<span class="st">&quot;character&quot;</span>,<span class="st">&quot;character&quot;</span>,<span class="st">&quot;integer&quot;</span>))</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>alerts<span class="sc">$</span>Date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(alerts<span class="sc">$</span>Date, <span class="at">format=</span><span class="st">&quot;%d %b %Y&quot;</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(alerts, <span class="at">file=</span><span class="st">&quot;2013-09-25-gwern-googlealerts.csv&quot;</span>, <span class="at">row.names=</span><span class="cn">FALSE</span>)</span></code></pre></div>
@@ -1050,63 +1049,63 @@ div.poem span.caesura-mark {
 <h1><a href="#分析" title="Link to section: § &#39;分析&#39;">分析</a></h1>
 <section id="描述性统计" class="level2">
 <h2><a href="#描述性统计" title="Link to section: § &#39;描述性统计&#39;">描述性统计</a></h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>alerts <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;http://www.gwern.net/docs/2013-09-25-gwern-googlealerts.csv&quot;</span>,</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>alerts <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://gwern.net/doc/personal/2013-09-25-gwern-googlealerts.csv&quot;</span>,</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">colClasses=</span><span class="fu">c</span>(<span class="st">&quot;factor&quot;</span>,<span class="st">&quot;Date&quot;</span>,<span class="st">&quot;integer&quot;</span>))</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(alerts)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                     Search          Date                Links</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a> wikipedia              <span class="sc">:</span> <span class="dv">255</span>   Min.   <span class="sc">:</span><span class="dv">2007-01-28</span>   Min.   <span class="sc">:</span>  <span class="fl">0.0</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a> Neon Genesis Evangelion<span class="sc">:</span> <span class="dv">247</span>   <span class="dv">1</span>st Qu.<span class="sc">:</span><span class="dv">2008-12-29</span>   <span class="dv">1</span>st Qu.<span class="sc">:</span> <span class="fl">10.0</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a> <span class="st">&quot;Gene Wolfe&quot;</span>           <span class="sc">:</span> <span class="dv">246</span>   Median <span class="sc">:</span><span class="dv">2011-02-07</span>   Median <span class="sc">:</span> <span class="fl">22.0</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a> <span class="st">&quot;Nick Bostrom&quot;</span>         <span class="sc">:</span> <span class="dv">224</span>   Mean   <span class="sc">:</span><span class="dv">2010-10-06</span>   Mean   <span class="sc">:</span> <span class="fl">37.9</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a> modafinil              <span class="sc">:</span> <span class="dv">186</span>   <span class="dv">3</span>rd Qu.<span class="sc">:</span><span class="dv">2012-06-15</span>   <span class="dv">3</span>rd Qu.<span class="sc">:</span> <span class="fl">44.0</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a> <span class="st">&quot;Frank Herbert&quot;</span> <span class="sc">-</span>mason <span class="sc">:</span> <span class="dv">184</span>   Max.   <span class="sc">:</span><span class="dv">2013-09-25</span>   Max.   <span class="sc">:</span><span class="fl">563.0</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a> (Other)                <span class="sc">:</span><span class="dv">2585</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#                      Search          Date                Links</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#  wikipedia              : 255   Min.   :2007-01-28   Min.   :  0.0</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#  Neon Genesis Evangelion: 247   1st Qu.:2008-12-29   1st Qu.: 10.0</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#  &quot;Gene Wolfe&quot;           : 246   Median :2011-02-07   Median : 22.0</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  &quot;Nick Bostrom&quot;         : 224   Mean   :2010-10-06   Mean   : 37.9</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">#  modafinil              : 186   3rd Qu.:2012-06-15   3rd Qu.: 44.0</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">#  &quot;Frank Herbert&quot; -mason : 184   Max.   :2013-09-25   Max.   :563.0</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">#  (Other)                :2585</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 数量如此之多是因为我已经删除了许多不再感兴趣的话题，</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 并且精炼了其他警报的搜索条件</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 之所以如此分散，是因为我已经删掉了许多不再关注的话题，</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 同时也收紧了其他查询条件</span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">unique</span>(alerts<span class="sc">$</span>Search))</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">68</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 68</span></span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Links <span class="sc">~</span> Date, <span class="at">data=</span>alerts)</span></code></pre></div>
 <figure>
-<p><img alt="每封邮件中的链接数，按时间绘制" data-aspect-ratio="280 / 139" decoding="async" height="695" id="_XaKB6hJl" loading="lazy" src="/images/google/alerts/linksperemail.png" width="1400"></img></p>
-<figcaption><p>每封邮件中的链接数，按时间绘制</p></figcaption>
+<p><img src="/doc/technology/google/alerts/gwern-linksperemail.png" id="_1A2B71Va" class="width-full" alt="每封邮件中的链接数，按时间绘图"></img></p>
+<figcaption><p>每封邮件中的链接数，按时间绘图</p></figcaption>
 </figure>
-<p>我注意到的第一件事是，每封邮件的链接数似乎随时间增加，在 <span class="date-range">2010<sub><span title="2010 was 16 years ago.">16ya</span></sub></span> 年中期出现一个峰值。第二个观察是邮件之间的差异相当大——虽然大多数在 0 附近，但有些高达 300。第三个是早期有一个奇怪的异常，邮件被记录为有 0 个链接；查看这些邮件后发现，它们是以 <a href="https://en.wikipedia.org/wiki/Base64" id="_PviFHGIn" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Base64#bodyContent">base64</a> 编码的，原因不明，之后所有邮件都采用了更合理的 HTML/文本格式。这是 Google 一次失败的实验吗？我不得而知。最高数字是 563，并不算很大；因此尽管数据偏斜，我没有对 <code>Links</code> 进行对数变换。</p>
+<p>第一眼可以看到两件事：其一，链接数似乎随时间上升，<span class="date-range">2010<sub><span title="2010 was 16 years ago.">16ya</span></sub></span> 年中有一次峰值；其二，不同邮件差异很大——多数在 0 附近，但也有高到 300 的；其三，早期出现一个奇怪异常：有些邮件显示 0 链接；查看这些邮件后发现它们无端以 <a href="https://en.wikipedia.org/wiki/Base64" id="_PviFHGIn" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Base64#bodyContent">base64</a> 编码，之后后续邮件才变成更常规的 HTML/文本格式。难道这是 Google 的一次失败实验？我说不清楚。最大值是 563，虽然不算很大，因此即便分布偏态明显我也没把 <code>Links</code> 做对数变换。</p>
 </section>
 <section id="线性模型" class="level2">
 <h2><a href="#线性模型" title="Link to section: § &#39;线性模型&#39;">线性模型</a></h2>
-<p>数据的尖锐波动促使我通过将邮件按月分桶来调整发送频率等方面的变异，并叠加一个线性回归：</p>
+<p>这种“尖峰”促使我先按月汇总，以平滑发送频率差异，再叠加线性回归：</p>
 <pre><code>library(lubridate)
 alerts$Date &lt;- floor_date(alerts$Date, &quot;month&quot;)
 alerts &lt;- aggregate(Links ~ Search + Date, alerts, &quot;sum&quot;)
 
-# 一个简单的线性模型表明每月有微小的增长，但指出存在大量未解释的变异
+# 简单线性模型显示每月有个*小*幅增长，但仍有大量解释不了的波动
 lm &lt;- lm(Links ~ Date, data=alerts); summary(lm)
-...
-Residuals:
-   Min     1Q Median     3Q    Max
--175.8 -110.0  -60.5   43.3  992.6
-
-Coefficients:
-             Estimate Std. Error t value Pr(&gt;|t|)
-(Intercept) -4.13e+02   1.10e+02   -3.76  0.00018
-Date         3.73e-02   7.38e-03    5.06  4.9e-07
-
-Residual standard error: 175 on 1046 degrees of freedom
-Multiple R-squared:  0.0239,    Adjusted R-squared:  0.023
-F-statistic: 25.6 on 1 and 1046 DF,  p-value: 4.89e-07
+# ...
+# Residuals:
+#    Min     1Q Median     3Q    Max
+# -175.8 -110.0  -60.5   43.3  992.6
+#
+# Coefficients:
+#              Estimate Std. Error t value Pr(&gt;|t|)
+# (Intercept) -4.13e+02   1.10e+02   -3.76  0.00018
+# Date         3.73e-02   7.38e-03    5.06  4.9e-07
+#
+# Residual standard error: 175 on 1046 degrees of freedom
+# Multiple R-squared:  0.0239,    Adjusted R-squared:  0.023
+# F-statistic: 25.6 on 1 and 1046 DF,  p-value: 4.89e-07
 
 plot(Links ~ Date, data=alerts)
 abline(lm)</code></pre>
 <figure>
-<p><img alt="每个搜索的总链接数，按月统计" data-aspect-ratio="700 / 337" decoding="async" height="674" id="_F294D52h" loading="lazy" src="/images/google/alerts/linkspermonth.png" width="1400"></img></p>
-<figcaption><p>每个搜索的总链接数，按月统计</p></figcaption>
+<p><img src="/doc/technology/google/alerts/gwern-linkspermonth.jpg" id="_z8gojQYl" class="width-full" alt="每月按检索词汇总的总链接数"></img></p>
+<figcaption><p>每月按检索词汇总的总链接数</p></figcaption>
 </figure>
-<p>与原始图没有太大差异：仍然是一个总体上升趋势。这个回归有一个基本问题：这种增长是反映了我<em>订阅的警报数量</em>的增加、对每个警报的调整使其返回更多结果（从旧警报转换到<em>新</em>警报），还是每个<em>独立</em>警报的链接数量增加？只有最后一种说法是我们感兴趣的，但这些或其他现象中的任何一个都可能产生增长。</p>
-<section id="每个警报单独分析" class="level3">
-<h3><a href="#每个警报单独分析" title="Link to section: § &#39;每个警报单独分析&#39;">每个警报单独分析</a></h3>
-<p>我们可以尝试分别处理每个警报并对其进行线性回归，然后与对所有数据不加区分的线性模型进行比较：</p>
+<p>与原始图一致：总体仍是上升趋势。这个回归的关键问题是：这种增长是来自我订阅的提醒数量增加、我每个提醒返回更多结果的参数调整（从旧提醒切到新提醒），还是每个<strong>独立提醒</strong>返回更多链接？我们只关心最后一种解释，但这三者或其他机制都可能造成上升。</p>
+<section id="每个提醒" class="level3">
+<h3><a href="#每个提醒" title="Link to section: § &#39;每个提醒&#39;">每个提醒</a></h3>
+<p>我们可以将每个提醒单独做线性回归，再和全体数据的回归结果对比。</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(Date, Links, <span class="at">color=</span>Search, <span class="at">data=</span>alerts) <span class="sc">+</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>, <span class="at">se=</span><span class="cn">FALSE</span>, <span class="at">fullrange=</span><span class="cn">TRUE</span>, <span class="at">size=</span><span class="fl">0.2</span>) <span class="sc">+</span></span>
@@ -1114,97 +1113,97 @@ abline(lm)</code></pre>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">1130</span>) <span class="sc">+</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>)</span></code></pre></div>
 <figure>
-<p><img alt="按警报拆分数据，分别进行回归" data-aspect-ratio="100 / 53" decoding="async" height="742" id="_z-NVYZW5" loading="lazy" src="/images/google/alerts/monthlylinks-individuallinearregression.png" width="1400"></img></p>
-<figcaption><p>按警报拆分数据，分别进行回归</p></figcaption>
+<p><img src="/doc/technology/google/alerts/gwern-monthlylinks-individuallinearregression.png" id="_z5181RMK" class="width-full" alt="按提醒拆分后分别回归"></img></p>
+<figcaption><p>按提醒拆分后分别回归</p></figcaption>
 </figure>
-<p>结果是混乱的。各个警报的趋势指向不同的方向。对所有警报一起进行回归会混淆问题，而对单个警报进行回归则无法产生一致的结论。我们需要一种折中的方法，既尊重不同警报具有不同的行为模式，又能得出有意义的整体结论。</p>
+<p>结果十分混乱。各提醒指向方向各异。把全部提醒混在一起回归会掩盖问题，而分别回归也无法给出一致结论。我们需要一种中间方法：既承认提醒之间行为不同，又能给出总体上有意义的结论。</p>
 </section>
 </section>
-<section id="多层次模型" class="level2">
-<h2><a href="#多层次模型" title="Link to section: § &#39;多层次模型&#39;">多层次模型</a></h2>
-<p>我们想要的是查看每个独立警报，估计其随时间的增减趋势，并可能将所有斜率汇总为一个总体斜率。数据具有层次结构：Google 的整体斜率影响每个警报的斜率，而每个警报的斜率又影响该斜率周围数据点的分布。</p>
-<p>我们可以使用<a href="https://en.wikipedia.org/wiki/%E5%A4%9A%E5%B1%82%E6%AC%A1%E6%A8%A1%E5%9E%8B" id="_e-_byPmy" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%A4%9A%E5%B1%82%E6%AC%A1%E6%A8%A1%E5%9E%8B#bodyContent">多层次模型</a>来实现这一点，使用 <a href="http://cran.r-project.org/web/packages/lme4/index.html" id="_2ZNSnjXZ" data-link-icon="R" data-link-icon-type="text" data-link-icon-color="#1b61b1"><code>lme4</code></a>。</p>
-<p>我们将从拟合和比较两个模型开始：</p>
-<ol type="1">
-<li><p>每个警报之间只有截距不同，但所有警报以相同的速率增加或减少</p></li>
-<li><p>每个警报之间截距不同，且警报在增长或衰减方面也有差异</p></li>
+<section id="多层模型" class="level2">
+<h2><a href="#多层模型" title="Link to section: § &#39;多层模型&#39;">多层模型</a></h2>
+<p>我们希望看每个独立提醒的时间变化斜率，并将这些斜率汇总为一个总斜率。数据存在层级结构：总体斜率影响每个提醒的斜率，反过来每个提醒偏差影响各自数据点的分布。</p>
+<p>这可用<a href="https://en.wikipedia.org/wiki/%E5%A4%9A%E5%B1%82%E6%A8%A1%E5%9E%8B" id="_uQM4z-2g" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%A4%9A%E5%B1%82%E6%A8%A1%E5%9E%8B#bodyContent">多层模型</a>完成，利用 <a href="https://cran.r-project.org/web/packages/lme4/index.html" id="_ZIEGeYvF" class="link-live" data-link-icon="R" data-link-icon-type="text" data-link-icon-color="#1b61b1"><code>lme4</code></a>：</p>
+<p>先拟合并比较两个模型：</p>
+<ol>
+<li><p>只有截距在不同提醒间变化，但所有提醒共享同一增减速率</p></li>
+<li><p>截距与斜率都在提醒间变化</p></li>
 </ol>
 <div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>mlm1 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Links <span class="sc">~</span> Date <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>Search), alerts); mlm1</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>Random effects<span class="sc">:</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a> Groups   Name        Variance Std.Dev.</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a> <span class="fu">Search</span>   (Intercept) <span class="dv">28943</span>    <span class="dv">170</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a> Residual             <span class="dv">12395</span>    <span class="dv">111</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>Number of obs<span class="sc">:</span> <span class="dv">1048</span>, groups<span class="sc">:</span> Search, <span class="dv">68</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>Fixed effects<span class="sc">:</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>             Estimate Std. Error t value</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>(Intercept) <span class="fl">427.93512</span>  <span class="fl">139.76994</span>    <span class="fl">3.06</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>Date         <span class="sc">-</span><span class="fl">0.01984</span>    <span class="fl">0.00928</span>   <span class="sc">-</span><span class="fl">2.14</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>Correlation of Fixed Effects<span class="sc">:</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>     (Intr)</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>Date <span class="sc">-</span><span class="fl">0.988</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Random effects:</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#  Groups   Name        Variance Std.Dev.</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#  Search   (Intercept) 28943    170</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#  Residual             12395    111</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of obs: 1048, groups: Search, 68</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixed effects:</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">#              Estimate Std. Error t value</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co"># (Intercept) 427.93512  139.76994    3.06</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Date         -0.01984    0.00928   -2.14</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlation of Fixed Effects:</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co">#      (Intr)</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Date -0.988</span></span>
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>mlm2 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Links <span class="sc">~</span> Date <span class="sc">+</span> (<span class="dv">1</span><span class="sc">+</span>Date<span class="sc">|</span>Search), alerts); mlm2</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>Random effects<span class="sc">:</span></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a> Groups   Name        Variance Std.Dev. Corr</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a> <span class="fu">Search</span>   (Intercept) <span class="fl">6.40e+06</span> <span class="fl">2529.718</span></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>          Date        <span class="fl">2.78e-02</span>    <span class="fl">0.167</span> <span class="sc">-</span><span class="fl">0.998</span></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a> Residual             <span class="fl">8.36e+03</span>   <span class="fl">91.446</span></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>Number of obs<span class="sc">:</span> <span class="dv">1048</span>, groups<span class="sc">:</span> Search, <span class="dv">68</span></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>Fixed effects<span class="sc">:</span></span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>            Estimate Std. Error t value</span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>(Intercept) <span class="fl">295.5469</span>   <span class="fl">420.0588</span>    <span class="fl">0.70</span></span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>Date         <span class="sc">-</span><span class="fl">0.0090</span>     <span class="fl">0.0278</span>   <span class="sc">-</span><span class="fl">0.32</span></span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>Correlation of Fixed Effects<span class="sc">:</span></span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>     (Intr)</span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>Date <span class="sc">-</span><span class="fl">0.998</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Random effects:</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co">#  Groups   Name        Variance Std.Dev. Corr</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co">#  Search   (Intercept) 6.40e+06 2529.718</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co">#           Date        2.78e-02    0.167 -0.998</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co">#  Residual             8.36e+03   91.446</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of obs: 1048, groups: Search, 68</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixed effects:</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="co">#             Estimate Std. Error t value</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="co"># (Intercept) 295.5469   420.0588    0.70</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Date         -0.0090     0.0278   -0.32</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlation of Fixed Effects:</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="co">#      (Intr)</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Date -0.998</span></span>
 <span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a><span class="co"># 比较模型：模型 2 是否比模型 1 更好？</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a><span class="co"># 比较两模型：模型 2 是否值得一试？</span></span>
 <span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(mlm1, mlm2)</span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>mlm1<span class="sc">:</span> Links <span class="sc">~</span> Date <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Search)</span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>mlm2<span class="sc">:</span> Links <span class="sc">~</span> Date <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> Date <span class="sc">|</span> Search)</span>
-<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>     Df   AIC   BIC logLik deviance Chisq Chi Df <span class="fu">Pr</span>(<span class="sc">&gt;</span>Chisq)</span>
-<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>mlm1  <span class="dv">4</span> <span class="dv">13070</span> <span class="dv">13089</span>  <span class="sc">-</span><span class="dv">6531</span>    <span class="dv">13062</span></span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>mlm2  <span class="dv">6</span> <span class="dv">12771</span> <span class="dv">12801</span>  <span class="sc">-</span><span class="dv">6379</span>    <span class="dv">12759</span>   <span class="dv">303</span>      <span class="dv">2</span>     <span class="sc">&lt;</span><span class="fl">2e-16</span></span></code></pre></div>
-<p>模型 2 在简洁性/拟合度两个标准上都更好，所以我们将更仔细地查看它：</p>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm1: Links ~ Date + (1 | Search)</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm2: Links ~ Date + (1 + Date | Search)</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a><span class="co">#      Df   AIC   BIC logLik deviance Chisq Chi Df Pr(&gt;Chisq)</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm1  4 13070 13089  -6531    13062</span></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm2  6 12771 12801  -6379    12759   303      2     &lt;2e-16</span></span></code></pre></div>
+<p>模型 2 在拟合与复杂度上都更优，于是我们继续看它：</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(mlm2)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="sc">$</span>Search</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                                                               (Intercept)      Date</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>                                                                    <span class="fl">763.48</span> <span class="sc">-</span><span class="fl">0.046763</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>adult iodine <span class="fu">supplementation</span> (IQ OR intelligence OR cognitive)      <span class="fl">718.80</span> <span class="sc">-</span><span class="fl">0.043157</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>AMD pacifica virtualization                                        <span class="sc">-</span><span class="fl">836.63</span>  <span class="fl">0.062123</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>(anime OR manga) (half<span class="sc">-</span>Japanese OR hafu OR half<span class="sc">-</span>American)           <span class="fl">956.52</span> <span class="sc">-</span><span class="fl">0.059438</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>caloric restriction                                               <span class="sc">-</span><span class="fl">2023.10</span>  <span class="fl">0.153667</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Death Note&quot;</span> (script OR live<span class="sc">-</span>action OR Parlapanides)                <span class="fl">866.63</span> <span class="sc">-</span><span class="fl">0.051314</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;dual n-back&quot;</span>                                                      <span class="fl">4212.59</span> <span class="sc">-</span><span class="fl">0.266879</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>dual n<span class="sc">-</span>back                                                        <span class="fl">1213.85</span> <span class="sc">-</span><span class="fl">0.073265</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>electric sheep screensaver                                         <span class="sc">-</span><span class="fl">745.78</span>  <span class="fl">0.055937</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Frank Herbert&quot;</span>                                                     <span class="sc">-</span><span class="fl">93.28</span>  <span class="fl">0.013636</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Frank Herbert&quot;</span> <span class="sc">-</span>mason                                            <span class="fl">10815.19</span> <span class="sc">-</span><span class="fl">0.676188</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>freenet project                                                   <span class="sc">-</span><span class="fl">1154.14</span>  <span class="fl">0.087199</span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Gene Wolfe&quot;</span>                                                        <span class="fl">496.01</span> <span class="sc">-</span><span class="fl">0.026575</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>Gene Wolfe                                                         <span class="fl">1178.36</span> <span class="sc">-</span><span class="fl">0.072681</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>wikileaks                                                         <span class="sc">-</span><span class="fl">3080.74</span>  <span class="fl">0.227583</span></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>WikiLeaks                                                          <span class="sc">-</span><span class="fl">388.34</span>  <span class="fl">0.031441</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>wikipedia                                                         <span class="sc">-</span><span class="fl">1668.94</span>  <span class="fl">0.133976</span></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>Xen                                                                 <span class="fl">390.01</span> <span class="sc">-</span><span class="fl">0.017209</span></span></code></pre></div>
-<p>Date 的单位是每月链接数，所以当 Xen 的斜率为 -0.02 时，意味着每年减少一个链接。</p>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># $Search</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                                (Intercept)      Date</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#                                                                     763.48 -0.046763</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># adult iodine supplementation (IQ OR intelligence OR cognitive)      718.80 -0.043157</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># AMD pacifica virtualization                                        -836.63  0.062123</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># (anime OR manga) (half-Japanese OR hafu OR half-American)           956.52 -0.059438</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co"># caloric restriction                                               -2023.10  0.153667</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Death Note&quot; (script OR live-action OR Parlapanides)                866.63 -0.051314</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;dual _n_-back&quot;                                                      4212.59 -0.266879</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co"># dual _n_-back                                                        1213.85 -0.073265</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co"># electric sheep screensaver                                         -745.78  0.055937</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Frank Herbert&quot;                                                     -93.28  0.013636</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Frank Herbert&quot; -mason                                            10815.19 -0.676188</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co"># freenet project                                                   -1154.14  0.087199</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Gene Wolfe&quot;                                                        496.01 -0.026575</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Gene Wolfe                                                         1178.36 -0.072681</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co"># wikileaks                                                         -3080.74  0.227583</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co"># WikiLeaks                                                          -388.34  0.031441</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co"># wikipedia                                                         -1668.94  0.133976</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Xen                                                                 390.01 -0.017209</span></span></code></pre></div>
+<p><code>Date</code> 是按月计数，因此 Xen 的斜率为 -0.02，意味着每年少 1 条链接。</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">coef</span>(mlm2)<span class="sc">$</span>Search<span class="sc">$</span>Date))</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.6762</span></span></code></pre></div>
-<p>这个最大值来自 <code>&quot;Frank Herbert&quot; -mason</code> 搜索，可能反映了该搜索相对较新，或者我添加到原始 <code>&quot;Frank Herbert&quot;</code> 搜索中的过滤条件的有效性。总体而言，斜率非常相似，正斜率和负斜率的数量似乎相当，第二个模型中的总体汇总斜率是一个微小的负斜率（-0.01）；但在毛虫图中，大多数搜索的斜率的置信区间不包含零：</p>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 0.6762</span></span></code></pre></div>
+<p>这一最大斜率来自 <code>&quot;Frank Herbert&quot; -mason</code> 的搜索，可能因为这个关键词比较新，或者因为我给原始 <code>&quot;Frank Herbert&quot;</code> 搜索增加了过滤规则。总体来看斜率非常接近，正负斜率的数量也大体均衡；在二层模型里整体斜率是轻微负值（约 -0.01），但毛毛虫图显示大多数提醒的斜率区间都远离 0：</p>
 <figure>
-<p><img alt="qqmath(ranef(mlm2, postVar=TRUE))" data-aspect-ratio="1400 / 739" decoding="async" height="739" id="_zsvGri5q" loading="lazy" src="/images/google/alerts/mlm2-slopes.png" width="1400"></img></p>
+<p><img src="/doc/technology/google/alerts/gwern-mlm2-slopes.png" id="_OeqLfoFa" class="width-full" alt="qqmath(ranef(mlm2, postVar=TRUE))"></img></p>
 <figcaption><p><code>qqmath(ranef(mlm2, postVar=TRUE))</code></p></figcaption>
 </figure>
-<p>这告诉我，正如最初的说法所声称的那样，每个警报内部并没有发生大的时间变化，但似乎确实有一些情况在发生。当我们绘制总体回归和每个警报的回归时，我们看到：</p>
+<p>这让我认为各提醒内部并没有文章中描述的“大幅时间变化”，但确实有某种东西在起作用。叠加总体回归与单提醒回归后可见：</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fixParam <span class="ot">&lt;-</span> <span class="fu">fixef</span>(mlm2)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>ranParam <span class="ot">&lt;-</span> <span class="fu">ranef</span>(mlm2)<span class="sc">$</span>Search</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>params   <span class="ot">&lt;-</span> <span class="fu">cbind</span>(ranParam[<span class="dv">1</span>]<span class="sc">+</span>fixParam[<span class="dv">1</span>], ranParam[<span class="dv">2</span>]<span class="sc">+</span>fixParam[<span class="dv">2</span>])</span>
@@ -1215,191 +1214,185 @@ abline(lm)</code></pre>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">1130</span>) <span class="sc">+</span></span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>)</span></code></pre></div>
 <figure>
-<p><img alt="多层次回归，总体和个体拟合" data-aspect-ratio="1400 / 747" decoding="async" height="747" id="_RMGyYluN" loading="lazy" src="/images/google/alerts/monthlylinks-individualmlm.png" width="1400"></img></p>
-<figcaption><p>多层次回归，总体和个体拟合</p></figcaption>
+<p><img src="/doc/technology/google/alerts/gwern-monthlylinks-individualmlm.png" id="_36QFjAB1" class="width-full" alt="多层回归的总体拟合与个体拟合"></img></p>
+<figcaption><p>多层回归的总体拟合与个体拟合</p></figcaption>
 </figure>
-<p>这显然比分别对每个警报进行回归更有意义，因为我们避免了在只有少量邮件可用时出现疯狂陡峭的斜率——这些回归被收缩到了总体回归方向。我们也没有发现警报总体上存在任何大的或具有统计显著性的时间变化的证据：一些警报确实随时间增加，但一些也在随时间减少，只有一个微小的下降，我们可能将其归咎于 Google 内部问题。</p>
+<p>这比逐个提醒回归更合理，因为当样本邮件只有少量时，极端斜率会被整体回归“拉回”——这避免了过度陡峭的回归。我们也看不到提醒整体上存在统计上显著的显著变化：有些提醒上升，有些下降，总体上只有微小下滑，可能更像 Google 内部问题造成的影响。</p>
 <p><!--
-### 稳健性
+### 鲁棒性检验
 
-我们观察到的轻微负总体相关性有多可靠？我们可以通过从推断模型中随机生成数据来进行后验检查，看看总体 `Date` 固定效应从正到负变化的频率：
+这微弱的负相关到底可靠吗？可做后验检验：从模型生成随机数据，看看固定效应 Date 的符号有多常变正负：
 
 ~~~{.R}
 library(arm)
 mlm2.sim <- sim(mlm2,  n.sims = 100000)
 fixef.mlm2.sim <- fixef(mlm2.sim)
 quantile(fixef.mlm2.sim[,2], probs = c(0, 0.025, 0.975, 1))
-      0%     2.5%    97.5%     100%
--0.12879 -0.04986  0.06343  0.12596
+#       0%     2.5%    97.5%     100%
+# -0.12879 -0.04986  0.06343  0.12596
 
 hist(fixef.mlm2.sim[,2], main="Change in hits per month, 100k simulations", xlab="Coefficient")
 ~~~
 
-![100k 次模拟运行中估计的斜率分布](/images/google/alerts/mlm2-simulation.png)
+![Distribution of slopes estimated from 100k simulation runs ] ( /doc/technology/google/alerts/gwern-mlm2-simulation.png )
 --></p>
-</section>
-<section id="那下降呢" class="level2">
-<h2><a href="#那下降呢" title="Link to section: § &#39;那下降呢？&#39;">那下降呢？</a></h2>
-<p>完成以上所有分析后，我以为已经结束了，直到我想起最初的博主抱怨的不是随时间的<em>稳定</em>恶化，而是从 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span> 年某个时候开始的突然恶化。当我做一个二元分割并比较 <span class="date-range">2010<sub><span title="2010 was 16 years ago.">16ya</span></sub></span>/<span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 与 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>/<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span> 时会发生什么？</p>
+<section id="那次下跌呢" class="level3">
+<h3><a href="#那次下跌呢" title="Link to section: § &#39;那次下跌呢？&#39;">那次下跌呢？</a></h3>
+<p>做到这些后我本以为已经结束，直到想起最初那些博主提到的不是“长期缓慢恶化”，而是<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>年开始的一次突然跌落。我试着做二分检验：对比 <span class="date-range">2010<sub><span title="2010 was 16 years ago.">16ya</span></sub></span>/<span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 与 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>/<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span>。</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>alertsRecent <span class="ot">&lt;-</span> alerts[<span class="fu">year</span>(alerts<span class="sc">$</span>Date)<span class="sc">&gt;=</span><span class="dv">2010</span>,]</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>alertsRecent<span class="sc">$</span>Recent <span class="ot">&lt;-</span> <span class="fu">year</span>(alertsRecent<span class="sc">$</span>Date) <span class="sc">&gt;=</span> <span class="dv">2012</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wilcox.test</span>(Links <span class="sc">~</span> Recent, <span class="at">conf.int=</span><span class="cn">TRUE</span>, <span class="at">data=</span>alertsRecent)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    Wilcoxon rank sum test with continuity correction</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>data<span class="sc">:</span>  Links by Recent</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>W <span class="ot">=</span> <span class="dv">71113</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">6.999e-10</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>alternative hypothesis<span class="sc">:</span> true location shift is not equal to <span class="dv">0</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="dv">95</span>% confidence interval<span class="sc">:</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a> <span class="dv">34</span> <span class="dv">75</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>sample estimates<span class="sc">:</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>difference <span class="cf">in</span> location</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">53</span></span></code></pre></div>
-<p>我避免使用基于正态性的检验如 <a href="https://en.wikipedia.org/wiki/Student%27s_t-test" id="_XmFnA6pc" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Student%27s_t-test#bodyContent"><code>t.test</code></a>，而是使用了 <a href="https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test" id="_hTsoHQ0Q" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test#bodyContent">Wilcoxon 检验</a>，因为没有理由期望每月链接数遵循正态分布。不管细节如何，两个时期之间存在很大差异：219 对 140 个链接！36% 的下降无疑是一个严重的衰退，而且不能被归因为我的 Alerts 设置（我始终使用”所有结果”而不是”仅最佳结果”），也不能——正如我们接下来将看到的——归因为激发多层次模型使用的那些混淆因素：</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> alerts<span class="sc">$</span>Recent <span class="ot">&lt;-</span> <span class="fu">year</span>(alerts<span class="sc">$</span>Date) <span class="sc">&gt;=</span> <span class="dv">2012</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> mlm3 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Links <span class="sc">~</span> Date <span class="sc">+</span> Recent <span class="sc">+</span> (<span class="dv">1</span><span class="sc">+</span>Date<span class="sc">|</span>Search), alerts); mlm3</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>Random effects<span class="sc">:</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a> Groups   Name        Variance Std.Dev. Corr</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a> <span class="fu">Search</span>   (Intercept) <span class="fl">9.22e+03</span> <span class="fl">9.60e+01</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>          Date        <span class="fl">9.52e-05</span> <span class="fl">9.75e-03</span> <span class="sc">-</span><span class="fl">0.164</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a> Residual             <span class="fl">1.18e+04</span> <span class="fl">1.09e+02</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>Number of obs<span class="sc">:</span> <span class="dv">1048</span>, groups<span class="sc">:</span> Search, <span class="dv">68</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>Fixed effects<span class="sc">:</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>             Estimate Std. Error t value</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>(Intercept) <span class="sc">-</span><span class="fl">440.1540</span>   <span class="fl">175.3630</span>   <span class="sc">-</span><span class="fl">2.51</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>Date           <span class="fl">0.0413</span>     <span class="fl">0.0121</span>    <span class="fl">3.42</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>RecentTRUE  <span class="sc">-</span><span class="fl">102.2273</span>    <span class="fl">13.3224</span>   <span class="sc">-</span><span class="fl">7.67</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>Correlation of Fixed Effects<span class="sc">:</span></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>           (Intr) Date</span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>Date       <span class="sc">-</span><span class="fl">0.993</span></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>RecentTRUE  <span class="fl">0.630</span> <span class="sc">-</span><span class="fl">0.647</span></span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> <span class="fu">anova</span>(mlm1, mlm2, mlm3)</span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>Models<span class="sc">:</span></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>mlm1<span class="sc">:</span> Links <span class="sc">~</span> Date <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> Search)</span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>mlm2<span class="sc">:</span> Links <span class="sc">~</span> Date <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> Date <span class="sc">|</span> Search)</span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>mlm3<span class="sc">:</span> Links <span class="sc">~</span> Date <span class="sc">+</span> Recent <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> Date <span class="sc">|</span> Search)</span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>     Df   AIC   BIC logLik deviance Chisq Chi Df <span class="fu">Pr</span>(<span class="sc">&gt;</span>Chisq)</span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>mlm1  <span class="dv">4</span> <span class="dv">13070</span> <span class="dv">13089</span>  <span class="sc">-</span><span class="dv">6531</span>    <span class="dv">13062</span></span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>mlm2  <span class="dv">6</span> <span class="dv">12771</span> <span class="dv">12801</span>  <span class="sc">-</span><span class="dv">6379</span>    <span class="dv">12759</span>   <span class="dv">303</span>      <span class="dv">2</span>     <span class="sc">&lt;</span><span class="fl">2e-16</span></span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>mlm3  <span class="dv">7</span> <span class="dv">13015</span> <span class="dv">13050</span>  <span class="sc">-</span><span class="dv">6500</span>    <span class="dv">13001</span>     <span class="dv">0</span>      <span class="dv">1</span>          <span class="dv">1</span></span></code></pre></div>
-<section id="转折点在-2011-年中期" class="level3">
-<h3><a href="#转折点在-2011-年中期" title="Link to section: § &#39;转折点在 201115ya 年中期&#39;">转折点在 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年中期</a></h3>
-<p>将 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span> 年之前视为不同时期的新模型具有更好的拟合度。我们能做得更好吗？<a href="http://cran.r-project.org/web/packages/changepoint/index.html" id="_1THWRQu0" data-link-icon="R" data-link-icon-type="text" data-link-icon-color="#1b61b1"><code>changepoint</code></a><span> 包将 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年 5 月/6 月指认为罪魁祸首，并给出了更大的均值差异（254 对 147）：</span></p>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">#     Wilcoxon rank sum test with continuity correction</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># data:  Links by Recent</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># W = 71113, p-value = 6.999e-10</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># alternative hypothesis: true location shift is not equal to 0</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 95% confidence interval:</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">#  34 75</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># sample estimates:</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co"># difference in location</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co">#                     53</span></span></code></pre></div>
+<p>我刻意没有用依赖正态假设的 <a href="https://en.wikipedia.org/wiki/Student%27s_t-test" id="_XmFnA6pc" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Student%27s_t-test#bodyContent"><code>t.test</code></a>，而改用 <a href="https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test" id="_hTsoHQ0Q" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test#bodyContent">Wilcoxon</a>，因为每月链接数没有理由服从正态分布。无论统计细节如何，两阶段差异都明显：219 对比 140 条链接，下降约 36%，这确实是明显下降，而且不能简单归因于我的 Alerts 设置（我一直用“全部结果”而非“只看最佳结果”），也不能由多层模型所关心的其他混杂项解释：</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>alerts<span class="sc">$</span>Recent <span class="ot">&lt;-</span> <span class="fu">year</span>(alerts<span class="sc">$</span>Date) <span class="sc">&gt;=</span> <span class="dv">2012</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>mlm3 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Links <span class="sc">~</span> Date <span class="sc">+</span> Recent <span class="sc">+</span> (<span class="dv">1</span><span class="sc">+</span>Date<span class="sc">|</span>Search), alerts); mlm3</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Random effects:</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">#  Groups   Name        Variance Std.Dev. Corr</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">#  Search   (Intercept) 9.22e+03 9.60e+01</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">#           Date        9.52e-05 9.75e-03 -0.164</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  Residual             1.18e+04 1.09e+02</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of obs: 1048, groups: Search, 68</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixed effects:</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">#              Estimate Std. Error t value</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co"># (Intercept) -440.1540   175.3630   -2.51</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Date           0.0413     0.0121    3.42</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># RecentTRUE  -102.2273    13.3224   -7.67</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlation of Fixed Effects:</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="co">#            (Intr) Date</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Date       -0.993</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="co"># RecentTRUE  0.630 -0.647</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(mlm1, mlm2, mlm3)</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Models:</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm1: Links ~ Date + (1 | Search)</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm2: Links ~ Date + (1 + Date | Search)</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm3: Links ~ Date + Recent + (1 + Date | Search)</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="co">#      Df   AIC   BIC logLik deviance Chisq Chi Df Pr(&gt;Chisq)</span></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm1  4 13070 13089  -6531    13062</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm2  6 12771 12801  -6379    12759 302.7      2     &lt;2e-16</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm3  7 13015 13050  -6500    13001  0.0      1          1</span></span></code></pre></div>
+<p><a id="it-was-mid-2011"></a> ### <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年中发生了什么？</p>
+<p>将“<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>年前”与“<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>年后”处理为不同状态并不比先前更好。可否更好？一个 <a href="https://cran.r-project.org/web/packages/changepoint/index.html" id="__BqPt2Ws" class="link-live" data-link-icon="R" data-link-icon-type="text" data-link-icon-color="#1b61b1"><code>changepoint</code></a><span> 模型指向 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年5/6月，并给出更明显的均值差异（254 vs 147）：</span></p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(changepoint)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">cpt.meanvar</span>(alertsRecent<span class="sc">$</span>Links), <span class="at">ylab=</span><span class="st">&quot;Links&quot;</span>)</span></code></pre></div>
 <figure>
-<p><img alt="2010–201313ya 年的链接数，显示 201115ya 年 5 月/6 月的体制转变" data-aspect-ratio="1400 / 667" decoding="async" height="667" id="_xCD7o1a-" loading="lazy" src="/images/google/alerts/changepoint.png" width="1400"></img></p>
-<figcaption><p><span class="date-range" title="The date range 2010–2013 lasted 3 years, ending 13 years ago.">2010–2013<sub><span title="2010 was 16 years ago.">13ya</span></sub></span> 年的链接数，显示 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年 5 月/6 月的体制转变</p></figcaption>
+<p><img src="/doc/technology/google/alerts/gwern-changepoint.jpg" id="_Z7sMUqro" class="width-full" alt="链接数量（2010–201313ya），图示 201115ya 年5/6月制度变化"></img></p>
+<figcaption><p>链接数量（<span class="date-range" title="The date range 2010–2013 lasted 3 years, ending 13 years ago.">2010–2013<sub><span title="2010 was 16 years ago.">13ya</span></sub></span>），图示 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年5/6月制度变化</p></figcaption>
 </figure>
-<p>使用这个新的变化点，检验更加显著：</p>
+<p>采用这一新分界点后，检验显著性更强：</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>alertsRecent <span class="ot">&lt;-</span> alerts[<span class="fu">year</span>(alerts<span class="sc">$</span>Date)<span class="sc">&gt;=</span><span class="dv">2010</span>,]</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>alertsRecent<span class="sc">$</span>Recent <span class="ot">&lt;-</span> alertsRecent<span class="sc">$</span>Date <span class="sc">&gt;</span> <span class="st">&quot;2011-05-01&quot;</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wilcox.test</span>(Links <span class="sc">~</span> Recent, <span class="at">conf.int=</span><span class="cn">TRUE</span>, <span class="at">data=</span>alertsRecent)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    Wilcoxon rank sum test with continuity correction</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>data<span class="sc">:</span>  Links by Recent</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>W <span class="ot">=</span> <span class="dv">63480</span>, p<span class="sc">-</span>value <span class="ot">=</span> <span class="fl">4.61e-12</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>alternative hypothesis<span class="sc">:</span> true location shift is not equal to <span class="dv">0</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="dv">95</span>% confidence interval<span class="sc">:</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="dv">62</span> <span class="dv">112</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>sample estimates<span class="sc">:</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>difference <span class="cf">in</span> location</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">87</span></span></code></pre></div>
-<p>拟合度也有了很大改善：</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> alerts<span class="sc">$</span>Recent <span class="ot">&lt;-</span> alerts<span class="sc">$</span>Date <span class="sc">&gt;</span> <span class="st">&quot;2011-05-01&quot;</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> mlm4 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Links <span class="sc">~</span> Date <span class="sc">+</span> Recent <span class="sc">+</span> (<span class="dv">1</span><span class="sc">+</span>Date<span class="sc">|</span>Search), alerts); mlm4</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>Random effects<span class="sc">:</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a> Groups   Name        Variance Std.Dev. Corr</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a> <span class="fu">Search</span>   (Intercept) <span class="fl">8.64e+03</span> <span class="fl">9.30e+01</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>          Date        <span class="fl">9.28e-05</span> <span class="fl">9.63e-03</span> <span class="sc">-</span><span class="fl">0.172</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a> Residual             <span class="fl">1.11e+04</span> <span class="fl">1.05e+02</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>Number of obs<span class="sc">:</span> <span class="dv">1048</span>, groups<span class="sc">:</span> Search, <span class="dv">68</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>Fixed effects<span class="sc">:</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>             Estimate Std. Error t value</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>(Intercept) <span class="sc">-</span><span class="fl">1.11e+03</span>   <span class="fl">1.87e+02</span>   <span class="sc">-</span><span class="fl">5.91</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>Date         <span class="fl">8.86e-02</span>   <span class="fl">1.30e-02</span>    <span class="fl">6.83</span></span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>RecentTRUE  <span class="sc">-</span><span class="fl">1.65e+02</span>   <span class="fl">1.44e+01</span>  <span class="sc">-</span><span class="fl">11.43</span></span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>Correlation of Fixed Effects<span class="sc">:</span></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>           (Intr) Date</span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>Date       <span class="sc">-</span><span class="fl">0.994</span></span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>RecentTRUE  <span class="fl">0.709</span> <span class="sc">-</span><span class="fl">0.725</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#     Wilcoxon rank sum test with continuity correction</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># data:  Links by Recent</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># W = 63480, p-value = 4.61e-12</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co"># alternative hypothesis: true location shift is not equal to 0</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 95% confidence interval:</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">#   62 112</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co"># sample estimates:</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co"># difference in location</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co">#                     87</span></span></code></pre></div>
+<p>拟合也明显改善：</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>alerts<span class="sc">$</span>Recent <span class="ot">&lt;-</span> alerts<span class="sc">$</span>Date <span class="sc">&gt;</span> <span class="st">&quot;2011-05-01&quot;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>mlm4 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Links <span class="sc">~</span> Date <span class="sc">+</span> Recent <span class="sc">+</span> (<span class="dv">1</span><span class="sc">+</span>Date<span class="sc">|</span>Search), alerts); mlm4</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Random effects:</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co">#  Groups   Name        Variance Std.Dev. Corr</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">#  Search   (Intercept) 8.64e+03 9.30e+01</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co">#           Date        9.28e-05 9.63e-03 -0.172</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  Residual             1.11e+04 1.05e+02</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of obs: 1048, groups: Search, 68</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixed effects:</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co">#              Estimate Std. Error t value</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co"># (Intercept) -1.11e+03   1.87e+02   -5.91</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Date         8.86e-02   1.30e-02    6.83</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="co"># RecentTRUE  -1.65e+02   1.44e+01  -11.43</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlation of Fixed Effects:</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co">#            (Intr) Date</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Date       -0.994</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="co"># RecentTRUE  0.709 -0.725</span></span>
 <span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>R<span class="sc">&gt;</span> <span class="fu">anova</span>(mlm1, mlm2, mlm3, mlm4)</span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>     Df   AIC   BIC logLik deviance Chisq Chi Df <span class="fu">Pr</span>(<span class="sc">&gt;</span>Chisq)</span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>mlm1  <span class="dv">4</span> <span class="dv">13070</span> <span class="dv">13089</span>  <span class="sc">-</span><span class="dv">6531</span>    <span class="dv">13062</span></span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>mlm2  <span class="dv">6</span> <span class="dv">12771</span> <span class="dv">12801</span>  <span class="sc">-</span><span class="dv">6379</span>    <span class="dv">12759</span> <span class="fl">302.7</span>      <span class="dv">2</span>     <span class="sc">&lt;</span><span class="fl">2e-16</span></span>
-<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>mlm3  <span class="dv">7</span> <span class="dv">13015</span> <span class="dv">13050</span>  <span class="sc">-</span><span class="dv">6500</span>    <span class="dv">13001</span>   <span class="fl">0.0</span>      <span class="dv">1</span>          <span class="dv">1</span></span>
-<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>mlm4  <span class="dv">7</span> <span class="dv">12948</span> <span class="dv">12983</span>  <span class="sc">-</span><span class="dv">6467</span>    <span class="dv">12934</span>  <span class="fl">66.8</span>      <span class="dv">0</span>     <span class="sc">&lt;</span><span class="fl">2e-16</span></span></code></pre></div>
-<section id="稳健性" class="level4">
-<h4><a href="#稳健性" title="Link to section: § &#39;稳健性&#39;">稳健性</a></h4>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(mlm1, mlm2, mlm3, mlm4)</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="co">#      Df   AIC   BIC logLik deviance Chisq Chi Df Pr(&gt;Chisq)</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm1  4 13070 13089  -6531    13062</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm2  6 12771 12801  -6379    12759 302.7      2     &lt;2e-16</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm3  7 13015 13050  -6500    13001   0.0      1          1</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm4  7 12948 12983  -6467    12934  66.8      0     &lt;2e-16</span></span></code></pre></div>
+<section id="鲁棒性检验" class="level4">
+<h4><a href="#鲁棒性检验" title="Link to section: § &#39;鲁棒性检验&#39;">鲁棒性检验</a></h4>
 <p><!--
-鉴于上述结论，后验模拟从未给出 `Recent` 的估计值接近零也就不足为奇了：
+Given the foregoing, it's not surprising that the posterior simulation never spits out an estimate for `Recent` anywhere close to zero:
 
 ~~~{.R}
 mlm4.sim <- sim(mlm4,  n.sims = 100000)
 fixef.mlm4.sim <- fixef(mlm4.sim)
 quantile(fixef.mlm4.sim[,3], probs = c(0, 0.025, 0.975, 1))
-     0%    2.5%   97.5%    100%
--186.74 -152.69 -101.37  -69.05
+#      0%    2.5%   97.5%    100%
+# -186.74 -152.69 -101.37  -69.05
 ~~~
 
-后验检查结果良好，所以我从另一个方向进行检验：
+The posterior check is good, so I take a look at the other direction:
 --></p>
-<p>使用<a href="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)" id="_3AwRCtyS" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bootstrapping_(statistics)#bodyContent">自助法</a>，这种下降是否对数据的不同样本具有稳健性？答案是肯定的，而且 Wilcoxon 检验之前给出的置信区间其实相当不错：</p>
+<p>不同样本检验是否依然显示下降？用<a href="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)" id="_3AwRCtyS" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bootstrapping_(statistics)#bodyContent">自助法</a>也支持这一点，而且 Wilcoxon 给出了一个相当好的置信区间：</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(boot)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>recentEstimate <span class="ot">&lt;-</span> <span class="cf">function</span>(dt, indices) {</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> dt[indices,] <span class="co"># 允许 boot 选择子样本</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> dt[indices,] <span class="co"># allows boot to select subsample</span></span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  mlm4 <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Links <span class="sc">~</span> Date <span class="sc">+</span> Recent <span class="sc">+</span> (<span class="dv">1</span><span class="sc">+</span>Date<span class="sc">|</span>Search), d)</span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">fixef</span>(mlm4)[<span class="dv">3</span>])</span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>bs <span class="ot">&lt;-</span> <span class="fu">boot</span>(<span class="at">data=</span>alerts, <span class="at">statistic=</span>recentEstimate, <span class="at">R=</span><span class="dv">10000</span>, <span class="at">parallel=</span><span class="st">&quot;multicore&quot;</span>, <span class="at">ncpus=</span><span class="dv">4</span>); bs</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>Bootstrap Statistics <span class="sc">:</span></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    original  bias    std. error</span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>t1<span class="sc">*</span>   <span class="sc">-</span><span class="fl">164.8</span>   <span class="fl">34.06</span>       <span class="fl">17.44</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Bootstrap Statistics :</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">#     original  bias    std. error</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co"># t1*   -164.8   34.06       17.44</span></span>
 <span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="fu">boot.ci</span>(bs)</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>Intervals <span class="sc">:</span></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>Level      Normal              Basic</span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="dv">95</span>%   (<span class="sc">-</span><span class="fl">233.0</span>, <span class="sc">-</span><span class="fl">164.7</span> )   (<span class="sc">-</span><span class="fl">228.2</span>, <span class="sc">-</span><span class="fl">156.7</span> )</span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>Level     Percentile            BCa</span>
-<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="dv">95</span>%   (<span class="sc">-</span><span class="fl">172.9</span>, <span class="sc">-</span><span class="fl">101.4</span> )   (<span class="sc">-</span><span class="fl">211.8</span>, <span class="sc">-</span><span class="fl">156.7</span> )</span></code></pre></div>
-<p>置信区间（-159,-95）在此背景下既具有统计显著性，也是一个不容忽视的效应大小。看来这个 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年中期的下降是真实存在的。我惊讶地发现在我的 Alerts 数量中有如此精确、局部化的下降。我确实预期会发现一个下降，但我预期它是一个逐渐的过程——随着 Google 的搜索算法逐步排除越来越多的链接。我没想到能够做出这样的陈述：“在这个月份，结果下降了超过三分之一。”</p>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Intervals :</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Level      Normal              Basic</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 95%   (-233.0, -164.7 )   (-228.2, -156.7 )</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Level     Percentile            BCa</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 95%   (-172.9, -101.4 )   (-211.8, -156.7 )</span></span></code></pre></div>
+<p>置信区间为 (-159,-95)，在这里既有统计显著性，也代表了一个不容忽略的效应量。<span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年中这次下跌很可能是真的。我原本预计会下降，但预期的是逐步、缓慢的，而不是 Google 搜索算法渐进剔除更多网站导致的缓慢过程。现在看到的是，在某个月里结果会“一下子掉三分之一以上”。</p>
+<p><a id="panda"></a> ### Panda？</p>
+<p>我不知道 Google 在 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年5/6月是否发布了影响 Alerts 的改动，邮件本身也无法直接说明发生了什么，但可以猜测一个主因：那段时间或许是 Google 进行“Panda”排序更新（<a href="https://en.wikipedia.org/wiki/Google_Panda" id="_YBF4_A_L" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Google_Panda#bodyContent">Google Panda</a><span>）的时段。该更新影响了大量网站和搜索，初期有不少问题，并且据称促进了社交网络站点（我在自己的 alerts 里也很少见到），且于<span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span>年4月全球上线——这恰好足以触发 5/6 月的变化（随后 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年内还持续调整 </span><a href="https://moz.com/google-algorithm-change#2011" id="_2sfnvO_N" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Google Algorithm Change History">Google 算法变更</a>）。</p>
+<p>（真正原因恐怕我们永远不会知道：Google 对内部技术决策和更新向外说明得一向非常少。）</p>
+<p><a id="conclusion"></a> # 结论</p>
+<p>那么我们得到了什么？</p>
+<p>整体线性回归并没直接回答问题，但它有一个好处：展示了提醒间巨大差异，也提醒我们要谨慎定义问题；对多样性和随机性保持警惕，先看“大效果”和“大局”。如果某人说 alerts 略有下降，可能只是记忆偏差；但若他说从每封 20 条掉到 3 条，就不应机械地怀疑，而应更细看。</p>
+<p>当直接检验最初说法时，我们并没有<em>完全</em>支持那些早期博主的说法：下降并未在他们说的 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span> 年发生，而是大约晚半年的时候（不同用户可能有偏差）。这说明什么？很难说。Google 有时会把更新在不同用户中分批慢慢推，可能我先于多数用户经历了大幅降链；或者别人一开始不确定是否真少了链接（那样的话我对他们评价过于严苛）；又或者 SEO 相关改动先影响了我的搜索词，别人的搜索还没受。</p>
+<p>所以 Alerts“坏了”吗？至少它确实明显被打击：命中链路变少了，而且我观察到的返回内容也没那么“珍贵”，不足以抵消稀缺性。更糟糕的是，问题到现在都持续了两年，没有可见改善。</p>
+<p>但进一步看，命中减少似乎是一次性事件；如果我的 Panda 猜想成立，这更像 Google 的优化优先级问题，而非刻意抛弃——搜索（Search）毕竟是“犬摇尾巴”的狗，优先级永远高于 Alerts。我的生存模型也许最后仍会笑到最后：Alerts 可能会比更出名的同类服务活得更久。</p>
+<p>只是看法不同：如果你喜欢把杯子看半满，那么这意味着 Alerts 看起来没那么糟糕，短期内未必会像 <a href="https://en.wikipedia.org/wiki/Google_Reader" id="_8S9dSNET" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Google_Reader#bodyContent">Google Reader</a> 一样进“天上的回收箱”；若你看半空，倒像是 Google 典型案例——不与用户沟通、单向且隐形改动、为了更赚钱服务削减另一服务、用户在其技术能力面前无力抗争（还有谁能像它这样持续抓取全网新内容匹配关键词？）。</p>
 </section>
 </section>
-<section id="是-panda-算法吗" class="level3">
-<h3><a href="#是-panda-算法吗" title="Link to section: § &#39;是 Panda 算法吗？&#39;">是 Panda 算法吗？</a></h3>
-<p>我不知道 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年 5 月/6 月有任何关于 Google Alerts 的变更公告，电子邮件也无法直接告诉我们发生了什么。但我可以进行推测。</p>
-<p>有一个嫌疑犯让我想到了 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年初可能发生了什么变化，从而导致了汇总链接数量的下降（这种下降在 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年 6 月积累到了统计显著性水平）：对网页排名产生广泛影响的变更——<a href="https://en.wikipedia.org/wiki/Google_Panda" id="_YBF4_A_L" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Google_Panda#bodyContent">Google Panda</a><span>。它影响了许多网站和搜索，存在磨合问题，据报道促进了社交网络网站的排名（而我在自己的警报中很少看到这类网站），并于 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年 4 月在全球推出——恰好可以在 5 月/6 月触发变化（并在 </span><a href="http://moz.com/google-algorithm-change#2011" id="_9ydO1hHa" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Google Algorithm Change History">2011 年持续进行变更</a>）。</p>
-<p>（我们可能永远不会知道真正的原因：Google 在其许多内部技术决策和变更方面是出了名的不善于沟通。）</p>
 </section>
 </section>
-</section>
-<section id="结论" class="level1">
-<h1><a href="#结论" title="Link to section: § &#39;结论&#39;">结论</a></h1>
-<p>那么这一切意味着什么？</p>
-<p>总体线性回归最终未能回答这个问题，但它们仍然具有教育意义，展示了不同警报之间的巨大多样性以及理解我们到底在问什么问题的复杂性；警报之间的变异性和差异提醒我们不要被随机性所欺骗，要尝试寻找大效应和全局图景——如果有人说他们的警报似乎有所减少，他们可能是被选择性记忆所欺骗了，但当他们说他们的警报从每封邮件 20 个链接降到了 3 个时，我们就应该避免不假思索的怀疑，更仔细地观察。</p>
-<p>当我们直接调查这一说法时，我们<em>并没有完全</em>找到所声称的情况：在博主们声称的 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span> 年并没有变化点——他们似乎比我自己的警报中发生变化的时间晚了半年。这是怎么回事？很难说。Google 有时会在很长一段时间内向用户推出变更，因此也许我早期就受到了一些大幅减少链接的变更的影响。或者也许人们只是花了一些时间才确信链接减少了（在这种情况下，我对他们的评价过低了）。又或者是独立的 SEO 相关变更在我的搜索之后影响了他们的搜索。</p>
-<p>Alerts 是否”坏了”？嗯，它确实受到了明显的打击：发现的链接数量下降了，而我自己的印象是返回的链接质量并没有好到能弥补其稀缺性。而且问题已经持续了 2 年却没有任何明显改善，这肯定不是好事。</p>
-<p>但仔细观察后，这次打击似乎是一次性的，如果我关于 Panda 的推测是正确的，它并不反映 Google 的忽视或轻蔑，而只是更重要的因素——Search 保持高质量始终是比 Alerts 更高的优先级，因为 Search 是摇尾巴的那条狗。我的生存模型可能最终会笑到最后，Alerts 可能会比它更著名的同类产品活得更久。</p>
-<p>我想这取决于你如何看待这杯水：如果看到半满，那这就是好消息，因为这意味着 Alerts 的状况没有看起来那么糟糕，可能不会很快跟随 Reader 进入天上的大回收站；如果看到半空，那这就是 Google 不与用户沟通、单方面和隐蔽地进行更改、为了更有利可图的服务而降低一个服务质量的又一个例子，以及用户在其技术霸权面前是多么无助（还有谁能做得这么好——在互联网上爬取与关键词匹配的新内容？）。</p>
-</section>
-<section id="参见" class="level1">
-<h1><a href="#参见" title="Link to section: § &#39;参见&#39;">参见</a></h1>
+<section id="相关内容" class="level1">
+<h1><a href="#相关内容" title="Link to section: § &#39;相关内容&#39;">相关内容</a></h1>
+<div class="columns">
 <ul>
-<li><p><a href="hpmor" id="_ZaFJYe1S" title="生存分析未发现评论者寿命存在重大异常，但发现从较晚章节开始评论的评论者的死亡率似乎有所增加">同人小说评论者生存曲线</a></p></li>
-<li><p><a href>天气</a></p></li>
+<li><p><a href="/hpmor" id="gwern-hpmor" class="prefetch-not link-annotated link-page backlink-not" title="A survival analysis finds no major anomalies in reviewer lifetimes, but an apparent increase in mortality for reviewers who started reviewing with later chapters">Fanfiction reviewer survival curves</a></p></li>
+<li><p><a href="/weather" id="gwern-weather" class="prefetch-not link-annotated link-page backlink-not" title="&#39;Weather and My Productivity&#39;, Gwern 2013">Weather and mood</a></p></li>
 </ul>
+</div>
 </section>
 <section id="外部链接" class="level1">
 <h1><a href="#外部链接" title="Link to section: § &#39;外部链接&#39;">外部链接</a></h1>
@@ -1407,21 +1400,21 @@ quantile(fixef.mlm4.sim[,3], probs = c(0, 0.025, 0.975, 1))
 <li><p><a href="https://news.ycombinator.com/item?id=6445270" id="_mBzmidXH" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">Hacker News 讨论</a></p></li>
 </ul>
 <p><!-- For the update:
-0. fix the 0-link anomalous emails early in the sample
-1. use a MLM, using a Poisson family - matches the underlying process more accurately
-2. add additional level of nesting for unique subject lines but about the same subject (so it would go email-subject-lines nested under general-topics eg. all the Gene Wolfe searches should be clustered)
-2. add Google Scholar & Pubmed alerts
-3. add a nesting level for Google (Alerts & Scholar), and nesting for all alerts (Google & Pubmed) --></p>
+#. fix the 0-link anomalous emails early in the sample
+#. use a MLM, using a Poisson family - matches the underlying process more accurately
+#. add additional level of nesting for unique subject lines but about the same subject (so it would go email-subject-lines nested under general-topics eg. all the Gene Wolfe searches should be clustered)
+#. add Google Scholar & Pubmed alerts
+#. add a nesting level for Google (Alerts & Scholar), and nesting for all alerts (Google & Pubmed) --></p>
 </section>
 <aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr></hr>
 <ol>
-<li id="fn1"><p><a href="http://www.buzzfeed.com/justinesharrock/whats-wrong-with-google-alerts" id="_vWQDfcSp" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">“What’s Wrong With Google Alerts? The small but useful service seems to be dying. One researcher uses empirical research to answer the questions that Google won’t.”</a>，发表于 <em>BuzzFeed</em>：</p>
+<li id="fn1"><p>[“Google Alerts 到底怎么了？这个小而实用的服务似乎在走下坡路。一个研究者用实证方式回答了 Google 不愿回答的问题。”]，出自 <em>BuzzFeed</em>：</p>
 <blockquote>
-<p>Google has refused to shed light on the decline. Today, a Google spokesperson told BuzzFeed, “we’re always working to improve our products - we’ll continue making updates to Google Alerts to make it more useful for people.” In other words, a polite non-answer.</p>
+<p>Google 一直拒绝说明衰退原因。今天，Google 发言人告诉 BuzzFeed，“我们始终在改进产品——会继续更新 Google Alerts，让它对用户更有用。” 换句话说，这是一个礼貌的拒答。</p>
 </blockquote>
 <a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></li>
-<li id="fn2"><p>我见过一些替代服务，如 <a href="http://www.ghacks.net/2013/06/29/yahoo-search-alerts-a-google-alerts-alternative/" id="_y485_-Li" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Yahoo! Search Alerts</a>、<a href="http://talkwalker.com/en" id="_B0NECy7n">talkwalker</a> 和 <a href="https://en.mention.net/" id="_WeoyKbcH">Mention</a>，但我没有使用过它们；后两者在<a href="http://moz.com/ugc/google-alerts-vs-mention-vs-talkwalker" id="_Q9XQP3EO" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Google Alerts VS Mention VS Talkwalker">与 Google Alerts 的对比中</a>表现不错。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>我看过一些替代服务，如 <a href="https://www.ghacks.net/2013/06/29/yahoo-search-alerts-a-google-alerts-alternative/" id="_qaznwj8l" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Yahoo! Search Alerts</a>、<a href="https://www.talkwalker.com/" id="_5P4UXkJE">talkwalker</a> 和 <a href="https://mention.com/en/" id="_Em_wA3nJ">Mention</a>，但都没真正使用；后两者在<a href="https://moz.com/blog/google-alerts-vs-mention-vs-talkwalker" id="__il973Oe" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Google Alerts VS Mention VS Talkwalker">与 Google Alerts 的比较</a>里表现都还不错<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </aside>
 

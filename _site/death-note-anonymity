@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inlined head (no SSI): injected by Hakyll from static/include/inlined-head.html -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #aaa;
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popins-popin-box-shadow-color: #aaa;
+
+    --GW-popins-popin-title-bar-background-color: #fff;
+    --GW-popins-popin-title-bar-button-color: #777;
+
+    --GW-popins-popin-scrollbar-thumb-color: #ccc;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #999;
+
+    --GW-popins-popin-stack-counter-text-color: #fff;
+    --GW-popins-popin-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #ccc;
+	--GW-back-to-top-link-hover-color: #999;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #7c7c7c;
+    --GW-popins-popin-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popins-popin-box-shadow-color: #7c7c7c;
+
+    --GW-popins-popin-title-bar-background-color: #000;
+    --GW-popins-popin-title-bar-button-color: #a6a6a6;
+
+    --GW-popins-popin-scrollbar-thumb-color: #5c5c5c;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popins-popin-stack-counter-text-color: #000;
+    --GW-popins-popin-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #5c5c5c;
+	--GW-back-to-top-link-hover-color: #8b8b8b;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popins-popin-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+div.poem span.caesura-mark {
+	opacity: 0.3;
+}
+@media all and (max-width: 649px) {
+	div.poem span.caesura-mark {
+		opacity: 0.4;
+	}
+}
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1770514858">
+<script src="/static/js/head.js?v=1770514858"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1768170615" as="image">
+
+
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="&lt;em&gt;Death Note&lt;/em&gt;: L，匿名与逃避熵">
+  <meta name="citation_title" content="&lt;em&gt;Death Note&lt;/em&gt;: L，匿名与逃避熵">
+  <meta name="og:title" content="&lt;em&gt;Death Note&lt;/em&gt;: L，匿名与逃避熵">
+  <meta name="twitter:title" content="&lt;em&gt;Death Note&lt;/em&gt;: L，匿名与逃避熵">
+  <meta name="generator" content="https://github.com/gwern/gwern.net/">
+  <meta name="creator" content="gwern.net">
+  
+  <meta name="author" content="Gwern">
+  <meta name="citation_author" content="Gwern">
+  
+  <meta name="contact" content="https://gwern.net/me#contact">
+  <link rel="index" title="Gwern.net homepage" href="https://gwern.net/index">
+  <link href="https://gwern.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Gwern.net newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="gwern">
+  <meta name="twitter:site" content="gwern.net">
+  <meta name="og:site" content="gwern.net">
+  <meta name="og:type" content="article">
+  <meta name="description" content="应用计算机科学：关于将谋杀视为 STEM 领域——利用信息论量化夜神月在《死亡笔记》中的错误严重程度并考虑修正方案">
+  <meta name="og:description" content="应用计算机科学：关于将谋杀视为 STEM 领域——利用信息论量化夜神月在《死亡笔记》中的错误严重程度并考虑修正方案">
+  <meta property="og:image" content="https://gwern.net/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail text: the Gwern.net site logo, a logotype of a large blackletter fraktur capital letter &#39;G&#39; on a white background.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content>
+  <meta name="keywords" content="anime, cs/algorithm/information, cs/cryptography, fiction/criticism, insight/porn, statistics/bayes">
+  <meta name="dc.date.issued" content="2011-05-04">
+  
+  <meta name="citation_publication_date" content="2011-05-04">
+  <meta name="dcterms.modified" content="2017-12-15">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://gwern.net/death-note-anonymity">
+  <meta name="citation_fulltext_html_url" content="https://gwern.net/death-note-anonymity">
+  <meta name="og:url" content="https://gwern.net/death-note-anonymity">
+  <link rel="alternate" type="text/markdown" href="https://gwern.net/death-note-anonymity.md" title="Markdown source of ‘Death Note: L，匿名与逃避熵’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-death-note-anonymity dropcaps-kanzlei">
+  <meta name="citation_fulltext_world_readable" content>
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>Death Note: L，匿名与逃避熵 · Gwern.net</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+
+  <!-- CSS for JS-disabled users: ensure that NoScripters know what they are missing even if they jump to a section & miss the warning at top/bottom. -->
+  <noscript>
+    <style>
+      #markdownBody #noscript-warning-header {
+          position: fixed; /* sticky */
+          top: 6px; /* at top */
+          width: 58%;
+          z-index: 99; /* Make sure it is on top */
+          background-color: #f8f8f8; /* Set a solid background color so legible while positioned over text */
+          border-color: var(--GW-abstract-border-color); /* Make look like theme-toggle/admonitions a bit more */
+          border-width: 6px 6px 6px 6px;
+          border-style: double;
+      }
+      #markdownBody #noscript-warning-header p { margin: 10px; }
+      nav#navbar { padding-top: 160px; } /* avoid overlap with page header */
+    </style>
+  </noscript>
+</head>
+
+<body class="page-death-note-anonymity dropcaps-kanzlei">
+  <!-- Inlined asset links (no SSI): injected by Hakyll from static/include/inlined-asset-links.html -->
+  <link rel="stylesheet" href="/static/css/style.css?v=1770491984" media="print" onload="this.media=`all`">
+<script src="/static/js/script.js?v=1770491982" defer></script>
+
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <!-- Navbar (no SSI): injected by Hakyll from static/include/navbar.html -->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="design link-page link-annotated" href="/design" title="Design and implementation notes">Design</a>
+        <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page link-annotated" href="/blog/index" title="Blog index: short posts">Blog</a>
+        <a class="links link-page" href="/Links" title="Links page">Links</a>
+        <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+
+    <article>
+
+      <header>
+        <h1><em>Death Note</em>: L，匿名与逃避熵</h1>
+      </header>
+
+      
+      <div class="markdownBody" id="page-metadata">
+         <div class="link-tags">
+<p><a href="/doc/anime/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to anime tag index">anime</a>, <a href="/doc/cs/algorithm/information/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to cs/algorithm/information tag index">information theory</a>, <a href="/doc/cs/cryptography/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to cs/cryptography tag index">cryptography</a>, <a href="/doc/fiction/criticism/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to fiction/criticism tag index">literary criticism</a>, <a href="/doc/insight/porn/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to insight/porn tag index">insight/porn</a>, <a href="/doc/statistics/bayes/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to statistics/bayes tag index">Bayes</a></p>
+</div> 
+        <div class="page-description"><p>应用计算机科学：关于将谋杀视为 STEM 领域——利用信息论量化夜神月在《死亡笔记》中的错误严重程度并考虑修正方案</p></div>
+        <div class="page-metadata-fields">
+            
+            <span class="page-date-range"><span class="date-range" title="The date range 2011-05-04–2017-12-15 lasted 6 years (2,418 days), ending 9 years ago.">2011-05-04<span class="subsup"><sup>–</sup><sub>6y</sub></span>2017-12-15</span></span>
+            <span class="page-status" title="Writing status of current page: ranges &#39;abandoned&#39;/&#39;notes&#39;/&#39;draft&#39;/&#39;in progress&#39;/&#39;finished&#39;"><em><span class="completion-status" data-progress-percentage="100">finished</span></em></span>
+            <span class="page-confidence"><a href="/about#confidence-tags" title="Explanation of &#39;confidence&#39; metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: &#39;certain&#39;/&#39;highly likely&#39;/&#39;likely&#39;/&#39;possible&#39;/&#39;unlikely&#39;/&#39;highly unlikely&#39;/&#39;remote&#39;/&#39;impossible&#39;)">certainty</a>: <em><span class="completion-status" data-progress-percentage="84">highly likely</span></em></span>
+            <span class="page-importance"><a href="/about#importance-tags" title="Explanation of &#39;importance&#39; metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>7</em></span>
+            
+            
+            
+        </div>
+      </div>
+      
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#侦探故事作为优化问题" id="toc-侦探故事作为优化问题">侦探故事作为优化问题</a></li>
+<li><a href="#错误" id="toc-错误">错误</a>
+<ul>
+<li><a href="#错误-1" id="toc-错误-1">错误 1</a></li>
+<li><a href="#错误-2" id="toc-错误-2">错误 2</a>
+<ul>
+<li><a href="#去匿名化" id="toc-去匿名化">去匿名化</a></li>
+</ul></li>
+<li><a href="#错误-3" id="toc-错误-3">错误 3</a></li>
+<li><a href="#错误-5" id="toc-错误-5">错误 5</a></li>
+<li><a href="#终局" id="toc-终局">终局</a></li>
+</ul></li>
+<li><a href="#安全很难还是去购物吧" id="toc-安全很难还是去购物吧">安全很难（还是去购物吧）</a>
+<ul>
+<li><a href="#随机化" id="toc-随机化">随机化</a></li>
+</ul></li>
+<li><a href="#另请参阅" id="toc-另请参阅">另请参阅</a></li>
+<li><a href="#外部链接" id="toc-外部链接">外部链接</a></li>
+<li><a href="#附录" id="toc-附录">附录</a>
+<ul>
+<li><a href="#用死亡笔记交流" id="toc-用死亡笔记交流">用死亡笔记交流</a></li>
+<li><a href="#贝叶斯法理学" id="toc-贝叶斯法理学">“贝叶斯法理学”</a></li>
+</ul></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><div class="abstract">
+<blockquote>
+<p>在漫画《死亡笔记》中，主角夜神月获得了超自然的武器“死亡笔记”，可以按需杀死任何人，并开始用它重塑世界。天才侦探 L 试图通过分析和诡计追踪他，并最终获胜。《死亡笔记》几乎是一个思想实验——既然有了完美的谋杀武器，你怎么还会搞砸呢？我从计算机安全、密码学和信息论的角度考察了 L 过程的各个步骤，量化了月的初始匿名性以及 L 如何逐步去匿名化他，并按如下顺序考虑哪个错误最大：</p>
+<ol type="1">
+<li><p>月的根本错误是以与其目标无关的方式杀人。</p>
+<p>通过心脏麻痹杀人不仅让他很早就暴露了，而且死亡表明他的暗杀方法精确得不可能，正在发生某种极度反常的事情。L 已经被提示基拉的存在。无论虚假的理由是什么，这对他的对手来说都是一个重大胜利。（为了威慑罪犯和恶棍，没有必要存在一个全球知名的单一异常或超自然杀手，如果安排所有杀戮都通过第三方/警察/司法等普通机制自然发生，或被间接用作平行构建来破案，效果也是一样的。）</p></li>
+<li><p>更糟糕的是，死亡在其他方面也是非随机的——它们倾向于发生在特定时间！</p>
+<p>仅仅是死亡的时间安排就让月损失了 6 比特的匿名性。</p></li>
+<li><p>月的第三个错误是对 Lind L. Tailor 的公然挑衅做出了反应。</p>
+<p>咬住诱饵让 L 将目标缩小到原来的 1⁄3 日本人口，获得了约 1.6 比特的信息增益。</p></li>
+<li><p>月的第四个错误是利用他警察父亲的凭证窃取了机密警察信息。</p>
+<p>这个错误的比特损失最大。这个错误让他损失了 11 比特的匿名性；换句话说，这个错误的代价是他时间安排错误代价的两倍，几乎是谋杀 Tailor 的 8 倍！</p></li>
+<li><p>杀死 Ray Penbar 和 FBI 小组。</p>
+<p>如果我们假设 Penbar 被分配了 10,000 个线索中的 200 个，那么谋杀他和他的未婚妻只让月掉了 6 比特，或者说略多于第四个错误的一半，与最初的时间安排错误相当。</p></li>
+<li><p>终局：在剧情的这一点上，L 诉诸直接措施，直接进入月的生活，进入大学，月无法在密切的面对面监视下完美地扮演无辜者的角色。</p>
+<p>从那时起，月就完了，因为他现在正在与 L 和调查组玩一场致命的“杀人游戏”。他浪费了超过 25 比特的匿名性，然后 L 直觉到了剩下的部分，并一直怀疑他。</p></li>
+</ol>
+<p>最后，我建议月应该如何最有效地利用死亡笔记并限制他的匿名性损失。在附录中，我讨论了使用死亡笔记作为通信设备可能的最大信息泄漏量。</p>
+<p><strong>(注：本文假设读者熟悉《<a href="https://en.wikipedia.org/wiki/%E6%AD%BB%E4%BA%A1%E7%AC%94%E8%AE%B0" id="_L9tgssvQ" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%AD%BB%E4%BA%A1%E7%AC%94%E8%AE%B0#bodyContent">死亡笔记</a>》的早期情节和 <a href="https://en.wikipedia.org/wiki/%E5%A4%9C%E7%A5%9E%E6%9C%88" id="_EdUIAKn-" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%A4%9C%E7%A5%9E%E6%9C%88#bodyContent">夜神月</a></strong>。如果你不熟悉 DN，请参阅我的 <a href="/death-note-ending" id="gwern-death-note-ending" class="prefetch-not link-annotated link-page" title="‘Death Note’s Ending’, Branwen 2008">《死亡笔记》结局</a> 论文或查阅 <a href="https://en.wikipedia.org/wiki/Death_Note#Plot" id="_OoQ-147-" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Death_Note#bodyContent">维基百科</a> 或 <a href="https://deathnote.fandom.com/wiki/Rules_of_the_Death_Note" id="_DxcKZmeP" class="link-live" data-link-icon="♡" data-link-icon-type="text" data-link-icon-color="#fa005a" data-url-iframe="https://antifandom.com/deathnote/wiki/Rules_of_the_Death_Note" title="Rules of the Death Note">阅读 DN 规则</a>。)</p>
+</blockquote>
+</div>
+<p>我曾称《死亡笔记》的主角夜神月“傲慢”，并说他犯了大错。所以我应该解释他哪里做错了以及他如何能做得更好。</p>
+<p>虽然月早在 FBI 小组抵达日本时就开始策划并承担严重风险，但他从根本上已经搞砸了。L 本不该离月那么近。死亡笔记杀人于无形，不留法医痕迹，且距离任意；《死亡笔记》几乎是一个思想实验——既然有了<em>完美</em>的谋杀武器，你怎么<em>还会</em>搞砸呢？</p>
+<p>其他一些死亡笔记用户凸显了这个问题。<a href="https://en.wikipedia.org/wiki/List_of_Death_Note_characters#Yotsuba_Group" id="_R0lpNrdB" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/List_of_Death_Note_characters#bodyContent">四叶集团</a> 的用户执行正常的处决，但<em>也</em>杀死了一些著名的竞争对手。这些杀戮直接指向四叶集团，并最终导致用户的死亡。这个故事的寓意是，间接关系在将可能性从“所有人”缩小到“这 8 个人”时可能是致命的。</p>
+<section id="侦探故事作为优化问题" class="level1">
+<h1><a href="#侦探故事作为优化问题" title="Link to section: § &#39;侦探故事作为优化问题&#39;">侦探故事作为优化问题</a></h1>
+<p>在月的情况下，L 从全世界 70 亿人口开始，需要将其缩小到 1 个人。这是一个搜索问题。事实上，它相当直接地映射到基本的<a href="https://en.wikipedia.org/wiki/%E4%BF%A1%E6%81%AF%E8%AE%BA" id="_yviXPpj2" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E4%BF%A1%E6%81%AF%E8%AE%BA#bodyContent">信息论</a>。（另见 <a href="/simulation-inference" id="gwern-simulation-inference" class="prefetch-not link-annotated link-page" title="&#39;Simulation Inferences&#39;, Gwern 2009">模拟推断</a>，<a href="/3-grenades" id="gwern-3-grenades" class="prefetch-not link-annotated link-page" title="‘The Three Grenades and the Four Noble Truths’, Branwen 2008">3 枚手榴弹</a>，以及应用去匿名化的案例研究，<a href="/dnm-arrest" id="gwern-dnm-arrest" class="prefetch-not link-annotated link-page" title="‘DNM-related arrests, 2011–2015’, Gwern 2012">Tor DNM 相关逮捕，<span class="date-range" title="The date range 2011–2015 lasted 4 years, ending 11 years ago.">2011<span class="subsup"><sup>–</sup><sub>4</sub></span>2015<sub><span title="2011 was 15 years ago.">11ya</span></sub></span></a>。）要从 70 亿个项目中唯一指定一个项目，你需要 33 比特的信息，因为 log<sub>2</sub>(7000000000) ≈ 32.7；打个比方，你的 32 位计算机只能寻址 <em>4</em> 亿个内存位置中的一个唯一位置，增加一位则容量翻倍至 &gt;80 亿。33 比特的信息很多吗？</p>
+<p>并不多。L 仅通过查看历史或犯罪统计数据就能获得一个比特，并注意到大规模杀人犯在惊人的程度上是<em>男性</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>，从而排除了世界人口的一半，实际上让 L 从一开始只需要获取 32 比特就能打破月的匿名性。<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> 如果死亡笔记用户足够理性和知识渊博，他们可以利用 <a href="https://en.wikipedia.org/wiki/%E8%B6%85%E7%90%86%E6%80%A7" id="_Cf08_pCh" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E8%B6%85%E7%90%86%E6%80%A7#bodyContent">超理性</a> 等概念进行非因果合作<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> 以避免这种信息泄漏……通过安排将死亡笔记传递给女性<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> 来恢复 50:50 的性别比例——例如，如果每有一个获得死亡笔记的女性，就有 3 个男性拥有死亡笔记，那么所有用户都可以掷一个 1d3 骰子，如果是 1 就保留，如果是 2 或 3 就传给异性。</p>
+<p>我们要首先指出，月总是会泄漏<em>一些</em>比特。他能保持完全隐藏的唯一方法是根本不使用死亡笔记。如果你以哪怕最细微的方式改变世界，那么你原则上已经泄漏了关于你自己的信息。万物在某种意义上都是相互联系的；你不能神奇地挥去火的存在，而不引发一连串后果导致 <a href="https://www.lesswrong.com/posts/LaM5aTcXvXzwQSC2Q/universal-fire" id="_lyYQ7ypt" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/LaM5aTcXvXzwQSC2Q/universal-fire?format=preview&amp;theme=classic">每一个生物死亡</a>。例如，月处决罪犯的根本目的是<em>缩短他们的寿命</em>——这无法通过某种方式隐藏。你不能既缩短他们的生命又<em>不</em>缩短他们的生命。他至少会以这种方式向精算师和统计学家暴露自己。</p>
+<p>更具历史意义的是，这对密码学家来说一直是一个挑战，比如在二战中：他们如何利用 Enigma 和其他通信而不暴露他们已经破解了它？他们的解决方案是误导：<a href="https://en.wikipedia.org/wiki/Ultra_(cryptography)#Safeguarding_of_sources" id="_U9vSF6Cg" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Ultra_(cryptography)#bodyContent">不断安排看似合理的替代方案</a>，比如“恰好”发现德国潜艇的搜索飞机，或者向 <a href="https://en.wikipedia.org/wiki/Double-Cross_System" id="_FL3Si4Jz" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Double-Cross_System#bodyContent">受控的已知德国特工</a> 泄漏有未被发现的间谍存在的消息。（然而，关于温斯顿·丘吉尔为了不冒 Ultra 秘密泄露的风险而允许考文垂镇被轰炸的著名故事 <a href="https://en.wikipedia.org/wiki/Coventry_Blitz#Coventry_and_Ultra" id="_o0bL0jYN" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Coventry_Blitz#bodyContent">后来受到了质疑</a>。）这在一定程度上是因为德国人的过度自信，因为战争没有持续太久，部分原因是因为每个掩盖故事本身都是合理的，在战争的混乱中，没有人能够看到全貌并意识到有<em>太</em>多幸运的搜索飞机和太多不可发现的鼹鼠；然而最终，总有人会意识到，显然有些德国人确实得出结论 Enigma 一定被破解了（但为时已晚）。 我不清楚什么是月掩盖其正常杀戮的最佳误导——利用死亡笔记的控制功能编造一个反犯罪恐怖组织？</p>
+<p>所以这里存在一个真正的挑战：一方试图从观察到的效果中推断出尽可能多的信息，另一方试图尽量减少前者能观察到的信息但又不完全停止行动。月如何在相互竞争的需求之间取得平衡？</p>
+</section>
+<section id="错误" class="level1">
+<h1><a href="#错误" title="Link to section: § &#39;错误&#39;">错误</a></h1>
+<section id="错误-1" class="level2">
+<h2><a href="#错误-1" title="Link to section: § &#39;错误 1&#39;">错误 1</a></h2>
+<p>然而，他可以试图减少泄漏并使他的 <a href="https://en.wikipedia.org/wiki/Degree_of_anonymity" id="_9dSV848Q" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Degree_of_anonymity#bodyContent">匿名集</a> 尽可能大。例如，用心力衰竭杀死每个罪犯是一个显而易见的破绽。罪犯不会那么频繁地死于心脏病发作。（如果你把“心脏病发作”换成“红斑狼疮”，这一点会更戏剧化；众所周知，在现实生活中从来不是红斑狼疮。）心脏病发作是所有死亡的一个子集，通过限制自己，月让他的活动更容易被发现。1,000 人死于红斑狼疮是刺耳的红色警报；1,000 人死于心脏病发作是一件怪事；而 1,000 人分布在统计上可能的癌症和心脏病等死因中几乎是不可见的（但原则上仍然可以察觉）。</p>
+<p>所以，月的根本错误是以与其目标无关的方式杀人。 通过心脏麻痹杀人不仅让他很早就暴露了，而且死亡表明他的暗杀方法精确得超自然。L 已经被提示基拉的存在。 无论虚假的理由是什么，这对他的对手来说都是一个重大胜利。</p>
+<p>第一个错误，也是连环杀手的典型错误（例如 <a href="https://en.wikipedia.org/wiki/Dennis_Rader" id="__ZIiX8BO" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Dennis_Rader#bodyContent">BTK 杀手</a> 的自吹自擂并不像他以为的那样匿名）：妄自尊大，渴望嘲弄、玩弄和控制受害者，并展示他们对普通民众的权力。 从文学角度来看，这种相似性显然不是偶然的，因为我们注定要将月解读为 <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/TheSociopath" id="_zN0XXrve" data-link-icon="TV" data-link-icon-type="text" data-link-icon-color="#1c6486">反社会</a> <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/SociopathicHero" id="_i_9k7Pb8" data-link-icon="TV" data-link-icon-type="text" data-link-icon-color="#1c6486">英雄</a> 原型（类似于 <a href="/thrawn" id="gwern-thrawn" class="prefetch-not link-annotated link-page" title="‘The Tragedy of Grand Admiral Thrawn’, Gwern 2019">索龙元帅</a>）：他最终的垮台是他 <a href="https://en.wikipedia.org/wiki/Hamartia" id="_ooDBcvoo" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hamartia#bodyContent">致命性格缺陷</a>，即 <a href="https://en.wikipedia.org/wiki/%E5%82%B2%E6%85%A2" id="_SmV9gTRL" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%82%B2%E6%85%A2#bodyContent">傲慢</a> 的后果，特别是原始的虐待狂意义上的。 月<em>无法</em>不这样自我破坏。</p>
+<p>（从执行月的威慑理论的角度来看，这也是非常有问题的：为了威慑罪犯和恶棍，没有必要存在一个全球知名的单一超自然杀手，如果安排所有杀戮都通过第三方/警察/司法自然完成，或被间接用于破案，效果是一样的。 可以说，威慑越被认为是分散的就越有效——因为单一杀手的寿命有限、知识有限、容易犯错，并且有个人偏好，这会减少威胁和与犯罪的联系，而如果所有的死亡都归因于异常高效的警察或侦探，这会被推断为各类警察能力的普遍提高，这种能力不会因为一个人感到无聊或被公共汽车撞到而瞬间消失。）</p>
+</section>
+<section id="错误-2" class="level2">
+<h2><a href="#错误-2" title="Link to section: § &#39;错误 2&#39;">错误 2</a></h2>
+<p>更糟糕的是，死亡在其他方面也是非随机的——它们倾向于发生在特定时间！画成图表，日常模式一目了然。</p>
+<p>L 能够将推测的学生或工人的活跃时间缩小到特定的经度范围，比如 180° 中的 125–150°；在这个范围内哪个国家最突出？日本。所以这把 70 亿人削减到了大约 1.28 亿；1.28 亿需要 27 比特（log<sub>2</sub> (128000000) ≈ 26.93），所以仅仅是死亡的时间安排就让月损失了 6 比特的匿名性！</p>
+<section id="去匿名化" class="level3">
+<h3><a href="#去匿名化" title="Link to section: § &#39;去匿名化&#39;">去匿名化</a></h3>
+<p>顺便说一句，有些人可能会怀疑人们能否从图表中推断出什么，认为《死亡笔记》只是在这部分一带而过。“怎么可能仅凭日本早晚的两条聚集线就推断出是住在日本的人？”但实际上，这样的图表精确得惊人。我在看《死亡笔记》之前的几年就学到了这一点，当时我在维基百科上非常活跃；我经常想知道两个编辑是否是同一个人，或者一个编辑大概住在哪里。如果他们的编辑或用户页面没有透露任何有用的信息，我会去“Kate 的 <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_edit_counters" id="_1qmLAPqj" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Wikipedia:WikiProject_edit_counters#bodyContent">编辑计数器</a>”，检查他们数百或数千次编辑的时间。通常，人们会看到约 4 小时没有任何编辑，然后是约 4 小时的中等到高活跃度，一个低谷，然后又逐渐上升持续 8 小时，再下降到那 4 小时的无活动期。这些时期非常清楚地对应于睡眠（几乎每个人都在凌晨 4 点睡觉）、早晨、午餐和工作时间、晚上，然后是夜里人们偶尔熬夜编辑<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>。当然会有噪音，来自人们熬夜特别晚，或者在工作日进行大量编辑，或者是偶尔旅行，但总体模式是清晰的——我从未发现有人实际上是守夜人而我的猜测偏离了整个半球的情况。（基于用户编辑模式的学术估计与基于 IP 编辑地理位置的预测吻合良好。<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>）</p>
+<div id="results">
+<p>计算机安全研究提供了更多可怕的结果。 也许因为 <a href="/everything" id="gwern-everything" class="prefetch-not link-annotated link-page" title="&#39;Everything Is Correlated&#39;, Gwern 2014">“万物皆相关”</a>，有惊人数量的方法可以打破某人的隐私并去匿名化他们（<a href="https://web.archive.org/web/20130425111434/http://33bits.org/2013/04/16/privacy-technologies-an-annotated-syllabus/" id="_Qi_jnoqC" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20130425111434if_/http://33bits.org/2013/04/16/privacy-technologies-an-annotated-syllabus/" title="Privacy technologies: An annotated syllabus">背景</a>；这样做还有 <a href="https://www-users.cse.umn.edu/~odlyzko/doc/privacy.economics.pdf" id="_Hrj0v2hr" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘Privacy, Economics, and Price Discrimination on the Internet’, Odlyzko 2003">经济动机</a> 以便做广告和 <a href="https://en.wikipedia.org/wiki/%E4%BB%B7%E6%A0%BC%E6%AD%A7%E8%A7%86" id="_j9YZxzx5" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E4%BB%B7%E6%A0%BC%E6%AD%A7%E8%A7%86#bodyContent">价格歧视</a>）：</p>
+<ol>
+<li><p>计算机 <a href="https://catalog.caida.org/details/paper/2005_fingerprinting/" id="_Qr4Z7jjS" title="‘Remote physical device fingerprinting’, Kohno et al 2005">时钟时间</a> 的微小误差（甚至 <a href="https://murdoch.is/papers/usenix08clockskew.pdf" id="_EmjAkHUQ" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">通过 Tor</a>）</p></li>
+<li><p><a href="https://pdfs.semanticscholar.org/ae93/529e8b9b1770593fae83f86803c6a7b529ea.pdf" id="_aCd8ul1S" class="link-live" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘Feasibility and Real-World Implications of Web Browser History Detection’, Janc &amp; Olejnik 2010">Web 浏览历史</a><a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> 或仅仅是 <a href="https://coveryourtracks.eff.org/static/browser-uniqueness.pdf" id="_oEvv8ipR" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘How Unique Is Your Web Browser?’, Eckersley 2010">版本和插件</a><a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>；这还是在随机的 <a href="https://web.archive.org/web/20100810201303/http://33bits.org/2010/06/01/yet-another-identity-stealing-bug-will-creeping-normalcy-be-the-result/" id="_CK_eAlCz" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20100810201303if_/http://33bits.org/2010/06/01/yet-another-identity-stealing-bug-will-creeping-normalcy-be-the-result/" title="Yet Another Identity Stealing Bug. Will Creeping Normalcy be the Result?">Firefox</a> 或 <a href="https://web.archive.org/web/20100226190432/http://33bits.org/2010/02/22/google-docs-leaks-identity/" id="_b3I7l664" class="link-live" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" data-url-iframe="https://web.archive.org/web/20100226190432if_/http://33bits.org/2010/02/22/google-docs-leaks-identity/" title="How Google Docs Leaks Your Identity">Google Docs</a> 或 <a href="https://web.archive.org/web/20101003031057/http://33bits.org/2010/09/28/instant-personalization-privacy-flaws" id="_XFNu5BnI" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20101003031057if_/http://33bits.org/2010/09/28/instant-personalization-privacy-flaws" title="Facebook’s Instant Personalization: An Analysis of Fundamental Privacy Flaws">Facebook</a> 漏洞没有泄漏你身份的时候</p></li>
+<li><p>基于页面加载速度的 <a href="https://en.wikipedia.org/wiki/%E6%97%B6%E5%BA%8F%E6%94%BB%E5%87%BB" id="_PWKxB22R" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%97%B6%E5%BA%8F%E6%94%BB%E5%87%BB#bodyContent">时序攻击</a><a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>（有多少次 <a href="https://en.wikipedia.org/wiki/%E7%BC%93%E5%AD%98%E6%9C%AA%E5%91%BD%E4%B8%AD" id="_uSNgs0me" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E7%BC%93%E5%AD%98%E6%9C%AA%E5%91%BD%E4%B8%AD#bodyContent">缓存未命中</a>；时序攻击也可用于 <a href="https://crypto.stanford.edu/~dabo/pubs/papers/webtiming.pdf" id="_mKNFiPzM" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘Exposing private information by timing web applications’, Bortz et al 2007">获知网站用户名或私人照片数量</a>）</p></li>
+<li><p>知道一个人在什么“群组”中可以 <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.155.820&amp;rep=rep1&amp;type=pdf" id="__2kB2jWB" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">唯一识别 42%</a><a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> 的社交网站 <a href="https://en.wikipedia.org/wiki/XING" id="_cKsty7Hp" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/XING#bodyContent">XING</a> 用户，可能还有 Facebook 和其他 6 个网站</p></li>
+<li><p>类似地，通过 <a href="https://en.wikipedia.org/wiki/Netflix" id="_Zplaa_XH" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Netflix#bodyContent">Netflix</a> <a href="https://arxiv.org/abs/cs/0610105" id="_q5KjVbGM" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/cs/0610105?fallback=original" title="‘How To Break Anonymity of the Netflix Prize Dataset’, Arvind Narayanan &amp; Shmatikov 2007">知道某人看过的几部电影</a><a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>，无论是流行还是冷门，如果包含在 <a href="https://en.wikipedia.org/wiki/Netflix_%E5%A5%96" id="_KHj2OxCD" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Netflix_%E5%A5%96#bodyContent">Netflix 奖</a> 中，通常可以访问其个人资料的其余部分。（这比 <a href="https://en.wikipedia.org/wiki/AOL_%E6%90%9C%E7%B4%A2%E6%95%B0%E6%8D%AE%E4%B8%91%E9%97%BB" id="_pZz-B1PA" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/AOL_%E6%90%9C%E7%B4%A2%E6%95%B0%E6%8D%AE%E4%B8%91%E9%97%BB#bodyContent">AOL 搜索数据丑闻</a> 更具戏剧性，因为 AOL 搜索在查询中嵌入了大量个人信息，相较之下，Netflix 数据似乎极其贫乏——除了一个人看了什么晦涩的动画之外，没有什么<em>明显</em>的标识。）</p></li>
+<li><p>研究人员 <a href="/doc/cs/algorithm/2009-narayanan.pdf" id="narayanan-shmatikov-2009" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘De-anonymizing Social Networks’, Narayanan &amp; Shmatikov 2009">推广了他们的 Netflix 工作</a> 以寻找任意图之间的同构性<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>（例如去除了 <em>任何和所有</em> 数据 <em>除了</em> 图结构的社交网络），<a href="https://web.archive.org/web/20110313170927/http://33bits.org/2011/03/09/link-prediction-by-de-anonymization-how-we-won-the-kaggle-social-network-challenge/" id="_puIqK1Hx" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20110313170927if_/http://33bits.org/2011/03/09/link-prediction-by-de-anonymization-how-we-won-the-kaggle-social-network-challenge/" title="Link Prediction by De-anonymization: How We Won the Kaggle Social Network Challenge">例如</a> <a href="https://en.wikipedia.org/wiki/Flickr" id="_vtlR9zJY" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Flickr#bodyContent">Flickr</a> 和 <a href="https://en.wikipedia.org/wiki/Twitter" id="_giLLypE2" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Twitter#bodyContent">Twitter</a>，并举出许多 <a href="https://web.archive.org/web/20090306144914/http://33bits.org/2008/11/12/57" id="_zu-UdPG3" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20090306144914if_/http://33bits.org/2008/11/12/57" title="Lendingclub.com: A de-anonymization walkthrough">公共数据集</a> 可以被去匿名化的例子<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>——例如你的 <a href="https://web.archive.org/web/20110528175925/http://33bits.org/2011/05/24/you-might-also-like-privacy-risks-of-collaborative-filtering" id="_iF4roekm" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20110528175925if_/http://33bits.org/2011/05/24/you-might-also-like-privacy-risks-of-collaborative-filtering" title="‘You Might Also Like’: Privacy Risks of Collaborative Filtering [blog]">亚马逊购买记录</a> (<a href="https://www.cs.utexas.edu/~shmat/shmat_oak11ymal.pdf" id="_Lz51T3R7" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘You Might Also Like’: Privacy Risks of Collaborative Filtering">Calandrino 等人 2011</a>; <a href="https://freedom-to-tinker.com/2011/05/24/you-might-also-privacy-risks-collaborative-filtering/" id="_yzLR0dzv">博客</a>). 这些攻击仅仅针对在尝试匿名化数据后留下的数据；它们并不利用这样的观察：选择删除什么数据与留下什么一样有趣，即 <a href="https://en.wikipedia.org/wiki/Julian_Sanchez_(writer)" id="_rr-2tIjm" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Julian_Sanchez_(writer)#bodyContent">Julian Sanchez</a> 所谓的 <a href="https://www.juliansanchez.com/2009/12/08/the-redactors-dilemma/" id="_0mcTarAi">“删减者的困境”</a>。</p></li>
+<li><p>用户名几乎 <a href="https://web.archive.org/web/20110221224022/http://33bits.org/2011/02/16/usernames-linkability-uber-profiles/" id="_F8jdga8S" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20110221224022if_/http://33bits.org/2011/02/16/usernames-linkability-uber-profiles/" title="The Linkability of Usernames: a Step Towards &#39;Uber-Profiles&#39;">不值一谈</a></p></li>
+<li><p>你的医院记录可以仅仅通过查看公共选民名册就被 <a href="https://dataprivacylab.org/dataprivacy/projects/law/law1.html" id="_899fnpeu" class="link-live" data-link-icon-color="#3366cc">去匿名化</a> <a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a> 那位研究人员后来继续 <a href="https://latanyasweeney.org/work/identifiability.html" id="_MTPSb8KV">进行</a> 关于去识别化调查数据可识别性的实验 [<a href="https://latanyasweeney.org/cv.html#survey" id="_7qXb4Ue2">引文</a>]，药房数据 [<a href="https://dataprivacylab.org/projects/identifiability/pharma1.html" id="_PRJZB7MI" class="link-live" data-link-icon-color="#3366cc">引文</a>]，临床试验数据 [<a href="https://latanyasweeney.org/cv.html#clinicaltrial" id="_luTJ4APK">引文</a>]，犯罪数据 [特拉华州诉甘尼特出版公司案]，DNA [<a href="https://dataprivacylab.org/dataprivacy/projects/genetic/dna3.html" id="_TJAlzowO" class="link-live" data-link-icon-color="#3366cc">引文</a>, <a href="https://dataprivacylab.org/dataprivacy/projects/genetic/dna2.html" id="_JL_xnNVT" class="link-live" data-link-icon-color="#3366cc">引文</a>, <a href="https://dataprivacylab.org/dataprivacy/projects/genetic/dna1.html" id="_JNY7t6S8" class="link-live" data-link-icon-color="#3366cc">引文</a>]，税务数据，公共卫生登记处 [<a href="https://latanyasweeney.org/cv.html#iterativeprofiler" id="_0wwbHkHN">引文</a> (被法院查封), 等等]，网络日志，和部分社会安全号码 [<a href="https://dataprivacylab.org/dataprivacy/projects/ssnwatch/index.html" id="_vNbZ6bbX" class="link-live" data-link-icon-color="#3366cc">引文</a>]。（呼。）</p></li>
+<li><p>你的 <a href="https://en.wikipedia.org/wiki/Keystroke_dynamics#References" id="_jPoBiajP" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Keystroke_dynamics#bodyContent">打字</a> 惊人地独特，打字的声音和手臂运动可以识别你或用于窥探输入和 <a href="https://arxiv.org/abs/1512.05616" id="_X588MZ7T" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1512.05616?fallback=original" title="‘Deep-Spying: Spying using Smartwatch and Deep Learning’, Beltramelli &amp; Risi 2015">窃取密码</a></p></li>
+<li><p>知道你的早晨通勤路线即使粗略到街区（或更低粒度）也能 <a href="https://web.archive.org/web/20090517214657/http://33bits.org/2009/05/13/your-morning-commute-is-unique-on-the-anonymity-of-homework-location-pairs/" id="_ENIe5cdG" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20090517214657if_/http://33bits.org/2009/05/13/your-morning-commute-is-unique-on-the-anonymity-of-homework-location-pairs/" title="Your Morning Commute is Unique: On the Anonymity of Home/Work Location Pairs">唯一识别</a> (<a href="https://crypto.stanford.edu/~pgolle/papers/commute.pdf" id="_I6xhcCxi" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="On the Anonymity of Home/Work Location Pairs"><span class="cite"><span class="cite-author">Golle &amp; Partridge</span><span class="cite-date">2009</span></span></a>) 你；知道你通勤的邮政编码/人口普查区可以唯一识别 5% 的人</p></li>
+<li><p>你的笔迹相当独特，当然——但你在测试中填涂气泡的方式也是如此<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a></p></li>
+<li><p>说到笔迹，你的写作风格也 <a href="https://www.nytimes.com/2011/07/24/opinion/sunday/24gray.html" id="_-8GKk3pQ" data-link-icon="new-york-times" data-link-icon-type="svg">可能</a> <a href="https://spectrum.library.concordia.ca/id/eprint/36253/1/2010_Mining_Writeprints_from_Anonymous_E-mails.pdf" id="_NLzBByEp" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘Mining writeprints from anonymous e-mails for forensic investigation’, Iqbal et al 2010">相当独特</a> <a href="https://www.cs.princeton.edu/~arvindn/publications/author-identification-draft.pdf" id="_sZnMz9rb" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">也是</a></p></li>
+<li><p>不明显的背景电流嗡嗡声可能 <a href="https://www.bbc.co.uk/news/science-environment-20629671" id="_uLxY8vKw" data-link-icon="BBC" data-link-icon-type="text,tri,sans" title="The hum that helps to fight crime">唯一确定录音的日期</a>。不明显的声音也可以用来持久跟踪设备/人员，跨气隙窃取信息，并可用于监控房间存在/活动，甚至 <a href="https://arxiv.org/abs/1808.10250" id="_iJ4NhaJw" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1808.10250?fallback=original" title="‘SonarSnoop: Active Acoustic Side-Channel Attacks’, Cheng et al 2018">监控手指运动</a> 或敲击声 <a href="https://arxiv.org/abs/1903.11137" id="_e5TiPU5I" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1903.11137?fallback=original" title="‘Hearing your touch: A new acoustic side channel on smartphones’, Shumailov et al 2019">以帮助破解密码短语</a> 或 <a href="/doc/technology/2020-ramesh.pdf" id="ramesh,-2020" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘Listen to Your Key: Towards Acoustics–based Physical Key Inference’, Ramesh et al 2020">复制物理钥匙</a></p></li>
+<li><p>你可能听说过用于窃听的 <a href="https://en.wikipedia.org/wiki/%E6%BF%80%E5%85%89%E9%BA%A6%E5%85%8B%E9%A3%8E" id="_DnqYH6oQ" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%BF%80%E5%85%89%E9%BA%A6%E5%85%8B%E9%A3%8E#bodyContent">激光麦克风</a>… 但通过 <a href="https://people.csail.mit.edu/mrub/VisualMic/" id="_Kyef99IN" class="link-live" data-link-icon="MIT" data-link-icon-type="text,tri,mono" title="‘The Visual Microphone: Passive Recovery of Sound from Video’, Davis et al 2014">薯片袋的视频录制</a>，<a href="https://spectrum.ieee.org/your-candy-wrappers-are-listening" id="_zq8Hq3f0" data-link-icon="IEEE" data-link-icon-type="text,mono,quad" data-link-icon-color="#006699" title="Your Candy Wrappers are Listening">糖纸</a>，<a href="https://eprint.iacr.org/2020/708.pdf" id="_ahOFqafX" class="link-live" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘Lamphone: Real-Time Passive Sound Recoveryfrom Light Bulb Vibrations’, Nassi et al 2020">悬挂的灯泡</a>，或 <a href="https://www.nassiben.com/glowworm-attack" id="_MV1doxAq" title="‘Glowworm Attack: Optical TEMPEST Sound Recovery via a Device’s Power Indicator LED’, Nassi et al 2021">电源 LED</a> 进行窃听呢？(<a href="https://news.mit.edu/2014/algorithm-recovers-speech-from-vibrations-0804" id="_yMzrHPRW">新闻稿</a>)，或 <a href="https://crypto.stanford.edu/gyrophone/files/gyromic.pdf" id="_d62WwXp-" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘Gyrophone: Recognizing Speech From Gyroscope Signals’, Michalevsky et al 2014">手机陀螺仪</a>？激光也擅长检测你的心跳，这——当然——是 <a href="https://www.technologyreview.com/2019/06/27/238884/the-pentagon-has-a-laser-that-can-identify-people-from-a-distanceby-their-heartbeat/" id="_OBg4Tu5p" data-link-icon="T" data-link-icon-type="text,sans" title="The Pentagon has a laser that can identify people from a distance—by their heartbeat: The Jetson prototype can pick up on a unique cardiac signature from 200 meters away, even through clothes.">唯一识别的</a> 并且 <a href="/doc/technology/2019-kwong.pdf" id="kwong,-2019" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘Hard Drive of Hearing: Disks that Eavesdrop with a Synthesized Microphone’, Kwong et al 2019">硬盘也可以变成麦克风。</a> 很快甚至 <a href="https://arxiv.org/abs/2001.04642" id="_D5uppv9l" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/2001.04642?fallback=original" title="‘Seein the World in a Bag of Chips’, Park et al 2020">月的薯片</a> 也不再安全了…</p></li>
+<li><p>转向和驾驶模式足够独特，以至于在某些情况下仅通过 1 次转弯就可以识别驾驶员：<a href="https://arxiv.org/abs/1708.04636" id="_OqMFM1gs" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1708.04636?fallback=original" title="Driver Identification Using Automobile Sensor Data from a Single Turn">Hallac 等人 2017</a>。这些攻击也适用于智能手机的时区、气压、公共交通时间、IP 地址以及连接 WiFi 或蜂窝网络的模式 (<a href="/doc/statistics/2017-mosenia.pdf" id="_T8SR3Mjf" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="PinMe: Tracking a Smartphone User Around the World">Mosenia 等人 2017</a>)，或 <a href="/doc/technology/2019-kroger.pdf" id="kröger,-2019" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘Privacy Implications of Accelerometer Data: A Review of Possible Inferences’, Kröger et al 2019">加速度计</a></p></li>
+<li><p>智能手机可以通过像素噪声模式被识别，这是由于 <a href="https://scholar.google.com/scholar?as_sdt=0%2C21&amp;q=identification+sensor+noise+anonymity+OR+forensics&amp;btnG=" id="_Jnqgx_KP" data-link-icon="google-scholar" data-link-icon-type="svg" data-link-icon-color="#4285f4">传感器噪声</a> 如 CCD 传感器和镜头中的小瑕疵（Facebook 甚至 <a href="https://patents.google.com/patent/US20150124107" id="_ysmGLZls" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="US20150124107A1: Associating cameras with users and objects in a social networking system">为此申请了专利</a>）</p></li>
+<li><p>智能手机使用模式，如应用程序偏好、应用程序切换率、通勤模式的一致性、整体地理流动性、较慢或较少的驾驶已与阿尔茨海默病 (<a href="https://www.nature.com/articles/s41746-019-0084-2" id="_eUGLBI9e" data-link-icon="n" data-link-icon-type="text" title="Digital biomarkers for Alzheimer’s disease: the mobile/wearable devices opportunity">Kourtis 等人 2019</a>) 和个性 (<a href="https://osf.io/preprints/psyarxiv/ks4vd/" id="_nbhtJ8V0" data-link-icon="ψ" data-link-icon-type="text" data-link-icon-color="#cf1d35" title="Behavioral Patterns in Smartphone Usage Predict Big Five Personality Traits">Stachl 等人 2019</a>) 相关联。<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a></p>
+<p>眼动追踪 <a href="https://rd.springer.com/chapter/10.1007/978-3-030-42504-3_15" id="_Xvt3xNKf" data-link-icon="springerlink" data-link-icon-type="svg" title="‘What Does Your Gaze Reveal About You? On the Privacy Implications of Eye Tracking’, Kröger et al 2020">也很有趣</a>.</p></li>
+<li><p>声音不仅与年龄/性别/种族相关，而且与… <a href="https://arxiv.org/abs/1905.09773" id="_0YOcows7" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1905.09773?fallback=original" title="‘Speech2Face: Learning the Face Behind a Voice’, Oh et al 2019">整体面部外观</a> 相关？</p></li>
+</ol>
+<p>（关于 <a href="https://www.nytimes.com/2013/01/18/health/search-of-dna-sequences-reveals-full-identities.html" id="_S64GDlPb" data-link-icon="new-york-times" data-link-icon-type="svg">DNA 相关隐私破坏</a> 的唯一令人惊讶的事情是它们花了这么长时间才出现。）</p>
+<p>总结：<a href="https://en.wikipedia.org/wiki/%E5%B7%AE%E5%88%86%E9%9A%90%E7%A7%81" id="_dLWRheZG" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%B7%AE%E5%88%86%E9%9A%90%E7%A7%81#bodyContent">差分隐私</a> <a href="http://radar.oreilly.com/2011/05/anonymize-data-limits.html" id="_UNQ8e7wv">几乎</a> 是不可能的<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a> 并且隐私已死<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>。（另见 <a href="https://www.uclalawreview.org/pdf/57-6-3.pdf" id="_SAjl3Al0" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="Ohm 2010">“隐私的破碎承诺：应对匿名化的惊人失败”</a>.）</p>
+</div>
+</section>
+</section>
+<section id="错误-3" class="level2">
+<h2><a href="#错误-3" title="Link to section: § &#39;错误 3&#39;">错误 3</a></h2>
+<p>月的第三个错误是对 Lind L. Tailor 广播的 <a href="https://en.wikipedia.org/wiki/%E9%87%91%E4%B8%9D%E9%9B%80%E9%99%B7%E9%98%B1" id="_6kNkPJAJ" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E9%87%91%E4%B8%9D%E9%9B%80%E9%99%B7%E9%98%B1#bodyContent">金丝雀陷阱</a> 挑衅做出反应，批评基拉，而月猛烈抨击，利用清晰可见的名字和脸杀死了 Lind L. Tailor。 现场直播是一次公然的尝试，旨在激起惊讶且毫无准备的月的反应——任何反应——仅仅这一点就足以成为完全忽略它的理由（即使月不可能合理地知道它是<em>如何</em>成为陷阱的）：永远不要在敌人准备好的地盘、条款和时间点上做敌人希望你做的事。 （月可以在未来的任何时候使用死亡笔记，这将几乎与在直播中这样做一样能够展示他的力量。）</p>
+<p>在 1 个地区进行广播也是 L 的一次赌博和潜在错误；他没有真正的理由认为月在 <a href="https://en.wikipedia.org/wiki/Kant%C5%8D_region" id="_t2NSOY22" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Kant%C5%8D_region#bodyContent">关东</a>（或者如果他确实已经有先验/信息表明这一点，他应该将关东一分为二），并且应该安排将其广播给正好一半的日本人口，获得预期的最大 1 比特。 但这得到了回报；他将目标缩小到原来的 1⁄3 日本人口，获得了约 1.6 比特的信息增益。 （你可以通过考虑如果月不在关东会怎样来看出这不仅是一场赌博；因为他不会看到直播，他也就不会做出反应，L 能了解到的只是他的嫌疑人在另外 2⁄3 的人口中，仅获得约 0.3 比特的增益。）</p>
+<p>但即使这不是一个 <em>巨大</em> 的错误。他在杀人时间表上损失了 6 比特，又因性情急躁杀害 Lind L. Tailor 损失了 1.6 比特，但由于关东的男性人口为 2150 万（总数 4300 万），他仍剩下约 24 比特的匿名性（log<sub>2</sub> (21500000) ≈ 24.36）。这还不算太糟糕，而且正如 <a href="https://www.alternatehistory.com/forum/threads/victoria.10/" id="_iyQd68m_" title="How might the real world react to a real Kira (Death Note)">Zmflavius</a> 所指出的，这个错误的损失被其他细节进一步减轻；具体来说，不像“是男性”或“是日本人”，关于在关东的信息是会 <em>衰减</em> 的，因为人们总是因为各种原因搬来搬去：</p>
+<blockquote>
+<p>…很可能月最大的错误是通过黑进他父亲的电脑无意中暴露了他与警察等级制度的联系。虽然 Lind L. Taylor 的惨败只暴露了他的杀人机制并将他缩小到“关东地区的某人”（这虽然基于他掌握的信息是一个令人印象深刻的成就，但对于实际找到嫌疑人来说毫无意义），但只有几百人能够访问月父亲所拥有的信息。还有一个事实是，L <em>知道</em> 月可能是一个十几岁的人，这意味着非常有这种可能：在学年结束时，即使是他的那一击也会过期，因为学生们会前往日本各地的大学（当然，月去了 <a href="https://en.wikipedia.org/wiki/University_of_Tokyo" id="_T7wAMuf6" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/University_of_Tokyo#bodyContent">东大</a>，像他这样水平的学生不上这样的大学会很可疑，但也 L 當時无法知道这一点）。我的意思是，也许 L 曾希望基拉通过突然搬离关东地区来暴露自己，但在接下来的五月，他将无法监控青少年的异常活动，因为很大一部分人会出于正当理由搬家。</p>
+</blockquote>
+<p>（人们仍然可以对任何特定的人“向后”进行推断，以验证他们在正确的时间段内是否在关东，但随着时间的推移，越来越不可能“向前”进行推断并只检查关东的人。）</p>
+<p>这个错误也向我们表明，信息论给我们带来的重要东西，实际上不是 <em>比特</em>（我们可以使用 log<sub>10</sub> 而不是 log<sub>2</sub>，并比较 <a href="https://en.wikipedia.org/wiki/Hartley_(unit)" id="_YQrPQcqv" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hartley_(unit)#bodyContent">“dits”</a> 而不是 “bits”），而是在 <em>对数</em> 尺度上比较情节中的事件。如果我们仅仅看每一步排除了多少绝对数量的人，我们会得出结论，月的第一个错误是无比巨大的灾难，因为它让 L 排除了超过 60 亿人，大约是所有其他错误加起来能让 L 排出人数的 60 倍。错误是相对于彼此的，而不是绝对的。 ## 错误 4</p>
+<p>月的第四个错误是利用他警察父亲的凭证窃取了机密警察信息。 这是不必要的，因为仍有无数罪犯是他可以利用公开信息（脸+名字通常不难获得）处决的，如果出于某种原因他需要特定的罪犯，他要么可以将机密信息的使用限制在少数高优先级受害者身上——哪怕只是为了避免被怀疑黑客攻击和随后的安全升级导致他失去访问权限！——或者利用死亡笔记的强制力或基拉的公众支持，制造一种发布信息的方式，如“泄漏”或通过公开透明法案。</p>
+<p>这个错误的比特损失最大。 但有趣的是，许多甚至大多数《死亡笔记》粉丝似乎并不认为这是他最大的错误，反而指向他杀死 Lind L. Tailor 或者可能是过分依赖魅上照。信息论的观点强烈反对这一点，并让我们量化这个错误有多大。</p>
+<p>当他根据秘密警察信息采取行动时，他立即将自己的可能身份缩小到与警方有联系的几千人之一。让我们大方一点，说是 10,000 人。从 10,000 人中指定 1 人需要 14 比特（log<sub>2</sub> (1,0000) ≈ 13.29）——相比之下，指定一个关东居民需要 24–25 比特。</p>
+<p>这个错误让他损失了 11 比特的匿名性；换句话说，这个错误的代价是他时间安排错误代价的<em>两倍</em>，几乎是谋杀 Tailor 的 <em>8</em> 倍！</p>
+</section>
+<section id="错误-5" class="level2">
+<h2><a href="#错误-5" title="Link to section: § &#39;错误 5&#39;">错误 5</a></h2>
+<p>相比之下，第五个错误，谋杀 Ray Penbar 的未婚妻并将 L 的怀疑集中在 Penbar 的指定目标上，是非常廉价的。如果我们假设 Penbar 被分配了 10,000 个线索中的 200 个，那么谋杀他和他的未婚妻只让月从 14 比特降到了 8 比特（log<sub>2</sub> (200) ≈ 7.64），只损失了 6 比特，或者说略多于第四个错误的一半，与最初的时间安排错误相当。</p>
+</section>
+<section id="终局" class="level2">
+<h2><a href="#终局" title="Link to section: § &#39;终局&#39;">终局</a></h2>
+<p>在剧情的这一点上，L 诉诸直接措施，直接进入月的生活，进入大学。从那时起，月就完了，因为他现在正在与 L 和调查组玩一场致命的 <a href="https://en.wikipedia.org/wiki/Mafia_(party_game)" id="_4XIW-WLh" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mafia_(party_game)#bodyContent">杀人游戏</a>。 他浪费了超过 25 比特的匿名性，然后 L 直觉到了剩下的部分，并一直怀疑他。 （我们可以通过指出 L 可以分析死亡事件并推断出傲慢、解谜和高智商等心理特征来证明 L 跳过剩余的 8 比特是合理的，这与启发式搜索剩余的候选人相结合，可能导致他锁定月。）</p>
+<p>从理论角度来看，游戏在那时已经结束了。 L 随后的挑战变成了在他自我施加的道德约束下，向 L 自己证明这一点。<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a></p>
+</section>
+</section>
+<section id="安全很难还是去购物吧" class="level1">
+<h1><a href="#安全很难还是去购物吧" title="Link to section: § &#39;安全很难（还是去购物吧）&#39;">安全很难（还是去购物吧）</a></h1>
+<p>月 <em>应该</em> 做什么？这很容易回答，但很难实施。</p>
+<p>人们可以试图制造 <em>虚假</em> 信息。<a href="https://en.wikipedia.org/wiki/%E9%99%B6%E5%93%B2%E8%BD%A9" id="_vUIo0XtG" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E9%99%B6%E5%93%B2%E8%BD%A9#bodyContent">陶哲轩</a> 演练了许多关于信息论和匿名性的上述观点，并 <a href="/doc/cs/security/2012-terencetao-anonymity.html" id="_e9VQeNrP" class="link-modified-recently" data-link-icon="internet-archive" data-link-icon-type="svg" title="Original: plus.google.com/114134834346472219368/posts/8vmpA9fgRMq">进而松散地讨论</a> 了 <a href="https://en.wikipedia.org/wiki/Disinformation" id="_gK5iu8L5" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Disinformation#bodyContent">伪造信息</a> 的可能好处：</p>
+<blockquote>
+<p>…获得更多匿名性的一种额外方式是通过故意的 <em>虚假信息</em>。例如，假设一个人透露了关于自己的 100 个独立信息比特。通常，这将花费 100 比特的匿名性（假设每个比特 <em>先验</em> 为真或假的概率相等），将可能性数量减少 2<sup>100</sup> 倍；但如果这 100 个比特中有 5 个（随机选择且未提前透露）是故意伪造的，那么可能性数量又增加了 (100 <code>选</code> 5) ~ 2<sup>26</sup> 倍，恢复了约 26 比特的匿名性。实际上，人们获得的匿名性比这更多，因为要消除虚假信息，需要解决一个 <a href="https://en.wikipedia.org/wiki/%E5%8F%AF%E6%BB%A1%E8%B6%B3%E6%80%A7" id="_kVOEdQ_M" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%8F%AF%E6%BB%A1%E8%B6%B3%E6%80%A7#bodyContent">可满足性</a> 问题，这在计算上通常是难以处理的，尽管这种额外的保护可能会随着时间的推移随着算法的改进而消散（例如通过结合 <a href="https://en.wikipedia.org/wiki/%E5%8E%8B%E7%BC%A9%E6%84%9F%E7%9F%A5" id="_dMcTblhM" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%8E%8B%E7%BC%A9%E6%84%9F%E7%9F%A5#bodyContent">压缩感知</a> 中的想法）。</p>
+</blockquote>
+<section id="随机化" class="level2">
+<h2><a href="#随机化" title="Link to section: § &#39;随机化&#39;">随机化</a></h2>
+<p>建议月应该——或 <em>能够</em>——在死亡时间上使用虚假信息的困难在于，实际上，我们正在从事一种 <a href="https://en.wikipedia.org/wiki/%E5%90%8E%E8%A7%81%E5%BE%97%E6%98%8E%E5%81%8F%E8%AF%AF" id="_du23HySL" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%90%8E%E8%A7%81%E5%BE%97%E6%98%8E%E5%81%8F%E8%AF%AF#bodyContent">后见得明偏误</a>。</p>
+<p>月或任何人究竟如何知道 L 可以从他的杀戮中推断出他的时区？我提到了一个使用维基百科编辑来定位编辑者的例子，但那种技术在 WP 编辑者中是我独有的<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a> 无疑还有许多我从未听说过的信息泄漏形式，尽管我编制了一份清单；即使我是月，即使我记得我的维基百科技术，我可能也不会费心在时钟上均匀分布我的杀戮或采用欺骗性模式（例如暗示我在欧洲而不是日本）。</p>
+<p>如果月知道他在泄漏时间信息但不知道外面有人聪明到可以使用它（一种“已知的未知”），那么我们可能会责怪他；但月怎么应该知道这些“未知的未知”呢？</p>
+<p><a href="https://en.wikipedia.org/wiki/%E9%9A%8F%E6%9C%BA%E5%8C%96" id="_GzDSQwtp" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E9%9A%8F%E6%9C%BA%E5%8C%96#bodyContent">随机化</a> 是答案。随机化和加密打乱了输入和输出之间的相关性，它们在《死亡笔记》中会像在现实世界的密码学和统计学中一样有效，代价是一些效率。随机化的重点，无论是在密码学还是在统计实验中，不仅是为了防止你知道泄漏的信息或 <a href="https://en.wikipedia.org/wiki/%E6%B7%B7%E6%B7%86%E5%9B%A0%E7%B4%A0" id="_M52zsX59" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%B7%B7%E6%B7%86%E5%9B%A0%E7%B4%A0#bodyContent">混淆因素</a>（分别），而且也是为了防止你 <em>尚未</em> 知道的那些。</p>
+<p>窃取并改写 <a href="https://en.wikipedia.org/wiki/Jim_Manzi_(software_entrepreneur)" id="__o15B0rs" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Jim_Manzi_(software_entrepreneur)#bodyContent">Jim Manzi</a> 的 <a href="https://www.amazon.com/Uncontrolled-Surprising-Trial---Error-Business/dp/046502324X/" id="_sI-oROkp" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>Uncontrolled</em></a> 中的一个例子：你正在进行一项减肥实验。你知道效果可能随每个受试者已有的体重而变化，但你不相信随机化（你是个务实的人！只有神经质的统计学家才担心随机化！）；所以你按体重划分受试者，为了方便，你按他们出现在你实验的时间分配他们——最后，正好有 10 个超过 150 磅的实验对象和 10 个超过 150 磅的对照组，依此类推。不幸的是，结果表明，在你不知情的情况下，一种遗传变异控制着体重增加，而且整个大家族很早就出现在你的实验中，他们都被分配到了“实验组”，没有一个分配到“对照组”（因为你不需要随机化，对吧？你正在确保各组在体重上匹配！）。你的实验现在是虚假和误导性的。当然，你可以进行第二个实验，确保实验组和对照组在体重上匹配，现在也在那个遗传变异上匹配……但现在有可能某种 <em>第三</em> 混淆因素打击你。如果你使用了随机化——那么你可能也会将一些变异放入另一组，你的结果就不会是虚假的！</p>
+<p>所以要处理月的第一个错误，仅仅在每个整点安排死亡是行不通的，因为睡眠-觉醒周期仍然存在。如果他建立一个列表并为每个小时写下 <em>n</em> 个罪犯以消除高峰-低谷而不是随机化，那还会出错吗？也许：我们不知道数据中可能留下什么信息，L 或图灵可能会破译这些信息。我可以推测一种可能性——将每种类型的罪犯分配到每个小时。如果一个人起草名单并按顺序进行（嘿，不需要随机化，对吧？），那么顺序可能是“晨报上的罪犯，电视上的罪犯，细节未立即给出但可在网上查到的罪犯，几年前的罪犯，历史罪犯等”；如果晨报罪犯从日本时间早上 6 点开始……而且均匀分配可能很难，因为当那一天没有很多罪犯或者报纸不出版（假期？）等情况时，自然会出现短缺，所以短缺期将查明基拉认为的“一天的结束”是什么。</p>
+<p>一个更安全的程序是对时间、对象和死亡方式进行彻底的随机化。即使我们假设月下定决心要揭示基拉的存在并获得宣传和国际恶名（这本身就是一个主要性格缺陷；做事，邀功——二选一），他仍然不必将他的匿名性降低到 32 比特以下。</p>
+<ol>
+<li><p>每次处决的时间可以由随机掷骰子决定（例如，小时用 24 面骰子，分钟用 60 面骰子）。</p></li>
+<li><p>选择死亡方式可以类似地基于容易研究的人口统计数据来完成，尽管这可能无关紧要（主要用于掩盖杀戮已经发生的事实）。</p></li>
+<li><p>选择罪犯可以基于通过国际可访问的期刊，这些期刊似乎每个人都可以访问，例如《纽约时报》，死亡可以延迟数月或数年，以扩大基拉从哪里得知受害者的可能性（电视？书？互联网？），并避免诸如杀死仅在一个晦涩的日本公共电视频道上宣传的罪犯这类问题。等等。</p></li>
+</ol>
+<p>让我们记住，所有这些都基于匿名性，以及月使用低技术策略；正如一个人问我的那样，“为什么月不建立一个加密的 <a href="https://en.wikipedia.org/wiki/%E6%9A%97%E6%9D%80%E5%B8%82%E5%9C%BA" id="_nwX3nfP3" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%9A%97%E6%9D%80%E5%B8%82%E5%9C%BA#bodyContent">暗杀市场</a> 或直接接管世界？没有这些小聪明他也能赢。”好吧，那这就不是《死亡笔记》了。</p>
+</section>
+</section>
+<section id="另请参阅" class="level1">
+<h1><a href="#另请参阅" title="Link to section: § &#39;另请参阅&#39;">另请参阅</a></h1>
+<ul>
+<li><p><a href="/death-note-script" id="gwern-death-note-script" class="prefetch-not link-annotated link-page backlink-not" title="&#39;Who Wrote The &lt;em&gt;Death Note&lt;/em&gt; Script?&#39;, Gwern 2009">“谁写了《死亡笔记》剧本？”</a> (作者身份的统计分析)</p></li>
+</ul>
+</section>
+<section id="外部链接" class="level1">
+<h1><a href="#外部链接" title="Link to section: § &#39;外部链接&#39;">外部链接</a></h1>
+<ul>
+<li><p><strong>讨论</strong>:</p>
+<ul>
+<li><p><a href="https://www.lesswrong.com/posts/zumnfc7jctgocfoe9/death-note-anonymity-and-information-theory" id="_SUttJGhJ" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/zumnfc7jctgocfoe9/death-note-anonymity-and-information-theory?format=preview&amp;theme=classic">LessWrong</a></p></li>
+<li><p><em>Hacker News</em>: <a href="https://news.ycombinator.com/item?id=3634320" id="_7RqNUAdp" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">1</a>, <a href="https://news.ycombinator.com/item?id=9553494" id="_LbNrg-qO" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">2</a>, <a href="https://news.ycombinator.com/item?id=20617325" id="_4aalVQBl" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">3</a>, <a href="https://news.ycombinator.com/item?id=26826585" id="_OJBlWimo" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">4</a>, <a href="https://news.ycombinator.com/item?id=46839743" id="_3t4gNBcR" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">5</a></p></li>
+<li><p><em>Reddit</em>: <a href="https://www.reddit.com/r/rational/comments/6vnj2g/is_death_note_a_rationalist_fic/" id="_SNsV8Ekh" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">1</a>, <a href="https://www.reddit.com/r/anime/comments/cmiijr/using_computer_security_cryptography_and/" id="_91Gs7He4" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">2</a></p></li>
+<li><p><a href="https://gigazine.net/news/20190812-death-note-anonymity-entropy/" id="_fKsWwcdr">Gigazine</a> (日文)</p></li>
+</ul></li>
+<li><p>翻译: <a href="https://habr.com/ru/articles/516190/" id="_j9FOFGNy" data-link-icon="Habr" data-link-icon-type="text,quad,sans">俄语</a> (RU)</p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/On_Murder_Considered_as_one_of_the_Fine_Arts" id="_4oSViWUw" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/On_Murder_Considered_as_one_of_the_Fine_Arts#bodyContent">“论谋杀被视为一种美术”</a>, <a href="https://en.wikipedia.org/wiki/%E6%89%98%E9%A9%AC%E6%96%AF%C2%B7%E5%BE%B7%C2%B7%E6%98%86%E8%A5%BF" id="_jyXOgpnz" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%89%98%E9%A9%AC%E6%96%AF%C2%B7%E5%BE%B7%C2%B7%E6%98%86%E8%A5%BF#bodyContent">托马斯·德·昆西</a></p></li>
+<li><p><a href="https://arstechnica.com/tech-policy/2012/03/stakeout-how-the-fbi-tracked-and-busted-a-chicago-anon/" id="_lAXHkxMx" data-link-icon="ars" data-link-icon-type="text,tri,sans" data-link-icon-color="#ff4e00">“监视：FBI 如何追踪并抓获一名芝加哥匿名者；持续监视，线人，诱捕和追踪设备——FBI 不遗余力…”</a> (去匿名化 <a href="https://en.wikipedia.org/wiki/Jeremy_Hammond" id="_SGeZokfW" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Jeremy_Hammond#bodyContent">Jeremy Hammond</a>)</p></li>
+<li><p><a href="https://brooksreview.net/2014/01/i-see-you/" id="_1XIpyc7o">“当匿名并非真正匿名时”</a></p></li>
+<li><p><a href="/doc/cs/security/2009-syverson.pdf" id="_nw9MFz7u" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“为什么我不是一个熵主义者”</a>, <span class="cite"><span class="cite-author">Syverson</span><span class="cite-date">2013</span></span></p></li>
+<li><p><a href="https://www.johndcook.com/blog/2017/09/30/toxic-pairs/" id="_OqTqyysP" class="link-live" data-link-icon="JC" data-link-icon-type="text,sans" data-link-icon-color="#1ab6f1">“有毒配对，重识别和信息论：国籍与宗教”</a></p></li>
+<li><p><a href="https://web.archive.org/web/20200215144602/https://twicsy-blog.tumblr.com/post/174063770074/how-i-targeted-the-reddit-ceo-with-facebook-ads-to" id="_U8ObOnVM" class="link-live" data-link-icon="facebook" data-link-icon-type="svg" data-link-icon-color="#1877f2" data-url-iframe="https://web.archive.org/web/20200215144602if_/https://twicsy-blog.tumblr.com/post/174063770074/how-i-targeted-the-reddit-ceo-with-facebook-ads-to">“我如何使用 Facebook 广告针对 Reddit CEO 以获得 Reddit 的面试机会”</a> (<a href="https://news.ycombinator.com/item?id=17110385" id="_wjnrkpkC" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">HN</a>)</p></li>
+<li><p><a href="https://www.yahoo.com/news/shattered-inside-the-secret-battle-to-save-americas-undercover-spies-in-the-digital-age-100029026.html" id="_r1sT5l1E" data-link-icon="Y!" data-link-icon-type="text,sans" data-link-icon-color="#5e21cf">“‘破碎’：拯救数字时代美国卧底间谍的秘密战斗内幕”</a></p></li>
+<li><p><a href="/doc/economics/2020-xie.pdf" id="_-KfkOO1C" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“收益公告的信号质量：来自知情交易卡泰尔的证据”</a>, <span class="cite"><span class="cite-author">Xie</span><span class="cite-date">2020</span></span></p></li>
+</ul>
+</section>
+<section id="附录" class="level1">
+<h1><a href="#附录" title="Link to section: § &#39;附录&#39;">附录</a></h1>
+<section id="用死亡笔记交流" class="level2">
+<h2><a href="#用死亡笔记交流" title="Link to section: § &#39;用死亡笔记交流&#39;">用死亡笔记交流</a></h2>
+<p>有人可能会想，一个人可以用死亡笔记 <em>有意</em> 发送多少信息，而不是无意中泄漏关于自己身份的比特。由于死亡大体上是公众已知的信息，我们将假设发送者和接收者有某种预先安排的密钥或一次性密码本（尽管人们会想知道为什么他们会使用这种不道德和笨拙的系统而不是隐写术或在线消息）。</p>
+<p>死亡笔记造成的死亡有 3 个主要特征，人们可以控制——谁，何时，以及如何：</p>
+<ol>
+<li><p><strong>人</strong></p>
+<p>’谁？’已经为我们计算过了：如果指定一个唯一个人需要 33 比特，那么一个特定的人可以传达 33 比特。关于可学习性的担忧（你怎么知道一个亚马逊部落成员的死亡？）意味着它实际上 &lt;33 比特。</p>
+<p>如果你尝试某种方案将更多比特编码到暗杀选择中，你要么最终得到 33 比特，要么最终无法传达某些比特组合，实际上还是 33 比特——你的方案会告诉你，为了传达你那绝望重要的关于 L 真实身份以及你如何发现它的 50 比特信息 <em>X</em>，你需要杀死一个体重超过 200 磅且来自台湾的坦桑尼亚的 Olafur Jacobs，但唉！Jacobs 不存在供你杀死。</p></li>
+<li><p><strong>时间</strong></p>
+<p>‘何时’通过类似的推理处理。死亡笔记杀人有一定的粒度：即使 <em>它</em> 能够将死亡时间精确到纳秒，人们也无法实际目睹这一点或收到这方面的记录。医生可能会记录死亡时间精确到分钟，但不会更精细（而且你反正怎么获得如此精确的医疗记录？）。新闻报道可能更不准确，仅仅指出它发生在早上或深夜。在像现场直播这样的极少数情况下，人们可能能够做得稍微好一点，但即使它们也倾向于延迟几秒或几分钟，以便缓冲，修复技术故障，速记员制作隐藏字幕，或者只是为了防止尴尬事件（如珍妮·杰克逊的露乳事件）。所以我们假设时间不能比分钟更准确。但是死亡笔记用户有什么分钟可供选择呢？鉴于死亡笔记显然无法影响过去或导致普拉切特式<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>的超光速效应，过去是禁区；但消息也必须在它们应该影响的事情发生之前发送，所以人们不能有一个世纪的时间窗口。如果消息需要在一天内产生影响，那么用户只有 60 · 24 = 1,440 分钟的时间窗口，即 log<sub>2</sub>(1,440) = 10.49 比特；如果用户有一年的窗口，那稍微好一点，因为精确到分钟的死亡时间可能包含多达 log<sub>2</sub>(60 · 24 · 365) = 19 比特。（十年则是 22.3 比特，等等。）如果我们允许时间精确到秒，那么一年将是 24.9 比特。无论如何，很明显我们不会从日期中获得超过 33 比特。从好的方面来说，‘死网协议’（IP over Death）将优于 <a href="https://en.wikipedia.org/wiki/IP_over_Avian_Carriers" id="_EDhL5E78" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/IP_over_Avian_Carriers#bodyContent">某些其他协议</a>——在这里，你的延迟越差，你可以从数据包的时间戳中提取的比特就越多！<em><a href="https://en.wikipedia.org/wiki/%E6%81%90%E9%BE%99%E6%BC%AB%E7%94%BB" id="_WYPunZlw" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%81%90%E9%BE%99%E6%BC%AB%E7%94%BB#bodyContent">恐龙漫画</a></em> 关于 <a href="https://qwantz.com/index.php?comic=354" id="_MhJ3YK9F" class="link-live" data-link-icon="DC" data-link-icon-type="text,sans" data-link-icon-color="#40d53a" title="T-Rex As: &#39;The Computer Scientist&#39;">压缩方案</a>:</p>
+<figure>
+<p><img src="/doc/cs/algorithm/information/compression/2004-ryannorth-dinosaurcomics-391.png" title="https://qwantz.com/index.php?comic=354" id="_Nnjng99-" class="invert" alt="“是的，但聪明不仅仅是知道压缩方案！” “不，就是！” “该死——他知道秘密！！” –Ryan North"></img></p>
+<figcaption><p>“是的，但聪明不仅仅是知道压缩方案！” “不，就是！” “该死——他知道秘密！！” –Ryan North</p></figcaption>
+</figure></li>
+<li><p><strong>环境</strong>（如地点）</p>
+<p>‘如何’… 有更多的自由度。环境要难计算得多。我们可以用很多方式细分它；这是一个：</p>
+<ol>
+<li><p><span class="smallcaps">地点</span>（例如纬度/经度）</p>
+<p>地球有 ~510,072,000,000 平方米的表面积；从我们的角度来看，其中大部分是完全无用的——如果有人在飞机上死亡，人们究竟如何弄清楚他在哪一平方米之上？或者在海洋上？地球有 ~148,940,000,000 平方米的 <em>陆地</em>，这更有用：通常的计算给我们 log<sub>2</sub>(148940000000) = 37.12 比特。（惊讶于这与‘谁？’比特计算如此相似？但 37.12 - 33 = 4.12 且 2<sup>4.12</sup> = 17.4。科幻经典 <em><a href="https://en.wikipedia.org/wiki/%E6%A1%91%E7%BB%99%E5%B7%B4%E5%B0%94" id="_rc-zsW1e" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%A1%91%E7%BB%99%E5%B7%B4%E5%B0%94#bodyContent">桑给巴尔</a></em> 的名字来源于这样一个观察：<span class="date-range">2010<sub><span title="2010 was 16 years ago.">16ya</span></sub></span> 年活着的 70 亿人只有肩并肩站着才能塞进桑给巴尔——把他们散开，并将该面积乘以 ~18…）这提出了一个影响所有 3 个特征的问题：死亡笔记能控制多少？它能把受害者移到任意点吗，比如说，西伯利亚？或者它仅限于驾驶距离内？等等。这些问题中的任何一个都可能使 37 比特缩水很多。</p></li>
+<li><p><span class="smallcaps">死因</span></p>
+<p><a href="https://www.who.int/classifications/classification-of-diseases" id="_0TK5c_7w">国际疾病分类</a> 列出了超过 20,000 种疾病，我们可以想象数千种可能的意外或故意死亡。但重要的是传达了什么：如果有 500 种不同的脑癌，但死亡仅被报告为‘脑癌’，那么这 500 种对我们的目的来说只算作 1 种。但我们会大方一点，按 20,000 种报告的疾病加事故计算，即 log<sub>2</sub>(20000) = 14.3 比特。</p></li>
+<li><p><span class="smallcaps">死前行为</span></p>
+<p>死前行为与意外原因重叠；该系列在这里没有帮助我们。月早期的实验最终导致了“L，你知道死神爱吃苹果吗？”，似乎暗示行为受熵限制，因为每个词花费一次死亡（假设普通英语词汇量为 50,000 个词，16 比特），但其他情节事件暗示人类可以在死亡笔记的命令下进行漫长的复杂计划（如魅上照将假死亡笔记带到与尼亚的最后对抗中）。死前行为可以被非常详细地报告，或者它们可能被隐藏在官方保密之下，就像前面提到的死神一样（月独特地有幸知道它成功了，作为 L 测试他的一部分）。我无法开始猜测有多少独特的叙述会在传输中幸存下来，或者笔记会设定什么限制。我们必须让这一个未定义：它几乎肯定超过 10 比特，但具体是多少？</p></li>
+</ol></li>
+</ol>
+<p>总计，我们得到 &lt;33 + &lt;19 + 17 + &lt;37 + 14 + ? = 120? 比特每次死亡。</p>
+</section>
+<section id="贝叶斯法理学" class="level2">
+<h2><a href="#贝叶斯法理学" title="Link to section: § &#39;贝叶斯法理学&#39;">“贝叶斯法理学”</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/Edwin_Thompson_Jaynes" id="_Eyz6zp_L" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Edwin_Thompson_Jaynes#bodyContent">E.T. Jaynes</a> 在他死后出版的 <a href="https://omega0.xyz/omega8008/JaynesBookPdf.html" id="_7Zd7z-6P" data-link-icon="ETJ" data-link-icon-type="text,tri,sans"><em>概率论：科学的逻辑</em></a>（关于 <a href="https://en.wikipedia.org/wiki/%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%BB%9F%E8%AE%A1" id="_Zh3SyP6H" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%BB%9F%E8%AE%A1#bodyContent">贝叶斯统计</a>）包括第 5 章 <a href="https://omega0.xyz/omega8008/ETJ-PS/cc5d.ps" id="_8EUEopeU" data-link-icon="ETJ" data-link-icon-type="text,tri,sans">“概率论的奇怪用途”</a>，讨论了诸如 ESP；奇迹；启发式和 <a href="https://en.wikipedia.org/wiki/Cognitive_bias" id="_GqIniy9r" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Cognitive_bias#bodyContent">偏误</a>；视觉感知如何充满理论；关于牛顿力学和著名的 <a href="https://en.wikipedia.org/wiki/%E6%B5%B7%E7%8E%8B%E6%98%9F%E5%8F%91%E7%8E%B0" id="_t-1CLqVG" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%B5%B7%E7%8E%8B%E6%98%9F%E5%8F%91%E7%8E%B0#bodyContent">海王星发现</a> 的科学哲学；赛马和天气预报；也就是——第 5.8 节，“贝叶斯法理学”。Jaynes 的分析在精神上与我上面的分析有些相似，尽管我的分析不是明确的贝叶斯式的，除了可能在关于性别消除一个必要比特的讨论中。</p>
+<p>以下是摘录；另见 <a href="https://www.lesswrong.com/posts/xx7TeDmBQDFnx8GY7/bayesian-justice" id="_hS-wkK_n" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/xx7TeDmBQDFnx8GY7/bayesian-justice?format=preview&amp;theme=classic">“贝叶斯正义”</a>.</p>
+<blockquote>
+<p>将概率论应用于我们不能总是很好地将其简化为数字的各种情况是有趣的，但它仍然自动显示什么样的信息将有助于我们进行合理的推理。假设有人在纽约市犯了谋杀罪，起初你不知道是谁，但你知道纽约市有 1000 万人。在没有其他知识的基础上，<em>e</em>(有罪|X) = −70 <em>db</em> 是任何特定人有罪的可信度。</p>
+<p>在我们决定应该关押某人之前，需要多少有罪的正面证据？也许 +40 <em>db</em>，尽管你的反应可能是这还不够安全，数字应该更高。如果我们提高这个数字，我们给予无辜者更多的保护，但代价是使定罪变得更加困难；在某一点上，整个社会的利益不容忽视。</p>
+<p>例如，如果释放了 1,000 名有罪的人，我们从太多的经验中知道，他们中的 200 或 300 人将立即着手对社会造成更多的犯罪，并且他们逃脱正义将鼓励另外 100 人犯罪。因此很明显，允许 1,000 名有罪的人逍遥法外对整个社会造成的损害，远远大于错误地定罪一名无辜者所造成的损害。</p>
+<p>如果你对这个陈述有情绪反应，我请你思考：如果你是一名法官，你宁愿面对一个你错误定罪的人；还是 100 名你本可以预防的犯罪的受害者？将阈值设定在 +40 <em>db</em> 意味着，粗略地说，平均每 10,000 次定罪中只有不超过一次是错误的；一个要求陪审团遵守这一规则的法官在其职业生涯中可能不会做出一次错误定罪。</p>
+<p>无论如何，如果我们从 −70 db 开始取 +40 db，这意味着为了确保持有罪判决，你必须提供大约 110 db 的证据证明这个特定人的罪行。假设现在我们得知这个人有动机。这对他有罪的可信度有什么影响？概率论说</p>
+<p><span class="math display">\[e(\text{有罪}|\text{动机}) = e(\text{有罪}|X) + 10 log_{10} \frac{P(\text{动机}|\text{有罪})}{P(\text{动机}|\text{无罪})}\]</span> (5-38)</p>
+<p><span class="math display">\[\simeq -70 - 10log_{10} P(\text{动机}|\text{无罪})\]</span></p>
+<p>因为 <span class="math inline">\(P(\text{动机}|\text{有罪}) \simeq 1\)</span>，即我们要认为犯罪完全没有动机是不太可能的。因此，得知此人有动机的 [重要性] 几乎完全取决于一个无辜者也会有动机的概率 <span class="math inline">\(P(\text{动机}|\text{无罪})\)</span>。</p>
+<p>如果我们思考片刻，这显然符合我们的常识。如果死者善良且受所有人爱戴，几乎没有人有动机杀他。得知尽管如此，我们的嫌疑人<em>确实</em>有动机，那么这将是非常 [重要] 的信息。如果受害者是一个令人讨厌的角色，以各种恶行取乐，那么很多人都会有动机，得知我们的嫌疑人是其中之一并不那么 [重要]。这一点的意义在于，除非我们也知道关于死者性格的一些事情，否则我们不知道该如何看待我们的嫌疑人有动机这一信息。但是，如果不向他们指出，有多少陪审团成员会意识到这一点呢？</p>
+<p>假设一位非常开明的法官，拥有现行法律未赋予法官的权力，察觉到了这一事实，并且当关于动机的证词被引入时，他指示他的助手为陪审团确定纽约市有动机的人的 <em>数量</em>。如果这个数字是 <span class="math inline">\(N_m\)</span>，那么</p>
+<p><span class="math display">\[P(\text{动机}|\text{无罪}) = \frac{N_m - 1}{(\text{纽约人数}) - 1} \simeq 10^{-7} (N_m - 1)\]</span></p>
+<p>并且方程 (5-38) 减少为，出于所有实际目的，</p>
+<p><span class="math display">\[e(\text{有罪}|\text{动机}) \simeq −10 \log(N_m - 1)\]</span> (5-39)</p>
+<p>你看，纽约的人口已经从方程中抵消了；一旦我们知道有动机的人的数量，那么城市有多大就不再重要了。注意 (5-39) 即使当 <span class="math inline">\(N_m\)</span> 只有 1 或 2 时也继续说着正确的事情。</p>
+<p>你可以这样继续很长时间，我们认为你会发现这样做既有启发性又有趣。例如，我们现在得知嫌疑人不久前在犯罪现场附近被看到。根据贝叶斯定理，这一点的 [重要性] 几乎完全取决于附近还有多少无辜的人。如果你曾被告知不要相信贝叶斯定理，你应该再多关注几个这样的例子，看看它是如何准确地告诉你什么信息是相关的，什么是不相关的，在合理的推理中。<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a></p>
+<p>近年来，关于贝叶斯法理学的文献大量增加；有关包含许多参考文献的评论，请参见 <span class="cite"><span class="cite-author">Vignaux &amp; Robertson</span><span class="cite-date">1996</span></span> [这显然是 <a href="https://www.amazon.com/Interpreting-Evidence-Evaluating-Forensic-Courtroom/dp/0471960268/" id="_y-7T18jA" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>解释证据：评估法庭上的法医科学</em></a> –编者注]。</p>
+<p>即使在我们将完全无法说应该使用数值的情况下，贝叶斯定理仍然定性地再现了你的常识（也许经过一些深思熟虑后）告诉你的东西。这就是 <a href="https://en.wikipedia.org/wiki/George_P%C3%B3lya" id="_QEBELGgO" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/George_P%C3%B3lya#bodyContent">George Pólya</a> 详尽地展示的事实，以至于现在的作者确信这种联系不仅仅是定性的。</p>
+</blockquote>
+</section>
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr></hr>
+<ol>
+<li id="fn1"><p>事实上，在我那篇 <a href="/terrorism-is-not-effective#competent-murders" id="gwern-terrorism-is-not-effective--competent-murders" class="prefetch-not link-modified-recently link-page">恐怖主义无效</a> 中提到的每一个人都是男性，这对于完整的 <a href="https://en.wikipedia.org/wiki/List_of_rampage_killers" id="_8yVLbutP" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/List_of_rampage_killers#bodyContent">维基百科大规模杀人犯名单</a> 似乎也是如此。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>这种推理在 <a href="https://en.wikipedia.org/wiki/%E5%BC%A5%E6%B5%B7%E7%A0%82" id="_py5d26Dn" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%BC%A5%E6%B5%B7%E7%A0%82#bodyContent">弥海砂</a> 的情况下是错误的，但海砂是一个荒谬的角色——一个哥特萝莉流行歌星，通过非凡的巧合爱上了夜神月，对他言听计从，甚至不惜牺牲 75% 的寿命或记忆；因此从维基百科上得知作者塑造她角色的动机是为了避免“无聊”的全男性演员阵容并成为“一个可爱的女性”，这并不奇怪。（《死亡笔记》也不能免俗于 <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/RuleOfCool" id="_ZKJ1Apzv" data-link-icon="TV" data-link-icon-type="text" data-link-icon-color="#1c6486">酷规则</a> 或 <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/RuleOfSexy" id="_aTYvohjI" data-link-icon="TV" data-link-icon-type="text" data-link-icon-color="#1c6486">性感规则</a>！）<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>非因果性是 <a href="https://en.wikipedia.org/wiki/%E5%86%B3%E7%AD%96%E7%90%86%E8%AE%BA" id="_z_IyqCJX" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%86%B3%E7%AD%96%E7%90%86%E8%AE%BA#bodyContent">决策理论</a> 中一个奇怪的新概念，主要在 <a href="https://en.wikipedia.org/wiki/Douglas_Hofstadter" id="_qcsn6MY5" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Douglas_Hofstadter#bodyContent">侯世达</a> 的 <a href="/doc/existential-risk/1985-hofstadter" id="hofstadter-2012" class="prefetch-not link-annotated link-page" title="Metamagical Themas: Sanity and Survival">“超理性”文章</a>，<a href="https://en.wikipedia.org/wiki/Gary_Drescher" id="_xoOLIFBd" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Gary_Drescher#bodyContent">Gary Drescher</a> 的 <em><a href="/doc/statistics/decision/2006-drescher-goodandreal.pdf" id="drescher-2006" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘&lt;em&gt;Good and Real: Demystifying Paradoxes from Physics to Ethics&lt;/em&gt;’, Drescher 2006">Good and Real</a></em> 第 5–7 章，以及 <a href="https://www.lesswrong.com/" id="_xgkZOI9c" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/?format=preview&amp;theme=classic">LessWrong.com</a> 上讨论。<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>我的第一个解决方案涉及变性手术，但这会让情况变得更糟，因为变性人非常罕见，以至于一个足够聪明能预料到这些超理性死亡笔记用户的 L 会立即获得巨大的线索：只需检查手术名单上的每个人。无论如何，大多数死亡笔记用户可能会更喜欢传递它的解决方案。<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>这适用于许多其他活动，如 <a href="https://archive.nytimes.com/bits.blogs.nytimes.com/2012/06/07/good-night-moon-good-night-little-bird/" id="_TjmvqCzo" class="link-live" data-link-icon="new-york-times" data-link-icon-type="svg" title="Twitter Knows When You Sleep, and More">Twitter帖子</a> 或 Google 搜索；例如博主 <a href="https://webcitation.org/6EDvDSVzN" id="_z48v5Vye" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" title="Google Web History (original http://blog.muflax.com/personal/google-web-history/)">muflax</a> 在他的 Google 搜索中按小时观察到了同样的清晰昼夜节律。<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>参见 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年的论文，<a href="https://arxiv.org/abs/1109.1746" id="_tadFHEeL" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1109.1746?fallback=original">“维基百科编辑活动的昼夜模式：人口统计分析”</a>。<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>你可以通过 <a href="https://blog.jeremiahgrossman.com/2006/08/i-know-where-youve-been.html" id="_KSPrYjG_">JS</a> 或 <a href="https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/" id="_ElZQMhdA" data-link-icon="FF" data-link-icon-type="text,sans" data-link-icon-color="#e66000">CSS</a> 窃取信息，并且分析历史以 <a href="http://www.mikeonads.com/2008/07/13/using-your-browser-url-history-estimate-gender/" id="_jm8iYhUE">推断人口统计数据</a> 已经 <a href="https://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PG01&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.html&amp;r=1&amp;f=G&amp;l=50&amp;s1=%2220070073681%22.PGNR.&amp;OS=DN/20070073681&amp;RS=DN/20070073681" id="_1GTjeOCL">被授予专利</a>。<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>你可以在 <a href="https://en.wikipedia.org/wiki/Electronic_Frontier_Foundation" id="_LJdC2LeV" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Electronic_Frontier_Foundation#bodyContent">EFF</a> 的 <a href="https://coveryourtracks.eff.org/" id="_fhip1jtE">Panopticlick</a> 上实时尝试你自己的浏览器。<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p><span class="cite"><span class="cite-author">Felten &amp; Schneider</span><span class="cite-date">2000</span></span>, <a href="/doc/cs/security/2000-felten.pdf" id="_VO1571EU" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“Timing Attacks on Web Privacy”</a><a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>另见研究人员的 <a href="https://web.archive.org/web/20130926165125/http://honeyblog.org/archives/51-A-Practical-Attack-to-De-Anonymize-Social-Network-Users.html" id="_q5uRjxMI" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20130926165125if_/http://honeyblog.org/archives/51-A-Practical-Attack-to-De-Anonymize-Social-Network-Users.html">博客</a>。<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>对这种去匿名化算法的报道通常将其与 <a href="https://en.wikipedia.org/wiki/IMDb" id="_CEyyJ8iV" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/IMDb#bodyContent">IMDb</a> 评级联系起来，但作者很清楚——你可以从任何来源获得这些评级，除了它是公开和在线的之外，IMDb 没有什么特别之处。<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>这听起来像是应该是 <a href="https://en.wikipedia.org/wiki/NP_%E5%AE%8C%E5%85%A8" id="_SgWHMhgW" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/NP_%E5%AE%8C%E5%85%A8#bodyContent">NP 完全</a> 的，虽然 <a href="https://en.wikipedia.org/wiki/%E5%9B%BE%E5%90%8C%E6%9E%84%E9%97%AE%E9%A2%98" id="_s1CCnIOs" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%9B%BE%E5%90%8C%E6%9E%84%E9%97%AE%E9%A2%98#bodyContent">图同构问题</a> 已知在 NP 中，但它几乎是独一无二的，就像 <a href="https://en.wikipedia.org/wiki/%E6%95%B4%E6%95%B0%E5%88%86%E8%A7%A3" id="_7FpYDN5o" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%95%B4%E6%95%B0%E5%88%86%E8%A7%A3#bodyContent">整数分解</a> 一样——它可能容易也可能难，没有任何证明。在实践中，大型现实世界图往往 <a href="https://web.archive.org/web/20090331052423/http://33bits.org/2008/11/20/graph-isomorphism-deceptively-hard" id="_XMX-TREz" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20090331052423if_/http://33bits.org/2008/11/20/graph-isomorphism-deceptively-hard" title="Graph isomorphism: deceptively hard">易于解决</a>。<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p>来自 <a href="https://www.cs.utexas.edu/~shmat/shmat_oak09.pdf" id="_TJEAWvXS" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">论文</a> 摘要：</p>
+<blockquote>
+<p>[我们] 开发了一种针对匿名社交网络图的新重识别算法。为了证明其在现实世界网络上的有效性，我们展示了在 Twitter（一个流行的微博服务）和 Flickr（一个在线照片共享网站）上都可以验证拥有账户的用户中，有三分之一可以在匿名 Twitter 图中以仅 12% 的错误率被重识别。我们的去匿名化算法纯粹基于网络拓扑，不需要创建大量的虚拟“sybil”节点，对噪声和所有现有的防御都是鲁棒的，并且即使目标网络与对手的辅助信息之间的重叠很小也能工作。</p>
+</blockquote>
+<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn14"><p>例如，97% 的马萨诸塞州剑桥选民可以通过出生日期和邮政编码识别，29% 可以通过出生日期和性别识别。<a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn15"><p>见 <a href="https://static.usenix.org/event/sec11/tech/full_papers/Calandrino.pdf" id="_7zqveLQa" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“Bubble Trouble: Off-Line De-Anonymization of Bubble Forms”</a>, USENIX <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span>S Security Symposium; 来自 <a href="https://web.archive.org/web/20170702141754/https://freedom-to-tinker.com/2011/06/07/new-research-result-bubble-forms-not-so-anonymous/" id="_mZJAQguT" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20170702141754if_/https://freedom-to-tinker.com/2011/06/07/new-research-result-bubble-forms-not-so-anonymous/">“New Research Result: Bubble Forms Not So Anonymous”</a>:</p>
+<blockquote>
+<p>如果气泡标记模式是完全随机的，分类器的表现不会好于随机猜测测试集的创建者，预期准确率为 1⁄92 ~ 1%。我们的分类器达到了超过 51% 的准确率。分类器很少偏离太远：正确答案落在分类器前三个猜测中的概率为 75%（随机猜测为 3%），前十个猜测中的概率超过 92%（随机猜测为 11%）。</p>
+</blockquote>
+<a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn16"><p>另见 <a href="https://arxiv.org/abs/1805.08718" id="_d0RpuTFS" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1805.08718?fallback=original">“从 Facebook 状态推断人类特征”</a>, <span class="cite"><span class="cite-author">Cutler &amp; Kulis</span><span class="cite-date">2018</span></span>/<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0214369" id="_OEb2LzYv" data-link-icon="plos" data-link-icon-type="svg" title="Predicting individual-level income from Facebook profiles">Matz 等人 2019</a> 或 <a href="https://www.pnas.org/doi/10.1073/pnas.1917942116" id="_k8QTGGu5" data-link-icon="PNAS" data-link-icon-type="text,quad" data-link-icon-color="#1f75b9" title="‘Social media-predicted personality traits and values can help match people to their ideal jobs’, Kern et al 2019">“社交媒体预测的个性特征和价值观可以帮助人们匹配理想的工作”, Kern 等人 2019</a>, 或 <a href="https://online.ucpress.edu/collabra/article/7/1/18731/115925/Predicting-Mental-Health-From-Followed-Accounts-on" id="_u1-HV3Kg" title="‘Predicting Mental Health From Followed Accounts on Twitter’, Costello et al 2021">“从 Twitter 上关注的账户预测心理健康”, Costelli 等人 2021</a>, 关于社交媒体或媒体消费的普通使用可能泄漏什么的例子 (<a href="https://onlinelibrary.wiley.com/doi/10.1111/spc3.12624" id="_3QnOCZBT" data-link-icon="W" data-link-icon-type="text,sans" title="‘Personality computing: New frontiers in personality assessment’, Phan &amp; Rauthmann 2021">综述</a>).<a href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn17"><p>Arvind Narayanan 和 Vitaly Shmatikov <a href="https://web.archive.org/web/20090331074813/https://www.cs.utexas.edu/~shmat/socialnetworks-faq.html" id="_fWL2vTiB" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20090331074813if_/https://www.cs.utexas.edu/~shmat/socialnetworks-faq.html">粗略总结</a> 了他们去匿名化的含义：</p>
+<blockquote>
+<p><strong>那么，解决方案是什么？</strong></p>
+<p>我们不认为存在针对社交网络中匿名问题的技术解决方案。具体来说，我们不认为任何图变换可以 (a) 满足稳健的隐私定义，(b) 抵御我们论文中描述的去匿名化攻击，并且 (c) 保持图在常见数据挖掘和广告目的中的效用。因此，我们提倡非技术解决方案。</p>
+</blockquote>
+<p>所以，去匿名化只是发生在 <a href="https://web.archive.org/web/20130114231753/http://33bits.org/2012/12/17/new-developments-in-deanonymization/" id="_FmO4vuic" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20130114231753if_/http://33bits.org/2012/12/17/new-developments-in-deanonymization/" title="New Developments in Deanonymization">紧闭的门后</a>：</p>
+<blockquote>
+<p>…研究人员不再有去匿名化的动力。另一方面，如果恶意实体这样做，他们自然不会公开谈论，所以不会有公关后果。在没有公众强烈抗议的情况下，监管机构在调查匿名数据发布方面并不是很积极，所以这可能是一个微不足道的风险。有些人质疑去匿名化在现实中是否真的在发生。鉴于经济激励，我认为假设它没有发生有点愚蠢。当然，我也无法证明这一点，可能永远也无法证明。没有一家这样做的公司会公开谈论它，而且隐私伤害是如此间接，以至于将其与特定的数据发布联系起来几乎是不可能的。我只能提供轶事来解释我的立场：在这个行业的朋友曾多次联系我，希望我去匿名化他们获得的数据库，我也听不同行业的朋友随便提到，他们日常工作中将不同数据库结合在一起实际上就是去匿名化。</p>
+</blockquote>
+<p>一般来说，从识别/破坏隐私/反向匿名化的角度来看，’有用’和‘无用’信息之间没有明确的区别 (<a href="https://web.archive.org/web/20110314105222/http://33bits.org/2009/10/14/de-anonymization-is-not-x-the-need-for-re-identification-science/" id="_2GaOqRRL" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20110314105222if_/http://33bits.org/2009/10/14/de-anonymization-is-not-x-the-need-for-re-identification-science/" title="De-anonymization is not X: The Need for Re-identification Science">强调添加</a>)：</p>
+<blockquote>
+<p>’准标识符’是一个概念，源于试图将某些属性（如邮政编码）视为有助于重识别，而将其他属性（如品味和行为）视为不有助于重识别。然而，过去几年重识别论文的主要教训是 <em>关于一个人的任何信息</em> 都可能被用来辅助重识别。</p>
+</blockquote>
+<a href="#fnref17" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn18"><p>但是嘿，至少隐私的缺乏是双向的，公众可以 <a href="https://en.wikipedia.org/wiki/Transparency_(behavior)" id="_Zveunyeo" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Transparency_(behavior)#bodyContent">监视</a> 像政府这样的作恶者，正如 <a href="https://en.wikipedia.org/wiki/David_Brin" id="_bBVgF6N6" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/David_Brin#bodyContent">David Brin</a> 的 <em><a href="https://en.wikipedia.org/wiki/%E9%80%8F%E6%98%8E%E7%A4%BE%E4%BC%9A" id="_XtR92351" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E9%80%8F%E6%98%8E%E7%A4%BE%E4%BC%9A#bodyContent">透明社会</a></em> 所论证的那样是最好的结果。</p>
+<p>但是等等，维基解密揭露了由于反恐战争导致美国政府保密的大规模扩张，甚至透明度的 <a href="https://www.washingtonpost.com/wp-dyn/content/article/2008/12/10/AR2008121003364.html" id="_vnV5YNO6" data-link-icon="washington-post" data-link-icon-type="svg">所谓朋友</a>，奥巴马总统，<a href="https://www.nytimes.com/2009/03/17/us/politics/17signing.html" id="_2lG6qJUH" data-link-icon="new-york-times" data-link-icon-type="svg">已经</a> <a href="https://www.nytimes.com/2010/06/12/us/politics/12leak.html" id="_QnOf_aX4" data-link-icon="new-york-times" data-link-icon-type="svg">主持</a> <a href="https://web.archive.org/web/20120826184911/http://www.salon.com/2007/11/01/whistleblowers" id="_rXY8m6te" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20120826184911if_/http://www.salon.com/2007/11/01/whistleblowers" title="War on whistle-blowers intensifies">了</a> <a href="https://web.archive.org/web/20110624070259/https://harpers.org/archive/2010/08/hbc-90007562" id="_gCldlYHc" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20110624070259if_/https://harpers.org/archive/2010/08/hbc-90007562" title="Obama&#39;s War on Whistleblowers">乔治·W·布什总统保密计划的</a> <a href="https://www.dailykos.com/stories/2011/03/01/951432/-War-on-Whistleblowers-Escalating" id="_PTpQUkzi">扩张</a> 并镇压各类 <a href="https://en.wikipedia.org/wiki/%E5%90%B9%E5%93%A8%E4%BA%BA" id="_ErXvb9v7" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%90%B9%E5%93%A8%E4%BA%BA#bodyContent">吹哨人</a>？噢。我想那太糟糕了。<a href="#fnref18" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn19"><p>考虑到极高的全球利害关系，以及如果是谋杀则表明 L 对正在发生的事情极其重要的信息一无所知，一个更务实的 L 会在开始认真怀疑月时就简单地绑架并折磨或暗杀月。<a href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn20"><p>我后来看到过试图将活动时间与暗网市场和其他地方的位置关联起来的例子，例如试图推断恐怖海盗罗伯茨（美国）和中本聪（？）的时区。<a href="#fnref20" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn21"><p><a href="https://en.wikipedia.org/wiki/%E7%89%B9%E9%87%8C%C2%B7%E6%99%AE%E6%8B%89%E5%88%87%E7%89%B9" id="_-XT-zhrV" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E7%89%B9%E9%87%8C%C2%B7%E6%99%AE%E6%8B%89%E5%88%87%E7%89%B9#bodyContent">特里·普拉切特</a>, <em><a href="https://en.wikipedia.org/wiki/Mort" id="_rLUgjBmb" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mort#bodyContent">Mort</a></em>:</p>
+<blockquote>
+<p>根据哲学家 Ly Tin Weedle 的说法，唯一已知比普通光更快的东西是君主制。他的推理是这样的：你不能有一个以上的国王，传统要求国王之间没有空隙，所以通过这种方式当国王死时，继承权必须因此 <em>瞬间</em> 传递给继承人。他说，据推测，必定有一些基本粒子——kingons，或者可能是 queons——做这项工作，但当然继承有时会失败，如果在飞行途中，它们撞上了反粒子，或 republicon。他雄心勃勃的计划是利用他的发现发送信息，包括仔细折磨一个小国王以调制信号，但从未完全展开，因为在那一点上，酒吧关门了。</p>
+</blockquote>
+<a href="#fnref21" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn22"><p>“注意，在这些情况下，我们试图从不完整的信息片段中决定一个亚里士多德命题的真实性；即被告是否实施了某个定义明确的行为。这就是概率论作为逻辑所设计的情况——事实问题。但还有其他法律情况截然不同；例如，在医疗事故诉讼中，可能各方都同意被告实际做了什么的事实；问题在于他是否行使了合理的判断。由于没有官方的、精确的‘合理判断’定义，这就不是一个亚里士多德命题的真实性问题（然而，如果已确定他故意违反了我们要理性章节 1 中的某个愿望，我们认为大多数陪审团会定他的罪）。有人声称概率论基本上不适用于这种情况，我们关心的是一个非亚里士多德命题的部分真实性。然而，我们建议，在这些情况下，我们要关心的根本不是真理问题；相反，需要的是价值判断。我们将稍后回到这个主题（第 13、18 章）。”<a href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+
+      
+      <noscript><div id="noscript-warning-footer" class="admonition error" title="Warning to NoScript Users"><div class="admonition-title"><p>[<strong>Error</strong>: JavaScript disabled.]</p></div> <p>[Backlinks, similar links, and the bibliography require JS enabled to load.]</p></div></noscript>
+      
+      
+      
+      
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+    <!-- Footer (no SSI): injected by Hakyll from static/include/footer.html -->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction"></use></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center"></use></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction"></use></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Gwern Branwen">[ Send Anonymous Feedback ]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Gwern.net homepage" class="footer-logo dark-mode-invert" href="/index">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

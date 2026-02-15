@@ -890,8 +890,8 @@ div.poem span.caesura-mark {
   <meta name="twitter:site" content="gwern.net">
   <meta name="og:site" content="gwern.net">
   <meta name="og:type" content="article">
-  <meta name="description" content="List of major changes to site content">
-  <meta name="og:description" content="List of major changes to site content">
+  <meta name="description" content="站点内容的主要变更列表">
+  <meta name="og:description" content="站点内容的主要变更列表">
   <meta property="og:image" content="https://gwern.net/static/img/logo/logo-whitebg-large-border.png">
   <meta property="og:image:alt" content="Default thumbnail text: the Gwern.net site logo, a logotype of a large blackletter fraktur capital letter 'G' on a white background.">
   <meta property="og:image:height" content="530">
@@ -958,7 +958,7 @@ div.poem span.caesura-mark {
         <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
         <a class="design link-page link-annotated" href="/design" title="Design and implementation notes">Design</a>
         <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
-        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="blog link-page link-annotated" href="/blog/index" title="Blog index: short posts">Blog</a>
         <a class="links link-page" href="/Links" title="Links page">Links</a>
         <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
         <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
@@ -975,7 +975,7 @@ div.poem span.caesura-mark {
       
       <div class="markdownBody" id="page-metadata">
           
-        <div class="page-description"><p>List of major changes to site content</p></div>
+        <div class="page-description"><p>站点内容的主要变更列表</p></div>
         <div class="page-metadata-fields">
             
             
@@ -992,524 +992,282 @@ div.poem span.caesura-mark {
       <div id="TOC" class="TOC"><ul>
 <li><a href="#section" id="toc-section">2014</a>
 <ul>
-<li><a href="#june" id="toc-june">June</a></li>
-<li><a href="#may" id="toc-may">May</a></li>
-<li><a href="#april" id="toc-april">April</a></li>
-<li><a href="#march" id="toc-march">March</a></li>
-<li><a href="#february" id="toc-february">February</a></li>
-<li><a href="#january" id="toc-january">January</a></li>
+<li><a href="#六月" id="toc-六月">六月</a></li>
+<li><a href="#五月" id="toc-五月">五月</a></li>
+<li><a href="#四月" id="toc-四月">四月</a></li>
+<li><a href="#三月" id="toc-三月">三月</a></li>
+<li><a href="#二月" id="toc-二月">二月</a></li>
+<li><a href="#一月" id="toc-一月">一月</a></li>
 </ul></li>
 <li><a href="#section-1" id="toc-section-1">2013</a>
 <ul>
-<li><a href="#december" id="toc-december">December</a></li>
-<li><a href="#november" id="toc-november">November</a></li>
-<li><a href="#october" id="toc-october">October</a></li>
-<li><a href="#september" id="toc-september">September</a></li>
-<li><a href="#august" id="toc-august">August</a></li>
-<li><a href="#july" id="toc-july">July</a></li>
+<li><a href="#十二月" id="toc-十二月">十二月</a></li>
+<li><a href="#十一月" id="toc-十一月">十一月</a></li>
+<li><a href="#十月" id="toc-十月">十月</a></li>
+<li><a href="#九月" id="toc-九月">九月</a></li>
+<li><a href="#八月" id="toc-八月">八月</a></li>
+<li><a href="#七月" id="toc-七月">七月</a></li>
 </ul></li>
-<li><a href="#june-1" id="toc-june-1">June</a>
+<li><a href="#六月-1" id="toc-六月-1">六月</a>
 <ul>
-<li><a href="#may-1" id="toc-may-1">May</a></li>
+<li><a href="#五月-1" id="toc-五月-1">五月</a></li>
 </ul></li>
 <li><a href="#section-2" id="toc-section-2"><span class="date-range" title="The date range 2012–2013 lasted 1 year, ending 13 years ago.">2012–2013<sub><span title="2012 was 14 years ago.">13ya</span></sub></span></a></li>
-<li><a href="#section-3" id="toc-section-3">2011</a></li>
-</ul></div> <div id="markdownBody" class="markdownBody"><p>Following my writing can be a little difficult: while I provide <a href="http://www.gwern.net/atom.xml" id="_IExr8JN5" data-link-icon="txt" data-link-icon-type="svg">an RSS feed of the edit history</a>, it is too fine-grained to know what is an interesting update and what is housekeeping. So periodically I write up interesting changes in a human-readable format:</p>
+</ul></div> <div id="markdownBody" class="markdownBody"><p>由于我的更新比较频繁，虽然提供了<a href="http://www.gwern.net/atom.xml" id="_IExr8JN5" data-link-icon="txt" data-link-icon-type="svg">编辑历史 RSS</a>，但太细碎，难以分辨哪些是有趣的更新，哪些是日常维护。所以我定期以易读的格式记录一些有趣的变更：</p>
 <section id="section" class="level1">
 <h1><a href="#section" title="Link to section: § &#39;2014&#39;">2014</a></h1>
-<section id="june" class="level2">
-<h2><a href="#june" title="Link to section: § &#39;June&#39;">June</a></h2>
+<section id="六月" class="level2">
+<h2><a href="#六月" title="Link to section: § &#39;六月&#39;">六月</a></h2>
 <ul>
-<li><p>finished &amp; analyzed <a href="Zeo#morning-caffeine-pills" id="_CXUVsQI4">caffeine-pill wakeup pilot trial</a>, began blinded self-experiment</p></li>
-<li><p><a href="AB%20testing#beeline-reader-text-highlighting" id="_Qz5ez0JU">BeeLine Reader A/B test finished</a>: no version performed statistically-significantly better</p></li>
-<li><p>compiled &amp; expanded <a href="/fiction/Poems" id="gwern-fiction-poems" class="prefetch-not link-modified-recently link-page">selection of my poems</a></p></li>
+<li><p>完成并分析了<a href="Zeo#morning-caffeine-pills" id="_CXUVsQI4">咖啡因药丸唤醒试点试验</a>，开始了盲法自我实验</p></li>
+<li><p><a href="AB%20testing#beeline-reader-text-highlighting" id="_Qz5ez0JU">BeeLine Reader A/B 测试结束</a>：没有任何版本表现出统计显著的优势</p></li>
+<li><p>编译并扩展了<a href="/fiction/Poems" id="gwern-fiction-poems" class="prefetch-not link-modified-recently link-page">我的诗歌选集</a></p></li>
 </ul>
 </section>
-<section id="may" class="level2">
-<h2><a href="#may" title="Link to section: § &#39;May&#39;">May</a></h2>
+<section id="五月" class="level2">
+<h2><a href="#五月" title="Link to section: § &#39;五月&#39;">五月</a></h2>
 <ul>
-<li><p><a href="Treadmill#treadmill-effect-on-spaced-repetition-performance-randomized-experiment" id="_h0z9jBbN">Treadmill/spaced repetition experiment</a></p></li>
-<li><p><a href="Silk%20Road#mike-power-questions" id="_PrvVW7pe">short interview with Mike Powers</a> on current black-markets</p></li>
+<li><p><a href="Treadmill#treadmill-effect-on-spaced-repetition-performance-randomized-experiment" id="_h0z9jBbN">跑步机/间隔重复实验</a></p></li>
+<li><p>关于当前黑市的<a href="Silk%20Road#mike-power-questions" id="_PrvVW7pe">简短采访 Mike Powers</a></p></li>
 </ul>
 </section>
-<section id="april" class="level2">
-<h2><a href="#april" title="Link to section: § &#39;April&#39;">April</a></h2>
+<section id="四月" class="level2">
+<h2><a href="#四月" title="Link to section: § &#39;四月&#39;">四月</a></h2>
 <ul>
-<li><p><a href="Notes#technology-epigrams" id="_L2KUANCG">Epigrams on technology</a></p></li>
-<li><p>Mistakes: <a href="Mistakes#centralized-black-markets" id="_Y12hBGU7">added a section on how my complacency</a> about free-market mechanisms lead to no serious archiving</p></li>
-<li><p>an anonymous user sent in <a href="Blackmail#fanfiction" id="_eRoA8PWy">a fanfiction about Satoshi Nakamoto</a>, which was too good to simply delete</p></li>
-<li><p>I have posted the past issues of the newsletter online:</p>
+<li><p><a href="Notes#technology-epigrams" id="_L2KUANCG">关于技术的警句</a></p></li>
+<li><p>错误：<a href="Mistakes#centralized-black-markets" id="_Y12hBGU7">增加了一节关于我的自满</a>，因为过度信奉自由市场机制导致没有进行认真的归档</p></li>
+<li><p>一位匿名用户发来<a href="Blackmail#fanfiction" id="_eRoA8PWy">一篇关于中本聪的同人小说</a>，写得太好不忍删去</p></li>
+<li><p>我已将过往的通讯发布在网上：</p>
 <ul>
-<li><p><a href="/newsletter/2013/12" id="gwern-newsletter-2013-12" class="prefetch-not link-modified-recently link-page">December 2013</a></p></li>
-<li><p><a href="/newsletter/2014/01" id="gwern-newsletter-2014-01" class="prefetch-not link-modified-recently link-annotated link-page" title="&#39;January 2014 News&#39;, Gwern 2014">January 2014</a></p></li>
-<li><p><a href="/newsletter/2014/02" id="gwern-newsletter-2014-02" class="prefetch-not link-modified-recently link-annotated link-page" title="&#39;February 2014 News&#39;, Gwern 2014">February 2014</a></p></li>
-<li><p><a href="/newsletter/2014/03" id="gwern-newsletter-2014-03" class="prefetch-not link-modified-recently link-annotated link-page" title="&#39;March 2014 News&#39;, Gwern 2014">March 2014</a></p></li>
+<li><p><a href="/newsletter/2013/12" id="gwern-newsletter-2013-12" class="prefetch-not link-modified-recently link-page">2013年12月</a></p></li>
+<li><p><a href="/newsletter/2014/01" id="gwern-newsletter-2014-01" class="prefetch-not link-modified-recently link-annotated link-page" title="&#39;January 2014 News&#39;, Gwern 2014">2014年1月</a></p></li>
+<li><p><a href="/newsletter/2014/02" id="gwern-newsletter-2014-02" class="prefetch-not link-modified-recently link-annotated link-page" title="&#39;February 2014 News&#39;, Gwern 2014">2014年2月</a></p></li>
+<li><p><a href="/newsletter/2014/03" id="gwern-newsletter-2014-03" class="prefetch-not link-modified-recently link-annotated link-page" title="&#39;March 2014 News&#39;, Gwern 2014">2014年3月</a></p></li>
 </ul></li>
 </ul>
 </section>
-<section id="march" class="level2">
-<h2><a href="#march" title="Link to section: § &#39;March&#39;">March</a></h2>
-<p>Bitcoin:</p>
+<section id="三月" class="level2">
+<h2><a href="#三月" title="Link to section: § &#39;三月&#39;">三月</a></h2>
+<p>比特币：</p>
 <ul>
-<li><p><a href="/docs/2008-nakamoto" id="gwern-docs-2008-nakamoto" class="prefetch-not link-modified-recently link-page">Wei Dai/Satoshi Nakamoto emails</a></p></li>
-<li><p><a href="/docs/2014-mccaleb" id="gwern-docs-2014-mccaleb" class="prefetch-not link-modified-recently link-page">McCaleb email interview on MtGox</a></p></li>
-<li><p><a href="Blackmail#march" id="_-ouoSS8H">Evolution attempted blackmail</a></p></li>
+<li><p><a href="/docs/2008-nakamoto" id="gwern-docs-2008-nakamoto" class="prefetch-not link-modified-recently link-page">Wei Dai/中本聪邮件</a></p></li>
+<li><p><a href="/docs/2014-mccaleb" id="gwern-docs-2014-mccaleb" class="prefetch-not link-modified-recently link-page">McCaleb 关于 MtGox 的邮件采访</a></p></li>
+<li><p><a href="Blackmail#march" id="_-ouoSS8H">Evolution 尝试勒索</a></p></li>
 </ul>
-<p>Tech:</p>
+<p>技术：</p>
 <ul>
-<li><p><a href="Archiving%20URLs#sort---key-compression-trick" id="_rQgAV0J-">Spatial locality for better file compression</a></p></li>
-<li><p><a href="AB%20testing#beeline-reader" id="_BTqC6ByG">BeeLine Reader A/B test</a></p></li>
-</ul>
-</section>
-<section id="february" class="level2">
-<h2><a href="#february" title="Link to section: § &#39;February&#39;">February</a></h2>
-<ul>
-<li><p><em>Radiance</em>: finished.</p></li>
-<li><p><a href="https://groups.google.com/d/msg/mnemosyne-proj-users/tPHlkTFVX_4/oF61BF44iQkJ" id="_rZ_13Rqf" data-link-icon="✉" data-link-icon-type="text" data-link-icon-color="#4285f4">Public release of the Mnemosyne spaced repetition dataset</a> (18GB of 121.2m flashcard reviews, collected ~<span class="date-range" title="The date range 2004–2014 lasted 10 years, ending 12 years ago.">2004<span class="subsup"><sup>–</sup><sub>10</sub></span>2014<sub><span title="2004 was 22 years ago.">12ya</span></sub></span>)</p></li>
-<li><p><a href="http://slatestarcodex.com/2014/02/16/nootropics-survey-results-and-analysis/#comment-41413" id="_41fjkLC5" data-link-icon="SSC" data-link-icon-type="text,tri" data-link-icon-color="#5175c2">nootropics survey analysis</a></p></li>
-<li><p>verse: obituary <a href="/fiction/Poems#winter" id="gwern-fiction-poems--winter" class="prefetch-not link-modified-recently link-page">for my dog</a>; a poem apropos the <a href="/fiction/Genshiken" id="gwern-fiction-genshiken" class="prefetch-not link-modified-recently link-page">end of <em>Genshiken Nidaime</em></a></p></li>
-<li><p>A/B testing: <a href="/AB%20testing#section-header-capitalization" id="gwern-ab%20testing--section-header-capitalization" class="prefetch-not link-modified-recently link-page">header capitalization</a> finished (result: upcase title &amp; all section headers); began <a href="/AB%20testing#toc-formatting" id="gwern-ab%20testing--toc-formatting" class="prefetch-not link-modified-recently link-page">table of contents placement</a></p></li>
+<li><p><a href="Archiving%20URLs#sort---key-compression-trick" id="_rQgAV0J-">利用空间局部性优化文件压缩</a></p></li>
+<li><p><a href="AB%20testing#beeline-reader" id="_BTqC6ByG">BeeLine Reader A/B 测试</a></p></li>
 </ul>
 </section>
-<section id="january" class="level2">
-<h2><a href="#january" title="Link to section: § &#39;January&#39;">January</a></h2>
-<p>Black-markets:</p>
+<section id="二月" class="level2">
+<h2><a href="#二月" title="Link to section: § &#39;二月&#39;">二月</a></h2>
 <ul>
-<li><p>I have begun systematically spidering all operational black-markets.</p></li>
+<li><p><em>Radiance</em>：已完成。</p></li>
+<li><p><a href="https://groups.google.com/d/msg/mnemosyne-proj-users/tPHlkTFVX_4/oF61BF44iQkJ" id="_rZ_13Rqf" data-link-icon="✉" data-link-icon-type="text" data-link-icon-color="#4285f4">公开发布 Mnemosyne 间隔重复数据集</a> (18GB，包含约 <span class="date-range" title="The date range 2004–2014 lasted 10 years, ending 12 years ago.">2004<span class="subsup"><sup>–</sup><sub>10</sub></span>2014<sub><span title="2004 was 22 years ago.">12ya</span></sub></span> 年间的 1.212 亿次闪卡复习记录)</p></li>
+<li><p><a href="http://slatestarcodex.com/2014/02/16/nootropics-survey-results-and-analysis/#comment-41413" id="_41fjkLC5" data-link-icon="SSC" data-link-icon-type="text,tri" data-link-icon-color="#5175c2">促智药调查分析</a></p></li>
+<li><p>诗歌：<a href="/fiction/Poems#winter" id="gwern-fiction-poems--winter" class="prefetch-not link-modified-recently link-page">我狗的讣告</a>；一首关于 <a href="/fiction/Genshiken" id="gwern-fiction-genshiken" class="prefetch-not link-modified-recently link-page"><em>现视研二代目</em> 完结</a> 的诗</p></li>
+<li><p>A/B 测试：<a href="/AB-testing#section-header-capitalization" id="gwern-ab-testing--section-header-capitalization" class="prefetch-not link-modified-recently link-page">标题大写</a>已完成（结果：标题及所有章节标题大写）；开始进行<a href="/AB-testing#toc-formatting" id="gwern-ab-testing--toc-formatting" class="prefetch-not link-modified-recently link-page">目录位置</a>测试</p></li>
 </ul>
-<p>General:</p>
+</section>
+<section id="一月" class="level2">
+<h2><a href="#一月" title="Link to section: § &#39;一月&#39;">一月</a></h2>
+<p>黑市：</p>
 <ul>
-<li><p>Haskell Summer of Code: <a href="Haskell%20Summer%20of%20Code#section-7" id="_MdWtQ1xr">2013 review</a></p></li>
+<li><p>我已开始系统地爬取所有运营中的黑市。</p></li>
 </ul>
-<p>Statistical:</p>
+<p>综合：</p>
 <ul>
-<li><p><a href="AB%20testing#font-size-toc-background" id="_2T-IuoRc">font/number size &amp; table of contents background AB test</a> finished, with consideration of value of interactions</p></li>
+<li><p>Haskell Summer of Code：<a href="Haskell%20Summer%20of%20Code#section-7" id="_MdWtQ1xr">2013 回顾</a></p></li>
 </ul>
-<p><em>Radiance</em>:</p>
+<p>统计学：</p>
 <ul>
-<li><p><a href="/docs/2002-radiance#diff" id="gwern-docs-2002-radiance--diff" class="prefetch-not link-modified-recently link-page">diff of</a> “Radiance” and part I of <em>Radiance</em></p></li>
+<li><p><a href="AB%20testing#font-size-toc-background" id="_2T-IuoRc">字体/字号及目录背景 A/B 测试</a>已完成，并考虑了交互价值</p></li>
 </ul>
-<p>Site:</p>
+<p><em>Radiance</em>：</p>
 <ul>
-<li><p>rewrote configuration for Hakyll 4</p></li>
-<li><p>converted site’s <a href="https://en.wikipedia.org/wiki/Darcs" id="_AiNk6RBN" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Darcs#bodyContent">Darcs</a> repository to <a href="https://en.wikipedia.org/wiki/Git" id="_s3TIMfHd" class="link-modified-recently link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Git#bodyContent" title="Git">Git</a> &amp; <a href="https://github.com/gwern/gwern.net" id="_n7oa0EUV" class="link-modified-recently" data-link-icon="github" data-link-icon-type="svg">hosted on GitHub</a></p></li>
+<li><p><a href="/docs/2002-radiance#diff" id="gwern-docs-2002-radiance--diff" class="prefetch-not link-modified-recently link-page">diff of</a> “Radiance” 和 <em>Radiance</em> 第一部分</p></li>
+</ul>
+<p>站点：</p>
+<ul>
+<li><p>为 Hakyll 4 重写了配置</p></li>
+<li><p>将站点的 <a href="https://en.wikipedia.org/wiki/Darcs" id="_AiNk6RBN" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Darcs#bodyContent">Darcs</a> 仓库转为 <a href="https://en.wikipedia.org/wiki/Git" id="_s3TIMfHd" class="link-modified-recently link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Git#bodyContent" title="Git">Git</a> 并<a href="https://github.com/gwern/gwern.net" id="_n7oa0EUV" class="link-modified-recently" data-link-icon="github" data-link-icon-type="svg">托管在 GitHub</a></p></li>
 </ul>
 </section>
 </section>
 <section id="section-1" class="level1">
 <h1><a href="#section-1" title="Link to section: § &#39;2013&#39;">2013</a></h1>
-<section id="december" class="level2">
-<h2><a href="#december" title="Link to section: § &#39;December&#39;">December</a></h2>
-<p>Black-markets:</p>
+<section id="十二月" class="level2">
+<h2><a href="#十二月" title="Link to section: § &#39;十二月&#39;">十二月</a></h2>
+<p>黑市：</p>
 <ul>
-<li><p>compiled an updated <a href="Silk%20Road#basic-data" id="_SkHWtzlz">table of all known black-markets with lifetimes</a></p></li>
-<li><p>wrote up <a href="Blackmail" id="_uOPYuoqZ">an essay</a> on 3 attempts to blackmail/extort/scam</p></li>
+<li><p>编译了一份更新的<a href="Silk%20Road#basic-data" id="_SkHWtzlz">涵盖生命周期的已知黑市列表</a></p></li>
+<li><p>写了<a href="Blackmail" id="_uOPYuoqZ">一篇文章</a>记录 3 次勒索/敲诈/欺诈企图</p></li>
 </ul>
-<p>Statistical:</p>
+<p>统计学：</p>
 <ul>
-<li><p><a href="LLLT" id="_1YeqmYtT">analyzed a self-experiment</a> about <a href="https://en.wikipedia.org/wiki/Low-level_laser_therapy" id="_yxwjPcGK" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Low-level_laser_therapy#bodyContent">low level laser therapy</a> improving reaction time</p></li>
-<li><p><a href="AB%20testing#covariate-impact-on-power" id="_THPpIZws">power simulation</a> of the penalty from omitting key covariates in A/B testing</p></li>
-<li><p><a href="https://plus.google.com/103530621949492999968/posts/TisYM64ckLM" id="_jW75iPSX" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">critique of Chinese moxibustion study</a></p></li>
+<li><p><a href="LLLT" id="_1YeqmYtT">分析了一项自我实验</a>，关于<a href="https://en.wikipedia.org/wiki/Low-level_laser_therapy" id="_yxwjPcGK" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Low-level_laser_therapy#bodyContent">弱激光疗法</a>改善反应时间</p></li>
+<li><p><a href="AB%20testing#covariate-impact-on-power" id="_THPpIZws">功效模拟</a>，关于 A/B 测试中忽略关键协变量带来的惩罚</p></li>
+<li><p><a href="https://plus.google.com/103530621949492999968/posts/TisYM64ckLM" id="_jW75iPSX" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">评论中国艾灸研究</a></p></li>
 </ul>
-<p><em>Radiance</em>:</p>
+<p><em>Radiance</em>：</p>
 <ul>
-<li><p>transcribed <a href="/docs/2002-radiance#radiance-1" id="gwern-docs-2002-radiance--radiance-1" class="prefetch-not link-modified-recently link-page">novella “Radiance”</a></p></li>
-<li><p>transcribed &amp; annotated the autobiographical essay <a href="/docs/2002-radiance#old-legends" id="gwern-docs-2002-radiance--old-legends" class="prefetch-not link-modified-recently link-page">“Old Legends”</a> by Gregory Benford on his physics career, SF &amp; science, the “Star Wars” program, <a href="https://en.wikipedia.org/wiki/Edward_Teller" id="_-9npz5il" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Edward_Teller#bodyContent">Edward Teller</a>, etc</p></li>
-<li><p>tracked down and scanned a copy of <a href="/docs/1984-berger.pdf" id="_LrsQChQI" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“The <em>Astounding</em> Investigation: The Manhattan Project’s Confrontation with Science Fiction”</a> (<span class="cite"><span class="cite-author">Berger</span><span class="cite-date">1984</span></span>, <em>Analog</em> )</p></li>
+<li><p>转录了<a href="/docs/2002-radiance#radiance-1" id="gwern-docs-2002-radiance--radiance-1" class="prefetch-not link-modified-recently link-page">中篇小说 “Radiance”</a></p></li>
+<li><p>转录并注释了自传随笔 <a href="/docs/2002-radiance#old-legends" id="gwern-docs-2002-radiance--old-legends" class="prefetch-not link-modified-recently link-page">“Old Legends”</a>，作者 Gregory Benford 谈及他的物理学生涯、科幻与科学、“星球大战”计划、爱德华·泰勒等</p></li>
+<li><p>找到并扫描了一份 <a href="/docs/1984-berger.pdf" id="_LrsQChQI" class="link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“The <em>Astounding</em> Investigation: The Manhattan Project’s Confrontation with Science Fiction”</a> (<span class="cite"><span class="cite-author">Berger</span><span class="cite-date">1984</span></span>, <em>Analog</em> )</p></li>
 </ul>
-<p>Personal:</p>
+<p>个人：</p>
 <ul>
-<li><p><a href="Book%20reviews#umineko-no-naku-koro-ni" id="_q3DyJyv9">reviewed <em>Umineko</em></a></p></li>
-<li><p>posted my biographical research on an old family friend who has passed away, <a href="Notes#arthur-moulton" id="_phBqmTRh">Arthur Moulton</a></p></li>
+<li><p><a href="Book%20reviews#umineko-no-naku-koro-ni" id="_q3DyJyv9">评论 <em>海猫鸣泣之时</em></a></p></li>
+<li><p>发布了我对一位已故老世交 <a href="Notes#arthur-moulton" id="_phBqmTRh">Arthur Moulton</a> 的生平研究</p></li>
 </ul>
-<p>Site:</p>
+<p>站点：</p>
 <ul>
-<li><p>signed up for MailChimp &amp; started a <a href="http://eepurl.com/Kc155" id="_li681io2">monthly mailing list for <code>gwern.net</code> updates</a></p></li>
-<li><p><a href="https://www.gittip.com/gwern/" id="_rO333xyD">my Gittip</a> is up to $7.35 a week. I thank all donators.</p></li>
+<li><p>注册了 MailChimp 并开始了<a href="http://eepurl.com/Kc155" id="_li681io2">每月 <code>gwern.net</code> 更新邮件列表</a></p></li>
+<li><p><a href="https://www.gittip.com/gwern/" id="_rO333xyD">我的 Gittip</a> 达到了每周 $7.35。感谢所有捐赠者。</p></li>
 </ul>
 </section>
-<section id="november" class="level2">
-<h2><a href="#november" title="Link to section: § &#39;November&#39;">November</a></h2>
-<p>Another busy month:</p>
+<section id="十一月" class="level2">
+<h2><a href="#十一月" title="Link to section: § &#39;十一月&#39;">十一月</a></h2>
+<p>又是一个繁忙的月份：</p>
 <ul>
-<li><p>DNB <a href="https://en.wikipedia.org/wiki/Meta-analysis" id="_tKvFlpVk" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Meta-analysis#bodyContent">meta-analysis</a>: corrected multiple mistakes based on Redick’s review</p></li>
-<li><p><a href="">Lunar sleep</a>: split out, acquired 2 other <a href="/zeo/zeo" id="gwern-zeo-zeo" class="prefetch-not link-modified-recently link-page">Zeo</a> users’ data, expanded into a <a href="https://en.wikipedia.org/wiki/Multilevel_model" id="_8hGb8iKm" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Multilevel_model#bodyContent">multi-level model</a> &amp; power analysis (Cajochen still has not responded)</p></li>
-<li><p>Modafinil: <a href="Modafinil#modafinil-table" id="_eWppgnOS">price table update</a></p></li>
-<li><p>Silk Road:</p>
+<li><p>DNB 元分析：根据 Redick 的审阅修正了多处错误</p></li>
+<li><p><a href="">月球睡眠</a>: 拆分出来，获取了另外 2 位 <a href="/zeo/zeo" id="gwern-zeo-zeo" class="prefetch-not link-modified-recently link-page">Zeo</a> 用户的数据，扩展为多层模型及功效分析（Cajochen 本人仍未回应）</p></li>
+<li><p>莫达非尼：<a href="Modafinil#modafinil-table" id="_eWppgnOS">价格表更新</a></p></li>
+<li><p>丝绸之路 (Silk Road)：</p>
 <ul>
-<li><p><a href="Silk%20Road#estimating-dprs-fortune-minus-expenses-exchange-rate" id="__boud50H">estimating DPR’s net fortune</a> based on the FBI numbers</p></li>
-<li><p>black market <a href="Silk%20Road#survival-analysis" id="_AInXK3o1">survival analysis</a></p></li>
-<li><p><a href="Silk%20Road#the-bet-bmr-or-sheep-to-die-in-a-year-by-oct-2014" id="_bW0evZZz">publicly betting</a> Sheep &amp; BMR to shut down soon (which was vindicated even quicker than expected)</p></li>
-<li><p>Mike Power email <a href="Silk%20Road#mike-power-questions" id="_PrvVW7pe">interview</a></p></li>
-<li><p>BBC Radio 5 interview (not yet broadcast)</p></li>
-<li><p>doxed the owner of Sheep Marketplace (see http://pastebin.com/raw.php?i=9spTATw6 &amp; https://dl.dropboxusercontent.com/u/182368464/2013-11-03-sheepmarketplace-doxxing.maff )</p></li>
+<li><p>基于 FBI 数据<a href="Silk%20Road#estimating-dprs-fortune-minus-expenses-exchange-rate" id="__boud50H">估算 DPR 的净财富</a></p></li>
+<li><p>黑市<a href="Silk%20Road#survival-analysis" id="_AInXK3o1">生存分析</a></p></li>
+<li><p><a href="Silk%20Road#the-bet-bmr-or-sheep-to-die-in-a-year-by-oct-2014" id="_bW0evZZz">公开打赌</a> Sheep 和 BMR 很快会关闭（结果比预期的还快）</p></li>
+<li><p>Mike Power 邮件<a href="Silk%20Road#mike-power-questions" id="_PrvVW7pe">采访</a></p></li>
+<li><p>BBC Radio 5 采访（尚未播出）</p></li>
+<li><p>人肉出了 Sheep Marketplace 的拥有者（见 http://pastebin.com/raw.php?i=9spTATw6 &amp; https://dl.dropboxusercontent.com/u/182368464/2013-11-03-sheepmarketplace-doxxing.maff ）</p></li>
 </ul></li>
-<li><p>Bitcoin:</p>
+<li><p>比特币：</p>
 <ul>
-<li><p>short essay on <a href="Prediction%20markets#zerocoin" id="_y9v73ip3">Zerocoin prospects</a></p></li>
-<li><p>bets: update on <a href="Prediction%20markets#personal-bets" id="_FJbp5YYN">bet with qwertyoruiop</a> btc&lt;$50 - conceded defeat, learned a lesson about panicking, and paid up; altogether admirable</p></li>
+<li><p>关于 <a href="Prediction%20markets#zerocoin" id="_y9v73ip3">Zerocoin 前景</a> 的短文</p></li>
+<li><p>赌约：关于<a href="Prediction%20markets#personal-bets" id="_FJbp5YYN">与 qwertyoruiop 的赌约</a>更新（btc&lt;$50 - 认输，吸取了恐慌的教训，并支付了赌注；总体令人钦佩）</p></li>
 </ul></li>
-<li><p><em>Radiance</em>: finished transcription &amp; added all notations</p></li>
-<li><p>AB testing: <a href="AB%20testing#blockquote-formatting" id="_I0Toh6s5">blockquote finished</a>, status quo performed best</p></li>
-<li><p>Site:</p>
+<li><p><em>Radiance</em>：完成转录并添加了所有批注</p></li>
+<li><p>A/B 测试：<a href="AB%20testing#blockquote-formatting" id="_I0Toh6s5">引用块完成</a>，现状表现最佳</p></li>
+<li><p>站点：</p>
 <ul>
-<li><p><a href="About#anonymous-feedback" id="_ddCAYgah">anonymous feedback analysis</a></p></li>
-<li><p>deleted Flattr, trying out <a href="https://www.gittip.com/gwern/" id="_rO333xyD">Gittip</a> for donations</p></li>
+<li><p><a href="About#anonymous-feedback" id="_ddCAYgah">匿名反馈分析</a></p></li>
+<li><p>删除了 Flattr，尝试使用 <a href="https://www.gittip.com/gwern/" id="_rO333xyD">Gittip</a> 接受捐赠</p></li>
 </ul></li>
 </ul>
 </section>
-<section id="october" class="level2">
-<h2><a href="#october" title="Link to section: § &#39;October&#39;">October</a></h2>
-<p>My focus in October was coping with the fallout from the bust of Silk Road - dealing with the revelations, copying the SR forums, tracking down leads, talking to various people, recording the ensuing arrests, tracking the black markets popping up in its wake… I still have much material to work through, but some things I managed to do included:</p>
+<section id="十月" class="level2">
+<h2><a href="#十月" title="Link to section: § &#39;十月&#39;">十月</a></h2>
+<p>十月份我的重点都在处理 Silk Road 被查封后的余波——应对披露的信息，复制 SR 论坛内容，追踪线索，与各方交谈，记录随后的逮捕行动，追踪随之涌现的黑市……我还有很多材料要处理，但也完成了一些事情：</p>
 <ul>
-<li><p><a href="/docs/sr/2013-power" id="gwern-docs-sr-2013-power" class="prefetch-not link-modified-recently link-page"><em>Drugs 2.0</em>: “Your Crack’s in the Post”</a> (book chapter)</p></li>
-<li><p>rescuing the <a href="https://archive.org/details/2013_06_07_SilkRoad_Vendors" id="_SlIhNYcu" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://archive.org/details/2013_06_07_SilkRoad_Vendors?view=theater">vendor public profiles</a> and using some in my page</p></li>
-<li><p>betting all and sundry that BlackMarket Reloaded &amp; Sheep Marketplace will be <a href="http://www.reddit.com/r/SilkRoad/comments/1pko9y/the_bet_bmr_and_sheep_to_die_in_a_year/" id="_k66yxixC" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">busted or shut down within a year</a> (no takers)</p></li>
-<li><p>researching the <a href="http://www.reddit.com/r/SilkRoad/comments/1pfptu/maryland_man_charged_in_silk_road_drug/cd289fr" id="_GaXDRIim" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">“digitalink” bust</a></p></li>
+<li><p><a href="/docs/sr/2013-power" id="gwern-docs-sr-2013-power" class="prefetch-not link-modified-recently link-page"><em>Drugs 2.0</em>: “Your Crack’s in the Post”</a> (书籍章节)</p></li>
+<li><p>抢救<a href="https://archive.org/details/2013_06_07_SilkRoad_Vendors" id="_SlIhNYcu" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://archive.org/details/2013_06_07_SilkRoad_Vendors?view=theater">供应商公开资料</a>并在我的页面中使用了一些</p></li>
+<li><p>和所有人打赌 BlackMarket Reloaded &amp; Sheep Marketplace 将在<a href="http://www.reddit.com/r/SilkRoad/comments/1pko9y/the_bet_bmr_and_sheep_to_die_in_a_year/" id="_k66yxixC" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">一年内被查封或关闭</a>（无人接盘）</p></li>
+<li><p>研究 <a href="http://www.reddit.com/r/SilkRoad/comments/1pfptu/maryland_man_charged_in_silk_road_drug/cd289fr" id="_GaXDRIim" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">“digitalink” 抓捕案</a></p></li>
 </ul>
-<p>I decided to post my most extensive self-experiment yet, on <a href="/LSD%20microdosing" id="gwern-lsd%20microdosing" class="prefetch-not link-modified-recently link-page">LSD microdosing</a>. While there was a lot of criticism, I still regard it was worthwhile and setting a new benchmark for any future research in that area.</p>
-<p>My <a href="/Archiving%20URLs" id="gwern-archiving%20urls" class="prefetch-not link-modified-recently link-page" title="网页归档的重要性与方法">anti-linkrot</a> system benefited from comments on <a href="https://en.wikipedia.org/wiki/Hacker_News" id="_NNioUzwg" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hacker_News#bodyContent">Hacker News</a> telling me how to use <a href="http://archive.is/" id="_sz5cVOCf" data-link-icon="internet-archive" data-link-icon-type="svg">archive.is</a>; this may help me out quite a bit in the future.</p>
-<p>A/B testing has been active since Hacker News traffic furnished large sample sizes:</p>
+<p>我决定发布迄今为止最广泛的自我实验，关于 <a href="/LSD-microdosing" id="gwern-lsd-microdosing" class="prefetch-not link-modified-recently link-page">LSD 微剂量服用</a>。虽然有很多批评，但我依然认为这很有价值，并为该领域的未来研究设立了新标杆。</p>
+<p>我的<a href="/Archiving-URLs" id="gwern-archiving-urls" class="prefetch-not link-modified-recently link-page">防死链</a>系统受益于 <a href="https://en.wikipedia.org/wiki/Hacker_News" id="_NNioUzwg" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hacker_News#bodyContent">Hacker News</a> 上的评论，教我如何使用 <a href="http://archive.is/" id="_sz5cVOCf" data-link-icon="internet-archive" data-link-icon-type="svg">archive.is</a>；这对未来可能有很大帮助。</p>
+<p>A/B 测试一直很活跃，Hacker News 的流量提供了大量样本：</p>
 <ul>
-<li><p><a href="/AB%20testing#text-background-color" id="gwern-ab%20testing--text-background-color" class="prefetch-not link-modified-recently link-page">foreground/background test</a>: pure black/white was best</p></li>
-<li><p><a href="/AB%20testing#list-symbol-and-font-size" id="gwern-ab%20testing--list-symbol-and-font-size" class="prefetch-not link-modified-recently link-page">font size 100-120%</a>: default 100% was best</p></li>
-<li><p><a href="/AB%20testing#blockquote-formatting" id="gwern-ab%20testing--blockquote-formatting" class="prefetch-not link-modified-recently link-page">blockquote formatting</a> testing zebra striping: started but not yet finished</p></li>
-</ul>
-</section>
-<section id="september" class="level2">
-<h2><a href="#september" title="Link to section: § &#39;September&#39;">September</a></h2>
-<ul>
-<li><p>compiled a small meta-analysis of <a href="Creatine" id="_7ZYbtSCU">creatine’s effect on intelligence</a></p></li>
-<li><p>combined previous progress reports all into a single page (this page) &amp; added it to the sidebar. Should help out everyone who keep asking for an RSS feed of major changes rather than every change.</p></li>
-<li><p>started a new A/B test on <a href="AB%20testing#text-background-color" id="_KExMqup-">foreground/background colors</a></p></li>
-<li><p>expanded the <a href="">Google Alerts</a> analysis with fresh emails from the past half-year, for its Hacker News submission</p></li>
-<li><p>started a <a href="Nootropics#followup-experiment" id="_KkfmGFpz">bigger Noopept self-experiment</a></p></li>
-<li><p>did some spaced repetition research using <a href="https://groups.google.com/forum/#!msg/mnemosyne-proj-users/8yZz9BbqKl4/BxAIjo_2WscJ" id="_i7ZO02-8" data-link-icon="✉" data-link-icon-type="text" data-link-icon-color="#4285f4">the Mnemosyne logs</a>: found weekly &amp; time of day effects on memory performance - with a clear circadian rhythm</p></li>
+<li><p><a href="/AB-testing#text-background-color" id="gwern-ab-testing--text-background-color" class="prefetch-not link-modified-recently link-page">前景色/背景色测试</a>：纯黑/白最佳</p></li>
+<li><p><a href="/AB-testing#list-symbol-and-font-size" id="gwern-ab-testing--list-symbol-and-font-size" class="prefetch-not link-modified-recently link-page">字体大小 100-120%</a>：默认 100% 最佳</p></li>
+<li><p><a href="/AB-testing#blockquote-formatting" id="gwern-ab-testing--blockquote-formatting" class="prefetch-not link-modified-recently link-page">引用块格式</a> 测试斑马纹：已开始但尚未完成</p></li>
 </ul>
 </section>
-<section id="august" class="level2">
-<h2><a href="#august" title="Link to section: § &#39;August&#39;">August</a></h2>
+<section id="九月" class="level2">
+<h2><a href="#九月" title="Link to section: § &#39;九月&#39;">九月</a></h2>
+<ul>
+<li><p>编译了一份关于<a href="Creatine" id="_7ZYbtSCU">肌酸对智力影响</a>的小型元分析</p></li>
+<li><p>将之前的进度报告全部合并到一个页面（本页）并添加到侧边栏。应该能帮到那些总是询问主要变更 RSS 订阅而不仅仅是所有变更的人。</p></li>
+<li><p>开始了一个新的<a href="AB%20testing#text-background-color" id="_KExMqup-">前景色/背景色</a> A/B 测试</p></li>
+<li><p>扩展了 <a href="">Google Alerts</a> 分析，加入了过去半年的新邮件，用于 Hacker News 提交</p></li>
+<li><p>开始了一个<a href="Nootropics#followup-experiment" id="_KkfmGFpz">更大的 Noopept 自我实验</a></p></li>
+<li><p>利用 <a href="https://groups.google.com/forum/#!msg/mnemosyne-proj-users/8yZz9BbqKl4/BxAIjo_2WscJ" id="_i7ZO02-8" data-link-icon="✉" data-link-icon-type="text" data-link-icon-color="#4285f4">Mnemosyne 日志</a>做了一些间隔重复研究：发现了记忆表现的周效应和时间效应——具有明显的昼夜节律</p></li>
+</ul>
+</section>
+<section id="八月" class="level2">
+<h2><a href="#八月" title="Link to section: § &#39;八月&#39;">八月</a></h2>
 <blockquote>
-<p><a href="https://plus.google.com/103530621949492999968/posts/fELMZsxmE5p" id="_qlwS0O02" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Original</a></p>
+<p><a href="https://plus.google.com/103530621949492999968/posts/fELMZsxmE5p" id="_qlwS0O02" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">原文</a></p>
 </blockquote>
 <ul>
-<li><p>A/B testing: <a href="/AB%20testing#line-height" id="gwern-ab%20testing--line-height" class="prefetch-not link-modified-recently link-page">the lineheight test</a> found no difference, so I did a quick one where I tested an empty test to check the <a href="/AB%20testing#null-test" id="gwern-ab%20testing--null-test" class="prefetch-not link-modified-recently link-page">A/B testing tool I’m using</a>; I successfully failed to reject the null. The next test is whether underlining hyperlinks annoys people or not.</p></li>
-<li><p><a href="/Book%20reviews" id="gwern-book%20reviews" class="prefetch-not link-modified-recently link-page">Book reviews</a>: I wrote a <a href="https://en.wikipedia.org/wiki/Haskell" id="_AC8VbUc5" class="link-modified-recently link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Haskell#bodyContent" title="Haskell">Haskell</a> program to parse my <a href="https://en.wikipedia.org/wiki/Goodreads" id="_hgVJz_dF" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Goodreads#bodyContent">GoodReads</a> ratings &amp; reviews into flat Pandoc <a href="https://en.wikipedia.org/wiki/Markdown" id="_gCEHmPFk" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Markdown#bodyContent">Markdown</a>; it works somewhat well, it seems to be eating blockquotes &amp; neutering hyperlinks, I’m not sure why. Was also an opportunity to clean up some reviews: inline some of them, spellcheck, expand references &amp; links, which was a lot of work. But it’s nice to have my reviews gathered somewhere with a readable interface. kiba thinks the work may pay for itself in affiliate revenue with Amazon, but I’m skeptical.</p></li>
-<li><p><a href="/docs/2002-radiance" id="gwern-docs-2002-radiance" class="prefetch-not link-modified-recently link-page">Scholz’s <em>Radiance</em></a>: Added a hundred pages or so. Annotating some of it is quite difficult; Scholz’s familiarity with Wagner’s operas is a challenge, since I’ve only ever read his Ring Cycle.</p></li>
-<li><p>I’ve started two new self-experiments:</p>
+<li><p>A/B 测试：<a href="/AB-testing#line-height" id="gwern-ab-testing--line-height" class="prefetch-not link-modified-recently link-page">行高测试</a>未发现差异，所以我做了一个快速测试，<a href="/AB-testing#null-test" id="gwern-ab-testing--null-test" class="prefetch-not link-modified-recently link-page">测试一种空测试</a>以检查我使用的 A/B 测试工具；成功未能拒绝零假设。下一个测试是超链接下划线是否会惹恼用户。</p></li>
+<li><p><a href="/Book%20reviews" id="gwern-book%20reviews" class="prefetch-not link-modified-recently link-page">书评</a>：我写了一个 <a href="https://en.wikipedia.org/wiki/Haskell" id="_AC8VbUc5" class="link-modified-recently link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Haskell#bodyContent" title="Haskell">Haskell</a> 程序将我的 <a href="https://en.wikipedia.org/wiki/Goodreads" id="_hgVJz_dF" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Goodreads#bodyContent">GoodReads</a> 评分和评论解析为扁平的 Pandoc Markdown；效果还行，但似乎有些吃掉引用块和破坏超链接，不知道为什么。这也是清理一些评论的机会：内联一些评论，拼写检查，扩展参考和链接，工作量很大。但把我的评论集中在一个有可读界面的地方挺好的。kiba 认为这可能会通过亚马逊的联盟收入回本，但我表示怀疑。</p></li>
+<li><p><a href="/docs/2002-radiance" id="gwern-docs-2002-radiance" class="prefetch-not link-modified-recently link-page">Scholz 的 <em>Radiance</em></a>：增加了一百页左右。注释其中一部分非常困难；Scholz 对瓦格纳歌剧的熟悉是个挑战，因为我只读过他的指环系列。</p></li>
+<li><p>我开始了两个新的自我实验：</p>
 <ul>
-<li><p><a href="/Nootropics#citrate" id="gwern-nootropics--citrate" class="prefetch-not link-modified-recently link-page">Magnesium citrate</a> on mood/productivity</p></li>
-<li><p>Treadmill desk usage on <a href="/Treadmill#spaced-repetition" id="gwern-treadmill--spaced-repetition" class="prefetch-not link-modified-recently link-page">spaced repetition scores</a></p></li>
+<li><p><a href="/Nootropics#citrate" id="gwern-nootropics--citrate" class="prefetch-not link-modified-recently link-page">柠檬酸镁</a> 对情绪/生产力的影响</p></li>
+<li><p>跑步机办公桌使用对 <a href="/Treadmill#spaced-repetition" id="gwern-treadmill--spaced-repetition" class="prefetch-not link-modified-recently link-page">间隔重复分数</a> 的影响</p></li>
 </ul></li>
-<li><p><a href="Touhou#growth-over-time" id="_xZ99Ij1f">Touhou music growth rate</a>: made a little more progress on <a href="https://en.wikipedia.org/wiki/Touhou_Project" id="_J5mNpr-6" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Touhou_Project#bodyContent">Touhou</a> music, with an analysis # of releases vs time: seems like we may’ve reached peak Touhou in <span class="date-range">2009<sub><span title="2009 was 17 years ago.">17ya</span></sub></span>.</p></li>
-<li><p><a href="Silk%20Road#archives-of-sr-pages" id="_PGJqW5k0">Silk Road mirrors</a>: I’ve started hosting public copies of subsets of the black markets; these are backups for particular incidents or timeseries</p></li>
-<li><p><a href="https://groups.google.com/forum/#!msg/mnemosyne-proj-users/8yZz9BbqKl4/BxAIjo_2WscJ" id="_i7ZO02-8" data-link-icon="✉" data-link-icon-type="text" data-link-icon-color="#4285f4">Spaced repetition statistics</a>: I’ve been analyzing my Mnemosyne data and the giant public database for time of day effects. While my results aren’t conclusive, my analysis of 48m flashcard reviews from the public database finds that the best time to study your flashcards seem to be noon. A little surprising, you’d think that late at night, before bedtime, would be the best time.</p></li>
-<li><p>My <a href="">Sand</a> polls aren’t done because I got a much lower rate of responses to the polls than I was hoping for and only got enough responses in the final poll the other day.</p></li>
+<li><p><a href="Touhou#growth-over-time" id="_xZ99Ij1f">东方 Project 音乐增长率</a>：在该项目上取得了一些进展，分析发布数量与时间的关系：看起来我们可能在 <span class="date-range">2009<sub><span title="2009 was 17 years ago.">17ya</span></sub></span> 年达到了东方 Project 的顶峰。</p></li>
+<li><p><a href="Silk%20Road#archives-of-sr-pages" id="_PGJqW5k0">Silk Road 镜像</a>：我已开始托管部分黑市的公开副本；这些是特定事件或时间序列的备份</p></li>
+<li><p><a href="https://groups.google.com/forum/#!msg/mnemosyne-proj-users/8yZz9BbqKl4/BxAIjo_2WscJ" id="_i7ZO02-8" data-link-icon="✉" data-link-icon-type="text" data-link-icon-color="#4285f4">间隔重复统计</a>：我一直在分析我的 Mnemosyne 数据和巨大的公共数据库中的时间效应。虽然我的结果尚无定论，但我对公共数据库中 4800 万次闪卡复习的分析发现，学习闪卡的最佳时间似乎是中午。有点令人惊讶，你可能会以为睡前的深夜是最佳时间。</p></li>
+<li><p>我的 <a href="">Sand</a> 投票还没完成，因为回复率比我希望的低得多，前几天只有最后的投票得到了足够的回复。</p></li>
 </ul>
 </section>
-<section id="july" class="level2">
-<h2><a href="#july" title="Link to section: § &#39;July&#39;">July</a></h2>
+<section id="七月" class="level2">
+<h2><a href="#七月" title="Link to section: § &#39;七月&#39;">七月</a></h2>
 <blockquote>
-<p><a href="https://plus.google.com/103530621949492999968/posts/52ajF8SHGR7" id="_IH5TWy2A" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Original</a></p>
+<p><a href="https://plus.google.com/103530621949492999968/posts/52ajF8SHGR7" id="_IH5TWy2A" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">原文</a></p>
 </blockquote>
-<p>Interesting things I wrote during July:</p>
+<p>七月我写的一些有趣的东西：</p>
 <ul>
-<li><p><a href="">Google Alerts</a>: Statistical analysis of all my emails from Google Alerts to see whether/when they started to be less useful.</p></li>
-<li><p><a href="Lewis%20meditation" id="_ueD6Lo-k">2013 Lewis meditation quasi-experiment</a>: A Quantified Selfer and a few other guys did some meditation while doing an arithmetic game; turned out to be a perfect application for multilevel modeling</p></li>
-<li><p><a href="Zeo#phases-of-the-moon" id="_KSxFq8-8">Sleep and lunar phases</a>: A recent paper claimed that there’s a phase-of-the-moon effect on circadian rhythms; since I have so much sleep data on myself, I thought I’d see if there’s any effect…</p></li>
-<li><p><a href="">Sand</a>: continues to progress; I closed the LW poll and set up 3 new polls on <code>gwern.net</code> to test problems with the original poll.</p></li>
-<li><p><a href="Prediction%20markets#personal-bets" id="_FJbp5YYN">Betting</a> Made a list of things I’ve bet on or at least tried to bet on with people (as opposed to <a href="/prediction-market" id="gwern-prediction-market" class="prefetch-not link-modified-recently link-page">prediction market</a> use). Disappointingly short.</p></li>
-<li><p><a href="/docs/2002-radiance" id="gwern-docs-2002-radiance" class="prefetch-not link-modified-recently link-page">Scholz’s <em>Radiance</em></a>: I’ve started transcribing and annotating one of my favorite tech/lit novels. It’s mostly done; hopefully in August I’ll be able to finish Radiance.</p></li>
-<li><p><a href="Notes#cicadas" id="_lqxFL1OX">Cicadas for dinner</a>: I finally got around to eating the cicadas I caught during the most recent Maryland emergence; so of course I had to write up this outré dining.</p></li>
+<li><p><a href="">Google Alerts</a>：对我所有 Google Alerts 邮件的统计分析，看看它们是否/何时开始变得不太有用。</p></li>
+<li><p><a href="Lewis%20meditation" id="_ueD6Lo-k">2013 Lewis 冥想准实验</a>：一位量化自我者和其他几个人在玩算术游戏时做了一些冥想；结果证明这是多层建模的完美应用</p></li>
+<li><p><a href="Zeo#phases-of-the-moon" id="_KSxFq8-8">睡眠与月相</a>：最近一篇论文声称月相对昼夜节律有影响；既然我有这么多自己的睡眠数据，我想看看是否有任何影响…</p></li>
+<li><p><a href="">Sand</a>：继续推进；我关闭了 LW 投票，并在 <code>gwern.net</code> 上设立了 3 个新投票以测试原投票的问题。</p></li>
+<li><p><a href="Prediction%20markets#personal-bets" id="_FJbp5YYN">打赌</a> 列了一张我与人打赌或尝试打赌的清单（有别于使用预测市场）。短得令人失望。</p></li>
+<li><p><a href="/docs/2002-radiance" id="gwern-docs-2002-radiance" class="prefetch-not link-modified-recently link-page">Scholz 的 <em>Radiance</em></a>：我已开始转录并注释我最喜欢的科技/文学小说之一。大部分已完成；希望八月能完成 Radiance。</p></li>
+<li><p><a href="Notes#cicadas" id="_lqxFL1OX">晚餐吃蝉</a>：我终于有机会吃了最近马里兰州周期蝉爆发期间抓到的蝉；所以我当然要把这次离奇的进餐经历写下来。</p></li>
 </ul>
-<p>Right now, I’m listening through my Reitaisai 10 downloads (more Touhou music work); and working with this coach who is interested in predicting triple-jump performance by college athletes, and has collected a bunch of data about triple-jumpers.</p>
+<p>目前，我正在听 Reitaisai 10 下载的音乐（更多东方 Project 音乐工作）；并与一位教练合作，他对预测大学运动员的三级跳远成绩感兴趣，并收集了一堆关于三级跳远运动员的数据。</p>
 </section>
 </section>
-<section id="june-1" class="level1">
-<h1><a href="#june-1" title="Link to section: § &#39;June&#39;">June</a></h1>
+<section id="六月-1" class="level1">
+<h1><a href="#六月-1" title="Link to section: § &#39;六月&#39;">六月</a></h1>
 <blockquote>
-<p><a href="https://plus.google.com/103530621949492999968/posts/A3u1goGcjTU" id="_XoRKWXBl" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Original</a></p>
+<p><a href="https://plus.google.com/103530621949492999968/posts/A3u1goGcjTU" id="_XoRKWXBl" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">原文</a></p>
 </blockquote>
-<p>Hm, what did I get done this June…</p>
-<p>It was a little boring, honestly; jury duty was a mental distraction where I couldn’t plan ahead to do anything but I ultimately wound up going in once and not being picked up for the jury! So I spent a lot of time simply digging up fulltext papers for citations, so at least there’s now something like another 100 papers available online for melatonin/nicotine/<a href="/modafinil" id="gwern-modafinil" class="prefetch-not link-modified-recently link-page">modafinil</a> etc…</p>
+<p>嗯，六月我完成了什么……</p>
+<p>老实说，有点无聊；陪审团义务让人分心，我没法计划任何事情，但最终却是去了一次就被刷下来了！所以我花了很多时间挖掘全文论文及引文，至少现在褪黑素/尼古丁/莫达非尼等方面又有大约 100 篇论文可以在线阅读了……</p>
 <ul>
-<li><p>I was thinking of trying to meta-analyze the correlation of <a href="https://en.wikipedia.org/wiki/Lithium" id="_KzM5_jn-" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Lithium#bodyContent">lithium</a> in drinking-water with suicides/murders/mental-illness, but after I got copies of <a href="Nootropics#lithium" id="_fl4mIT8V">all the citations I knew of</a>, I’m not sure the data is homogenous to do that, which is disappointing, and the meta-analysis papers/textbooks I’ve checked don’t seem to be very encouraging about the utility of doing it with epidemiology stuff.</p></li>
-<li><p>And reorganizing &amp; fixing broken links &amp; updating various pages (I figured out how to make a <a href="/images/dnb/forest-activevspassive.png" id="_7mUcAghI" class="link-modified-recently" data-link-icon="image" data-link-icon-type="svg" data-image-height="674" data-image-width="541" data-aspect-ratio="541 / 674">fun forest plot</a> showing the active/passive split in dual n-back studies )</p></li>
-<li><p>My long-running font A/B test finished but with the most boring possible results of <a href="/AB%20testing#fonts" id="gwern-ab%20testing--fonts" class="prefetch-not link-modified-recently link-page">close to zero difference between the 4 fonts</a></p></li>
-<li><p>I researched an old family friend in his 90s who has never been willing to talk about his government work during the Cold War and found some stuff using released Census records, but that’s not really of interest to other people, and I decided to not make it public. Likewise when I added ~40 book reviews from my old notes to my Goodreads account.</p></li>
-<li><p>I managed to trace an arrested drug dealer back to his Silk Road account, which was somewhat interesting: <a href="http://www.reddit.com/r/SilkRoad/comments/1gxiv7/srrelated_bitcoin_seizure/caoxlmg" id="_NhkLBwi7" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">Reddit discussion</a></p></li>
-<li><p>Is one familiar with Fukuyama &amp; ‘the end of history’? I think he’s right but no one seems to agree with me, so I wrote a <a href="The%20Narrowing%20Circle#the-fukuyama-thesis" id="_bVCICdeQ">short essay defending him</a> Like most political essays, it’s probably worse than I realize.</p></li>
-<li><p>From my perspective, probably the most interesting thing I wrote all month was <a href="Sand#scanners-live-in-vain-as-realistic-sf" id="_FtYKGQDO">some criticism of early SF</a>, pointing out the obsolete science behind some stuff written off as fantasy.</p></li>
+<li><p>我想尝试元分析饮用水中的锂与自杀/谋杀/精神疾病的相关性，但在获取了<a href="Nootropics#lithium" id="_fl4mIT8V">所有我知道的引文</a>副本后，我不确定数据是否同质化到可以这样做，这很令人失望，而且我查阅的元分析论文/教科书似乎对流行病学方面的效用不太看好。</p></li>
+<li><p>还有重组和修复断链及更新各种页面（我想出了如何制作一个<a href="/images/dnb/forest-activevspassive.png" id="_7mUcAghI" class="link-modified-recently" data-link-icon="image" data-link-icon-type="svg" data-image-height="674" data-image-width="541" data-aspect-ratio="541 / 674">有趣的森林图</a>展示双 N-back 研究中的主动/被动对照组差异 )</p></li>
+<li><p>我长期运行的字体 A/B 测试结束了，结果极其无聊，<a href="/AB%20testing#fonts" id="gwern-ab%20testing--fonts" class="prefetch-not link-modified-recently link-page">4 种字体之间几乎没有差异</a></p></li>
+<li><p>我研究了一位 90 多岁的老世交，他从未愿意谈论冷战期间的政府工作，我利用公开的人口普查记录发现了一些东西，但对其他人来说没什么兴趣，所以我决定不公开。同样，我将旧笔记中的约 40 篇书评添加到了 GoodReads 账户。</p></li>
+<li><p>我成功将一名被捕毒贩追踪到他的 Silk Road 账户，这有点意思：<a href="http://www.reddit.com/r/SilkRoad/comments/1gxiv7/srrelated_bitcoin_seizure/caoxlmg" id="_NhkLBwi7" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">Reddit 讨论</a></p></li>
+<li><p>有人熟悉福山和“历史的终结”吗？我认为他是对的，但似乎没人同意我，所以我写了一篇<a href="The%20Narrowing%20Circle#the-fukuyama-thesis" id="_bVCICdeQ">短文为他辩护</a>。像大多数政治文章一样，这可能比我想象的更糟糕。</p></li>
+<li><p>从我的角度来看，这个月写的这有趣的东西大概是<a href="Sand#scanners-live-in-vain-as-realistic-sf" id="_FtYKGQDO">对早期科幻的一些批评</a>，指出了一些被当作幻想而不予理会的过时科学背景。</p></li>
 </ul>
-<section id="may-1" class="level2">
-<h2><a href="#may-1" title="Link to section: § &#39;May&#39;">May</a></h2>
+<section id="五月-1" class="level2">
+<h2><a href="#五月-1" title="Link to section: § &#39;五月&#39;">五月</a></h2>
 <blockquote>
-<p><a href="https://plus.google.com/103530621949492999968/posts/KnoE5gHvnr2" id="_-tzq_Lv1" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Original</a></p>
+<p><a href="https://plus.google.com/103530621949492999968/posts/KnoE5gHvnr2" id="_-tzq_Lv1" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">原文</a></p>
 </blockquote>
 <ul>
-<li><p>I’ve made a little more progress on the Touhou project</p></li>
-<li><p>Added 2 new studies to the DNB meta-analysis and also a new covariate (whether payment reduces gains: <a href="/DNB%20FAQ#paymentextrinsic-motivation" id="gwern-dnb%20faq--paymentextrinsic-motivation" class="prefetch-not link-modified-recently link-page">it doesn’t</a>)</p></li>
-<li><p>updated my <a href="/Zeo#sdr-lucid-dreaming-exploratory-data-analysis" id="gwern-zeo--sdr-lucid-dreaming-exploratory-data-analysis" class="prefetch-not link-modified-recently link-page">analysis of SDr’s sleep data</a></p></li>
-<li><p>oh wait, I did do a new project: applied <a href="https://en.wikipedia.org/wiki/Survival_analysis" id="_gsVVj-lx" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Survival_analysis#bodyContent">survival analysis</a> to <a href="/hpmor#survival-analysis" id="gwern-hpmor--survival-analysis" class="prefetch-not link-modified-recently link-page">modeling fiction reviews</a></p>
-<p>And in my Google analysis (which I credit to last month and not May, even if it went viral in early May), I added in <a href="/Google%20shutdowns#random-survival-forests" id="gwern-google%20shutdowns--random-survival-forests" class="prefetch-not link-modified-recently link-page">random survival forests</a>, fixing that gap in evaluating prediction methods, which was a little burden of guilt off my mind.</p>
-<p>While I was at it, I replicated that <a href="Silk%20Road#bitcoin-exchange-risk" id="_sT1jhi7I">recent paper analyzing Bitcoin exchange shutdown</a> or theft risk. The dude’s since given me his source code. (What can I say? Survival analysis is a great hammer, and it cost me enough tears and sweat to learn how to use the R library that I plan to use it everywhere I can.)</p></li>
-<li><p>I started a little Noopept self-experiment using the Noopept someone gave me, but unfortunately they gave me too little for the results to be very meaningful (see <a href="/Nootropics#experiment-2" id="gwern-nootropics--experiment-2" class="prefetch-not link-modified-recently link-page">the power analysis</a>); but maybe they will have a trend and I can try a bigger experiment later.</p></li>
-<li><p><a href="http://trubrain.com/" id="_AX2uTNFf">TruBrain</a> sent me a month’s supply of their all-in-one <a href="https://en.wikipedia.org/wiki/Nootropic" id="_KOw4H926" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Nootropic#bodyContent">nootropic</a>, but I haven’t tried it yet because it would interfere with the Noopept. I also purchased magnesium l-threonate, which is a disappointment so far, and some <a href="/nicotine" id="gwern-nicotine" class="prefetch-not link-modified-recently link-page">nicotine</a> patches, which I haven’t used yet. A small sample order from a new modafinil website selling the usual Indian Modalert is in progress but hasn’t arrived yet. (It ultimately did not arrive as the delivery required a signature.)</p></li>
-<li><p>I have a weird little <a href="/Sand" id="gwern-sand" class="prefetch-not link-modified-recently link-page" title="诗歌、批评与政治">literature/historical/survey article</a> in progress; we’ll see where that goes</p></li>
-<li><p>I posted an analysis I wrote a few months ago in private of whether a particular vendor on Silk Road is a federal mole (<a href="Silk%20Road#a-mole" id="_Y_X3DQkA">probably not</a>)</p></li>
+<li><p>东方 Project 项目稍微有些进展</p></li>
+<li><p>DNB 元分析增加了 2 项新研究和一个新协变量（付费是否降低收益：<a href="/DNB-FAQ#paymentextrinsic-motivation" id="gwern-dnb-faq--paymentextrinsic-motivation" class="prefetch-not link-modified-recently link-page">并不</a>）</p></li>
+<li><p>更新了我的 <a href="/Zeo#sdr-lucid-dreaming-exploratory-data-analysis" id="gwern-zeo--sdr-lucid-dreaming-exploratory-data-analysis" class="prefetch-not link-modified-recently link-page">SDr 睡眠数据分析</a></p></li>
+<li><p>哦等等，我确实做了一个新项目：将生存分析应用于<a href="/hpmor#survival-analysis" id="gwern-hpmor--survival-analysis" class="prefetch-not link-modified-recently link-page">小说评论建模</a></p>
+<p>在我的 Google 分析中（即使那是五月初病毒式传播的，我也将其归功于上个月而不是五月），我加入了<a href="/Google-shutdowns#random-survival-forests" id="gwern-google-shutdowns--random-survival-forests" class="prefetch-not link-modified-recently link-page">随机生存森林</a>，填补了评估预测方法的空白，这也算是卸下了心头的一块石头。</p>
+<p>在此期间，我复现了那篇<a href="Silk%20Road#bitcoin-exchange-risk" id="_sT1jhi7I">分析比特币交易所关闭</a>或盗窃风险的最新论文。作者后来给了我源代码。（我能说什么呢？生存分析是个好锤子，我已经花了足够的血泪学会使用 R 库，所以我打算尽可能随处使用它。）</p></li>
+<li><p>我开始了一个小型的 Noopept 自我实验，使用了别人给我的 Noopept，但不幸的是给的量太少，结果没什么意义（见<a href="/Nootropics#experiment-2" id="gwern-nootropics--experiment-2" class="prefetch-not link-modified-recently link-page">功效分析</a>）；但也许多多少少有些趋势，以后我可以尝试更大的实验。</p></li>
+<li><p><a href="http://trubrain.com/" id="_AX2uTNFf">TruBrain</a> 寄给我一个月的全合一促智药，但我还没试用，因为会干扰 Noopept。我还买了 L-苏糖酸镁，目前有点失望，还有一些尼古丁贴片，还没用。从一个新的莫达非尼网站订购的小样（卖常见的印度 Modalert）正在运送中还没到。（由于需要签收，最终没收到。）</p></li>
+<li><p>我正在写一篇奇怪的小<a href="/Sand" id="gwern-sand" class="prefetch-not link-modified-recently link-page" title="诗歌、批评与政治">文学/历史/调查文章</a>；看看会写成什么样</p></li>
+<li><p>我发布了几个月前私下写的一篇分析，关于 Silk Road 上的某个供应商是否是联邦内鬼（<a href="Silk%20Road#a-mole" id="_Y_X3DQkA">大概不是</a>）</p></li>
 </ul>
-<p>Actually, I guess it was overall a pretty productive month. Probably helped that jury duty has so far turned out to be a bust: I’ve been on call since 21 May but have yet to actually go into the courthouse to do anything.</p>
+<p>实际上，我觉得总体来说这是相当高产的一个月。可能主要归功于陪审团义务实际上什么都没干：我从 5 月 21 日起待命，但实际上根本不需要去法院做任何事。</p>
 </section>
 </section>
 <section id="section-2" class="level1">
 <h1><a href="#section-2" title="Link to section: § &#39;2012–201313ya&#39;"><span class="date-range" title="The date range 2012–2013 lasted 1 year, ending 13 years ago.">2012–2013<sub><span title="2012 was 14 years ago.">13ya</span></sub></span></a></h1>
 <blockquote>
-<p><a href="http://lesswrong.com/lw/h0b/recent_updates_to_gwernnet_20122013/" id="_OPFAFNzq">Original</a></p>
+<p><a href="http://lesswrong.com/lw/h0b/recent_updates_to_gwernnet_20122013/" id="_OPFAFNzq">原文</a></p>
 </blockquote>
 <div class="horizontal-rule-nth-1">
 <hr />
 </div>
-<blockquote>
-
-</blockquote>
-<p>“But where shall wisdom be found? / And where is the place of understanding? / Man knoweth not the price thereof; neither is it found in the land of the living…for the price of wisdom is above rubies.”</p>
-</blockquote>
-</p>
-<p>Here is material I’ve worked on in the 477 days since my last update. In roughly chronological &amp; topical order, here are the major additions to <code>gwern.net</code>:</p>
-</p>
-<ul>
-<li>
-<p>I interviewed translator <a href="http://www.gwern.net/docs/2011-house">Michael House</a> about his work in Japan as a translator</p>
-</li>
-<li>
-<p>finished data collection for my <a href="http://www.gwern.net/hafu">hafu anime statistics page</a> and begun analysis. (I’ve achieved good coverage of characters, found an astonishingly consistent absence of Korean characters, and confirmed the blond-haired/blue-eyed stereotype; but my original thesis doesn’t seem to work and the data is too unevenly distributed to identify time trends.)</p>
-</li>
-<li>
-<p>judged the <a href="http://www.gwern.net/Haskell%20Summer%20of%20Code#section-5">2011</a> &amp; <a href="http://www.gwern.net/Haskell%20Summer%20of%20Code#section-6">2012</a> results for the Haskell Summer of Codes and the accuracy of my predictions</p>
-</li>
-<li>
-<p>did <a href="http://www.gwern.net/DNB%20FAQ#meta-analysis">a meta-analysis</a> on whether dual n-back increases IQ, and examining possible biases and various claims about what makes the training work or not work</p>
-</li>
-<li>
-<p>did <a href="http://www.gwern.net/Iodine#meta-analysis">another meta-analysis</a> on whether iodine increases IQ, etc</p>
-</li>
-<li>
-<p>modafinil:</p>
-</p>
-<ul>
-<li>
-<p>checked for <a href="http://www.gwern.net/Nootropics#modalert-blind-day-trial">subjective effects of blinded modafinil</a></p>
-</li>
-<li>
-<p>updated my <a href="http://www.gwern.net/Modafinil#suppliers-prices">modafinil price-chart</a> twice, and expanded with brand data and a new armodafinil table</p>
-</li>
-<li>
-<p>researched modafinil-related <a href="http://www.gwern.net/Modafinil#legal-risk">prosecutions &amp; convictions</a> in the USA</p>
-</li>
-<li>
-<p>and any connection with <a href="http://www.gwern.net/Modafinil#schizophrenia">schizophrenia</a></p>
-</li>
-</ul>
-</li>
-<li>
-<p>tried <a href="http://www.gwern.net/Nootropics#kratom">kratom</a></p>
-</li>
-<li>
-<p>did a <a href="http://www.gwern.net/Nootropics#nicotine-experiment">nicotine gum/n-back experiment</a></p>
-</li>
-<li>
-<p>did <a href="http://www.gwern.net/Zeo#potassium">2 potassium experiments</a>; neither improved my mood/productivity, and one damaged my sleep</p>
-</li>
-<li>
-<p>my Silk Road page has been expanded with a <a href="http://www.gwern.net/Silk%20Road#bbc-questions">BBC interview</a>, putting SR in a <a href="http://www.gwern.net/Silk%20Road#silk-road-as-cyphernomicons-black-markets">historical <a href="https://en.wikipedia.org/wiki/Cypherpunk" id="_PlGdmUkc" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Cypherpunk#bodyContent">cypherpunk</a> context</a>, an updated account of <a href="http://www.gwern.net/Silk%20Road#safe">all arrests &amp; law enforcement actions</a>, and <a href="http://www.gwern.net/Silk%20Road#lsd-case-study">application of basic statistics to ordering</a></p>
-</li>
-<li>
-<p>ran 2 sleep experiments on the timing of taking a vitamin D supplement: I found that <a href="http://www.gwern.net/Zeo#vitamin-d">taking vitamin D before bed</a> substantially damaged my sleep, while <a href="http://www.gwern.net/Zeo#vitamin-d-at-morn-helps">taking vitamin D after waking up</a> did not hurt &amp; somewhat helped. (A later re-analysis revealed this result to be due to a flaw in the analysis; a better-done analysis revealed no particular improvement or damage to sleep.)</p>
-</li>
-<li>
-<p>checked whether a walking desk (treadmill) <a href="http://www.gwern.net/Treadmill#spaced-repetition">damaged typing speed or accuracy</a></p>
-</li>
-<li>
-<p>I have run 3 Wikipedia experiments establishing that: <a href="http://www.gwern.net/In%20Defense%20Of%20Inclusionism#sins-of-omission-experiment-1">Talk page edits are ignored</a> by editors; <a href="http://www.gwern.net/In%20Defense%20Of%20Inclusionism#sins-of-omission-experiment-2">random link deletions (and their restoration) are also ignored</a> by editors; and <a href="http://www.gwern.net/In%20Defense%20Of%20Inclusionism#ignoti-sed-non-occulti">external link suggestions on Talk pages</a> are also ignored by readers. (I take the former 2 as indicative of the decline in edit activity and rise of deletionist beliefs on Wikipedia.)</p>
-</li>
-<li>
-<p>tried some economic/historical analysis: <a href="http://www.gwern.net/Notes#reasons-of-state-why-didnt-denmark-sell-greenland">“Reasons of State: Why Didn’t Denmark Sell Greenland to the USA?”</a></p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/Sunk%20cost">Defending sunk costs</a> essay (<a href="http://lesswrong.com/lw/9si/is_sunk_cost_fallacy_a_fallacy/">LW discussion</a>)</p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/Slowing%20Moore%27s%20Law">“Slowing Moore’s Law: Why You Might Want To and How You Would Do It”</a></p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/Hyperbolic%20Time%20Chamber">“The Hyperbolic Time Chamber as Brain Emulation Analogy”</a></p>
-</li>
-<li>
-<p>tried estimating the bandwidth of a <a href="http://www.gwern.net/Death%20Note%20Anonymity#communicating-with-a-death-note">Death Note</a></p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/hpmor">compiled predictions</a> for <em>Harry Potter and the Methods of Rationality</em></p>
-</li>
-<li>
-<p>looked into <a href="http://www.gwern.net/Conscientiousness%20and%20online%20education">Conscientiousness and online education</a>; studies so far are useless from a meta-analytic standpoint</p>
-</li>
-<li>
-<p>tripled length of <a href="http://www.gwern.net/DNB%20FAQ#flaws-in-mainstream-science-and-psychology">appendix</a> dealing with the reliability of mainstream science (methodological flaws, replication rates, etc)</p>
-</li>
-<li>
-<p>finished meta-ethics essay, <a href="http://www.gwern.net/The%20Narrowing%20Circle">“The Narrowing Circle”</a></p>
-</li>
-<li>
-<p>explained the philosophy saying <a href="http://www.gwern.net/Prediction%20markets#modus-tollens-vs-modus-ponens">“one man’s modus ponens is another man’s modus tollens”</a></p>
-</li>
-<li>
-<p>speculation about a <a href="http://www.gwern.net/Notes#alternate-futures-the-second-english-restoration">restoration of the British monarchy</a></p>
-</li>
-<li>
-<p>clean up &amp; exploratory data analysis of <a href="http://www.gwern.net/Zeo#sdr-lucid-dreaming-exploratory-data-analysis">SDr’s <a href="https://en.wikipedia.org/wiki/Lucid_dream" id="_AlGvbwcB" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Lucid_dream#bodyContent">lucid dreaming</a> data</a></p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/Death%20Note%20script">Who wrote the <em>Death Note</em> script?</a> (<a href="http://lesswrong.com/lw/f63/case_study_the_death_note_script_and_bayes/">LW discussion</a>)</p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/2012%20election%20predictions">2012 US election predictions: statistical comparison</a></p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/Anchoring">Comment anchoring experiment</a> (<a href="http://lesswrong.com/lw/gft/lw_anchoring_experiment_maybe/">LW discussion</a>)</p>
-</p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/Notes#surprising-turing-complete-languages">Turing-completeness in surprising places</a> (inventory of particularly “weird machines”; relevant to computer and AI security)</p>
-</li>
-</ul>
-<p>Transcribed or translated:</p>
-</p>
-<ul>
-<li>
-<p><a href="http://www.gwern.net/docs/1955-nash">Nash’s letters on cryptography</a></p>
-</li>
-<li>
-<p>Douglas Hofstadter’s <a href="http://www.gwern.net/docs/1985-hofstadter">superrationality</a> columns (from <em>Metamagical Themas</em>, <span class="date-range">1985<sub><span title="1985 was 41 years ago.">41ya</span></sub></span>)</p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/docs/1987-rossi">“The Iron Law Of Evaluation And Other Metallic Rules”</a>, <span class="cite"><span class="cite-author">Rossi</span><span class="cite-date">1987</span></span> (lessons from the large <a href="https://en.wikipedia.org/wiki/Randomized_controlled_trial" id="_q1b5B-dQ" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Randomized_controlled_trial#bodyContent">RCTs</a> evaluating social &amp; welfare interventions)</p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/docs/statistics/1994-falk">“The Ups and Downs of the Hope Function In a Fruitless Search”</a>, <span class="cite"><span class="cite-author-plural" title="et al">Falk</span><span class="cite-joiner"> et al </span><span class="cite-date">1994</span></span></p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/docs/2007-wolfe">Gene Wolfe on writing</a></p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/docs/2002-gibson">“Shiny balls of Mud: <a href="https://en.wikipedia.org/wiki/William_Gibson" id="_vThULaYN" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/William_Gibson#bodyContent">William Gibson</a> Looks at Japanese Pursuits of Perfection”</a> (<span class="date-range">2002<sub><span title="2002 was 24 years ago.">24ya</span></sub></span>)</p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/docs/2004-okada">“Otaku Talk”, <span class="cite"><span class="cite-author-plural" title="et al">Okada</span><span class="cite-joiner"> et al </span><span class="cite-date">2004</span></span></a></p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/docs/2005-murakami">“Earth in My Window”, <span class="cite"><span class="cite-author">Murakami</span><span class="cite-date">2005</span></span></a></p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/docs/2005-sawaragi">“On The Battlefield of ‘Superflat’”</a></p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/docs/2010-sarrazin">“Ero-Anime: Manga Comes Alive”, <span class="cite"><span class="cite-author">Sarrazin</span><span class="cite-date">2010</span></span></a></p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/docs/eva/1996-newtype-anno-interview">1996 <em>NewType</em> interview with Hideaki Anno</a> (translated by me, with the help of an EGFer)</p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/docs/eva/1997-animeland-may-hideakianno-interview-english">1997 <em>Animeland</em> interview with Hideaki Anno</a> (bought, transcribed, and translated by me with the help of other LWers)</p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/docs/1997-utena">1997 <em>Utena</em> interviews</a></p>
-</li>
-</ul>
-<p>More technical:</p>
-</p>
-<ul>
-<li>
-<p>added <a href="http://www.gwern.net/docs/gwern.net-gitstats/index.html">edit history statistics/visualization</a> for <code>gwern.net</code> using <a href="http://gitstats.sourceforge.net/">GitStats</a></p>
-</li>
-<li>
-<p>site traffic updates: <a href="http://www.gwern.net/About#july-2011---december-2011">July-December 2011</a>, <a href="http://www.gwern.net/About#january-2012---july-2012">January 2012-July 2012</a>, <a href="http://www.gwern.net/About#july-2012---january-2013">July 2012-Jan 2013</a></p>
-</li>
-<li>
-<p>There’s also been a lot of <a href="http://www.gwern.net/About#colophon">backend</a> changes: switching to <a href="https://en.wikipedia.org/wiki/Amazon_S3" id="_0RtgjDKJ" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Amazon_S3#bodyContent">Amazon S3+</a>Cloudflare, adding error pages, metadata like tags, A/B testing, but no need to go into detail.</p>
-</li>
-</ul>
-<p>Personal:</p>
-</p>
-<ul>
-<li>
-<p>dumped my notes on my <a href="http://www.gwern.net/2011%20San%20Francisco">2011 visit</a> to San Francisco</p>
-</li>
-<li>
-<p>posted summaries of <a href="http://www.gwern.net/Links#profile">my personality &amp; attitudes</a> &amp; my <a href="http://www.gwern.net/docs/gwern-google-reader-subscriptions.xml">RSS feed collection</a></p>
-</li>
-<li>
-<p>enjoyed some <a href="http://www.gwern.net/Mead">mead</a>; I still like tea better, though</p>
-</li>
-<li>
-<p>dumped notes on the <a href="http://www.gwern.net/ICON%202012">2012 SF convention ICON</a></p>
-</li>
-</ul>
-</section>
-<section id="section-3" class="level1">
-<h1><a href="#section-3" title="Link to section: § &#39;2011&#39;">2011</a></h1>
-<blockquote>
-<p><a href="http://lesswrong.com/lw/8kv/recent_updates_to_gwernnet_2011/" id="_TlDDaTQ2">Original</a></p>
-</blockquote>
-<div class="horizontal-rule-nth-2">
-<hr />
-</div>
-<blockquote>
-
-</blockquote>
-<p>“I’d like to poison your mind / With wrong ideas that appeal to you / Though I am not unkind…”</p>
-</blockquote>
-<p>Per my past practice of linking stuff I think LWers will find interesting, here is what I’ve been up to lately:</p>
-</p>
-<ol>
-<li>
-<p><a href="http://www.gwern.net/Notes#politicians-are-not-unethical">“Politicians are Ethical”</a>: applying base-rate neglect</p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/Modafinil#discount-rate-applications-swapping-time-for-time">Modafinil</a>: a dual-pronged argument for low-balling estimates of modafinil harm by pointing to both temporal and quality discounting of health in old age. (If you missed it the first time around, I still think my mini-tutorial on <a href="http://www.gwern.net/Modafinil#ordering-with-learning">drug ordering with Bayes’s theorem</a> is worth reading.)</p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/The%20Narrowing%20Circle">“The Narrowing Circle”</a>: argument that the usual belief of ‘moral progress’ and the ‘expanding circle’ assume many of their conclusions by pointing to the beliefs and classes of entities discarded along the way. (As many LWers share those assumptions and will be unsympathetic, the interesting parts may be the appendices on perpetuities and <em>waqfs</em>, inasmuch as those bear directly on <a href="https://en.wikipedia.org/wiki/Cryonics" id="_oSaFWtwq" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Cryonics#bodyContent">cryonics</a>.)</p>
-</li>
-<li>
-<p>Both Modafinil and <a href="http://www.gwern.net/Spaced%20repetition">Spaced repetition</a> have been expanded with scores more links to studies &amp; PDFs. (<a href="http://www.gwern.net/Nicotine">Nicotine</a> and <a href="http://www.gwern.net/Melatonin">Melatonin</a> are next.)</p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/Notes#worldbuilding-the-lights-in-the-sky-are-sacs">“Worldbuilding: The Lights in the Sky are Sacs”</a> is a silly bit of SF/alternate history speculation involving floating hydrogen-sac organisms.</p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/Wikipedia%20and%20Knol">“Wikipedia and Knol”</a> has been completed, as the 7 predictions I made on the matter have been judged thanks to Google’s recent announcements; <a href="http://www.gwern.net/Wikipedia%20and%20Knol#chronicle-of-a-death-foretold">I blew one</a>.</p>
-</li>
-<li>
-<p>Stuff which is incomplete or which is just a pile of notes:</p>
-<ul>
-<li>
-<p>“<a href="http://www.gwern.net/The%20Existential%20Risk%20of%20Mathematical%20Error">Existential risks and mathematical error”</a></p>
-</li>
-<li>
-<p><a href="http://www.gwern.net/Ethical%20sperm%20donation">“The morality of sperm donation”</a> -(sketch of argument smart utilitarians donate sperm)</p>
-</li>
-<li>
-<p>notes on <a href="http://www.gwern.net/intermittent-fasting">intermittent fasting</a></p>
-</li>
-<li>
-<p>notes on <a href="http://www.gwern.net/masturbation">masturbation &amp; testosterone</a></p>
-</li>
-</ul>
-</li>
-<li>
-<p>I stuck a link in the footer of every page to a Google spreadsheet form, borrowing the idea from <a href="http://lesswrong.com/lw/8bt/tell_me_what_you_think_of_me/">Luke Muehlhauser</a> - I’ve only gotten 1 feedback so far, IIRC, but that was before I put it in the footer and updated all the pages a few hours ago.</p>
-</li>
-</ol>
 </section>
 
       

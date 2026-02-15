@@ -898,9 +898,9 @@ div.poem span.caesura-mark {
   <meta property="og:image:width" content="441">
   <meta property="gwern:thumbnail:css-classes" content="">
   <meta name="keywords" content="">
-  <meta name="dc.date.issued" content="25 Aug 2019">
+  <meta name="dc.date.issued" content="2019-08-25">
   
-  <meta name="citation_publication_date" content="25 Aug 2019">
+  <meta name="citation_publication_date" content="2019-08-25">
   <meta name="dcterms.modified" content="">
   <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
   <meta name="dcterms.rights" content="CC PD-0">
@@ -958,7 +958,7 @@ div.poem span.caesura-mark {
         <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
         <a class="design link-page link-annotated" href="/design" title="Design and implementation notes">Design</a>
         <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
-        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="blog link-page link-annotated" href="/blog/index" title="Blog index: short posts">Blog</a>
         <a class="links link-page" href="/Links" title="Links page">Links</a>
         <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
         <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
@@ -980,7 +980,7 @@ div.poem span.caesura-mark {
             
             
             <span class="page-status" title="Writing status of current page: ranges 'abandoned'/'notes'/'draft'/'in progress'/'finished'"><em><span class="completion-status" data-progress-percentage="75">in progress</span></em></span>
-            <span class="page-confidence"><a href="/about#confidence-tags" title="Explanation of 'confidence' metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: 'certain'/'highly likely'/'likely'/'possible'/'unlikely'/'highly unlikely'/'remote'/'impossible')">certainty</a>: <em><span class="completion-status" data-progress-percentage="84">highly likely</span></em></span>
+            <span class="page-confidence"><a href="/about#confidence-tags" title="Explanation of 'confidence' metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: 'certain'/'highly likely'/'likely'/'possible'/'unlikely'/'highly unlikely'/'remote'/'impossible')">certainty</a>: <em><span class="completion-status" data-progress-percentage="67">likely</span></em></span>
             <span class="page-importance"><a href="/about#importance-tags" title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>3</em></span>
             
             
@@ -989,7 +989,7 @@ div.poem span.caesura-mark {
       </div>
       
 
-      <div id="TOC" class="TOC"></div> <div id="markdownBody" class="markdownBody"><p>这个页面是关于我个人的信息；关于 <code>wiki.v2eth.com</code> 网站的信息，请查看<a href="/About" id="gwern-about" class="prefetch-not link-modified-recently link-annotated-partial link-page">关于本站</a>。</p>
+      <div id="TOC" class="TOC"></div> <div id="markdownBody" class="markdownBody"><p>这个页面是关于我个人的信息；关于 <code>wiki.v2eth.com</code> 网站的信息，请查看 <a href="/关于" id="gwern-关于" class="prefetch-not link-modified-recently link-page">关于本站</a>。</p>
 
       
       <noscript><div id="noscript-warning-footer" class="admonition error" title="Warning to NoScript Users"><div class="admonition-title"><p>[<strong>Error</strong>: JavaScript disabled.]</p></div> <p>[Backlinks, similar links, and the bibliography require JS enabled to load.]</p></div></noscript>

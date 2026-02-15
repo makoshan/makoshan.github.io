@@ -79,7 +79,7 @@
 , ( "ICON%202010" , Left 61080 )
 , ( "ICON%202011" , Left 61080 )
 , ( "ICON%202012" , Left 61080 )
-, ( "ICON%202012#sunday" , Left 61080 )
+, ( "ICON%202012#sunday" , Left 61086 )
 , ( "Immoral%20Books" , Left 61080 )
 , ( "In%20Defense%20Of%20Inclusionism" , Left 61080 )
 , ( "In%20Defense%20Of%20Inclusionism#new-regimes" , Left 61080 )
@@ -333,6 +333,9 @@
 , ( "http://ac.els-cdn.com/S1877042813038871/1-s2.0-S1877042813038871-main.pdf"
   , Left 61080
   )
+, ( "http://act-r.psy.cmu.edu/wordpress/wp-content/themes/ACT-R/workshops/2003/proceedings/46.pdf"
+  , Left 61086
+  )
 , ( "http://aging.wisc.edu/pdfs/2297.pdf" , Left 61080 )
 , ( "http://aglobalvillage.org/" , Left 61080 )
 , ( "http://agtb.wordpress.com/2012/02/17/john-nashs-letter-to-the-nsa/"
@@ -362,6 +365,9 @@
   )
 , ( "http://aje.oxfordjournals.org/content/173/8/906.full.pdf"
   , Left 61080
+  )
+, ( "http://akenney.fastmail.fm.user.fm/works/9.61Paper.pdf"
+  , Left 61086
   )
 , ( "http://alex-reid.net/" , Left 61080 )
 , ( "http://alldoujinmusic.wordpress.com" , Left 61080 )
@@ -452,6 +458,7 @@
 , ( "http://antilop.cc/sr/files/sheldon_kennedy_criminal_complaint.pdf"
   , Left 61080
   )
+, ( "http://app.qstream.com/pricekerfoot" , Left 61086 )
 , ( "http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.html&r=1&f=G&l=50&s1=%2220070073681%22.PGNR.&OS=DN/20070073681&RS=DN/20070073681"
   , Left 61080
   )
@@ -662,6 +669,9 @@
 , ( "http://blog.pinboard.in/2010/11/bookmark_archives_that_don_t/"
   , Left 61080
   )
+, ( "http://blog.remoteworknewsletter.com/2014/10/15/how-to-valdiate-an-idea-on-hacker-news/"
+  , Left 61086
+  )
 , ( "http://blog.sethroberts.net/2011/03/22/effect-of-one-legged-standing-on-sleep/"
   , Left 61080
   )
@@ -763,6 +773,9 @@
 , ( "http://cardiovascres.oxfordjournals.org/content/91/4/649.full"
   , Left 61080
   )
+, ( "http://castel.bol.ucla.edu/publications/RhodesCastelJOLFontSize.pdf"
+  , Left 61086
+  )
 , ( "http://cat.inist.fr/?aModele=afficheN&cpsidt=13662153"
   , Left 61080
   )
@@ -786,6 +799,9 @@
   )
 , ( "http://chem.tufts.edu/answersinscience/relativityofwrong.htm"
   , Left 61080
+  )
+, ( "http://chesstempo.com/user-guide/en/probSearchSpacedRepetition.html"
+  , Left 61086
   )
 , ( "http://chrisdone.com/posts/2011-12-02-programmer-at-work-statistics.html"
   , Left 61080
@@ -887,6 +903,9 @@
 , ( "http://community.seattletimes.nwsource.com/archive/?date=19930513&slug=1701067"
   , Left 61080
   )
+, ( "http://conference.cali.org/2014/sessions/spaced-repetition-technology-legal-education"
+  , Left 61086
+  )
 , ( "http://content.healthaffairs.org/content/20/2/115.full.pdf"
   , Left 61080
   )
@@ -980,6 +999,9 @@
 , ( "http://dataprivacylab.org/projects/identifiability/pharma1.html"
   , Left 61080
   )
+, ( "http://davidjf.free.fr/new/Xtech_scientific%20american_%20making%20memories%20stick.pdf"
+  , Left 61086
+  )
 , ( "http://de1.erowid.org/experiences/subs/exp_Melatonin.html"
   , Left 61080
   )
@@ -993,6 +1015,12 @@
   , Left 61080
   )
 , ( "http://dianewolkstein.com/inanna/" , Left 61080 )
+, ( "http://digitalcommons.mtu.edu/cgi/viewcontent.cgi?article=1486&context=etds"
+  , Left 61086
+  )
+, ( "http://digitalcommons.usu.edu/cgi/viewcontent.cgi?article=4569&context=etd"
+  , Left 61086
+  )
 , ( "http://dioi.org/kn/newtonmoontest.htm" , Left 61080 )
 , ( "http://dipeco.economia.unimib.it/repec/pdf/mibwpaper167.pdf"
   , Left 61080
@@ -1478,6 +1506,7 @@
 , ( "http://googlesystem.blogspot.com/2013/07/google-alerts-drops-rss-feeds.html"
   , Left 61080
   )
+, ( "http://graded-reader.org/" , Left 61086 )
 , ( "http://greatpenformances.wordpress.com/2009/01/05/1959-bestselling-novels/"
   , Left 61080
   )
@@ -1770,6 +1799,9 @@
   , Left 61080
   )
 , ( "http://jordanmechner.com/ebook/" , Left 61080 )
+, ( "http://joshua.schachter.org/2009/04/on-url-shorteners"
+  , Left 61086
+  )
 , ( "http://journals.cambridge.org/production/action/cjoGetFulltext?fulltextid=1463440"
   , Left 61080
   )
@@ -1822,6 +1854,9 @@
   )
 , ( "http://jvsmedicscorner.com/Physiology_files/Impact%20of%20sleep%20debt%20on%20metabolic%20and%20endocrine%20function.pdf"
   , Left 61080
+  )
+, ( "http://karpathy.ca/myblog/2013/11/27/quantifying-hacker-news-with-50-days-of-data/"
+  , Left 61086
   )
 , ( "http://keikakudoori.wordpress.com/category/umineko-no-naku-koro-ni/"
   , Left 61080
@@ -2438,8 +2473,14 @@
   , Left 61080
   )
 , ( "http://mybasis.com/" , Left 61080 )
+, ( "http://najafali.com/zero-to-fifteen-thousand-in-twenty-four-hours.html"
+  , Left 61086
+  )
 , ( "http://naldc.nal.usda.gov/download/13645/PDF" , Left 61080 )
 , ( "http://namuol.github.com/banal-duck/" , Left 61080 )
+, ( "http://nathanael.hevenet.com/the-best-time-to-post-on-hacker-news-a-comprehensive-answer/"
+  , Left 61086
+  )
 , ( "http://naturalstandard.com/index-abstract.asp?create-abstract=patient-melatonin.asp&title=Melatonin"
   , Left 61080
   )
@@ -2551,6 +2592,9 @@
   )
 , ( "http://openfocus.com/" , Left 61080 )
 , ( "http://openp2p.com/lpt/a/3015" , Left 61080 )
+, ( "http://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=2147&context=etd"
+  , Left 61086
+  )
 , ( "http://opinionator.blogs.nytimes.com/2009/11/24/the-end-of-music/"
   , Left 61080
   )
@@ -2766,6 +2810,7 @@
 , ( "http://press.thelancet.com/pregnancyiodine.pdf" , Left 61080 )
 , ( "http://prize.hutter1.net/" , Left 61080 )
 , ( "http://projecteuler.net/" , Left 61080 )
+, ( "http://proselint.com/" , Left 61086 )
 , ( "http://psy2.ucsd.edu/~nchristenfeld/Publications_files/Spoilers.pdf"
   , Left 61080
   )
@@ -2786,6 +2831,12 @@
   )
 , ( "http://psych.wustl.edu/memory/Roddy%20article%20PDF%27s/Lyle%20et%20al%20(2008)_PBR.pdf"
   , Left 61080
+  )
+, ( "http://psychnet.wustl.edu/coglab/wp-content/uploads/2015/01/1989-Balota.pdf"
+  , Left 61086
+  )
+, ( "http://psychnet.wustl.edu/coglab/wp-content/uploads/2015/01/2007-Is-expanded.pdf"
+  , Left 61086
   )
 , ( "http://psycho.student.kuleuven.be/psychopedia/samenvattingen/1stebach/Sociale%201/soc%20activering.pdf"
   , Left 61080
@@ -3007,6 +3058,9 @@
 , ( "http://snapbird.org/" , Left 61080 )
 , ( "http://socserv.mcmaster.ca/jfox/Books/Companion/appendix/Appendix-Cox-Regression.pdf"
   , Left 61080
+  )
+, ( "http://software.schmorp.de/pkg/rxvt-unicode.html"
+  , Left 61086
   )
 , ( "http://spacemedicineassociation.org/timeline/1957/28003.pdf"
   , Left 61080
@@ -3261,6 +3315,13 @@
 , ( "http://usgovinfo.about.com/library/weekly/aa031601a.htm"
   , Left 61080
   )
+, ( "http://uweb.cas.usf.edu/~drohrer/pdfs/Cepeda_et_al_2006PsychBull.pdf"
+  , Left 61086
+  )
+, ( "http://uweb.cas.usf.edu/~drohrer/pdfs/Rohrer&Taylor2006ACP.pdf"
+  , Left 61086
+  )
+, ( "http://varianceexplained.org/r/hn-trends/" , Left 61086 )
 , ( "http://vgmdb.net/product/9" , Left 61080 )
 , ( "http://vgmdb.net/search?do=results&id=161863" , Left 61080 )
 , ( "http://vili.lehdonvirta.com/" , Left 61080 )
@@ -3622,6 +3683,9 @@
   , Left 61080
   )
 , ( "http://www-biba.inrialpes.fr/Jaynes/cc18i.pdf" , Left 61080 )
+, ( "http://www-cgi.cs.cmu.edu/afs/cs.cmu.edu/Web/People/harchol/Papers/SODA94-ranking.pdf"
+  , Left 61086
+  )
 , ( "http://www-isl.stanford.edu/~cover/papers/transIT/0413cove.pdf"
   , Left 61080
   )
@@ -4074,6 +4138,9 @@
 , ( "http://www.cl.cam.ac.uk/~sd601/papers/mov.pdf" , Left 61080 )
 , ( "http://www.clevelandfed.org/research/commentary/2012/2012-13.cfm"
   , Left 61080
+  )
+, ( "http://www.cnsspectrums.com/aspx/articledetail.aspx?articleid=2783"
+  , Left 61086
   )
 , ( "http://www.codinghorror.com/blog/archives/000012.html"
   , Left 61080
@@ -5112,6 +5179,9 @@
 , ( "http://www.mickvanwely.nl/de-xtc-bende-van-sinterklaas/"
   , Left 61080
   )
+, ( "http://www.mikedellanoce.com/2012/09/my-first-hacker-news-effect-experience.html"
+  , Left 61086
+  )
 , ( "http://www.mikeonads.com/2008/07/13/using-your-browser-url-history-estimate-gender/"
   , Left 61080
   )
@@ -5573,6 +5643,9 @@
 , ( "http://www.olin.edu" , Left 61080 )
 , ( "http://www.oliverwinery.com/index.cfm?method=storeproducts.showdrilldown&productid=565D8BC6-1CC4-FBB6-23C6-013703DB5D6A"
   , Left 61080
+  )
+, ( "http://www.openp2p.com/pub/a/p2p/2002/12/11/piracy.html"
+  , Left 61086
   )
 , ( "http://www.opensource.org/licenses" , Left 61080 )
 , ( "http://www.openyou.org/2013/06/11/zeo-firmware-and-raw-data-api-on-openyou-github/"
@@ -6948,8 +7021,14 @@
 , ( "http://www.worldpolicy.org/journal/fall2011/innovation-starvation"
   , Left 61080
   )
+, ( "http://www.wsu.edu/~fournier/Teaching/psych592/Readings/Karpicke_et_al_2008.pdf"
+  , Left 61086
+  )
 , ( "http://www.wwltv.com/news/Laundry-List-of-Drugs-at-Uptown-Frat-House-Leads-to-Tulane-Student-Arrests-193450441.html"
   , Left 61080
+  )
+, ( "http://www.yisongyue.com/publications/icml2011_beat_the_mean.pdf"
+  , Left 61086
   )
 , ( "http://www.yorku.ca/mar/Mar%202011_ARP_neural%20bases%20of%20soc%20cog%20and%20story%20comp.pdf"
   , Left 61080
@@ -7027,8 +7106,14 @@
 , ( "http://zlkj.in/survival" , Left 61080 )
 , ( "http://zolly.site88.net/brainforce/index.htm" , Left 61080 )
 , ( "https://5onwnspjvuk7cwvk.tor2web.org/" , Left 61080 )
+, ( "https://6uold.blogspot.com/2008/06/long-list-of-url-shorteners.html"
+  , Left 61086
+  )
 , ( "https://addons.mozilla.org/en-US/firefox/addon/aboutme/"
   , Left 61080
+  )
+, ( "https://addons.mozilla.org/en-US/firefox/addon/evernote-web-clipper/"
+  , Left 61086
   )
 , ( "https://addons.mozilla.org/en-US/firefox/addon/leechblock/"
   , Left 61080
@@ -7036,19 +7121,66 @@
 , ( "https://addons.mozilla.org/en-US/firefox/addon/mozilla-archive-format/"
   , Left 61080
   )
+, ( "https://ai.glossika.com/" , Left 61086 )
+, ( "https://alexvermeer.com/anki-essentials/" , Left 61086 )
 , ( "https://almanac.httparchive.org/en/2019/" , Left 61080 )
+, ( "https://andrewvs.blogs.com/usu/files/the_spacing_effect.pdf"
+  , Left 61086
+  )
+, ( "https://anime.plus/gwern/ratings,anime" , Left 61086 )
 , ( "https://animehistory.wordpress.com/2012/06/11/epitanime-2012-ryukishi07s-conference-transcriptions/"
   , Left 61080
+  )
+, ( "https://ansuz.sooke.bc.ca/entry/23" , Left 61086 )
+, ( "https://anymemo.org/" , Left 61086 )
+, ( "https://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.html&r=1&f=G&l=50&s1=%2220070073681%22.PGNR.&OS=DN/20070073681&RS=DN/20070073681"
+  , Left 61086
+  )
+, ( "https://apps.apple.com/us/app/ankimobile-flashcards/id373493387"
+  , Left 61086
+  )
+, ( "https://apps.dtic.mil/dtic/tr/fulltext/u2/a507369.pdf"
+  , Left 61086
+  )
+, ( "https://arbtt.nomeata.de/" , Left 61086 )
+, ( "https://arbtt.nomeata.de/doc/users_guide/effective-use.html"
+  , Left 61086
   )
 , ( "https://archive.computerhistory.org/resources/access/text/2019/03/102789075-05-01-acc.pdf#page=9"
   , Left 61080
   )
+, ( "https://archive.nytimes.com/bits.blogs.nytimes.com/2012/06/07/good-night-moon-good-night-little-bird/"
+  , Left 61086
+  )
+, ( "https://arxiv.org/abs/0707.1051" , Left 61086 )
+, ( "https://arxiv.org/abs/0910.1191" , Left 61086 )
+, ( "https://arxiv.org/abs/1109.1746" , Left 61086 )
+, ( "https://arxiv.org/abs/1112.5745" , Left 61086 )
+, ( "https://arxiv.org/abs/1312.5602#deepmind" , Left 61086 )
+, ( "https://arxiv.org/abs/1410.1490" , Left 61086 )
+, ( "https://arxiv.org/abs/1502.05556" , Left 61086 )
+, ( "https://arxiv.org/abs/1509.02971#deepmind" , Left 61086 )
+, ( "https://arxiv.org/abs/1512.05616" , Left 61086 )
+, ( "https://arxiv.org/abs/1706.03741#openai" , Left 61086 )
+, ( "https://arxiv.org/abs/1707.01204" , Left 61086 )
 , ( "https://arxiv.org/abs/1707.02968#google" , Left 61080 )
+, ( "https://arxiv.org/abs/1707.09971" , Left 61086 )
+, ( "https://arxiv.org/abs/1708.04636" , Left 61086 )
+, ( "https://arxiv.org/abs/1709.06390" , Left 61086 )
+, ( "https://arxiv.org/abs/1709.06683" , Left 61086 )
 , ( "https://arxiv.org/abs/1801.01290" , Left 61080 )
 , ( "https://arxiv.org/abs/1802.03426" , Left 61080 )
+, ( "https://arxiv.org/abs/1802.06942" , Left 61086 )
 , ( "https://arxiv.org/abs/1805.00932#facebook" , Left 61080 )
+, ( "https://arxiv.org/abs/1805.08718" , Left 61086 )
+, ( "https://arxiv.org/abs/1808.10250" , Left 61086 )
 , ( "https://arxiv.org/abs/1809.11096#deepmind" , Left 61080 )
+, ( "https://arxiv.org/abs/1812.04948#nvidia" , Left 61086 )
+, ( "https://arxiv.org/abs/1903.11137" , Left 61086 )
+, ( "https://arxiv.org/abs/1905.09773" , Left 61086 )
+, ( "https://arxiv.org/abs/2001.04642" , Left 61086 )
 , ( "https://arxiv.org/abs/2005.14165#openai" , Left 61080 )
+, ( "https://arxiv.org/abs/2007.09560" , Left 61086 )
 , ( "https://arxiv.org/abs/2012.00413" , Left 61080 )
 , ( "https://arxiv.org/abs/2106.11297" , Left 61080 )
 , ( "https://arxiv.org/abs/2212.09741" , Left 61080 )
@@ -7058,10 +7190,24 @@
 , ( "https://arxiv.org/pdf/1809.11096#page=8&org=deepmind"
   , Left 61080
   )
+, ( "https://ascii.textfiles.com/archives/3029" , Left 61086 )
 , ( "https://asktog.com/atc/the-third-user/" , Left 61080 )
+, ( "https://augmentingcognition.com/ltm.html" , Left 61086 )
+, ( "https://aur.archlinux.org/packages/anki20-bin" , Left 61086 )
+, ( "https://aur.archlinux.org/packages/mnemosyne" , Left 61086 )
 , ( "https://baike.baidu.com/item/%E5%9B%BD%E9%99%85%E9%87%91%E8%9E%8D%E4%BD%93%E7%B3%BB"
   , Left 59618
   )
+, ( "https://baremetrics.com/blog/hacker-news-1500-recurring-revenue"
+  , Left 61086
+  )
+, ( "https://bentilly.blogspot.com/2009/09/teaching-linear-algebra.html"
+  , Left 61086
+  )
+, ( "https://bentilly.blogspot.com/2012/10/my-sons-flashcard-routine.html"
+  , Left 61086
+  )
+, ( "https://bitbucket.org/djhshih/argparser" , Left 61086 )
 , ( "https://bitcointalk.org/index.php?action=printpage;topic=91661.0%20%22Putting%20your%20money%20where%20Pirate's%20mouth%20is%22"
   , Left 61080
   )
@@ -7084,6 +7230,33 @@
   , Left 61080
   )
 , ( "https://blockonomi.com/sound-money-bitcoin/" , Left 59618 )
+, ( "https://blog.datadive.net/which-topics-get-the-upvote-on-hacker-news/"
+  , Left 61086
+  )
+, ( "https://blog.developer.atlassian.com/golang-flashcards-and-spaced-repetition/"
+  , Left 61086
+  )
+, ( "https://blog.jeremiahgrossman.com/2006/08/i-know-where-youve-been.html"
+  , Left 61086
+  )
+, ( "https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/"
+  , Left 61086
+  )
+, ( "https://blog.rjmetrics.com/2012/10/17/surprising-hacker-news-data-analysis/"
+  , Left 61086
+  )
+, ( "https://blog.rjmetrics.com/2012/10/24/how-to-get-on-the-front-page-of-hacker-news/"
+  , Left 61086
+  )
+, ( "https://blog.waleedkhan.name/smash-training-retrospective/"
+  , Left 61086
+  )
+, ( "https://blog.wearewizards.io/the-hacker-news-effect-examined"
+  , Left 61086
+  )
+, ( "https://blog.youtube/news-and-events/five-stars-dominate-ratings/"
+  , Left 61086
+  )
 , ( "https://book.douban.com/subject/1164124/" , Left 59618 )
 , ( "https://book.douban.com/subject/20272111/" , Left 59618 )
 , ( "https://book.douban.com/subject/26772766/" , Left 59618 )
@@ -7095,14 +7268,85 @@
 , ( "https://book.douban.com/subject/35269253/" , Left 59618 )
 , ( "https://book.douban.com/subject/35375504/" , Left 59618 )
 , ( "https://book.webtypography.net/" , Left 61080 )
+, ( "https://brooksreview.net/2014/01/i-see-you/" , Left 61086 )
 , ( "https://buttondown.com/hillelwayne/archive/tag-systems/"
   , Left 61080
+  )
+, ( "https://cadmo.ethz.ch/education/lectures/HS18/SAADS/papers/computing_noisy_information.pdf"
+  , Left 61086
+  )
+, ( "https://catalog.caida.org/details/paper/2005_fingerprinting/"
+  , Left 61086
+  )
+, ( "https://cbmm.mit.edu/sites/default/files/publications/CBMM%20Memo%20068-On%20Forgetting%20-%20June%2018th%202017%20v2.pdf"
+  , Left 61086
+  )
+, ( "https://changelog.complete.org/archives/10417-the-pc-internet-revolution-in-rural-america"
+  , Left 61086
+  )
+, ( "https://chrislakin.blog/p/spaced-repetition-for-teaching-two"
+  , Left 61086
   )
 , ( "https://cit.kuleuven.be/smart/infrastructure/documents/cam200.pdf"
   , Left 61080
   )
+, ( "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.155.820&rep=rep1&type=pdf"
+  , Left 61086
+  )
+, ( "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.200.8846&rep=rep1&type=pdf"
+  , Left 61086
+  )
+, ( "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.437.20&rep=rep1&type=pdf"
+  , Left 61086
+  )
+, ( "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.556.6124&rep=rep1&type=pdf"
+  , Left 61086
+  )
+, ( "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.56.6901&rep=rep1&type=pdf"
+  , Left 61086
+  )
+, ( "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.574.5400&rep=rep1&type=pdf"
+  , Left 61086
+  )
+, ( "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.58.2647&rep=rep1&type=pdf"
+  , Left 61086
+  )
+, ( "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.70.4331&rep=rep1&type=pdf"
+  , Left 61086
+  )
+, ( "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.858.5753&rep=rep1&type=pdf"
+  , Left 61086
+  )
+, ( "https://code.google.com/archive/p/graded-reader"
+  , Left 61086
+  )
 , ( "https://code.google.com/speed/articles/web-metrics.html"
   , Left 61080
+  )
+, ( "https://coveryourtracks.eff.org/static/browser-uniqueness.pdf"
+  , Left 61086
+  )
+, ( "https://creativecommons.org/public-domain/cc0/" , Left 61086 )
+, ( "https://cronokirby.com/posts/2021/02/spaced-repetition-for-mathematics/"
+  , Left 61086
+  )
+, ( "https://crypto.stanford.edu/gyrophone/files/gyromic.pdf"
+  , Left 61086
+  )
+, ( "https://crypto.stanford.edu/~dabo/pubs/papers/webtiming.pdf"
+  , Left 61086
+  )
+, ( "https://crypto.stanford.edu/~pgolle/papers/commute.pdf"
+  , Left 61086
+  )
+, ( "https://cs.brown.edu/research/pubs/theses/masters/2007/schudy.pdf"
+  , Left 61086
+  )
+, ( "https://cs.stanford.edu/people/karpathy/hn_analysis.html"
+  , Left 61086
+  )
+, ( "https://cs229.stanford.edu/proj2016/report/GengYuanWang-PredictingPopularityOfPostsOnHackerNews-report.pdf"
+  , Left 61086
   )
 , ( "https://darenome.wordpress.com/2009/07/23/ryukishi07-interview/"
   , Left 61080
@@ -7110,8 +7354,43 @@
 , ( "https://darenome.wordpress.com/2009/11/05/ryukishi07-interview-2/"
   , Left 61080
   )
+, ( "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=US"
+  , Left 61086
+  )
+, ( "https://datacolada.org/72" , Left 61086 )
+, ( "https://dataorigami.net/blogs/multi-armed-bandits"
+  , Left 61086
+  )
+, ( "https://dataprivacylab.org/dataprivacy/projects/genetic/dna1.html"
+  , Left 61086
+  )
+, ( "https://dataprivacylab.org/dataprivacy/projects/genetic/dna2.html"
+  , Left 61086
+  )
+, ( "https://dataprivacylab.org/dataprivacy/projects/genetic/dna3.html"
+  , Left 61086
+  )
+, ( "https://dataprivacylab.org/dataprivacy/projects/law/law1.html"
+  , Left 61086
+  )
+, ( "https://dataprivacylab.org/projects/identifiability/pharma1.html"
+  , Left 61086
+  )
+, ( "https://davidgerard.co.uk/" , Left 61086 )
+, ( "https://deathnote.fandom.com/wiki/Rules_of_the_Death_Note"
+  , Left 61086
+  )
+, ( "https://deusexvita.medium.com/one-year-anki-update-2615b113f7c2"
+  , Left 61086
+  )
 , ( "https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments"
   , Left 61080
+  )
+, ( "https://dfan.org/blog/2013/07/07/mnemosyne-part-3/"
+  , Left 61086
+  )
+, ( "https://digitalcommons.lib.uconn.edu/dissertations/AAI3464319/"
+  , Left 61086
   )
 , ( "https://dl.dropboxusercontent.com/u/182368464/1963-moulton.pdf"
   , Left 61080
@@ -7128,6 +7407,7 @@
 , ( "https://dl.dropboxusercontent.com/u/182368464/2013-couzinfrankel-mice.pdf"
   , Left 61080
   )
+, ( "https://dune.fandom.com/wiki/Distrans" , Left 61086 )
 , ( "https://econstudentlog.wordpress.com/2011/12/18/data-on-danish-immigrants-2011-1/"
   , Left 61080
   )
@@ -7137,6 +7417,12 @@
   )
 , ( "https://edwardtufte.github.io/tufte-css/#sidenotes"
   , Left 61080
+  )
+, ( "https://empiria.io/blog/remembering-r-with-spaced-repetition/"
+  , Left 61086
+  )
+, ( "https://en.avion.io/blog/?_escaped_fragment_=/post/the-story-of-our-hackernews-submission#!/post/the-story-of-our-hackernews-submission"
+  , Left 61086
   )
 , ( "https://en.bitcoin.it/wiki/Alpaca" , Left 61080 )
 , ( "https://en.bitcoin.it/wiki/Anonymity" , Left 61080 )
@@ -7163,9 +7449,14 @@
 , ( "https://en.bitcoin.it/wiki/Wallet_encryption" , Left 61080 )
 , ( "https://en.bitcoin.it/wiki/Witcoin" , Left 61080 )
 , ( "https://en.mention.net/" , Left 61080 )
+, ( "https://en.wikibooks.org/wiki/User:Gwern" , Left 61086 )
+, ( "https://en.wikiquote.org/wiki/Tao_Te_Ching" , Left 61086 )
 , ( "https://en.wikisource.org/wiki/Cratylus" , Left 61080 )
 , ( "https://en.wikisource.org/wiki/Discourse_on_the_Method/Part_2"
   , Left 61080
+  )
+, ( "https://en.wikisource.org/wiki/Memory:_A_Contribution_to_Experimental_Psychology"
+  , Left 61086
   )
 , ( "https://en.wikisource.org/wiki/The_Notebooks_of_Leonardo_Da_Vinci/XIX#Against_alchemists_.281207-1208.29"
   , Left 61080
@@ -7176,8 +7467,21 @@
 , ( "https://encrypted.google.com/books?id=BjAOAAAAYAAJ"
   , Left 61080
   )
+, ( "https://eprint.iacr.org/2020/708.pdf" , Left 61086 )
+, ( "https://escholarship.org/content/qt0279q9m1/qt0279q9m1.pdf"
+  , Left 61086
+  )
+, ( "https://espace.library.uq.edu.au/view/UQ:281052"
+  , Left 61086
+  )
 , ( "https://every.to/napkin-math/6-new-theories-about-ai"
   , Left 61080
+  )
+, ( "https://files.eric.ed.gov/fulltext/ED039222.pdf"
+  , Left 61086
+  )
+, ( "https://files.eric.ed.gov/fulltext/ED536925.pdf"
+  , Left 61086
   )
 , ( "https://firecracker-microvm.github.io/" , Left 61080 )
 , ( "https://forum.quantifiedself.com/thread-zeo-shutting-down-export-your-data?pid=3373#pid3373"
@@ -7186,8 +7490,23 @@
 , ( "https://forum.quantifiedself.com/thread-zeo-shutting-down-export-your-data?pid=3412#pid3412"
   , Left 61080
   )
+, ( "https://frank.itlab.us/forgetting/mtsu_forgetting/#II.%20Decay%20Theory"
+  , Left 61086
+  )
+, ( "https://freedom-to-tinker.com/2011/05/24/you-might-also-privacy-risks-collaborative-filtering/"
+  , Left 61086
+  )
 , ( "https://fringethoughts.wordpress.com/2012/03/25/iron-lawlapalooza/"
   , Left 61080
+  )
+, ( "https://genedan.com/no-126-four-years-of-spaced-repetition/"
+  , Left 61086
+  )
+, ( "https://getd.libs.uga.edu/pdfs/sutherland_pierre_201212_ma.pdf"
+  , Left 61086
+  )
+, ( "https://gigazine.net/news/20190812-death-note-anonymity-entropy/"
+  , Left 61086
   )
 , ( "https://gist.github.com/1005927/4836d6231566bebd766966c7689c4094c1296700"
   , Left 61080
@@ -7197,23 +7516,34 @@
 , ( "https://github.com/ForumMagnum/ForumMagnum/issues/6713"
   , Left 61080
   )
+, ( "https://github.com/HackerNews/API" , Left 61086 )
 , ( "https://github.com/KeygraphHQ/shannon" , Left 61080 )
 , ( "https://github.com/MaartenGr/Concept" , Left 61080 )
+, ( "https://github.com/NVlabs/stylegan" , Left 61086 )
 , ( "https://github.com/Significant-Gravitas/AutoGPT"
   , Left 61080
   )
 , ( "https://github.com/adobe-fonts/source-serif/issues/46"
   , Left 61080
   )
+, ( "https://github.com/amperser/proselint/" , Left 61086 )
 , ( "https://github.com/bitcoin/bitcoin" , Left 61080 )
 , ( "https://github.com/danmaz74/ABalytics" , Left 61080 )
+, ( "https://github.com/darabos/high-five-trading" , Left 61086 )
 , ( "https://github.com/edwardtufte/tufte-css/issues/93#issuecomment-670695382"
   , Left 61080
   )
 , ( "https://github.com/elitheeli/stupid-machines#readme"
   , Left 61080
   )
+, ( "https://github.com/fraction/node-hacker-news-api/issues/11"
+  , Left 61086
+  )
 , ( "https://github.com/ggerganov/llama.cpp" , Left 61080 )
+, ( "https://github.com/gildas-lormeau/SingleFile/" , Left 61086 )
+, ( "https://github.com/gorhill/uBlock" , Left 61086 )
+, ( "https://github.com/gwern" , Left 61086 )
+, ( "https://github.com/hiAndrewQuinn/resorter" , Left 61086 )
 , ( "https://github.com/jaspervdj/Hakyll/" , Left 61080 )
 , ( "https://github.com/jbangert/trapcc#readme" , Left 61080 )
 , ( "https://github.com/jgm/gitit" , Left 61080 )
@@ -7222,10 +7552,15 @@
   )
 , ( "https://github.com/jgm/skylighting" , Left 61080 )
 , ( "https://github.com/jingkaihe/matchlock" , Left 61080 )
+, ( "https://github.com/kpreid/mathquiz/" , Left 61086 )
 , ( "https://github.com/kragen/knuth-interview-2006" , Left 61080 )
 , ( "https://github.com/linkchecker/linkchecker" , Left 61080 )
 , ( "https://github.com/localgpt-app/localgpt" , Left 61080 )
+, ( "https://github.com/max-niederman/fullrank" , Left 61086 )
 , ( "https://github.com/microsoft/litebox" , Left 61080 )
+, ( "https://github.com/nxskok/btstan/blob/master/R/btstan.R"
+  , Left 61086
+  )
 , ( "https://github.com/obra/superpowers" , Left 61080 )
 , ( "https://github.com/ocrmypdf/OCRmyPDF" , Left 61080 )
 , ( "https://github.com/openai/skills" , Left 61080 )
@@ -7235,23 +7570,44 @@
 , ( "https://github.com/raphink/geneve_1564/releases/download/2015-07-08_01/geneve_1564.pdf"
   , Left 61080
   )
+, ( "https://github.com/robert7/nixnote2" , Left 61086 )
 , ( "https://github.com/theZiz/aha" , Left 61080 )
 , ( "https://github.com/vanceza/export-chrome-bookmarks"
   , Left 61080
   )
 , ( "https://github.com/vanceza/rip-chrome-history" , Left 61080 )
+, ( "https://gkosev.blogspot.com/2012/08/fixing-hacker-news-mathematical-approach.html"
+  , Left 61086
+  )
+, ( "https://globalguerrillas.typepad.com/" , Left 61086 )
+, ( "https://googlesystem.blogspot.com/2013/07/google-alerts-drops-rss-feeds.html"
+  , Left 61086
+  )
 , ( "https://gowers.wordpress.com/2012/06/08/how-should-mathematics-be-taught-to-non-mathematicians/"
   , Left 61080
   )
 , ( "https://graydon2.dreamwidth.org/193447.html" , Left 61080 )
 , ( "https://gvisor.dev/" , Left 61080 )
+, ( "https://habr.com/ru/articles/516190/" , Left 61086 )
+, ( "https://hackernewslater.com/posts/post-launch-front-page-hn/"
+  , Left 61086
+  )
+, ( "https://hal.science/hal-01972948/document#pdf" , Left 61086 )
 , ( "https://handleshaus.wordpress.com/2013/12/17/review-of-the-rise-of-china-vs-the-logic-of-strategy-by-edward-luttwak/"
   , Left 61080
   )
 , ( "https://haskellforall.com/2026/02/beyond-agentic-coding"
   , Left 61080
   )
+, ( "https://home.cs.colorado.edu/~mozer/Research/Selected%20Publications/reprints/Cepedaetal2009.pdf"
+  , Left 61086
+  )
+, ( "https://hosting.astro.cornell.edu/~loredo/bayes/bae.pdf"
+  , Left 61086
+  )
 , ( "https://how-i-experience-web-today.com/" , Left 61080 )
+, ( "https://hpmor.com/" , Left 61086 )
+, ( "https://humanprogress.org/" , Left 61086 )
 , ( "https://ia801904.us.archive.org/18/items/gov.uscourts.wawd.196180/gov.uscourts.wawd.196180.docket.html"
   , Left 61080
   )
@@ -7264,7 +7620,20 @@
 , ( "https://ignorethecode.net/blog/2010/04/20/footnotes/"
   , Left 61080
   )
+, ( "https://inessential.com/2011/03/16/a_plea_for_baked_weblogs.html"
+  , Left 61086
+  )
 , ( "https://infovis-wiki.net/wiki/Semantic_Zoom" , Left 61080 )
+, ( "https://inria.hal.science/hal-01079369/document"
+  , Left 61086
+  )
+, ( "https://intelligence.org/files/IE-EI.pdf" , Left 61086 )
+, ( "https://interviews.slashdot.org/story/11/09/06/1458254/Kevin-Kelly-Answers-Your-Questions"
+  , Left 61086
+  )
+, ( "https://intoli.com/blog/hacker-news-title-tool/"
+  , Left 61086
+  )
 , ( "https://invertornot.com/" , Left 61080 )
 , ( "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=787822673"
   , Left 61080
@@ -7273,6 +7642,9 @@
 , ( "https://itunes.apple.com/us/app/double-dynamo-matching-rhythm/id703947966"
   , Left 61080
   )
+, ( "https://jacobin.com/2015/05/slow-food-artisanal-natural-preservatives"
+  , Left 61086
+  )
 , ( "https://jaspervdj.be/hakyll/" , Left 61080 )
 , ( "https://jaspervdj.be/hakyll/reference/Hakyll-Web-Redirect.html"
   , Left 61080
@@ -7280,11 +7652,77 @@
 , ( "https://jaspervdj.be/hakyll/reference/Hakyll-Web-Tags.html"
   , Left 61080
   )
+, ( "https://jblevins.org/projects/markdown-mode/" , Left 61086 )
+, ( "https://jeffhuang.com/papers/HaloLearning_CHI13.pdf"
+  , Left 61086
+  )
+, ( "https://jenni.uchicago.edu/Spencer_Conference/Representative%20Papers/Richard%20et%20al,%202003.pdf"
+  , Left 61086
+  )
 , ( "https://joa.sh/posts/2015-09-14-prerender-mathjax.html"
   , Left 61080
   )
+, ( "https://journals.plos.org/plosmedicine/article/info%3Adoi%2F10.1371%2Fjournal.pmed.0040297"
+  , Left 61086
+  )
+, ( "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000097"
+  , Left 61086
+  )
+, ( "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0033079"
+  , Left 61086
+  )
+, ( "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0120644"
+  , Left 61086
+  )
+, ( "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0214369"
+  , Left 61086
+  )
+, ( "https://jtauber.com/blog/2004/11/26/programmed_vocabulary_learning_as_a_travelling_salesman_problem/"
+  , Left 61086
+  )
+, ( "https://jtauber.com/blog/2006/05/05/teaching_new_testament_greek/"
+  , Left 61086
+  )
+, ( "https://jtauber.com/blog/2008/02/10/a_new_kind_of_graded_reader/"
+  , Left 61086
+  )
+, ( "https://kpreid.github.io/mathquiz/mathquiz.html"
+  , Left 61086
+  )
 , ( "https://langchain.com/" , Left 61080 )
+, ( "https://laplab.ucsd.edu/articles/CarpenterPashlerCepeda2009.pdf"
+  , Left 61086
+  )
+, ( "https://laplab.ucsd.edu/articles/Carpenter_etal_EPR2012.pdf"
+  , Left 61086
+  )
+, ( "https://laplab.ucsd.edu/articles/McDaniel.Fadler.Pashler2013.pdf"
+  , Left 61086
+  )
+, ( "https://lastpass.com/lastpassffx/" , Left 61086 )
+, ( "https://latanyasweeney.org/cv.html#clinicaltrial"
+  , Left 61086
+  )
+, ( "https://latanyasweeney.org/cv.html#iterativeprofiler"
+  , Left 61086
+  )
+, ( "https://latanyasweeney.org/cv.html#survey" , Left 61086 )
+, ( "https://latanyasweeney.org/work/identifiability.html"
+  , Left 61086
+  )
+, ( "https://link.springer.com/content/pdf/10.3758%2FBF03197590.pdf"
+  , Left 61086
+  )
+, ( "https://lobste.rs/s/9wfpsd/my_ordinary_life_improvements_since"
+  , Left 61086
+  )
+, ( "https://luminous.elcenia.com/" , Left 61086 )
+, ( "https://luminous.elcenia.com/all2.shtml" , Left 61086 )
+, ( "https://lwn.net/Articles/380983/" , Left 61086 )
 , ( "https://maggieappleton.com/bidirectionals" , Left 61080 )
+, ( "https://map-testing.com/performance-toilets-testing/map-contributors/"
+  , Left 61086
+  )
 , ( "https://marginalrevolution.com/marginalrevolution/2020/12/what-is-the-meta-rational-thing-to-do-here.html#blog-comment-160189881"
   , Left 61080
   )
@@ -7309,13 +7747,30 @@
 , ( "https://market.android.com/details?id=quazar.BrainNBack"
   , Left 61080
   )
+, ( "https://mason.gmu.edu/~rhanson/uploads.html" , Left 61086 )
+, ( "https://math.bu.edu/individual/mg/research/glicko.pdf"
+  , Left 61086
+  )
+, ( "https://medicalxpress.com/news/2012-03-neurobiology-superiority-spaced-massed.html"
+  , Left 61086
+  )
 , ( "https://medium.com/galaxy-digital-research/on-sound-money-afc0619697b3"
   , Left 59618
+  )
+, ( "https://medium.com/hacking-and-gonzo/how-hacker-news-ranking-algorithm-works-1d9b0cf2c08d"
+  , Left 61086
   )
 , ( "https://medium.com/our-new-nature/the-case-for-sound-currency-b52da8148131"
   , Left 59618
   )
+, ( "https://medium.com/routific/what-61-points-on-hn-did-for-my-startup-81bd75a39425"
+  , Left 61086
+  )
 , ( "https://memesbytom.com/" , Left 59618 )
+, ( "https://mention.com/en/" , Left 61086 )
+, ( "https://metamarkets.com/2011/hacking-hacker-news-headlines/"
+  , Left 61086
+  )
 , ( "https://meteuphoric.wordpress.com/2010/08/08/on-the-hostility-of-wives/"
   , Left 61080
   )
@@ -7328,18 +7783,48 @@
 , ( "https://meteuphoric.wordpress.com/2013/12/25/discussions-for-information-processing/"
   , Left 61080
   )
+, ( "https://michaelnotebook.com/df/index.html" , Left 61086 )
 , ( "https://mikepower.pressfolios.com/" , Left 61080 )
+, ( "https://millercenter.org/the-presidency/presidential-speeches/march-23-1962-address-university-california-berkeley#dp-expandable-text"
+  , Left 61086
+  )
+, ( "https://minimaxir.com/2014/02/hacking-hacker-news/"
+  , Left 61086
+  )
+, ( "https://minimaxir.com/2014/10/hn-comments-about-comments/"
+  , Left 61086
+  )
 , ( "https://mondo.su.se/access/content/group/87a78313-bf21-438a-842a-a4d680ccf6f9/Dahlin%20artikel%202010.pdf"
   , Left 61080
   )
 , ( "https://mottie.github.io/tablesorter/docs/" , Left 61080 )
+, ( "https://moz.com/blog/google-alerts-vs-mention-vs-talkwalker"
+  , Left 61086
+  )
+, ( "https://moz.com/google-algorithm-change#2011" , Left 61086 )
 , ( "https://mtgox.com/" , Left 61080 )
+, ( "https://murdoch.is/papers/usenix08clockskew.pdf"
+  , Left 61086
+  )
 , ( "https://nakamoto.com/a-brief-history-of-money/" , Left 59618 )
+, ( "https://nautil.us/how-i-rewired-my-brain-to-become-fluent-in-math-rd-235086/"
+  , Left 61086
+  )
+, ( "https://news.mit.edu/2014/algorithm-recovers-speech-from-vibrations-0804"
+  , Left 61086
+  )
 , ( "https://news.ycombinator.com/item?id=1251164" , Left 61080 )
+, ( "https://news.ycombinator.com/item?id=13151790" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=17110385" , Left 61086 )
 , ( "https://news.ycombinator.com/item?id=1781013" , Left 61080 )
+, ( "https://news.ycombinator.com/item?id=20617325" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=22441865" , Left 61086 )
 , ( "https://news.ycombinator.com/item?id=2369788" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=2462683" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=2479833" , Left 61080 )
+, ( "https://news.ycombinator.com/item?id=24857437" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=26826585" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=28155072" , Left 61086 )
 , ( "https://news.ycombinator.com/item?id=2880427" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=2934879" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=30928081" , Left 61080 )
@@ -7350,7 +7835,13 @@
 , ( "https://news.ycombinator.com/item?id=34977741" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=3592017" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=3634320" , Left 61080 )
+, ( "https://news.ycombinator.com/item?id=38689459" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=4266115" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=43765332" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=43765862" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=46839743" , Left 61086 )
 , ( "https://news.ycombinator.com/item?id=5010846" , Left 61080 )
+, ( "https://news.ycombinator.com/item?id=5015183" , Left 61086 )
 , ( "https://news.ycombinator.com/item?id=5242268" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=5242480" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=5242577" , Left 61080 )
@@ -7365,14 +7856,29 @@
 , ( "https://news.ycombinator.com/item?id=5671924" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=609983" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=6335784" , Left 61080 )
+, ( "https://news.ycombinator.com/item?id=6445266" , Left 61086 )
 , ( "https://news.ycombinator.com/item?id=6445270" , Left 61080 )
+, ( "https://news.ycombinator.com/item?id=6461936" , Left 61086 )
 , ( "https://news.ycombinator.com/item?id=6465320" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=6476554" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=6495358" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=6504331" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=6952705" , Left 61080 )
+, ( "https://news.ycombinator.com/item?id=7427542" , Left 61086 )
 , ( "https://news.ycombinator.com/item?id=7521462" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=7539390" , Left 61080 )
+, ( "https://news.ycombinator.com/item?id=8183220" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=8402859" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=8790134" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=8952341" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=9332889" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=9333611" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=9336759" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=9553494" , Left 61086 )
+, ( "https://news.ycombinator.com/submitted?id=gwern"
+  , Left 61086
+  )
+, ( "https://news.ycombinator.com/threads?id=gwern" , Left 61086 )
 , ( "https://newshacker.me/story?id=46885841" , Left 61080 )
 , ( "https://newshacker.me/story?id=46889710" , Left 61080 )
 , ( "https://newshacker.me/story?id=46924264" , Left 61080 )
@@ -7391,10 +7897,20 @@
 , ( "https://newshacker.me/story?id=46943568" , Left 61080 )
 , ( "https://newshacker.me/story?id=46943752" , Left 61080 )
 , ( "https://newshacker.me/story?id=46944245" , Left 61080 )
+, ( "https://noscript.net/" , Left 61086 )
 , ( "https://notes.andymatuschak.org/zXDPrYcxUSZbF5M8vM5Y1U9"
   , Left 61080
   )
+, ( "https://oli.cmu.edu/courses/probability-statistics-open-free/"
+  , Left 61086
+  )
 , ( "https://ollama.com/" , Left 61080 )
+, ( "https://omega0.xyz/omega8008/JaynesBookPdf.html"
+  , Left 61086
+  )
+, ( "https://online.ucpress.edu/collabra/article/7/1/18731/115925/Predicting-Mental-Health-From-Followed-Accounts-on"
+  , Left 61086
+  )
 , ( "https://onlinelibrarystatic.wiley.com/store/10.1111/apa.12443/asset/apa12443.pdf?v=1&t=hq74scgp&s=c39d18112cf783855d068beb284cd7a8ef023e0f"
   , Left 61080
   )
@@ -7404,16 +7920,67 @@
 , ( "https://openai.com/blog/chatgpt/" , Left 61080 )
 , ( "https://openai.com/blog/openai-api/" , Left 61080 )
 , ( "https://openai.com/index/clip/" , Left 61080 )
+, ( "https://openai.com/index/dall-e/" , Left 61086 )
 , ( "https://osf.io/preprints/psyarxiv/dnr9s/" , Left 61080 )
+, ( "https://osf.io/preprints/psyarxiv/ks4vd/" , Left 61086 )
 , ( "https://panopticlick.eff.org/" , Left 61080 )
 , ( "https://panopticlick.eff.org/browser-uniqueness.pdf"
   , Left 61080
+  )
+, ( "https://patents.google.com/patent/US20150124107"
+  , Left 61086
   )
 , ( "https://pay.reddit.com/r/SheepMarketplace/comments/1o6wqq/everyones_opinion_on_smp_as_of_yet/ccplp3e"
   , Left 61080
   )
 , ( "https://pay.reddit.com/r/onions/comments/1yev3e/introducing_darknet_nation/"
   , Left 61080
+  )
+, ( "https://pcl.sitehost.iu.edu/rgoldsto/interrelated/interrelated.html"
+  , Left 61086
+  )
+, ( "https://pdfs.semanticscholar.org/0eb4/8078fdc906f368d22f324e0520e4ee4f9c08.pdf"
+  , Left 61086
+  )
+, ( "https://pdfs.semanticscholar.org/45c2/7c08fbb43f8728e69a7447366d4a4f74e088.pdf"
+  , Left 61086
+  )
+, ( "https://pdfs.semanticscholar.org/6698/bf91c9333faa0d333a800254b8063230d4f4.pdf"
+  , Left 61086
+  )
+, ( "https://pdfs.semanticscholar.org/7521/c9adbe66cb2e777f37b6b00e97f5f95633c2.pdf"
+  , Left 61086
+  )
+, ( "https://pdfs.semanticscholar.org/77fd/0cf03de8a6c4f56c5decc7c47ebe69cf98c1.pdf"
+  , Left 61086
+  )
+, ( "https://pdfs.semanticscholar.org/7e0c/1bb80cbc332f07bda26a75a163a9cf76d591.pdf"
+  , Left 61086
+  )
+, ( "https://pdfs.semanticscholar.org/9731/c11be2ef8183dd974d79ef3ad1236f33e342.pdf"
+  , Left 61086
+  )
+, ( "https://pdfs.semanticscholar.org/ae93/529e8b9b1770593fae83f86803c6a7b529ea.pdf"
+  , Left 61086
+  )
+, ( "https://pdfs.semanticscholar.org/be1a/70be5a6f990cd86804ccc1be29331556ddfc.pdf"
+  , Left 61086
+  )
+, ( "https://pdfs.semanticscholar.org/c747/336e77ce39f7f5cdbd937684a7f564e9e194.pdf"
+  , Left 61086
+  )
+, ( "https://pdfs.semanticscholar.org/d0a7/f06ed267f3193daab1175a65abb7a067bef4.pdf"
+  , Left 61086
+  )
+, ( "https://pdfs.semanticscholar.org/f2b5/aed794e5d164065a184207f2663620b96ba3.pdf"
+  , Left 61086
+  )
+, ( "https://people.csail.mit.edu/andyd/rec_method.pdf"
+  , Left 61086
+  )
+, ( "https://people.csail.mit.edu/mrub/VisualMic/" , Left 61086 )
+, ( "https://people.tamu.edu/~stevesmith/SmithMemory/SmithRothkopf1984.pdf"
+  , Left 61086
   )
 , ( "https://people.well.com/user/doctorow/metacrap.htm"
   , Left 61080
@@ -7428,17 +7995,56 @@
 , ( "https://play.google.com/store/apps/details?id=com.bodhi.brainturk"
   , Left 61080
   )
+, ( "https://play.google.com/store/apps/details?id=com.ichi2.anki"
+  , Left 61086
+  )
+, ( "https://play.google.com/store/apps/details?id=org.liberty.android.fantastischmemo"
+  , Left 61086
+  )
 , ( "https://pointersgonewild.com/2019/11/02/they-might-never-tell-you-its-broken/"
   , Left 61080
   )
+, ( "https://popcon.ubuntu.com/universe/by_inst" , Left 61086 )
+, ( "https://popcon.ubuntu.com/unknown/by_inst" , Left 61086 )
 , ( "https://portal.maine.gov/marriage/archdev.marriage_archive.search_form"
   , Left 61080
+  )
+, ( "https://porter.io/blog/hackernews-cheaters-catch-me-if-you-can/"
+  , Left 61086
   )
 , ( "https://practicaltypography.com/" , Left 61080 )
 , ( "https://practicaltypography.com/alternate-figures.html#oldstyle-figures"
   , Left 61080
   )
+, ( "https://predictionbook.com/predictions/16142" , Left 61086 )
+, ( "https://predictionbook.com/predictions/1832" , Left 61086 )
+, ( "https://predictionbook.com/predictions/1833" , Left 61086 )
+, ( "https://predictionbook.com/predictions/1951" , Left 61086 )
+, ( "https://predictionbook.com/users/gwern" , Left 61086 )
+, ( "https://proceedings.neurips.cc/paper/2015/file/7eacb532570ff6858afd2723755ff790-Paper.pdf"
+  , Left 61086
+  )
+, ( "https://ptotrading.blogspot.com/2014/11/a-message-to-all-non-daytraders-and.html"
+  , Left 61086
+  )
 , ( "https://publicdomainreview.org/" , Left 61080 )
+, ( "https://pyropus.ca./software/getmail/" , Left 61086 )
+, ( "https://qualitysafety.bmj.com/content/21/10/819.abstract"
+  , Left 61086
+  )
+, ( "https://quantifiedself.com/blog/spaced-repetition-and-learning/"
+  , Left 61086
+  )
+, ( "https://quoteinvestigator.com/2015/09/18/typing/"
+  , Left 61086
+  )
+, ( "https://qwantz.com/index.php?comic=353" , Left 61086 )
+, ( "https://qwantz.com/index.php?comic=354" , Left 61086 )
+, ( "https://rd.springer.com/chapter/10.1007/978-3-030-42504-3_15"
+  , Left 61086
+  )
+, ( "https://reactormag.com/equoid/" , Left 61086 )
+, ( "https://reddragdiva.dreamwidth.org/556568.html" , Left 61086 )
 , ( "https://rhodesmill.org/brandon/2012/one-sentence-per-line/"
   , Left 61080
   )
@@ -7446,12 +8052,59 @@
   , Left 61080
   )
 , ( "https://roamresearch.com/" , Left 61080 )
+, ( "https://rs.io/anki-tips/" , Left 61086 )
+, ( "https://scholar.googleblog.com/2010/06/google-scholar-alerts.html"
+  , Left 61086
+  )
+, ( "https://scholar.sun.ac.za/server/api/core/bitstreams/6dfdb0ca-e7e5-403e-9a2b-4161e3d93385/content#pdf"
+  , Left 61086
+  )
+, ( "https://searchengineland.com/google-alerts-arent-working-148642"
+  , Left 61086
+  )
+, ( "https://searchengineland.com/google-alerts-still-broken-152444"
+  , Left 61086
+  )
 , ( "https://seizonsha.wordpress.com/2011/06/13/%E6%9C%80%E7%B5%82%E8%80%83%E5%AF%9F%E3%80%80%E3%81%86%E3%81%BF%E3%81%AD%E3%81%93%E3%81%AE%E3%81%AA%E3%81%8F%E9%A0%83%E3%81%AB-answer-to-the-golden-witch-special-discussion/"
   , Left 61080
   )
+, ( "https://seliger.com/2014/04/20/volunteers-nonprofits-really-want-their-money-not-their-bodies/"
+  , Left 61086
+  )
 , ( "https://sembr.org/" , Left 61080 )
+, ( "https://ses.enseigne.ac-lyon.fr/spip/IMG/pdf/2011_karpicke_blunt_science.pdf"
+  , Left 61086
+  )
+, ( "https://shkspr.mobi/blog/2012/11/whats-the-front-page-of-hackernews-worth/"
+  , Left 61086
+  )
 , ( "https://sites.google.com/site/finleyedwards/EdwardsStartTimes.pdf?attredirects=0"
   , Left 61080
+  )
+, ( "https://sites.suffolk.edu/legaltech/2014/03/11/serious-an-lpti-supported-project-to-improve-students-learning-and-bar-performance/"
+  , Left 61086
+  )
+, ( "https://sites.williams.edu/nk2/files/2011/08/Kornell.2009b.pdf"
+  , Left 61086
+  )
+, ( "https://sive.rs/srs" , Left 61086 )
+, ( "https://slashdot.org/story/07/11/18/1319201/do-tiny-url-services-weaken-net-architecture"
+  , Left 61086
+  )
+, ( "https://slate.com/human-interest/2023/06/life-before-cell-phones-internet-after-work.html"
+  , Left 61086
+  )
+, ( "https://slatestarcodex.com/2013/06/30/the-lottery-of-fascinations/"
+  , Left 61086
+  )
+, ( "https://smagin.fyi/posts/ordinary-life-improvements/"
+  , Left 61086
+  )
+, ( "https://spectrum.ieee.org/your-candy-wrappers-are-listening"
+  , Left 61086
+  )
+, ( "https://spectrum.library.concordia.ca/id/eprint/36253/1/2010_Mining_Writeprints_from_Anonymous_E-mails.pdf"
+  , Left 61086
   )
 , ( "https://sspai.com/post/106020" , Left 61080 )
 , ( "https://sspai.com/post/95652" , Left 61080 )
@@ -7464,16 +8117,60 @@
 , ( "https://static.googleusercontent.com/media/www.itasoftware.com/en/us/pdf/ComplexityofArlineTravelPlanning_Carl_Sep-03.pdf"
   , Left 61080
   )
+, ( "https://static.usenix.org/event/sec11/tech/full_papers/Calandrino.pdf"
+  , Left 61086
+  )
+, ( "https://store.hermanmiller.com/brands-fully" , Left 61086 )
+, ( "https://super-memory.com/articles/programming.htm"
+  , Left 61086
+  )
+, ( "https://super-memory.com/articles/theory.htm" , Left 61086 )
+, ( "https://supermemo.guru/wiki/How_much_knowledge_can_human_brain_hold"
+  , Left 61086
+  )
+, ( "https://supermemo.guru/wiki/SuperMemo_does_not_work_for_kids"
+  , Left 61086
+  )
 , ( "https://support.apple.com/guide/safari/keyboard-and-other-shortcuts-cpsh003/mac#ibrw51086045"
   , Left 61080
   )
 , ( "https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly#w_current-page"
   , Left 61080
   )
+, ( "https://theeffortfuleducator.com/2017/10/22/easy-application-of-spaced-practice-in-the-classroom/"
+  , Left 61086
+  )
+, ( "https://thefloatinglibrary.com/2008/12/09/dreamtigers-epiloge-j-l-borges/"
+  , Left 61086
+  )
+, ( "https://thenextweb.com/news/google-alerts-regains-rss-delivery-option-it-lost-after-google-readers-demise"
+  , Left 61086
+  )
+, ( "https://thetotebag.wordpress.com/2020/06/03/its-getting-better-all-the-time/"
+  , Left 61086
+  )
 , ( "https://training.kalzumeus.com/newsletters/archive/do-not-end-the-week-with-nothing"
   , Left 61080
   )
+, ( "https://travel.state.gov/content/travel/en/about-us/reports-and-statistics.html"
+  , Left 61086
+  )
 , ( "https://tryroll.com/" , Left 59618 )
+, ( "https://tumbling.alastair.is/post/17661390124/fun-with-analytics-pitting-hacker-news-and"
+  , Left 61086
+  )
+, ( "https://tvtropes.org/pmwiki/pmwiki.php/Main/RuleOfCool"
+  , Left 61086
+  )
+, ( "https://tvtropes.org/pmwiki/pmwiki.php/Main/RuleOfSexy"
+  , Left 61086
+  )
+, ( "https://tvtropes.org/pmwiki/pmwiki.php/Main/SociopathicHero"
+  , Left 61086
+  )
+, ( "https://tvtropes.org/pmwiki/pmwiki.php/Main/TheSociopath"
+  , Left 61086
+  )
 , ( "https://twitter.com/EileenOrmsby/status/304004136075132930"
   , Left 61080
   )
@@ -7488,8 +8185,14 @@
 , ( "https://twitter.com/theshawwn/lists/machine-learning/members"
   , Left 61080
   )
+, ( "https://users.ece.utexas.edu/~adnan/pop-05/lampson-system-design.pdf"
+  , Left 61086
+  )
 , ( "https://vanemden.wordpress.com/2009/01/01/ventilated-prose/"
   , Left 61080
+  )
+, ( "https://variety.com/2017/digital/news/netflix-thumbs-vs-stars-1202010492/"
+  , Left 61086
   )
 , ( "https://wallstreetcn.com/articles/3765251" , Left 61080 )
 , ( "https://wallstreetcn.com/livenews/3051816" , Left 61080 )
@@ -7497,14 +8200,62 @@
 , ( "https://wci.llnl.gov/fac/site300/cff/index.html"
   , Left 61080
   )
+, ( "https://web.archive.org/web/*/https://quantimodo.com/"
+  , Left 61086
+  )
 , ( "https://web.archive.org/web/20070206034450/http://www.timesonline.co.uk/tol/news/uk/article735078.ece"
   , Left 61080
   )
 , ( "https://web.archive.org/web/20071019225237/http://www.wired.com/culture/lifestyle/news/2001/10/47894"
   , Left 61080
   )
+, ( "https://web.archive.org/web/20090306144914/http://33bits.org/2008/11/12/57"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20090331052423/http://33bits.org/2008/11/20/graph-isomorphism-deceptively-hard"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20090331074813/https://www.cs.utexas.edu/~shmat/socialnetworks-faq.html"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20090430093950/http://chronicle.com/free/v55/i34/34a00101.htm"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20090517214657/http://33bits.org/2009/05/13/your-morning-commute-is-unique-on-the-anonymity-of-homework-location-pairs/"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20100226190432/http://33bits.org/2010/02/22/google-docs-leaks-identity/"
+  , Left 61086
+  )
 , ( "https://web.archive.org/web/20100301094213/http://www.guynameddave.com/100-thing-challenge.html"
   , Left 61080
+  )
+, ( "https://web.archive.org/web/20100810201303/http://33bits.org/2010/06/01/yet-another-identity-stealing-bug-will-creeping-normalcy-be-the-result/"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20101003031057/http://33bits.org/2010/09/28/instant-personalization-privacy-flaws"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20110221224022/http://33bits.org/2011/02/16/usernames-linkability-uber-profiles/"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20110313170927/http://33bits.org/2011/03/09/link-prediction-by-de-anonymization-how-we-won-the-kaggle-social-network-challenge/"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20110314105222/http://33bits.org/2009/10/14/de-anonymization-is-not-x-the-need-for-re-identification-science/"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20110528175925/http://33bits.org/2011/05/24/you-might-also-like-privacy-risks-of-collaborative-filtering"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20110624070259/https://harpers.org/archive/2010/08/hbc-90007562"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20110809203726/http://www.sportsscientists.com/2011/08/talent-training-and-performance-secrets.html"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20110927151625/http://muflax.com/episteme/"
+  , Left 61086
   )
 , ( "https://web.archive.org/web/20111218234418/http://www.nationalreview.com/articles/print/278758"
   , Left 61080
@@ -7517,6 +8268,9 @@
   )
 , ( "https://web.archive.org/web/20120609025159/http://hanson.gmu.edu/lifeinsim.html"
   , Left 61080
+  )
+, ( "https://web.archive.org/web/20120826184911/http://www.salon.com/2007/11/01/whistleblowers"
+  , Left 61086
   )
 , ( "https://web.archive.org/web/20121013151213/http://www.mypdfscripts.com/concerning-mediafire-and-the-current-lack-of-scripts/"
   , Left 61080
@@ -7545,6 +8299,9 @@
 , ( "https://web.archive.org/web/20121120040212/http://www.onehundredjobs.ca/2011/06/rise-of-social-media-art.html"
   , Left 61080
   )
+, ( "https://web.archive.org/web/20121122031147/http://www.nationalreview.com/nrd/article/?q=OWUzNTRjMzZlN2NkN2ZhYjFkZTRiM2RjZDMzNDc1NmM"
+  , Left 61086
+  )
 , ( "https://web.archive.org/web/20121124014004/http://old.jat.org/jtt/interviews/intmhouse.html"
   , Left 61080
   )
@@ -7559,6 +8316,12 @@
   )
 , ( "https://web.archive.org/web/20130107010352/http://www.shroomery.org/forums/showflat.php/Number/17056146/fpart/all/vc/1"
   , Left 61080
+  )
+, ( "https://web.archive.org/web/20130114231753/http://33bits.org/2012/12/17/new-developments-in-deanonymization/"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20130117031827/http://www.lessig.org/2009/05/the-solipsist-and-the-internet/"
+  , Left 61086
   )
 , ( "https://web.archive.org/web/20130119025623/http://dee.su/uploads/baal.html"
   , Left 61080
@@ -7593,11 +8356,17 @@
 , ( "https://web.archive.org/web/20130421050631/http://sleep.health.am/sleep/sleep-and-gender/"
   , Left 61080
   )
+, ( "https://web.archive.org/web/20130425111434/http://33bits.org/2013/04/16/privacy-technologies-an-annotated-syllabus/"
+  , Left 61086
+  )
 , ( "https://web.archive.org/web/20130510182827/http://mres.gmu.edu/pmwiki/uploads/Main/Fanelli2011.pdf"
   , Left 61080
   )
 , ( "https://web.archive.org/web/20130515004352/http://www.people.fas.harvard.edu/~hwang2/papers/Hwang_JMP.pdf"
   , Left 61080
+  )
+, ( "https://web.archive.org/web/20130719064119/http://aberrant.me/front-page-of-hacker-news/"
+  , Left 61086
   )
 , ( "https://web.archive.org/web/20130728045156/http://lipread.com.au/Products.html"
   , Left 61080
@@ -7610,6 +8379,9 @@
   )
 , ( "https://web.archive.org/web/20130903074923/http://digital.sanctuary.org/~ego/papers/Schumaker01.pdf"
   , Left 61080
+  )
+, ( "https://web.archive.org/web/20130920193543/http://blog.learnstream.org/2012/08/spaced-repetition-in-natural-and-artificial-learning/"
+  , Left 61086
   )
 , ( "https://web.archive.org/web/20130922203213/http://quantumweb.freeservers.com/resource/01-Teller.pdf"
   , Left 61080
@@ -7653,6 +8425,9 @@
 , ( "https://web.archive.org/web/20131208044444/http://weirderweb.com/2013/02/28/is-lucydrop-the-latest-silk-road-scammer-65000-in-late-lsd-orders-says-yes/"
   , Left 61080
   )
+, ( "https://web.archive.org/web/20131208072327/https://www.wired.com/medtech/health/magazine/17-04/ff_perfectmemory?currentPage=all"
+  , Left 61086
+  )
 , ( "https://web.archive.org/web/20131209175116/http://weirderweb.com/2013/06/13/atlantis-wasnt-built-in-a-day-520800-in-sales-and-counting/"
   , Left 61080
   )
@@ -7671,11 +8446,17 @@
 , ( "https://web.archive.org/web/20131211213827/http://weirderweb.com/2013/02/01/black-market-reloaded-grew-more-than-16000-new-registrations-in-january-and-has-more-publicly-available-items-than-silk-road/"
   , Left 61080
   )
+, ( "https://web.archive.org/web/20131218052436/https://thefinancialbrand.com/28346/google-alerts-broken/"
+  , Left 61086
+  )
 , ( "https://web.archive.org/web/20131219074203/http://weirderweb.com/2013/06/13/atlantis-wasnt-built-in-a-day-520800-in-sales-and-counting"
   , Left 61080
   )
 , ( "https://web.archive.org/web/20131220074139/http://weirderweb.com/2013/06/04/the-biggest-danger-to-some-silk-road-users-are-themselves/"
   , Left 61080
+  )
+, ( "https://web.archive.org/web/20131221170247/http://www.bayesianwitch.com/blog/2013/why_hn_shouldnt_use_randomized_algorithms.html"
+  , Left 61086
   )
 , ( "https://web.archive.org/web/20131223041144/http://weirderweb.com/2013/06/18/writing-the-end-of-prohibition-eiley-ormsby-talks-about-her-new-book-silk-road-and-legalization/"
   , Left 61080
@@ -7704,12 +8485,91 @@
 , ( "https://web.archive.org/web/20140527022857/http://features.blogs.fortune.cnn.com/2013/05/15/ranbaxy-fraud-lipitor/"
   , Left 61080
   )
+, ( "https://web.archive.org/web/20140723063242/https://www.alexa.com/siteinfo/anymemo.org"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20140723063456/https://www.alexa.com/siteinfo/tbrk.org"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20160102165131/http://bayes.bgsu.edu/webinar.11.2012/R%20output/Rcode.part4.html"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20160304051359/https://www.almostinfinite.com/other/hacker-news-new-page-scroll-of-death.html"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20170702141754/https://freedom-to-tinker.com/2011/06/07/new-research-result-bubble-forms-not-so-anonymous/"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20181229003208/http://bitcoinweekly.com/"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20191122005113/https://apps.apple.com/app/isrs-free/id332350042"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20200209014707/https://senrigan.io/blog/everything-i-know-strategies-tips-and-tricks-for-spaced-repetition-anki/"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20200209152222/https://senrigan.io/blog/chasing-10x-leveraging-a-poor-memory-in-software-engineering/"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20200215144602/https://twicsy-blog.tumblr.com/post/174063770074/how-i-targeted-the-reddit-ceo-with-facebook-ads-to"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20220119182149/https://www.fsavard.com/flow/2012/12/diff-revision/"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20220430225206/https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadp/thinkpad-p70/22tp2wpwp70"
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20220510221945/https://www.ummah.com/forum/forum/library/learn-arabic-and-other-languages/qur-an-and-islamic/390413-how-to-memorize-the-quran-and-never-forget-it?381181-How-to-Memorize-the-Quran-and-Never-Forget-it="
+  , Left 61086
+  )
+, ( "https://web.archive.org/web/20230101001643/https://www.overcomingbias.com/tag/medicine"
+  , Left 61086
+  )
+, ( "https://webcitation.org/6EDvDSVzN" , Left 61086 )
+, ( "https://whoapi.com/blog/554/how-hacker-news-hit-us-with-10-000-unique-visitors-in-10-hours/"
+  , Left 61086
+  )
 , ( "https://wiki.archlinux.org/index.php/Lrzip" , Left 61080 )
+, ( "https://workbench.cadenhead.org/news/3503/bitly-builds-business-libya-domain"
+  , Left 61086
+  )
+, ( "https://works.bepress.com/laura_stambaugh/6/download/"
+  , Left 61086
+  )
+, ( "https://www-users.cse.umn.edu/~odlyzko/doc/privacy.economics.pdf"
+  , Left 61086
+  )
+, ( "https://www.alljapaneseallthetime.com/blog/all-japanese-all-the-time-ajatt-how-to-learn-japanese-on-your-own-having-fun-and-to-fluency/"
+  , Left 61086
+  )
+, ( "https://www.alternatehistory.com/forum/threads/victoria.10/"
+  , Left 61086
+  )
 , ( "https://www.andrew.cmu.edu/user/nicolasc/publications/Christin-WWW13.pdf"
   , Left 61080
   )
+, ( "https://www.annualreviews.org/doi/10.1146/annurev-psych-010416-044022"
+  , Left 61086
+  )
+, ( "https://www.bbc.co.uk/news/science-environment-20629671"
+  , Left 61086
+  )
 , ( "https://www.bilibili.com/video/av92353922?from=search&seid=17908897468074474697"
   , Left 59618
+  )
+, ( "https://www.bls.gov/opub/mlr/2016/article/the-life-of-american-workers-in-1915.htm"
+  , Left 61086
+  )
+, ( "https://www.bookandsword.com/2017/12/09/how-much-did-a-shirt-really-cost-in-the-middle-ages/"
+  , Left 61086
+  )
+, ( "https://www.businesswire.com/news/home/20171121005280/en/Amazon-Celebrates-10th-Holiday-Season-Frustration-Free-Packaging"
+  , Left 61086
+  )
+, ( "https://www.ccsenet.org/journal/index.php/jedp/article/download/19582/15080"
+  , Left 61086
   )
 , ( "https://www.change.org/petitions/google-keep-google-reader-running"
   , Left 61080
@@ -7720,14 +8580,41 @@
 , ( "https://www.cl.cam.ac.uk/~sjm217/papers/usenix08clockskew.pdf"
   , Left 61080
   )
+, ( "https://www.cnn.com/2024/11/02/health/public-health-mcdonalds-e-coli-outbreak/index.html"
+  , Left 61086
+  )
+, ( "https://www.codespaces.com/power-searching-with-google.html"
+  , Left 61086
+  )
+, ( "https://www.columbia.edu/cu/psychology/metcalfe/PDFs/Son2010.pdf"
+  , Left 61086
+  )
 , ( "https://www.complang.tuwien.ac.at/andi/arnold.pdf"
   , Left 61080
   )
 , ( "https://www.consumerlab.com/reviews/melatonin-supplements/melatonin/"
   , Left 61080
   )
+, ( "https://www.cs.cornell.edu/~tj/publications/radlinski_joachims_07a.pdf"
+  , Left 61086
+  )
+, ( "https://www.cs.princeton.edu/~arvindn/publications/author-identification-draft.pdf"
+  , Left 61086
+  )
 , ( "https://www.cs.utexas.edu/users/EWD/transcriptions/EWD07xx/EWD709.html"
   , Left 61080
+  )
+, ( "https://www.cs.utexas.edu/~EWD/transcriptions/EWD07xx/EWD709.html"
+  , Left 61086
+  )
+, ( "https://www.cs.utexas.edu/~shmat/shmat_oak09.pdf"
+  , Left 61086
+  )
+, ( "https://www.cs.utexas.edu/~shmat/shmat_oak11ymal.pdf"
+  , Left 61086
+  )
+, ( "https://www.dailykos.com/stories/2011/03/01/951432/-War-on-Whistleblowers-Escalating"
+  , Left 61086
   )
 , ( "https://www.dhs.gov/news/2013/11/18/ice-statement-record-senate-committee-homeland-security-and-governmental-affairs"
   , Left 61080
@@ -7736,9 +8623,17 @@
 , ( "https://www.dwarkesh.com/p/gwern-branwen#%C2%A7transcript"
   , Left 61080
   )
+, ( "https://www.econlib.org/library/Columns/y2016/Boudreauxprosperitypool.html"
+  , Left 61086
+  )
 , ( "https://www.economist.com/node/21526350?fsrc=scn/tw/te/ar/asiasloneyhearts"
   , Left 61080
   )
+, ( "https://www.eff.org/https-everywhere" , Left 61086 )
+, ( "https://www.ejlt.org/index.php/ejlt/article/view/320/424"
+  , Left 61086
+  )
+, ( "https://www.elephantinthebrain.com/" , Left 61086 )
 , ( "https://www.erowid.org/" , Left 61080 )
 , ( "https://www.evamonkey.com/" , Left 61080 )
 , ( "https://www.fanfiction.net/s/8096183/1/Harry-Potter-and-the-Natural-20"
@@ -7751,6 +8646,13 @@
   , Left 61080
   )
 , ( "https://www.folklore.org/Signing_Party.html" , Left 61080 )
+, ( "https://www.frisbys.news/" , Left 61086 )
+, ( "https://www.fullstackeconomics.com/24-charts-that-show-were-mostly-living-better-than-our-parents/"
+  , Left 61086
+  )
+, ( "https://www.ghacks.net/2013/06/29/yahoo-search-alerts-a-google-alerts-alternative/"
+  , Left 61086
+  )
 , ( "https://www.gigiassessment.com/shop/index.php" , Left 61080 )
 , ( "https://www.gittip.com/gwern/" , Left 61080 )
 , ( "https://www.goodreads.com/review/show/369875300"
@@ -7762,11 +8664,41 @@
 , ( "https://www.goodreads.com/review/show/759044326"
   , Left 61080
   )
+, ( "https://www.goodreads.com/user/show/11004626-gwern"
+  , Left 61086
+  )
 , ( "https://www.google.com/about/company/history/" , Left 61080 )
 , ( "https://www.greaterwrong.com/" , Left 61080 )
+, ( "https://www.greig.cc/journal/2013/1/what-does-a-hacker-news-traffic-spike-look-like"
+  , Left 61086
+  )
+, ( "https://www.gresearch.com/news/anki-as-learning-superpower-computer-science-edition/"
+  , Left 61086
+  )
+, ( "https://www.hoover.org/research/visit-past" , Left 61086 )
+, ( "https://www.hoover.org/research/wonders-economic-growth"
+  , Left 61086
+  )
 , ( "https://www.hsdl.org/?view&did=20646" , Left 61080 )
+, ( "https://www.html-tidy.org/" , Left 61086 )
+, ( "https://www.j-archive.com/" , Left 61086 )
+, ( "https://www.jackkinsella.ie/articles/autodidactism"
+  , Left 61086
+  )
+, ( "https://www.jackkinsella.ie/articles/janki-method"
+  , Left 61086
+  )
+, ( "https://www.johndcook.com/blog/2010/12/11/after-two-days-id-turned-into-an-idiot/"
+  , Left 61086
+  )
+, ( "https://www.johndcook.com/blog/2017/09/30/toxic-pairs/"
+  , Left 61086
+  )
 , ( "https://www.jstage.jst.go.jp/article/jts1976/20/2/20_2_77/_pdf"
   , Left 61080
+  )
+, ( "https://www.juliansanchez.com/2009/12/08/the-redactors-dilemma/"
+  , Left 61086
   )
 , ( "https://www.kirkusreviews.com/book-reviews/carter-scholz/radiance-3/"
   , Left 61080
@@ -7774,20 +8706,310 @@
 , ( "https://www.kuro5hin.org/story/2006/4/17/194059/296"
   , Left 61080
   )
+, ( "https://www.lambiek.net/artists/c/crumb_charles.htm"
+  , Left 61086
+  )
+, ( "https://www.learningmedicinebook.com/" , Left 61086 )
+, ( "https://www.learningtheory.org/colt2009/papers/006.pdf"
+  , Left 61086
+  )
 , ( "https://www.lesswrong.com/" , Left 61080 )
+, ( "https://www.lesswrong.com/posts/35P62KXiqR2DfG8e7/the-conditional-fallacy-in-contemporary-philosophy"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/3r4GETDPMf335HfpA/memory-spaced-repetition-and-life?commentId=Mpc8rgQC4THkh38SF"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/4sAsygakd4oCpbEKs/lesswrong-help-desk-free-paper-downloads-and-more-2014"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/5vogC4eJ4gXixX2KJ/should-i-believe-what-the-siai-claims#Mich92awM4J2htpqp"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/5yFRd3cjLpm3Nd6Di/argument-screens-off-authority"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/79g662fdusDsXWK67/stanislav-petrov-day"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/7mCusQu7ZXprbYfYc/sl4-meta-list-closure-2-month-followup"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/8ZrQkBDptXhumhP3S/notes-on-autonomous-cars"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/8ZugMc4E5959Xh86i/how-i-use-anki-to-learn-mathematics"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/9o3Cjjem7AbmmZfBs/living-luminously"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/9o3QBg2xJXcRCxGjS/working-hurts-less-than-procrastinating-we-fear-the-twinge"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/9vKRHBCLvwqN26LLs/the-personality-of-great-creative-scientists-open-and"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/AaCjoWaHQzCJKheFi/open-thread-february-1-14-2013#XtCGvcrsddeSWBNjd"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/As9E3HfgED2zkTAfB/a-vote-against-spaced-repetition"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/Bsa325tntncXWX4uJ/learn-power-searching-with-google#ZqY64PqXZGFL4fkps"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/CXZK4cixfnKJF5Ycy/on-the-openness-personality-trait-and-rationality"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/Cq4KKE4Xg6xdeoSJZ/what-are-you-working-on#LYPBs8L4S74hu44yJ"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/DuM5d7stfbm4KksM2/on-the-etiology-of-religious-belief"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/DyZuewJMopqfEnQmo/get-genotyped-for-free-if-your-iq-is-high-enough#PYRhkrvFybZFfa24q"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/DyZuewJMopqfEnQmo/get-genotyped-for-free-if-your-iq-is-high-enough#s6NMhaAheS7FtAHWT"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/F6ZTtBXn2cFLmWPdM/seven-years-of-spaced-repetition-software-in-the-classroom-1"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/Ft2Cm9tWtcLNFLrMw/notes-on-the-psychology-of-power"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/Fy6JoSn4sozvNYaDA/is-kiryas-joel-an-unhappy-place"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/G3hxkSeDCMBucYsp6/personal-identity-and-uploading-by-mark-walker"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/GytPrQ9cT46k9etoz/living-forever-is-hard-or-the-gompertz-curve"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/Jx4gGbPi7GuydwvzB/amanda-knox-post-mortem"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/LaM5aTcXvXzwQSC2Q/universal-fire"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/MDSt7vSqFPZRzk26B/does-hyperbolic-discounting-really-exist"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/MGtKNd5GBXN5oNj7p/to-learn-critical-thinking-study-critical-thinking"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/PmrD2T6F82RkRkhQv/case-study-reading-edge-s-financial-filings"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/RNSYDitY6688rP3Fb/atheism-and-the-autism-spectrum"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/RWMRDE9aRWoSRiYx6/open-thread-january-16-31-2013#XksWmWEBbbHe4wsx2"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/RspqaNmJKKBnXTqwk/open-thread-april-1-15-2013#sWpsaRHPG4rtc8mxt"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/SXK87NgEPszhWkvQm/mundane-magic"
+  , Left 61086
+  )
 , ( "https://www.lesswrong.com/posts/TTPux7QFBpKxZtMKE/the-lesswrong-2018-book-is-available-for-pre-order"
   , Left 61080
+  )
+, ( "https://www.lesswrong.com/posts/TiG8cLkBRW4QgsfrR/notes-on-brainwashing-and-cults"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/Ww2dxwWpSfkQB4NZb/a-year-of-spaced-repetition-software-in-the-classroom"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/YbCc3NRrr5avvWSHT/who-wants-to-start-an-important-startup?commentId=CyxaAxbokswt6ZyPh"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/YbCc3NRrr5avvWSHT/who-wants-to-start-an-important-startup?commentId=RC2TbuNbD9sXTiH9e"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/YbCc3NRrr5avvWSHT/who-wants-to-start-an-important-startup?commentId=cmjjdPpksrjgynF8z"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/YbCc3NRrr5avvWSHT/who-wants-to-start-an-important-startup?commentId=qPQGQd6E3hZ5DsLz4"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/ZWxE96G84m6LotXfg/a-good-volunteer-is-hard-to-find"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/a7n8GdKiAZRX86T5A/making-beliefs-pay-rent-in-anticipated-experiences"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/agbSrvyL3tDh3ZP7h/ray-kurzweil-and-uploading-just-say-no-nick-agar"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/baTWMegR42PAsH9qJ/generalizing-from-one-example"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/cit3HYXehBsr4d36Q/open-thread-january-15-31-2012#rWkZ3TGRsL7DhSsNR"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/dMDmED5LyqZtTTh5A/cashing-out-cognitive-biases-as-behavior"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/dQWCDERoZjLLHWpys/cryonics-costs-given-estimates-are-low"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/dtCfxYubZgRnEkGpQ/a-second-year-of-spaced-repetition-software-in-the-classroom"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/eKFHNmCcmuogQifQN/vulnerable-cyborgs-learning-to-live-with-our-dragons-mark"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/evyBmPw9ZnzmoFmP6/experiment-a-good-researcher-is-hard-to-find"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/fLaKKRZckYtrrcz7m/link-reddit-help-me-find-some-peace-i-m-dying-young"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/gowLWvZfri5XKiy9n/open-thread-february-1-14-2012#Ao9YaT8QBzEkBFKuh"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/hc9Eg6erp6hk9bWhn/the-quantum-physics-sequence"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/igLtDADspHudvNuQJ/living-forever-is-hard-part-3-the-state-of-life-extension"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/jG74S37Y6x8odJ3BF/open-thread-october-16-31-2012#mK8nwXXzmohWKcWZb"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/ktr39MFWpTqmzuKxQ/notes-on-psychopathy"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/mWXxsBLngfgH6iRdT/poker-playing"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/mZJs7FxxmhMvFxuse/futuristic-predictions-as-consumable-goods"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/mkrvsNi8cYGSjGqkh/on-the-unpopularity-of-cryonics-life-sucks-but-at-least-then"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/mz6RSqEYoTQJ3Rk8g/aixi-style-iq-tests"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/nnAZBLfKBnF276cqe/philosophical-disagreements-are-not-rational"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/o6BfKyWQC6yv8G7bc/lifelogging-the-recording-device"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/ojZL2iSgFnASmRNnN/fullrank-bayesian-noisy-sorting-1"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/ovLpQqpRLtpXPdKKP/against-utilitarianism-sobel-s-attack-on-judging-lives"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/p7CrByygeAqomsJqy/optimizing-sleep?commentId=6nmQ5W7XucdXTqwJL"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/p7CrByygeAqomsJqy/optimizing-sleep?commentId=LsuDzoEcksvGMp9Tt"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/pqDCfahoRfshQkW98/open-thread-june-16-30-2012#FtGToMLyfT37WQkcD"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/qNxPRh5jzrLorak6B/prediction-is-hard-especially-of-medicine"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/rWwmRvp8FEKDZ49d6/intelligence-explosion-analysis-draft-2-snippet-1#oeJhkSBhkzqveEsrj"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/reitXJgJXFzKpdKyd/beware-trivial-inconveniences"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/ttvnPRTxFyru9Hh2H/against-nhst"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/u7sKRzQ5jC7KXPPsh/open-thread-march-1-15-2013#LQNCNBob6eETitj9a"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/uRg5Q2vAteDem5b5S/social-status-and-testosterone"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/vAsQNjW3gbiskP9Wf/not-by-empathy-alone"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/wzj6WkudtrXQFqL8e/inverse-p-zombies-the-other-direction-in-the-hard-problem-of"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/xM4MLzaTnMA7AQbSM/how-to-be-deader-than-dead"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/xx7TeDmBQDFnx8GY7/bayesian-justice"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/yDqQ9P23yubmoxLD4/cryonics-is-far-cord-blood-is-near"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/zFj67rtrQ7HEaZ45F/tell-me-what-you-think-of-me"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/zRKW7LotZxJi6Cyeg/living-forever-is-hard-part-2-adult-longevity"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/zswEixLariPTgxLcC/misbehaving-machines-the-emulated-brains-of-transhumanist"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/zumnfc7jctgocfoe9/death-note-anonymity-and-information-theory"
+  , Left 61086
   )
 , ( "https://www.lesswrong.com/tag/inside-outside-view"
   , Left 61080
   )
+, ( "https://www.lesswrong.com/tag/overconfidence/" , Left 61086 )
+, ( "https://www.lesswrong.com/users/gwern" , Left 61086 )
+, ( "https://www.lesswrong.com/w/timeless-decision-theory"
+  , Left 61086
+  )
+, ( "https://www.lesswrong.com/w/updateless-decision-theory"
+  , Left 61086
+  )
 , ( "https://www.librarything.com/work/13068" , Left 61080 )
 , ( "https://www.llnl.gov/str/Baker.html" , Left 61080 )
+, ( "https://www.matvoz.com/blog/2013/10/interesting-facts-about-when-you-get-hit-by-hacker-news-tsunami/"
+  , Left 61086
+  )
+, ( "https://www.mentalfloss.com/article/54853/our-interview-jeopardy-champion-arthur-chu"
+  , Left 61086
+  )
+, ( "https://www.mercatus.org/ideasofindia/ideas-india-history-textiles"
+  , Left 61086
+  )
 , ( "https://www.money.org/money-museum/history-of-money"
   , Left 59618
   )
 , ( "https://www.muckrock.com/news/archives/2014/feb/03/dea-parallel-construction-guides/"
   , Left 61080
+  )
+, ( "https://www.nassiben.com/glowworm-attack" , Left 61086 )
+, ( "https://www.nature.com/articles/s41746-019-0084-2"
+  , Left 61086
+  )
+, ( "https://www.nber.org/papers/w13711" , Left 61086 )
+, ( "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1284369/pdf/12102132.pdf"
+  , Left 61086
+  )
+, ( "https://www.newworldencyclopedia.org/entry/Info:Main_Page"
+  , Left 61086
+  )
+, ( "https://www.newyorker.com/books/page-turner/the-mystery-of-s-the-man-with-an-impossible-memory"
+  , Left 61086
+  )
+, ( "https://www.newyorker.com/books/page-turner/why-we-should-memorize"
+  , Left 61086
+  )
+, ( "https://www.newyorker.com/magazine/2024/01/29/the-woman-who-spent-five-hundred-days-in-a-cave"
+  , Left 61086
   )
 , ( "https://www.nngroup.com/articles/aesthetic-usability-effect/"
   , Left 61080
@@ -7795,8 +9017,66 @@
 , ( "https://www.noisebridge.net/wiki/Compass_Vibro_Anklet"
   , Left 61080
   )
+, ( "https://www.nytimes.com/2002/01/17/business/stung-by-security-flaws-microsoft-makes-software-safety-a-top-goal.html"
+  , Left 61086
+  )
+, ( "https://www.nytimes.com/2007/05/20/opinion/20helprin.html"
+  , Left 61086
+  )
+, ( "https://www.nytimes.com/2009/03/17/us/politics/17signing.html"
+  , Left 61086
+  )
+, ( "https://www.nytimes.com/2009/06/07/fashion/07blogs.html"
+  , Left 61086
+  )
+, ( "https://www.nytimes.com/2010/06/12/us/politics/12leak.html"
+  , Left 61086
+  )
+, ( "https://www.nytimes.com/2010/09/07/health/views/07mind.html"
+  , Left 61086
+  )
+, ( "https://www.nytimes.com/2011/01/21/science/21memory.html"
+  , Left 61086
+  )
+, ( "https://www.nytimes.com/2011/07/24/opinion/sunday/24gray.html"
+  , Left 61086
+  )
+, ( "https://www.nytimes.com/2013/01/18/health/search-of-dna-sequences-reveals-full-identities.html"
+  , Left 61086
+  )
 , ( "https://www.nytimes.com/2013/07/01/nyregion/during-cicadas-swan-song-many-wonder-if-they-missed-the-show.html"
   , Left 61080
+  )
+, ( "https://www.nytimes.com/2014/04/20/opinion/sunday/being-good-isnt-the-only-way-to-go.html"
+  , Left 61086
+  )
+, ( "https://www.nytimes.com/2014/11/23/sunday-review/studying-for-the-test-by-taking-it.html"
+  , Left 61086
+  )
+, ( "https://www.nytimes.com/2015/11/18/technology/microsoft-once-infested-with-security-flaws-does-an-about-face.html"
+  , Left 61086
+  )
+, ( "https://www.ojisanseiuchi.com/2016/03/12/JavaScript-in-Anki-cards/"
+  , Left 61086
+  )
+, ( "https://www.overcomingbias.com/" , Left 61086 )
+, ( "https://www.overcomingbias.com/p/the-wisdom-of-othershtml"
+  , Left 61086
+  )
+, ( "https://www.pnas.org/doi/10.1073/pnas.1015633108"
+  , Left 61086
+  )
+, ( "https://www.pnas.org/doi/10.1073/pnas.1120700109"
+  , Left 61086
+  )
+, ( "https://www.pnas.org/doi/10.1073/pnas.1821936116"
+  , Left 61086
+  )
+, ( "https://www.pnas.org/doi/10.1073/pnas.1917942116"
+  , Left 61086
+  )
+, ( "https://www.pnas.org/doi/full/10.1073/pnas.0900271106"
+  , Left 61086
   )
 , ( "https://www.predictious.com/" , Left 61080 )
 , ( "https://www.princeton.edu/~aconway/pdf/Kane2007nback.pdf"
@@ -7811,17 +9091,144 @@
   , Left 61080
   )
 , ( "https://www.producthunt.com/products/volumehub" , Left 61080 )
+, ( "https://www.psychologicalscience.org/journals/pspi/PSPI_9_3.pdf"
+  , Left 61086
+  )
+, ( "https://www.rand.org/content/dam/rand/pubs/monographs/2011/RAND_MG1120.pdf"
+  , Left 61086
+  )
+, ( "https://www.reddit.com/r/Anki/comments/5ixzzx/anki_for_babies/"
+  , Left 61086
+  )
+, ( "https://www.reddit.com/r/Anki/comments/8iydl7/using_anki_with_babies_toddlers/"
+  , Left 61086
+  )
+, ( "https://www.reddit.com/r/Anki/comments/a9s456/what_is_the_largest_anki_deck_you_have_read_about/"
+  , Left 61086
+  )
+, ( "https://www.reddit.com/r/Anki/comments/a9wqau/using_anki_with_babies_toddlers_update/"
+  , Left 61086
+  )
+, ( "https://www.reddit.com/r/Anki/comments/eit54e/starting_my_175_year_old_on_anki/"
+  , Left 61086
+  )
+, ( "https://www.reddit.com/r/Scholar/" , Left 61086 )
+, ( "https://www.reddit.com/r/anime/comments/cmiijr/using_computer_security_cryptography_and/"
+  , Left 61086
+  )
+, ( "https://www.reddit.com/r/math/comments/hvqzd/printable_math_flashcards_in_pdf_and_latex_source/c1yror5/"
+  , Left 61086
+  )
+, ( "https://www.reddit.com/r/programming/comments/n30hl/janki_method_learning_programming_with_6000/"
+  , Left 61086
+  )
+, ( "https://www.reddit.com/r/rational/comments/6vnj2g/is_death_note_a_rationalist_fic/"
+  , Left 61086
+  )
+, ( "https://www.reddit.com/r/slatestarcodex/comments/8e2838/ama_request_with_scott/dxv9let/"
+  , Left 61086
+  )
+, ( "https://www.reddit.com/r/slatestarcodex/comments/b0h2hp/in_what_ways_has_life_in_the_western_world/"
+  , Left 61086
+  )
+, ( "https://www.reddit.com/r/slatestarcodex/comments/pe218h/what_productsthings_do_you_really_enjoy_that/"
+  , Left 61086
+  )
+, ( "https://www.righto.com/2009/06/how-does-newsyc-ranking-work.html"
+  , Left 61086
+  )
+, ( "https://www.righto.com/2013/11/how-hacker-news-ranking-really-works.html"
+  , Left 61086
+  )
+, ( "https://www.salon.com/2014/04/20/ditch_the_10000_hour_rule_why_malcolm_gladwells_famous_advice_falls_short/"
+  , Left 61086
+  )
 , ( "https://www.schneier.com/blog/archives/2013/04/bitcoins_in_the.html"
   , Left 61080
+  )
+, ( "https://www.sciencedaily.com/releases/2011/01/110121111216.htm"
+  , Left 61086
+  )
+, ( "https://www.sciencedirect.com/science/article/abs/pii/S1552526012001318"
+  , Left 61086
+  )
+, ( "https://www.sciencedirect.com/science/article/pii/S0896627311009184"
+  , Left 61086
   )
 , ( "https://www.sciencenews.org/view/generic/id/330930/title/Traditional_Chinese_medicine_Big_questions"
   , Left 61080
   )
+, ( "https://www.scotthyoung.com/blog/2012/08/05/forgetting-is-good/"
+  , Left 61086
+  )
 , ( "https://www.scss.tcd.ie/~clearm/bitcoin.html" , Left 61080 )
+, ( "https://www.shortcutfoo.com/blog/introducing-interval-training-for-shortcuts"
+  , Left 61086
+  )
+, ( "https://www.smithsonianmag.com/arts-culture/teller-reveals-his-secrets-100744801/"
+  , Left 61086
+  )
+, ( "https://www.spacedrepetition.com/" , Left 61086 )
+, ( "https://www.statista.com/statistics/804430/us-citzens-owning-a-passport/"
+  , Left 61086
+  )
+, ( "https://www.statnews.com/2016/01/15/chipotle-foodborne-illnesses-cdc/"
+  , Left 61086
+  )
+, ( "https://www.studystack.com/" , Left 61086 )
+, ( "https://www.supermemo.com/en/blog/application-of-a-computer-to-improve-the-results-obtained-in-working-with-the-supermemo-method"
+  , Left 61086
+  )
+, ( "https://www.supermemo.com/en/blog/twenty-rules-of-formulating-knowledge"
+  , Left 61086
+  )
+, ( "https://www.supremecourt.gov/opinions/11pdf/10-545.pdf"
+  , Left 61086
+  )
+, ( "https://www.talkwalker.com/" , Left 61086 )
+, ( "https://www.tbrk.org/software/mnemododo.html" , Left 61086 )
+, ( "https://www.technologyreview.com/2019/06/27/238884/the-pentagon-has-a-laser-that-can-identify-people-from-a-distanceby-their-heartbeat/"
+  , Left 61086
+  )
+, ( "https://www.theguardian.com/science/2017/feb/08/total-recall-the-people-who-never-forget"
+  , Left 61086
+  )
 , ( "https://www.thetimes03jan2009.com/" , Left 59618 )
+, ( "https://www.thinkmate.com/" , Left 61086 )
+, ( "https://www.trendingbuffalo.com/life/uncle-steves-buffalo/everything-from-1991-radio-shack-ad-now/"
+  , Left 61086
+  )
+, ( "https://www.uclalawreview.org/pdf/57-6-3.pdf" , Left 61086 )
+, ( "https://www.usenix.org/system/files/conference/usenixsecurity14/sec14-paper-bonneau.pdf"
+  , Left 61086
+  )
 , ( "https://www.w3.org/TR/cooluris/" , Left 61080 )
+, ( "https://www.wakapoetry.net/kks-xii-609/" , Left 61086 )
+, ( "https://www.washingtonpost.com/wp-dyn/content/article/2008/12/10/AR2008121003364.html"
+  , Left 61086
+  )
+, ( "https://www.wearenotsaved.com/2021/11/27/the-problems-the-past-vs-the-problems-of-the-present/"
+  , Left 61086
+  )
+, ( "https://www.who.int/classifications/classification-of-diseases"
+  , Left 61086
+  )
 , ( "https://www.wi.uni-muenster.de/sites/default/files/public/department/itsecurity/mbc13/mbc13-moeser-paper.pdf"
   , Left 61080
+  )
+, ( "https://www.willatworklearning.com/2005/11/research_review.html"
+  , Left 61086
+  )
+, ( "https://www.wired.com/2008/04/ff-wozniak/" , Left 61086 )
+, ( "https://www.wired.com/2009/01/magnolia-suffer/" , Left 61086 )
+, ( "https://www.wired.com/2012/01/everything-about-learning/"
+  , Left 61086
+  )
+, ( "https://www.worksinprogress.news/p/the-value-of-technological-progress"
+  , Left 61086
+  )
+, ( "https://www.yahoo.com/news/shattered-inside-the-secret-battle-to-save-americas-undercover-spies-in-the-digital-age-100029026.html"
+  , Left 61086
   )
 , ( "https://x.com/Pinboard/status/761656824202276864"
   , Left 61080
@@ -7849,6 +9256,12 @@
 , ( "https://yieldfarming.info/yffi/pool_3" , Left 61080 )
 , ( "https://yieldfarming.info/yfii/ycrv/" , Left 61080 )
 , ( "https://yieldfarming.info/yfii/yfii_dai/" , Left 61080 )
+, ( "https://yougov.co.uk/topics/entertainment/survey-results/daily/2023/02/24/9a34f/3"
+  , Left 61086
+  )
+, ( "https://yourawesomememory.com/how-flashcards-fail-confessions-of-a-tired-memory-guy/"
+  , Left 61086
+  )
 , ( "index" , Left 61080 )
 , ( "index#fiction" , Left 61080 )
 , ( "komm-susser-tod" , Left 61080 )

@@ -59,7 +59,6 @@ metadata/annotations/
 metadata/auto.gtx
 metadata/auto.yaml
 metadata/archive.hs
-index.generated.page
 
 # Build output
 _site_deploy/

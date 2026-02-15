@@ -1,6 +1,6 @@
 ---
 title: Recent Blog Posts
-description: 'Index of my most recent longer off-site writings, presented as annotations. (Sorted in reverse chronological order. Intended for transclusion onto the homepage index.)'
+description: 'Index of my most recent blog posts. (Sorted in reverse chronological order. Intended for transclusion onto the homepage index.)'
 created: 2009-01-27
 modified: 2024-01-01
 status: finished
@@ -19,3 +19,4 @@ index: True
 -   [\[...\]](/blog/index "Full index of blog entries."){.link-modified-recently-not
     .link-annotated-not .icon-not}
 :::
+

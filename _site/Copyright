@@ -890,18 +890,18 @@ div.poem span.caesura-mark {
   <meta name="twitter:site" content="gwern.net">
   <meta name="og:site" content="gwern.net">
   <meta name="og:type" content="article">
-  <meta name="description" content="版权被认为是自相矛盾的、不连贯的、有害的">
-  <meta name="og:description" content="版权被认为是自相矛盾的、不连贯的、有害的">
+  <meta name="description" content="从信息论和压缩的角度来看，版权被认为是矛盾的、不连贯的和有害的，因为没有对应于‘作品’的自然种类，只有更长或更短的字符串用于更笨或更聪明的算法。">
+  <meta name="og:description" content="从信息论和压缩的角度来看，版权被认为是矛盾的、不连贯的和有害的，因为没有对应于‘作品’的自然种类，只有更长或更短的字符串用于更笨或更聪明的算法。">
   <meta property="og:image" content="https://gwern.net/static/img/logo/logo-whitebg-large-border.png">
   <meta property="og:image:alt" content="Default thumbnail text: the Gwern.net site logo, a logotype of a large blackletter fraktur capital letter 'G' on a white background.">
   <meta property="og:image:height" content="530">
   <meta property="og:image:width" content="441">
   <meta property="gwern:thumbnail:css-classes" content="">
   <meta name="keywords" content="">
-  <meta name="dc.date.issued" content="26 Sep 2008">
+  <meta name="dc.date.issued" content="2008-09-26">
   
-  <meta name="citation_publication_date" content="26 Sep 2008">
-  <meta name="dcterms.modified" content="">
+  <meta name="citation_publication_date" content="2008-09-26">
+  <meta name="dcterms.modified" content="2014-05-04">
   <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
   <meta name="dcterms.rights" content="CC PD-0">
   <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
@@ -909,7 +909,7 @@ div.poem span.caesura-mark {
   <meta name="citation_fulltext_html_url" content="https://gwern.net/Copyright">
   <meta name="og:url" content="https://gwern.net/Copyright">
   <link rel="alternate" type="text/markdown" href="https://gwern.net/Copyright.md" title="Markdown source of ‘反对版权’ page"> <!-- Also available via Accept header -->
-  <meta name="page-body-classes" content="page-copyright dropcaps-de-zs">
+  <meta name="page-body-classes" content="page-copyright dropcaps-cheshire">
   <meta name="citation_fulltext_world_readable" content="">
   <meta name="color-scheme" content="light dark">
 
@@ -941,7 +941,7 @@ div.poem span.caesura-mark {
   </noscript>
 </head>
 
-<body class="page-copyright dropcaps-de-zs">
+<body class="page-copyright dropcaps-cheshire">
   <!-- Inlined asset links (no SSI): injected by Hakyll from static/include/inlined-asset-links.html -->
   <link rel="stylesheet" href="/static/css/style.css?v=1770491984" media="print" onload="this.media=`all`">
 <script src="/static/js/script.js?v=1770491982" defer></script>
@@ -958,7 +958,7 @@ div.poem span.caesura-mark {
         <a class="site link-page link-annotated" href="/about" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
         <a class="design link-page link-annotated" href="/design" title="Design and implementation notes">Design</a>
         <a class="new link-page link-annotated" href="/changelog" title="Changelog of what’s new or updated">New</a>
-        <a class="blog link-page" href="/blog/index" title="Shortform Gwern writings">Blog</a>
+        <a class="blog link-page link-annotated" href="/blog/index" title="Blog index: short posts">Blog</a>
         <a class="links link-page" href="/Links" title="Links page">Links</a>
         <a class="patreon" href="https://www.patreon.com/gwern" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
         <a class="mail" href="https://gwern.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
@@ -975,13 +975,13 @@ div.poem span.caesura-mark {
       
       <div class="markdownBody" id="page-metadata">
           
-        <div class="page-description"><p>版权被认为是自相矛盾的、不连贯的、有害的</p></div>
+        <div class="page-description"><p>从信息论和压缩的角度来看，版权被认为是矛盾的、不连贯的和有害的，因为没有对应于‘作品’的自然种类，只有更长或更短的字符串用于更笨或更聪明的算法。</p></div>
         <div class="page-metadata-fields">
             
-            
+            <span class="page-date-range"><span class="date-range" title="The date range 2008-09-26–2014-05-04 lasted 6 years (2,047 days), ending 12 years ago.">2008-09-26<span class="subsup"><sup>–</sup><sub>5y</sub></span>2014-05-04<sub><span title="2008-09-26 was 18 years ago.">12ya</span></sub></span></span>
             <span class="page-status" title="Writing status of current page: ranges 'abandoned'/'notes'/'draft'/'in progress'/'finished'"><em><span class="completion-status" data-progress-percentage="100">finished</span></em></span>
             <span class="page-confidence"><a href="/about#confidence-tags" title="Explanation of 'confidence' metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: 'certain'/'highly likely'/'likely'/'possible'/'unlikely'/'highly unlikely'/'remote'/'impossible')">certainty</a>: <em><span class="completion-status" data-progress-percentage="50">possible</span></em></span>
-            <span class="page-importance"><a href="/about#importance-tags" title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>0</em></span>
+            <span class="page-importance"><a href="/about#importance-tags" title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>2</em></span>
             
             
             
@@ -993,124 +993,123 @@ div.poem span.caesura-mark {
 <li><a href="#无损压缩" id="toc-无损压缩">无损压缩</a>
 <ul>
 <li><a href="#你一直在用那个词" id="toc-你一直在用那个词">你一直在用那个词……</a></li>
-<li><a href="#全部压缩用户自会辨别" id="toc-全部压缩用户自会辨别">全部压缩，用户自会辨别</a></li>
-<li><a href="#更聪明地工作而非更努力地工作" id="toc-更聪明地工作而非更努力地工作">更聪明地工作，而非更努力地工作</a></li>
+<li><a href="#把它们都压缩了用户会知道他自己的" id="toc-把它们都压缩了用户会知道他自己的">把它们都压缩了—用户会知道他自己的</a></li>
+<li><a href="#更聪明地工作而不是更努力" id="toc-更聪明地工作而不是更努力">更聪明地工作，而不是更努力</a></li>
 </ul></li>
 <li><a href="#压缩需要解释" id="toc-压缩需要解释">压缩需要解释</a>
 <ul>
-<li><a href="#代码即数据数据即代码" id="toc-代码即数据数据即代码">代码即数据，数据即代码</a></li>
+<li><a href="#代码是数据数据是代码" id="toc-代码是数据数据是代码">代码是数据，数据是代码</a></li>
 <li><a href="#思想实验" id="toc-思想实验">思想实验</a></li>
-<li><a href="#版权的结构与解释" id="toc-版权的结构与解释">版权的结构与解释</a></li>
+<li><a href="#版权的结构和解释" id="toc-版权的结构和解释">版权的结构和解释</a></li>
 </ul></li>
-<li><a href="#一切昭然若揭" id="toc-一切昭然若揭">一切昭然若揭</a></li>
-<li><a href="#另见" id="toc-另见">另见</a></li>
-</ul></div> <div id="markdownBody" class="markdownBody"><p>版权法应用于技术时，最棘手的方面之一在于后者使得做一些事情成为可能——甚至<em>鼓励</em>这样做——而这些事情暴露了前者在智识上的不连贯性；版权不过是一套为已经过时的经济条件而演变出来的临时规则和惯例，用以实现某些社会期望的目的（也可以因其失败而被批判或废除）。如果我们无法获得版权的正确<a href="https://en.wikipedia.org/wiki/%E6%9C%AC%E4%BD%93%E8%AE%BA" id="_3dXjyErY" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%9C%AC%E4%BD%93%E8%AE%BA#bodyContent">本体论</a>，那么讨论注定将徒劳无功<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>。许多人深受错觉之苦，以为版权不仅仅如此，以为版权在某种程度上是客观的，甚至是某种真正的道德人权（想想法语中的”<em><a href="https://en.wikipedia.org/wiki/Authors%27_rights" id="_zO89S0J4" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Authors%27_rights#bodyContent">droit d’auteur</a></em>”，即所谓的<a href="https://en.wikipedia.org/wiki/Moral_rights" id="_A9cUUiZr" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Moral_rights#bodyContent">“<em>精神</em>权利”</a>）<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>，拥有与其他权利相同的属性，例如永续性<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>。这是完全错误的。信息有其历史，但它本身并不附带任何固有的版权。</p>
-<p>这个问题已经以一些<a href="http://ansuz.sooke.bc.ca/lawpoli/colour/2004061001.php" id="_kbyJAPbv">严肃的</a>和<a href="http://www.qwantz.com/archive/000353.html" id="_aB97wZ0M">幽默的</a>方式被阐述过，但我们可以从理论的角度以一种有趣的方式来探讨它。</p>
+<li><a href="#在其中一切都变得清晰" id="toc-在其中一切都变得清晰">在其中一切都变得清晰</a></li>
+<li><a href="#外部链接" id="toc-外部链接">外部链接</a></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><p>版权法应用于技术最麻烦的方面之一是后者如何使前者在智力上的不连贯性暴露无遗，甚至 <em>鼓励</em> 这样做；版权仅仅是为了实现某些社会期望的目标而针对过去的经济条件进化出来的一套临时的规则和习惯（并且可以因其失败而被批评或废除）。如果我们不能得到正确的版权 <a href="https://en.wikipedia.org/wiki/%E6%9C%AC%E4%BD%93%E8%AE%BA" id="_3dXjyErY" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%9C%AC%E4%BD%93%E8%AE%BA#bodyContent">本体论</a>，那么讨论就注定要失败<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>。许多人受到的妄想是它不仅仅是那样，版权在某种程度上是客观的，甚至某种实际的道德人权（考虑法国的 “<em><a href="https://en.wikipedia.org/wiki/Authors%27_rights" id="_zO89S0J4" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Authors%27_rights#bodyContent">droit d’auteur</a></em>”，<a href="https://en.wikipedia.org/wiki/Moral_rights" id="_A9cUUiZr" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Moral_rights#bodyContent">“<em>道德</em> 权利”</a> 之一）<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>，具有与其他权利如永久性相同的属性<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>。这是完全错误的。信息有历史，但它不带有内在的版权。</p>
+<p>这在某些方面已被 <a href="https://ansuz.sooke.bc.ca/entry/23" id="_eOMmUEBk" class="link-live" title="What Color Are Your Bits?">严肃地</a> 和 <a href="https://qwantz.com/index.php?comic=353" id="_x78HN_1m" class="link-live" data-link-icon="DC" data-link-icon-type="text,sans" data-link-icon-color="#40d53a">幽默地</a> 阐述，但我们可以从理论的方向以一种有趣的方式通过它。</p>
 <section id="无损压缩" class="level1">
 <h1><a href="#无损压缩" title="Link to section: § &#39;无损压缩&#39;">无损压缩</a></h1>
-<p>计算机科学中最优雅的思想之一，是证明了无损压缩不可能压缩所有文件。也就是说，虽然像 ZIP 这样的算法能压缩大量文件——或许能将原文件大小压缩到很小的比例——但它必然无法压缩许多其他文件，而且对于它所缩小的每一个文件，它都会使另一些文件变大。这里的一般原则是 <a href="https://en.wikipedia.org/wiki/No_such_thing_as_a_free_lunch" id="_cgQMgE9X" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/No_such_thing_as_a_free_lunch#bodyContent">TANSTAAFL</a>：</p>
+<p>计算机科学中更优雅的想法之一是证明无损压缩不能压缩所有文件。也就是说，虽然像 ZIP 这样的算法会压缩许多文件—也许压缩到原始文件大小的一小部分—但它必然无法压缩许多其他文件，实际上对于每个它缩小的文件，它都会扩展其他一些文件。这里的一般原则是 <a href="https://en.wikipedia.org/wiki/No_such_thing_as_a_free_lunch" id="_cgQMgE9X" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/No_such_thing_as_a_free_lunch#bodyContent">TANSTAAFL</a>:</p>
 <blockquote>
-<p>“There ain’t no such thing as a free lunch.”（天下没有免费的午餐。）</p>
+<p>“天下没有免费的午餐。”</p>
 </blockquote>
-<p>压缩没有免费的午餐。通常对此的证明会援引<a href="https://en.wikipedia.org/wiki/Pigeonhole_principle" id="_kDGihzL5" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Pigeonhole_principle#bodyContent">鸽巢原理</a>；证明过程如下：每个文件必须映射到唯一的更短文件，而那个更短的文件必须唯一地映射回更长的文件（如果更短的文件不能做到这一点，那你就发明了一种极其无用的压缩算法——一种不支持解压缩的算法）。</p>
-<p>但问题在于，长字符串比短字符串有更多的”空间”（可能性）。考虑一个简单的案例：我们有一个介于 0 到 1000 之间的数字，我们希望压缩它。我们的压缩输出在 0 到 10 之间——显然更短了，对吧？但假设我们把 1000 压缩到 10。那 900-999 这些数字压缩到哪里去了？它们都被压缩到 9 吗？但那样的话，给出一个 9，我们完全不知道它应该被展开成什么。也许 999 变成 9，998 变成 8，997 变成 7，以此类推——但只过几个数字我们就用完了所有个位数，我们又面临同样的问题。</p>
-<p>从根本上说，你不能把 10 磅的东西装进一个 5 磅的袋子里。天下没有免费的午餐。</p>
+<p>压缩中没有免费的午餐。对此的正常证明援引了 <a href="https://en.wikipedia.org/wiki/%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86" id="_RsBvkx2R" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86#bodyContent">鸽巢原理</a>；证明是每个文件必须映射到一个唯一的较短文件，并且那个较短文件必须唯一地映射回较长文件（如果较短文件没有，你会设计出一个极其无用的压缩算法—一个不允许解压的算法）。</p>
+<p>但问题是，长字符串比较短字符串有更多的‘空间’（可能性）。考虑一个简单的情况：我们有一个 0 到 1000 之间的数字，我们要压缩它。我们的压缩输出在 0 到 10 之间—更短，对吗？但假设我们将 1000 压缩为 10。900-999 这些数字压缩成什么？它们都变成 9 吗？但是如果给定一个 9，我们完全不知道它应该扩展成什么。也许 999 变成 9，998 变成 8，9997 变成 7 等等—但仅仅几个数字之后我们就用完了个位数，我们再次面临这个问题。</p>
+<p>从根本上说，你不能把 10 公斤的东西装进 5 公斤的袋子里。TANSTAAFL。</p>
 <section id="你一直在用那个词" class="level2">
 <h2><a href="#你一直在用那个词" title="Link to section: § &#39;你一直在用那个词……&#39;">你一直在用那个词……</a></h2>
-<p>上述论述似乎证明了无损压缩不可能实现，但我们知道我们确实在日常中做到了；那么它是如何运作的呢？好吧，我们已经证明了将一组长字符串无损地映射到一组更短子字符串是不可能的。答案是放宽”更短”的要求：我们可以让算法将一个字符串”压缩”成一个<em>更长</em>的字符串。现在鸽巢原理对我们有利了——在更长的字符串中，有足够的空间容纳所有待压缩的字符串。而且碰巧，对于某些压缩算法，人们可以设计出”病态”的输入，使得一个短输入解压缩<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>成一个大得多的输出——有<a href="https://en.wikipedia.org/wiki/Zip_bomb" id="_-SNd1t87" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Zip_bomb#bodyContent">这样的文件</a>可供使用，经验上证明了这种可能性。</p>
-<p>使无损压缩不仅仅是一个数学趣题的原因在于，我们可以选择哪些字符串集合将最终有效地变小，而哪些字符串集合将被打入臃肿的冷宫。</p>
+<p>上述似乎证明了无损压缩是不可能的，但我们知道我们经常这样做；那么这是如何工作的呢？好吧，我们已经证明了将一组长字符串无损映射到一组较短的子字符串是不可能的。答案是放宽更短的要求：我们可以让我们的算法将字符串‘压缩’成一个 <em>更长</em> 的字符串。现在鸽巢原理为我们工作了—在更长的字符串中有足够的空间容纳所有我们要压缩的字符串。恰巧，人们可以为某些压缩算法设计‘病态’输入，其中短输入解压<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> 成更大的输出—有 <a href="https://en.wikipedia.org/wiki/Zip_bomb" id="_-SNd1t87" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Zip_bomb#bodyContent">这样的文件</a> 可用，经验地证明了这种可能性。</p>
+<p>使无损压缩不仅仅是一个数学奇迹的是，我们可以选择哪些字符串集最终变得有用的更小，哪些集将被降级到肥胖的外部黑暗中。</p>
 </section>
-<section id="全部压缩用户自会辨别" class="level2">
-<h2><a href="#全部压缩用户自会辨别" title="Link to section: § &#39;全部压缩，用户自会辨别&#39;">全部压缩，用户自会辨别</a></h2>
-<p>天下没有免费的午餐是铁律，但宇宙通常接受以垃圾来支付。我们人类实际上并不想压缩所有可能的字符串，而只是压缩我们真正创造的那些。这类似于编程语言中的静态类型；类型检查可能会拒绝许多正确的程序，但我们并不真正在意，因为那些不是我们真正想要运行的程序。或者说，高级编程语言将我们与机器隔离开来，使得如果用汇编语言编程可以做的各种技巧变得不可能；但我们中大多数人实际上并不想做那些技巧，并且乐意用那种能力换取便携性等便利。或者我们欣然用手动内存管理（连同它所赋予的一切能力）换取便利性和正确性。</p>
-<p>这是一个强大的概念，适用于计算机科学和工程中的许多权衡取舍，但我们可以从不同的角度来看待这个问题——这个角度对版权法中所见的那种关于知识和创造力的简单化观点提出了质疑。首先，我们可以看看<a href="https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff" id="_7xLbZ-fv" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Space%E2%80%93time_tradeoff#bodyContent">时空权衡</a>：一个快速的算法只是将输入数据（如 WAV）本质上视为输出，而一个消除了基本冗余的更小输入将需要额外的处理，运行时间更长。这是一个常见的现象，有一些极端的例子<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>，但我们可以看一个更有意义的权衡。</p>
-<p>回想一下无损算法。它以某种方式选择压缩”有趣的”字符串，而让无趣的字符串承受后果。它是如何做到的？它不可能是随机进行的，而且做一些”显而易见的”事情，比如减少重复，当然不会让你编写一个能将 30 兆字节的 <a href="https://en.wikipedia.org/wiki/WAV" id="_OQcUJDPR" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/WAV#bodyContent">WAV</a> 文件压缩到 5 兆字节的 <a href="https://en.wikipedia.org/wiki/FLAC" id="_ct5-ZQp3" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/FLAC#bodyContent">FLAC</a> 算法。</p>
+<section id="把它们都压缩了用户会知道他自己的" class="level2">
+<h2><a href="#把它们都压缩了用户会知道他自己的" title="Link to section: § &#39;把它们都压缩了—用户会知道他自己的&#39;">把它们都压缩了—用户会知道他自己的</a></h2>
+<p>TANSTAAFL 是国王，但宇宙通常会接受垃圾作为付款。我们人类实际上并不想压缩所有可能的字符串，而只压缩我们实际制造的字符串。这类似于编程语言中的静态类型；类型检查可能会导致拒绝许多正确的程序，但我们并不真正关心，因为那些不是我们实际想要运行的程序。或者，高级编程语言将我们与机器隔离开来，使不可能做各种如果用汇编语言编程可以做的技巧；但我们大多数人实际上并不想做那些技巧，并且很高兴为了像可移植性这样的便利而放弃这种能力。或者我们愉快地放弃手动内存管理（及其带来的所有力量）以获得便利和正确性。</p>
+<p>这是一个强大的概念，适用于计算机科学和工程中的许多权衡，但我们可以以不同的方式看待这个问题—这种方式对我们在版权法中看到的知识和创造力的简单化观点提出了质疑。首先，我们可以看看 <a href="https://en.wikipedia.org/wiki/%E6%97%B6%E7%A9%BA%E6%9D%83%E8%A1%A1" id="_cWLxRacQ" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%97%B6%E7%A9%BA%E6%9D%83%E8%A1%A1#bodyContent">时空权衡</a>：快速算法只是将输入数据（例如 WAV）基本上视为输出，而消除了基本冗余的较小输入将需要额外的处理并需要更多时间来运行。这是一种常见现象，有一些极端的例子<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>，但我们可以看一个更有意义的权衡。</p>
+<p>把你的思绪转回到无损算法。它以某种方式选择压缩‘有趣’的字符串并让无趣的字符串膨胀。它是怎么做到的？它不可能是随机做的，做像减少重复这样的简单事情肯定不会让你写出一个可以将 30 兆字节 <a href="https://en.wikipedia.org/wiki/WAV" id="_OQcUJDPR" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/WAV#bodyContent">WAV</a> 文件压缩到 5 兆字节的 <a href="https://en.wikipedia.org/wiki/FLAC" id="_ct5-ZQp3" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/FLAC#bodyContent">FLAC</a> 算法。</p>
 </section>
-<section id="更聪明地工作而非更努力地工作" class="level2">
-<h2><a href="#更聪明地工作而非更努力地工作" title="Link to section: § &#39;更聪明地工作，而非更努力地工作&#39;">更聪明地工作，而非更努力地工作</a></h2>
+<section id="更聪明地工作而不是更努力" class="level2">
+<h2><a href="#更聪明地工作而不是更努力" title="Link to section: § &#39;更聪明地工作，而不是更努力&#39;">更聪明地工作，而不是更努力</a></h2>
+<div class="epigraph">
 <blockquote>
-<p>“An efficient program is an exercise in logical brinkmanship.”（高效程序是逻辑冒险的一种练习。）–B.W. Lampson<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>一个高效的程序是一个逻辑边缘政策的练习。</p>
+<p><a href="https://en.wikipedia.org/wiki/Butler_Lampson" id="_RFOS3NQe" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Butler_Lampson#bodyContent">Butler W. Lampson</a><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
 </blockquote>
-<p>答案是算法对一类文件很<em>聪明</em>。有人花了大量精力去思考在 WAV 文件中——而且只在 WAV 文件中——可能找到什么样的规律性，以及如何预测和利用它们。正如我们程序员喜欢说的，算法体现了领域特定知识。比如一个 GZIP 算法，在运行时隐含地做出一整套关于其输入的假设——重复是以块的形式出现的，它是低熵的，它在整体上是相似的，它很可能是英语类语言的文本（这意味着 GZIP 可以利用的又一批规律性），或者它是二进制的，等等。这些烘焙在算法中的假设共同构成了一种初级的智能。</p>
-<p>算法之所以能聪明地压缩，是因为它在所有可能字符串的一个小子域上运行。如果域进一步缩小，就可以做出更多假设；考虑一下 <a href="http://prize.hutter1.net/" id="_lg385469">Marcus Hutter 压缩挑战</a>中顶尖选手所达到的压缩比。主题领域非常狭窄：高度程式化且格式规范的、人工生成的英文文本，使用 MediaWiki 标记，关于百科全书式的主题。在这里，算法几乎真正展现出智能以挤出更多的空间节省，借鉴了人工智能技术如神经网络。</p>
-<p>如果上述论证不够令人信服，那就去看看更广泛的无损算法。视频编解码器以小波变换和帧的方式思考；它们甚至不屑于查看任意的流。音频编解码器努力模拟人耳。图像压缩方案建立在独特的人类假设之上，比如三色视觉。</p>
-<p>那么，我们一致认为一个好的压缩算法体现了关于主题内容的知识或信息。这个命题似乎是不容置疑的。上述论述都是非形式化的，但我相信其中没有什么不能在需要时转化为严格的数学证明。</p>
+</div>
+<p>答案是算法对一种文件是 <em>聪明</em> 的。有人投入了大量精力思考在 WAV 文件中可能发现的规律性，以及如何预测和利用它们。正如我们程序员喜欢说的那样，算法体现了领域特定的知识。比方说，GZIP 算法在操作时隐式地对其输入做了一整套假设—其中的重复是成块出现的，它是低熵的，它是全局相似的，它可能是类似于英语的语言文本（这带来了 gzip 可以利用的另一批规律性）或者是二进制的，等等。这些烘焙进算法的假设通过集体构成了一种基本的智能。</p>
+<p>算法压缩得很聪明，因为它在所有可能字符串的一小部分域上操作。如果域进一步缩小，甚至可以做出更多假设；考虑 <a href="http://prize.hutter1.net/" id="_lg385469">马库斯·哈特压缩挑战</a> 中最高分获得者达到的压缩比。主题非常狭窄：关于百科全书主题的高度风格化和格式规整的人工生成的 MediaWiki 标记英语文本。在这里，算法字面上表现出智能以挤出更多的空间节省，利用如神经网络之类的 AI 技术。</p>
+<p>如果上述内容不令人信服，那么去考虑更广泛的无损算法。视频编解码器以小波和帧的方式思考；它们甚至不愿意看任意流。音频编解码器努力模仿人耳。图像压缩方案基于像三色性这样的独特人类假设工作。</p>
+<p>那么，我们同意一个好的压缩算法体现了关于主题的知识或信息。这个命题似乎是不容置疑的。上述全部是非正式的，但我相信其中没有任何东西不能在需要时转化为严格的数学证明。</p>
 </section>
 </section>
 <section id="压缩需要解释" class="level1">
 <h1><a href="#压缩需要解释" title="Link to section: § &#39;压缩需要解释&#39;">压缩需要解释</a></h1>
-<p>但这个命题应该让有版权意识的人隐隐感到不安。内容取决于解释？后者与前者密不可分？这感觉很危险。但情况会更糟。</p>
-<section id="代码即数据数据即代码" class="level2">
-<h2><a href="#代码即数据数据即代码" title="Link to section: § &#39;代码即数据，数据即代码&#39;">代码即数据，数据即代码</a></h2>
-<p>假设我们有一部受版权保护的电影，<a href="https://en.wikipedia.org/wiki/Titanic_(1997_film)" id="_T413Jvr2" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Titanic_(1997_film)#bodyContent"><em>Titanic</em>（泰坦尼克号）</a>。我们正在用 DVD 播放器或电脑观看它，MPEG4 文件正在播放，一切正常。现在，显然如果播放器不通过专门的 MPEG4 算法来解释文件，它就无法播放这个文件。毕竟，任何其他算法都只会把事情搞得一团糟；所以算法包含了必要的信息。同样显然的是，文件本身也包含了必要的信息，因为我们不能简单地告诉 DVD 播放器播放_泰坦尼克号_而不拥有那个非常具体的数千兆字节的文件——给 MPEG4 算法输入一个随机文件或根本不输入文件同样只会制造一团混乱。因此，算法和文件都包含了对最终受版权保护的实际视听体验所必需的信息。</p>
-<p>没有什么能阻止我们将算法和文件融合在一起。在计算机科学中有一句老话：“代码即数据，数据即代码”。每台计算机都依赖于这个事实。我们可以轻松地得出一个 4 或 5 千兆字节的可执行文件，当它独自运行时，就会产生_泰坦尼克号_。将所需数据存储在程序中的一般方法是一种常见的编程技术，因为它使安装更简单。</p>
-<p>上述论述的要点是，构成_泰坦尼克号_的信息是可移动的；它可以在任何时候从文件转移到算法——反之亦然。</p>
-<p>如果我们愿意，我们可以将大部分信息从算法挤压到文件中；一个例子是 WAV 音频文件，它基本上是扬声器的原始输入——几乎不需要解释（与小得多的 FLAC 文件相比，后者需要大量的算法处理）。对于_泰坦尼克号_的 MPEG4 文件也可以做类似的事情。一台电视是 n 像素乘以 n，每秒渲染 n 次，所以一个完全原始且几乎未经解释的文件将是 n<sup>3</sup> 个像素的有限总和。这证明了频谱的一端是可能的，即文件包含几乎所有信息，而算法包含极少信息。</p>
+<p>但这个命题应该会让有版权意识的人潜意识地担忧。内容取决于解释？后者与前者密不可分？这感觉很危险。但这变得更糟。</p>
+<section id="代码是数据数据是代码" class="level2">
+<h2><a href="#代码是数据数据是代码" title="Link to section: § &#39;代码是数据，数据是代码&#39;">代码是数据，数据是代码</a></h2>
+<p>假设我们要一部受版权保护的电影，<a href="https://en.wikipedia.org/wiki/Titanic_(1997_film)" id="_T413Jvr2" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Titanic_(1997_film)#bodyContent"><em>泰坦尼克号</em></a>。我们在 DVD 播放器或电脑上观看它，播放 MPEG4 文件，一切都很好。现在，似乎很清楚，如果播放器不通过特殊的仅限 MPEG4 的算法解释文件，它就无法播放文件。毕竟，任何其他算法都会把事情搞得一团糟；所以算法包含必要的信息。同样清楚的是，文件本身包含必要的信息，因为我们不能简单地告诉 DVD 播放器播放 <em>泰坦尼克号</em> 而没有那个非常具体的多千兆字节文件—给 MPEG4 算法一个随机文件或根本没有文件同样只会把事情搞得一团糟。所以，算法和文件都包含实际视听的最终受版权保护体验所必需的信息。</p>
+<p>没有什么能阻止我们将算法和文件融合在一起。’代码是数据，数据是代码’是计算机科学的一个真理。每台计算机都依赖于这个真理。我们可以很容易地想出一个 4 或 5 千兆字节的可执行文件，当它独自运行时，产生 <em>泰坦尼克号</em>。在程序中存储所需数据的一般方法是一种常见的编程技术，因为它使安装更简单。</p>
+<p>上述的重点是，构成 <em>泰坦尼克号</em> 的信息是移动的；它可以随时从文件中转移到算法中—反之亦然。</p>
+<p>如果我们想的话，我们可以将大部分信息从算法挤到文件中；一个例子是 WAV 音频文件，它基本上是扬声器的原始输入—几乎不需要解释（相对于更小的 FLAC 文件，它需要大量的算法工作）。类似的事情也可以对 <em>泰坦尼克号</em> MPEG4 文件做。电视是 n 像素乘以 n，每秒渲染 n 次，所以一个完全原始和几乎未解释的文件将是 n<sup>3</sup> 像素的有限和。这表明频谱的一端是可能的，其中文件包含几乎所有信息，而算法包含很少。</p>
 </section>
 <section id="思想实验" class="level2">
 <h2><a href="#思想实验" title="Link to section: § &#39;思想实验&#39;">思想实验</a></h2>
-<p>频谱的另一端是算法拥有大部分信息而文件只有极少信息。我们如何构造这样一种情况？</p>
-<p>好吧，考虑最退化的例子：一个在其内部包含_泰坦尼克号_帧数组的算法。这个可执行文件需要 0 比特的输入。一个不那么极端的例子：可执行文件持有_泰坦尼克号_的每一帧，从 1 编号到（比如说）100 万。那么输入只需要是 <code>1,2,3,4..1000000</code>。当我们在适当的输入上运行该算法时，瞧——_泰坦尼克号_出现了！</p>
-<p>你说这很荒谬，什么也没证明。好吧，如果换成 400 万个四分之一帧呢，你满意吗？不满意？也许 1600 万个十六分之一帧将足够不像_泰坦尼克号_了。如果这还不能让你满意，我愿意细到像素级别。值得注意的是，即使是像素级别版本的算法仍然可以编码所有其他电影！逐像素表达其他电影可能很笨拙（一帧将是一个几乎任意的序列，如 456788,67,89,189999,1001..20000），但这是可以做到的。</p>
-<p>细心的读者应该已经注意到了，但这个假想的_泰坦尼克号_算法恰好证明了我之前关于”天下没有免费的午餐”和算法拥有知识的观点；这个算法对_泰坦尼克号_了解得令人难以置信地多，因此_泰坦尼克号_获得了极短的压缩输出；但它仍然让我们能够编码其他所有电影——只是输出更长。</p>
+<p>频谱的另一端是算法拥有大部分信息而文件拥有很少。我们如何构建这样的情况？</p>
+<p>好吧，考虑最退化的例子：一个包含 <em>泰坦尼克号</em> 帧数组的算法。这个可执行文件将需要 0 位的输入。一个不太极端的例子：可执行文件持有 <em>泰坦尼克号</em> 的每一帧，编号从 1 到（比如说）100 万。输入将仅由 [1,2,3,4..1000000] 组成。当我们在这个适当的输入上运行算法时，瞧—<em>泰坦尼克号</em>！</p>
+<p>荒谬，你说。那什么也没证明。好吧，如果它有 400 万个四分之一帧你会满意吗？不？也许 <span class="date-range">1600<sub><span title="1600 was 426 years ago.">426ya</span></sub></span> 万个十六分之一帧将足够不像 <em>泰坦尼克号</em>。如果这不能满足你，我愿意下到像素级别。值得注意的是，即使是一个像素级别的算法版本仍然可以编码所有其他电影！不得不逐个像素地表达其他电影可能会很尴尬（一帧将是一个几乎任意的序列，如 456788,67,89,189999,1001..20000），但它是可以做到的。</p>
+<p>细心的读者已经注意到了这一点，但这个假设的 <em>泰坦尼克号</em> 算法精确地证明了我关于 TANSTAAFL 和算法知道事情的意思；这个算法知道关于 <em>泰坦尼克号</em> 的惊人数量，因此 <em>泰坦尼克号</em> 受到了极短压缩输出的青睐；但它仍然允许我们编码所有其他电影—只是输出更长。</p>
 </section>
-<section id="版权的结构与解释" class="level2">
-<h2><a href="#版权的结构与解释" title="Link to section: § &#39;版权的结构与解释&#39;">版权的结构与解释</a></h2>
-<p>现在从版权角度考虑这个算法频谱。在标准 MPEG4 算法和电影文件的情况下，我认为版权明显只属于电影文件。没有人会提出相反的意见（软件专利是一个正交的问题）。算法对电影有一点了解，了解的是人类制作的电影，而不是所有可能电影的集合——这不过是一个可疑的学术趣谈。同样，在我们的_泰坦尼克号_算法和那个仅仅是从 1 到 100 万的整数列表的文件的情况下，所有的版权显然适用于算法——毕竟，人们不能对像 1 或 100 万这样的自然事实主张版权，而且我很难看出像 1 到 100 万这样的简单序列如何能被版权保护。</p>
-<p>但在这里我们遇到了一个滑坡问题！在我们两个案例之间的许多可能步骤中的每一步，都有一点信息从文件溜到算法中（或反之亦然）。坚持认为文件<em>总是</em>受版权保护的东西，或者算法<em>总是</em>受版权保护的东西——这都是站不住脚的——因为在任何一种情况下，我们都可以产生一个算法或文件，常识告诉我们它<em>必须</em>是受版权保护的对象。但我们无法确定它们在哪里交换了角色。是在四分之三的位置？还是在一半的位置？</p>
-<p>但在一半的位置上，两者都不是_泰坦尼克号_，而且两者仍然可以用于其他事物。那个处于中间位置的算法可以合理地用于压缩另一部航海题材的作品，比如<a href="https://en.wikipedia.org/wiki/Horatio_Hornblower#Screen_adaptations" id="_ef93sZor" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Horatio_Hornblower#bodyContent"><em>Horatio Hornblower</em></a>的剧集——如果我们已经细化到操作小像素块的层面，整个算法中可能没有一个可识别的_泰坦尼克号_特征，但有大量有用的”蓝色”或”黑色”块。这个滑坡问题并不像某些那么严重，因为我们可以加总电影的比特数（文件也许是 320 亿字节，可执行文件可能是几亿字节），并且知道可能的高效中间体数量必须等于或少于这个数；但 10 亿或 1000 亿个中间步骤仍然给我们带来了滑坡问题——我们如何合理地指定版权只在第 667,503,001 个比特处发生变化，而在之前的任何比特处都不变？</p>
+<section id="版权的结构和解释" class="level2">
+<h2><a href="#版权的结构和解释" title="Link to section: § &#39;版权的结构和解释&#39;">版权的结构和解释</a></h2>
+<p>现在从版权的角度考虑这个算法谱系。对我来说很清楚，在标准 MPEG4 算法和电影文件的情况下，版权完全在于电影文件。没有人会建议相反（软件专利是一个正交问题）。算法知道一点关于电影，关于人造电影而不是所有可能电影的集合—这只是一个可疑的智力奇迹。同样清楚的是，在我们的 <em>泰坦尼克号</em> 算法和仅仅是整数 1–100 万的列表的文件的情况下，所有版权都适用于算法—毕竟，人们不能对像 1 或 100 万这样的自然事实拥有版权，而且我很难看出像 1 到 100 万这样的微不足道的序列怎么可能被版权保护。</p>
+<p>但在这里我们将遇到滑坡谬误！在我们两个案例之间的许多可能步骤的每一步中，都有一点点信息从文件中滑出并进入算法（或反之亦然）。坚持文件 <em>总是</em> 受版权保护的东西，或者算法 <em>总是</em> 受版权保护的东西是站不住脚的—因为在任何一种情况下，我们都可以生成一个常识告诉我们 <em>必须</em> 是受版权保护的对象的算法或文件。但我们无法指出它们在何处交换角色。是在 ¾ 标记处吗？还是中途？</p>
+<p>但在中途标记处，两个项目都不是 <em>泰坦尼克号</em>，两者仍可用于其他用途。中途算法可以似是而非地用于压缩另一部航海作品的情节，如 <a href="https://en.wikipedia.org/wiki/Horatio_Hornblower#Screen_adaptations" id="_ef93sZor" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Horatio_Hornblower#bodyContent"><em>霍雷肖·霍恩布洛尔</em></a> —如果我们下到操作小像素材的水平，整个算法中可能没有一个可识别的 <em>泰坦尼克号</em> 特征，但有大量有用的‘蓝色’或‘黑色’块。这个滑坡并不像某些滑坡那样糟糕，因为我们可以将电影的位数相加（文件可能是 320 亿字节，可执行文件可能是几亿字节），并知道可能的有效中间体的数量必须等于或小于那个；但 10 亿或 1000 亿个中间步骤仍然向我们提出了滑坡问题，即我们如何明智地指定版权仅在第 667,503,001<sup>th</sup> 位改变，而不是之前的任何位。</p>
 </section>
 </section>
-<section id="一切昭然若揭" class="level1">
-<h1><a href="#一切昭然若揭" title="Link to section: § &#39;一切昭然若揭&#39;">一切昭然若揭</a></h1>
-<p>没有任何有意义且非任意的线可以划定。版权是机器中一个不可分析的幽灵，迄今为止靠着法令和有限的人类（机器）能力维系着。在此之前这个问题很少出现，因为人类无法自由地改变我们的眼睛或耳朵进行多少解释，而且我们缺乏心理能力在极其详尽的文本和极其简略的、暗示性的语言之间自由选择；我们可以尝试，但数学胜过我们，能够产生相差数量级的程序/数据对，而我们的机器可以处理这些数学运算。</p>
-<p>但现在我们对信息等概念有了更好的理解，显然版权在其逻辑或道德依据上已不再可持续。维持版权只有实际的经济理由，而当前的版权制度显然未能实现这些目标。</p>
+<section id="在其中一切都变得清晰" class="level1">
+<h1><a href="#在其中一切都变得清晰" title="Link to section: § &#39;在其中一切都变得清晰&#39;">在其中一切都变得清晰</a></h1>
+<p>没有有意义且非任意的线可以画。版权是机器中不可分析的幽灵，到目前为止它是基于命令和有限的人类（机器）能力维持的。这在以前很少出现，因为人类不能自由改变我们的眼睛或耳朵所做的解释有多少，我们缺乏在极其拼写和详细的文本与极其难以理解的省略暗示语言之间自由选择的智力能力；我们可能会尝试，但数学胜过我们，并且可以产生数量级差异的程序/数据对，而我们的机器可以处理数学。</p>
+<p>但现在我们对诸如信息之类的概念有了更好的理解，显然版权在其逻辑或道德优点上不再可持续。维持版权只有实际的经济原因，而当前的版权制度显然未能实现这些目标。</p>
 </section>
-<section id="另见" class="level1">
-<h1><a href="#另见" title="Link to section: § &#39;另见&#39;">另见</a></h1>
+<section id="外部链接" class="level1">
+<h1><a href="#外部链接" title="Link to section: § &#39;外部链接&#39;">外部链接</a></h1>
 <ul>
-<li><p><a href="http://www.faqs.org/faqs/compression-faq/" id="_s2vA6bPU">The Compression FAQ</a></p></li>
+<li><p><a href="http://www.faqs.org/faqs/compression-faq/" id="_s2vA6bPU">压缩 FAQ</a></p></li>
 </ul>
 </section>
 <aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>例如，如果你承认版权作为一项道德权利而存在，那么你就立即接受了<em>另一项</em>道德权利——言论自由——的废除；这本质上就内含于版权的概念之中，版权不过是对他人言论施加限制而已。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>引自 <a href="https://en.wikipedia.org/wiki/Stephen_Breyer" id="_CzlpBv_U" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Stephen_Breyer#bodyContent">Stephen Breyer</a> 在 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span> 年 <a href="http://www.supremecourt.gov/opinions/11pdf/10-545.pdf" id="_ViTsnXSU" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">Golan v. Holder</a> 案中的反对意见（<a href="https://en.wikipedia.org/wiki/Golan_v._Holder" id="_z7L3OiOG" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Golan_v._Holder#bodyContent">维基百科</a>）：</p>
+<li id="fn1"><p>例如，如果你承认版权作为一种道德权利存在，那么你就立即接受了废除 <em>另一种</em> 道德权利，即言论自由；这本质上内置于版权的概念中，因为版权无非是对他人的言论施加限制。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>来自 <a href="https://en.wikipedia.org/wiki/Stephen_Breyer" id="_CzlpBv_U" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Stephen_Breyer#bodyContent">斯蒂芬·布雷耶</a> 在 <a href="https://www.supremecourt.gov/opinions/11pdf/10-545.pdf" id="_7-kMezIk" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">Golan v. Holder</a> <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span> 中的异议 (<a href="https://en.wikipedia.org/wiki/Golan_v._Holder" id="_z7L3OiOG" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Golan_v._Holder#bodyContent">维基百科</a>):</p>
 <blockquote>
-<p>Jefferson eventually came to agree with Madison, supporting a limited conferral of monopoly rights but only “as <em>an encouragement to men to pursue ideas which may produce utility</em>.” Letter from Thomas Jefferson to Isaac McPherson (Aug. 13, <span class="date-range">1813<sub><span title="1813 was 213 years ago.">213ya</span></sub></span>), in 6 Papers of Thomas Jefferson, at 379, 383 (J. Looney ed. <span class="date-range">2009<sub><span title="2009 was 17 years ago.">17ya</span></sub></span>) (emphasis added).</p>
-<p>This utilitarian view of copyrights and patents, embraced by Jefferson and Madison, stands in contrast to the “natural rights” view underlying much of continental European copyright law-a view that the English booksellers promoted in an effort to limit their losses following the enactment of the <a href="https://en.wikipedia.org/wiki/Statute_of_Anne" id="_JAVMY5wu" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Statute_of_Anne#bodyContent">Statute of Anne</a> and that in part motivated the enactment of some of the colonial statutes. Patterson 158-179, 183-192. Premised on the idea that an author or inventor has an inherent right to the fruits of his labor, it mythically stems from a legendary 6th-century statement of King Diarmed “‘to every cow her calf, and accordingly to every book its copy.’” A. Birrell, Seven Lectures on the Law and History of Copy right in Books 42 (<span class="date-range">1899<sub><span title="1899 was 127 years ago.">127ya</span></sub></span>). That view, though perhaps reflected in the Court’s opinion, <em>ante</em>, at 30, runs contrary to the more utilitarian views that influenced the writing of our own Constitution’s <a href="https://en.wikipedia.org/wiki/Copyright_Clause" id="_Jye_KLMU" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Copyright_Clause#bodyContent">Copyright Clause</a>. See S. Ricketson, <a href="http://www.amazon.com/Convention-Protection-Literary-Artistic-1886-1986/dp/085121603X/" id="_vtgGxhg6" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>The Berne Convention for the Protection of Literary and Artistic Works: <span class="date-range" title="The date range 1886–1986 lasted 100 years, ending 40 years ago.">1886<span class="subsup"><sup>–</sup><sub>100</sub></span>1986<sub><span title="1886 was 140 years ago.">40ya</span></sub></span></em></a><span>, pp. 5-6 (<span class="date-range">1987<sub><span title="1987 was 39 years ago.">39ya</span></sub></span>) (The first French copyright laws </span>“placed authors’ rights on a more elevated basis than the Act of Anne had done,” on the understanding that they were “simply according formal recognition to what was already inherent in the ‘very nature of things’”<span>); S. Stewart, International Copyright and Neighbouring Rights 6-7 (2d ed. <span class="date-range">1989<sub><span title="1989 was 37 years ago.">37ya</span></sub></span>) (describing the European system of </span><em>droit d’auteur</em>).</p>
+<p>杰斐逊最终同意麦迪逊的观点，支持有限的垄断权授予，但仅作为“<em>鼓励人们追求可能产生效用的想法</em>”。Thomas Jefferson 致 Isaac McPherson 的信 (<span class="date-range">1813<sub><span title="1813 was 213 years ago.">213ya</span></sub></span> 年 8 月 13 日), in 6 <em>Papers of Thomas Jefferson</em><span>, at 379, 383 (J. Looney ed. <span class="date-range">2009<sub><span title="2009 was 17 years ago.">17ya</span></sub></span>) (强调后加)。</span></p>
+<p>这种被杰斐逊和麦迪逊拥护的版权和专利的功利主义观点，与作为许多欧洲大陆版权法基础的“自然权利”观点形成鲜明对比—这是一种英国书商在 <a href="https://en.wikipedia.org/wiki/%E5%AE%89%E5%A6%AE%E5%A5%B3%E7%8E%8B%E6%B3%95%E4%BB%A4" id="_vPnenQW4" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%AE%89%E5%A6%AE%E5%A5%B3%E7%8E%8B%E6%B3%95%E4%BB%A4#bodyContent">安妮女王法令</a> 颁布后为了限制损失而推广的观点，并且在某种程度上激发了一些殖民地法规的颁布。Patterson 158-179, 183-192。以前提是作者或发明者对他的劳动成果有固有的权利为基础，它神话般地源于 6 世纪迪亚米德国王的一句传奇声明“‘每头母牛都有它的小牛，因此每本书都有它的副本。’” A. Birrell, <em>Seven Lectures on the Law and History of Copy right in Books</em> 42 (<span class="date-range">1899<sub><span title="1899 was 127 years ago.">127ya</span></sub></span>)。这种观点，尽管可能反映在法院的意见中，<em>ante</em>, at 30, 与影响我们自己宪法 <a href="https://en.wikipedia.org/wiki/%E7%89%88%E6%9D%83%E6%9D%A1%E6%AC%BE" id="_wM4kXjRN" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E7%89%88%E6%9D%83%E6%9D%A1%E6%AC%BE#bodyContent">版权条款</a> 写作的更功利主义观点背道而驰。参见 S. Ricketson, <a href="https://www.amazon.com/Convention-Protection-Literary-Artistic-1886-1986/dp/085121603X/" id="_jm-erxO8" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>The Berne Convention for the Protection of Literary and Artistic Works: <span class="date-range" title="The date range 1886–1986 lasted 100 years, ending 40 years ago.">1886<span class="subsup"><sup>–</sup><sub>100</sub></span>1986<sub><span title="1886 was 140 years ago.">40ya</span></sub></span></em></a><span>, pp. 5-6 (<span class="date-range">1987<sub><span title="1987 was 39 years ago.">39ya</span></sub></span>) (法国第一部版权法“将作者的权利置于比安妮女王法令更高的基础上”，其理解是它们“仅仅是正式承认‘事物的本质’中已经固有的东西”); S. Stewart, </span><em>International Copyright and Neighbouring Rights</em><span> 6-7 (2d ed. <span class="date-range">1989<sub><span title="1989 was 37 years ago.">37ya</span></sub></span>) (描述欧洲的 </span><em>droit d’auteur</em> 系统)。</p>
 </blockquote>
 <a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></li>
-<li id="fn3"><p><a href="https://en.wikipedia.org/wiki/Mark_Helprin" id="_alt-AYTf" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mark_Helprin#bodyContent">Mark Helprin</a> 的社论 <a href="http://www.nytimes.com/2007/05/20/opinion/20helprin.html" id="_k24bN_rR" data-link-icon="new-york-times" data-link-icon-type="svg">“A Great Idea Lives Forever. Shouldn’t Its Copyright?”</a>（Lessig 的<a href="http://www.lessig.org/2009/05/the-solipsist-and-the-internet/" id="_O6uhky5X" title="The Solipsist and the Internet (a review of Helprin&#39;s _Digital Barbarism_)">书评</a>）是这类观点的标准范例之一。他一开始就声称知识产权在道德上等同于其他形式的财产，因此在道德上受到同等的保护：</p>
+<li id="fn3"><p><a href="https://en.wikipedia.org/wiki/Mark_Helprin" id="_alt-AYTf" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mark_Helprin#bodyContent">Mark Helprin</a> 的社论 <a href="https://www.nytimes.com/2007/05/20/opinion/20helprin.html" id="_49RVh62R" data-link-icon="new-york-times" data-link-icon-type="svg">“一个伟大的想法永远存在。它的版权不应该吗？”</a> (Lessig 的 <a href="https://web.archive.org/web/20130117031827/http://www.lessig.org/2009/05/the-solipsist-and-the-internet/" id="_ZF67_p3F" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20130117031827if_/http://www.lessig.org/2009/05/the-solipsist-and-the-internet/" title="The Solipsist and the Internet (a review of Helprin&#39;s _Digital Barbarism_)">评论</a>) 是这种观点的标准例子之一。他首先声称知识产权在道德上等同于其他形式的财产，因此像其他财产一样受到道德保护：</p>
 <blockquote>
-<p>What if, after you had paid the taxes on earnings with which you built a house, sales taxes on the materials, real estate taxes during your life, and inheritance taxes at your death, the government would eventually commandeer it entirely? This does not happen in our society … to houses. Or to businesses. Were you to have ushered through the many gates of taxation a flour mill, travel agency or newspaper, they would not suffer total confiscation.</p>
+<p>如果在你支付了用来盖房子的收入税、材料的销售税、你生前的房地产税和你死后的遗产税之后，政府最终完全征用了它，你会怎么想？这在我们的社会中不会发生……对房子。或者对企业。如果你通过了许多税收之门拥有了一个面粉厂、旅行社或报纸，它们不会遭受完全没收。</p>
 </blockquote>
-<p>当然，作者可以永久拥有他的作品——那个物理载体。政府并未对作者的手稿或电脑施以”全面没收”。相反，被没收的是要求政府在其管辖范围内，以物理强制和暴力手段，执行某些关于信息的做法的能力。这与财产有些不同。Helprin 随后论及版权的经济理据，却立刻诉诸超越任何单纯法律或经济收益的伦理关切：</p>
+<p>当然，作者可以永久拥有他的作品—物理制品。政府不对作者的手稿或计算机进行‘完全没收’。相反，被没收的是呼吁政府在其境内任何地方以物理胁迫和暴力强制执行关于信息的某些实践的能力。这与财产略有不同。Helprin 然后解决了版权的经济理由，却立即诉诸超越任何仅仅是法律或经济收益的伦理关注：</p>
 <blockquote>
-<p>It is, then, for the public good. But it might also be for the public good were Congress to allow the enslavement of foreign captives and their descendants (this was tried); the seizure of Bill Gates’s bankbook; or the ruthless suppression of Alec Baldwin. You can always make a case for the public interest if you are willing to exclude from common equity those whose rights you seek to abridge. But we don’t operate that way, mostly…Congress is free to extend at will the term of copyright. It last did so in <span class="date-range">1998<sub><span title="1998 was 28 years ago.">28ya</span></sub></span>, and should do so again, as far as it can throw. Would it not be just and fair for those who try to extract a living from the uncertain arts of writing and composing to be freed from a form of confiscation not visited upon anyone else? The answer is obvious, and transcends even justice. No good case exists for the inequality of real and intellectual property, because no good case can exist for treating with special disfavor the work of the spirit and the mind.</p>
+<p>那么，这是为了公共利益。但是如果国会允许奴役外国俘虏及其后代（这曾被尝试过）；没收比尔·盖茨的银行存折；或者无情地镇压亚历克·鲍德温，也可能是为了公共利益。如果你愿意将那些你试图剥夺其权利的人排除在共同权益之外，你总是可以为公共利益辩护。但我们不那样运作，大部分……国会可以随意延长版权期限。它上次这样做是在 <span class="date-range">1998<sub><span title="1998 was 28 years ago.">28ya</span></sub></span> 年，只要它能扔，它就应该再次这样做。对于那些试图从写作和作曲的不确定艺术中谋生的人来说，免受一种不加诸于其他任何人的没收形式，难道不是公正和公平的吗？答案是显而易见的，甚至超越了正义。不存在真正的财产和知识产权不平等的好的理由，因为不存在以特殊的不利对待精神和思想的作品的好的理由。</p>
 </blockquote>
-<p>引自 Helprin 的 <a href="http://web.archive.org/web/20121122031147/http://www.nationalreview.com/nrd/article/?q=OWUzNTRjMzZlN2NkN2ZhYjFkZTRiM2RjZDMzNDc1NmM" id="_9Xzun__0" data-link-icon="internet-archive" data-link-icon-type="svg">“In Defense of The Book: A reply to the critics of <em>Digital Barbarism</em>”</a>：</p>
+<p>来自 Helprin 的 <a href="https://web.archive.org/web/20121122031147/http://www.nationalreview.com/nrd/article/?q=OWUzNTRjMzZlN2NkN2ZhYjFkZTRiM2RjZDMzNDc1NmM" id="_FIGvYIQA" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20121122031147if_/http://www.nationalreview.com/nrd/article/?q=OWUzNTRjMzZlN2NkN2ZhYjFkZTRiM2RjZDMzNDc1NmM">“捍卫书籍：对 <em>Digital Barbarism</em> 批评者的回复”</a>:</p>
 <blockquote>
-<p>Copyright was the sometimes sparkling, controversial fuse I used as an armature for a much expanded argument in regard to the relationship of man and machine, in which I attacked directly into the assault of modernism, collectivism, militant atheism, utilitarianism, mass conformity, and like things that are poison to the natural pace and requirements of the soul, that reify what those who say there is no soul believe is left, and that, in a headlong rush to fashion man solely after his own conceptions, are succeeding. The greater the success of this tendency, however, the unhappier are its adherents and the more they seek after their unavailing addictions, which, like the explanation for nymphomania, is not surprising. It is especially true in regard to the belief that happiness and salvation can be found in gadgets: i.e., toy worship. I addressed this. I defended property as a moral necessity of liberty. I attempted to reclaim Jefferson from the presumptuous embrace of the copyleft. (Even the docents at Monticello misinterpret Jefferson, failing to recognize his deep and abiding love of the divine order.) And I advanced a proposition to which the critics of copyright have been made allergic by their collectivist education - that the great achievement of Western civilization is the evolution from corporate to individual right, from man defined, privileged, or oppressed by cast, clan, guild, ethnicity, race, sex, and creed, to the individual’s rights and privileges that once were the province only of kings</p>
-<p>But this is its concluding passage:</p>
+<p>版权是我用作扩大的关于人与机器关系论点的有时闪闪发光、有争议的导火索，在这个论点中，我直接攻击现代主义、集体主义、好战的无神论、功利主义、大众一致性以及类似的东西，这些东西对灵魂的自然节奏和要求是有毒的，将那些说没有灵魂的人认为剩下的东西具体化，并且在匆忙将人仅仅按照他自己的概念塑造的过程中，正在取得成功。然而，这种趋势越成功，它的追随者就越不快乐，他们就越追求他们无效的成瘾，就像对慕男狂的解释一样，这不足为奇。关于幸福和救赎可以在小工具中找到的信念尤其如此：即玩具崇拜。我解决了这个问题。我捍卫财产作为自由的道德必要性。我试图从 copyleft 的狂妄拥抱中夺回杰斐逊。（即使蒙蒂塞洛的讲解员也误解了杰斐逊，未能认识到他对神圣秩序的深沉而持久的爱。）并且我提出了一个版权批评者因其集体主义教育而过敏的命题—西方文明的伟大成就是从公司权利到个人权利的演变，从由种姓、宗族、行会、种族、种族、性别和信仰定义、特权或压迫的人，到曾经只是国王的领域的个人的权利和特权</p>
+<p>但这是它的结尾段落：</p>
 <blockquote>
-<p>’The new, digital barbarism is, in its language, comportment, thoughtlessness, and obeisance to force and power, very much like the old. And like the old, and every form of tyranny, hard or soft, it is most vulnerable to a bright light shone upon it. To call it for what it is, to examine it while paying no heed to its rich bribes and powerful coercions, to contrast it to what it presumes to replace, is to begin the long fight against it.</p>
-<p>Very clearly, the choice is between the preeminence of the individual or of the collective, of improvisation or of routine, of the soul or of the machine. It is a choice that perhaps you have already made, without knowing it. Or perhaps it has been made for you. But it is always possible to opt in or out, because your affirmations are your own, the court of judgement your mind and heart. These are free, and you are the sovereign, always. Choose.’</p>
+<p>’新的数字野蛮主义，在语言、举止、轻率以及对力量和权力的顺从方面，非常像旧的。像旧的一样，像每一种形式的暴政一样，无论是硬的还是软的，它最容易受到照耀它的强光的伤害。称呼它的本质，在不理会其丰富的贿赂和强大的胁迫的同时检查它，将其与它假定要取代的东西进行对比，就是开始反对它的长期斗争。</p>
+<p>非常清楚，选择是在个人或集体的优先地位之间，即兴创作或常规之间，灵魂或机器之间。这是一个也许你已经在不知不觉中做出的选择。或者也许它已经为你做出了。但这总是可以选择加入或退出，因为你的肯定是你自己的，判断的法庭是你的思想和心灵。这些是自由的，你是主权者，永远。选择。’</p>
 </blockquote>
 </blockquote>
 <a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></li>
-<li id="fn4"><p>这应该只适用于解压缩——只有不称职的压缩算法才会将一个小输入<em>压缩</em>为一个大输出，因为算法的格式可以以一个比特开头来指示后面的内容是否被压缩，如果输出大于输入，就根本不进行压缩。那个额外的比特使文件变大，因此不会引起任何关于鸽巢原理的问题。<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>我遇到过的最极端的时空权衡，远超任何<a href="https://en.wikipedia.org/wiki/Memoization" id="_K5G4vQ13" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Memoization#bodyContent">记忆化</a>或<a href="https://en.wikipedia.org/wiki/Dynamic_programming" id="_i2j90xwh" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Dynamic_programming#bodyContent">动态规划</a>的例子，是一个纯理论性的例子；来自 <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.70.4331&amp;rep=rep1&amp;type=pdf" id="_NF4cEB_l" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="Logical Depth and Physical Complexity"><span class="cite"><span class="cite-author">Bennett</span><span class="cite-date">1988</span></span></a>：</p>
+<li id="fn4"><p>这应该仅适用于解压—只有使用无能的压缩算法，人们才能将小输入 <em>压缩</em> 为大输出，因为算法的格式可以从一个位开始，指示以下内容是压缩还是未压缩，如果输出大于输入，则根本不麻烦压缩。那个额外的位使文件变大，因此不会引起鸽巢原理的任何问题。<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>我遇到过的最极端的时空权衡，远超任何 <a href="https://en.wikipedia.org/wiki/%E8%AE%B0%E5%BF%86%E5%8C%96" id="_i2lc1kKk" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E8%AE%B0%E5%BF%86%E5%8C%96#bodyContent">记忆化</a> 或 <a href="https://en.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92" id="_9NX6fxaq" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92#bodyContent">动态规划</a> 的例子，是一个纯理论的；来自 <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.70.4331&amp;rep=rep1&amp;type=pdf" id="_b3ptnK-3" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="Logical Depth and Physical Complexity"><span class="cite"><span class="cite-author">Bennett</span><span class="cite-date">1988</span></span></a>:</p>
 <blockquote>
-<p>The tradeoff between conciseness of representation and ease of decoding is illustrated in an extreme form by the information required to solve the <a href="https://en.wikipedia.org/wiki/Halting_problem" id="_TPGMRzpC" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Halting_problem#bodyContent">halting problem</a>. One standard representation of this information is as an <a href="https://en.wikipedia.org/wiki/Chaitin%27s_constant" id="_l9iotaaB" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Chaitin%27s_constant#bodyContent">infinite binary sequence K0</a> whose i’th bit is 0 or 1 according to whether the i’th program halts. This sequence is clearly redundant, because many instances of the halting problem are easily solvable or reducible to other instances. Indeed, K0 is far more redundant than this superficial evidence might indicate. Barzdin [2] showed that this information can be compressed to the logarithm of its original bulk, but <em>no concisely encoded representation of it can be decoded in recursively bounded time</em>.</p>
+<p>表示的简洁性和解码的容易性之间的权衡由解决 <a href="https://en.wikipedia.org/wiki/%E5%81%9C%E6%9C%BA%E9%97%AE%E9%A2%98" id="_afkNanMe" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%81%9C%E6%9C%BA%E9%97%AE%E9%A2%98#bodyContent">停机问题</a> 所需的信息以一种极端的形式说明。这种信息的一个标准表示是作为一个 <a href="https://en.wikipedia.org/wiki/Chaitin%27s_constant" id="_l9iotaaB" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Chaitin%27s_constant#bodyContent">无限二进制序列 K0</a>（停机集的特征序列），其第 i 位是 0 或 1 取决于第 i 个程序是否停机。这个序列显然是冗余的，因为停机问题的许多实例很容易解决或可归约为其他实例。事实上，K0 比这表面证据可能表明的要多余得多。Barzdin [2] 表明这种信息可以压缩到其原始体积的对数，但 <em>没有任何简洁编码的表示可以在递归有界时间内解码</em>。</p>
 </blockquote>
-<p><a href="https://en.wikipedia.org/wiki/Complexity_class" id="_bqjsBODs" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Complexity_class#bodyContent">复杂性类</a>如 <a href="https://en.wikipedia.org/wiki/NP-hardness" id="_QV4xu834" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/NP-hardness#bodyContent">NP-hard</a>，在复杂性层级中已经相当高了，是程序员们口中难以处理和徒劳的代名词。但对 K0 的极端空间高效表示的解码是一个<em>如此</em>缓慢的过程，它甚至不属于任何正常的复杂性类！<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>这是 <span class="cite"><span class="cite-author">Lampson</span><span class="cite-date">1983</span></span> 年的 <a href="http://users.ece.utexas.edu/~adnan/pop-05/lampson-system-design.pdf" id="_YEAZH12o" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“Hints for computer system design”</a> 对 Dijkstra 在 <a href="https://www.cs.utexas.edu/users/EWD/transcriptions/EWD07xx/EWD709.html" id="_5hBbHet5">“EWD 709: My hopes of computing science”</a> 中的评论的转述：</p>
-<blockquote>
-<p>The hope is that transformations from a modest library will provide a path from a naïve, inefficient but obviously correct program to a sophisticated efficient solution. I have seen how via program transformations striking gains in efficiency have been obtained by avoiding recomputations of the same intermediate results, even in situations in which this possibility —note that the intermediate results are never part of the original problem statement!— was, at first sight, surprising…I am afraid that great hopes of program transformations can only be based on what seems to me an underestimation of the logical brinkmanship that is required for the justification of really efficient algorithms. It is certainly true, that each program transformation embodies a theorem, but are these the theorems that could contribute significantly to the body of knowledge and understanding that would give us maturity? I doubt, for many of them are too trivial and too much tied to program notation.</p>
-</blockquote>
-<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<p>像 <a href="https://en.wikipedia.org/wiki/NP-hardness" id="_QV4xu834" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/NP-hardness#bodyContent">NP-hard</a> 这样的 <a href="https://en.wikipedia.org/wiki/%E5%A4%8D%E6%9D%82%E6%80%A7%E7%B1%BB" id="_7JdGFpi-" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%A4%8D%E6%9D%82%E6%80%A7%E7%B1%BB#bodyContent">复杂性类</a>，在复杂性等级中相当高，是程序员中棘手和无效的代名词。但是这种 K0 的极其节省空间的表示的解码是一个 <em>如此</em> 慢的过程，以至于它甚至不适合任何正常的复杂性类！<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p><span class="cite"><span class="cite-author">Lampson</span><span class="cite-date">1983</span></span> 年的 <a href="https://users.ece.utexas.edu/~adnan/pop-05/lampson-system-design.pdf" id="_ECSLfbbK" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“计算机系统设计提示”</a> 改写了 Dijkstra 在 <a href="https://www.cs.utexas.edu/~EWD/transcriptions/EWD07xx/EWD709.html" id="_qszu4Kzh" data-link-icon="EWD" data-link-icon-type="text,tri,sans">“EWD 709: 我对计算科学的希望”</a> 中的评论： &gt; 希望来自适度库的转换将提供从幼稚、低效但明显正确的程序到复杂高效解决方案的路径。我已经看到如何通过程序转换，通过避免重新计算相同的中间结果获得了惊人的效率提升，即使在这种情况—注意中间结果从未是原始问题陈述的一部分！—乍一看是令人惊讶的……恐怕对程序转换的巨大希望只能基于在我看来是对证明真正高效算法所需的逻辑边缘政策的低估。确实，每个程序转换都体现了一个定理，但这些定理是那些能显著贡献于给我们成熟的知识和理解体系的定理吗？我怀疑，因为它们中的许多太微不足道，并且太依赖于程序符号。<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </aside>
 

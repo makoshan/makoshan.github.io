@@ -1,9 +1,9 @@
 #!/bin/bash
-# Daily Intel 构建脚本 (在 WSL 中运行)
+# Mako Shan 构建脚本 (在 WSL 中运行)
 set -e
 
 echo "==================================="
-echo "Daily Intel 构建脚本"
+echo "Mako Shan 构建脚本"
 echo "==================================="
 echo ""
 

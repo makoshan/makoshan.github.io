@@ -1,0 +1,80 @@
+<p><a href="/style-guide" id="link-bibliography-gwern-style-guide" class="prefetch-not link-page link-modified-recently link-annotated" data-filesize-bytes="0" data-filesize-percentage="90">“Manual of Style”</a></p>
+<p> <span class="author cite-author"><a href="/index#abstract" id="_i198YQWg" class="prefetch-not link-page" data-filesize-bytes="4146" data-filesize-percentage="91">Gwern</a></span></p>
+<p><span class="date cite-date" title="2025-05-07">2025</span></p>
+<p><span class="link-tags"><a href="/doc/cs/css/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to cs/css tag index">CSS</a>, <a href="/doc/meta/index" class="prefetch-not link-tag link-page link-annotated icon-not" data-filesize-bytes="0" data-filesize-percentage="90" rel="tag" title="Link to meta tag index">meta</a></span></p>
+<blockquote>
+<figure>
+<img src="/doc/ai/nn/transformer/gpt/dall-e/4o/2026-01-07-gwern-gpt5-thevelveteenrabbit-velveteenaishoggoth-simplifiedforthumbnail.png" title="The Velveteen Shoggoth: if a boy loves a shoggoth long enough and hard enough, can it turn into a &lt;em&gt;real&lt;/em&gt; rabbit...?" id="_DZz0BUqE" class="float-right page-thumbnail invert-not" width="0" height="0" />
+</figure>
+<div class="page-description-annotation">
+<p>Style guide documentation of Gwern.net writing conventions for essays and code.</p>
+</div>
+<p>This page is the Manual of Style for Gwern.net, defining house conventions for prose, typography, and citations in a terse “classic style”. It is written to be usable by humans and tooling, including third-party editors and LLMs.</p>
+<p>It specifies Pandoc <a href="https://en.wikipedia.org/wiki/Markdown" id="_gCEHmPFk" class="link-live" data-url-iframe="https://en.m.wikipedia.org/wiki/Markdown#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg">Markdown</a> and HTML practices, including an “iceberg” information hierarchy (abstracts, margin notes, footnotes, collapses, and appendices) designed to keep pages dense but navigable. It also standardizes linking and citation behavior (minimal <code>Surname Year</code> links, deep anchors, and metadata for popups and archiving).</p>
+<p>It codifies presentation rules for tables, figures, and code (language-tagged blocks, Bash/<a href="https://en.wikipedia.org/wiki/Haskell" id="_AC8VbUc5" class="link-modified-recently link-live" data-url-iframe="https://en.m.wikipedia.org/wiki/Haskell#bodyContent" data-link-icon="wikipedia" data-link-icon-type="svg" title="Haskell">Haskell</a>/Elisp conventions, and lint-friendly source formatting), plus file naming and format whitelists for long-term stability. It includes an explicit policy for generative media: permitted only with human editing, clear provenance, and aggressive removal of model tells.</p>
+<p>The goal is “Long Content”: durable, self-documenting hypertext that compiles cleanly, reads well in source control, resists link rot, and stays maintainable for decades.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/style-guide#condensed-mos" id="toc-condensed-mos" class="prefetch-not link-page">Condensed MoS</a></li>
+<li><a href="/style-guide#writing" id="toc-writing" class="prefetch-not link-page">Writing</a></li>
+<li><a href="/style-guide#structure" id="toc-structure" class="prefetch-not link-page">Structure</a></li>
+<li><a href="/style-guide#markdown" id="toc-markdown" class="prefetch-not link-page">Markdown</a>
+<ul>
+<li><a href="/style-guide#essay-metadata" id="toc-essay-metadata" class="prefetch-not link-page">Essay Metadata</a></li>
+</ul></li>
+<li><a href="/style-guide#html" id="toc-html" class="prefetch-not link-page">HTML</a>
+<ul>
+<li><a href="/style-guide#transclusion" id="toc-transclusion" class="prefetch-not link-page">Transclusion</a></li>
+<li><a href="/style-guide#urls" id="toc-urls" class="prefetch-not link-page">URLs</a></li>
+<li><a href="/style-guide#inline" id="toc-inline" class="prefetch-not link-page">Inline</a></li>
+<li><a href="/style-guide#block" id="toc-block" class="prefetch-not link-page">Block</a></li>
+<li><a href="/style-guide#poetry" id="toc-poetry" class="prefetch-not link-modified-recently link-page" data-filesize-bytes="0" data-filesize-percentage="90">Poetry</a>
+<ul>
+<li><a href="/style-guide#inline-poetry" id="toc-inline-poetry" class="prefetch-not link-page">Inline Poetry</a></li>
+<li><a href="/style-guide#block-poetry" id="toc-block-poetry" class="prefetch-not link-page">Block Poetry</a>
+<ul>
+<li><a href="/style-guide#simple-block-poetry" id="toc-simple-block-poetry" class="prefetch-not link-page">Simple Block Poetry</a></li>
+<li><a href="/style-guide#complex-block-poetry" id="toc-complex-block-poetry" class="prefetch-not link-page">Complex Block Poetry</a></li>
+</ul></li>
+<li><a href="/style-guide#miscellaneous-poetry-formatting" id="toc-miscellaneous-poetry-formatting" class="prefetch-not link-page">Miscellaneous Poetry Formatting</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/style-guide#annotations" id="toc-annotations" class="prefetch-not link-page">Annotations</a></li>
+<li><a href="/style-guide#code" id="toc-code" class="prefetch-not link-page">Code</a>
+<ul>
+<li><a href="/style-guide#bash" id="toc-bash" class="prefetch-not link-page">Bash</a>
+<ul>
+<li><a href="/style-guide#script-structure-factoring" id="toc-script-structure-factoring" class="prefetch-not link-page">Script Structure &amp; Factoring</a></li>
+<li><a href="/style-guide#output-logging" id="toc-output-logging" class="prefetch-not link-page">Output &amp; Logging</a></li>
+<li><a href="/style-guide#dependencies-pre-flight-checks" id="toc-dependencies-pre-flight-checks" class="prefetch-not link-page">Dependencies &amp; Pre-Flight Checks</a></li>
+<li><a href="/style-guide#resource-friendliness" id="toc-resource-friendliness" class="prefetch-not link-page">Resource Friendliness</a></li>
+<li><a href="/style-guide#temporary-files-atomicity" id="toc-temporary-files-atomicity" class="prefetch-not link-page">Temporary Files &amp; Atomicity</a></li>
+<li><a href="/style-guide#shellcheck" id="toc-shellcheck" class="prefetch-not link-page">ShellCheck</a></li>
+<li><a href="/style-guide#inline-commentary-inside-commands" id="toc-inline-commentary-inside-commands" class="prefetch-not link-page">Inline Commentary Inside Commands</a></li>
+<li><a href="/style-guide#bash-script-template" id="toc-bash-script-template" class="prefetch-not link-page">Bash Script Template</a></li>
+</ul></li>
+<li><a href="/style-guide#haskell" id="toc-haskell" class="prefetch-not link-page">Haskell</a></li>
+</ul></li>
+<li><a href="/style-guide#generative-media" id="toc-generative-media" class="prefetch-not link-page">Generative Media</a></li>
+<li><a href="/style-guide#files" id="toc-files" class="prefetch-not link-page">Files</a>
+<ul>
+<li><a href="/style-guide#renaming" id="toc-renaming" class="prefetch-not link-page">Renaming</a></li>
+</ul></li>
+<li><a href="/style-guide#llm-writing-guide" id="toc-llm-writing-guide" class="prefetch-not link-page">LLM Writing Guide</a>
+<ul>
+<li><a href="/style-guide#mind-set" id="toc-mind-set" class="prefetch-not link-page">Mind-Set</a></li>
+<li><a href="/style-guide#draft-workflow-the-iceberg-build" id="toc-draft-workflow-the-iceberg-build" class="prefetch-not link-page">Draft Workflow (The “Iceberg Build”)</a>
+<ul>
+<li><a href="/style-guide#mini-meta-block-template" id="toc-mini-meta-block-template" class="prefetch-not link-page">Mini Meta-Block Template</a></li>
+<li><a href="/style-guide#inline-comment-keys" id="toc-inline-comment-keys" class="prefetch-not link-page">Inline Comment Keys</a></li>
+<li><a href="/style-guide#craft-specifics" id="toc-craft-specifics" class="prefetch-not link-page">Craft Specifics</a></li>
+<li><a href="/style-guide#llm-pitfalls-to-dodge" id="toc-llm-pitfalls-to-dodge" class="prefetch-not link-page">LLM Pitfalls to Dodge</a></li>
+</ul></li>
+<li><a href="/style-guide#success-metrics" id="toc-success-metrics" class="prefetch-not link-page">Success Metrics</a></li>
+<li><a href="/style-guide#troubleshooting-common-problems" id="toc-troubleshooting-common-problems" class="prefetch-not link-page">Troubleshooting Common Problems</a></li>
+<li><a href="/style-guide#style-examples" id="toc-style-examples" class="prefetch-not link-page">Style Examples</a></li>
+<li><a href="/style-guide#pre-handoff-checklist" id="toc-pre-handoff-checklist" class="prefetch-not link-page">Pre-Handoff Checklist</a></li>
+</ul></li>
+</ul>
+</div>
+</blockquote>
