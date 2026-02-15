@@ -98,9 +98,6 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/gwern-style'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
