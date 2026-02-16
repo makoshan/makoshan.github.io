@@ -83,10 +83,12 @@ jobs:
         run: |
           cd build
           if [ -x ".cache/hakyll/hakyll" ]; then
+            ./.cache/hakyll/hakyll clean
             ./.cache/hakyll/hakyll build
           else
             # 'cabal run hakyll -- build' runs the site generator.
             # The generator (site.hs) changes directory to the project root and outputs to _site.
+            cabal run hakyll -- clean
             cabal run hakyll -- build
           fi
 

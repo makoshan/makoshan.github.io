@@ -19,7 +19,7 @@ linkIDOverrides :: [(String, T.Text)]
 linkIDOverrides = setLike
   [
   ("/gpt-2-music", "gwern-presser-2019-music")
-  , ("/blog/index", "gwern-2009-blog-index")
+  , ("/blog/index.html", "gwern-2009-blog-index")
   , ("/fiction/your-hands-and-mine", "gwern-2025-hands")
   , ("/fiction/silver-bird", "gwern-2025-silver-bird")
   , ("/fiction/lab-animals", "gwern-2025-apollonian-1")

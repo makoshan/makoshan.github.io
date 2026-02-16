@@ -167,27 +167,7 @@ main =
 
              -- Homepage: compile /index and /index.html from the generated source.
              match "index.generated.md" $ do
-                 route $ constRoute "index"
-                 compile compileMarkdown
-             version "html-index" $ match "index.generated.md" $ do
                  route $ constRoute "index.html"
-                 compile compileMarkdown
-
-             -- A few repo-local pages are referenced by the navbar/homepage using
-             -- canonical, lowercase Gwern-style URLs. Provide those routes here
-             -- without forcing a repo-wide URL renaming.
-             match "gwern-net-design.md" $ do
-                 route $ constRoute "design"
-                 compile compileMarkdown
-             version "html-design" $ match "gwern-net-design.md" $ do
-                 route $ constRoute "design.html"
-                 compile compileMarkdown
-
-             version "alias-changelog" $ match "Changelog copy.md" $ do
-                 route $ constRoute "changelog"
-                 compile compileMarkdown
-             version "alias-changelog-html" $ match "Changelog copy.md" $ do
-                 route $ constRoute "changelog.html"
                  compile compileMarkdown
 
              let pageRoute =
@@ -195,19 +175,33 @@ main =
                    gsubRoute "," (const "") `composeRoutes`
                    gsubRoute "'" (const "") `composeRoutes`
                    gsubRoute " " (const "-") `composeRoutes`
-                   setExtension ""
+                   setExtension "html"
+
+             let toIndexRoute =
+                   gsubRoute "\\.html$" (const "/index.html") `composeRoutes` pageRoute
+
+             -- A few repo-local pages are referenced by the navbar/homepage using
+             -- canonical, lowercase Gwern-style URLs. Provide those routes here
+             -- without forcing a repo-wide URL renaming.
+             match "gwern-net-design.md" $ do
+                 route $ constRoute "design/index.html"
+                 compile compileMarkdown
+
+             version "alias-changelog" $ match "Changelog copy.md" $ do
+                 route $ constRoute "changelog/index.html"
+                 compile compileMarkdown
 
              if null args'
                  then do
                  match targetsMd $ do
-                   route pageRoute
+                   route toIndexRoute
                    compile compileMarkdown
                  match targetsPage $ do
-                   route pageRoute
+                   route toIndexRoute
                    compile compileMarkdown
                  else do
                  match targetsSingle $ do
-                   route pageRoute
+                   route toIndexRoute
                    compile compileMarkdown
 
              -- Static assets: always copy from ./static into _site/static so single-page builds

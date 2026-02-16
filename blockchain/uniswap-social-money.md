@@ -5,8 +5,8 @@ description: '粉丝经济'
 tags: blockchain
 created: 2020-03-08 16:58
 status: finished
-previous: './blockchain/sound-money'
-next: './blockchain/gitcoin-grants'
+previous: './blockchain/sound-money/'
+next: './blockchain/gitcoin-grants/'
 confidence: possible
 importance: 4
 cssExtension: drop-caps-kanzlei

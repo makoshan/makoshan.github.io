@@ -5,8 +5,8 @@ description: '二次方融资'
 tags: blockchain
 created: 2020-02-02 20:32
 status: finished
-previous: './blockchain/uniswap-social-money'
-next: './blockchain/sound-money'
+previous: './blockchain/uniswap-social-money/'
+next: './blockchain/sound-money/'
 confidence: possible
 importance: 4
 cssExtension: drop-caps-kanzlei

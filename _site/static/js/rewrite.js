@@ -151,12 +151,12 @@ addContentLoadHandler("loadReferencedIdentifier", (eventInfo) => {
 		pageContentContainer.appendChild(elementFromHTML(
 			  `<p>`
 			+ `You can try browsing <a
-									 href="/doc/index"
+											  	  href="/doc/index.html"
 									 class="link-annotated link-page backlink-not icon-not"
 									 title="‘Essays’, Gwern 2009"
 									 >documents by <strong>tag</strong></a>, `
 			+ `or <a
-				   href="/index"
+				   href="/index.html"
 				   class="link-annotated link-page backlink-not icon-not"
 				   title="'Essays', Gwern 2009"
 				   >return to the <strong>main page</strong></a>, `
@@ -368,7 +368,7 @@ function getBacklinksBlockForSectionOrFootnote(targetBlock, containingDocument) 
 		backlinksBlock.append(elementFromHTML(  `<p class="aux-links-list-label backlinks-list-label">`
 											  + `<strong>`
 											  + `<a
-											  	  href="/design#backlink"
+											  	  href="/design.html#backlink"
 											  	  class="icon-special link-annotated"
 											  	  data-link-icon="arrows-pointing-inwards-to-dot"
 											  	  data-link-icon-type="svg"

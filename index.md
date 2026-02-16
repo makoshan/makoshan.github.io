@@ -76,10 +76,10 @@ li p { margin: 0em; }
 
 # 加密经济学
 
-- [货币的历史: 从金本位到区块链](/blockchain/sound-money)
-- [Gitcoin Grants: 公共物品融资机制](/blockchain/gitcoin-grants)
-- [当屠龙者成为恶龙](/blockchain/dragon-slayer-become-the-dragon)
-- [Social Money: 代币化你的时间和才能](/blockchain/uniswap-social-money)
+- [货币的历史: 从金本位到区块链](/blockchain/sound-money/)
+- [Gitcoin Grants: 公共物品融资机制](/blockchain/gitcoin-grants/)
+- [当屠龙者成为恶龙](/blockchain/dragon-slayer-become-the-dragon/)
+- [Social Money: 代币化你的时间和才能](/blockchain/uniswap-social-money/)
 
 # 计算机科学
 

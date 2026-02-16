@@ -169,7 +169,7 @@ annotation2Markdown url (title, author, dateCreated, dateModified, kvs, _, _) =
          (if "/blog" `isPrefixOf` url then "" else " rel='canonical'") ++
          " data-include-template='annotation-blockquote-not' .include-spinner-not .id-not}"
        , ""
-       , "<div class='text-center' id='return-to-blog-index-link'>[<a href='/blog/index' class='link-page link-tag directory-indexes-upwards link-annotated-not' data-link-icon='arrow-up-left' data-link-icon-type='svg' rel='tag' title='Link to blog directory'>Return to blog index</a>]</div>"
+       , "<div class='text-center' id='return-to-blog-index-link'>[<a href='/blog/index.html' class='link-page link-tag directory-indexes-upwards link-annotated-not' data-link-icon='arrow-up-left' data-link-icon-type='svg' rel='tag' title='Link to blog directory'>Return to blog index</a>]</div>"
        ]
 
 generateDirectoryBlog :: [(FilePath, Path, MetadataItem)] -> IO ()
@@ -261,7 +261,7 @@ generateDirectoryBlogSimplified items =
                    [Para [Link ("",["link-modified-recently-not", "icon-not"],[]) -- "link-annotated-not",
                         [RawInline (Format "html") (T.pack $ titlecase' tle)]
                         (T.pack ("/" ++ delete ".md" f), if head u == '/' then "" else T.pack $ "Original URL: <" ++ u ++ ">")]]) items' ++
-                [ [Para [Link ("",["link-modified-recently-not", "link-annotated-not", "icon-not"],[]) [Str "[…]"] ("/blog/index", "Full index of blog entries.")]] ]
+                [ [Para [Link ("",["link-modified-recently-not", "link-annotated-not", "icon-not"],[]) [Str "[…]"] ("/blog/index.html", "Full index of blog entries.")]] ]
                )
              ]
      let document = Pandoc nullMeta [body]
@@ -270,4 +270,3 @@ generateDirectoryBlogSimplified items =
        Left e   -> printRed (show e)
        Right p' -> do let contentsNew = T.pack header `T.append` p'
                       writeUpdatedFile "directory" "blog/newest.md" contentsNew
-
