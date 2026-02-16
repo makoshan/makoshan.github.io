@@ -368,7 +368,7 @@ function getBacklinksBlockForSectionOrFootnote(targetBlock, containingDocument) 
 		backlinksBlock.append(elementFromHTML(  `<p class="aux-links-list-label backlinks-list-label">`
 											  + `<strong>`
 											  + `<a
-											  	  href="/design.html#backlink"
+											  	  href="/design/#backlink"
 											  	  class="icon-special link-annotated"
 											  	  data-link-icon="arrows-pointing-inwards-to-dot"
 											  	  data-link-icon-type="svg"

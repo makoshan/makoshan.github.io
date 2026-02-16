@@ -16,6 +16,6 @@ index: True
 -   [`Hello World - My First Blog Post`{=html}](/blog/2024/hello "Original URL: <https://example.com/hello>"){.link-modified-recently-not
     .icon-not}
 
--   [\[...\]](/blog/index.html "Full index of blog entries."){.link-modified-recently-not
+-   [\[...\]](/blog/index/ "Full index of blog entries."){.link-modified-recently-not
     .link-annotated-not .icon-not}
 :::

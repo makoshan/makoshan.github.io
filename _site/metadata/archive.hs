@@ -3295,6 +3295,9 @@
 , ( "http://unenumerated.blogspot.com/2011/05/bitcoin-what-took-ye-so-long.html#645549516398219986"
   , Left 61080
   )
+, ( "http://unicode.org/notes/tn28/UTN28-PlainTextMath-v3.pdf#page=5"
+  , Left 61087
+  )
 , ( "http://unqualified-reservations.blogspot.com/2007/08/whats-wrong-with-cs-research.html"
   , Left 61080
   )
@@ -5986,6 +5989,9 @@
 , ( "http://www.rcmp-grc.gc.ca/ottawa/ne-no/pr-cp/2012/20120518-eng.htm"
   , Left 61080
   )
+, ( "http://www.rdrop.com/~half/Creations/Writings/Web.patterns/visible.location.html"
+  , Left 61087
+  )
 , ( "http://www.readability.com/" , Left 61080 )
 , ( "http://www.readingonline.org/articles/r_walker/"
   , Left 61080
@@ -7149,6 +7155,9 @@
 , ( "https://animehistory.wordpress.com/2012/06/11/epitanime-2012-ryukishi07s-conference-transcriptions/"
   , Left 61080
   )
+, ( "https://ansiwave.net/blog/sqlite-over-http.html"
+  , Left 61087
+  )
 , ( "https://ansuz.sooke.bc.ca/entry/23" , Left 61086 )
 , ( "https://anymemo.org/" , Left 61086 )
 , ( "https://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.html&r=1&f=G&l=50&s1=%2220070073681%22.PGNR.&OS=DN/20070073681&RS=DN/20070073681"
@@ -7182,6 +7191,7 @@
 , ( "https://archive.nytimes.com/well.blogs.nytimes.com/2011/01/19/phys-ed-brains-and-brawn/"
   , Left 61086
   )
+, ( "https://artemis.sh/2023/10/12/scrollbars.html" , Left 61087 )
 , ( "https://arxiv.org/abs/0707.1051" , Left 61086 )
 , ( "https://arxiv.org/abs/0910.1191" , Left 61086 )
 , ( "https://arxiv.org/abs/1109.1746" , Left 61086 )
@@ -7300,6 +7310,13 @@
 , ( "https://book.douban.com/subject/35375504/" , Left 59618 )
 , ( "https://book.webtypography.net/" , Left 61080 )
 , ( "https://brooksreview.net/2014/01/i-see-you/" , Left 61086 )
+, ( "https://bugs.webkit.org/show_bug.cgi?id=27413" , Left 61087 )
+, ( "https://bugzilla.mozilla.org/show_bug.cgi?id=500293"
+  , Left 61087
+  )
+, ( "https://bugzilla.mozilla.org/show_bug.cgi?id=630181"
+  , Left 61087
+  )
 , ( "https://buttondown.com/hillelwayne/archive/tag-systems/"
   , Left 61080
   )
@@ -7317,6 +7334,12 @@
   )
 , ( "https://chrislakin.blog/p/spaced-repetition-for-teaching-two"
   , Left 61086
+  )
+, ( "https://christophercliff.com/sausage/examples/couchdb.html"
+  , Left 61087
+  )
+, ( "https://chromestatus.com/feature/5145771917180928"
+  , Left 61087
   )
 , ( "https://cit.kuleuven.be/smart/infrastructure/documents/cam200.pdf"
   , Left 61080
@@ -7363,9 +7386,13 @@
 , ( "https://code.google.com/speed/articles/web-metrics.html"
   , Left 61080
   )
+, ( "https://codersblock.com/blog/nicer-text-wrapping-with-css-text-wrap/#performance"
+  , Left 61087
+  )
 , ( "https://cogsci.mindmodeling.org/2013/papers/0566/paper0566.pdf"
   , Left 61086
   )
+, ( "https://commento.io/" , Left 61087 )
 , ( "https://coveryourtracks.eff.org/static/browser-uniqueness.pdf"
   , Left 61086
   )
@@ -7394,6 +7421,7 @@
 , ( "https://cs229.stanford.edu/proj2016/report/GengYuanWang-PredictingPopularityOfPostsOnHackerNews-report.pdf"
   , Left 61086
   )
+, ( "https://ctan.org/topic/drama-script" , Left 61087 )
 , ( "https://dalspace.library.dal.ca/bitstream/handle/10222/36238/Clouter-Andrew-MSc-PSYO-August-2013.pdf?sequence=1"
   , Left 61086
   )
@@ -7438,6 +7466,54 @@
 , ( "https://deusexvita.medium.com/one-year-anki-update-2615b113f7c2"
   , Left 61086
   )
+, ( "https://developer.chrome.com/blog/css-text-wrap-pretty/"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/OpenType_fonts_guide"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap#pretty"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#ping"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/MathML/Element/mfrac"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content"
+  , Left 61087
+  )
 , ( "https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments"
   , Left 61080
   )
@@ -7446,6 +7522,9 @@
   )
 , ( "https://digitalcommons.lib.uconn.edu/dissertations/AAI3464319/"
   , Left 61086
+  )
+, ( "https://discuss.httparchive.org/t/historical-decline-in-www-subdomain-use/2507/2"
+  , Left 61087
   )
 , ( "https://dl.dropboxusercontent.com/u/182368464/1963-moulton.pdf"
   , Left 61080
@@ -7513,6 +7592,7 @@
 , ( "https://en.wikisource.org/wiki/Discourse_on_the_Method/Part_2"
   , Left 61080
   )
+, ( "https://en.wikisource.org/wiki/Dracula" , Left 61087 )
 , ( "https://en.wikisource.org/wiki/Memory:_A_Contribution_to_Experimental_Psychology"
   , Left 61086
   )
@@ -7526,6 +7606,9 @@
   , Left 61080
   )
 , ( "https://eprint.iacr.org/2020/708.pdf" , Left 61086 )
+, ( "https://ericportis.com/posts/2014/srcset-sizes/"
+  , Left 61087
+  )
 , ( "https://escholarship.org/content/qt0279q9m1/qt0279q9m1.pdf"
   , Left 61086
   )
@@ -7587,11 +7670,17 @@
 , ( "https://github.com/Significant-Gravitas/AutoGPT"
   , Left 61080
   )
+, ( "https://github.com/adobe-fonts/source-serif" , Left 61087 )
+, ( "https://github.com/adobe-fonts/source-serif/blob/0c2ecc5cce0fe72359619b7c5e7e6e93fa2fb60a/family.fea#L86"
+  , Left 61087
+  )
 , ( "https://github.com/adobe-fonts/source-serif/issues/46"
   , Left 61080
   )
 , ( "https://github.com/amperser/proselint/" , Left 61086 )
 , ( "https://github.com/bitcoin/bitcoin" , Left 61080 )
+, ( "https://github.com/bramstein/typeset" , Left 61087 )
+, ( "https://github.com/cscott/instaview" , Left 61087 )
 , ( "https://github.com/danmaz74/ABalytics" , Left 61080 )
 , ( "https://github.com/darabos/high-five-trading" , Left 61086 )
 , ( "https://github.com/edwardtufte/tufte-css/issues/93#issuecomment-670695382"
@@ -7610,10 +7699,12 @@
 , ( "https://github.com/hiAndrewQuinn/resorter" , Left 61086 )
 , ( "https://github.com/jaspervdj/Hakyll/" , Left 61080 )
 , ( "https://github.com/jbangert/trapcc#readme" , Left 61080 )
+, ( "https://github.com/jgm/citeproc" , Left 61087 )
 , ( "https://github.com/jgm/gitit" , Left 61080 )
 , ( "https://github.com/jgm/gitit/blob/master/plugins/Interwiki.hs"
   , Left 61080
   )
+, ( "https://github.com/jgm/pandoc/issues/684" , Left 61087 )
 , ( "https://github.com/jgm/skylighting" , Left 61080 )
 , ( "https://github.com/jingkaihe/matchlock" , Left 61080 )
 , ( "https://github.com/kpreid/mathquiz/" , Left 61086 )
@@ -7622,6 +7713,7 @@
 , ( "https://github.com/localgpt-app/localgpt" , Left 61080 )
 , ( "https://github.com/max-niederman/fullrank" , Left 61086 )
 , ( "https://github.com/microsoft/litebox" , Left 61080 )
+, ( "https://github.com/mnater/Hyphenopoly" , Left 61087 )
 , ( "https://github.com/nxskok/btstan/blob/master/R/btstan.R"
   , Left 61086
   )
@@ -7630,17 +7722,22 @@
 , ( "https://github.com/openai/skills" , Left 61080 )
 , ( "https://github.com/p-e-w/heretic" , Left 61080 )
 , ( "https://github.com/pkra/mathjax-node-page/" , Left 61080 )
+, ( "https://github.com/psanford/sqlite3vfshttp" , Left 61087 )
 , ( "https://github.com/purcell/darcs-to-git" , Left 61080 )
 , ( "https://github.com/raphink/geneve_1564/releases/download/2015-07-08_01/geneve_1564.pdf"
   , Left 61080
   )
 , ( "https://github.com/robert7/nixnote2" , Left 61086 )
+, ( "https://github.com/robertknight/tex-linebreak" , Left 61087 )
 , ( "https://github.com/theZiz/aha" , Left 61080 )
 , ( "https://github.com/trending" , Left 61086 )
 , ( "https://github.com/vanceza/export-chrome-bookmarks"
   , Left 61080
   )
 , ( "https://github.com/vanceza/rip-chrome-history" , Left 61080 )
+, ( "https://github.com/w3c/csswg-drafts/issues/3473#issuecomment-2032718416"
+  , Left 61087
+  )
 , ( "https://gkosev.blogspot.com/2012/08/fixing-hacker-news-mathematical-approach.html"
   , Left 61086
   )
@@ -7661,8 +7758,14 @@
 , ( "https://handleshaus.wordpress.com/2013/12/17/review-of-the-rise-of-china-vs-the-logic-of-strategy-by-edward-luttwak/"
   , Left 61080
   )
+, ( "https://harfbuzz.github.io/shaping-opentype-features.html"
+  , Left 61087
+  )
 , ( "https://haskellforall.com/2026/02/beyond-agentic-coding"
   , Left 61080
+  )
+, ( "https://helpx.adobe.com/fonts/using/open-type-syntax.html#frac"
+  , Left 61087
   )
 , ( "https://his.diva-portal.org/smash/get/diva2:424076/FULLTEXT01"
   , Left 61086
@@ -7675,6 +7778,10 @@
   )
 , ( "https://how-i-experience-web-today.com/" , Left 61080 )
 , ( "https://hpmor.com/" , Left 61086 )
+, ( "https://html.com/attributes/img-srcset/" , Left 61087 )
+, ( "https://html.spec.whatwg.org/multipage/dom.html#the-title-attribute"
+  , Left 61087
+  )
 , ( "https://huggingface.co/blog" , Left 61086 )
 , ( "https://humanprogress.org/" , Left 61086 )
 , ( "https://ia801904.us.archive.org/18/items/gov.uscourts.wawd.196180/gov.uscourts.wawd.196180.docket.html"
@@ -7784,6 +7891,7 @@
 , ( "https://jtauber.com/blog/2008/02/10/a_new_kind_of_graded_reader/"
   , Left 61086
   )
+, ( "https://kb.mozillazine.org/Browser.send_pings" , Left 61087 )
 , ( "https://kpreid.github.io/mathquiz/mathquiz.html"
   , Left 61086
   )
@@ -7873,6 +7981,9 @@
 , ( "https://medium.com/hacking-and-gonzo/how-hacker-news-ranking-algorithm-works-1d9b0cf2c08d"
   , Left 61086
   )
+, ( "https://medium.com/hceverything/applying-srcset-choosing-the-right-sizes-for-responsive-images-at-different-breakpoints-a0433450a4a3"
+  , Left 61087
+  )
 , ( "https://medium.com/our-new-nature/the-case-for-sound-currency-b52da8148131"
   , Left 59618
   )
@@ -7907,6 +8018,9 @@
 , ( "https://minimaxir.com/2014/10/hn-comments-about-comments/"
   , Left 61086
   )
+, ( "https://mirror.math.princeton.edu/pub/CTAN/fonts/sourceserifpro/doc/sourceserifpro.pdf#page=4"
+  , Left 61087
+  )
 , ( "https://mondo.su.se/access/content/group/87a78313-bf21-438a-842a-a4d680ccf6f9/Dahlin%20artikel%202010.pdf"
   , Left 61080
   )
@@ -7918,6 +8032,9 @@
   , Left 61086
   )
 , ( "https://moz.com/google-algorithm-change#2011" , Left 61086 )
+, ( "https://mpetroff.net/2020/05/pre-calculated-line-breaks-for-html-css/"
+  , Left 61087
+  )
 , ( "https://mtgox.com/" , Left 61080 )
 , ( "https://murdoch.is/papers/usenix08clockskew.pdf"
   , Left 61086
@@ -7951,6 +8068,7 @@
 , ( "https://news.ycombinator.com/item?id=2479833" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=24857437" , Left 61086 )
 , ( "https://news.ycombinator.com/item?id=26826585" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=27016630" , Left 61087 )
 , ( "https://news.ycombinator.com/item?id=28155072" , Left 61086 )
 , ( "https://news.ycombinator.com/item?id=2880427" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=2934879" , Left 61080 )
@@ -7969,6 +8087,7 @@
 , ( "https://news.ycombinator.com/item?id=46839743" , Left 61086 )
 , ( "https://news.ycombinator.com/item?id=5010846" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=5015183" , Left 61086 )
+, ( "https://news.ycombinator.com/item?id=5189258" , Left 61087 )
 , ( "https://news.ycombinator.com/item?id=5242268" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=5242480" , Left 61080 )
 , ( "https://news.ycombinator.com/item?id=5242577" , Left 61080 )
@@ -8025,6 +8144,7 @@
 , ( "https://newshacker.me/story?id=46943568" , Left 61080 )
 , ( "https://newshacker.me/story?id=46943752" , Left 61080 )
 , ( "https://newshacker.me/story?id=46944245" , Left 61080 )
+, ( "https://no-www.org/" , Left 61087 )
 , ( "https://noscript.net/" , Left 61086 )
 , ( "https://notes.andymatuschak.org/zXDPrYcxUSZbF5M8vM5Y1U9"
   , Left 61080
@@ -8049,6 +8169,10 @@
 , ( "https://openai.com/blog/openai-api/" , Left 61080 )
 , ( "https://openai.com/index/clip/" , Left 61080 )
 , ( "https://openai.com/index/dall-e/" , Left 61086 )
+, ( "https://openai.com/index/gpt-4-research/" , Left 61087 )
+, ( "https://openai.com/index/introducing-chatgpt-pro/"
+  , Left 61087
+  )
 , ( "https://osf.io/preprints/psyarxiv/dnr9s/" , Left 61080 )
 , ( "https://osf.io/preprints/psyarxiv/ks4vd/" , Left 61086 )
 , ( "https://panopticlick.eff.org/" , Left 61080 )
@@ -8116,6 +8240,9 @@
   )
 , ( "https://people.well.com/user/doctorow/metacrap.htm"
   , Left 61080
+  )
+, ( "https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/"
+  , Left 61087
   )
 , ( "https://pinboard.in/" , Left 61080 )
 , ( "https://pinnaclife.com/sites/default/files/research/Melatonin-age-related-insomnia.pdf"
@@ -8187,6 +8314,9 @@
   )
 , ( "https://qwantz.com/index.php?comic=353" , Left 61086 )
 , ( "https://qwantz.com/index.php?comic=354" , Left 61086 )
+, ( "https://raphlinus.github.io/text/2022/11/08/minikin.html"
+  , Left 61087
+  )
 , ( "https://rd.springer.com/chapter/10.1007/978-3-030-42504-3_15"
   , Left 61086
   )
@@ -8206,6 +8336,9 @@
   )
 , ( "https://retractionwatch.com/2022/07/26/crystallography-database-flags-nearly-1000-structs-linked-to-a-paper-mill/"
   , Left 61086
+  )
+, ( "https://rewis.io/urteile/urteil/lhm-20-01-2022-3-o-1749320/"
+  , Left 61087
   )
 , ( "https://rhodesmill.org/brandon/2012/one-sentence-per-line/"
   , Left 61080
@@ -8275,6 +8408,7 @@
   , Left 61086
   )
 , ( "https://sive.rs/srs" , Left 61086 )
+, ( "https://sive.rs/su" , Left 61087 )
 , ( "https://slashdot.org/story/07/11/18/1319201/do-tiny-url-services-weaken-net-architecture"
   , Left 61086
   )
@@ -8290,12 +8424,14 @@
 , ( "https://smagin.fyi/posts/ordinary-life-improvements/"
   , Left 61086
   )
+, ( "https://speakipedia.com/book-design-part-5/" , Left 61087 )
 , ( "https://spectrum.ieee.org/your-candy-wrappers-are-listening"
   , Left 61086
   )
 , ( "https://spectrum.library.concordia.ca/id/eprint/36253/1/2010_Mining_Writeprints_from_Anonymous_E-mails.pdf"
   , Left 61086
   )
+, ( "https://sqliteviewer.app/" , Left 61087 )
 , ( "https://sspai.com/" , Left 61086 )
 , ( "https://sspai.com/post/106020" , Left 61080 )
 , ( "https://sspai.com/post/95652" , Left 61080 )
@@ -8315,6 +8451,9 @@
   , Left 61086
   )
 , ( "https://store.hermanmiller.com/brands-fully" , Left 61086 )
+, ( "https://stratechery.com/2023/new-bing-and-an-interview-with-kevin-scott-and-sam-altman-about-the-microsoft-openai-partnership/"
+  , Left 61087
+  )
 , ( "https://super-memory.com/articles/programming.htm"
   , Left 61086
   )
@@ -8378,6 +8517,9 @@
   )
 , ( "https://twitter.com/theshawwn/lists/machine-learning/members"
   , Left 61080
+  )
+, ( "https://unicode.org/versions/Unicode6.0.0/ch06.pdf#page=15"
+  , Left 61087
   )
 , ( "https://users.ece.utexas.edu/~adnan/pop-05/lampson-system-design.pdf"
   , Left 61086
@@ -8730,10 +8872,14 @@
 , ( "https://web.archive.org/web/20230101001643/https://www.overcomingbias.com/tag/medicine"
   , Left 61086
   )
+, ( "https://web.dev/articles/use-srcset-to-automatically-choose-the-right-image"
+  , Left 61087
+  )
 , ( "https://web.stanford.edu/dept/SUSE/SEAL/Reports_Papers/YuanEtal_WorkingMemory.pdf"
   , Left 61086
   )
 , ( "https://webcitation.org/6EDvDSVzN" , Left 61086 )
+, ( "https://webtypography.net/3.2.2" , Left 61087 )
 , ( "https://whoapi.com/blog/554/how-hacker-news-hit-us-with-10-000-unique-visitors-in-10-hours/"
   , Left 61086
   )
@@ -8760,11 +8906,17 @@
 , ( "https://www.annualreviews.org/doi/10.1146/annurev-psych-010416-044022"
   , Left 61086
   )
+, ( "https://www.anthropic.com/news/claude-3-5-sonnet"
+  , Left 61087
+  )
 , ( "https://www.apa.org/pubs/journals/releases/dev-49-2-270.pdf"
   , Left 61086
   )
 , ( "https://www.apa.org/pubs/journals/releases/neu-24-5-563.pdf"
   , Left 61086
+  )
+, ( "https://www.astralcodexten.com/p/open-thread-220"
+  , Left 61087
   )
 , ( "https://www.bbc.co.uk/news/science-environment-20629671"
   , Left 61086
@@ -8873,6 +9025,9 @@
   , Left 61080
   )
 , ( "https://www.folklore.org/Signing_Party.html" , Left 61080 )
+, ( "https://www.freecodecamp.org/news/lossless-web-navigation-with-trails-9cd48c0abb56/"
+  , Left 61087
+  )
 , ( "https://www.frisbys.news/" , Left 61086 )
 , ( "https://www.fullstackeconomics.com/24-charts-that-show-were-mostly-living-better-than-our-parents/"
   , Left 61086
@@ -9425,6 +9580,9 @@
 , ( "https://www.overcomingbias.com/p/the-wisdom-of-othershtml"
   , Left 61086
   )
+, ( "https://www.paritybit.ca/blog/styling-external-links.html/"
+  , Left 61087
+  )
 , ( "https://www.pnas.org/doi/10.1073/pnas.0905307106"
   , Left 61086
   )
@@ -9596,7 +9754,12 @@
 , ( "https://www.usenix.org/system/files/conference/usenixsecurity14/sec14-paper-bonneau.pdf"
   , Left 61086
   )
+, ( "https://www.w3.org/TR/2011/WD-html5-20110405/links.html#conversations"
+  , Left 61087
+  )
 , ( "https://www.w3.org/TR/cooluris/" , Left 61080 )
+, ( "https://www.w3.org/TR/css-text-4/#text-wrap" , Left 61087 )
+, ( "https://www.w3.org/TR/mathml-core/" , Left 61087 )
 , ( "https://www.wakapoetry.net/kks-xii-609/" , Left 61086 )
 , ( "https://www.washingtonpost.com/wp-dyn/content/article/2008/12/10/AR2008121003364.html"
   , Left 61086
@@ -9636,6 +9799,9 @@
 , ( "https://www3.ntu.edu.sg/czzhao/iq/test.htm" , Left 61086 )
 , ( "https://x.com/Pinboard/status/761656824202276864"
   , Left 61080
+  )
+, ( "https://x.com/methode/status/1023835318548455424"
+  , Left 61087
   )
 , ( "https://x.com/theshawwn" , Left 61080 )
 , ( "https://xyproto.github.io/splash/docs/longer/algol_nu.html"

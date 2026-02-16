@@ -22611,7 +22611,7 @@ meta
 </div>
 <p>This page is a changelog for Gwern.net: a monthly reverse chronological list of recent major writings/changes/additions.</p>
 <p>Following my writing can be a little difficult because it is often so incremental. So every month, in addition to my regular subreddit submissions, I write up reasonably-interesting changes and <a href="https://gwern.substack.com/" id="gwern-2013-substack" class="link-annotated" data-link-icon="substack" data-link-icon-type="svg" data-link-icon-color="#ff6719" title="&#39;Gwern.net newsletter (Substack subscription page)&#39;, Gwern 2013">send it out to the mailing list</a> in addition to a compilation of links &amp; reviews (<a href="/doc/newsletter/index" id="_Si8unX4J" class="prefetch-not link-annotated link-page" data-filesize-bytes="24828" data-filesize-percentage="32" title="&#39;Essays&#39;, Gwern 2009">archives</a>).</p>
-<p>For shortform writings, see <a href="/blog/index.html" class="prefetch-not link-page" data-filesize-bytes="23908" data-filesize-percentage="31" title="‘Blog Posts’, Gwern 2009">the blog index</a>; for a feed of recently-added links &amp; references, see the <a href="/doc/newest/index" id="_Pmf8zSbL" class="prefetch-not link-annotated link-page" data-filesize-bytes="56407" data-filesize-percentage="46" title="‘newest links’ directory">“newest links”</a> page.</p>
+<p>For shortform writings, see <a href="/blog/index/" class="prefetch-not link-page" data-filesize-bytes="23908" data-filesize-percentage="31" title="‘Blog Posts’, Gwern 2009">the blog index</a>; for a feed of recently-added links &amp; references, see the <a href="/doc/newest/index" id="_Pmf8zSbL" class="prefetch-not link-annotated link-page" data-filesize-bytes="56407" data-filesize-percentage="46" title="‘newest links’ directory">“newest links”</a> page.</p>
 <div class="columns TOC">
 <ul>
 <li><a href="/changelog#2026" id="toc-2026">2026</a>
@@ -63422,5 +63422,251 @@ psychology/animal psychology/neuroscience
 </ul></li>
 <li><a href="/doc/psychology/animal/maze/index#miscellaneous" id="toc-miscellaneous">Miscellaneous</a></li>
 <li><a href="/doc/psychology/animal/maze/index#link-bibliography-section" id="toc-link-bibliography-section">Bibliography</a></li>
+</ul>
+</div>
+---
+/static/js/old/links.js
+
+
+
+2026-02-16
+
+
+
+---
+/static/build/Interwiki.hs
+
+
+
+2026-02-16
+
+
+
+---
+/static/js/old/wikipedia-popups.js
+<code>wikipedia-popups.js</code>
+Achmiz
+2019
+2026-02-16
+
+
+
+---
+/design#tags
+Design Of This Website § Tags
+Gwern
+2010-10-01
+2023-04-20
+
+
+<figure><img class="float-right page-thumbnail  outline invert-not" height="0" width="0" src="/doc/design/2020-12-25-gwern-gwernnet-recursivepopups.png" title="Screenshot of Gwern.net demonstrating recursive popup functionality, allowing arbitrarily deep hypertext exploration of references and links." alt=""></figure><div class="page-description-annotation">
+<p>Meta page describing Gwern.net, the self-documenting website’s implementation and experiments for better ‘semantic zoom’ of hypertext; technical decisions using <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> and static hosting.</p>
+</div>
+<p>Gwern.net implements a simple hierarchical/DAG <a href="https://en.wikipedia.org/wiki/Tag_(metadata)" id="_6_Bgcmug" class="link-annotated-partial link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Tag_(metadata)#bodyContent" title="Tag (metadata)">tag</a> system for all links, modeled on <a href="https://en.wikipedia.org/wiki/Help:Category" id="_lPshf9uE" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Help:Category#bodyContent" title="Help:Category">Wikipedia’s categories</a> (see <a href="/static/build/Tags.hs" id="_3gozdf-1" class="prefetch-not" data-link-icon="code" data-link-icon-type="svg" data-link-icon-color="#5e5086" data-filesize-bytes="15148" data-filesize-percentage="3"><code>Tags.hs</code></a>).</p>
+<p>It is designed to be browsed via pop-ups, and integrate naturally with the filesystem.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/design#benefit" id="toc-benefit">Benefit</a></li>
+<li><a href="/design#principles" id="toc-principles">Principles</a></li>
+<li><a href="/design#features" id="toc-features">Features</a>
+<ul>
+<li><a href="/design#backlink" id="toc-backlink">Backlink</a>
+<ul>
+<li><a href="/design#backlink-features" id="toc-backlink-features">Backlink Features</a>
+<ul>
+<li><a href="/design#in-context" id="toc-in-context">In-Context</a></li>
+<li><a href="/design#popups" id="toc-popups">Popups</a></li>
+</ul></li>
+<li><a href="/design#implementation" id="toc-implementation">Implementation</a>
+<ul>
+<li><a href="/design#other-uses" id="toc-other-uses">Other Uses</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#similar-links" id="toc-similar-links">Similar Links</a></li>
+<li><a href="/design#link-bibliographies" id="toc-link-bibliographies">Link Bibliographies</a></li>
+<li><a href="/design#tags" id="toc-tags">Tags</a>
+<ul>
+<li><a href="/design#properties" id="toc-properties">Properties</a></li>
+<li><a href="/design#use-appearance" id="toc-use-appearance">Use &amp; Appearance</a></li>
+<li><a href="/design#features-1" id="toc-features-1">Features</a>
+<ul>
+<li><a href="/design#future-tag-features" id="toc-future-tag-features">Future Tag Features</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#abandoned" id="toc-abandoned">Abandoned</a></li>
+<li><a href="/design#tools" id="toc-tools">Tools</a>
+<ul>
+<li><a href="/design#implementation-details" id="toc-implementation-details">Implementation Details</a></li>
+</ul></li>
+<li><a href="/design#external-links" id="toc-external-links">External Links</a></li>
+<li><a href="/design#appendix" id="toc-appendix">Appendix</a>
+<ul>
+<li><a href="/design#returns-to-design" id="toc-returns-to-design">Returns To Design?</a></li>
+</ul></li>
+</ul>
+</div>
+---
+/static/js/old/links.js
+
+
+
+2026-02-16
+
+
+
+---
+/static/build/Interwiki.hs
+
+
+
+2026-02-16
+
+
+
+---
+/static/js/old/wikipedia-popups.js
+<code>wikipedia-popups.js</code>
+Achmiz
+2019
+2026-02-16
+
+
+
+---
+/design#tags
+Design Of This Website § Tags
+Gwern
+2010-10-01
+2023-04-20
+
+
+<figure><img class="float-right page-thumbnail  outline invert-not" height="0" width="0" src="/doc/design/2020-12-25-gwern-gwernnet-recursivepopups.png" title="Screenshot of Gwern.net demonstrating recursive popup functionality, allowing arbitrarily deep hypertext exploration of references and links." alt=""></figure><div class="page-description-annotation">
+<p>Meta page describing Gwern.net, the self-documenting website’s implementation and experiments for better ‘semantic zoom’ of hypertext; technical decisions using <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> and static hosting.</p>
+</div>
+<p>Gwern.net implements a simple hierarchical/DAG <a href="https://en.wikipedia.org/wiki/Tag_(metadata)" id="_6_Bgcmug" class="link-annotated-partial link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Tag_(metadata)#bodyContent" title="Tag (metadata)">tag</a> system for all links, modeled on <a href="https://en.wikipedia.org/wiki/Help:Category" id="_lPshf9uE" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Help:Category#bodyContent" title="Help:Category">Wikipedia’s categories</a> (see <a href="/static/build/Tags.hs" id="_3gozdf-1" class="prefetch-not" data-link-icon="code" data-link-icon-type="svg" data-link-icon-color="#5e5086" data-filesize-bytes="15148" data-filesize-percentage="3"><code>Tags.hs</code></a>).</p>
+<p>It is designed to be browsed via pop-ups, and integrate naturally with the filesystem.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/design#benefit" id="toc-benefit">Benefit</a></li>
+<li><a href="/design#principles" id="toc-principles">Principles</a></li>
+<li><a href="/design#features" id="toc-features">Features</a>
+<ul>
+<li><a href="/design#backlink" id="toc-backlink">Backlink</a>
+<ul>
+<li><a href="/design#backlink-features" id="toc-backlink-features">Backlink Features</a>
+<ul>
+<li><a href="/design#in-context" id="toc-in-context">In-Context</a></li>
+<li><a href="/design#popups" id="toc-popups">Popups</a></li>
+</ul></li>
+<li><a href="/design#implementation" id="toc-implementation">Implementation</a>
+<ul>
+<li><a href="/design#other-uses" id="toc-other-uses">Other Uses</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#similar-links" id="toc-similar-links">Similar Links</a></li>
+<li><a href="/design#link-bibliographies" id="toc-link-bibliographies">Link Bibliographies</a></li>
+<li><a href="/design#tags" id="toc-tags">Tags</a>
+<ul>
+<li><a href="/design#properties" id="toc-properties">Properties</a></li>
+<li><a href="/design#use-appearance" id="toc-use-appearance">Use &amp; Appearance</a></li>
+<li><a href="/design#features-1" id="toc-features-1">Features</a>
+<ul>
+<li><a href="/design#future-tag-features" id="toc-future-tag-features">Future Tag Features</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#abandoned" id="toc-abandoned">Abandoned</a></li>
+<li><a href="/design#tools" id="toc-tools">Tools</a>
+<ul>
+<li><a href="/design#implementation-details" id="toc-implementation-details">Implementation Details</a></li>
+</ul></li>
+<li><a href="/design#external-links" id="toc-external-links">External Links</a></li>
+<li><a href="/design#appendix" id="toc-appendix">Appendix</a>
+<ul>
+<li><a href="/design#returns-to-design" id="toc-returns-to-design">Returns To Design?</a></li>
+</ul></li>
+</ul>
+</div>
+---
+/static/js/old/links.js
+
+
+
+2026-02-16
+
+
+
+---
+/static/build/Interwiki.hs
+
+
+
+2026-02-16
+
+
+
+---
+/static/js/old/wikipedia-popups.js
+<code>wikipedia-popups.js</code>
+Achmiz
+2019
+2026-02-16
+
+
+
+---
+/design#tags
+Design Of This Website § Tags
+Gwern
+2010-10-01
+2023-04-20
+
+
+<figure><img class="float-right page-thumbnail  outline invert-not" height="0" width="0" src="/doc/design/2020-12-25-gwern-gwernnet-recursivepopups.png" title="Screenshot of Gwern.net demonstrating recursive popup functionality, allowing arbitrarily deep hypertext exploration of references and links." alt=""></figure><div class="page-description-annotation">
+<p>Meta page describing Gwern.net, the self-documenting website’s implementation and experiments for better ‘semantic zoom’ of hypertext; technical decisions using <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> and static hosting.</p>
+</div>
+<p>Gwern.net implements a simple hierarchical/DAG <a href="https://en.wikipedia.org/wiki/Tag_(metadata)" id="_6_Bgcmug" class="link-annotated-partial link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Tag_(metadata)#bodyContent" title="Tag (metadata)">tag</a> system for all links, modeled on <a href="https://en.wikipedia.org/wiki/Help:Category" id="_lPshf9uE" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Help:Category#bodyContent" title="Help:Category">Wikipedia’s categories</a> (see <a href="/static/build/Tags.hs" id="_3gozdf-1" class="prefetch-not" data-link-icon="code" data-link-icon-type="svg" data-link-icon-color="#5e5086" data-filesize-bytes="15148" data-filesize-percentage="3"><code>Tags.hs</code></a>).</p>
+<p>It is designed to be browsed via pop-ups, and integrate naturally with the filesystem.</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/design#benefit" id="toc-benefit">Benefit</a></li>
+<li><a href="/design#principles" id="toc-principles">Principles</a></li>
+<li><a href="/design#features" id="toc-features">Features</a>
+<ul>
+<li><a href="/design#backlink" id="toc-backlink">Backlink</a>
+<ul>
+<li><a href="/design#backlink-features" id="toc-backlink-features">Backlink Features</a>
+<ul>
+<li><a href="/design#in-context" id="toc-in-context">In-Context</a></li>
+<li><a href="/design#popups" id="toc-popups">Popups</a></li>
+</ul></li>
+<li><a href="/design#implementation" id="toc-implementation">Implementation</a>
+<ul>
+<li><a href="/design#other-uses" id="toc-other-uses">Other Uses</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#similar-links" id="toc-similar-links">Similar Links</a></li>
+<li><a href="/design#link-bibliographies" id="toc-link-bibliographies">Link Bibliographies</a></li>
+<li><a href="/design#tags" id="toc-tags">Tags</a>
+<ul>
+<li><a href="/design#properties" id="toc-properties">Properties</a></li>
+<li><a href="/design#use-appearance" id="toc-use-appearance">Use &amp; Appearance</a></li>
+<li><a href="/design#features-1" id="toc-features-1">Features</a>
+<ul>
+<li><a href="/design#future-tag-features" id="toc-future-tag-features">Future Tag Features</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#abandoned" id="toc-abandoned">Abandoned</a></li>
+<li><a href="/design#tools" id="toc-tools">Tools</a>
+<ul>
+<li><a href="/design#implementation-details" id="toc-implementation-details">Implementation Details</a></li>
+</ul></li>
+<li><a href="/design#external-links" id="toc-external-links">External Links</a></li>
+<li><a href="/design#appendix" id="toc-appendix">Appendix</a>
+<ul>
+<li><a href="/design#returns-to-design" id="toc-returns-to-design">Returns To Design?</a></li>
+</ul></li>
 </ul>
 </div>
