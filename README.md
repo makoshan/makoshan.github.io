@@ -25,6 +25,8 @@ echo '[[ -f ~/.ghcup/env ]] && source ~/.ghcup/env' >> ~/.zshrc
 ```bash
 bash scripts/build-production.sh
 ```
+cabal run hakyll -- clean
+cabal run hakyll -- build +RTS -N1 -RTS
 
 `scripts/build-production.sh` 会按优先级执行：
 - `MAKO_HAKYLL_BIN`（如你手动指定）
@@ -34,7 +36,7 @@ bash scripts/build-production.sh
 预览（在项目根目录跑，确保能处理无扩展名路由，比如 `/About`）:
 
 ```bash
-cd /mnt/c/Users/ROG/.openclaw/workspace/projects/daily-intel
+
 python3 webserver.py --bind 0.0.0.0 --port 8000 --directory _site
 ```
 

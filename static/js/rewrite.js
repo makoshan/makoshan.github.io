@@ -156,7 +156,7 @@ addContentLoadHandler("loadReferencedIdentifier", (eventInfo) => {
 									 title="‘Essays’, Gwern 2009"
 									 >documents by <strong>tag</strong></a>, `
 			+ `or <a
-				   href="/index.html"
+				   href="/index/"
 				   class="link-annotated link-page backlink-not icon-not"
 				   title="'Essays', Gwern 2009"
 				   >return to the <strong>main page</strong></a>, `

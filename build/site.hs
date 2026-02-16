@@ -165,9 +165,12 @@ main =
                                     )
                               >>= imgUrls
 
-             -- Homepage: compile /index and /index.html from the generated source.
+             -- Homepage: keep /index.html for root serving, and also provide /index/.
              match "index.generated.md" $ do
                  route $ constRoute "index.html"
+                 compile compileMarkdown
+             version "alias-index-dir" $ match "index.generated.md" $ do
+                 route $ constRoute "index/index.html"
                  compile compileMarkdown
 
              let pageRoute =
