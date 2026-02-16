@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inlined head (no SSI): injected by Hakyll from static/include/inlined-head.html -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #aaa;
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popins-popin-box-shadow-color: #aaa;
+
+    --GW-popins-popin-title-bar-background-color: #fff;
+    --GW-popins-popin-title-bar-button-color: #777;
+
+    --GW-popins-popin-scrollbar-thumb-color: #ccc;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #999;
+
+    --GW-popins-popin-stack-counter-text-color: #fff;
+    --GW-popins-popin-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #ccc;
+	--GW-back-to-top-link-hover-color: #999;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #7c7c7c;
+    --GW-popins-popin-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popins-popin-box-shadow-color: #7c7c7c;
+
+    --GW-popins-popin-title-bar-background-color: #000;
+    --GW-popins-popin-title-bar-button-color: #a6a6a6;
+
+    --GW-popins-popin-scrollbar-thumb-color: #5c5c5c;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popins-popin-stack-counter-text-color: #000;
+    --GW-popins-popin-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #5c5c5c;
+	--GW-back-to-top-link-hover-color: #8b8b8b;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popins-popin-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+div.poem span.caesura-mark {
+	opacity: 0.3;
+}
+@media all and (max-width: 649px) {
+	div.poem span.caesura-mark {
+		opacity: 0.4;
+	}
+}
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1770514858">
+<script src="/static/js/head.js?v=1770514858"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1768170615" as="image">
+
+
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="关于 Gwern">
+  <meta name="citation_title" content="关于 Gwern">
+  <meta name="og:title" content="关于 Gwern">
+  <meta name="twitter:title" content="关于 Gwern">
+<meta name="generator" content="https://github.com/makoshan/makoshan.github.io/">
+<meta name="creator" content="Mako Shan">
+  
+  <meta name="author" content="Mako Shan">
+  <meta name="citation_author" content="Mako Shan">
+  
+  <meta name="contact" content="/me#contact">
+  <link rel="index" title="Mako Shan homepage" href="/index.html">
+  <link href="https://v2eth.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Mako Shan newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="makoshan">
+  <meta name="twitter:site" content="makoshan.github.io">
+  <meta name="og:site" content="makoshan.github.io">
+  <meta name="og:type" content="article">
+  <meta name="description" content="我是谁？我在网上做了什么？联系方式；使用的网站；电脑和软件工具；我参与的项目；心理画像">
+  <meta name="og:description" content="我是谁？我在网上做了什么？联系方式；使用的网站；电脑和软件工具；我参与的项目；心理画像">
+  <meta property="og:image" content="https://makoshan.github.io/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail: site logo.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content>
+  <meta name="keywords" content="cs/haskell, personal, psychology, survey">
+  <meta name="dc.date.issued" content="2009-08-05">
+  
+  <meta name="citation_publication_date" content="2009-08-05">
+  <meta name="dcterms.modified" content="2020-06-14">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://makoshan.github.io/me/index.html">
+  <meta name="citation_fulltext_html_url" content="https://makoshan.github.io/me/index.html">
+  <meta name="og:url" content="https://makoshan.github.io/me/index.html">
+  <link rel="alternate" type="text/markdown" href="https://makoshan.github.io/me/index.html.md" title="Markdown source of ‘关于 Gwern’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-me dropcaps-de-zs">
+  <meta name="citation_fulltext_world_readable" content>
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>关于 Gwern · Mako Shan</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+
+  <!-- CSS for JS-disabled users: ensure that NoScripters know what they are missing even if they jump to a section & miss the warning at top/bottom. -->
+  <noscript>
+    <style>
+      #markdownBody #noscript-warning-header {
+          position: fixed; /* sticky */
+          top: 6px; /* at top */
+          width: 58%;
+          z-index: 99; /* Make sure it is on top */
+          background-color: #f8f8f8; /* Set a solid background color so legible while positioned over text */
+          border-color: var(--GW-abstract-border-color); /* Make look like theme-toggle/admonitions a bit more */
+          border-width: 6px 6px 6px 6px;
+          border-style: double;
+      }
+      #markdownBody #noscript-warning-header p { margin: 10px; }
+      nav#navbar { padding-top: 160px; } /* avoid overlap with page header */
+    </style>
+  </noscript>
+</head>
+
+<body class="page-me dropcaps-de-zs">
+  <!-- Inlined asset links (no SSI): injected by Hakyll from static/include/inlined-asset-links.html -->
+  <link rel="stylesheet" href="/static/css/style.css?v=1770491984" media="print" onload="this.media=`all`">
+<script src="/static/js/script.js?v=1770491982" defer></script>
+
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <!-- Navbar (no SSI): injected by Hakyll from static/include/navbar.html -->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index.html" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about.html" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="design link-page link-annotated" href="/design.html" title="Design and implementation notes">Design</a>
+        <a class="new link-page link-annotated" href="/changelog.html" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page link-annotated" href="/blog/index.html" title="Blog index: short posts">Blog</a>
+        <a class="links link-page" href="/Links.html" title="Links page">Links</a>
+        <a class="patreon" href="https://www.patreon.com/makoshan" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://v2eth.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+
+    <article>
+
+      <header>
+        <h1>关于 Gwern</h1>
+      </header>
+
+      
+      <div class="markdownBody" id="page-metadata">
+         <div class="link-tags">
+<p><a href="/doc/cs/haskell/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to cs/haskell tag index">Haskell</a>, <a href="/doc/personal/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to personal tag index">personal</a>, <a href="/doc/psychology/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to psychology tag index">psychology</a>, <a href="/doc/survey/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to survey tag index">survey</a></p>
+</div> 
+        <div class="page-description"><p>我是谁？我在网上做了什么？联系方式；使用的网站；电脑和软件工具；我参与的项目；心理画像</p></div>
+        <div class="page-metadata-fields">
+            
+            <span class="page-date-range"><span class="date-range" title="The date range 2009-08-05–2020-06-14 lasted 11 years (3,967 days), ending 6 years ago.">2009-08-05<span class="subsup"><sup>–</sup><sub>10y</sub></span>2020-06-14</span></span>
+            <span class="page-status" title="Writing status of current page: ranges &#39;abandoned&#39;/&#39;notes&#39;/&#39;draft&#39;/&#39;in progress&#39;/&#39;finished&#39;"><em><span class="completion-status" data-progress-percentage="100">finished</span></em></span>
+            <span class="page-confidence"><a href="/about.html#confidence-tags" title="Explanation of &#39;confidence&#39; metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: &#39;certain&#39;/&#39;highly likely&#39;/&#39;likely&#39;/&#39;possible&#39;/&#39;unlikely&#39;/&#39;highly unlikely&#39;/&#39;remote&#39;/&#39;impossible&#39;)">certainty</a>: <em><span class="completion-status" data-progress-percentage="84">highly likely</span></em></span>
+            <span class="page-importance"><a href="/about.html#importance-tags" title="Explanation of &#39;importance&#39; metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>3</em></span>
+            
+            
+            
+        </div>
+      </div>
+      
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#个人" id="toc-个人">个人</a>
+<ul>
+<li><a href="#工作" id="toc-工作">工作</a></li>
+<li><a href="#网站" id="toc-网站">网站</a>
+<ul>
+<li><a href="#维基" id="toc-维基">维基</a></li>
+</ul></li>
+<li><a href="#使用这个" id="toc-使用这个">使用这个</a>
+<ul>
+<li><a href="#软件" id="toc-软件">软件</a></li>
+<li><a href="#硬件" id="toc-硬件">硬件</a>
+<ul>
+<li><a href="#计算机" id="toc-计算机">计算机</a></li>
+<li><a href="#其他" id="toc-其他">其他</a></li>
+</ul></li>
+<li><a href="#邮件列表" id="toc-邮件列表">邮件列表</a></li>
+<li><a href="#moocs" id="toc-moocs">MOOCs</a></li>
+</ul></li>
+<li><a href="#档案" id="toc-档案">档案</a>
+<ul>
+<li><a href="#个性" id="toc-个性">个性</a></li>
+<li><a href="#哲学道德" id="toc-哲学道德">哲学/道德</a>
+<ul>
+<li><a href="#政治" id="toc-政治">政治</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#联系方式" id="toc-联系方式">联系方式</a></li>
+<li><a href="#协作风格" id="toc-协作风格">协作风格</a></li>
+<li><a href="#编码贡献" id="toc-编码贡献">编码贡献</a>
+<ul>
+<li><a href="#haskell" id="toc-haskell">Haskell</a>
+<ul>
+<li><a href="#cabal-化" id="toc-cabal-化">Cabal 化</a></li>
+</ul></li>
+</ul></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><p class="dropcap-de-zs"><span class="dropcap">本</span>页面关于我；有关 Gwern.net 的信息，请参阅
+<a href="/about" id="gwern-about" class="prefetch-not link-annotated link-page" title="&#39;About This Website&#39;, Gwern 2010">关于本网站</a>。</p>
+<section id="个人" class="level1">
+<h1><a href="#个人" title="Link to section: § &#39;个人&#39;">个人</a></h1>
+<div class="epigraph">
+<blockquote>
+<p>从作者的书过渡到他的谈话，往往就像从远处眺望后进入一座大城市。远远看去，我们只看到寺庙的尖顶和宫殿的塔楼，想象它是辉煌、宏伟和壮丽的住所；但当我们穿过大门，却发现它被狭窄的通道所困扰，被卑微的小屋所玷污，被障碍物所尴尬，被烟雾所笼罩。</p>
+<p><a href="https://en.wikipedia.org/wiki/%E5%A1%9E%E7%BC%AA%E5%B0%94%C2%B7%E7%BA%A6%E7%BF%B0%E9%80%8A" id="_Hbi1bVw0" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%A1%9E%E7%BC%AA%E5%B0%94%C2%B7%E7%BA%A6%E7%BF%B0%E9%80%8A#bodyContent">塞缪尔·约翰逊</a>; <em><a href="https://en.wikipedia.org/wiki/%E6%BC%AB%E6%AD%A5%E8%80%85" id="_FAlwMrBe" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%BC%AB%E6%AD%A5%E8%80%85#bodyContent">漫步者</a></em>, 第 14 期 (1750-05-05)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</blockquote>
+</div>
+<div class="epigraph">
+<blockquote>
+<p>在一位杰出的学者背后，人们常常发现一个平庸的人，而在一位平庸的艺术家背后，往往是一位杰出的人。</p>
+<p><a href="https://en.wikipedia.org/wiki/%E5%BC%97%E9%87%8C%E5%BE%B7%E9%87%8C%E5%B8%8C%C2%B7%E5%B0%BC%E9%87%87" id="_lA7HjwbG" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%BC%97%E9%87%8C%E5%BE%B7%E9%87%8C%E5%B8%8C%C2%B7%E5%B0%BC%E9%87%87#bodyContent">弗里德里希·尼采</a>, <a href="https://en.wikipedia.org/wiki/Beyond_Good_and_Evil" id="_G43iN7J7" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Beyond_Good_and_Evil#bodyContent"><em>善恶的彼岸</em></a> §137</p>
+</blockquote>
+</div>
+<div class="epigraph">
+<blockquote>
+<p>读者过得比生活快，作者过得比生活慢。</p>
+<p>詹姆斯·里查森, <a href="https://gwern.net/doc/philosophy/2010-richardson-bythenumbers-vectors30" id="richardson-2018" class="link-live link-annotated link-page" title="&#39;Vectors 3.0: Even More Aphorisms and Ten-Second Essays&#39;, Richardson 2018">“甚至更多格言和来自 Vectors 3.0 的十秒文章”</a></p>
+</blockquote>
+</div>
+<section id="工作" class="level2">
+<h2><a href="#工作" title="Link to section: § &#39;工作&#39;">工作</a></h2>
+<p>我是一名自由职业的美国作家和研究员。 （为了维持生计，我有 <a href="https://www.patreon.com/gwern" id="_f_5ZNCww" data-link-icon="patreon" data-link-icon-type="svg" data-link-icon-color="#f76159">Patreon</a>，感谢一些旧币带来的比特币增值，并且生活节俭。） 我曾为以下机构工作、发表文章或提供咨询：<em>连线</em> (<span class="date-range">2015<sub><span title="2015 was 11 years ago.">11ya</span></sub></span>), <a href="https://en.wikipedia.org/wiki/Machine_Intelligence_Research_Institute" id="_9u8wA42l" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Machine_Intelligence_Research_Institute#bodyContent">MIRI/SIAI</a><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a><span> (<span class="date-range" title="The date range 2012–2013 lasted 1 year, ending 13 years ago.">2012–2013<sub><span title="2012 was 14 years ago.">13ya</span></sub></span>), </span><a href="https://rationality.org/" id="_kPyhVd2y" class="link-live">CFAR</a><span> (<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>), </span><a href="https://en.wikipedia.org/wiki/GiveWell" id="_aVzJPoT6" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/GiveWell#bodyContent">GiveWell</a><span> (2017), FBI (2016), </span><a href="https://www.amazon.com/Cool-Tools-A-Catalog-Possibilities/dp/1940689007/" id="_0LOQddwz" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="ed. Kelly 2013"><em>酷工具</em></a><span> (<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span>), </span><a href="https://web.archive.org/web/*/https://quantimodo.com/" id="_pxIDUmdy" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg">Quantimodo</a><span> (<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span>), </span><a href="https://www.newworldencyclopedia.org/entry/Info:Main_Page" id="_tKdhWzbZ">新世界百科全书</a><span> (<span class="date-range">2006<sub><span title="2006 was 20 years ago.">20ya</span></sub></span>), </span><a href="https://web.archive.org/web/20181229003208/http://bitcoinweekly.com/" id="_t2sw3_TY" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20181229003208if_/http://bitcoinweekly.com/">比特币周刊</a><span> (<span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span>), </span><a href="https://en.wikipedia.org/wiki/Mobify" id="_4ditQPu3" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mobify#bodyContent">Mobify</a><span> (<span class="date-range" title="The date range 2013–2014 lasted 1 year, ending 12 years ago.">2013–2014<sub><span title="2013 was 13 years ago.">12ya</span></sub></span>), </span><a href="https://bellroy.com/" id="_QDsnGONW">Bellroy</a><span> (<span class="date-range" title="The date range 2013–2014 lasted 1 year, ending 12 years ago.">2013–2014<sub><span title="2013 was 13 years ago.">12ya</span></sub></span>), </span><a href="https://www.frisbys.news/" id="_zzgKEvUn">Domini Frisby</a><span> (<span class="date-range">2014<sub><span title="2014 was 12 years ago.">12ya</span></sub></span>), 以及私人客户 (2009-)；除非代表或出版物另有说明，否则 Gwern.net 上的所有内容应被视为我个人的观点或作品。 我现在不接受新的委托。</span></p>
+</section>
+<section id="网站" class="level2">
+<h2><a href="#网站" title="Link to section: § &#39;网站&#39;">网站</a></h2>
+<div class="epigraph">
+<blockquote>
+<p>“我不说话”，Bijaz 说。“我操作一台叫做语言的机器。它可以嘎吱嘎吱响，但它是属于我自己的。”</p>
+<p><a href="https://en.wikipedia.org/wiki/%E5%BC%97%E5%85%B0%E5%85%8B%C2%B7%E8%B5%AB%E4%BC%AF%E7%89%B9" id="_HpslMCUZ" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%BC%97%E5%85%B0%E5%85%8B%C2%B7%E8%B5%AB%E4%BC%AF%E7%89%B9#bodyContent">弗兰克·赫伯特</a>, <em><a href="https://en.wikipedia.org/wiki/%E6%B2%99%E4%B8%98%E6%95%91%E4%B8%96%E4%B8%BB" id="_G_9X7MPT" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%B2%99%E4%B8%98%E6%95%91%E4%B8%96%E4%B8%BB#bodyContent">沙丘救世主</a></em></p>
+</blockquote>
+</div>
+<ul>
+<li><p><a href="https://github.com/gwern" id="_hc2_n-dw" data-link-icon="github" data-link-icon-type="svg">Github</a></p></li>
+<li><p>社交新闻，讨论：</p>
+<ul>
+<li><p><a href="https://www.lesswrong.com/" id="_xgkZOI9c" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/?format=preview&amp;theme=classic">LessWrong.com</a>: 我的 <a href="https://www.lesswrong.com/users/gwern" id="_2ChKRdpZ" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/users/gwern?format=preview&amp;theme=classic">提交的帖子</a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> &amp; <a href="https://www.lesswrong.com/users/gwern" id="_2ChKRdpZ" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/users/gwern?format=preview&amp;theme=classic">评论</a></p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Reddit" id="_zJmldJlM" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Reddit#bodyContent">Reddit</a>: 我的 <a href="https://old.reddit.com/user/gwern/submitted/" id="_ZvVZAWHB" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">提交</a> &amp; <a href="https://old.reddit.com/user/gwern/comments/" id="_8OizNQpL" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">评论</a> (<a href="https://old.reddit.com/user/gwern/?sort=top" id="_mD98UU2C" data-link-icon="reddit" data-link-icon-type="svg" data-link-icon-color="#ff4500">按分数</a>)</p></li>
+<li><p><a href="https://gwern.net/doc/personal/rss-subscriptions.opml" id="_97FbJaQx" class="link-live link-modified-recently" data-link-icon="txt" data-link-icon-type="svg">RSS 订阅 (OPML)</a></p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Hacker_News" id="_NNioUzwg" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hacker_News#bodyContent">Hacker News</a>: <a href="https://news.ycombinator.com/submitted?id=gwern" id="_ZfAonTuc" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">提交</a> &amp; <a href="https://news.ycombinator.com/threads?id=gwern" id="_EITtp2M6" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">评论</a></p></li>
+</ul></li>
+<li><p><a href="https://predictionbook.com/users/gwern" id="_53V80s6b" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">PredictionBook</a></p></li>
+<li><p><a href="/review/book" id="gwern-review-book" class="prefetch-not link-annotated link-page" title="&#39;Book Reviews&#39;, Gwern 2013">书评</a> (失效: <a href="https://www.goodreads.com/user/show/11004626-gwern" id="_oHCxcRZF" data-link-icon="GR" data-link-icon-type="text,sans" data-link-icon-color="#8a5e4a">Goodreads</a>)</p></li>
+<li><p><a href="/review/anime" id="gwern-review-anime" class="prefetch-not link-annotated link-page" title="&#39;Anime Reviews&#39;, Gwern 2010">动漫评论</a> (<a href="https://myanimelist.net/profile/gwern" id="_Ivj1vSP1" data-link-icon="MAL" data-link-icon-type="text,tri,sans" data-link-icon-color="#2b498e">MyAnimeList</a> 评分: <a href="https://myanimelist.net/animelist/gwern&amp;status=2&amp;show=0&amp;order=4" id="__xEc-Lks" data-link-icon="MAL" data-link-icon-type="text,tri,sans" data-link-icon-color="#2b498e">anime</a> (<a href="https://gwern.net/doc/personal/gwern-myanimelist-export-anime.xml" id="_IfQdpuOJ" class="link-live link-modified-recently" data-link-icon="txt" data-link-icon-type="svg" title="Gwern 2026">XML</a>) / <a href="https://myanimelist.net/mangalist/gwern&amp;status=2&amp;show=0&amp;order=4" id="_TAuZ6Aml" data-link-icon="MAL" data-link-icon-type="text,tri,sans" data-link-icon-color="#2b498e">manga</a> (<a href="https://gwern.net/doc/personal/gwern-myanimelist-export-manga.xml" id="_A9sSqh09" class="link-live link-modified-recently" data-link-icon="txt" data-link-icon-type="svg" title="Gwern 2026">XML</a>))</p></li>
+<li><p>我有一首 <a href="https://reddragdiva.dreamwidth.org/556568.html" id="_KnZzIwwN">主题曲</a> (<a href="https://web.archive.org/web/20110711231247/http://reddragdiva.co.uk/lj/gwern.mp3" id="_jJRsz77T" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20110711231247if_/http://reddragdiva.co.uk/lj/gwern.mp3">MP3</a>), 由 <a href="https://davidgerard.co.uk/" id="_iGy2Ej8e">David Gerard</a> 提供<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p></li>
+</ul>
+<p>我与这位法国歌手或 <code>gwern.com</code>、威尔士的任何地点、MySpace 上的 gwern 或 <code>Pivory.com</code> 上的任何帐户（这些都与<a href="/blackmail" id="gwern-blackmail" class="prefetch-not link-annotated link-page" title="&#39;Blackmail fail&#39;, Gwern 2013">试图敲诈我</a>有关）没有任何联系。</p>
+<section id="维基" class="level3">
+<h3><a href="#维基" title="Link to section: § &#39;维基&#39;">维基</a></h3>
+<p>自 <span class="date-range">2004<sub><span title="2004 was 22 years ago.">22ya</span></sub></span> 年 1 月以来，我一直活跃在英语维基百科和相关项目中。累计<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>，我有超过 90,000 次编辑，并编写或参与了<a href="/wikipedia-resume" id="gwern-wikipedia-resume" class="prefetch-not link-annotated link-page" title="&#39;Wikipedia Résumé&#39;, Gwern 2010">数百篇文章</a>；在我担任英语管理员期间，我执行了数千次<a href="https://en.wikipedia.org/wiki/Special:Log/Marudubshinki" id="_9TwzrjTN" class="content-transform-not link-live-not" data-link-icon="wikipedia" data-link-icon-type="svg">管理操作</a>；我是 <a href="https://en.wikipedia.org/wiki/Haskell" id="_AC8VbUc5" class="link-modified-recently link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Haskell#bodyContent" title="Haskell">Haskell</a> 维基的管理员，处理 <a href="https://wiki.haskell.org/index.php?title=Special:Log&amp;user=Gwern" id="_p8wWNgEU" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">常规垃圾邮件和破坏</a>：</p>
+<ul>
+<li><p><a href="https://en.wikipedia.org/wiki/User:Gwern" id="_dLu-bVhB" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/User:Gwern#bodyContent">英语维基百科</a></p></li>
+<li><p><a href="https://en.wikibooks.org/wiki/User:Gwern" id="_jIdKh2a9" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg">英语维基教科书</a></p></li>
+<li><p><a href="https://wiki.haskell.org/User:Gwern" id="_VFBnfXdS" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">Haskell 维基</a></p></li>
+</ul>
+<p>我还运行了一个 <a href="https://en.wikipedia.org/wiki/Google_Programmable_Search_Engine" id="_-XS5rmFe" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Google_Programmable_Search_Engine#bodyContent">自定义 Google 搜索工具</a>，名为 <a href="https://cse.google.com/cse?cx=009114923999563836576:1eorkzz2gp4" id="_tvcRI0Ko" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">“维基百科动漫和漫画的可靠来源”</a>；这是一个自定义 Google 搜索，其<a href="https://en.wikipedia.org/wiki/Blacklist_(computing)" id="_2PG0vGF0" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Blacklist_(computing)#bodyContent">黑名单</a>和<a href="https://en.wikipedia.org/wiki/%E7%99%BD%E5%90%8D%E5%8D%95" id="_6FiVGIG1" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E7%99%BD%E5%90%8D%E5%8D%95#bodyContent">白名单</a>上有超过 4542 个网站。 （来源/列表是<a href="https://gwern.net/doc/personal/google-cse.xml" id="_dEKn3HIz" class="link-live link-modified-recently" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">公开可用的</a>。） 由于主题是流行文化，正如名字所示，特别是动漫和漫画，它返回的结果要有用得多<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>。</p>
+</section>
+</section>
+<section id="使用这个" class="level2 collapse">
+<h2 class="collapse"><a href="#使用这个" title="Link to section: § &#39;使用这个&#39;">使用这个</a></h2>
+<div class="abstract">
+<blockquote>
+<p>就像 <a href="https://usesthis.com/" id="_w17mEwtd" title="A collection of nerdy interviews asking people from all walks of life what they use to get the job done.">“Uses This”</a> 或巴黎评论的 <em>工作中的作家</em> 那样，我也时常被问到我的技术“栈”。 我在专为深度学习和强化学习工作设计的定制工作站上使用强调文本/CLI 的 FLOSS 软件，并在符合人体工程学的家庭办公室中使用纵向显示器、Aeron 椅子和轨迹球。</p>
+</blockquote>
+</div>
+<section id="软件" class="level3">
+<h3><a href="#软件" title="Link to section: § &#39;软件&#39;">软件</a></h3>
+<div class="dropcap-dropcat">
+<p>我运行 Ubuntu Linux，使用平铺窗口管理器和以 CLI 为中心的习惯。 （我更喜欢 Debian，但 Ubuntu 对 NVIDIA 驱动程序的支持更好，所以只要我需要 GPU 加速，我就只能使用 Ubuntu）。 我通过 <a href="https://en.wikipedia.org/wiki/Ratpoison" id="_IeoxPFjl" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Ratpoison#bodyContent">ratpoison</a> 开始使用平铺窗口管理器，并帮助推动了 <a href="https://en.wikipedia.org/wiki/StumpWM" id="_zy8yW6Sf" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/StumpWM#bodyContent">StumpWM</a> 和随后的 <a href="https://en.wikipedia.org/wiki/Xmonad" id="_8if2BxT9" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Xmonad#bodyContent">xmonad</a> (<a href="https://wiki.haskell.org/Xmonad/Config_archive/Gwern&#39;s_xmonad.hs" id="_SBtiSodc" class="link-live" data-link-icon="code" data-link-icon-type="svg" data-link-icon-color="#5e5086">我的配置</a>) 的初步开发，我仍然结合使用 <a href="https://en.wikipedia.org/wiki/MATE_(desktop_environment)" id="_tiaMUKsx" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/MATE_(desktop_environment)#bodyContent">MATE</a>，这是疯狂的 GNOME 3 毁了一切之前的最后一个优秀的 GNOME 桌面环境版本的复刻。</p>
+</div>
+<p>我的大部分时间都在 <a href="https://en.wikipedia.org/wiki/Emacs" id="_ij4Mg-Kj" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Emacs#bodyContent">Emacs</a> 编辑 <a href="https://jblevins.org/projects/markdown-mode/" id="_vC38urVR">Markdown</a> (<a href="https://en.wikipedia.org/wiki/User:Gwern/.emacs" id="_63-pXeV2" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/User:Gwern/.emacs#bodyContent">我的配置</a>), Firefox (扩展: <a href="https://en.wikipedia.org/wiki/Evernote" id="_givEHAql" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Evernote#bodyContent">Evernote</a> <a href="https://addons.mozilla.org/en-US/firefox/addon/evernote-web-clipper/" id="_SylyaAPn" data-link-icon="FF" data-link-icon-type="text,sans" data-link-icon-color="#e66000">插件</a>, <a href="https://www.eff.org/https-everywhere" id="_VpB5HeZh">HTTPS Everywhere</a>, <a href="https://noscript.net/" id="_8xhrq31K">NoScript</a>, <a href="https://github.com/gorhill/uBlock" id="_Qu6DJ7gR" data-link-icon="github" data-link-icon-type="svg">uBlock origin</a>, <a href="https://lastpass.com/lastpassffx/" id="_5SpE1ZBZ">LastPass</a>, <a href="https://free.law/recap" id="_lDIHHk2m">RECAP</a>), 或 <a href="http://software.schmorp.de/pkg/rxvt-unicode.html" id="_kmHttV7D">urxvt</a>/<a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)" id="_QsvhkALX" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bash_(Unix_shell)#bodyContent">Bash</a>/<a href="https://en.wikipedia.org/wiki/GNU_Screen" id="_Fl8O5-9r" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/GNU_Screen#bodyContent">screen</a>. 我的大部分 R/Haskell/Python 编程都是在 REPL+Emacs 中完成的。 （朋友不让朋友吸毒或使用 org-mode——你真的能<a href="https://xkcd.com/1205/" id="_3CtnfzCQ" class="link-live" data-link-icon="XKCD" data-link-icon-type="text,quad,sans" title="Is It Worth The Time?">找回</a>学习和定制 org-mode 所花费的时间吗？）</p>
+<p>杂项：我使用 <a href="https://en.wikipedia.org/wiki/Mnemosyne_(software)" id="_W4kE-J23" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mnemosyne_(software)#bodyContent">Mnemosyne</a> 进行 <a href="/spaced-repetition" id="gwern-spaced-repetition" class="prefetch-not link-annotated link-page" title="&#39;Spaced Repetition for Efficient Learning&#39;, Gwern 2009">间隔重复</a>, <a href="https://en.wikipedia.org/wiki/Liferea" id="__xOlXynz" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Liferea#bodyContent">Liferea</a> 用于 RSS, Evernote/<a href="https://github.com/robert7/nixnote2" id="_IP53hRe1" data-link-icon="github" data-link-icon-type="svg">Nixnote</a> 用于剪报/笔记, <a href="https://en.wikipedia.org/wiki/RTorrent" id="_Lc-g725S" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/RTorrent#bodyContent">rTorrent</a> 用于下载, <a href="https://en.wikipedia.org/wiki/Mpv_(media_player)" id="_IdBzE3rF" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mpv_(media_player)#bodyContent">mpv</a>/<a href="https://en.wikipedia.org/wiki/Clementine_(software)" id="_uuLP111E" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Clementine_(software)#bodyContent">Clementine</a> 用于媒体播放, <a href="https://en.wikipedia.org/wiki/Irssi" id="_rFOK6umP" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Irssi#bodyContent">irssi</a> 用于 IRC, <a href="https://arbtt.nomeata.de/" id="_5W5InybU" class="link-live" data-link-icon-color="#445f66">arbtt</a> 用于时间跟踪, <a href="https://ledger-cli.org/" id="_0b3M1L1Y" class="link-live">ledger</a> 用于财务 &amp; <a href="https://en.wikipedia.org/wiki/Google_Calendar" id="_NBkDgR24" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Google_Calendar#bodyContent">Google Calendar</a> 用于日程安排/提醒, <a href="https://en.wikipedia.org/wiki/Redshift_(software)" id="_vtv8-XVt" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Redshift_(software)#bodyContent">Redshift</a> 用于夜间屏幕着色 <a href="/zeo/redshift" id="gwern-zeo-redshift" class="prefetch-not link-annotated link-page" title="&#39;Redshift sleep experiment&#39;, Gwern 2012">以帮助睡眠</a>, 以及 <a href="https://en.wikipedia.org/wiki/Duplicity_(software)" id="_Mgp6--5F" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Duplicity_(software)#bodyContent">duplicity</a> 用于备份。</p>
+</section>
+<section id="硬件" class="level3">
+<h3><a href="#硬件" title="Link to section: § &#39;硬件&#39;">硬件</a></h3>
+<section id="计算机" class="level4">
+<h4><a href="#计算机" title="Link to section: § &#39;计算机&#39;">计算机</a></h4>
+<p>截至 2020 年 6 月，我使用一台工作站 PC（我自己组装的），一台大型 <a href="https://www.amazon.com/dp/B00PC9HFO8/" id="_xlyF53aS" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="Dell P2715Q 27.0-inch 60Hz Monitor, $438">戴尔显示器</a> <a href="https://www.amazon.com/WALI-Adjustable-Capacity-Optional-WL-M001/dp/B018MT6ZEK/" id="_dlCXtRwV" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="WALI Single LCD Monitor Desk Mount Stand Fully Adjustable, $25">安装</a> 为纵向模式用于阅读<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>，一根 <a href="https://www.amazon.com/Ultra-Spec-Cables-Connectors-Installed/dp/B00ONA7UMY" id="_XQPxxANw" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="200 foot Cat6 Outdoor Dry Gel Filled Direct Burial Ethernet (Self Healing) (Connectors Installed), $90">200 英尺长的以太网电缆</a> （这需要我<a href="/wifi" id="gwern-wifi" class="prefetch-not link-annotated link-page" title="&#39;Internet WiFi improvement&#39;, Gwern 2016">挖一条沟到隔壁房子</a>），一个罗技拇指 <a href="https://www.amazon.com/gp/product/B0043T7FXE/" id="_E89v8KpF" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="Logitech 910-001799 Wireless Trackball M570, $25">轨迹球</a>，一个 <a href="https://www.amazon.com/gp/product/B07X4Y5RDC/" id="_Q9hy6osy" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="G.SKILL USB KM360 Professional Tenkey-less Mechanical Keyboard, Cherry MX Red, ABS Dual Injection Keycap (Black)">G.SKILL KM360</a> 机械键盘<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>，以及 <a href="https://www.amazon.com/Bose-QuietComfort-Acoustic-Cancelling-Headphones/dp/B00X9KV0HU" id="_jyS40VXl" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="Bose QuietComfort 20 Acoustic Noise Cancelling Headphones, $249">Bose 降噪耳机</a>。</p>
+<p>工作站连接到一个 <a href="https://www.amazon.com/CyberPower-CP1500AVRLCD-Intelligent-1500VA-Mini-Tower/dp/B000FBK3QK/" id="_T_d9shII" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="CyberPower CP1500AVRLCD Intelligent LCD UPS 1500VA 900W AVR Mini-Tower">900W UPS</a> 以防止这里并不罕见的雷暴，以及一个 <a href="https://www.amazon.com/Book-Desktop-External-Drive-WDBFJK0060HBK-NESN/dp/B00KU686HI" id="_ITO1eZHF" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="Western Digital My Book 6TB External USB Drive, $206">6TB 外置硬盘</a> 用于日常增量备份，并辅以 <a href="https://en.wikipedia.org/wiki/Backblaze" id="_Ms2-3EH7" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Backblaze#bodyContent">Backblaze</a> B2 (~$4/月) 和各种外置硬盘。 旅行时，我使用我的 <a href="https://web.archive.org/web/20220430225206/https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadp/thinkpad-p70/22tp2wpwp70" id="_AGp0ygJJ" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20220430225206if_/https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadp/thinkpad-p70/22tp2wpwp70">ThinkPad P70 笔记本电脑</a>，它取代了 <a href="https://www.newegg.com/acer-aspire-v15-nitro-black-edition-vn7-591g-70rt-gaming-entertainment/p/N82E16834314849" id="_BkFjsUzD">Acer Aspire V17</a> (它以<a href="/note/note#november-2016-data-loss-postmortem" id="gwern-note-note--november-2016-data-loss-postmortem" class="prefetch-not link-annotated link-page" title="&#39;Miscellaneous § November 2016 data loss postmortem&#39;, Gwern 2009">一种非常不幸的方式</a>坏掉了)，后者取代了 Dell Studio 17，再后者取代了我 ~2008 年组装的一台 PC。</p>
+<p>我将工作站设计用于深度学习、强化学习和贝叶斯统计，这使得它比我预想的要贵得多，最终确定了 <a href="https://en.wikipedia.org/wiki/Ryzen" id="_R3vRs4E8" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Ryzen#bodyContent">Threadripper</a>+双 GPU 设计 (同时没有忘记 IO 通​​常是瓶颈)，但不幸的是，这些是相当矛盾的要求 (DRL 需要 RAM+CPU，而 DL 只需要 GPU)，结果变得很昂贵。 (我在 RAM 上做得过火的部分原因是我对在测试 <a href="/coin-flip" id="gwern-et-al-2017" class="prefetch-not link-annotated link-page" title="&#39;The Kelly Coin-Flipping Game: Exact Solutions&#39;, Branwen et al 2017">Kelly 抛硬币游戏</a> 的各种动态规划算法时不断触及 RAM 限制感到沮丧，而且因为这么大的 RAM 意味着整个数据集可以在 R/Python 中缓存或在内存中处理，从而节省了核外算法或优化的巨大复杂性。)</p>
+<p>工作站是基于 Gigabyte X399 Designare EX 主板的液冷 <a href="https://en.wikipedia.org/wiki/AMD" id="_ZOWS4laL" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/AMD#bodyContent">AMD</a> Threadripper CPU 构建，2×1080ti NVIDIA GPU，110GB RAM (名义上是 128GB，但最后一条内存由于明显的 BIOS 问题无法使用)，一个用于 OS/home 的 1TB <a href="https://en.wikipedia.org/wiki/NVM_Express" id="_woBTJXGO" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/NVM_Express#bodyContent">NVMe</a> 驱动器，以及一个用于大容量存储的 8TB 内部 HDD，全部装在一个 (不必要但太有趣了不得不有) 钢化玻璃机箱中。 组装过程很困难——自从我 2008 年上次组装 PC 以来，主板/CPU/GPU 变得更加复杂——第一块主板顽固地拒绝启动，而在我将其 RMA 给 Newegg (花费了 $36) 之后，第二块最初可以使用，但随后在一夜之间坏掉了。<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> 在修补和拖延了几个月后，我放弃了华硕主板，查看了 <a href="https://en.wikipedia.org/wiki/Puget_Systems" id="_lpJU6YZy" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Puget_Systems#bodyContent">Puget Systems</a> 在他们的 Threadripper 构建中使用的东西 (<a href="https://www.thinkmate.com/" id="_pllqYWeQ">ThinkMate</a> 仍然不提供任何产品)，并复制了他们选择的 Gigabyte X399 Designare EX 主板，理由是如果他们运送数百个这样的系统，它必定相对可靠；那块主板，加上更有力地插入 Threadripper CPU，终于成功了，我得以在 2018 年 6 月切换所有东西。 虽然最终结果如我所希望的那样强大和有用 (特别是对于使用 <a href="/danbooru2021#danbooru2018" id="gwern-danbooru2021--danbooru2018" class="prefetch-not link-modified-recently link-page">Danbooru2018</a>，其中 16 核+2 GPU 允许我创建许多不同的专用数据集并尝试许多不同的 <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network" id="_XQFvxija" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Generative_adversarial_network#bodyContent">GAN</a> 架构)，但 <em>组装</em> 它的经历让我对将来自己组装 PC 感到厌倦：我显然不再足够了解 PC 硬件以做得很好，而且组件越贵，我就越不喜欢将它们变砖的风险或事实。 将来我可能会更多地依靠云解决方案或者咬紧牙关购买预构建的系统。 工作站部件列表 (<a href="https://pcpartpicker.com/list/nwQnZ8" id="_QJ1ZLUdi">PCPartPicker.com 草图</a>):</p>
+<ul>
+<li><p>机箱: <a href="https://www.amazon.com/Phanteks-Tempered-Glass-Black-PH-ES515PTG_BK/dp/B01LRVHH6K/" id="_ucWmAv_w" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="Phanteks Enthoo Pro M Series PH-ES515PTG_BK Brushed Black Tempered Glass Window ATX Mid Tower, $128">Phanteks Enthoo Pro M 拉丝黑色钢化玻璃窗 ATX 中塔</a></p>
+<figure>
+<p><img src="https://gwern.net/doc/personal/2018-06-26-gwern-workstation-gpusatnight.jpg" title="2018 年 6 月我工作站的一张“时尚”夜间照片，2 个 Nvidia 1080ti GPU 照亮了透明玻璃电脑机箱，看起来很“酷”。" id="_d67viOtc" class="float-right" alt="“黑暗中显示 GPU 的工作站照片。”"></img></p>
+<figcaption><p>“黑暗中显示 GPU 的工作站照片。”</p></figcaption>
+</figure></li>
+<li><p>主板: <a href="https://www.amazon.com/GIGABYTE-X399-Designare-EX-Motherboard/dp/B07662S766/" id="_jKe7NuWI" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="$394">GIGABYTE X399 Designare EX</a></p></li>
+<li><p>CPU: <a href="https://www.amazon.com/AMD-Threadripper-32-thread-Processor-YD195XA8AEWOF/dp/B074CBH3R4/" id="_-nF5ihS0" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="$800">AMD Ryzen <span class="cite"><span class="cite-author">Threadripper</span><span class="cite-date">1950</span></span>X 16-Core (3.4 GHz)</a> (<a href="https://www.amazon.com/Arctic-Silver-AS5-3-5G-Thermal-Paste/dp/B0087X728K/" id="_Z0gTA5rx" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="Arctic Silver 5 High-Density Polysynthetic Silver Thermal Compound AS5-3.5G, $6">导热膏</a>)</p>
+<ul>
+<li><p>液冷: <a href="https://www.amazon.com/Radiator-Advanced-Lighting-Software-compatible/dp/B077G3C6HH/" id="_XuhAu6av" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="$110">Corsair Hydro Series H115i 极致性能液冷 CPU 散热器, 280mm</a></p></li>
+</ul></li>
+<li><p>GPU: 2× <a href="https://www.amazon.com/STRIX-GeForce-Gaming-Graphics-ROG-STRIX-GTX1080TI-11G-GAMING/dp/B06XY25VTC/" id="_XiLBucZf" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="$800">Asus ROG GeForce GTX 1080ti GPU</a></p></li>
+<li><p>RAM: 4×: <a href="https://www.amazon.com/G-SKILL-Ripjaws-PC4-25600-Platform-F4-3200C16D-32GVK/dp/B0171GQR0C/" id="_AAALPVgH" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="$300">G.SKILL Ripjaws V Series 32GB (2 × 16GB) 288-Pin DDR4</a></p></li>
+<li><p>SSD: <a href="https://www.amazon.com/Samsung-960-EVO-Internal-MZ-V6E1T0BW/dp/B01LXS4TY6/" id="_2n6Ai8Yl" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="$470">Samsung 960 EVO M.2 1TB NVMe</a></p></li>
+<li><p>HDD: <a href="https://www.amazon.com/Toshiba-Performance-Desktop-Internal-HDWF180XZSTA/dp/B074BTZ2YJ/" id="_3nZbLl7o" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="$255">Toshiba X300 8TB 7.2k RPM 128MB HDD</a></p></li>
+<li><p>PSU: <a href="https://www.amazon.com/CORSAIR-HX1200i-Platinum-Certified-Modular/dp/B00U6GTONM/" id="_mmwCbHNe" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="$265">Corsair HXi <span class="cite"><span class="cite-author">Series</span><span class="cite-date">1200</span></span>W 全模块化 ATX 电源</a></p></li>
+<li><p>总计 (2017 年 12 月): ~<span class="inflation-adjusted" data-year-original="2017" data-amount-original="3,800" data-year-current="2026" data-amount-current="5,123.18" title="CPI inflation-adjusted US dollar: from nominal $3,800 in 2017 → real $5,123.18 in 2026">$5,123.18<span class="subsup"><sup>$3,800</sup><sub>2017</sub></span></span><span>. (我在 2017 年 12 月订购了大部分零件，由于加密货币泡沫、未发布的下一代 GPU 和内存价格操纵卡特尔，这主要成为了 GPU 和 RAM 的高水位线；再加上通常的价格下降，到 2018 年 11 月，同等系统的成本至少会降低 15%。)</span></p></li>
+</ul>
+</section>
+<section id="其他" class="level4">
+<h4><a href="#其他" title="Link to section: § &#39;其他&#39;">其他</a></h4>
+<p>为了扫描书籍，我使用 <a href="https://www.amazon.com/gp/product/B00NO7PYYI/" id="_Ls5A9FjU" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="HFS (R) New Heavy Duty Guillotine Paper Cutter - 12-inch Commercial Metal Base A3/A4 Trimmer, $107">12 英寸断头台切纸机</a> 来均匀地拆书 (相比使用带有 Fiskars 弯曲刀片的 X-Acto 刀是一个巨大的升级)，一台 <a href="https://www.amazon.com/Epson-WorkForce-ES-200-Portable-Sheet-fed/dp/B01MQ4H35N/" id="_lxx6wVNj" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="Epson ES-200 duplex ADF sheet-fed document scanner, $265">Epson 馈纸式扫描仪</a> 配合 <code>imagescan</code> 进行扫描 &amp; <a href="https://gscan2pdf.sourceforge.net/" id="_5O5UHmJT" data-link-icon="sourceforge" data-link-icon-type="svg" data-link-icon-color="#ff6600" title="&#39;gscan2pdf: A GUI to produce PDFs or DjVus from scanned documents&#39;, Ratcliffe 2019"><code>gscan2pdf</code></a> 进行后处理。</p>
+<p>我的桌子是一张旧桌子，由我不曾祖父用胶合板和管道硬件为我的姑姑制作；当我意识到它的尺寸和高度完美时，我重新利用了它。 2020 年 7 月，因为我未能找到任何可以在本地买到二手并在购买前测试的好的站立式办公桌，我放弃了并购买了一台 <a href="https://store.hermanmiller.com/brands-fully" id="_Egt1PcOm">48x30 弯曲竹制 Jarvis 站立式办公桌</a> (<span class="inflation-adjusted" data-year-original="2020" data-amount-original="609" data-year-current="2026" data-amount-current="765.99" title="CPI inflation-adjusted US dollar: from nominal $609 in 2020 → real $765.99 in 2026">$765.99<span class="subsup"><sup>$609</sup><sub>2020</sub></span></span>). 我尝试过 <a href="/treadmill" id="gwern-treadmill" class="prefetch-not link-annotated link-page" title="&#39;Treadmill desk observations&#39;, Gwern 2012">跑步机办公桌</a>，但发现它令人分心，长期令人不快，并且让我的猫感到苦恼。 我把桌子放在凸窗前，这样我就可以欣赏风景并休息眼睛，同时观察河上发生的事情。 不幸的是，凸窗经常有阳光直射，所以我添加了 <a href="https://www.amazon.com/gp/product/B00CWGIHBE/" id="_HU6h5J2m" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="BDF S05 Window Film: One Way Mirror Window Film Silver-Silver 5 (36in X 12ft), $25">反光片</a><span>，这在夏季大大减少了热量 (当然代价是冬天更阴暗，但这正是为什么我有明亮的 LED 灯泡)。 椅子是我 2016 年 11 月在 Craigslist 上以 </span><span class="inflation-adjusted" data-year-original="2016" data-amount-original="225" data-year-current="2026" data-amount-current="311.54" title="CPI inflation-adjusted US dollar: from nominal $225 in 2016 → real $311.54 in 2026">$311.54<span class="subsup"><sup>$225</sup><sub>2016</sub></span></span><span> 购买的二手 Aeron 椅子 (很便宜，虽然我怀疑我会支付标价)；当网面在 2021 年 4 月撕裂时，我以 </span><span class="inflation-adjusted" data-year-original="2021" data-amount-original="60" data-year-current="2026" data-amount-current="74.65" title="CPI inflation-adjusted US dollar: from nominal $60 in 2021 → real $74.65 in 2026">$74.65<span class="subsup"><sup>$60</sup><sub>2021</sub></span></span> 更换了它，这比通常建议的更换整个座盘 (<span class="inflation-adjusted" data-year-original="2021" data-amount-original="200" data-year-current="2026" data-amount-current="248.84" title="CPI inflation-adjusted US dollar: from nominal $200 in 2021 → real $248.84 in 2026">$248.84<span class="subsup"><sup>$200</sup><sub>2021</sub></span></span>) 便宜得多。 剑麻猫树 (Petco) 为我的猫提供了一个极好的栖息地，我添加了一个 <a href="https://www.amazon.com/gp/product/B005PP4EVG/" id="_j9BcC9hV" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="Two-way Screen Door Pet Access Snap Flap by Discount Ramps, $14.78">宠物门</a> 和一个 <a href="https://www.amazon.com/Thermo-Kitty-Sill-Window-seat/dp/B00061RHO0/" id="_7p6yCVRg" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="K&amp;H Thermo Heated Kitty Sill, $20">猫窗台</a> 这样他就可以更容易地进出，并带有亚克力板以减少气流。 (结果发现他非常不喜欢柔软的表面，所以一半的猫窗台都没用！我不得不更换泡沫填充物 &amp; 盖上一块我切割以适应的胶合板。) 我脚边的箱式风扇 (Walmart, <span class="inflation-adjusted" data-year-original="2017" data-amount-original="19" data-year-current="2026" data-amount-current="25.62" title="CPI inflation-adjusted US dollar: from nominal $19 in 2017 → real $25.62 in 2026">$25.62<span class="subsup"><sup>$19</sup><sub>2017</sub></span></span>) &amp; 工作站都放在 <a href="https://www.amazon.com/gp/product/B01IU6WT5O/" id="_sKZJUQwa" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="Pack of Anti Vibration Pads 4-inch x 4-inch x 7/8-inch Rubber/Cork Vibration isolation pads, $8.49">橡胶软木防震垫</a> 上。 为了减少 RSI，我保留了一个 <a href="https://www.amazon.com/Hand-Finger-Exerciser-Heavy-Tension/dp/B000UMHURY/" id="_3hHhjZwn" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="Gripmaster Pro Hand Strengthening System">握力练习器</a> 以便在观看视频等空闲时刻使用。 为了制作 <a href="/review/tea" id="gwern-review-tea" class="prefetch-not link-annotated link-page" title="&#39;Tea Reviews&#39;, Gwern 2011">茶</a>，我在一个简单的可调节 <a href="https://www.amazon.com/T-fal-Balanced-1750-Watt-Electric-Temperature/dp/B0086UJQN8" id="_KoSbU4b5" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="T-fal BF6138US Balanced Living 1-Liter 1750-Watt Electric, $24">电热水壶</a> 中烧水，我通过钻孔进入透明塑料并插入一个 <a href="https://www.amazon.com/Taylor-Precision-Products-Classic-Thermometer/dp/B00004XSC4/" id="_PAnNzcLz" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="Taylor Classic Instant Read Pocket Thermometer, $5.14">肉类温度计</a> 使其“可编程” (这种组合比电子水壶便宜得多且更值得信赖)；然后我在一个大的殖民地威廉斯堡陶瓷狐狸马克杯中的 <a href="https://www.amazon.com/gp/product/B000I68NCS/" id="_lbnbbaIO" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53" title="Finum Brewing Basket, medium, black, $9">Finum 过滤器</a> 中浸泡茶。</p>
+<figure>
+<p><img src="https://gwern.net/doc/personal/2018-10-08-gwern-cat-keyboardbreak.jpg" id="_IUOgQlhK" alt="我的猫想提醒你每小时休息一次打字 &amp; 电脑。"></img></p>
+<figcaption><p>我的猫想提醒你每小时休息一次打字 &amp; 电脑。</p></figcaption>
+</figure>
+</section>
+</section>
+<section id="邮件列表" class="level3">
+<h3><a href="#邮件列表" title="Link to section: § &#39;邮件列表&#39;">邮件列表</a></h3>
+<ul>
+<li><p><a href="https://groups.google.com/g/brain-training" id="_J4j23t9a" data-link-icon="✉" data-link-icon-type="text" data-link-icon-color="#4285f4">双 <em>n</em>-Back，大脑训练 &amp; 智力</a> (见 <a href="/dnb-faq" id="gwern-dnb-faq" class="prefetch-not link-annotated link-page" title="&#39;Dual n-Back FAQ&#39;, Gwern 2009">DNB FAQ</a>)</p></li>
+<li><p>Haskell:</p>
+<ul>
+<li><p>Darcs: <a href="https://www.google.com/search?q=site:lists.osuosl.org/pipermail/darcs-users/+gwern" id="_5SYl0_Y5" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">users</a>/<a href="https://www.google.com/search?q=site:lists.osuosl.org/pipermail/darcs-devel/+gwern" id="_KaOKAgiX" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">devel</a></p></li>
+<li><p><a href="https://www.google.com/search?q=gwern+site%3Ahttp%3A%2F%2Fwww.haskell.org%2Fpipermail%2Flibraries%2F" id="_e1oZ_5he" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Haskell libraries</a></p></li>
+<li><p><a href="https://www.google.com/search?q=gwern+site%3Ahttp%3A%2F%2Fwww.haskell.org%2Fpipermail%2Fhaskell-cafe%2F" id="_mK9Mcm0L" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Haskell-cafe</a></p></li>
+<li><p><a href="https://www.google.com/search?q=gwern+site%3Ahttp%3A%2F%2Fwww.haskell.org%2Fpipermail%2Fxmonad%2F" id="_jJUcCcHo" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">XMonad</a></p></li>
+<li><p><a href="https://groups.google.com/forum/#!searchin/yi-devel/gwern" id="_btL5gH32" data-link-icon="✉" data-link-icon-type="text" data-link-icon-color="#4285f4">Yi</a></p></li>
+</ul></li>
+<li><p><a href="https://groups.google.com/g/mnemosyne-proj-users" id="_pUPRE6gd" data-link-icon="✉" data-link-icon-type="text" data-link-icon-color="#4285f4">mnemosyne-proj-users</a> (见 <a href="#gwern-spaced-repetition">间隔重复</a>)</p></li>
+<li><p><a href="https://www.google.com/search?q=gwern+site%3Ahttp%3A%2F%2Fwww.sl4.org%2Farchive%2F" id="_bqbAHV1T" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">SL4</a></p></li>
+<li><p><a href="https://www.google.com/search?q=gwern+site%3Aurth.net" id="_pK5eoP7S" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Urth</a></p></li>
+</ul>
+</section>
+<section id="moocs" class="level3">
+<h3><a href="#moocs" title="Link to section: § &#39;MOOCs&#39;">MOOCs</a></h3>
+<p>已完成:</p>
+<ul>
+<li><p><a href="https://www.codespaces.com/power-searching-with-google.html" id="_qs_hVHKS" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Google “Power Searching”</a> (<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>); 评价: <a href="https://www.lesswrong.com/posts/Bsa325tntncXWX4uJ/learn-power-searching-with-google#ZqY64PqXZGFL4fkps" id="_pnUMvlbg" class="link-live" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" data-url-iframe="https://www.greaterwrong.com/posts/Bsa325tntncXWX4uJ/learn-power-searching-with-google/comment/ZqY64PqXZGFL4fkps?format=preview&amp;theme=classic">负面</a> (我可能<a href="https://www.lesswrong.com/posts/RspqaNmJKKBnXTqwk/open-thread-april-1-15-2013#sWpsaRHPG4rtc8mxt" id="_TCKx_Uy_" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/RspqaNmJKKBnXTqwk/open-thread-april-1-15-2013/comment/sWpsaRHPG4rtc8mxt?format=preview&amp;theme=classic">太擅长</a>搜索了以至于无法从中受益太多；我写了<a href="/search" id="gwern-search" class="prefetch-not link-annotated link-page" title="&#39;Internet Search Tips&#39;, Gwern 2018">一篇关于更高级互联网搜索技巧的教程</a>，它超越了 “Power Searching” 的基础知识。)</p></li>
+<li><p><a href="https://oli.cmu.edu/courses/probability-statistics-open-free/" id="_NHAjJTjG">CMU “Probability &amp; Statistics”</a> (<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>); 评价: <a href="https://www.lesswrong.com/posts/jG74S37Y6x8odJ3BF/open-thread-october-16-31-2012#mK8nwXXzmohWKcWZb" id="_Zm_vJQG-" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/jG74S37Y6x8odJ3BF/open-thread-october-16-31-2012/comment/mK8nwXXzmohWKcWZb?format=preview&amp;theme=classic">正面</a></p></li>
+<li><p><a href="https://www.pluralsight.com/search?q=R" id="_dRDVHDyT">Code School “Try R”</a> (<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>); 评价: 混合 (简短，基础介绍；很酷的界面，但我的 R 知识已经超过了它)</p></li>
+<li><p><a href="https://mru.org/development-economics" id="__U1-7tfG">MRU Development Economics</a> (<span class="date-range" title="The date range 2012–2013 lasted 1 year, ending 13 years ago.">2012–2013<sub><span title="2012 was 14 years ago.">13ya</span></sub></span>); 评价: <a href="https://www.lesswrong.com/posts/RWMRDE9aRWoSRiYx6/open-thread-january-16-31-2013#XksWmWEBbbHe4wsx2" id="_6TDWj_TA" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/RWMRDE9aRWoSRiYx6/open-thread-january-16-31-2013/comment/XksWmWEBbbHe4wsx2?format=preview&amp;theme=classic">混合</a></p></li>
+<li><p>Coursera “Data Analysis” (<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span>); 评价: <a href="https://www.lesswrong.com/posts/u7sKRzQ5jC7KXPPsh/open-thread-march-1-15-2013#LQNCNBob6eETitj9a" id="_1wGtndrE" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/u7sKRzQ5jC7KXPPsh/open-thread-march-1-15-2013/comment/LQNCNBob6eETitj9a?format=preview&amp;theme=classic">正面</a></p></li>
+</ul>
+<p>未完成:</p>
+<ul>
+<li><p><a href="/sicp/introduction" id="gwern-sicp-introduction" class="prefetch-not link-annotated link-page" title="&#39;SICP Introduction&#39;, Gwern 2009"><em>SICP</em></a> (2009–)</p></li>
+</ul>
+<p>已放弃:</p>
+<ul>
+<li><p><a href="https://web.archive.org/web/20161022044905/https://www.coursera.org/learn/drugs-and-brain" id="_1kXq2THO" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20161022044905if_/https://www.coursera.org/learn/drugs-and-brain">Coursera “Drugs and the Brain”</a> (<span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span>); 评价: <a href="https://www.lesswrong.com/posts/AaCjoWaHQzCJKheFi/open-thread-february-1-14-2013#XtCGvcrsddeSWBNjd" id="_2Iy4_N2a" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/AaCjoWaHQzCJKheFi/open-thread-february-1-14-2013/comment/XtCGvcrsddeSWBNjd?format=preview&amp;theme=classic">负面</a></p></li>
+<li><p><a href="https://www.coursera.org/learn/probabilistic-graphical-models" id="_fpbEaieU">Coursera “Probabilistic Graphical Models”</a> (<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span>); 如传说中一样难 (我无法应付材料 <em>和</em> 学习 <a href="https://en.wikipedia.org/wiki/GNU_Octave" id="_yyAcU-6z" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/GNU_Octave#bodyContent">Octave</a>)，现在与 DL 相比，这可能是对时间的糟糕利用</p></li>
+</ul>
+</section>
+</section>
+<section id="档案" class="level2">
+<h2><a href="#档案" title="Link to section: § &#39;档案&#39;">档案</a></h2>
+<p>本节涵盖了关于我可以知道的一些最重要的事情：我的个性和心理描述。毫无疑问，一些读者期望一份经过精心修饰和浓缩的传记，描述我在哪里及何时长大，我的家庭和部落关系是什么，或者我隶属于哪些著名机构；尽管这些信息几乎完全没用——如果一个人知道我出生在伊利诺伊州并在长岛长大，但 (<em>也许</em>) 我的口音和普遍的自由主义，他能预测关于我的什么呢？讽刺的是——人们最想要的信息也是他们能学到最少信息的——这对于熟悉<a href="https://en.wikipedia.org/wiki/Signalling_(economics)" id="_6UpCs1AE" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Signalling_(economics)#bodyContent">信号</a>的人来说并不陌生。相比之下，标准化和验证过的心理测量工具，如 <a href="https://en.wikipedia.org/wiki/Revised_NEO_Personality_Inventory" id="_tHzQGlW-" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Revised_NEO_Personality_Inventory#bodyContent">NEO-PI-R</a> 或 <a href="https://en.wikipedia.org/wiki/Raven%27s_Progressive_Matrices" id="_9MqlZvUP" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Raven%27s_Progressive_Matrices#bodyContent">RAPM</a> 确实对许多生活结果具有预测有效性。</p>
+<p>(这些数据大部分来自 <a href="https://yourmorals.org/" id="_u0r0ehGE">YourMorals.org</a>. 我计划每十年重新参加一次调查（如果可能的话）；看看有什么变化将会很有趣。)</p>
+<section id="个性" class="level3">
+<h3><a href="#个性" title="Link to section: § &#39;个性&#39;">个性</a></h3>
+<p><span id="iq"></span></p>
+<p>简要描述我的个性：我内向、冷静、既不特别勤奋也不懒惰、逆反且病态地好奇。 我也制作了一份 <a href="https://gwern.net/doc/personal/2011-2014-yourmorals.maff" id="_lv66DVCg" class="link-live link-modified-recently" data-link-icon="archive" data-link-icon-type="svg" data-link-icon-color="#e66000">我 <span class="date-range" title="The date range 2011–2014 lasted 3 years, ending 12 years ago.">2011–2014<sub><span title="2011 was 15 years ago.">12ya</span></sub></span> 年对 YourMorals.org 语料库的回复副本</a>; 在下面有更详细的讨论。 我在 “大五人格量表” (<a href="https://gwern.net/doc/personal/2012-gwern-personalityproject.html" id="report-early-2012" class="link-live link-modified-recently" title="Personality-project long Big Five report; early 2012">1</a>/<a href="https://gwern.net/doc/personal/2012-gwern-personalityproject-2.html" id="report-late-2012" class="link-live link-modified-recently" title="Personality-project long Big Five report; late 2012">2</a>/<a href="https://gwern.net/doc/personal/2013-gwern-personalityproject.html" id="early-2013" class="link-live link-modified-recently" title="Personality-project long Big Five report: early 2013">3</a>) 上的得分:</p>
+<ol>
+<li><p><a href="https://en.wikipedia.org/wiki/%E7%BB%8F%E9%AA%8C%E5%BC%80%E6%94%BE%E6%80%A7" id="_PEaZJzit" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E7%BB%8F%E9%AA%8C%E5%BC%80%E6%94%BE%E6%80%A7#bodyContent">经验开放性</a><a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>: 高 (短) 或 87/87<sup>th</sup> <a href="https://en.wikipedia.org/wiki/%E7%99%BE%E5%88%86%E4%BD%8D" id="_7P3xMwey" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E7%99%BE%E5%88%86%E4%BD%8D#bodyContent">百分位</a> (长)</p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Conscientiousness#Personality_models" id="_LpC9lLj1" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Conscientiousness#bodyContent">尽责性</a><a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>: 中等 或 64/69<sup>th</sup></p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/%E5%A4%96%E5%90%91%E6%80%A7" id="_lmiG6WN-" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%A4%96%E5%90%91%E6%80%A7#bodyContent">外向性</a><a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>: 低 或 6/7<sup>th</sup> 百分位</p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/%E5%AE%9C%E4%BA%BA%E6%80%A7" id="_lclNRSel" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%AE%9C%E4%BA%BA%E6%80%A7#bodyContent">宜人性</a><a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>: 中低 或 3/3<sup>rd</sup> 百分位</p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/%E7%A5%9E%E7%BB%8F%E8%B4%A8" id="_KI9JQ2Gq" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E7%A5%9E%E7%BB%8F%E8%B4%A8#bodyContent">神经质</a><a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>: 中低 或 16/13<sup>th</sup> 百分位</p></li>
+</ol>
+<p>对于那些喜欢玩“通过外行精神病诊断进行人身攻击”游戏的人，我可以建议不要指责我患有 <a href="https://en.wikipedia.org/wiki/%E9%98%BF%E6%96%AF%E4%BC%AF%E6%A0%BC%E7%BB%BC%E5%90%88%E7%97%87" id="_rdOXeeQY" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E9%98%BF%E6%96%AF%E4%BC%AF%E6%A0%BC%E7%BB%BC%E5%90%88%E7%97%87#bodyContent">阿斯伯格综合症</a>——这 <em>太</em> 过时了——而是像 <a href="https://en.wikipedia.org/wiki/%E5%88%86%E8%A3%82%E6%A0%B7%E4%BA%BA%E6%A0%BC%E9%9A%9C%E7%A2%8D" id="_uWEWDVRw" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%88%86%E8%A3%82%E6%A0%B7%E4%BA%BA%E6%A0%BC%E9%9A%9C%E7%A2%8D#bodyContent">分裂样人格障碍</a> 这样更得新颖且听起来更可怕的东西？</p>
+</section>
+<section id="哲学道德" class="level3">
+<h3><a href="#哲学道德" title="Link to section: § &#39;哲学/道德&#39;">哲学/道德</a></h3>
+<p>相关结果</p>
+<div class="columns">
+<ul>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/5f_new2_process.html" id="_7VrwGcQK" class="link-live link-modified-recently">“道德基础问卷”</a></p></li>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/sacredness_cartoon_process.html" id="_IWKYEtA5" class="link-live link-modified-recently">“道德基础神圣性量表”</a></p></li>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/epq_process.html" id="_VOE2g50S" class="link-live link-modified-recently">“伦理立场问卷”</a></p></li>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/mis_process.html" id="_MNRqfpne" class="link-live link-modified-recently">“道德认同量表”</a></p></li>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/schwartz_process.html" id="_iSkB3QIN" class="link-live link-modified-recently">“施瓦茨价值观调查”</a></p></li>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/disgust_process.html" id="_ZqtOLV5W" class="link-live link-modified-recently">“厌恶量表”</a></p></li>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/rel_norms_process.html" id="_1d4Uq-8s" class="link-live link-modified-recently">“道德和人际关系问卷”</a></p></li>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/busethics_process.html" id="_7jzTpg8e" class="link-live link-modified-recently">商业道德</a></p></li>
+</ul>
+</div>
+<section id="政治" class="level4">
+<h4><a href="#政治" title="Link to section: § &#39;政治&#39;">政治</a></h4>
+<ul>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/current_events_process.html" id="_oT-XQ0oc" class="link-live link-modified-recently">来自 Polling Report 的问题</a></p></li>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/general_political_knowledge_process.html" id="_s46yzmB0" class="link-live link-modified-recently">“美国政治的一般政治知识量表”</a></p></li>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/gov_econ_process.html" id="_9wHsigCp" class="link-live link-modified-recently">“关于政府是否应基于宏观经济或基本预算原则管理其预算的态度的衡量标准”</a></p></li>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/justice_process.html" id="_TNldE1Xk" class="link-live link-modified-recently">“综合正义量表”</a></p></li>
+<li><p><a href="https://gwern.net/doc/personal/2011-gwern-yourmorals.org/aos_process.html" id="_U-hbpKsQ" class="link-live link-modified-recently">“激进主义取向量表”</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+<section id="联系方式" class="level1">
+<h1><a href="#联系方式" title="Link to section: § &#39;联系方式&#39;">联系方式</a></h1>
+<ul>
+<li><p>Email: <a href="mailto:gwern@gwern.net" id="_NetPJiKo">gwern@gwern.net</a>; 我不使用 Skype 或 Zoom.</p></li>
+<li><p>PGP key (<a href="https://en.wikipedia.org/wiki/User:Gwern/Key" id="_pj9kd9uw" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/User:Gwern/Key#bodyContent">mirror</a>; fingerprint: <code>0329E13129E08F19EDBA7250678AC516DD6A88CF</code>)</p></li>
+</ul>
+<pre><code>-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQGNBGEs5RgBDADVRdbC0D0LfQwpQFvTNJLZX6s3Ew/Tk5LW8VgK32Z1zhQr6YdB
+nm0/U/mlm32SsoqEY+u5O/zvfF9GNA7sbatZwTPFlO5+Inq/FNqMq+dht52TSqiz
+I6Oya1ryuI7142nga90nQhXlHLkwkIZODdb6QYIcgIOrc0yI3bEDmFw5bVHXAMH5
+J6rjADi27ZALZxLoU4L+u4vgtHOVBOWsuTOaXR4z0zTJ/Wi3Emi1EqZXu8Z4dTfq
+YbVLqpL//z3B8ZZLc+1dY8lzacPXWulFhGN9yHeMz/vXgXdOSZfHMQYytqTL3Z3k
+prv11QLSF3UaE4Fncm7FZkX2YjVP3vGghinZ3Uvv71bJdU3FbwM7KK6wbby2cBo0
+9xaZlyYrv8e8MxqTa5LYJw+j84DOE6bQq2KyyJewjc0Q0vz+t43rNr5uwxD1DJuZ
+90jb3ylvDPu6qMX/AVlgODXTmV+8GIKiJP0UytpDi549ZatjTJLTMHHySxytFONZ
+jlcu0+88MBpMcSEAEQEAAbQfR3dlcm4gQnJhbndlbiA8Z3dlcm5AZ3dlcm4ubmV0
+PokB1AQTAQoAPhYhBAMp4TEp4I8Z7bpyUGeKxRbdaojPBQJhLOUYAhsDBQkDwmcA
+BQsJCAcCBhUKCQgLAgQWAgMBAh4BAheAAAoJEGeKxRbdaojP4tIMAIMkP60FS3Nm
+HZbwk0t48zJDGLzpqK0UWnz+BxLRxJPOgZY7+0P53nfcpSFiwiG+cFB+06eaK5Hg
+ttcGJd6NcLnAyHdHDqUOSF3Yf/8vIXIzggC9jt+mc2ug27GGHAT5asY4CNX8N5Ho
+VH1cnCvrTMDINRrir8BX1puPnsfRIshG8cVaKW/hXpDHRvpq3v2UbMULHUBTLPBE
+PDDH/O2VUG2hj267TIcM/dvaBwfC74R47Phkiis+nwcFr7OsYs3mIkCsZ4RNxYns
+xuNkv1aNSFI6agmvBSfsoLg9Ch2Viw6CEfLpeAwzFH/DIljzHWJJ3JqCYYEEEGkI
+eb7cAzfdCoR2iISSGR4GH1XNujaFSTXnuvX/vUsxdvmaxnwm2VkbNDLEwCAv8gxA
+O/eA6JJGZl1jbQq/oUouYWqGmLjMBVVjR2r3Y9KNJMsLOT6xOXKwDWAsdNS6N1uv
+d4B7ZyE16mPfpH0SB8uNpT155FSlvRGo9rWvAWIPZh3X9Ko3/aX8u7kBjQRhLOUY
+AQwAycf9rk7GFRm7d7EE38GnUzwrkEWug4uczdRhknXN5rP4/a2aBOaUEX8WE7Lu
+vyyiCWyI2qca3koVCzOt8DR3zUGhAAIZruHJmC8zWMSM9Bu4oLxmK1EvZ8zKpWKT
+1vsfIwKd3NsjEFTWvC19BI1S5NRWRiK97Kx6IPGcchSRk8SV1dbLpMNFM/u1oUuZ
+lS0DGydjvl+mcDHRL4Zk2Xkj3XcmJ8kQIAT0814UtuOSHvbcEkVU7fDs64MgE6Z1
+6J9nUZYv6nN870N7QHBWmoKhipGEeNNimHZ4OdZuJdsSS19iHKYu9LVM68YMtBC2
+FypgLs7BOmaiqtfE/NpIOeJGkxW8S7UQtzsZwzfLzD81k0fXZectsMhS1Cf4aLMR
+vcWkucLHGW4QcvuUDOHCjtNPSX5MTHngI6qZOHQfVDV2bsc4Gge7TRtj8ghkhkDh
+g3ElnFExJQkzwQcd2lTy3vXx4Ne1bxtcqNJIYiGZ+HCYaBvD3y2QgtckfxxBt1D5
+MRu/ABEBAAGJAbwEGAEKACYWIQQDKeExKeCPGe26clBnisUW3WqIzwUCYSzlGAIb
+DAUJA8JnAAAKCRBnisUW3WqIz7axC/9SDOtdsW/H2PezxDAEHasQvMJsS6/CxPL+
+MvEEMx7GTQBUk2Ktz538lJhxUirw9UfixcxuIuaBwta/pDbeqqpHFg7gJbU+pvDQ
+ROqgv84gsvUcAYfOIFFKfKmyE1NO+dSGmyDvCaUr8Z5xKWWwAg5MEHNDi0zJWV/F
+lCRCb4Q6o7lkzHWljzzAAN+UHs2lq0089WMor/D7CXD5yQGUjcXGbLvoxJl5mDtQ
+0TwRdGlF7RQDOSEvNro0eooed80im4bXW+ahhuZsylocVPIlgRoOjCkSNKQTnbd/
+ysTzPhCdi59UYIvOuogRxGGBr/uDBcq53amZeVIsxHyT6v3njw0oGC8+2F1fPuSp
+5A234E2+lNBmO1TZaM9SH5G0V0mDaV+35JS+gVWQ0R7qRix33+yXHcSCdpoIQTRj
+wnuJtQ6JQ4ToVdZsGyfnn6N6fkTvYFx3bYl2EV5d30cb5oQpcd4QiFDXzZg2yjCE
+p5IV9yhbHXXHKYyLpLwJN8KpBO4oM0s=
+=1NJ8
+-----END PGP PUBLIC KEY BLOCK-----</code></pre>
+</section>
+<section id="协作风格" class="level1">
+<h1><a href="#协作风格" title="Link to section: § &#39;协作风格&#39;">协作风格</a></h1>
+<p>曾经在 <code>#haskell</code> 上，有人问我为什么名下没有大型程序；我回答说，“我的问题是，我使用的大多数程序都已经存在了。”</p>
+<p>我不是一个糟糕的 Haskell 程序员 (虽然我不是像 Simon Peyton-Jones, Apfelmus, 或 Don Stewart 那样的大师)，但考虑到我使用 Haskell 的时间，我的贡献可能看起来很微薄。这并不是因为我不喜欢 Haskell——我确实喜欢，我发现函数式编程很自然：定义一个又一个的转换，直到结果符合我的需要。在函数式语言中，Haskell 似乎是超越基本算术或列表处理能力的最佳组合，拥有最好的生态系统之一，以及良好的基础语言。(这并不是说它是完美的：基础数学中的一些尖锐边缘让我在 REPL 中胡乱摆弄时感到恼火。)</p>
+<p>这部分是因为我的贡献风格。我总是更喜欢在现有的应用程序和库上工作，而不是自己编写。我总是更喜欢拿别人的作品并将它提升到标准，而不是编写我自己的干净实现。我总是更喜欢敦促作者或维护者做正确的事情，而不是向他们扔一大批补丁。同样，我认为使用像 Cabal 或 <a href="https://en.wikipedia.org/wiki/Darcs" id="_AiNk6RBN" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Darcs#bodyContent">Darcs</a> 这样的 Haskell 标准比使用像 Autotools 这样的东西更好，即使后者让我们能够管理更多的自动化。我认为上传到 <a href="https://hackage.haskell.org/" id="_yUlkCiWJ" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">Hackage</a> 比使用像 <a href="https://en.wikipedia.org/wiki/GitHub" id="_GTWRNgvh" class="link-modified-recently link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/GitHub#bodyContent" title="GitHub">Github</a> 或 <a href="https://en.wikipedia.org/wiki/SourceForge" id="_LR93KY2X" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/SourceForge#bodyContent">Sourceforge</a> 这样的花哨网站更好。</p>
+<p>做一些普通的工作，把两个应用程序中的两个相似模块拆分到一个库中，比编写最花哨的<a href="https://en.wikipedia.org/wiki/Purely_functional_data_structure" id="_t1-odYFs" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Purely_functional_data_structure#bodyContent">纯函数式</a>使用<a href="https://en.wikipedia.org/wiki/%E5%B9%BA%E5%8D%8A%E7%BE%A4" id="_MYVYHHHs" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%B9%BA%E5%8D%8A%E7%BE%A4#bodyContent">幺半群</a>的<a href="https://en.wikipedia.org/wiki/%E6%8C%87%E6%A0%91" id="_ihnbxV6W" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%8C%87%E6%A0%91#bodyContent">指树</a>要好得多。提交能减少一行用户配置的更改比再次展示单子的优雅要好得多。提交一个错误报告比在 <code>#haskell</code> 中胡搞 <a href="https://en.wikipedia.org/wiki/Code_golf" id="_RDCeQMq0" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Code_golf#bodyContent">代码高尔夫</a> 表达式要好得多。</p>
+<p>找到一些过去曾试图解决问题的人并将他们聚集在一起解决问题，比你自己解决问题要好得多——即使这意味着在公告中只是一个脚注 (或更少)。重要的是它完成了，人们将会使用它。而不是功劳。将一点功能因式分解到一个库中并让每个可能的用户实际使用它，这确实是一个很高的成就。愿更多的 Haskell 程序员有这种心态！事实上，愿更多的人普遍有这种心态；实际上，人们有坏习惯，当他们认为自己有特殊信息时<a href="https://www.overcomingbias.com/p/the-wisdom-of-othershtml" id="_KNpG8aON" data-link-icon="OB" data-link-icon-type="text" data-link-icon-color="#263f5d">反复失败</a>，即使在<a href="https://www.nber.org/papers/w13711" id="_dqDPwLJS" data-link-icon="NBER" data-link-icon-type="text,quad" data-link-icon-color="#075dba">具有快速反馈的客观领域</a>也高度<a href="https://en.wikipedia.org/wiki/Overconfidence_effect" id="_3oWylUAh" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Overconfidence_effect#bodyContent">过度自信</a>，并且严重高估他们能想出多少好主意<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>——事实上，大多数好主意都<a href="https://en.wikipedia.org/wiki/%E4%B8%8D%E6%98%AF%E8%BF%99%E9%87%8C%E5%8F%91%E6%98%8E%E7%9A%84" id="_3TfLJLwm" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E4%B8%8D%E6%98%AF%E8%BF%99%E9%87%8C%E5%8F%91%E6%98%8E%E7%9A%84#bodyContent">不是这里发明的</a>。一个人应该能够利用<a href="https://www.overcomingbias.com/p/the-wisdom-of-othershtml" id="_KNpG8aON" data-link-icon="OB" data-link-icon-type="text" data-link-icon-color="#263f5d">他人的智慧</a>。</p>
+<p>这是我在与维基百科的 <a href="https://meta.wikimedia.org/wiki/Inclusionism" id="_ezmfU3hV" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg">包容主义者</a> 一起工作时学到的精神。没有代码是如此糟糕以至于没有好处；最有价值的代码是被其他代码使用的代码；功劳不如工作重要；源源不断的微小琐碎改进比偶尔的大规模编辑要好。</p>
+<blockquote>
+<p>太上，下知有之。其次，亲而誉之。其次，畏之。其次，侮之。信不足焉，有不信焉。悠兮其贵言，功成事遂，百姓皆谓我自然。<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a></p>
+</blockquote>
+<p>这不是一种旨在令人印象深刻的精神。提交错误报告，帮助新手，评论文章和代码，Cabal 化 &amp; 上传代码——这些都是很难评估或获得功劳的事情。它们很有用，确实很有用 (shepheb 或，例如我自己，从未在 <code>#xmonad</code> 中吹嘘今天帮助了 5 个新手，但在几个月和几年里，这种友善和随时提供的帮助比 XMonadContrib 中的任何模块都更有价值。) 但它们永远不会给面试官留下深刻印象或赢得奖学金。那太糟糕了吗？我浪费了所有时间吗？</p>
+<p>我不这么认为。我重视我的贡献，Haskell 社区因此变得更好。它可能让我的生活变得更困难一点——所有花在 Haskell 事务上的时间都是我没有花在课程或工作或其他什么上的时间——但最终它们确实帮助了某人。一个人可以用他的时间做比这更糟糕的事情。</p>
+</section>
+<section id="编码贡献" class="level1 collapse">
+<h1 class="collapse"><a href="#编码贡献" title="Link to section: § &#39;编码贡献&#39;">编码贡献</a></h1>
+<div class="abstract-collapse">
+<p>我主要为 Haskell 项目（我最喜欢的语言）做贡献；我也为非 Haskell 项目做过贡献，如 <a href="https://en.wikipedia.org/wiki/StumpWM" id="_zy8yW6Sf" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/StumpWM#bodyContent">StumpWM</a>, <a href="https://en.wikipedia.org/wiki/Mnemosyne_(software)" id="_W4kE-J23" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mnemosyne_(software)#bodyContent">Mnemosyne</a>, <a href="https://en.wikipedia.org/wiki/GNU_Emacs" id="_P-K5MeFL" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/GNU_Emacs#bodyContent">GNU Emacs</a><a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a> 等，但不是主要方式，所以我不在这里列出它们。 在这个网站开始后，我逐渐停止了常规编码活动，转而专注于写作；当我编码时，现在倾向于是在这个网站上记录或托管的工具 (例如 <a href="/archiving" id="gwern-archiving" class="prefetch-not link-modified-recently link-page" title="&#39;Archiving URLs&#39;, Gwern 2011">归档 URL</a>, <a href="/resorter" id="gwern-resorter" class="prefetch-not link-annotated link-page" title="&#39;Resorting Media Ratings&#39;, Gwern 2015">重新排序</a>) 或集成到文章中 (例如 <a href="/face" id="gwern-face" class="prefetch-not link-annotated link-page" title="&#39;Making Anime Faces With StyleGAN&#39;, Gwern 2019">使用 StyleGAN 生成动漫面孔</a>)。 对于那些代码，你可以按语言标签浏览：<a href="https://gwern.net/doc/cs/c/index" id="_JHQa5nL7" class="link-live link-annotated link-page" title="‘C (language)’ directory">C</a>/<a href="https://gwern.net/doc/cs/css/index" id="_0uOTy67Q" class="link-live link-page" title="Link to cs/css tag index">CSS</a>/<a href="https://gwern.net/doc/cs/haskell/index" id="_gtWGCyxx" class="link-live link-annotated link-page" title="‘Haskell’ directory">Haskell</a>/<a href="https://gwern.net/doc/cs/js/index" id="_cFVh4jmO" class="link-live link-annotated link-page" title="‘JS’ directory">JS</a>/<a href="https://gwern.net/doc/cs/python/index" id="_sA6P-rCF" class="link-live link-annotated link-page" title="‘Python’ directory">Python</a>/<a href="https://gwern.net/doc/cs/r/index" id="_C_GgfTYv" class="link-live link-annotated link-page" title="‘CS/r’ directory">R</a>/<a href="https://gwern.net/doc/cs/lisp/scheme/index" id="_xoeEdOu5" class="link-live link-annotated link-page" title="‘Scheme’ directory">Scheme</a>/<a href="https://gwern.net/doc/cs/shell/index" id="__AEyIYhU" class="link-live link-annotated link-page" title="‘CLI’ directory">shell</a>.</p>
+<p>下面是我的旧 Haskell 贡献的更详细列表，其中大部分现在仅具有历史意义。</p>
+</div>
+<section id="haskell" class="level2">
+<h2><a href="#haskell" title="Link to section: § &#39;Haskell&#39;">Haskell</a></h2>
+<div class="columns">
+<ul>
+<li><p><strong>arbtt</strong></p>
+<ul>
+<li><p>编写了关于配置时间跟踪器 &amp; 定义规则的教程: <a href="https://arbtt.nomeata.de/doc/users_guide/effective-use.html" id="_We_ToyAk" class="link-live" data-link-icon-color="#445f66">“有效使用 arbtt”</a></p></li>
+<li><p>记录了依赖关系，类似软件，配置语法模式，CLI 标志更正</p></li>
+</ul></li>
+<li><p><strong>Darcs</strong></p>
+<ol>
+<li><p>从 FastPackedStrings 切换到 ByteStrings</p></li>
+<li><p>低级 C 优化</p></li>
+<li><p>启动 Cabal 化 (我的工作最初以 <a href="https://hackage.haskell.org/package/darcs-cabalized" id="_ni-3Dvfx" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">darcs-cabalized</a> 出现，然后合并到 HEAD 并且 <code>darcs-cabalized</code> 被弃用)</p></li>
+<li><p>重构 shell 测试</p></li>
+<li><p>启动从 <a href="https://en.wikipedia.org/wiki/MoinMoin" id="_26qdmtUU" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/MoinMoin#bodyContent">MoinMoin</a> wiki 到 <a href="https://github.com/jgm/gitit" id="_66C_ZEGR" data-link-icon="github" data-link-icon-type="svg">Gitit</a> 的切换</p></li>
+<li><p>确定性能问题 &amp; 促使 Filestore 添加 <code>--max-count</code> 选项</p></li>
+</ol></li>
+<li><p><strong>XMonad</strong></p>
+<ol>
+<li><p>定期 XMonadContrib 补丁审查</p></li>
+<li><p><a href="https://wiki.haskell.org/Xmonad/Config_archive#Downloading_all_configs" id="_UKe6Gdtd" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">配置存档下载器</a></p></li>
+<li><p>贡献模块:</p>
+<ol type="i">
+<li><p><code>XMonad.Util.Paste</code></p></li>
+<li><p><code>XMonad.Actions.Search</code></p></li>
+<li><p><code>XMonad.Actions.WindowGo</code></p></li>
+<li><p><code>XMonad.Util.XSelection</code></p></li>
+</ol></li>
+<li><p>维护以前的<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a></p></li>
+</ol></li>
+<li><p><strong>Yi</strong></p>
+<ol>
+<li><p>贡献模块:</p>
+<ol type="i">
+<li><p>Yi.IReader</p></li>
+<li><p>Yi.Mode.IReader</p></li>
+<li><p>Yi.Hoogle</p></li>
+</ol></li>
+<li><p>改进 Emacs 键绑定</p></li>
+<li><p>启动 Haskell 语法高亮的 ‘Unicodify’ 或 ‘Pretty Lambdas’ 功能</p></li>
+<li><p>添加了与移动相关的功能以改进增量搜索</p></li>
+<li><p>清理<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a></p></li>
+<li><p>对 cabal-mode 的注释支持</p></li>
+</ol></li>
+<li><p><strong>Lambdabot</strong></p>
+<ol>
+<li><p>(重新)Cabal 化<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a></p></li>
+<li><p>改编以使用 Mueval</p></li>
+<li><p>重构出多个包中的代码:</p>
+<ol type="i">
+<li><p><a href="https://hackage.haskell.org/package/show" id="_rUs5B9w5" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">show</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/lambdabot-utils" id="_BX-V2sjp" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">lambdabot-utils</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/brainfuck" id="_oJ45r1fR" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">brainfuck</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/unlambda" id="_7kFdl8sP" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">unlambda</a></p></li>
+</ol></li>
+<li><p>实现了在任何目录运行的功能 (以前 Lambdabot 只能在存储库目录中运行)</p></li>
+<li><p>清理</p></li>
+<li><p>维护它 (与 Cale Gibbard 一起)</p></li>
+</ol></li>
+<li><p><strong>Gitit</strong></p>
+<ul>
+<li><p>编写了 Darcs 后端 (已移至 filestore 包并成为 Data.FileStore.Darcs)</p></li>
+<li><p>做了一些优化工作 (图像, JavaScript &amp; CSS 压缩, 编写 gzip 编码 &amp; 启动过期标头, JS 重定位, 减少对昂贵 filestore 函数的调用)</p></li>
+<li><p>编写了 RSS 支持</p></li>
+<li><p>编写了 Interwiki 插件</p></li>
+<li><p>编写了 Date 插件</p></li>
+<li><p>编写了 WebArchiver &amp; WebArchiverBot 插件 (见后面的 <a href="#gwern-archiving">archiver</a> 独立工具/库)</p></li>
+<li><p>编写了 Unicode 插件</p></li>
+<li><p>编写了 HCAR 条目</p></li>
+<li><p>杂项错误报告 &amp; 建议</p></li>
+<li><p>添加了 PDF 导出功能</p></li>
+<li><p>集成了基于 JQuery 的 <a href="https://ignorethecode.net/blog/2010/04/20/footnotes/" id="_7JyFB2ER">浮动脚注</a></p></li>
+</ul></li>
+<li><p><strong>Filestore</strong></p>
+<ul>
+<li><p>促使其在 Gitit &amp; <a href="https://hackage.haskell.org/package/orchid" id="_0sbgmvg2" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">Orchid</a> 中的开发/使用</p></li>
+<li><p>维护 Darcs 后端 (调试 &amp; 优化)</p></li>
+</ul></li>
+<li><p><strong>archiver</strong>: 编写并维护它 (见 <a href="https://web.archive.org/web/20130128105157/https://www.haskell.org/pipermail/haskell-cafe/2010-December/087158.html" id="_RWB544iD" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086" data-url-iframe="https://web.archive.org/web/20130128105157if_/https://www.haskell.org/pipermail/haskell-cafe/2010-December/087158.html">发布公告</a>)</p></li>
+<li><p><strong>Mueval</strong>: 编写了它</p></li>
+<li><p><strong>wp-archivebot</strong>: 编写了它 (见 <a href="https://web.archive.org/web/20130128105201/https://www.haskell.org/pipermail/haskell/2009-June/021388.html" id="_f1g69QCS" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086" data-url-iframe="https://web.archive.org/web/20130128105201if_/https://www.haskell.org/pipermail/haskell/2009-June/021388.html">发布公告</a>)</p></li>
+<li><p><strong>Change-monger</strong>: 编写了它</p></li>
+<li><p><strong>Base</strong></p>
+<ul>
+<li><p>添加了 <a href="https://hoogle.haskell.org/?hoogle=Control.Monad.void" id="_gttgKEVn" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086"><code>Control.Monad.void</code></a></p></li>
+<li><p>帮助用 YHC 更高效的实现替换 <a href="https://hoogle.haskell.org/?hoogle=Data.List.sort" id="_VRwYJwBS" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086"><code>Data.List.sort</code></a> (见 <a href="https://gitlab.haskell.org/ghc/ghc/-/issues/2143" id="_3t4SSLes" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086" title="YHC&#39;s sort is faster than GHC&#39;s">Ticket #2143</a>)</p></li>
+<li><p>改进了 <a href="https://web.archive.org/web/20130128105154/https://www.haskell.org/pipermail/libraries/2012-February/017520.html" id="_zhvCWiii" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086" data-url-iframe="https://web.archive.org/web/20130128105154if_/https://www.haskell.org/pipermail/libraries/2012-February/017520.html" title="Improve System.Environment haddocks"><code>System.Environment</code> 文档</a></p></li>
+</ul></li>
+<li><p><strong>Unix</strong>: 修复了 <code>mkstemp</code> 中可能的运行时崩溃；添加了 <code>mkstemp</code> 文档</p></li>
+<li><p><strong>Autoproc</strong></p>
+<ul>
+<li><p>清理</p></li>
+<li><p>改进基本功能</p></li>
+<li><p>实现了 XMonad 风格的重新加载系统以允许实际定制</p></li>
+<li><p>维护它</p></li>
+</ul></li>
+<li><p><strong>Frag</strong></p>
+<ul>
+<li><p>更新以适应 GHC 6.8 &amp; 6.10<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a></p></li>
+<li><p>清理</p></li>
+<li><p>用免费的数据和图形替换了非免费的</p></li>
+</ul></li>
+<li><p><strong>Hint</strong></p>
+<ul>
+<li><p>改进示例, 文档</p></li>
+<li><p>添加 UTF8 支持</p></li>
+<li><p>使用 ghc-paths 库</p></li>
+<li><p>启用 <a href="https://en.wikipedia.org/wiki/QuickCheck" id="_gHNlJj1D" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/QuickCheck#bodyContent">QuickCheck</a> 支持</p></li>
+<li><p>添加 GHC-options 支持</p></li>
+</ul></li>
+<li><p><strong>Hlint</strong>: 添加 GHCi 集成</p></li>
+<li><p><strong>Pugs</strong></p>
+<ul>
+<li><p>清理了他们的第三方模块</p></li>
+<li><p>修复了各种 Cabal 问题</p></li>
+<li><p>帮助维护它</p></li>
+</ul></li>
+<li><p><strong>QuickCheck</strong>: <code>Data.Complex</code> 实例</p></li>
+<li><p><strong>Tagsoup</strong>: 用标准库函数替换了旧的自定义 HTTP 下载代码</p></li>
+<li><p><strong>Hashell</strong>: 为 6.8 的 GHC API 更新；清理；Cabal 化</p></li>
+</ul>
+</div>
+<section id="cabal-化" class="level3">
+<h3><a href="#cabal-化" title="Link to section: § &#39;Cabal 化&#39;">Cabal 化</a></h3>
+<p>作为我帮助将 Haskell 社区转移到使用由 CPAN以此为先驱的集中式打包存储库的努力的一部分（这是任何现代语言的基本要求），我做出了系统的努力，将所有现存的 Haskell 代码转换为 Cabal 格式并上传到 Hackage——无论原作者是否愿意。 (尽管这引起了一些不满和 Haskell 打包的持续不幸，但十年后，没有 Haskeller 会回到 Cabal/Hackage 之前的 Autotools 时代。) 我 Cabal 化和/或上传了 (根据 2013-05-10 <a href="https://web.archive.org/web/20130510012249/https://hackage.haskell.org/packages/archive/log" id="_qajLcmw9" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086" data-url-iframe="https://web.archive.org/web/20130510012249if_/https://hackage.haskell.org/packages/archive/log">Hackage 上传日志</a>):</p>
+<div class="columns">
+<ul>
+<li><p><a href="https://hackage.haskell.org/package/Barracuda" id="_pIjX8e26" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">Barracuda</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/DBus" id="_2CKtLGJT" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">DBus</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/DisTract" id="_lMEMQl2d" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">DisTract</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/DrIFT-cabalized" id="_HQf6gwwq" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">DrIFT-cabalized</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/FermatsLastMargin" id="_AE5wvrje" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">FermatsLastMargin</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/Flippi" id="_Ayx52N-e" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">Flippi</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/HFuse" id="_lQArT0g1" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">HFuse</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/HRay" id="_kuYvMdGi" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">HRay</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/Hashell" id="_qqmduSLS" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">Hashell</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/HsJudy" id="_UvQR50fH" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">HsJudy</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/TypeIlluminator" id="_3Gv0i42D" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">TypeIlluminator</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/ZMachine" id="_S6PcVkxf" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">ZMachine</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/adhoc-network" id="_Svhgx5c8" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">adhoc-network</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/bio" id="_sf4RQfMN" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">bio</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/botpp" id="_-69Fi8W2" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">botpp</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/clustertools" id="_PAeb0FO9" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">clustertools</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/condorcet" id="_Zb4ffVHU" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">condorcet</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/conjure" id="_IBkP7Pgp" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">conjure</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/dephd" id="_yQ74A4pd" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">dephd</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/estreps" id="_Pw3JKNak" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">estreps</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/fst" id="_gC12_g9j" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">fst</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/genericserialize" id="_pc1Uj65e" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">genericserialize</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/goa" id="_q6uc67xV" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">goa</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/greencard" id="_0ZOW9V7g" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">greencard</a> &amp; <a href="https://hackage.haskell.org/package/greencard-lib" id="_1cbqOjLr" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">greencard-lib</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/harp" id="_90TfTDkA" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">harp</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/haskell-src-exts" id="_01M4sjZz" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">haskell-src-exts</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/helisp" id="_a-gfr1iJ" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">helisp</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hetris" id="_OnqkGYe6" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hetris</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hgeometric" id="_nZgsf4b5" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hgeometric</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/highWaterMark" id="_5sxTCXZU" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">highWaterMark</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hinstaller" id="_tR4GLB4T" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hinstaller</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hjs" id="_dJlazJy_" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hjs</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hopenssl" id="_QoZRgosi" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hopenssl</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hs-fltk" id="_6Kuj9d0x" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hs-fltk</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hscurses" id="_chaYlFzq" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hscurses</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hsdip" id="_RwX3VCx5" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hsdip</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hsdns" id="__ED1LDVg" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hsdns</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hsdns" id="__ED1LDVg" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hsdns</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hsemail" id="_UPzAkZIx" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hsemail</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hsgnutls" id="_Ceca01n4" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hsgnutls</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hsgnutls" id="_Ceca01n4" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hsgnutls</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hsntp" id="_lCEoeLrR" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hsntp</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hsp" id="_ebiQUCyS" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hsp</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hspr-sh" id="_eWGMDqoK" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hspr-sh</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/hybrid" id="_iQdl_bPz" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">hybrid</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/infix" id="_yvEMU62W" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">infix</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/interlude" id="_AINrizhR" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">interlude</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/ivor" id="_OtoAdJPS" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">ivor</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/lazysmallcheck" id="_wXbQNZ7b" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">lazysmallcheck</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/linkchk" id="_2Q9OEXV9" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">linkchk</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/mohws" id="_4bdipO0d" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">mohws</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/mpdmate" id="_cVNr0X7T" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">mpdmate</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/nanocurses" id="_G3TBwsSP" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">nanocurses</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/nymphaea" id="_vkvBTAOQ" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">nymphaea</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/pesca" id="_GlAkohv2" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">pesca</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/pkcs1" id="_4nPwd6Eu" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">pkcs1</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/plugins" id="_XHL6nkPW" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">plugins</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/popenhs" id="_whtzs1k8" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">popenhs</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/powermate" id="_SxZje2br" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">powermate</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/pugs-HsSyck" id="_E-P5Qcvb" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">pugs-HsSyck</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/pugs-hsregex" id="_NAOdKbex" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">pugs-hsregex</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/rbr" id="_w5OkTWUM" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">rbr</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/reify" id="_u16gHd6f" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">reify</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/roguestar-engine" id="_h2koPNEN" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">roguestar-engine</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/roguestar-gl" id="_gsyhtBV3" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">roguestar-gl</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/rsagl" id="_L1iJ-GLF" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">rsagl</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/simseq" id="_m4GthFPu" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">simseq</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/smallcheck" id="_bK81Kw70" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">smallcheck</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/tetris" id="_NAqEjhRM" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">tetris</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/thih" id="_FQ43sMSe" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">thih</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/trhsx" id="_9jhzrcul" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">trhsx</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/type-equality-check" id="_4mz0kZzE" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">type-equality-check</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/vty" id="_BMulIOHv" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">vty</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/xml-parsec" id="_N2vuFgzg" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">xml-parsec</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/xml2x" id="_JUB47XCy" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">xml2x</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/xmonad-utils" id="_wAo4q7rE" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">xmonad-utils</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/xsact" id="_PGGAIYHZ" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">xsact</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/yi-gtk" id="_mv5Ex_sI" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">yi-gtk</a></p></li>
+<li><p><a href="https://hackage.haskell.org/package/yi-vty" id="_dpz0HVt7" class="link-live" data-link-icon="𝛌" data-link-icon-type="text" data-link-icon-color="#5e5086">yi-vty</a></p></li>
+<li><p><code>ArrayRef</code></p></li>
+<li><p><code>Baskell</code></p></li>
+<li><p><code>GenI</code></p></li>
+<li><p><code>Greencard</code></p></li>
+<li><p><code>HArchive</code></p></li>
+<li><p><code>HList</code></p></li>
+<li><p><code>HTF</code></p></li>
+<li><p><code>HaLeX</code></p></li>
+<li><p><code>HalFS</code></p></li>
+<li><p><code>Haskell In Space</code></p></li>
+<li><p><span id="hssyck"><code>HsSyck</code></span></p></li>
+<li><p><code>Mage</code></p></li>
+<li><p><code>PArrows</code></p></li>
+<li><p><span id="shu-thing-monadius"><code>Shu-thing</code>, <code>Monadius</code></span></p></li>
+<li><p><code>Smallcheck</code></p></li>
+<li><p><code>Topkata</code></p></li>
+<li><p><code>Whim</code></p></li>
+<li><p><code>ZFS</code></p></li>
+<li><p><code>blockio</code></p></li>
+<li><p><code>child</code></p></li>
+<li><p><code>flow2dot</code></p></li>
+<li><p><code>hinvaders</code></p></li>
+<li><p><code>monadenv</code></p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr></hr>
+<ol>
+<li id="fn1"><p>这是用文学的方式说我不像我的作品那样有趣，而且在某种程度上，我是谁或我做了什么并不重要，因为<a href="https://www.lesswrong.com/posts/5yFRd3cjLpm3Nd6Di/argument-screens-off-authority" id="_6KAy6d72" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/5yFRd3cjLpm3Nd6Di/argument-screens-off-authority?format=preview&amp;theme=classic">论据屏蔽了权威</a>。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>当我说“研究助理”时，我是指旧义上的，即为他人的原创研究做细节工作的人——所以我花了很多时间阅读特定领域的资料，并就老板需要的东西做笔记，只是偶尔做独立工作。并非我所有的工作都可以公开，但有些可以。按大致时间顺序排列的部分列表：</p>
+<ul>
+<li><p><a href="https://intelligence.org/files/IE-EI.pdf" id="_3bqj9yS_" class="link-live" data-link-icon="miri" data-link-icon-type="svg" data-link-icon-color="#234e80">“智能爆炸：证据与意义”</a>, <span class="cite"><span class="cite-author">Muehlhauser &amp; Salamon</span><span class="cite-date">2012</span></span>?</p>
+<p>我最早的项目之一是以此论文为基础——为各种主张挖掘引用并提供一般性反馈；当我们转而在 Google Docs 上工作时，我的大部分更改或评论都是私人的，但我的一些<a href="https://www.lesswrong.com/posts/rWwmRvp8FEKDZ49d6/intelligence-explosion-analysis-draft-2-snippet-1#oeJhkSBhkzqveEsrj" id="_4duOgwmB" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/rWwmRvp8FEKDZ49d6/intelligence-explosion-analysis-draft-2-snippet-1/comment/oeJhkSBhkzqveEsrj?format=preview&amp;theme=classic">初步评论</a>是公开的。</p></li>
+<li><p><a href="https://www.lesswrong.com/posts/cit3HYXehBsr4d36Q/open-thread-january-15-31-2012#rWkZ3TGRsL7DhSsNR" id="_cSQu3WGZ" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/cit3HYXehBsr4d36Q/open-thread-january-15-31-2012/comment/rWkZ3TGRsL7DhSsNR?format=preview&amp;theme=classic">寻找全基因组测序成本的预测/估计</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/9vKRHBCLvwqN26LLs/the-personality-of-great-creative-scientists-open-and" id="_YNGJgEAV" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/9vKRHBCLvwqN26LLs/the-personality-of-great-creative-scientists-open-and?format=preview&amp;theme=classic">“（伟大/有创造力）科学家的个性：开放和尽责”</a></p>
+<p>总结一些现有的研究；除了本质上有趣之外，这与计算机智能也相关——如果成就只是智商的反映，那么任何计算机智能只有在拥有更高的原始智力时才会超越人类，但如果成就受限于 130 多的智商，那么情况就变得更加复杂。（计算机智能可能比给定智力水平所预测的要强大得多，因为没有明显的理由你不能轻易地使其“个性”变得思想开放——虽不清楚真正的随机探索和计算能力是否还没有在某些领域产生<a href="https://www.lesswrong.com/posts/5vogC4eJ4gXixX2KJ/should-i-believe-what-the-siai-claims#Mich92awM4J2htpqp" id="_6jSMl63C" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/5vogC4eJ4gXixX2KJ/should-i-believe-what-the-siai-claims/comment/Mich92awM4J2htpqp?format=preview&amp;theme=classic">创造力</a>——而且计算机可以不知疲倦且自律，这解决了尽责性问题。另一方面，开放性和尽责性可能对应于微妙的高级动态，这些动态无法轻易设计到 AI 中，也无法通过向问题投入计算能力来产生，在这种情况下，AI 的表现将低于我们就最终使用的任何智力衡量标准，例如 <a href="https://www.lesswrong.com/posts/mz6RSqEYoTQJ3Rk8g/aixi-style-iq-tests" id="_NSU7NreC" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/mz6RSqEYoTQJ3Rk8g/aixi-style-iq-tests?format=preview&amp;theme=classic">AIXI 风格的智商测试</a>。）</p></li>
+<li><p><a href="/note/note#remote-monitoring" id="gwern-note-note--remote-monitoring" class="prefetch-not link-modified-recently link-page">远程监控</a></p>
+<p>关于 MIRI 可用于监控像我这样的自由职业者的远程监控软件的一些快速笔记。（这真的是件好事——信任但要核实。）</p></li>
+<li><p><a href="https://www.lesswrong.com/posts/DyZuewJMopqfEnQmo/get-genotyped-for-free-if-your-iq-is-high-enough#PYRhkrvFybZFfa24q" id="_RnSqeGnN" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/DyZuewJMopqfEnQmo/get-genotyped-for-free-if-your-iq-is-high-enough/comment/PYRhkrvFybZFfa24q?format=preview&amp;theme=classic">一些</a> <a href="https://www.lesswrong.com/posts/DyZuewJMopqfEnQmo/get-genotyped-for-free-if-your-iq-is-high-enough#s6NMhaAheS7FtAHWT" id="_59TxYL_2" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/DyZuewJMopqfEnQmo/get-genotyped-for-free-if-your-iq-is-high-enough/comment/s6NMhaAheS7FtAHWT?format=preview&amp;theme=classic">信息</a> 关于北京大型基因组学项目，以及关于个性和智商的估计，以及中国过去对遗传信息的滥用</p></li>
+<li><p><a href="/sunk-cost" id="gwern-sunk-cost" class="prefetch-not link-annotated link-page" title="&#39;Are Sunk Costs Fallacies?&#39;, Gwern 2012">沉没成本是谬误吗？</a></p>
+<p>对一种认知偏差的详细检查，询问它是否被误解为个人的问题。</p></li>
+<li><p><a href="https://www.lesswrong.com/posts/ovLpQqpRLtpXPdKKP/against-utilitarianism-sobel-s-attack-on-judging-lives" id="_TRmT-TsA" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/ovLpQqpRLtpXPdKKP/against-utilitarianism-sobel-s-attack-on-judging-lives?format=preview&amp;theme=classic">“反对功利主义：索贝尔对判断生活“善”的攻击”</a></p>
+<p>哲学论文，总结并试图分析最近一类对功利主义的反对意见（即人们无法判断生活的效用，因此功利主义伦理项目是不可能的）。</p></li>
+<li><p>维基百科神经科学补充；我很难为一篇 MIRI 论文找到参考文献，并将我的结果捐赠给维基百科，这样至少没有其他人必须遭受这么多痛苦：</p>
+<ul>
+<li><p><a href="https://en.wikipedia.org/w/index.php?title=Chimpanzee&amp;diff=next&amp;oldid=475451653" id="__BUtcNhA" class="content-transform-not link-live-not" data-link-icon="wikipedia" data-link-icon-type="svg">黑猩猩和人类的大脑到底有多大？</a></p></li>
+<li><p><a href="https://en.wikipedia.org/w/index.php?title=Neuroscience_and_intelligence&amp;diff=next&amp;oldid=471173931" id="_5Rlz3NGr" class="content-transform-not link-live-not" data-link-icon="wikipedia" data-link-icon-type="svg">灵长类动物和人类的大脑大小与智商相关</a> （不，真的。虽然相关性不是特别大。）</p></li>
+<li><p><a href="https://en.wikipedia.org/w/index.php?title=Rat&amp;action=historysubmit&amp;diff=475838983&amp;oldid=472309056" id="_2bZ1dSvr" class="content-transform-not link-live-not" data-link-icon="wikipedia" data-link-icon-type="svg">老鼠智商</a> （证据混合，谢天谢地）</p></li>
+</ul></li>
+<li><p><a href="https://www.lesswrong.com/posts/gowLWvZfri5XKiy9n/open-thread-february-1-14-2012#Ao9YaT8QBzEkBFKuh" id="_ll9C6KlY" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/gowLWvZfri5XKiy9n/open-thread-february-1-14-2012/comment/Ao9YaT8QBzEkBFKuh?format=preview&amp;theme=classic">多边恋回顾</a></p>
+<p>真的没有足够的数据做任何事情，只能指出可靠评估的问题。我的主观印象是，<a href="https://en.wikipedia.org/wiki/%E5%A4%9A%E8%BE%B9%E6%81%8B" id="_EzMH_Grb" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%A4%9A%E8%BE%B9%E6%81%8B#bodyContent">多边恋</a>足够复杂，即使对于多边恋者来说也可能不是一个好主意。</p></li>
+<li><p><a href="https://www.lesswrong.com/posts/dMDmED5LyqZtTTh5A/cashing-out-cognitive-biases-as-behavior" id="_QzPQ3Ss4" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/dMDmED5LyqZtTTh5A/cashing-out-cognitive-biases-as-behavior?format=preview&amp;theme=classic">“将认知偏差兑现为行为”</a></p>
+<p>从“沉没成本是谬误吗？”衍生——2 项研究检查了问卷中认知偏差脆弱性对个人生活的影响</p></li>
+<li><p><a href="https://www.lesswrong.com/posts/evyBmPw9ZnzmoFmP6/experiment-a-good-researcher-is-hard-to-find" id="_BbNAXXQA" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/evyBmPw9ZnzmoFmP6/experiment-a-good-researcher-is-hard-to-find?format=preview&amp;theme=classic">“实验：好研究员难寻”</a></p>
+<p>一个简单的电子邮件实验，让申请人觉得他们的入学考试不是浪费时间：他们似乎做得更好。</p></li>
+<li><p><a href="https://www.lesswrong.com/posts/pqDCfahoRfshQkW98/open-thread-june-16-30-2012#FtGToMLyfT37WQkcD" id="_Xo7lhVwf" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/pqDCfahoRfshQkW98/open-thread-june-16-30-2012/comment/FtGToMLyfT37WQkcD?format=preview&amp;theme=classic">地缘政治情报失败</a>——阅读情报失败历史的一些笔记</p></li>
+<li><p><a href="https://www.lesswrong.com/posts/Ft2Cm9tWtcLNFLrMw/notes-on-the-psychology-of-power" id="_UcjYaFBU" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/Ft2Cm9tWtcLNFLrMw/notes-on-the-psychology-of-power?format=preview&amp;theme=classic">“关于权力心理学的笔记”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/ktr39MFWpTqmzuKxQ/notes-on-psychopathy" id="_DXKvW8VB" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/ktr39MFWpTqmzuKxQ/notes-on-psychopathy?format=preview&amp;theme=classic">“关于精神变态的笔记”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/8ZrQkBDptXhumhP3S/notes-on-autonomous-cars" id="_IYLf-0pN" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/8ZrQkBDptXhumhP3S/notes-on-autonomous-cars?format=preview&amp;theme=classic">“关于自动驾驶汽车的笔记”</a></p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/LSD#Mental_disorders" id="_JVoNQ5Fb" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/LSD#bodyContent">LSD</a> &amp; <a href="/modafinil#schizophrenia" id="gwern-modafinil--schizophrenia" class="prefetch-not link-modified-recently link-page">莫达非尼与精神分裂症</a></p></li>
+</ul>
+<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn3"><p>以下我认为实质性或特别好的 LW 提交列表，不包括可以在 Gwern.net 上找到的内容，按时间顺序排列，有趣的已突出显示：</p>
+<ul>
+<li><p><a href="https://www.lesswrong.com/posts/mWXxsBLngfgH6iRdT/poker-playing" id="_NG8cfFFa" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/mWXxsBLngfgH6iRdT/poker-playing?format=preview&amp;theme=classic">“玩扑克”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/o6BfKyWQC6yv8G7bc/lifelogging-the-recording-device" id="_1DWJNTWr" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/o6BfKyWQC6yv8G7bc/lifelogging-the-recording-device?format=preview&amp;theme=classic">“生活记录：记录设备”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/mz6RSqEYoTQJ3Rk8g/aixi-style-iq-tests" id="_NSU7NreC" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/mz6RSqEYoTQJ3Rk8g/aixi-style-iq-tests?format=preview&amp;theme=classic">“<em>AIXI 风格的智商测试</em>”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/Fy6JoSn4sozvNYaDA/is-kiryas-joel-an-unhappy-place" id="_Uedszgx6" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/Fy6JoSn4sozvNYaDA/is-kiryas-joel-an-unhappy-place?format=preview&amp;theme=classic">“<em>Kiryas Joel 是一个不快乐的地方吗？</em>”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/7mCusQu7ZXprbYfYc/sl4-meta-list-closure-2-month-followup" id="_w5FckrzG" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/7mCusQu7ZXprbYfYc/sl4-meta-list-closure-2-month-followup?format=preview&amp;theme=classic">“SL4 META: 列表关闭 2 个月后续”</a></p></li>
+<li><p>寿命延长：</p>
+<ul>
+<li><p><a href="https://www.lesswrong.com/posts/GytPrQ9cT46k9etoz/living-forever-is-hard-or-the-gompertz-curve" id="_q1Tu3OHN" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/GytPrQ9cT46k9etoz/living-forever-is-hard-or-the-gompertz-curve?format=preview&amp;theme=classic">“长生不老很难，或者，Gompertz 曲线”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/zRKW7LotZxJi6Cyeg/living-forever-is-hard-part-2-adult-longevity" id="_p4TN38cc" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/zRKW7LotZxJi6Cyeg/living-forever-is-hard-part-2-adult-longevity?format=preview&amp;theme=classic">“长生不老很难，第 2 部分：成人寿命”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/qNxPRh5jzrLorak6B/prediction-is-hard-especially-of-medicine" id="_IeipqReN" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/qNxPRh5jzrLorak6B/prediction-is-hard-especially-of-medicine?format=preview&amp;theme=classic">“预测很难，特别是医学”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/igLtDADspHudvNuQJ/living-forever-is-hard-part-3-the-state-of-life-extension" id="_BrgBy1Uy" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/igLtDADspHudvNuQJ/living-forever-is-hard-part-3-the-state-of-life-extension?format=preview&amp;theme=classic">“长生不老很难，第 3 部分：寿命延长研究的现状”</a></p></li>
+</ul></li>
+<li><p><a href="https://www.lesswrong.com/posts/nnAZBLfKBnF276cqe/philosophical-disagreements-are-not-rational" id="_qLueUKAS" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/nnAZBLfKBnF276cqe/philosophical-disagreements-are-not-rational?format=preview&amp;theme=classic">“（哲学）分歧不是理性的”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/ZWxE96G84m6LotXfg/a-good-volunteer-is-hard-to-find" id="_gAFaN5JX" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/ZWxE96G84m6LotXfg/a-good-volunteer-is-hard-to-find?format=preview&amp;theme=classic">“好志愿者难寻”</a></p>
+<p>后续: <a href="https://www.lesswrong.com/posts/evyBmPw9ZnzmoFmP6/experiment-a-good-researcher-is-hard-to-find" id="_BbNAXXQA" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/evyBmPw9ZnzmoFmP6/experiment-a-good-researcher-is-hard-to-find?format=preview&amp;theme=classic">“<em>实验：好研究员难寻</em>”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/mkrvsNi8cYGSjGqkh/on-the-unpopularity-of-cryonics-life-sucks-but-at-least-then" id="_wS1PH7yh" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/mkrvsNi8cYGSjGqkh/on-the-unpopularity-of-cryonics-life-sucks-but-at-least-then?format=preview&amp;theme=classic">“关于人体冷冻术的不受欢迎：生活很糟糕，但至少你会死”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/xM4MLzaTnMA7AQbSM/how-to-be-deader-than-dead" id="_R_Da05i0" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/xM4MLzaTnMA7AQbSM/how-to-be-deader-than-dead?format=preview&amp;theme=classic">“如何比死更死”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/PmrD2T6F82RkRkhQv/case-study-reading-edge-s-financial-filings" id="_A6Zy8wE_" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/PmrD2T6F82RkRkhQv/case-study-reading-edge-s-financial-filings?format=preview&amp;theme=classic">“<em>案例研究：阅读 Edge 的财务文件</em>”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/RNSYDitY6688rP3Fb/atheism-and-the-autism-spectrum" id="_vHJE1gy5" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/RNSYDitY6688rP3Fb/atheism-and-the-autism-spectrum?format=preview&amp;theme=classic">“无神论与自闭症谱系”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/79g662fdusDsXWK67/stanislav-petrov-day" id="_nIczSY4c" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/79g662fdusDsXWK67/stanislav-petrov-day?format=preview&amp;theme=classic">“斯坦尼斯拉夫·彼得罗夫日”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/vAsQNjW3gbiskP9Wf/not-by-empathy-alone" id="_cJkVu3L-" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/vAsQNjW3gbiskP9Wf/not-by-empathy-alone?format=preview&amp;theme=classic">“<em>不仅仅是同理心</em>”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/CXZK4cixfnKJF5Ycy/on-the-openness-personality-trait-and-rationality" id="_0mejOzIR" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/CXZK4cixfnKJF5Ycy/on-the-openness-personality-trait-and-rationality?format=preview&amp;theme=classic">“关于开放性人格特征与’理性’”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/uRg5Q2vAteDem5b5S/social-status-and-testosterone" id="_BilB6UbB" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/uRg5Q2vAteDem5b5S/social-status-and-testosterone?format=preview&amp;theme=classic">“<em>社会地位与睾酮</em>”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/Jx4gGbPi7GuydwvzB/amanda-knox-post-mortem" id="_nDc_7llw" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/Jx4gGbPi7GuydwvzB/amanda-knox-post-mortem?format=preview&amp;theme=classic">“<em>阿曼达·诺克斯：事后剖析</em>”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/dQWCDERoZjLLHWpys/cryonics-costs-given-estimates-are-low" id="_uo3ZY06k" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/dQWCDERoZjLLHWpys/cryonics-costs-given-estimates-are-low?format=preview&amp;theme=classic">“人体冷冻成本：给出的估计偏低”</a></p></li>
+<li><p>JET 论文评论：</p>
+<ul>
+<li><p><a href="https://www.lesswrong.com/posts/agbSrvyL3tDh3ZP7h/ray-kurzweil-and-uploading-just-say-no-nick-agar" id="_BKqYBeYE" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/agbSrvyL3tDh3ZP7h/ray-kurzweil-and-uploading-just-say-no-nick-agar?format=preview&amp;theme=classic">“‘Ray Kurzweil 和上传：只是说不！’, Nick Agar”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/eKFHNmCcmuogQifQN/vulnerable-cyborgs-learning-to-live-with-our-dragons-mark" id="_EqUGmJtn" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/eKFHNmCcmuogQifQN/vulnerable-cyborgs-learning-to-live-with-our-dragons-mark?format=preview&amp;theme=classic">“‘脆弱的赛博格：学会与我们的龙共存’, Mark Coeckelbergh”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/zswEixLariPTgxLcC/misbehaving-machines-the-emulated-brains-of-transhumanist" id="_L65Beccg" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/zswEixLariPTgxLcC/misbehaving-machines-the-emulated-brains-of-transhumanist?format=preview&amp;theme=classic">“‘行为不端的机器：超人类主义梦想的仿真大脑’, Corry Shores”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/G3hxkSeDCMBucYsp6/personal-identity-and-uploading-by-mark-walker" id="_oGSXmz_K" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/G3hxkSeDCMBucYsp6/personal-identity-and-uploading-by-mark-walker?format=preview&amp;theme=classic">“‘个人身份和上传’, Mark Walker”</a></p></li>
+</ul></li>
+<li><p><a href="https://www.lesswrong.com/posts/MDSt7vSqFPZRzk26B/does-hyperbolic-discounting-really-exist" id="_QUaN_Isa" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/MDSt7vSqFPZRzk26B/does-hyperbolic-discounting-really-exist?format=preview&amp;theme=classic">“双曲线贴现真的存在吗？”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/yDqQ9P23yubmoxLD4/cryonics-is-far-cord-blood-is-near" id="_mapTj46q" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/yDqQ9P23yubmoxLD4/cryonics-is-far-cord-blood-is-near?format=preview&amp;theme=classic">“人体冷冻很远，脐带血很近”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/wzj6WkudtrXQFqL8e/inverse-p-zombies-the-other-direction-in-the-hard-problem-of" id="_qopP4ZWf" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/wzj6WkudtrXQFqL8e/inverse-p-zombies-the-other-direction-in-the-hard-problem-of?format=preview&amp;theme=classic" title="‘Inverse p-zombies: the other direction in the Hard Problem of Consciousness’, Gwern 2011">“<em>逆向 p-zombies：意识问题的另一个方向</em>”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/9vKRHBCLvwqN26LLs/the-personality-of-great-creative-scientists-open-and" id="_YNGJgEAV" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/9vKRHBCLvwqN26LLs/the-personality-of-great-creative-scientists-open-and?format=preview&amp;theme=classic">“（伟大/有创造力）科学家的个性：开放和尽责”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/35P62KXiqR2DfG8e7/the-conditional-fallacy-in-contemporary-philosophy" id="_yzucREG6" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/35P62KXiqR2DfG8e7/the-conditional-fallacy-in-contemporary-philosophy?format=preview&amp;theme=classic">“当代哲学中的条件谬误”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/dMDmED5LyqZtTTh5A/cashing-out-cognitive-biases-as-behavior" id="_QzPQ3Ss4" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/dMDmED5LyqZtTTh5A/cashing-out-cognitive-biases-as-behavior?format=preview&amp;theme=classic">“将认知偏差兑现为行为”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/DuM5d7stfbm4KksM2/on-the-etiology-of-religious-belief" id="_ElxsCHpD" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/DuM5d7stfbm4KksM2/on-the-etiology-of-religious-belief?format=preview&amp;theme=classic">“关于宗教信仰的病因学”</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/MGtKNd5GBXN5oNj7p/to-learn-critical-thinking-study-critical-thinking" id="_-1aAT9oT" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/MGtKNd5GBXN5oNj7p/to-learn-critical-thinking-study-critical-thinking?format=preview&amp;theme=classic">“要学习批判性思维，就学批判性思维”</a> - (一般哲学研究在提高批判性思维方面不如批判性思维课程有效)</p></li>
+<li><p><a href="https://www.lesswrong.com/posts/ttvnPRTxFyru9Hh2H/against-nhst" id="_jvrieZPz" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/ttvnPRTxFyru9Hh2H/against-nhst?format=preview&amp;theme=classic">“<em>反对 NHST</em>”</a> - (关于 <em>p</em>-值范式的统计争议)</p></li>
+<li><p><a href="https://www.lesswrong.com/posts/TiG8cLkBRW4QgsfrR/notes-on-brainwashing-and-cults" id="_ZieSsA-l" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/TiG8cLkBRW4QgsfrR/notes-on-brainwashing-and-cults?format=preview&amp;theme=classic">“关于洗脑和’邪教’的笔记”</a></p></li>
+</ul>
+<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn4"><p>当然，我不同意 MIRI 或 LW 的 <em>每一个</em> 立场。我认为，没有<a href="/slowing-moores-law#lesswrong-survey" id="gwern-slowing-moores-law--lesswrong-survey" class="prefetch-not link-modified-recently link-page">费心查看年度调查</a>的局外人高估了智力同质性。以下是我的一些主要观点：</p>
+<ol>
+<li><p><a href="https://en.wikipedia.org/wiki/Many-worlds_interpretation" id="_pZmXD7nd" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Many-worlds_interpretation#bodyContent">MWI</a>：我认为那些被<a href="https://www.lesswrong.com/posts/hc9Eg6erp6hk9bWhn/the-quantum-physics-sequence" id="_QwdP3ETc" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/hc9Eg6erp6hk9bWhn/the-quantum-physics-sequence?format=preview&amp;theme=classic">Eliezer 的 MWI 文章</a>说服的 LWer 这样做是错误的，因为他们甚至不熟悉任何替代解释的基本原理，无法对此事做出判断；有多少 LWer 曾经认真研究过所有相互竞争的理论，甚至能说出许多替代方案的名字？（“坍缩，MWI，呃……”），更不用说讨论为什么他们不喜欢<a href="https://en.wikipedia.org/wiki/%E5%AF%BC%E8%88%AA%E6%B3%A2" id="_OcWu-wj-" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%AF%BC%E8%88%AA%E6%B3%A2#bodyContent">导航波</a>或其他什么了。缺乏任何真正的理解，他们应该简单地采纳专家共识，即 MWI 似乎拥有多数或勉强多数的支持者（这也意味着信心较弱）。</p></li>
+<li><p>启发式和认知偏差：我不太相信启发式和偏差的知识在日常生活中有多大帮助。反馈和学习是消除错误、校准预测和证明犯下看似<a href="#gwern-sunk-cost">沉没成本谬误</a>的错误是合理的强大工具；而在日常生活中，人们得到的正是反馈。</p>
+<p>根据<a href="https://en.wikipedia.org/wiki/%E8%8E%AB%E6%8B%89%E7%BB%B4%E5%85%8B%E6%82%96%E8%AE%BA" id="_7ehC5aud" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E8%8E%AB%E6%8B%89%E7%BB%B4%E5%85%8B%E6%82%96%E8%AE%BA#bodyContent">莫拉维克悖论</a>，我们对启发式和偏差的知识回报最大的地方是汉森所说的<a href="https://en.wikipedia.org/wiki/Construal_level_theory" id="_RGoeBjYA" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Construal_level_theory#bodyContent">“远”</a>场景：进化上新颖的情况，先例很少，反馈昂贵或不存在。（例如，人工智能是否会在 2040 年开发出来的问题：它只会发生或不发生一次，几乎没有可比事件，后果可能很巨大，而我们的日常生活没有提供有用的见解。）碰巧，这描述了大部分未来学和预测，但我们不能通过声称其技术在日常生活中非常有价值来证明我们的未来学是合理的！</p></li>
+<li><p><a href="https://www.lesswrong.com/posts/fLaKKRZckYtrrcz7m/link-reddit-help-me-find-some-peace-i-m-dying-young" id="_c9vXqcg2" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/fLaKKRZckYtrrcz7m/link-reddit-help-me-find-some-peace-i-m-dying-young?format=preview&amp;theme=classic">人体冷冻女孩</a>：捐款让我感到震惊，我在那里详细阐述了原因——它们完全放弃了像功利主义和最佳慈善这样的核心理念。</p></li>
+<li><p>Alicorn 的 <a href="https://www.lesswrong.com/posts/9o3Cjjem7AbmmZfBs/living-luminously" id="_Ok9J_Xkg" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/9o3Cjjem7AbmmZfBs/living-luminously?format=preview&amp;theme=classic">“发光的生活”</a> 范式让我觉得可疑，甚至没有象征性的研究支持，而且可能只是她个人的特质；我认为她的 <a href="https://luminous.elcenia.com/" id="_GveWw4-o"><em>发光</em></a> 电子小说只是还可以，尽管在 LW 上有无休止的讨论（与 <em>理性及其方法</em> 本身相媲美），而且她的续作 <a href="https://luminous.elcenia.com/all2.shtml" id="_46pGt6jU"><em>光辉</em></a> 简直糟糕透顶。尽管如此，她的小说事业似乎还在继续。</p></li>
+</ol>
+<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn5"><p>有一个<a href="https://www.lesswrong.com/posts/Cq4KKE4Xg6xdeoSJZ/what-are-you-working-on#LYPBs8L4S74hu44yJ" id="_jb-aTmxB" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/Cq4KKE4Xg6xdeoSJZ/what-are-you-working-on/comment/LYPBs8L4S74hu44yJ?format=preview&amp;theme=classic">有点好笑的故事</a> 关于 Gerard 是如何写这首歌的，基于我的音乐无能。<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>也就是说，总结了我多年来各种账户的（幸存）编辑：<a href="https://en.wikipedia.org/wiki/User:Gwern" id="_dLu-bVhB" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/User:Gwern#bodyContent">User:Gwern</a>, <a href="https://en.wikipedia.org/wiki/User:Gwern" id="_dLu-bVhB" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/User:Gwern#bodyContent">User:Marudubshinki</a>, &amp; User:Rhwawn<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>比较动漫 <em><a href="https://en.wikipedia.org/wiki/%E7%8E%8B%E7%AB%8B%E5%AE%87%E5%AE%99%E5%86%9B" id="_vgdISNem" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E7%8E%8B%E7%AB%8B%E5%AE%87%E5%AE%99%E5%86%9B#bodyContent">王立宇宙军</a></em> 的 <a href="https://cse.google.com/cse?cx=009114923999563836576%3A1eorkzz2gp4&amp;q=Wings+of+Honneamise" id="_Kog7ZEyU" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">CSE 结果</a> 与 <a href="https://www.google.com/search?q=Wings+of+Honneamise" id="_2yqoKlU1" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Google 结果</a>。哪个对编辑更有用？ 有关更多详细信息，请参阅我的 <a href="https://www.mail-archive.com/wikien-l@lists.wikimedia.org/msg09145.html" id="_9OD5akLg" class="link-live" data-link-icon="✉" data-link-icon-type="text" data-link-icon-color="#a01e1e">发布公告</a>。<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>我在 <span class="date-range">2015<sub><span title="2015 was 11 years ago.">11ya</span></sub></span> 年访问 FHI 时发现了这个技巧——我使用宽屏笔记本电脑太久了，以至于我忘记了纵向对于阅读来说是多么美好。<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>我有一个 <a href="https://www.amazon.com/KINESIS-FBA_KB500USB-BLK-Advantage-Keyboard-KB500USB-BLK/dp/B000LVJ9W8" id="_M5y_ywmh" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53">Kinesis Advantage 键盘</a>，但很难适应键位映射和大尺寸，很难找到舒适的桌椅高度，让我的手臂抬得足够高以使用厚实的 Kinesis。2020 年 7 月，我换成了分体式 <a href="https://en.wikipedia.org/wiki/Ergonomic_keyboard" id="_Pe8ZQjKo" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Ergonomic_keyboard#bodyContent">人体工学</a> <a href="https://en.wikipedia.org/wiki/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98" id="_Se4O4ZMN" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98#bodyContent">机械键盘</a> <a href="https://ergodox-ez.com/" id="_Dcjsp8AL">Ergodox EZ</a> (<span class="inflation-adjusted" data-year-original="2020" data-amount-original="325" data-year-current="2026" data-amount-current="408.78" title="CPI inflation-adjusted US dollar: from nominal $325 in 2020 → real $408.78 in 2026">$408.78<span class="subsup"><sup>$325</sup><sub>2020</sub></span></span>)，但结果也有类似的问题。</p>
+<p>此时，我开始对我花在尝试奇异键盘上的时间和金钱感到沮丧——通用键盘最大的问题是开关，以及十键区占用了大量空间，使得很难够到轨迹球。所以在 2022 年 9 月，我浏览了一个键盘搜索网站，直到我找到一个便宜的 $50 薄型无十键键盘，带有良好的低键程机械开关（以帮助防止因重击按键而产生的 RSI），来自 <a href="https://en.wikipedia.org/wiki/G.Skill" id="_O-pN1zC-" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/G.Skill#bodyContent">G.Skill</a>，然后就这么定了。它足够薄，适合我的姿势，不需要痛苦地重新学习几十年的肌肉记忆，而且一直令人满意。<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>也就是猜测，我最初的问题是我严重低估了将 Threadripper CPU 插入插槽所需的压力——它需要真正可怕的力量，我在反复检查在线教程、视频和讨论后才弄对——这就是为什么第一块主板根本无法工作，而第二块主板被静电或短路弄坏了。<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>另见 “Actively Open-Minded Thinking Scale”, “Clarity Scale”, “Engagement with Beauty”, &amp; “a measure of what types of stories you enjoy”.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>另见 “Zimbardo Time Perspective Inventory”. Brent W. Roberts 批评这两个量表用于衡量尽责性。<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p>另见 “Relational Mobility scale”, “Empathizing and Systemizing scales” &amp; “Rational vs Experiential Inventory”.<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p>另见 “Self-Report <a href="https://en.wikipedia.org/wiki/Psychopathy" id="_RuTRFRkK" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Psychopathy#bodyContent">Psychopathy</a> Scale”.<a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn15"><p>另见 “Experience in Purchasing Behavior Scale” &amp; “Kentucky Inventory of Mindfulness Skills”.<a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn16"><p>有关过度自信的进一步阅读，请参阅 <a href="https://www.lesswrong.com/tag/overconfidence/" id="_OKgxKgyk" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/tag/overconfidence/?format=preview&amp;theme=classic">所有以此标记的 LW 文章</a>。我曾在一本书中读到一项研究，在该研究中，受试者被要求想出 (如果我没记错的话) 灭火的主意，并且只有当他们确信自己已经想出了所有好主意时才停止，尽管他们通常只想出了三分之一时就停止了；但我一直无法重新找到它，如果这个描述让读者想起了什么，我很感激能知道细节。<a href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn17"><p><a href="https://en.wikiquote.org/wiki/Tao_Te_Ching" id="_fFIK8fgO" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg">第 17 章, <em>道德经</em></a><a href="#fnref17" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn18"><p>例如，我对 <a href="https://www.emacswiki.org/emacs/BrowseUrl" id="_V7sWX2Jh" data-link-icon="emacs" data-link-icon-type="svg" data-link-icon-color="#c04c39"><code>browse-url</code></a> 模块的清理和扩展被 <a href="https://en.wikipedia.org/wiki/Richard_Stallman" id="_mus8IFFW" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Richard_Stallman#bodyContent">RMS</a> 完全重写了；所以我在这里很难邀功。<a href="#fnref18" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn19"><p>此后，这意味着我拥有该项目的提交权限 (或同等权限)。<a href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn20"><p>此后，‘清理’ 应被理解为涉及广泛的杂项变更，包括 (排名不分先后):</p>
+<ul>
+<li><p>修复 GHC’s <code>-Wall</code> 或 hlint 警告</p></li>
+<li><p>用 LANGUAGE pragmas 替换 OPTION pragmas</p></li>
+<li><p>追踪许可信息</p></li>
+<li><p>从 Haskell98 导入切换到标准分层模块导入</p>
+<ol type="i">
+<li><p>例如 <code>import Char</code> → <code>import Data.Char</code>; 在某些情况下，Haskell98 模块分散在多个基本模块中，这并不简单</p></li>
+</ol></li>
+<li><p>重组文件树</p></li>
+<li><p>改进 Cabal 化</p></li>
+<li><p>空白格式化，等等。</p></li>
+</ul>
+<a href="#fnref20" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn21"><p>此后，这通常意味着我也将其上传到了 Hackage<a href="#fnref21" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn22"><p>此后，这意味着我做了任何必要的更改以使其在 GHC 6.8.x 和 6.10.x 上编译<a href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+
+      
+      <noscript><div id="noscript-warning-footer" class="admonition error" title="Warning to NoScript Users"><div class="admonition-title"><p>[<strong>Error</strong>: JavaScript disabled.]</p></div> <p>[Backlinks, similar links, and the bibliography require JS enabled to load.]</p></div></noscript>
+      
+      
+      
+      
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+    <!-- Footer (no SSI): injected by Hakyll from static/include/footer.html -->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction"></use></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center"></use></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction"></use></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Mako Shan">[ Send Anonymous Feedback ]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Mako Shan homepage" class="footer-logo dark-mode-invert" href="/index.html">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

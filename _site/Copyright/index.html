@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inlined head (no SSI): injected by Hakyll from static/include/inlined-head.html -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #aaa;
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popins-popin-box-shadow-color: #aaa;
+
+    --GW-popins-popin-title-bar-background-color: #fff;
+    --GW-popins-popin-title-bar-button-color: #777;
+
+    --GW-popins-popin-scrollbar-thumb-color: #ccc;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #999;
+
+    --GW-popins-popin-stack-counter-text-color: #fff;
+    --GW-popins-popin-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #ccc;
+	--GW-back-to-top-link-hover-color: #999;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #7c7c7c;
+    --GW-popins-popin-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popins-popin-box-shadow-color: #7c7c7c;
+
+    --GW-popins-popin-title-bar-background-color: #000;
+    --GW-popins-popin-title-bar-button-color: #a6a6a6;
+
+    --GW-popins-popin-scrollbar-thumb-color: #5c5c5c;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popins-popin-stack-counter-text-color: #000;
+    --GW-popins-popin-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #5c5c5c;
+	--GW-back-to-top-link-hover-color: #8b8b8b;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popins-popin-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+div.poem span.caesura-mark {
+	opacity: 0.3;
+}
+@media all and (max-width: 649px) {
+	div.poem span.caesura-mark {
+		opacity: 0.4;
+	}
+}
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1770514858">
+<script src="/static/js/head.js?v=1770514858"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1768170615" as="image">
+
+
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="反对版权">
+  <meta name="citation_title" content="反对版权">
+  <meta name="og:title" content="反对版权">
+  <meta name="twitter:title" content="反对版权">
+<meta name="generator" content="https://github.com/makoshan/makoshan.github.io/">
+<meta name="creator" content="Mako Shan">
+  
+  <meta name="author" content="Mako Shan">
+  <meta name="citation_author" content="Mako Shan">
+  
+  <meta name="contact" content="/me#contact">
+  <link rel="index" title="Mako Shan homepage" href="/index.html">
+  <link href="https://v2eth.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Mako Shan newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="makoshan">
+  <meta name="twitter:site" content="makoshan.github.io">
+  <meta name="og:site" content="makoshan.github.io">
+  <meta name="og:type" content="article">
+  <meta name="description" content="从信息论和压缩的角度来看，版权被认为是矛盾的、不连贯的和有害的，因为没有对应于‘作品’的自然种类，只有更长或更短的字符串用于更笨或更聪明的算法。">
+  <meta name="og:description" content="从信息论和压缩的角度来看，版权被认为是矛盾的、不连贯的和有害的，因为没有对应于‘作品’的自然种类，只有更长或更短的字符串用于更笨或更聪明的算法。">
+  <meta property="og:image" content="https://makoshan.github.io/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail: site logo.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content="">
+  <meta name="keywords" content="">
+  <meta name="dc.date.issued" content="2008-09-26">
+  
+  <meta name="citation_publication_date" content="2008-09-26">
+  <meta name="dcterms.modified" content="2014-05-04">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://makoshan.github.io/Copyright/index.html">
+  <meta name="citation_fulltext_html_url" content="https://makoshan.github.io/Copyright/index.html">
+  <meta name="og:url" content="https://makoshan.github.io/Copyright/index.html">
+  <link rel="alternate" type="text/markdown" href="https://makoshan.github.io/Copyright/index.html.md" title="Markdown source of ‘反对版权’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-copyright dropcaps-cheshire">
+  <meta name="citation_fulltext_world_readable" content="">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>反对版权 · Mako Shan</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+
+  <!-- CSS for JS-disabled users: ensure that NoScripters know what they are missing even if they jump to a section & miss the warning at top/bottom. -->
+  <noscript>
+    <style>
+      #markdownBody #noscript-warning-header {
+          position: fixed; /* sticky */
+          top: 6px; /* at top */
+          width: 58%;
+          z-index: 99; /* Make sure it is on top */
+          background-color: #f8f8f8; /* Set a solid background color so legible while positioned over text */
+          border-color: var(--GW-abstract-border-color); /* Make look like theme-toggle/admonitions a bit more */
+          border-width: 6px 6px 6px 6px;
+          border-style: double;
+      }
+      #markdownBody #noscript-warning-header p { margin: 10px; }
+      nav#navbar { padding-top: 160px; } /* avoid overlap with page header */
+    </style>
+  </noscript>
+</head>
+
+<body class="page-copyright dropcaps-cheshire">
+  <!-- Inlined asset links (no SSI): injected by Hakyll from static/include/inlined-asset-links.html -->
+  <link rel="stylesheet" href="/static/css/style.css?v=1770491984" media="print" onload="this.media=`all`">
+<script src="/static/js/script.js?v=1770491982" defer></script>
+
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <!-- Navbar (no SSI): injected by Hakyll from static/include/navbar.html -->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index.html" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about.html" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="design link-page link-annotated" href="/design.html" title="Design and implementation notes">Design</a>
+        <a class="new link-page link-annotated" href="/changelog.html" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page link-annotated" href="/blog/index.html" title="Blog index: short posts">Blog</a>
+        <a class="links link-page" href="/Links.html" title="Links page">Links</a>
+        <a class="patreon" href="https://www.patreon.com/makoshan" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://v2eth.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+
+    <article>
+
+      <header>
+        <h1>反对版权</h1>
+      </header>
+
+      
+      <div class="markdownBody" id="page-metadata">
+          
+        <div class="page-description"><p>从信息论和压缩的角度来看，版权被认为是矛盾的、不连贯的和有害的，因为没有对应于‘作品’的自然种类，只有更长或更短的字符串用于更笨或更聪明的算法。</p></div>
+        <div class="page-metadata-fields">
+            
+            <span class="page-date-range"><span class="date-range" title="The date range 2008-09-26–2014-05-04 lasted 6 years (2,047 days), ending 12 years ago.">2008-09-26<span class="subsup"><sup>–</sup><sub>5y</sub></span>2014-05-04<sub><span title="2008-09-26 was 18 years ago.">12ya</span></sub></span></span>
+            <span class="page-status" title="Writing status of current page: ranges 'abandoned'/'notes'/'draft'/'in progress'/'finished'"><em><span class="completion-status" data-progress-percentage="100">finished</span></em></span>
+            <span class="page-confidence"><a href="/about.html#confidence-tags" title="Explanation of 'confidence' metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: 'certain'/'highly likely'/'likely'/'possible'/'unlikely'/'highly unlikely'/'remote'/'impossible')">certainty</a>: <em><span class="completion-status" data-progress-percentage="50">possible</span></em></span>
+            <span class="page-importance"><a href="/about.html#importance-tags" title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>2</em></span>
+            
+            
+            
+        </div>
+      </div>
+      
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#无损压缩" id="toc-无损压缩">无损压缩</a>
+<ul>
+<li><a href="#你一直在用那个词" id="toc-你一直在用那个词">你一直在用那个词……</a></li>
+<li><a href="#把它们都压缩了用户会知道他自己的" id="toc-把它们都压缩了用户会知道他自己的">把它们都压缩了—用户会知道他自己的</a></li>
+<li><a href="#更聪明地工作而不是更努力" id="toc-更聪明地工作而不是更努力">更聪明地工作，而不是更努力</a></li>
+</ul></li>
+<li><a href="#压缩需要解释" id="toc-压缩需要解释">压缩需要解释</a>
+<ul>
+<li><a href="#代码是数据数据是代码" id="toc-代码是数据数据是代码">代码是数据，数据是代码</a></li>
+<li><a href="#思想实验" id="toc-思想实验">思想实验</a></li>
+<li><a href="#版权的结构和解释" id="toc-版权的结构和解释">版权的结构和解释</a></li>
+</ul></li>
+<li><a href="#在其中一切都变得清晰" id="toc-在其中一切都变得清晰">在其中一切都变得清晰</a></li>
+<li><a href="#外部链接" id="toc-外部链接">外部链接</a></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><p class="dropcap-cheshire"><span
+class="dropcap">版</span>权法应用于技术最麻烦的方面之一是后者如何使前者在智力上的不连贯性暴露无遗，甚至
+<em>鼓励</em>
+这样做；版权仅仅是为了实现某些社会期望的目标而针对过去的经济条件进化出来的一套临时的规则和习惯（并且可以因其失败而被批评或废除）。如果我们不能得到正确的版权
+<a href="https://en.wikipedia.org/wiki/%E6%9C%AC%E4%BD%93%E8%AE%BA"
+id="_3dXjyErY" class="link-live" data-link-icon="wikipedia"
+data-link-icon-type="svg"
+data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%9C%AC%E4%BD%93%E8%AE%BA#bodyContent">本体论</a>，那么讨论就注定要失败<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>。许多人受到的妄想是它不仅仅是那样，版权在某种程度上是客观的，甚至某种实际的道德人权（考虑法国的
+“<em><a href="https://en.wikipedia.org/wiki/Authors%27_rights"
+id="_zO89S0J4" class="link-live" data-link-icon="wikipedia"
+data-link-icon-type="svg"
+data-url-iframe="https://en.m.wikipedia.org/wiki/Authors%27_rights#bodyContent">droit
+d’auteur</a></em>”，<a href="https://en.wikipedia.org/wiki/Moral_rights"
+id="_A9cUUiZr" class="link-live" data-link-icon="wikipedia"
+data-link-icon-type="svg"
+data-url-iframe="https://en.m.wikipedia.org/wiki/Moral_rights#bodyContent">“<em>道德</em>
+权利”</a> 之一）<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>，具有与其他权利如永久性相同的属性<a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>。这是完全错误的。信息有历史，但它不带有内在的版权。
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li
+id="fn1"><p>例如，如果你承认版权作为一种道德权利存在，那么你就立即接受了废除
+<em>另一种</em>
+道德权利，即言论自由；这本质上内置于版权的概念中，因为版权无非是对他人的言论施加限制。<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>来自 <a
+href="https://en.wikipedia.org/wiki/Stephen_Breyer" id="_CzlpBv_U"
+class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg"
+data-url-iframe="https://en.m.wikipedia.org/wiki/Stephen_Breyer#bodyContent">斯蒂芬·布雷耶</a>
+在 <a href="https://www.supremecourt.gov/opinions/11pdf/10-545.pdf"
+id="_7-kMezIk" data-link-icon="pdf" data-link-icon-type="svg"
+data-link-icon-color="#f40f02">Golan v. Holder</a> <span
+class="date-range">2012<sub><span
+title="2012 was 14 years ago.">14ya</span></sub></span> 中的异议 (<a
+href="https://en.wikipedia.org/wiki/Golan_v._Holder" id="_z7L3OiOG"
+class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg"
+data-url-iframe="https://en.m.wikipedia.org/wiki/Golan_v._Holder#bodyContent">维基百科</a>):</p>
+<blockquote>
+<p>杰斐逊最终同意麦迪逊的观点，支持有限的垄断权授予，但仅作为“<em>鼓励人们追求可能产生效用的想法</em>”。Thomas
+Jefferson 致 Isaac McPherson 的信 (<span
+class="date-range">1813<sub><span
+title="1813 was 213 years ago.">213ya</span></sub></span> 年 8 月 13
+日), in 6 <em>Papers of Thomas Jefferson</em><span>, at 379, 383 (J.
+Looney ed. <span class="date-range">2009<sub><span
+title="2009 was 17 years ago.">17ya</span></sub></span>)
+(强调后加)。</span></p>
+<p>这种被杰斐逊和麦迪逊拥护的版权和专利的功利主义观点，与作为许多欧洲大陆版权法基础的“自然权利”观点形成鲜明对比—这是一种英国书商在
+<a
+href="https://en.wikipedia.org/wiki/%E5%AE%89%E5%A6%AE%E5%A5%B3%E7%8E%8B%E6%B3%95%E4%BB%A4"
+id="_vPnenQW4" class="link-live" data-link-icon="wikipedia"
+data-link-icon-type="svg"
+data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%AE%89%E5%A6%AE%E5%A5%B3%E7%8E%8B%E6%B3%95%E4%BB%A4#bodyContent">安妮女王法令</a>
+颁布后为了限制损失而推广的观点，并且在某种程度上激发了一些殖民地法规的颁布。Patterson
+158-179,
+183-192。以前提是作者或发明者对他的劳动成果有固有的权利为基础，它神话般地源于
+6
+世纪迪亚米德国王的一句传奇声明“‘每头母牛都有它的小牛，因此每本书都有它的副本。’”
+A. Birrell, <em>Seven Lectures on the Law and History of Copy right in
+Books</em> 42 (<span class="date-range">1899<sub><span
+title="1899 was 127 years ago.">127ya</span></sub></span>)。这种观点，尽管可能反映在法院的意见中，<em>ante</em>,
+at 30, 与影响我们自己宪法 <a
+href="https://en.wikipedia.org/wiki/%E7%89%88%E6%9D%83%E6%9D%A1%E6%AC%BE"
+id="_wM4kXjRN" class="link-live" data-link-icon="wikipedia"
+data-link-icon-type="svg"
+data-url-iframe="https://en.m.wikipedia.org/wiki/%E7%89%88%E6%9D%83%E6%9D%A1%E6%AC%BE#bodyContent">版权条款</a>
+写作的更功利主义观点背道而驰。参见 S. Ricketson, <a
+href="https://www.amazon.com/Convention-Protection-Literary-Artistic-1886-1986/dp/085121603X/"
+id="_jm-erxO8" data-link-icon="amazon" data-link-icon-type="svg"
+data-link-icon-color="#ffce53"><em>The Berne Convention for the
+Protection of Literary and Artistic Works: <span class="date-range"
+title="The date range 1886–1986 lasted 100 years, ending 40 years ago.">1886<span
+class="subsup"><sup>–</sup><sub>100</sub></span>1986<sub><span
+title="1886 was 140 years ago.">40ya</span></sub></span></em></a><span>,
+pp. 5-6 (<span class="date-range">1987<sub><span
+title="1987 was 39 years ago.">39ya</span></sub></span>)
+(法国第一部版权法“将作者的权利置于比安妮女王法令更高的基础上”，其理解是它们“仅仅是正式承认‘事物的本质’中已经固有的东西”);
+S. Stewart, </span><em>International Copyright and Neighbouring
+Rights</em><span> 6-7 (2d ed. <span class="date-range">1989<sub><span
+title="1989 was 37 years ago.">37ya</span></sub></span>) (描述欧洲的
+</span><em>droit d’auteur</em> 系统)。</p>
+</blockquote>
+<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn3"><p><a href="https://en.wikipedia.org/wiki/Mark_Helprin"
+id="_alt-AYTf" class="link-live" data-link-icon="wikipedia"
+data-link-icon-type="svg"
+data-url-iframe="https://en.m.wikipedia.org/wiki/Mark_Helprin#bodyContent">Mark
+Helprin</a> 的社论 <a
+href="https://www.nytimes.com/2007/05/20/opinion/20helprin.html"
+id="_49RVh62R" data-link-icon="new-york-times"
+data-link-icon-type="svg">“一个伟大的想法永远存在。它的版权不应该吗？”</a>
+(Lessig 的 <a
+href="https://web.archive.org/web/20130117031827/http://www.lessig.org/2009/05/the-solipsist-and-the-internet/"
+id="_ZF67_p3F" class="link-live" data-link-icon="internet-archive"
+data-link-icon-type="svg"
+data-url-iframe="https://web.archive.org/web/20130117031827if_/http://www.lessig.org/2009/05/the-solipsist-and-the-internet/"
+title="The Solipsist and the Internet (a review of Helprin&#39;s _Digital Barbarism_)">评论</a>)
+是这种观点的标准例子之一。他首先声称知识产权在道德上等同于其他形式的财产，因此像其他财产一样受到道德保护：</p>
+<blockquote>
+<p>如果在你支付了用来盖房子的收入税、材料的销售税、你生前的房地产税和你死后的遗产税之后，政府最终完全征用了它，你会怎么想？这在我们的社会中不会发生……对房子。或者对企业。如果你通过了许多税收之门拥有了一个面粉厂、旅行社或报纸，它们不会遭受完全没收。</p>
+</blockquote>
+<p>当然，作者可以永久拥有他的作品—物理制品。政府不对作者的手稿或计算机进行‘完全没收’。相反，被没收的是呼吁政府在其境内任何地方以物理胁迫和暴力强制执行关于信息的某些实践的能力。这与财产略有不同。Helprin
+然后解决了版权的经济理由，却立即诉诸超越任何仅仅是法律或经济收益的伦理关注：</p>
+<blockquote>
+<p>那么，这是为了公共利益。但是如果国会允许奴役外国俘虏及其后代（这曾被尝试过）；没收比尔·盖茨的银行存折；或者无情地镇压亚历克·鲍德温，也可能是为了公共利益。如果你愿意将那些你试图剥夺其权利的人排除在共同权益之外，你总是可以为公共利益辩护。但我们不那样运作，大部分……国会可以随意延长版权期限。它上次这样做是在
+<span class="date-range">1998<sub><span
+title="1998 was 28 years ago.">28ya</span></sub></span>
+年，只要它能扔，它就应该再次这样做。对于那些试图从写作和作曲的不确定艺术中谋生的人来说，免受一种不加诸于其他任何人的没收形式，难道不是公正和公平的吗？答案是显而易见的，甚至超越了正义。不存在真正的财产和知识产权不平等的好的理由，因为不存在以特殊的不利对待精神和思想的作品的好的理由。</p>
+</blockquote>
+<p>来自 Helprin 的 <a
+href="https://web.archive.org/web/20121122031147/http://www.nationalreview.com/nrd/article/?q=OWUzNTRjMzZlN2NkN2ZhYjFkZTRiM2RjZDMzNDc1NmM"
+id="_FIGvYIQA" class="link-live" data-link-icon="internet-archive"
+data-link-icon-type="svg"
+data-url-iframe="https://web.archive.org/web/20121122031147if_/http://www.nationalreview.com/nrd/article/?q=OWUzNTRjMzZlN2NkN2ZhYjFkZTRiM2RjZDMzNDc1NmM">“捍卫书籍：对
+<em>Digital Barbarism</em> 批评者的回复”</a>:</p>
+<blockquote>
+<p>版权是我用作扩大的关于人与机器关系论点的有时闪闪发光、有争议的导火索，在这个论点中，我直接攻击现代主义、集体主义、好战的无神论、功利主义、大众一致性以及类似的东西，这些东西对灵魂的自然节奏和要求是有毒的，将那些说没有灵魂的人认为剩下的东西具体化，并且在匆忙将人仅仅按照他自己的概念塑造的过程中，正在取得成功。然而，这种趋势越成功，它的追随者就越不快乐，他们就越追求他们无效的成瘾，就像对慕男狂的解释一样，这不足为奇。关于幸福和救赎可以在小工具中找到的信念尤其如此：即玩具崇拜。我解决了这个问题。我捍卫财产作为自由的道德必要性。我试图从
+copyleft
+的狂妄拥抱中夺回杰斐逊。（即使蒙蒂塞洛的讲解员也误解了杰斐逊，未能认识到他对神圣秩序的深沉而持久的爱。）并且我提出了一个版权批评者因其集体主义教育而过敏的命题—西方文明的伟大成就是从公司权利到个人权利的演变，从由种姓、宗族、行会、种族、种族、性别和信仰定义、特权或压迫的人，到曾经只是国王的领域的个人的权利和特权</p>
+<p>但这是它的结尾段落：</p>
+<blockquote>
+<p>’新的数字野蛮主义，在语言、举止、轻率以及对力量和权力的顺从方面，非常像旧的。像旧的一样，像每一种形式的暴政一样，无论是硬的还是软的，它最容易受到照耀它的强光的伤害。称呼它的本质，在不理会其丰富的贿赂和强大的胁迫的同时检查它，将其与它假定要取代的东西进行对比，就是开始反对它的长期斗争。</p>
+<p>非常清楚，选择是在个人或集体的优先地位之间，即兴创作或常规之间，灵魂或机器之间。这是一个也许你已经在不知不觉中做出的选择。或者也许它已经为你做出了。但这总是可以选择加入或退出，因为你的肯定是你自己的，判断的法庭是你的思想和心灵。这些是自由的，你是主权者，永远。选择。’</p>
+</blockquote>
+</blockquote>
+<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></li>
+</ol>
+</aside></p>
+<p>这在某些方面已被 <a href="https://ansuz.sooke.bc.ca/entry/23" id="_eOMmUEBk" class="link-live" title="What Color Are Your Bits?">严肃地</a> 和 <a href="https://qwantz.com/index.php?comic=353" id="_x78HN_1m" class="link-live" data-link-icon="DC" data-link-icon-type="text,sans" data-link-icon-color="#40d53a">幽默地</a> 阐述，但我们可以从理论的方向以一种有趣的方式通过它。</p>
+<section id="无损压缩" class="level1">
+<h1><a href="#无损压缩" title="Link to section: § &#39;无损压缩&#39;">无损压缩</a></h1>
+<p>计算机科学中更优雅的想法之一是证明无损压缩不能压缩所有文件。也就是说，虽然像 ZIP 这样的算法会压缩许多文件—也许压缩到原始文件大小的一小部分—但它必然无法压缩许多其他文件，实际上对于每个它缩小的文件，它都会扩展其他一些文件。这里的一般原则是 <a href="https://en.wikipedia.org/wiki/No_such_thing_as_a_free_lunch" id="_cgQMgE9X" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/No_such_thing_as_a_free_lunch#bodyContent">TANSTAAFL</a>:</p>
+<blockquote>
+<p>“天下没有免费的午餐。”</p>
+</blockquote>
+<p>压缩中没有免费的午餐。对此的正常证明援引了 <a href="https://en.wikipedia.org/wiki/%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86" id="_RsBvkx2R" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86#bodyContent">鸽巢原理</a>；证明是每个文件必须映射到一个唯一的较短文件，并且那个较短文件必须唯一地映射回较长文件（如果较短文件没有，你会设计出一个极其无用的压缩算法—一个不允许解压的算法）。</p>
+<p>但问题是，长字符串比较短字符串有更多的‘空间’（可能性）。考虑一个简单的情况：我们有一个 0 到 1000 之间的数字，我们要压缩它。我们的压缩输出在 0 到 10 之间—更短，对吗？但假设我们将 1000 压缩为 10。900-999 这些数字压缩成什么？它们都变成 9 吗？但是如果给定一个 9，我们完全不知道它应该扩展成什么。也许 999 变成 9，998 变成 8，9997 变成 7 等等—但仅仅几个数字之后我们就用完了个位数，我们再次面临这个问题。</p>
+<p>从根本上说，你不能把 10 公斤的东西装进 5 公斤的袋子里。TANSTAAFL。</p>
+<section id="你一直在用那个词" class="level2">
+<h2><a href="#你一直在用那个词" title="Link to section: § &#39;你一直在用那个词……&#39;">你一直在用那个词……</a></h2>
+<p>上述似乎证明了无损压缩是不可能的，但我们知道我们经常这样做；那么这是如何工作的呢？好吧，我们已经证明了将一组长字符串无损映射到一组较短的子字符串是不可能的。答案是放宽更短的要求：我们可以让我们的算法将字符串‘压缩’成一个 <em>更长</em> 的字符串。现在鸽巢原理为我们工作了—在更长的字符串中有足够的空间容纳所有我们要压缩的字符串。恰巧，人们可以为某些压缩算法设计‘病态’输入，其中短输入解压<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> 成更大的输出—有 <a href="https://en.wikipedia.org/wiki/Zip_bomb" id="_-SNd1t87" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Zip_bomb#bodyContent">这样的文件</a> 可用，经验地证明了这种可能性。</p>
+<p>使无损压缩不仅仅是一个数学奇迹的是，我们可以选择哪些字符串集最终变得有用的更小，哪些集将被降级到肥胖的外部黑暗中。</p>
+</section>
+<section id="把它们都压缩了用户会知道他自己的" class="level2">
+<h2><a href="#把它们都压缩了用户会知道他自己的" title="Link to section: § &#39;把它们都压缩了—用户会知道他自己的&#39;">把它们都压缩了—用户会知道他自己的</a></h2>
+<p>TANSTAAFL 是国王，但宇宙通常会接受垃圾作为付款。我们人类实际上并不想压缩所有可能的字符串，而只压缩我们实际制造的字符串。这类似于编程语言中的静态类型；类型检查可能会导致拒绝许多正确的程序，但我们并不真正关心，因为那些不是我们实际想要运行的程序。或者，高级编程语言将我们与机器隔离开来，使不可能做各种如果用汇编语言编程可以做的技巧；但我们大多数人实际上并不想做那些技巧，并且很高兴为了像可移植性这样的便利而放弃这种能力。或者我们愉快地放弃手动内存管理（及其带来的所有力量）以获得便利和正确性。</p>
+<p>这是一个强大的概念，适用于计算机科学和工程中的许多权衡，但我们可以以不同的方式看待这个问题—这种方式对我们在版权法中看到的知识和创造力的简单化观点提出了质疑。首先，我们可以看看 <a href="https://en.wikipedia.org/wiki/%E6%97%B6%E7%A9%BA%E6%9D%83%E8%A1%A1" id="_cWLxRacQ" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%97%B6%E7%A9%BA%E6%9D%83%E8%A1%A1#bodyContent">时空权衡</a>：快速算法只是将输入数据（例如 WAV）基本上视为输出，而消除了基本冗余的较小输入将需要额外的处理并需要更多时间来运行。这是一种常见现象，有一些极端的例子<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>，但我们可以看一个更有意义的权衡。</p>
+<p>把你的思绪转回到无损算法。它以某种方式选择压缩‘有趣’的字符串并让无趣的字符串膨胀。它是怎么做到的？它不可能是随机做的，做像减少重复这样的简单事情肯定不会让你写出一个可以将 30 兆字节 <a href="https://en.wikipedia.org/wiki/WAV" id="_OQcUJDPR" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/WAV#bodyContent">WAV</a> 文件压缩到 5 兆字节的 <a href="https://en.wikipedia.org/wiki/FLAC" id="_ct5-ZQp3" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/FLAC#bodyContent">FLAC</a> 算法。</p>
+</section>
+<section id="更聪明地工作而不是更努力" class="level2">
+<h2><a href="#更聪明地工作而不是更努力" title="Link to section: § &#39;更聪明地工作，而不是更努力&#39;">更聪明地工作，而不是更努力</a></h2>
+<div class="epigraph">
+<blockquote>
+<p>一个高效的程序是一个逻辑边缘政策的练习。</p>
+<p><a href="https://en.wikipedia.org/wiki/Butler_Lampson" id="_RFOS3NQe" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Butler_Lampson#bodyContent">Butler W. Lampson</a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+</blockquote>
+</div>
+<p>答案是算法对一种文件是 <em>聪明</em> 的。有人投入了大量精力思考在 WAV 文件中可能发现的规律性，以及如何预测和利用它们。正如我们程序员喜欢说的那样，算法体现了领域特定的知识。比方说，GZIP 算法在操作时隐式地对其输入做了一整套假设—其中的重复是成块出现的，它是低熵的，它是全局相似的，它可能是类似于英语的语言文本（这带来了 gzip 可以利用的另一批规律性）或者是二进制的，等等。这些烘焙进算法的假设通过集体构成了一种基本的智能。</p>
+<p>算法压缩得很聪明，因为它在所有可能字符串的一小部分域上操作。如果域进一步缩小，甚至可以做出更多假设；考虑 <a href="http://prize.hutter1.net/" id="_lg385469">马库斯·哈特压缩挑战</a> 中最高分获得者达到的压缩比。主题非常狭窄：关于百科全书主题的高度风格化和格式规整的人工生成的 MediaWiki 标记英语文本。在这里，算法字面上表现出智能以挤出更多的空间节省，利用如神经网络之类的 AI 技术。</p>
+<p>如果上述内容不令人信服，那么去考虑更广泛的无损算法。视频编解码器以小波和帧的方式思考；它们甚至不愿意看任意流。音频编解码器努力模仿人耳。图像压缩方案基于像三色性这样的独特人类假设工作。</p>
+<p>那么，我们同意一个好的压缩算法体现了关于主题的知识或信息。这个命题似乎是不容置疑的。上述全部是非正式的，但我相信其中没有任何东西不能在需要时转化为严格的数学证明。</p>
+</section>
+</section>
+<section id="压缩需要解释" class="level1">
+<h1><a href="#压缩需要解释" title="Link to section: § &#39;压缩需要解释&#39;">压缩需要解释</a></h1>
+<p>但这个命题应该会让有版权意识的人潜意识地担忧。内容取决于解释？后者与前者密不可分？这感觉很危险。但这变得更糟。</p>
+<section id="代码是数据数据是代码" class="level2">
+<h2><a href="#代码是数据数据是代码" title="Link to section: § &#39;代码是数据，数据是代码&#39;">代码是数据，数据是代码</a></h2>
+<p>假设我们要一部受版权保护的电影，<a href="https://en.wikipedia.org/wiki/Titanic_(1997_film)" id="_T413Jvr2" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Titanic_(1997_film)#bodyContent"><em>泰坦尼克号</em></a>。我们在 DVD 播放器或电脑上观看它，播放 MPEG4 文件，一切都很好。现在，似乎很清楚，如果播放器不通过特殊的仅限 MPEG4 的算法解释文件，它就无法播放文件。毕竟，任何其他算法都会把事情搞得一团糟；所以算法包含必要的信息。同样清楚的是，文件本身包含必要的信息，因为我们不能简单地告诉 DVD 播放器播放 <em>泰坦尼克号</em> 而没有那个非常具体的多千兆字节文件—给 MPEG4 算法一个随机文件或根本没有文件同样只会把事情搞得一团糟。所以，算法和文件都包含实际视听的最终受版权保护体验所必需的信息。</p>
+<p>没有什么能阻止我们将算法和文件融合在一起。’代码是数据，数据是代码’是计算机科学的一个真理。每台计算机都依赖于这个真理。我们可以很容易地想出一个 4 或 5 千兆字节的可执行文件，当它独自运行时，产生 <em>泰坦尼克号</em>。在程序中存储所需数据的一般方法是一种常见的编程技术，因为它使安装更简单。</p>
+<p>上述的重点是，构成 <em>泰坦尼克号</em> 的信息是移动的；它可以随时从文件中转移到算法中—反之亦然。</p>
+<p>如果我们想的话，我们可以将大部分信息从算法挤到文件中；一个例子是 WAV 音频文件，它基本上是扬声器的原始输入—几乎不需要解释（相对于更小的 FLAC 文件，它需要大量的算法工作）。类似的事情也可以对 <em>泰坦尼克号</em> MPEG4 文件做。电视是 n 像素乘以 n，每秒渲染 n 次，所以一个完全原始和几乎未解释的文件将是 n<sup>3</sup> 像素的有限和。这表明频谱的一端是可能的，其中文件包含几乎所有信息，而算法包含很少。</p>
+</section>
+<section id="思想实验" class="level2">
+<h2><a href="#思想实验" title="Link to section: § &#39;思想实验&#39;">思想实验</a></h2>
+<p>频谱的另一端是算法拥有大部分信息而文件拥有很少。我们如何构建这样的情况？</p>
+<p>好吧，考虑最退化的例子：一个包含 <em>泰坦尼克号</em> 帧数组的算法。这个可执行文件将需要 0 位的输入。一个不太极端的例子：可执行文件持有 <em>泰坦尼克号</em> 的每一帧，编号从 1 到（比如说）100 万。输入将仅由 [1,2,3,4..1000000] 组成。当我们在这个适当的输入上运行算法时，瞧—<em>泰坦尼克号</em>！</p>
+<p>荒谬，你说。那什么也没证明。好吧，如果它有 400 万个四分之一帧你会满意吗？不？也许 <span class="date-range">1600<sub><span title="1600 was 426 years ago.">426ya</span></sub></span> 万个十六分之一帧将足够不像 <em>泰坦尼克号</em>。如果这不能满足你，我愿意下到像素级别。值得注意的是，即使是一个像素级别的算法版本仍然可以编码所有其他电影！不得不逐个像素地表达其他电影可能会很尴尬（一帧将是一个几乎任意的序列，如 456788,67,89,189999,1001..20000），但它是可以做到的。</p>
+<p>细心的读者已经注意到了这一点，但这个假设的 <em>泰坦尼克号</em> 算法精确地证明了我关于 TANSTAAFL 和算法知道事情的意思；这个算法知道关于 <em>泰坦尼克号</em> 的惊人数量，因此 <em>泰坦尼克号</em> 受到了极短压缩输出的青睐；但它仍然允许我们编码所有其他电影—只是输出更长。</p>
+</section>
+<section id="版权的结构和解释" class="level2">
+<h2><a href="#版权的结构和解释" title="Link to section: § &#39;版权的结构和解释&#39;">版权的结构和解释</a></h2>
+<p>现在从版权的角度考虑这个算法谱系。对我来说很清楚，在标准 MPEG4 算法和电影文件的情况下，版权完全在于电影文件。没有人会建议相反（软件专利是一个正交问题）。算法知道一点关于电影，关于人造电影而不是所有可能电影的集合—这只是一个可疑的智力奇迹。同样清楚的是，在我们的 <em>泰坦尼克号</em> 算法和仅仅是整数 1–100 万的列表的文件的情况下，所有版权都适用于算法—毕竟，人们不能对像 1 或 100 万这样的自然事实拥有版权，而且我很难看出像 1 到 100 万这样的微不足道的序列怎么可能被版权保护。</p>
+<p>但在这里我们将遇到滑坡谬误！在我们两个案例之间的许多可能步骤的每一步中，都有一点点信息从文件中滑出并进入算法（或反之亦然）。坚持文件 <em>总是</em> 受版权保护的东西，或者算法 <em>总是</em> 受版权保护的东西是站不住脚的—因为在任何一种情况下，我们都可以生成一个常识告诉我们 <em>必须</em> 是受版权保护的对象的算法或文件。但我们无法指出它们在何处交换角色。是在 ¾ 标记处吗？还是中途？</p>
+<p>但在中途标记处，两个项目都不是 <em>泰坦尼克号</em>，两者仍可用于其他用途。中途算法可以似是而非地用于压缩另一部航海作品的情节，如 <a href="https://en.wikipedia.org/wiki/Horatio_Hornblower#Screen_adaptations" id="_ef93sZor" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Horatio_Hornblower#bodyContent"><em>霍雷肖·霍恩布洛尔</em></a> —如果我们下到操作小像素材的水平，整个算法中可能没有一个可识别的 <em>泰坦尼克号</em> 特征，但有大量有用的‘蓝色’或‘黑色’块。这个滑坡并不像某些滑坡那样糟糕，因为我们可以将电影的位数相加（文件可能是 320 亿字节，可执行文件可能是几亿字节），并知道可能的有效中间体的数量必须等于或小于那个；但 10 亿或 1000 亿个中间步骤仍然向我们提出了滑坡问题，即我们如何明智地指定版权仅在第 667,503,001<sup>th</sup> 位改变，而不是之前的任何位。</p>
+</section>
+</section>
+<section id="在其中一切都变得清晰" class="level1">
+<h1><a href="#在其中一切都变得清晰" title="Link to section: § &#39;在其中一切都变得清晰&#39;">在其中一切都变得清晰</a></h1>
+<p>没有有意义且非任意的线可以画。版权是机器中不可分析的幽灵，到目前为止它是基于命令和有限的人类（机器）能力维持的。这在以前很少出现，因为人类不能自由改变我们的眼睛或耳朵所做的解释有多少，我们缺乏在极其拼写和详细的文本与极其难以理解的省略暗示语言之间自由选择的智力能力；我们可能会尝试，但数学胜过我们，并且可以产生数量级差异的程序/数据对，而我们的机器可以处理数学。</p>
+<p>但现在我们对诸如信息之类的概念有了更好的理解，显然版权在其逻辑或道德优点上不再可持续。维持版权只有实际的经济原因，而当前的版权制度显然未能实现这些目标。</p>
+</section>
+<section id="外部链接" class="level1">
+<h1><a href="#外部链接" title="Link to section: § &#39;外部链接&#39;">外部链接</a></h1>
+<ul>
+<li><p><a href="http://www.faqs.org/faqs/compression-faq/" id="_s2vA6bPU">压缩 FAQ</a></p></li>
+</ul>
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>这应该仅适用于解压—只有使用无能的压缩算法，人们才能将小输入 <em>压缩</em> 为大输出，因为算法的格式可以从一个位开始，指示以下内容是压缩还是未压缩，如果输出大于输入，则根本不麻烦压缩。那个额外的位使文件变大，因此不会引起鸽巢原理的任何问题。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>我遇到过的最极端的时空权衡，远超任何 <a href="https://en.wikipedia.org/wiki/%E8%AE%B0%E5%BF%86%E5%8C%96" id="_i2lc1kKk" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E8%AE%B0%E5%BF%86%E5%8C%96#bodyContent">记忆化</a> 或 <a href="https://en.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92" id="_9NX6fxaq" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92#bodyContent">动态规划</a> 的例子，是一个纯理论的；来自 <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.70.4331&amp;rep=rep1&amp;type=pdf" id="_b3ptnK-3" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="Logical Depth and Physical Complexity"><span class="cite"><span class="cite-author">Bennett</span><span class="cite-date">1988</span></span></a>:</p>
+<blockquote>
+<p>表示的简洁性和解码的容易性之间的权衡由解决 <a href="https://en.wikipedia.org/wiki/%E5%81%9C%E6%9C%BA%E9%97%AE%E9%A2%98" id="_afkNanMe" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%81%9C%E6%9C%BA%E9%97%AE%E9%A2%98#bodyContent">停机问题</a> 所需的信息以一种极端的形式说明。这种信息的一个标准表示是作为一个 <a href="https://en.wikipedia.org/wiki/Chaitin%27s_constant" id="_l9iotaaB" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Chaitin%27s_constant#bodyContent">无限二进制序列 K0</a>（停机集的特征序列），其第 i 位是 0 或 1 取决于第 i 个程序是否停机。这个序列显然是冗余的，因为停机问题的许多实例很容易解决或可归约为其他实例。事实上，K0 比这表面证据可能表明的要多余得多。Barzdin [2] 表明这种信息可以压缩到其原始体积的对数，但 <em>没有任何简洁编码的表示可以在递归有界时间内解码</em>。</p>
+</blockquote>
+<p>像 <a href="https://en.wikipedia.org/wiki/NP-hardness" id="_QV4xu834" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/NP-hardness#bodyContent">NP-hard</a> 这样的 <a href="https://en.wikipedia.org/wiki/%E5%A4%8D%E6%9D%82%E6%80%A7%E7%B1%BB" id="_7JdGFpi-" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%A4%8D%E6%9D%82%E6%80%A7%E7%B1%BB#bodyContent">复杂性类</a>，在复杂性等级中相当高，是程序员中棘手和无效的代名词。但是这种 K0 的极其节省空间的表示的解码是一个 <em>如此</em> 慢的过程，以至于它甚至不适合任何正常的复杂性类！<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><span class="cite"><span class="cite-author">Lampson</span><span class="cite-date">1983</span></span> 年的 <a href="https://users.ece.utexas.edu/~adnan/pop-05/lampson-system-design.pdf" id="_ECSLfbbK" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“计算机系统设计提示”</a> 改写了 Dijkstra 在 <a href="https://www.cs.utexas.edu/~EWD/transcriptions/EWD07xx/EWD709.html" id="_qszu4Kzh" data-link-icon="EWD" data-link-icon-type="text,tri,sans">“EWD 709: 我对计算科学的希望”</a> 中的评论： &gt; 希望来自适度库的转换将提供从幼稚、低效但明显正确的程序到复杂高效解决方案的路径。我已经看到如何通过程序转换，通过避免重新计算相同的中间结果获得了惊人的效率提升，即使在这种情况—注意中间结果从未是原始问题陈述的一部分！—乍一看是令人惊讶的……恐怕对程序转换的巨大希望只能基于在我看来是对证明真正高效算法所需的逻辑边缘政策的低估。确实，每个程序转换都体现了一个定理，但这些定理是那些能显著贡献于给我们成熟的知识和理解体系的定理吗？我怀疑，因为它们中的许多太微不足道，并且太依赖于程序符号。<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+
+      
+      <noscript><div id="noscript-warning-footer" class="admonition error" title="Warning to NoScript Users"><div class="admonition-title"><p>[<strong>Error</strong>: JavaScript disabled.]</p></div> <p>[Backlinks, similar links, and the bibliography require JS enabled to load.]</p></div></noscript>
+      
+      
+      
+      
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+    <!-- Footer (no SSI): injected by Hakyll from static/include/footer.html -->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"
+        ><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center" /></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Mako Shan">[&hairsp;Send Anonymous Feedback&hairsp;]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Mako Shan homepage" class="footer-logo dark-mode-invert" href="/index.html">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

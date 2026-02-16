@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inlined head (no SSI): injected by Hakyll from static/include/inlined-head.html -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #aaa;
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popins-popin-box-shadow-color: #aaa;
+
+    --GW-popins-popin-title-bar-background-color: #fff;
+    --GW-popins-popin-title-bar-button-color: #777;
+
+    --GW-popins-popin-scrollbar-thumb-color: #ccc;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #999;
+
+    --GW-popins-popin-stack-counter-text-color: #fff;
+    --GW-popins-popin-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #ccc;
+	--GW-back-to-top-link-hover-color: #999;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #7c7c7c;
+    --GW-popins-popin-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popins-popin-box-shadow-color: #7c7c7c;
+
+    --GW-popins-popin-title-bar-background-color: #000;
+    --GW-popins-popin-title-bar-button-color: #a6a6a6;
+
+    --GW-popins-popin-scrollbar-thumb-color: #5c5c5c;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popins-popin-stack-counter-text-color: #000;
+    --GW-popins-popin-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #5c5c5c;
+	--GW-back-to-top-link-hover-color: #8b8b8b;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popins-popin-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+div.poem span.caesura-mark {
+	opacity: 0.3;
+}
+@media all and (max-width: 649px) {
+	div.poem span.caesura-mark {
+		opacity: 0.4;
+	}
+}
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1770514858">
+<script src="/static/js/head.js?v=1770514858"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1768170615" as="image">
+
+
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="预测 Google 关闭">
+  <meta name="citation_title" content="预测 Google 关闭">
+  <meta name="og:title" content="预测 Google 关闭">
+  <meta name="twitter:title" content="预测 Google 关闭">
+<meta name="generator" content="https://github.com/makoshan/makoshan.github.io/">
+<meta name="creator" content="Mako Shan">
+  
+  <meta name="author" content="Mako Shan">
+  <meta name="citation_author" content="Mako Shan">
+  
+  <meta name="contact" content="/me#contact">
+  <link rel="index" title="Mako Shan homepage" href="/index.html">
+  <link href="https://v2eth.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Mako Shan newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="makoshan">
+  <meta name="twitter:site" content="makoshan.github.io">
+  <meta name="og:site" content="makoshan.github.io">
+  <meta name="og:type" content="article">
+  <meta name="description" content="分析 Google 放弃产品的预测因素并对未来关闭进行预测">
+  <meta name="og:description" content="分析 Google 放弃产品的预测因素并对未来关闭进行预测">
+  <meta property="og:image" content="https://makoshan.github.io/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail: site logo.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content>
+  <meta name="keywords" content>
+  <meta name="dc.date.issued" content="28 Mar 2013">
+  
+  <meta name="citation_publication_date" content="28 Mar 2013">
+  <meta name="dcterms.modified" content>
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://makoshan.github.io/google-shutdowns/index.html">
+  <meta name="citation_fulltext_html_url" content="https://makoshan.github.io/google-shutdowns/index.html">
+  <meta name="og:url" content="https://makoshan.github.io/google-shutdowns/index.html">
+  <link rel="alternate" type="text/markdown" href="https://makoshan.github.io/google-shutdowns/index.html.md" title="Markdown source of ‘预测 Google 关闭’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-google-shutdowns dropcaps-de-zs">
+  <meta name="citation_fulltext_world_readable" content>
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>预测 Google 关闭 · Mako Shan</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+
+  <!-- CSS for JS-disabled users: ensure that NoScripters know what they are missing even if they jump to a section & miss the warning at top/bottom. -->
+  <noscript>
+    <style>
+      #markdownBody #noscript-warning-header {
+          position: fixed; /* sticky */
+          top: 6px; /* at top */
+          width: 58%;
+          z-index: 99; /* Make sure it is on top */
+          background-color: #f8f8f8; /* Set a solid background color so legible while positioned over text */
+          border-color: var(--GW-abstract-border-color); /* Make look like theme-toggle/admonitions a bit more */
+          border-width: 6px 6px 6px 6px;
+          border-style: double;
+      }
+      #markdownBody #noscript-warning-header p { margin: 10px; }
+      nav#navbar { padding-top: 160px; } /* avoid overlap with page header */
+    </style>
+  </noscript>
+</head>
+
+<body class="page-google-shutdowns dropcaps-de-zs">
+  <!-- Inlined asset links (no SSI): injected by Hakyll from static/include/inlined-asset-links.html -->
+  <link rel="stylesheet" href="/static/css/style.css?v=1770491984" media="print" onload="this.media=`all`">
+<script src="/static/js/script.js?v=1770491982" defer></script>
+
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <!-- Navbar (no SSI): injected by Hakyll from static/include/navbar.html -->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index.html" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about.html" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="design link-page link-annotated" href="/design.html" title="Design and implementation notes">Design</a>
+        <a class="new link-page link-annotated" href="/changelog.html" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page link-annotated" href="/blog/index.html" title="Blog index: short posts">Blog</a>
+        <a class="links link-page" href="/Links.html" title="Links page">Links</a>
+        <a class="patreon" href="https://www.patreon.com/makoshan" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://v2eth.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+
+    <article>
+
+      <header>
+        <h1>预测 Google 关闭</h1>
+      </header>
+
+      
+      <div class="markdownBody" id="page-metadata">
+          
+        <div class="page-description"><p>分析 Google 放弃产品的预测因素并对未来关闭进行预测</p></div>
+        <div class="page-metadata-fields">
+            
+            
+            <span class="page-status" title="Writing status of current page: ranges &#39;abandoned&#39;/&#39;notes&#39;/&#39;draft&#39;/&#39;in progress&#39;/&#39;finished&#39;"><em><span class="completion-status" data-progress-percentage="100">finished</span></em></span>
+            <span class="page-confidence"><a href="/about.html#confidence-tags" title="Explanation of &#39;confidence&#39; metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: &#39;certain&#39;/&#39;highly likely&#39;/&#39;likely&#39;/&#39;possible&#39;/&#39;unlikely&#39;/&#39;highly unlikely&#39;/&#39;remote&#39;/&#39;impossible&#39;)">certainty</a>: <em><span class="completion-status" data-progress-percentage="67">likely</span></em></span>
+            <span class="page-importance"><a href="/about.html#importance-tags" title="Explanation of &#39;importance&#39; metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>0</em></span>
+            
+            
+            
+        </div>
+      </div>
+      
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#先看一眼过去" id="toc-先看一眼过去">先看一眼过去</a></li>
+<li><a href="#数据" id="toc-数据">数据</a>
+<ul>
+<li><a href="#来源" id="toc-来源">来源</a>
+<ul>
+<li><a href="#已停服产品" id="toc-已停服产品">已停服产品</a></li>
+<li><a href="#存活产品" id="toc-存活产品">存活产品</a></li>
+</ul></li>
+<li><a href="#变量" id="toc-变量">变量</a>
+<ul>
+<li><a href="#命中率" id="toc-命中率">命中率</a></li>
+</ul></li>
+<li><a href="#处理" id="toc-处理">处理</a></li>
+</ul></li>
+<li><a href="#分析" id="toc-分析">分析</a>
+<ul>
+<li><a href="#描述性统计" id="toc-描述性统计">描述性统计</a>
+<ul>
+<li><a href="#关闭时间分布" id="toc-关闭时间分布">关闭时间分布</a></li>
+</ul></li>
+<li><a href="#建模" id="toc-建模">建模</a>
+<ul>
+<li><a href="#逻辑回归" id="toc-逻辑回归">逻辑回归</a>
+<ul>
+<li><a href="#命中指标的使用方式" id="toc-命中指标的使用方式">命中指标的使用方式</a></li>
+</ul></li>
+<li><a href="#生存曲线" id="toc-生存曲线">生存曲线</a></li>
+<li><a href="#随机森林" id="toc-随机森林">随机森林</a>
+<ul>
+<li><a href="#随机生存森林" id="toc-随机生存森林">随机生存森林</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#预测" id="toc-预测">预测</a></li>
+</ul></li>
+<li><a href="#后续" id="toc-后续">后续</a></li>
+<li><a href="#参见" id="toc-参见">参见</a></li>
+<li><a href="#外部链接" id="toc-外部链接">外部链接</a></li>
+<li><a href="#附录" id="toc-附录">附录</a>
+<ul>
+<li><a href="#源代码" id="toc-源代码">源代码</a></li>
+</ul></li>
+<li><a href="#generate-google-corpus-model-for-use-in-main-analysis" id="toc-generate-google-corpus-model-for-use-in-main-analysis">Generate Google Corpus Model for Use in Main Analysis</a></li>
+<li><a href="#load-the-data-fit-and-plot" id="toc-load-the-data-fit-and-plot">Load the Data, Fit, and Plot:</a></li>
+<li><a href="#begin-actual-data-analysis" id="toc-begin-actual-data-analysis">Begin Actual Data Analysis</a></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><p>Google 有时会关闭我在用的服务，而且不总是给出明确警告（许多科技公司也是如此——今天有，明天没，虽然 Google 相对温和）；这让人沮丧而乏味。很自然，常有人替 Google 说教：Google 不欠我们任何人情；如果是问题，那是我们自己的问题，我们应当更早预测未来（同时也同情因关闭而受影响的普通人，以及那段[链接逐渐失效]（Archiving URLs）历史）。我不知道 Reader RSS 归档到底会丢失多少。<br />
+但如果连 Google 对某个产品能支持多久、为什么支持、以及它如何做决策都没有数据和线索，我们又怎么能做出理性的预期？于是本文我整理了 <a href="#sources">350 个 Google 产品</a> 的数据，寻找可用于预测的变量（<a href="#variables">predictive variables</a>）。我在<a href="#modeling">建模关闭模式</a>中找到了部分模式，并据此对未来关闭给出一些<a href="#predictions">预测</a>。希望结果有意思，也有用，或兼而有之。</p>
+<section id="先看一眼过去" class="level1">
+<h1><a href="#先看一眼过去" title="Link to section: § &#39;先看一眼过去&#39;">先看一眼过去</a></h1>
+<blockquote>
+<p>“这是文学一向敏感却又迟迟不肯承认的事：技术总是难以被正视。冷风在空旷的石室里呼啸。什么时候才坦白？Dell 的电脑呢？这是德克萨斯奥斯汀，Michael Dell 是中德州最大的科技巨头。为什么他不在现场？为什么至少不去卖货？你过去喜欢的那些专用游戏机呢？你还记得它们曾经有多重要吗？我可以整天在这儿列举你这个行业里被替代的名字。电子世界永远是在前沿。没人会回头看那些被电锯砍掉再被扔进河里的“电子森林”。而且还有一种空洞的说法：这些创新让世界变得更好……比如“如果我们不让世界更好，那我们为什么要做这些？”<br />
+我不想说这种态度就是伪善。因为在 SXSW 你若说“我们来这里是想让世界更好”——那你甚至还没到“虚伪”这个层次，最多只是“童稚的天真”。’” – <a href="https://en.wikipedia.org/wiki/Bruce_Sterling" id="_J1tBtKKP" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bruce_Sterling#bodyContent">Bruce Sterling</a>， <a href="http://www.wired.com/beyond_the_beyond/2013/04/text-of-sxsw2013-closing-remarks-by-bruce-sterling/" id="_5uUxQ7jg" data-link-icon="wired" data-link-icon-type="svg">SXSW<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span> 收官演讲文字版</a></p>
+</blockquote>
+<p>2013 年 3 月 13 日 <a href="http://googleblog.blogspot.com/2013/03/a-second-spring-of-cleaning.html" id="_Ij7b09u4" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">宣布关闭的</a>热门服务 <a href="https://en.wikipedia.org/wiki/Google_Reader" id="_8S9dSNET" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Google_Reader#bodyContent">Google Reader</a> 让很多人意识到：自己依赖的一些产品只是 Google 的施舍而已——它们的存在原因对外人难以洞察，Google 可能对产品投入不深<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>，对用户利益未必友好，可能在任何时刻、任何原因下收回产品<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>（尤其是其中很多是服务类<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>，并非真正的 <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" id="_OGrLzSzx" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Free_and_open-source_software#bodyContent">FLOSS</a>，而且通常与 Google 的基础设施紧耦合<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>，无法轻易分拆出售；当 CEO 不再站在它这边、且<a href="http://www.buzzfeed.com/mattlynley/google-reader-died-because-no-one-would-run-it" id="_nJd5B6zm" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">没有 Googler</a>愿意拿职业生涯去支撑它时），用户便几乎没有发言权<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>，只有 [离开](!Wikipedia “Exit, Voice, and Loyalty) 这条路。</p>
+<p>就 Reader 而言，它确实摧毁了最初 RSS 阅读器市场，但仍有可替代产品；主要代价是 RSS 的读者群萎缩——不少用户最终放弃学习新阅读器或转向停止；另一个是 Reader 独特、完整的 RSS 存档（可追溯到 <span class="date-range">2005<sub><span title="2005 was 21 years ago.">21ya</span></sub></span> 年）将不可逆丢失。为了公平起见，我也要说两点支持 Google 的地方：</p>
+<ol type="1">
+<li><p>我仍在使用某些 Google 服务，因为除了少数事故（如 <a href="AB%20testing#max-width" id="_DRs09Oj6">Website Optimizer</a>）外，它们几乎是少数能让用户备份数据的公司之一，尤其通过 <a href="https://en.wikipedia.org/wiki/Google_Data_Liberation_Front" id="_GJwyuxMb" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Google_Data_Liberation_Front#bodyContent">Google Data Liberation Front</a>；它也比许多公司更积极地鼓励用户为“停服”做备份，比如自动把 Buzz 数据同步到 Google Drive。</p></li>
+<li><p>Google 通过低价甚至免费替代市场上大公司服务带来的好处同样巨大，因此不能只看到坏处。它们的模式也符合 [可见成本与隐性成本] 的讨论（见 Bastiat《[The Seen and The Unseen]》），所以我们不应只看表面。</p></li>
+</ol>
+<p>但不管怎么说，每次关闭仍会以不同程度伤害用户，即使我们现在可基本排除像 Gmail 这样灾难性关闭的可能。更有意思的是看：关闭是否具有可预测性？是否有明显模式？常见说法是否能被验证？这些结果对未来有什么启发？</p>
+</section>
+<section id="数据" class="level1">
+<h1><a href="#数据" title="Link to section: § &#39;数据&#39;">数据</a></h1>
+<section id="来源" class="level2">
+<h2><a href="#来源" title="Link to section: § &#39;来源&#39;">来源</a></h2>
+<section id="已停服产品" class="level3">
+<h3><a href="#已停服产品" title="Link to section: § &#39;已停服产品&#39;">已停服产品</a></h3>
+<blockquote>
+<p>夏草——<br />
+是许多勇士梦想<br />
+最后的残痕。</p>
+</blockquote>
+<p>我先整理了来自《卫报》文章 <a href="http://www.guardian.co.uk/technology/2013/mar/22/google-keep-services-closed" id="_Do6LaROC" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">“Google Keep? It’ll probably be with us until March 2017 - on average: The closure of Google Reader has got early adopters and developers worried that Google services or APIs they adopt will just get shut off. An analysis of 39 shuttered offerings says how long they get”</a> 的服务/API/程序清单（作者 Charles Arthur）。Arthur 的清单已相当完整，但我在 Slate 墓地页、Weber 的《<a href="http://thenextweb.com/google/2013/10/17/google-fails/" id="_d3BCbB8r" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Google Fails 36% Of The Time》</a>（见 <a href="#weber">Weber 总结</a>）、维基收录的 Google 收购分类和列表、Google 公司史等基础数据上补充了 300 余个缺失条目。加入的这批停服项包括许多早于 <span class="date-range">2010<sub><span title="2010 was 16 years ago.">16ya</span></sub></span> 的关闭，说明 Arthur 的样本偏向近年的停服。</p>
+<p>部分项目的起始时间只能是最佳估计（如 <a href="https://plus.google.com/u/0/103530621949492999968/posts/fqxuM2SBRQ5" id="_-yqxZj6Z" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Google Translate</a>），而停/弃用时间更难判断，因为多数项目本身不受关注。此时我主要从网页快照、新闻报道、博客（如 Google Operating System）、新闻稿、密切相关服务的停运（如 eReader Play）以及源码仓库（如 AngularJS）反推。部分条目会被标为 discontinued（如 Google Catalogs）但仍维护或已并入其他软件（如 Spreadsheets、Docs、Writely、News Archive），或被出售/移交（如 Flu Shot Finder、App Inventor、Body）或停止维护但保留内容，所以不列为 dead；对已收购且已关闭的软件/服务，我按收购时点记起始时间。</p>
+</section>
+<section id="存活产品" class="level3">
+<h3><a href="#存活产品" title="Link to section: § &#39;存活产品&#39;">存活产品</a></h3>
+<blockquote>
+<p>“…他常常清醒得可怕，在心智与力量与意志上依旧坚挺，<br />
+夜深仍听得见时间流逝，<br />
+夜色里万物朝着审判日爬行。”<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+</blockquote>
+<p>Arthur 的主要批评之一是：如果数据里只包含已停服产品，你只能说“平均一个 dead 产品活了 1459 天”，却不能推断活着的产品未来寿命，因为你不知道它最终是否也会死。如果一个产品体系中只有 1% 会死，那么 1459 天这个条件均值会严重低估在“当前依然存活”的群体寿命。其数据只能回答条件问题：假设产品最终会死，它会死多久。真正感兴趣的问题恰恰是“我会不会死？”——这是每位 Google 用户想知道的问题。</p>
+<p>因此我基于同样来源又整理了<em>存活</em>产品列表；存活与停服比例就给出了 <span class="date-range" title="The date range 1997–2013 lasted 16 years, ending 13 years ago.">1997<span class="subsup"><sup>–</sup><sub>16</sub></span>2013<sub><span title="1997 was 29 years ago.">13ya</span></sub></span> 区间随机选取产品会被下线的基准率，并基于各存活产品的上线时间可做右删失 <a href="https://en.wikipedia.org/wiki/Survival_analysis" id="_gsVVj-lx" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Survival_analysis#bodyContent">survival analysis</a>，给出更多可操作预测（比如平均关闭时间）。一些服务在功能意义上基本上已废止（如 Sync、FeedBurner、Meebo 已失去关键功能；Google Group 的 <a href="https://en.wikipedia.org/wiki/Usenet" id="_LbBj-m_i" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Usenet#bodyContent">Usenet</a> 归档长期被忽视）却还没“死”，我依然将其列为存活。</p>
+</section>
+</section>
+<section id="变量" class="level2">
+<h2><a href="#变量" title="Link to section: § &#39;变量&#39;">变量</a></h2>
+<blockquote>
+<p>致我那位挚友，<br />
+我本想让你看看——<br />
+那些<br />
+如今已失去踪迹的<br />
+梅花，<br />
+已无处寻觅，<br />
+在降雪中消散。<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+</blockquote>
+<p>仅仅把数据列出来就有意义，因为我们可以据此估计总体死亡率或中位寿命。但我们也许能做得更好，而不是只做基准率。最终，我为所有产品收集了一些可能预示寿命的自变量：</p>
+<ul>
+<li><p><code>Hits</code>: 每个服务的 Google 搜索命中次数</p>
+<p>Google hits 是非常粗糙的代理变量；它即便只能近似反映“受欢迎程度”“用户规模”“盈利能力”，也偏向最近上线的产品（例如搜索“Google Answers”在 <span class="date-range">2002<sub><span title="2002 was 24 years ago.">24ya</span></sub></span> 年时会命中更多，而今天大概率没那么多）。它仍可能提供一些信息。</p>
+<p>我没看到还有其他免费、可用的优质来源来衡量产品 URL/主页的历史或当前流量。像 Alexa、Google Ad Planner 要么是商业产品，只能用于域名，要么覆盖不足。等我完成数据后，才有人提醒：虽然 Ad Planner 用处不大，Google AdWords 本身每月可返回某查询的全球搜索量，这更有用，不过只能反映当下兴趣，不能反映历史走势。</p></li>
+<li><p><code>Type</code>: 把产品分类为“服务/程序/硬件/其他”</p>
+<ol type="1">
+<li><p><em>服务</em>：主要通过浏览器、API 或网络访问的内容；例如 Gmail 或从 Google 服务器加载字体的浏览器扩展，不包括本地 Gmail 通知程序，也不包括可下载/分发的 FLOSS 字体。</p></li>
+<li><p><em>程序</em>：应用、插件、类库、框架或它们组合，规模可大可小（如 Authenticator 到 Android）。包括依赖网络连接或 Google API 的程序，也包括未开源项目，因此“程序”类也不免受停服影响，且往往受 Google 自身支持周期约束。</p></li>
+<li><p><em>硬件</em>：主要为物理实体。例如 Android 手机、Chromebook。</p>
+<p>回头看，我大概应该把这个分类移除；手机并不一定遵循服务或程序的生命周期，反而带来更复杂的分类问题（手机“死亡”指的是哪个节点？单台设备、单一型号，还是全线？），而且一个产品会有很多代，资料也难取。</p></li>
+<li><p><em>其他</em>：兼容性最差的一类，用于难归类的条目。例如 Google 智库、慈善机构、会议、风险投资基金，它们并非软件，也不完全是服务。</p></li>
+</ol></li>
+<li><p><code>Profit</code>: Google 是否<em>直接</em>盈利于该产品</p>
+<p>这是个棘手变量。Google 常说任何能带来更多网络使用的产品都在间接造就利润，因此按这个逻辑每个服务都可能带来收益；但这解释得过于牵强，外部观察者很难判断真实财务。一般来说我把“直接盈利”理解为直接涉及广告投放/订阅/手续费/销售的产品（AdWords、Gmail、Blogger、Search、购物引擎、问卷）；不少产品却没有与之直接挂钩（Alerts、Office、Drive、Gears、Reader<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>）。像 Voice 这种按国际通话计费的服务也许有收入，但金额很小，是否应算盈利并不清楚。你也许会认为 Google Search 的每项增强（个性化搜索、搜索记录）都“为了盈利”，但我仍将这类二次功能归为非盈利。</p></li>
+<li><p><code>FLOSS</code>: 源码是否开源，或 Google 是否让第三方持续接管服务/应用维护</p>
+<blockquote>
+<p>长期来看，所有非自由软件的效用会走向零，而所有非自由软件最终都会变成死胡同。<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>——讽刺的是，Pilgrim（<span class="date-range">2007<sub><span title="2007 was 19 years ago.">19ya</span></sub></span> 年入职 Google）似乎对其中一项被标记为死的条目负有责任：他的“Doctype 技术百科全书”在他“infosuicide”前后消失，之后并未被恢复，只“部分 FLOSS]。</p>
+</blockquote>
+<p>Android、AngularJS、Chrome 都是例子：就算 Google 失去兴趣，服务也不一定“死”，因为可由第三方接手。许多代码库依赖专有 Google API/服务（尤其移动应用），说明这个变量的实际含义并不那么大；因此在少数关键场景，我用 <code>Dead</code> 与 <code>Ended</code> 记录“Google 是否放弃、何时放弃”，而非是否被第三方接收。比如 App Inventor for Android 记录为 2011-12 死，但半年后转交给 MIT 并得到其支持。不要天真以为源码可得就等于 Google 支持不存在。</p></li>
+<li><p><code>Acquisition</code>: 产品是并购获得、授权获得，还是内部开发</p>
+<p>这个变量用于检验所谓“<a href="http://www.slate.com/articles/technology/technology/2008/08/the_google_black_hole.single.html" id="_mKDqdR6w" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="The Google Black Hole: Sergey and Larry just bought my company. Uh oh.">Google black hole</a>”现象：Google 收购了许多创业公司（DoubleClick、Dodgeball、Android、Picasa），或购买技术/数据授权（Translate 里的 SYSTRAN、实时搜索里的 Twitter 数据）。不少并购后产品逐渐停滞（Jaiku、JotSpot、Dodgeball、<a href="http://www.businessinsider.com/google-zagat-story-2013-6" id="_5Jethz7n" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Zagat</a>），所以我会纳入该变量。若某产品与收购后新发布的项目紧密相关（例如移动 App），我不把它视为 acquisition；也不把 Google 一接手就砍掉的项目纳入（Apture、fflick、Sparrow、Reqwireless、PeakStream、Wavii）或尚未发布衍生产品的（BumpTop）排入。</p></li>
+</ul>
+<section id="命中率" class="level3">
+<h3><a href="#命中率" title="Link to section: § &#39;命中率&#39;">命中率</a></h3>
+<p>理想情况下我们应该拿到产品官方关闭前一天的命中数，但那种历史数据现在拿不到。我只能用 <span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span> 年 1–5 月我搜索得出的命中数。Google hits 这个指标有三点问题：</p>
+<ol type="1">
+<li><p>网络不断增长，因此 <span class="date-range">2000<sub><span title="2000 was 26 years ago.">26ya</span></sub></span> 年的 100 万次命中和 <span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span> 年的 100 万次命中并不等价；</p></li>
+<li><p>没被关闭的服务会活得更久、命中会更高；</p></li>
+<li><p>产品越早，命中里可能更早被抹去的内容比例越高。</p></li>
+</ol>
+<p>我们可以用寿命标准化进行补偿：比如 10 万次命中，对仅运行十年产品而言与对运行 6 个月产品的含义完全不同。至于成长偏见，可以按各时期 Google 索引规模估计并把当前命中数归一化为服务下线时相对 Google 索引的分数（例如假设 Answers 在 <span class="date-range">2006<sub><span title="2006 was 20 years ago.">20ya</span></sub></span> 年关停、并且那时索引有 10 亿 URL，那么 100 万命中可换算为 0.001）；这就是“实质化命中”（deflated hits）。先对 Google 索引规模做指数拟合（利用罕见公共报告和第三方估计值），拟合效果不错（sigmoid 可能更好，但末端分歧较大）。这样我们再按日均值标准化，总共得到四个命中相关指标，后文再细看。</p>
+<figure>
+<p><img alt="估计 Google WWW 索引规模随时间变化" data-aspect-ratio="161 / 58" decoding="async" height="406" id="_0rDs62nc" loading="lazy" src="/images/google/www-index-model.png" width="1127"></img></p>
+<figcaption><p>估计 Google WWW 索引规模随时间变化</p></figcaption>
+</figure>
+<p>拟合得相当合理。虽然 sigmoid 可能更好，但终点偏差较大。由此我再对天数做平均，得到了 4 个可用指标。后面会继续深入。</p>
+</section>
+</section>
+<section id="处理" class="level2">
+<h2><a href="#处理" title="Link to section: § &#39;处理&#39;">处理</a></h2>
+<p>如果产品未结束，终止日期定义为 <span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span> 年 4 月 1 日（我停止汇编产品的时间）；于是总寿命=终止日期-起始日期。最终 CSV 在 <a href="https://gwern.net/docs/2013-google.csv" id="_jH7vAq2U" class="link-live link-modified-recently" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">docs/2013-google.csv</a>。欢迎 Googler 或 Xoogler 就发布/关闭时间、直接变现项目等变量纠错。</p>
+</section>
+</section>
+<section id="分析" class="level1">
+<h1><a href="#分析" title="Link to section: § &#39;分析&#39;">分析</a></h1>
+<blockquote>
+<p>我让马从废墟中驰过，<br />
+废墟会让行者的心震颤，<br />
+高矮不一的旧垛口，<br />
+大小不一的古墓，<br />
+风中草茎阴影轻颤，<br />
+巨树给人恒定的声音。<br />
+我悲叹的是普遍的骨骸，<br />
+在“不朽者”名单里没有名字。<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></p>
+</blockquote>
+<section id="描述性统计" class="level2">
+<h2><a href="#描述性统计" title="Link to section: § &#39;描述性统计&#39;">描述性统计</a></h2>
+<p>先把辛苦整理的数据和 R 总结打印出来（完整源代码见<a href="#source-code">附录</a>，若能附同样可复现的 R 代码就欢迎来做统计修正）：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>    Dead            Started               Ended                 Hits               Type</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a> Mode <span class="sc">:</span>logical   Min.   <span class="sc">:</span><span class="dv">1997-09-15</span>   Min.   <span class="sc">:</span><span class="dv">2005-03-16</span>   Min.   <span class="sc">:</span><span class="fl">2.04e+03</span>   other  <span class="sc">:</span> <span class="dv">14</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a> <span class="cn">FALSE</span><span class="sc">:</span><span class="dv">227</span>       <span class="dv">1</span>st Qu.<span class="sc">:</span><span class="dv">2006-06-09</span>   <span class="dv">1</span>st Qu.<span class="sc">:</span><span class="dv">2012-04-27</span>   <span class="dv">1</span>st Qu.<span class="sc">:</span><span class="fl">1.55e+05</span>   program<span class="sc">:</span> <span class="dv">92</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a> <span class="cn">TRUE</span> <span class="sc">:</span><span class="dv">123</span>       Median <span class="sc">:</span><span class="dv">2008-10-18</span>   Median <span class="sc">:</span><span class="dv">2013-04-01</span>   Median <span class="sc">:</span><span class="fl">6.50e+05</span>   service<span class="sc">:</span><span class="dv">234</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                 Mean   <span class="sc">:</span><span class="dv">2008-05-27</span>   Mean   <span class="sc">:</span><span class="dv">2012-07-16</span>   Mean   <span class="sc">:</span><span class="fl">5.23e+07</span>   thing  <span class="sc">:</span> <span class="dv">10</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                 <span class="dv">3</span>rd Qu.<span class="sc">:</span><span class="dv">2010-05-28</span>   <span class="dv">3</span>rd Qu.<span class="sc">:</span><span class="dv">2013-04-01</span>   <span class="dv">3</span>rd Qu.<span class="sc">:</span><span class="fl">4.16e+06</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                 Max.   <span class="sc">:</span><span class="dv">2013-03-20</span>   Max.   <span class="sc">:</span><span class="dv">2013-11-01</span>   Max.   <span class="sc">:</span><span class="fl">3.86e+09</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>   Profit          FLOSS         Acquisition       Social             Days         AvgHits</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a> Mode <span class="sc">:</span>logical   Mode <span class="sc">:</span>logical   Mode <span class="sc">:</span>logical   Mode <span class="sc">:</span>logical   Min.   <span class="sc">:</span>   <span class="dv">1</span>   Min.   <span class="sc">:</span>      <span class="dv">1</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a> <span class="cn">FALSE</span><span class="sc">:</span><span class="dv">227</span>       <span class="cn">FALSE</span><span class="sc">:</span><span class="dv">300</span>       <span class="cn">FALSE</span><span class="sc">:</span><span class="dv">287</span>       <span class="cn">FALSE</span><span class="sc">:</span><span class="dv">305</span>       <span class="dv">1</span>st Qu.<span class="sc">:</span> <span class="dv">746</span>   <span class="dv">1</span>st Qu.<span class="sc">:</span>    <span class="dv">104</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a> <span class="cn">TRUE</span> <span class="sc">:</span><span class="dv">123</span>       <span class="cn">TRUE</span> <span class="sc">:</span><span class="dv">50</span>        <span class="cn">TRUE</span> <span class="sc">:</span><span class="dv">63</span>        <span class="cn">TRUE</span> <span class="sc">:</span><span class="dv">45</span>        Median <span class="sc">:</span><span class="dv">1340</span>   Median <span class="sc">:</span>    <span class="dv">466</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                                                                 Mean   <span class="sc">:</span><span class="dv">1511</span>   Mean   <span class="sc">:</span>  <span class="dv">29870</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                                                                 <span class="dv">3</span>rd Qu.<span class="sc">:</span><span class="dv">2112</span>   <span class="dv">3</span>rd Qu.<span class="sc">:</span>   <span class="dv">2980</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                                                                 Max.   <span class="sc">:</span><span class="dv">5677</span>   Max.   <span class="sc">:</span><span class="dv">3611940</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  DeflatedHits    AvgDeflatedHits  EarlyGoogle      RelativeRisk    LinearPredictor</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  Min.   <span class="sc">:</span><span class="fl">0.0000</span>   Min.   <span class="sc">:-</span><span class="fl">36.57</span>   Mode <span class="sc">:</span>logical   Min.   <span class="sc">:</span> <span class="fl">0.021</span>   Min.   <span class="sc">:-</span><span class="fl">3.848</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a> <span class="dv">1</span>st Qu.<span class="sc">:</span><span class="fl">0.0000</span>   <span class="dv">1</span>st Qu.<span class="sc">:</span> <span class="sc">-</span><span class="fl">0.84</span>   <span class="cn">FALSE</span><span class="sc">:</span><span class="dv">317</span>       <span class="dv">1</span>st Qu.<span class="sc">:</span> <span class="fl">0.597</span>   <span class="dv">1</span>st Qu.<span class="sc">:-</span><span class="fl">0.517</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a> Median <span class="sc">:</span><span class="fl">0.0000</span>   Median <span class="sc">:</span> <span class="sc">-</span><span class="fl">0.54</span>   <span class="cn">TRUE</span> <span class="sc">:</span><span class="dv">33</span>        Median <span class="sc">:</span> <span class="fl">1.262</span>   Median <span class="sc">:</span> <span class="fl">0.233</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a> Mean   <span class="sc">:</span><span class="fl">0.0073</span>   Mean   <span class="sc">:</span> <span class="sc">-</span><span class="fl">0.95</span>                   Mean   <span class="sc">:</span> <span class="fl">1.578</span>   Mean   <span class="sc">:</span> <span class="fl">0.000</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a> <span class="dv">3</span>rd Qu.<span class="sc">:</span><span class="fl">0.0001</span>   <span class="dv">3</span>rd Qu.<span class="sc">:</span> <span class="sc">-</span><span class="fl">0.37</span>                   <span class="dv">3</span>rd Qu.<span class="sc">:</span> <span class="fl">2.100</span>   <span class="dv">3</span>rd Qu.<span class="sc">:</span> <span class="fl">0.742</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a> Max.   <span class="sc">:</span><span class="fl">0.7669</span>   Max.   <span class="sc">:</span>  <span class="fl">0.00</span>                   Max.   <span class="sc">:</span><span class="fl">12.556</span>   Max.   <span class="sc">:</span> <span class="fl">2.530</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a> ExpectedEvents   FiveYearSurvival</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a> Min.   <span class="sc">:</span><span class="fl">0.0008</span>   Min.   <span class="sc">:</span><span class="fl">0.0002</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a> <span class="dv">1</span>st Qu.<span class="sc">:</span><span class="fl">0.1280</span>   <span class="dv">1</span>st Qu.<span class="sc">:</span><span class="fl">0.1699</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a> Median <span class="sc">:</span><span class="fl">0.2408</span>   Median <span class="sc">:</span><span class="fl">0.3417</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a> Mean   <span class="sc">:</span><span class="fl">0.3518</span>   Mean   <span class="sc">:</span><span class="fl">0.3952</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a> <span class="dv">3</span>rd Qu.<span class="sc">:</span><span class="fl">0.4580</span>   <span class="dv">3</span>rd Qu.<span class="sc">:</span><span class="fl">0.5839</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a> Max.   <span class="sc">:</span><span class="fl">2.0456</span>   Max.   <span class="sc">:</span><span class="fl">1.3443</span></span></code></pre></div>
+<p><!-- Better yet, a stacked line plot of start/end intervals? something like http://stackoverflow.com/questions/9871043/increasing-the-performance-of-visualising-overlapping-segments? --></p>
+<section id="关闭时间分布" class="level3">
+<h3><a href="#关闭时间分布" title="Link to section: § &#39;关闭时间分布&#39;">关闭时间分布</a></h3>
+<blockquote>
+<p><code>Google Reader</code>: “谁在 blog 里呼唤我？/ 我听见一声尖厉鸣唱，胜过一切 YouTubes / 呼唤‘Reader！’ 直面你的耳朵，Reader 便会回应。”</p>
+<p><code>Dataset</code>: “Beware the ides of <a href="http://googleblog.blogspot.com/2013/03/a-second-spring-of-cleaning.html" id="_Ij7b09u4" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="&#39;A second spring of cleaning&#39;, 13 March 2013">March</a>。”<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a></p>
+</blockquote>
+<p>一个明显特征是关闭时间并非均匀：卡方检验显著（<em>p</em>=0.014），图上也能看到 9 月和 3/4 月的峰值<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>：</p>
+<figure>
+<p><img alt="按月份统计关闭数（9 月、3 月、4 月出现峰值）" data-aspect-ratio="690 / 361" decoding="async" height="361" id="__pVmOEhO" loading="lazy" src="/images/google/shutdownsbymonth.png" width="690"></img></p>
+<figcaption><p>按月份统计关闭数（9 月、3 月、4 月出现峰值）</p></figcaption>
+</figure>
+<p>因为 Google 自 <span class="date-range">1997<sub><span title="1997 was 29 years ago.">29ya</span></sub></span><span> 年以来快速扩张，我们也看见其他不均衡：例如 <span class="date-range" title="The date range 1997–2004 lasted 7 years, ending 22 years ago.">1997<span class="subsup"><sup>–</sup><sub>7</sub></span>2004<sub><span title="1997 was 29 years ago.">22ya</span></sub></span> 年很少推出产品，</span><span class="date-range">2005<sub><span title="2005 was 21 years ago.">21ya</span></sub></span> 年以后则大量上线：</p>
+<figure>
+<p><img alt="按年份的产品上线数" data-aspect-ratio="642 / 443" decoding="async" height="443" id="_OcfHT98y" loading="lazy" src="/images/google/startsbyyear.png" width="642"></img></p>
+<figcaption><p>按年份的产品上线数</p></figcaption>
+</figure>
+<p>我们也可以将寿命与停服时间做散点图，得到更清楚的图像：</p>
+<figure>
+<p><img alt="上线日期 vs 寿命" data-aspect-ratio="3 / 2" decoding="async" height="480" id="_IbIuTaGK" loading="lazy" src="/images/google/openedvslifespan.png" width="720"></img></p>
+<figcaption><p>上线日期 vs 寿命</p></figcaption>
+</figure>
+<p>2009 年周边的聚集尤其可疑。为突出 <span class="date-range" title="The date range 2011–2012 lasted 1 year, ending 14 years ago.">2011–2012<sub><span title="2011 was 15 years ago.">14ya</span></sub></span> 年末的关闭高峰，我画了停服频次直方图和核密度图：</p>
+<figure>
+<p><img alt="按年份的关闭分布" data-aspect-ratio="26 / 17" decoding="async" height="442" id="_UkomeIMV" loading="lazy" src="/images/google/shutdownsbyyear.png" width="676"></img></p>
+<figcaption><p>按年份的关闭分布</p></figcaption>
+</figure>
+<figure>
+<p><img alt="核密度（默认带宽）" data-aspect-ratio="199 / 222" decoding="async" height="444" id="_0BMvhg9p" loading="lazy" src="/images/google/shutdownsbyyear-kernel.png" width="398"></img></p>
+<figcaption><p>核密度（默认带宽）</p></figcaption>
+</figure>
+<p>核密度图提示一个之前未明显看到的现象：近年几乎没有关闭事件。<span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span> 年计划关闭了 4 个产品，但最后一个在 11 月，暗示 <span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span> 年可能见底，之后的关闭更多会落在 <span class="date-range">2014<sub><span title="2014 was 12 years ago.">12ya</span></sub></span>。</p>
+<p>这种时间曲线可解释为 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年 4 月 4 日 Larry Page 接任 CEO（接替 Ererick Schmidt）后的一次结构变化。Eric Schmidt 当年被招为“IPO 前 Google 的成人监护人”，Larry 很尊敬 Steve Jobs（他们俩见面前甚至建议 Jobs 担任 CEO）。Isaacon 的《Steve Jobs》记载，Jobs 去世前建议 Larry “聚焦”，并问“你们要专注哪五样产品？” 其答案是：“砍掉其余拖慢你进度的产品。”果然在 <a href="https://plus.google.com/+LarryPage/posts/dRtqKJCbpZ7" id="_u8Oe_kaN" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">2011 年 7 月 14 日</a> 的公开博文里他写道：</p>
+<blockquote>
+<p>…本季度另一个重点就是“更聚焦”；这相当于用更少的箭射得更远。上个月我们宣布将关闭 Google Health 与 Google PowerMeter。我们也在内部做了大量简化与整合产品线的工作。很多工作外部还没看得出来，但我对进展很满意。面对诸多机遇，聚焦与优先排序至关重要。</p>
+</blockquote>
+<p>虽然有人<a href="http://thenextweb.com/google/2013/01/12/larry-page-did-well-to-ignore-steve-jobs/" id="_6m-NiBa8" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">不认同</a>这一思路，但很难否认 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年底到 <span class="date-range">2012<sub><span title="2012 was 14 years ago.">14ya</span></sub></span> 年，Google 关闭潮确实一浪接一浪。这看上去更像一次“清理”，如果真的在做“聚焦”，那两年内新增服务很可能比以前少。</p>
+</section>
+</section>
+<section id="建模" class="level2">
+<h2><a href="#建模" title="Link to section: § &#39;建模&#39;">建模</a></h2>
+<section id="逻辑回归" class="level3">
+<h3><a href="#逻辑回归" title="Link to section: § &#39;逻辑回归&#39;">逻辑回归</a></h3>
+<p>要预测一个产品何时会关闭，第一步是先判断它是否会关闭。因变量是二分类（存活/死亡），因此可以用标准的<a href="https://en.wikipedia.org/wiki/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92" id="_pnzLNE4M" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92#bodyContent">逻辑回归</a>。首次模型使用主要变量和总命中数：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Coefficients<span class="sc">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                Estimate Std. Error z value <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>(Intercept)       <span class="fl">2.3968</span>     <span class="fl">1.0680</span>    <span class="fl">2.24</span>    <span class="fl">0.025</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Typeprogram       <span class="fl">0.9248</span>     <span class="fl">0.8181</span>    <span class="fl">1.13</span>    <span class="fl">0.258</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Typeservice       <span class="fl">1.2261</span>     <span class="fl">0.7894</span>    <span class="fl">1.55</span>    <span class="fl">0.120</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Typething         <span class="fl">0.8805</span>     <span class="fl">1.1617</span>    <span class="fl">0.76</span>    <span class="fl">0.448</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>ProfitTRUE       <span class="sc">-</span><span class="fl">0.3857</span>     <span class="fl">0.2952</span>   <span class="sc">-</span><span class="fl">1.31</span>    <span class="fl">0.191</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>FLOSSTRUE        <span class="sc">-</span><span class="fl">0.1777</span>     <span class="fl">0.3791</span>   <span class="sc">-</span><span class="fl">0.47</span>    <span class="fl">0.639</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>AcquisitionTRUE   <span class="fl">0.4955</span>     <span class="fl">0.3434</span>    <span class="fl">1.44</span>    <span class="fl">0.149</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>SocialTRUE        <span class="fl">0.7866</span>     <span class="fl">0.3888</span>    <span class="fl">2.02</span>    <span class="fl">0.043</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(Hits)        <span class="sc">-</span><span class="fl">0.3089</span>     <span class="fl">0.0567</span>   <span class="sc">-</span><span class="fl">5.45</span>  <span class="fl">5.1e-08</span></span></code></pre></div>
+<p>在<a href="https://en.wikipedia.org/wiki/%E5%AF%B9%E6%95%B0%E5%87%A0%E7%8E%87" id="_x96E3ajl" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%AF%B9%E6%95%B0%E5%87%A0%E7%8E%87#bodyContent">对数几率</a>意义上，系数 &gt;0 增加关闭几率，&lt;0 降低关闭几率。根据系数可做初步解释：</p>
+<ul>
+<li><p>Google 过去在社交产品上反复踩坑</p>
+<p>这支持“Google 历史上处理社交属性很差”的普遍观点；但能否用于预测未来仍有疑问。考虑到 Larry <span class="cite"><span class="cite-author">Page</span><span class="cite-date">2009</span></span> 年后开始押注社交，<code>social</code> 相关产品未来要么直接并入 Google+，要么会被长期维持在生存边缘而非立刻关闭。</p></li>
+<li><p>Google 正在把软件产品替换为 Web 服务</p>
+<p>这从 Firefox、Chromium 经验已可见——更多资源用于提升 Web 浏览器这一应用平台。随着 HTML5 等成熟，Google 对独立软件投入和维护更少动力。</p></li>
+<li><p>但似乎这不适用于其 FLOSS 软件</p>
+<p>因为不少软件后续交由第三方（Wave、Etherpad、Refine），融入既有社区（Summer of Code 项目），或承担“战略角色”（Android、Chromium、Dart、Go、Closure Tools、VP Codecs），整体上是为了构建“替代操作系统的浏览器栈”（为何如此可见《<a href="http://www.joelonsoftware.com/articles/StrategyLetterV.html" id="_A-9m-H44">Commoditize your complements</a>》）。</p></li>
+<li><p>收费或广告展示的服务更可能存活</p>
+<p>这虽然看似显然，但还是有统计支持；起码它能部分验证本模型。</p></li>
+<li><p>“Google 命中”能反映受欢迎程度</p>
+<p>同样直观——也许不是这么简单？</p></li>
+</ul>
+<section id="命中指标的使用方式" class="level4">
+<h4><a href="#命中指标的使用方式" title="Link to section: § &#39;命中指标的使用方式&#39;">命中指标的使用方式</a></h4>
+<p>我们的命中指标（或 4 个命中特征）是否可信？这些数据多是事后补采，偶尔几年后才可得——数据会不会被“某产品关闭导致当下搜索热度上升”污染？比如文章刚讨论该产品关闭，搜索量突然暴涨，反过来影响命中。页面本身也可能增加某些死产品的命中。难道我们看到的是[信息泄漏（leakage）](http://www.cs.umb.edu/~ding/history/470_670_fall_<span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span>/papers/cs670_Tran_PreferredPaper_LeakingInDataMining.pdf “‘Leakage in Data Mining: Formulation, Detection, and Avoidance’, <span class="cite"><span class="cite-author-plural" title="et al">Kaufman</span><span class="cite-joiner"> et al </span><span class="cite-date">2011</span></span>)吗？我自己在 <a href="#leakage">漏斗分析</a>里也体会过这一点。</p>
+<p>继续研究，单独用命中数确实有信息：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>            Estimate Std. Error z value <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>(Intercept)   <span class="fl">3.4052</span>     <span class="fl">0.7302</span>    <span class="fl">4.66</span>  <span class="fl">3.1e-06</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(Hits)    <span class="sc">-</span><span class="fl">0.3000</span>     <span class="fl">0.0549</span>   <span class="sc">-</span><span class="fl">5.46</span>  <span class="fl">4.7e-08</span></span></code></pre></div>
+<p>平均每日日命中（产品寿命内平均）更重要：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>             Estimate Std. Error z value <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>(Intercept)    <span class="sc">-</span><span class="fl">2.297</span>      <span class="fl">1.586</span>   <span class="sc">-</span><span class="fl">1.45</span>    <span class="fl">0.147</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(Hits)       <span class="fl">0.511</span>      <span class="fl">0.209</span>    <span class="fl">2.44</span>    <span class="fl">0.015</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(AvgHits)   <span class="sc">-</span><span class="fl">0.852</span>      <span class="fl">0.217</span>   <span class="sc">-</span><span class="fl">3.93</span>  <span class="fl">8.3e-05</span></span></code></pre></div>
+<p>这有些反直觉：平均命中高意味着风险越低是合理的，但总命中越高却按逻辑也该更安全。于是第三指标登场后，局面更清晰：</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>                  Estimate Std. Error z value <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>(Intercept)        <span class="sc">-</span><span class="fl">21.589</span>     <span class="fl">11.955</span>   <span class="sc">-</span><span class="fl">1.81</span>   <span class="fl">0.0709</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(Hits)            <span class="fl">2.054</span>      <span class="fl">0.980</span>    <span class="fl">2.10</span>   <span class="fl">0.0362</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(AvgHits)        <span class="sc">-</span><span class="fl">1.921</span>      <span class="fl">0.708</span>   <span class="sc">-</span><span class="fl">2.71</span>   <span class="fl">0.0067</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(DeflatedHits)   <span class="sc">-</span><span class="fl">0.456</span>      <span class="fl">0.277</span>   <span class="sc">-</span><span class="fl">1.64</span>   <span class="fl">0.1001</span></span></code></pre></div>
+<p>把全部 4 个命中变量放进来后，3 个进入模型并显著：</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>                  Estimate Std. Error z value <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>(Intercept)       <span class="sc">-</span><span class="fl">24.6898</span>    <span class="fl">12.4696</span>   <span class="sc">-</span><span class="fl">1.98</span>   <span class="fl">0.0477</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(Hits)           <span class="fl">2.2908</span>     <span class="fl">1.0203</span>    <span class="fl">2.25</span>   <span class="fl">0.0248</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(AvgHits)       <span class="sc">-</span><span class="fl">2.0943</span>     <span class="fl">0.7405</span>   <span class="sc">-</span><span class="fl">2.83</span>   <span class="fl">0.0047</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(DeflatedHits)  <span class="sc">-</span><span class="fl">0.5383</span>     <span class="fl">0.2914</span>   <span class="sc">-</span><span class="fl">1.85</span>   <span class="fl">0.0647</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>AvgDeflatedHits    <span class="sc">-</span><span class="fl">0.0651</span>     <span class="fl">0.0605</span>   <span class="sc">-</span><span class="fl">1.08</span>   <span class="fl">0.2819</span></span></code></pre></div>
+<p>并不是命中指标只是互相替代。把所有非命中变量纳入并做复杂度惩罚后，仍只保留这 3 个命中变量：</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>                  Estimate Std. Error z value <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>(Intercept)        <span class="sc">-</span><span class="fl">23.341</span>     <span class="fl">12.034</span>   <span class="sc">-</span><span class="fl">1.94</span>   <span class="fl">0.0524</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>AcquisitionTRUE      <span class="fl">0.631</span>      <span class="fl">0.350</span>    <span class="fl">1.80</span>   <span class="fl">0.0712</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>SocialTRUE           <span class="fl">0.907</span>      <span class="fl">0.394</span>    <span class="fl">2.30</span>   <span class="fl">0.0213</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(Hits)            <span class="fl">2.204</span>      <span class="fl">0.985</span>    <span class="fl">2.24</span>   <span class="fl">0.0252</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(AvgHits)        <span class="sc">-</span><span class="fl">2.068</span>      <span class="fl">0.713</span>   <span class="sc">-</span><span class="fl">2.90</span>   <span class="fl">0.0037</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(DeflatedHits)   <span class="sc">-</span><span class="fl">0.492</span>      <span class="fl">0.280</span>   <span class="sc">-</span><span class="fl">1.75</span>   <span class="fl">0.0793</span></span></code></pre></div>
+<p>AIC: 396.9 ~~~</p>
+<p>许多变量被剔除，仅 4 个命中中的 3 个留存；“平均命中”与“去通胀命中”都还在（后者符号正确，方向合理）。原始总命中出现异常符号，说明泄漏影响很大。平均命中和原始命中相关度过高、不合常识。<br />
+因此我只用去通胀命中（<code>DeflatedHits</code>）——其符号正确且数量级更可接受（大约前者的五分之一）。当然，这并不代表我确信它完全没有泄漏。</p>
+</section>
+</section>
+<section id="生存曲线" class="level3">
+<h3><a href="#生存曲线" title="Link to section: § &#39;生存曲线&#39;">生存曲线</a></h3>
+<p>逻辑回归能筛选变量，但只处理“是否关闭”的二元结果；却没有纳入“已经存活了多久”这一最关键变量——显然存活天数越长，死亡风险会变化（“长期来看我们都要死”）。<br />
+如果想看随时间变化，应使用<a href="https://en.wikipedia.org/wiki/%E7%94%9F%E5%AD%98%E5%88%86%E6%9E%90" id="_hz7rSilW" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E7%94%9F%E5%AD%98%E5%88%86%E6%9E%90#bodyContent">生存分析</a>。我参考了 Wikipedia、<a href="http://socserv.mcmaster.ca/jfox/Books/Companion/appendix/Appendix-Cox-Regression.pdf" id="__Vpb2Mo_" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">Fox 与 Weisberg 附录</a>、<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1065034/" id="_Py3MlHIf" data-link-icon="nlm-ncbi" data-link-icon-type="svg" data-link-icon-color="#20558a">Bewick 等</a>、<a href="https://web.archive.org/web/20130402204254/http://www.ms.uky.edu/~mai/Rsurv.pdf" id="_S8Q73GP4" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20130402204254if_/http://www.ms.uky.edu/~mai/Rsurv.pdf">Zhou 指南</a> 以及 Hosmer &amp; Lemeshow 的《Applied Survival Analysis》，并用 <code>survival</code> 包给出了下面结果（见<a href="http://cran.r-project.org/web/views/Survival.html" id="_kdhDPIQL" data-link-icon="R" data-link-icon-type="text" data-link-icon-color="#1b61b1">CRAN 的 Survival 分析任务视图</a>）。错误是我自己的。</p>
+<p>初步估计给出中位寿命 2824 天（高于 Arthur 的 1459 天，因为条件已校正了那些最终会关闭的样本，且我专门补充了更多 <span class="date-range">2009<sub><span title="2009 was 17 years ago.">17ya</span></sub></span> 年前的产品）；下界不紧，而且死亡样本太少导致上界不好算：</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>records   n.max n.start  events  median <span class="fl">0.95</span>LCL <span class="fl">0.95</span>UCL</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="dv">350</span>     <span class="dv">350</span>     <span class="dv">350</span>     <span class="dv">123</span>    <span class="dv">2824</span>    <span class="dv">2095</span>      <span class="cn">NA</span></span></code></pre></div>
+<p>总体 <a href="https://en.wikipedia.org/wiki/Kaplan%E2%80%93Meier_estimator" id="_gWKsnnRV" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Kaplan%E2%80%93Meier_estimator#bodyContent">Kaplan-Meier</a> 生存曲线值得关注：</p>
+<figure>
+<p><img alt="按时间的累计关闭概率" data-aspect-ratio="302 / 201" decoding="async" height="402" id="_y69nQt3N" loading="lazy" src="/images/google/overall-survivorship-curve.png" width="604"></img></p>
+<figcaption><p>按时间的累计关闭概率</p></figcaption>
+</figure>
+<p>如果每个新增后死亡风险不变，曲线应近似“II 型”——一条直线；若像人类死亡率随年龄上升，则应是“I 型”（先缓后陡）。实际上看起来有“水平化”趋势，更像“III 型”：早期死亡高，随后趋稳。正如 Wikipedia 所述：</p>
+<blockquote>
+<p>…死亡往往在生命周期早期最为集中，那些度过这一瓶颈的人群，其后续死亡率会明显下降。这种曲线常见于高繁殖物种（见 <a href="https://en.wikipedia.org/wiki/R/K_%E9%80%89%E6%8B%A9%E7%90%86%E8%AE%BA" id="_p_yqwYFG" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/R/K_%E9%80%89%E6%8B%A9%E7%90%86%E8%AE%BA#bodyContent">r/K 选择理论</a>）。</p>
+</blockquote>
+<p>这很符合科技行业/创业常见做法：一次做很多东西，快速迭代，反复“扔砖”测试。更重要的是，它也表明样本并未因偏差而严重漏掉短命产品；若漏掉大量短寿命，曲线将更像 I/II 型而非这种高早期死亡的 III 型——若确有漏失，真实曲线会更偏向 III 型。</p>
+<p>但死亡率的下降从约 <span class="date-range">2000<sub><span title="2000 was 26 years ago.">26ya</span></sub></span> 天后才明显，因此那些产品可能在 <span class="date-range">2005<sub><span title="2005 was 21 years ago.">21ya</span></sub></span> 年及以前就已推出，也就是 Google 在那年起加速推出产品、且关闭行为可能制度化；这可能触及 Kaplan-Meier 的核心假设（基础生存函数随时间不变）。</p>
+<p>下一步是对协变量拟合 Cox <a href="https://en.wikipedia.org/wiki/%E6%AF%94%E4%BE%8B%E9%A3%8E%E9%99%A9%E6%A8%A1%E5%9E%8B" id="_lvbRelLC" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%AF%94%E4%BE%8B%E9%A3%8E%E9%99%A9%E6%A8%A1%E5%9E%8B#bodyContent">比例风险模型</a>：</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>n<span class="ot">=</span> <span class="dv">350</span>, number of events<span class="ot">=</span> <span class="dv">123</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                    coef <span class="fu">exp</span>(coef) <span class="fu">se</span>(coef)     z <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>AcquisitionTRUE    <span class="fl">0.130</span>     <span class="fl">1.139</span>    <span class="fl">0.257</span>  <span class="fl">0.51</span>    <span class="fl">0.613</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>FLOSSTRUE          <span class="fl">0.141</span>     <span class="fl">1.151</span>    <span class="fl">0.293</span>  <span class="fl">0.48</span>    <span class="fl">0.630</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>ProfitTRUE        <span class="sc">-</span><span class="fl">0.180</span>     <span class="fl">0.836</span>    <span class="fl">0.231</span> <span class="sc">-</span><span class="fl">0.78</span>    <span class="fl">0.438</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>SocialTRUE         <span class="fl">0.664</span>     <span class="fl">1.943</span>    <span class="fl">0.262</span>  <span class="fl">2.53</span>    <span class="fl">0.011</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>Typeprogram        <span class="fl">0.957</span>     <span class="fl">2.603</span>    <span class="fl">0.747</span>  <span class="fl">1.28</span>    <span class="fl">0.200</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>Typeservice        <span class="fl">1.291</span>     <span class="fl">3.638</span>    <span class="fl">0.725</span>  <span class="fl">1.78</span>    <span class="fl">0.075</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>Typething          <span class="fl">1.682</span>     <span class="fl">5.378</span>    <span class="fl">1.023</span>  <span class="fl">1.64</span>    <span class="fl">0.100</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(DeflatedHits) <span class="sc">-</span><span class="fl">0.288</span>     <span class="fl">0.749</span>    <span class="fl">0.036</span> <span class="sc">-</span><span class="fl">8.01</span>  <span class="fl">1.2e-15</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">exp</span>(coef) <span class="fu">exp</span>(<span class="sc">-</span>coef) lower .<span class="dv">95</span> upper .<span class="dv">95</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>AcquisitionTRUE       <span class="fl">1.139</span>      <span class="fl">0.878</span>     <span class="fl">0.688</span>     <span class="fl">1.884</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>FLOSSTRUE             <span class="fl">1.151</span>      <span class="fl">0.868</span>     <span class="fl">0.648</span>     <span class="fl">2.045</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>ProfitTRUE            <span class="fl">0.836</span>      <span class="fl">1.197</span>     <span class="fl">0.531</span>     <span class="fl">1.315</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>SocialTRUE            <span class="fl">1.943</span>      <span class="fl">0.515</span>     <span class="fl">1.163</span>     <span class="fl">3.247</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>Typeprogram           <span class="fl">2.603</span>      <span class="fl">0.384</span>     <span class="fl">0.602</span>    <span class="fl">11.247</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>Typeservice           <span class="fl">3.637</span>      <span class="fl">0.275</span>     <span class="fl">0.878</span>    <span class="fl">15.064</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>Typething             <span class="fl">5.377</span>      <span class="fl">0.186</span>     <span class="fl">0.724</span>    <span class="fl">39.955</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(DeflatedHits)     <span class="fl">0.749</span>      <span class="fl">1.334</span>     <span class="fl">0.698</span>     <span class="fl">0.804</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>Concordance<span class="ot">=</span> <span class="fl">0.726</span>  (<span class="at">se =</span> <span class="fl">0.028</span> )</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>Rsquare<span class="ot">=</span> <span class="fl">0.227</span>   (max <span class="at">possible=</span> <span class="fl">0.974</span> )</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>Likelihood ratio test<span class="ot">=</span> <span class="fl">90.1</span>  on <span class="dv">8</span> df,   p<span class="ot">=</span><span class="fl">4.44e-16</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>Wald test            <span class="ot">=</span> <span class="fl">79.5</span>  on <span class="dv">8</span> df,   p<span class="ot">=</span><span class="fl">6.22e-14</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="fu">Score</span> (logrank) test <span class="ot">=</span> <span class="fl">83.5</span>  on <span class="dv">8</span> df,   p<span class="ot">=</span><span class="fl">9.77e-15</span></span></code></pre></div>
+<p>再检验协变量是否异常，整体看没有明显问题：</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>                      rho  chisq     p</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>AcquisitionTRUE   <span class="sc">-</span><span class="fl">0.0252</span> <span class="fl">0.0805</span> <span class="fl">0.777</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>FLOSSTRUE          <span class="fl">0.0168</span> <span class="fl">0.0370</span> <span class="fl">0.848</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>ProfitTRUE        <span class="sc">-</span><span class="fl">0.0694</span> <span class="fl">0.6290</span> <span class="fl">0.428</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>SocialTRUE         <span class="fl">0.0279</span> <span class="fl">0.0882</span> <span class="fl">0.767</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>Typeprogram        <span class="fl">0.0857</span> <span class="fl">0.9429</span> <span class="fl">0.332</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>Typeservice        <span class="fl">0.0936</span> <span class="fl">1.1433</span> <span class="fl">0.285</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>Typething          <span class="fl">0.0613</span> <span class="fl">0.4697</span> <span class="fl">0.493</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(DeflatedHits) <span class="sc">-</span><span class="fl">0.0450</span> <span class="fl">0.2610</span> <span class="fl">0.609</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>GLOBAL                 <span class="cn">NA</span> <span class="fl">2.5358</span> <span class="fl">0.960</span></span></code></pre></div>
+<p>我仍心存疑虑，于是加入另一个协变量 <code>EarlyGoogle</code>（是否在 <span class="date-range">2005<sub><span title="2005 was 21 years ago.">21ya</span></sub></span> 年前发布）。它是否补充了“老产品”信息？比例风险假设是否仍成立？答案都是否定：</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>                     coef <span class="fu">exp</span>(coef) <span class="fu">se</span>(coef)     z <span class="fu">Pr</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>AcquisitionTRUE    <span class="fl">0.1674</span>    <span class="fl">1.1823</span>   <span class="fl">0.2553</span>  <span class="fl">0.66</span>    <span class="fl">0.512</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>FLOSSTRUE          <span class="fl">0.1034</span>    <span class="fl">1.1090</span>   <span class="fl">0.2922</span>  <span class="fl">0.35</span>    <span class="fl">0.723</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>ProfitTRUE        <span class="sc">-</span><span class="fl">0.1949</span>    <span class="fl">0.8230</span>   <span class="fl">0.2318</span> <span class="sc">-</span><span class="fl">0.84</span>    <span class="fl">0.401</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>SocialTRUE         <span class="fl">0.6541</span>    <span class="fl">1.9233</span>   <span class="fl">0.2601</span>  <span class="fl">2.51</span>    <span class="fl">0.012</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>Typeprogram        <span class="fl">0.8195</span>    <span class="fl">2.2694</span>   <span class="fl">0.7472</span>  <span class="fl">1.10</span>    <span class="fl">0.273</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>Typeservice        <span class="fl">1.1619</span>    <span class="fl">3.1960</span>   <span class="fl">0.7262</span>  <span class="fl">1.60</span>    <span class="fl">0.110</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>Typething          <span class="fl">1.6200</span>    <span class="fl">5.0529</span>   <span class="fl">1.0234</span>  <span class="fl">1.58</span>    <span class="fl">0.113</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(DeflatedHits) <span class="sc">-</span><span class="fl">0.2645</span>    <span class="fl">0.7676</span>   <span class="fl">0.0375</span> <span class="sc">-</span><span class="fl">7.06</span>  <span class="fl">1.7e-12</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>EarlyGoogleTRUE   <span class="sc">-</span><span class="fl">1.0061</span>    <span class="fl">0.3656</span>   <span class="fl">0.5279</span> <span class="sc">-</span><span class="fl">1.91</span>    <span class="fl">0.057</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>Concordance<span class="ot">=</span> <span class="fl">0.728</span>  (<span class="at">se =</span> <span class="fl">0.028</span> )</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>Rsquare<span class="ot">=</span> <span class="fl">0.237</span>   (max <span class="at">possible=</span> <span class="fl">0.974</span> )</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>Likelihood ratio test<span class="ot">=</span> <span class="fl">94.7</span>  on <span class="dv">9</span> df,   p<span class="ot">=</span><span class="fl">2.22e-16</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>Wald test            <span class="ot">=</span> <span class="fl">76.7</span>  on <span class="dv">9</span> df,   p<span class="ot">=</span><span class="fl">7.2e-13</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="fu">Score</span> (logrank) test <span class="ot">=</span> <span class="fl">83.8</span>  on <span class="dv">9</span> df,   p<span class="ot">=</span><span class="fl">2.85e-14</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>                       rho   chisq     p</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>EarlyGoogleTRUE   <span class="sc">-</span><span class="fl">0.05167</span> <span class="fl">0.51424</span> <span class="fl">0.473</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>GLOBAL                  <span class="cn">NA</span> <span class="fl">2.52587</span> <span class="fl">0.980</span></span></code></pre></div>
+<p>按预期，<span class="date-range">2005<sub><span title="2005 was 21 years ago.">21ya</span></sub></span> 年前发布的产品确实更不容易被关闭，是仅次于“并购/非 FLOSS/是否社交”等因素的第三大影响；其显著性接近 0.057（按传统 [NHST] 批评观点，这与 0.050 并不离谱）并未触发假设违例，所以继续用 Cox。</p>
+<p>模型解释起来很清楚：降低关闭风险的方法是</p>
+<ol type="1">
+<li><p>不是并购产物</p></li>
+<li><p>不是 FLOSS</p></li>
+<li><p>有直接盈利</p></li>
+<li><p>不是社交属性</p></li>
+<li><p>相对寿命归一后命中越高越安全</p></li>
+<li><p>在 Google 早期时期推出</p></li>
+</ol>
+<p>这都合理。利润和社交效应最有意思，但对应风险比值不太直观：若社交属性让关闭赔率×1.943，非直接盈利让赔率×1.215，这该如何理解？我把全体数据按 profit / social 分组画生存曲线，去掉置信区间以便比较（略重叠），大致把含义具象化。</p>
+<p><img alt="按 Profit 分组的全量生存曲线" data-aspect-ratio="603 / 403" decoding="async" height="403" id="_tvq78m1H" loading="lazy" src="/images/google/profit-survivorship-curve.png" width="603"></img> <img alt="按 Social 分组的全量生存曲线" data-aspect-ratio="3 / 2" decoding="async" height="402" id="_Cuj1PAOl" loading="lazy" src="/images/google/social-survivorship-curve.png" width="603"></img></p>
+</section>
+<section id="随机森林" class="level3">
+<h3><a href="#随机森林" title="Link to section: § &#39;随机森林&#39;">随机森林</a></h3>
+<p>出于好奇，我还比较了<a href="https://en.wikipedia.org/wiki/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97" id="_CKDqy4Zi" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97#bodyContent">随机森林</a>（见 <a href="https://web.archive.org/web/20140430075247/http://oz.berkeley.edu/~breiman/randomforest2001.pdf" id="_3UlXQmo9" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20140430075247if_/http://oz.berkeley.edu/~breiman/randomforest2001.pdf"><span class="cite"><span class="cite-author">Breiman</span><span class="cite-date">2001</span></span></a>）与逻辑回归、以及基线预测（“没有模型时按 ~65% 产品仍存活”）的表现。</p>
+<p>我用 <a href="http://cran.r-project.org/web/packages/randomForest/index.html" id="_8sUll9hv" data-link-icon="R" data-link-icon-type="text" data-link-icon-color="#1b61b1"><code>randomForest</code></a> 训练分类随机森林，得到：</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>               Type of random forest<span class="sc">:</span> classification</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                     Number of trees<span class="sc">:</span> <span class="dv">500</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>No. of variables tried at each split<span class="sc">:</span> <span class="dv">2</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        OOB estimate of  error rate<span class="sc">:</span> <span class="fl">31.71</span>%</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>Confusion matrix<span class="sc">:</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>      <span class="cn">FALSE</span> <span class="cn">TRUE</span> class.error</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="cn">FALSE</span>   <span class="dv">216</span>   <span class="dv">11</span>     <span class="fl">0.04846</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span>    <span class="dv">100</span>   <span class="dv">23</span>     <span class="fl">0.81301</span></span></code></pre></div>
+<p>把它和逻辑回归相比，逻辑回归将 <code>shutdown-odds&gt;1</code> 定义为关闭概率更高，再与真实标签比对（逻辑回归并不使用<a href="https://en.wikipedia.org/wiki/%E4%B8%A5%E6%A0%BC%E8%AF%84%E5%88%86%E8%A7%84%E5%88%99" id="_DfcIb5ZM" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E4%B8%A5%E6%A0%BC%E8%AF%84%E5%88%86%E8%A7%84%E5%88%99#bodyContent">严格评分规则</a>），得到 base-rate 为 65%，逻辑回归约 68%，随机森林也接近 68%。这两个结果不算差，因为我没有把寿命（<code>Days</code>）纳入分类器；一旦考虑寿命有更多信息。综合看并未比逻辑回归更复杂更好。</p>
+<section id="随机生存森林" class="level4">
+<h4><a href="#随机生存森林" title="Link to section: § &#39;随机生存森林&#39;">随机生存森林</a></h4>
+<p>下一步自然是把寿命与生存曲线也纳入。<code>&quot;Random survival forests&quot;</code>（见 <a href="http://arxiv.org/pdf/0811.1645" id="_N3FmeH4w" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b"><span class="cite"><span class="cite-author-plural" title="et al">Ishwaran</span><span class="cite-joiner"> et al </span><span class="cite-date">2008</span></span></a>、<a href="http://www.jstatsoft.org/v50/i11/paper" id="_heDrS2IR" data-link-icon-color="#2874ae"><span class="cite"><span class="cite-author-plural" title="et al">Mogensen</span><span class="cite-joiner"> et al </span><span class="cite-date">2012</span></span></a>）在 <code>randomForestSRC</code> 中实现（成功版）：</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>                         Sample size<span class="sc">:</span> <span class="dv">350</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                    Number of deaths<span class="sc">:</span> <span class="dv">122</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>                     Number of trees<span class="sc">:</span> <span class="dv">1000</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>          Minimum terminal node size<span class="sc">:</span> <span class="dv">3</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>       Average no. of terminal nodes<span class="sc">:</span> <span class="fl">61.05</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>No. of variables tried at each split<span class="sc">:</span> <span class="dv">3</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>              Total no. of variables<span class="sc">:</span> <span class="dv">7</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>                            Analysis<span class="sc">:</span> Random Forests [S]RC</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>                              Family<span class="sc">:</span> surv</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>                      Splitting rule<span class="sc">:</span> logrank <span class="sc">*</span>random<span class="sc">*</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>       Number of random split points<span class="sc">:</span> <span class="dv">1</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>              Estimate of error rate<span class="sc">:</span> <span class="fl">35.37</span>%</span></code></pre></div>
+<p>还得到一张有趣的变量重要性图：</p>
+<figure>
+<p><img alt="随机树对变量重要性的平均贡献" data-aspect-ratio="694 / 393" decoding="async" height="393" id="_Zx-a5Mey" loading="lazy" src="/images/google/rsf-importance.png" width="694"></img></p>
+<figcaption><p>随机树对变量重要性的平均贡献</p></figcaption>
+</figure>
+<p>按同样方法，随机生存森林的错误率为 78%，基于 Cox 的也有 72%；但是 bootstrap 稳健性测试不佳：随机生存森林约 57%–64%（200 次 bootstrap，95%）；Cox 约 68%–73%。这说明随机生存森林或许过拟合/代码实现问题，所以继续采用普通 Cox。</p>
+</section>
+</section>
+</section>
+<section id="预测" class="level2">
+<h2><a href="#预测" title="Link to section: § &#39;预测&#39;">预测</a></h2>
+<p>在给未来做明确预测前，先看那些尚未关闭产品的<a href="https://en.wikipedia.org/wiki/%E7%9B%B8%E5%AF%B9%E9%A3%8E%E9%99%A9" id="_gOJhWwz2" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E7%9B%B8%E5%AF%B9%E9%A3%8E%E9%99%A9#bodyContent">相对风险</a>。Cox 模型中“最危险”的前 10 名是：</p>
+<ol type="1">
+<li><p>Schemer</p></li>
+<li><p>Boutiques</p></li>
+<li><p>Magnifier</p></li>
+<li><p>Hotpot</p></li>
+<li><p>Page Speed Online API</p></li>
+<li><p>WhatsonWhen</p></li>
+<li><p>Unofficial Guides</p></li>
+<li><p>WDYL search engine</p></li>
+<li><p>Cloud Messaging</p></li>
+<li><p>Correlate</p></li>
+</ol>
+<p>这些都算比较合理（尽管我很喜欢 Correlate，因为它让“相关≠因果”可视化得更容易，见 <a href="http://slatestarcodex.com/2013/02/16/google-correlate-does-not-imply-google-causation/" id="_ZlmH2SVA" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">slatestarcodex 文章</a>；我惊讶它或 Boutiques 还没死）。反向，风险最低的 10 个（风险按升序）是：</p>
+<ol type="1">
+<li><p>Search</p></li>
+<li><p>Translate</p></li>
+<li><p>AdWords</p></li>
+<li><p>Picasa</p></li>
+<li><p>Groups</p></li>
+<li><p>Image Search</p></li>
+<li><p>News</p></li>
+<li><p>Books</p></li>
+<li><p>Toolbar</p></li>
+<li><p>AdSense</p></li>
+</ol>
+<p>旗舰产品（Search、Books）几乎不可能关闭，这部分结果很合理；Picasa、Toolbar 因其老旧、被忽视、前 <span class="date-range">2005<sub><span title="2005 was 21 years ago.">21ya</span></sub></span> 产生且主要依赖广告，我对“它们不太会死”仍持保留态度，但模型给出这样结论可解释。继续看更多：对仍存活服务，我进一步算了若干样本在接下来 5 年存活的概率（将各自协变量代入，曲线明显不同）：</p>
+<figure>
+<p><img alt="15 个代表产品的预估生存曲线（AdSense、Scholar、Voice 等）" data-aspect-ratio="333 / 221" decoding="async" height="442" id="_R0PtZx9J" loading="lazy" src="/images/google/15-predicted-survivorship-curves.png" width="666"></img></p>
+<figcaption><p>15 个代表产品的预估生存曲线（AdSense、Scholar、Voice 等）</p></figcaption>
+</figure>
+<p>这些是以“从 0 日起、同质化人群”设定的曲线。若假设该产品已活到今天该如何估计？这需要把生存曲线“向当前条件反推”，过程较绕；我导出了 5 年存活预测值，并附上主观判断作对照（我在<a href="Prediction%20markets" id="_Gxczt6R3">预测市场</a>里并不差）：</p>
+<table>
+<thead>
+<tr class="header">
+<th><p>产品 5</p></th>
+<th style="text-align: left;"><p>年生存率</p></th>
+<th style="text-align: center;"><p>个人预测 相对</p></th>
+<th style="text-align: left;"><p>风险（越低越好）</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>AdSense</p></td>
+<td style="text-align: left;"><p>100%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17897" id="_I7XpK5Vr" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">99%</a></p></td>
+<td style="text-align: left;"><p>0.07</p></td>
+</tr>
+<tr class="even">
+<td><p>Alerts</p></td>
+<td style="text-align: left;"><p>89%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17898" id="_6Lr3HumZ" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">70%</a></p></td>
+<td style="text-align: left;"><p>0.21</p></td>
+</tr>
+<tr class="odd">
+<td><p>Analytics</p></td>
+<td style="text-align: left;"><p>76%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17899" id="_sdvKRXzJ" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">97%</a></p></td>
+<td style="text-align: left;"><p>0.24</p></td>
+</tr>
+<tr class="even">
+<td><p>Blogger</p></td>
+<td style="text-align: left;"><p>100%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17900" id="_3Oda28N3" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">80%</a></p></td>
+<td style="text-align: left;"><p>0.32</p></td>
+</tr>
+<tr class="odd">
+<td><p>Calendar</p></td>
+<td style="text-align: left;"><p>66%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17901" id="_s_JbhP9Z" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">95%</a></p></td>
+<td style="text-align: left;"><p>0.36</p></td>
+</tr>
+<tr class="even">
+<td><p>Docs</p></td>
+<td style="text-align: left;"><p>63%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17902" id="_ZW7zl91R" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">95%</a></p></td>
+<td style="text-align: left;"><p>0.39</p></td>
+</tr>
+<tr class="odd">
+<td><p>FeedBurner</p></td>
+<td style="text-align: left;"><p>43%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17903" id="_lN9n4oW9" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">35%</a></p></td>
+<td style="text-align: left;"><p>0.66</p></td>
+</tr>
+<tr class="even">
+<td><p>Gmail</p></td>
+<td style="text-align: left;"><p>96%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17904" id="_A8FMrEZc" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">99%</a></p></td>
+<td style="text-align: left;"><p>0.08</p></td>
+</tr>
+<tr class="odd">
+<td><p>Google+</p></td>
+<td style="text-align: left;"><p>79%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17905" id="_27HmQlM-" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">85%</a></p></td>
+<td style="text-align: left;"><p>0.36</p></td>
+</tr>
+<tr class="even">
+<td><p>Scholar</p></td>
+<td style="text-align: left;"><p>92%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17906" id="_JnNjPEMC" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">85%</a></p></td>
+<td style="text-align: left;"><p>0.10</p></td>
+</tr>
+<tr class="odd">
+<td><p>Voice<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a></p></td>
+<td style="text-align: left;"><p>44%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17907" id="_7HGACSja" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">50%</a></p></td>
+<td style="text-align: left;"><p>0.78</p></td>
+</tr>
+<tr class="even">
+<td><p>Chrome</p></td>
+<td style="text-align: left;"><p>70%</p></td>
+<td style="text-align: center;"><p>[95%][C]</p></td>
+<td style="text-align: left;"><p>0.24</p></td>
+</tr>
+<tr class="odd">
+<td><p>Project Glass</p></td>
+<td style="text-align: left;"><p>37%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17911" id="_LCckuDfu" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">50%</a></p></td>
+<td style="text-align: left;"><p>0.10</p></td>
+</tr>
+<tr class="even">
+<td><p>Search</p></td>
+<td style="text-align: left;"><p>96%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17912" id="_90SBBt6t" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">100%</a></p></td>
+<td style="text-align: left;"><p>0.05</p></td>
+</tr>
+<tr class="odd">
+<td><p>Translate</p></td>
+<td style="text-align: left;"><p>92%</p></td>
+<td style="text-align: center;"><p><a href="http://predictionbook.com/predictions/17913" id="_T4tezeRs" data-link-icon="?" data-link-icon-type="text,sans,bold" data-link-icon-color="#695173">95%</a></p></td>
+<td style="text-align: left;"><p>0.78</p></td>
+</tr>
+</tbody>
+</table>
+<p>一眼可见，一些模型估计与我们对 Google 的理解不符。</p>
+<p>我对被忽略的 [Google Alerts] 更悲观；而对 Analytics、Calendar、Docs 被认为有风险，我认为这明显过度，毕竟 Analytics 是广告基础设施核心，Calendar 是企业套件中的基石。Project Glass 的预测也值得关注：Google 知名度和推力度都极高，是否真如此危险？我不能完全认同。历史上不少技术潮汐来去匆匆，硬件尤其脆弱、贴身产品更看重体验（Glass 可能是 Apple 的大卖款式，但 Google 能否做到？），而 Google Glass 已遭到不少公开批评，尤其是 <a href="https://en.wikipedia.org/wiki/Steve_Mann" id="_KP0A7y-S" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Steve_Mann#bodyContent">Steve Mann</a> 这位长期头戴显示器研究者在 <a href="http://spectrum.ieee.org/geek-life/profiles/steve-mann-my-augmediated-life" id="_dPLE94l9" data-link-icon="IEEE" data-link-icon-type="text,mono,quad" data-link-icon-color="#006699">这篇文章</a> 对其指出过“与业界领先方案不一致”“设计决策可能让用户难以使用”“糟糕版本会带来视疲劳，甚至损伤视力”等。</p>
+<p>另一些估计更能接受——Google 在社交工具上的口碑确实差，所以对 Google+ 的风险偏悲观合理。FeedBurner 或 Voice 亦如此，我也同意前景偏暗。Blogger 在模型中的非常乐观结论反而有意思：我起初认为它会慢慢衰退，但研究发现它反而拿到了某些被关停服务的迁移入口（如 Scribe、Friend Connect），还是 Google+ 时代的 Dynamic Views 转型起点之一，并且官方公告仍大量使用 Blogger 平台，因此我对它保持更高信心。</p>
+<p>整体看来，这些估计整体仍可接受。</p>
+</section>
+</section>
+<section id="后续" class="level1">
+<h1><a href="#后续" title="Link to section: § &#39;后续&#39;">后续</a></h1>
+<blockquote>
+<p>那些不死去的人是怎样的存在——<br />
+死亡向所有人一视同仁。<br />
+我想起一个高大的身影，<br />
+他如今化作尘土。<br />
+这幽暗世界里不见晨曦，<br />
+即便尘外有新一季的繁茂；<br />
+凡涉足这哀伤之地，<br />
+松风便以悲痛将其终结。<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a></p>
+</blockquote>
+<p>也许值得继续维护数据库并在五年后（2018）做一次复盘。到那时我们可检验预测准确性，也会因为 <span class="date-range" title="The date range 2011–2012 lasted 1 year, ending 14 years ago.">2011–2012<sub><span title="2011 was 15 years ago.">14ya</span></sub></span> 年 30+ 个样本被关闭，生存曲线和协变量估计将更清晰。为此我曾做过更新跟踪，建立了两类 Google Alerts 搜索：</p>
+<ul>
+<li><p><code>google (&quot;shut down&quot; OR &quot;shut down&quot; &quot;shutting&quot; OR &quot;closing&quot; OR &quot;killing&quot; OR &quot;abandoning&quot; OR &quot;leaving&quot;)</code></p></li>
+<li><p><code>google (launch OR release OR announce)</code></p></li>
+<li><p>并订阅了 Google Operating System 博客</p></li>
+</ul>
+<p>这些源头在此后一年内给了我约 64 个候选项；<span class="date-range">2014<sub><span title="2014 was 12 years ago.">12ya</span></sub></span> 年 6 月 4 日后我停止继续添加。</p>
+</section>
+<section id="参见" class="level1">
+<h1><a href="#参见" title="Link to section: § &#39;参见&#39;">参见</a></h1>
+<ul>
+<li><p><a href="https://gwern.net/archiving" id="gwern-archiving" class="link-live link-modified-recently link-page" title="&#39;Archiving URLs&#39;, Gwern 2011">Archiving URLs</a></p></li>
+<li><p><a href="hpmor#survival-analysis" id="_GkLZ8THI">survival analysis of <em>MoR</em> readers</a></p></li>
+<li><p><a href="https://gwern.net/wikipedia-and-knol" id="gwern-wikipedia-and-knol" class="link-live link-page">Wikipedia and Knol</a></p></li>
+</ul>
+</section>
+<section id="外部链接" class="level1">
+<h1><a href="#外部链接" title="Link to section: § &#39;外部链接&#39;">外部链接</a></h1>
+<ul>
+<li><p><a href="https://en.wikipedia.org/wiki/Archive_Team" id="__OpBk7Iz" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Archive_Team#bodyContent">Archive Team</a>（<a href="http://www.archiveteam.org/index.php?title=ArchiveTeam_Warrior" id="_K8rZO33J">ArchiveTeam Warrior</a>: <a href="http://www.archiveteam.org/index.php?title=Google_Reader" id="_bTPZIdiE">Reader</a>)</p></li>
+<li><p>讨论串：</p>
+<ul>
+<li><p><a href="https://news.ycombinator.com/item?id=5653748" id="_OpY3SS33" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">Hacker News</a></p></li>
+<li><p><a href="http://www.metafilter.com/127712/In-a-few-cases-the-start-dates-are-wellinformed-guesses" id="_i__VlM0f" data-link-icon="MF" data-link-icon-type="text,sans,italic" data-link-icon-color="#065a8f">Metafilter</a></p></li>
+</ul></li>
+<li><p>媒体评论：</p>
+<ul>
+<li><p><a href="http://arstechnica.com/business/2013/05/google-services-survive-if-they-make-money-arent-social/" id="_jVNQvinj" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4"><em>Ars Technica</em></a>（含<a href="http://arstechnica.com/business/2013/05/google-services-survive-if-they-make-money-arent-social/?comments=1" id="_2paHVfzX" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">评论</a>）</p></li>
+<li><p><a href="http://www.theatlantic.com/technology/archive/2013/05/interesting-software-follow-up-scrivener-googles-orphans/275563/" id="_B_TuH4HR" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4"><em>The Atlantic</em> 的《有趣的软件追更：Scrivener》</a></p></li>
+<li><p><em>Forbes</em>：</p>
+<ul>
+<li><p><a href="http://www.forbes.com/sites/haydnshaughnessy/2013/05/08/what-is-driving-the-google-stock-price-up/" id="_sLpX4SEU" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">“Google 股价上涨背后在驱动什么？”</a></p></li>
+<li><p><a href="http://www.forbes.com/sites/haydnshaughnessy/2013/05/09/google-glass-has-only-a-37-chance-of-going-five-years-lessons/" id="_BUfiwkKS" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">“Google Glass—它能存活多久？”</a></p></li>
+</ul></li>
+<li><p><a href="http://bgr.com/2013/05/07/google-services-shut-down-study/" id="_H5wkG33b" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4"><em>Boy Genius Report</em></a></p></li>
+</ul></li>
+<li><p>并购背景：</p>
+<ul>
+<li><p><a href="http://paulgraham.com/yahoo.html" id="_HuUEYq6S" data-link-icon="pg" data-link-icon-type="text,mono" data-link-icon-color="#666699">“What Happened to Yahoo”</a>，Paul Graham</p></li>
+<li><p>37signals 的 <a href="http://www.google.com/search?q=%22Exit+Interview%22&amp;sitesearch=37signals.com/svn/posts/" id="_WhQdE84p" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">“Exit Interview” 系列</a></p>
+<ol type="1">
+<li><p><a href="http://37signals.com/svn/posts/2883-exit-interview-jaikus-jyri-engestrm" id="_crqJS5Wk">Jaiku 的退出访谈</a></p></li>
+<li><p><a href="http://37signals.com/svn/posts/2942-exit-interview-founders-look-back-at-acquisitions-by-google-aol-microsoft-and-more" id="_Lmm3zHRO" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">AOL/JD: Founders look back at acquisitions by Google, AOL, Microsoft, and more</a></p></li>
+<li><p><a href="http://37signals.com/svn/posts/2806-exit-interview-ask-jeeves-acquisition-of-bloglines" id="_-z5rKdCh">Ask Jeeves 被 Google 收购后的退出访谈</a></p></li>
+<li><p><a href="http://37signals.com/svn/posts/2777-what-happens-after-yahoo-acquires-you" id="_0OoDghxf">被 Yahoo 收购后的去向</a></p></li>
+</ol></li>
+</ul></li>
+</ul>
+<p><!--
+如何处理更新？我打算把它们都放在这里。思路是新增一个协变量，区分“企业向”“消费向”还是“两者兼有”。并补充新数据。
+
+"Product","Dead","Started","Ended","Hits","Type","Profit","FLOSS","Acquisition","Social"
+"Inactive Account Manager",FALSE,2013-04-11,NA,175000,service,FALSE,FALSE,FALSE,FALSE
+"Affiliate Network",TRUE,2007-04-13,2013-04-16,3480000,service,TRUE,FALSE,TRUE,FALSE http://googleaffiliatenetwork-blog.blogspot.in/2013/04/an-update-on-google-affiliate-network.html
+Behavio's FunF http://www.sfgate.com/technology/businessinsider/article/Google-Just-Bought-A-Cool-SXSW-Startup-Behavio-4430716.php supposedly Google will continue it but it may be killed too quickly to count for this list
+"AdWords Pay Per Action",TRUE,2007-03-20,2008-08-31,144000,service,TRUE,FALSE,TRUE,FALSE
+"AdSense Referrals",TRUE,2007-04-05,2008-08-31,25000,service,TRUE,FALSE,FALSE,FALSE
+"Quick View in Search",TRUE,2009-10-07,2013-04-24,2460000,service,FALSE,FALSE,FALSE,FALSE http://googleblog.blogspot.com/2009/10/quickly-view-formatted-pdfs-in-your.html http://googlesystem.blogspot.com/2013/04/no-more-quick-view-in-google-search.html exact search query: "google search" "quick view"
+WhatsonWhen: dead? site down after January 2013, but no apparent announcements. "google whatsonwhen " 48,400 results
+Free Zone: http://www.nation.lk/edition/biz-news/item/17466-dialog-axiata-and-google-launch-free-zone.html 'google "free zone"' 3,030,000 results
+Meebo Bar: http://www.pcmag.com/article2/0,2817,2418268,00.asp 'google "meebo bar"' 160,000 results killed 6 June 2013 http://gigaom.com/2013/06/06/a-year-after-google-acquistion-meebo-bar-will-discontinue-as-team-settles-in-with-google/ social acquisition ad-supported
+'paid channels'? http://www.wired.com/gadgetlab/2013/05/youtube-adds-paid-channel-subscriptions/ http://youtube-global.blogspot.com/2013/05/yt-pc-2013.html
+SMS down 9 May 2013:  http://productforums.google.com/forum/#!msg/websearch/yKG7BGro7QQ/ntAXQWWKj70J https://news.ycombinator.com/item?id=5695086 "google sms" 579,000 other results.
+Scratchpad free program non-social non-acquisition non-floss  "google scratchpad" 965 results  dead 2 November 2012 http://www.omgchrome.com/google-stopping-development-of-scratchpad-web-app/ general description: https://support.google.com/chrome_webstore/answer/183097?hl=en merged into Keep? "* * Scratchpad is moving to Google Keep. * * If you have unsynced Scratchpad notes, please open the app and follow instructions to save your notes. You can add Google Keep here:  https://chrome.google.com/webstore/detail/google-keep/hmjkmjkepdijhoojdojkdfohbdgmmhki" when was it launched? best guess, January 2011 http://voices.yahoo.com/scratchpad-notepad-application-google-chrome-7581750.html?cat=15
+Cloud Messaging for Chrome http://developer.chrome.com/apps/cloudMessaging.html "service",FALSE,FALSE,FALSE,FALSE launch: 10 May 2013 search 'Google "Cloud Messaging for Chrome"' 23,300 results
+Google Play Music 15 05 2013 paid service non-acquisition non-FLOSS social? ("You can share songs on your google+") '"google play music"' About 37,300,000 results (0.46 seconds)
+google Music: was actually dead 19 October 2012! http://www.reuters.com/article/2012/09/21/net-us-google-china-music-idUSBRE88K07120120921
+Google+ Games, launched 11 08 2011 http://googleblog.blogspot.com/2011/08/games-in-google-fun-that-fits-your.html Dead, 30 June 2013 https://support.google.com/plus/answer/3123176?p=plus_games&rd=1 non-FLOSS, non-acquisition profit social, '"google+ games"' 142000 hits
+Checkout Gadget: dead, see http://googlecommerce.blogspot.com/2013/05/an-update-to-google-checkout-for.html https://support.google.com/checkout/sell/answer/3080449
+is checkout proper dead?
+"On November 20th, 2013, Google will shut down its Checkout product. Here's how this may affect you:
+
+    Merchants selling digital goods may transition to Google Wallet for digital goods
+    Merchants selling through Google-hosted marketplaces (e.g. Google Play) will be unaffected
+    Merchants selling physical goods will need to switch to third-party alternatives (see below)"
+https://news.ycombinator.com/item?id=5740447 (also https://news.ycombinator.com/item?id=6579812 / https://news.ycombinator.com/item?id=6581906 )
+"> 'Wait, so what's the difference between this and Google Wallet?' With Checkout, Google is a credit card processor. With Wallet, Google isn't a credit card processor, they are partnered with Bankcorp Bank who is issuing virtual cards which are funded either by transferring funds from the users bank account or by charging credit cards."
+
+04:57:29 < quanticle> gwern: When you get this, would you mind giving me your opinion on the continued long-term viability of Google Tasks? My prediction is that it won't last much longer; it seems to be a massively underdeveloped part of GMail/Google Calendar, and the task-list/to-do-list market is fiercely competitive.
+05:11:25 < harrow> old Closure Library codebase, guy who wrote it quit, no tie-in with G+
+Tasks LIVE, service non-profit non-social non-acquisition '"Google Tasks"' 641000 hits launched: 8 December 2008 http://gmailblog.blogspot.com/2008/12/new-in-labs-tasks.html
+http://googlesystem.blogspot.com/2013/06/googles-caldav-and-carddav-apis-for.html CalDav API given a reprieve?
+what happened to Waze? http://www.globes.co.il/serveen/globes/docview.asp?did=1000850934&fid=1725 apparently decided to keep Waze app running, so it enters the listings: http://www.wired.com/gadgetlab/2013/06/google-waze-acquisition/ http://googleblog.blogspot.com/2013/06/google-maps-and-waze-outsmarting.html
+also check these: "Google acquired personalized Website gadget developer Labpixies for $25 million and interactive video-clip developer Quiksee for $10 million. Both acquisitions were in 2010.
+google Chrome Frame https://en.wikipedia.org/wiki/Google_Chrome_Frame "chrome frame" 2,830,000 "google chrome frame" 28,200,000 plugin "According to Alex Russell - who came to Google specifically to start the Chrome Frame project - the plug-in will officially be retired early in 2014, and the company is beginning to warn the consumers and businesses who use the tool. "We've gotten to the point now where the trend lines indicate the need for Chrome Frame is going to expire early next year, so we're giving consumers and enterprises a lot of heads up that Chrome Frame is going to be going away," he says." http://www.wired.com/wiredenterprise/2013/06/chrome-frame-ends/ http://www.techrepublic.com/blog/google-in-the-enterprise/google-chrome-frame-is-leaving-the-picture/ http://blog.chromium.org/2013/06/retiring-chrome-frame.html January 2014
+AdWhirl bought with AdMob, died 30 September 2013 http://vator.tv/news/2013-06-14-google-shutting-down-adwhirl-at-the-end-of-september for profit open-source https://code.google.com/p/adwhirl/ "google adwhirl" 101,000 results
+"Google Mine", Pinterest competitor http://googlesystem.blogspot.com/2013/06/google-mine.html unreleased as of June 21, 2013
+"Google Latitude" dead 9 August 2013; search 'Google Latitude' pulls up 1,150,000 hits on 10 July ANN: https://support.google.com/gmm/answer/3001634 https://plus.google.com/+jlapenna/posts/deBP7kj7rMi
+Google Shopping for Suppliers 'Google "Shopping for Suppliers"' 67,300  11 July 2013; profit www.google.com/shopping/suppliers/‎ started 28 Jan 2013
+Alfred,  dead 19 July 2013, for-profit acquisition (14 December 2011) http://techcrunch.com/2013/07/11/google-will-shut-down-alfred-the-local-recommendations-app-july-19/ http://www.ubergizmo.com/2013/07/google-to-shut-down-alfred-on-july-19th/ http://www.engadget.com/2011/12/14/google-buys-alfred-maker-clever-sense-brings-us-closer-to-perso/ "google alfred"  46,100   17 July 2013
+Chromecast product for-profit non-social? non-FLOSS  341,000,000 hits 'google chromecast' 29 July 2013  http://www.n3rdabl3.co.uk/2013/07/google-announce-chromecast-a-new-way-to-share-on-your-tv/
+Google Shopper: dead. 30 August 2013 http://www.fiercemobilecontent.com/story/google-shopper-price-comparison-app-shutting-down-aug-30/2013-07-29 "google shopper", 297000 hits as of 2 August 2013
+Google Earth Tour Builder  http://googlesystem.blogspot.com/2013/08/google-earth-tour-builder.html https://tourbuilder.withgoogle.com/about/faq About 28,500 results (0.33 seconds) as of 1 September 2013
+`google "tour builder"` About 24,800 results (19 September 2013) non-profit software FLOSS https://code.google.com/p/tour-builder/
+Google Lime Scholarship 'google lime scholarship' About 1,030,000 results (0.23 seconds) (19 September 2013) started 15 April 2009 http://googleforstudents.blogspot.com/2011/04/2011-google-lime-scholars-announced.html http://googleforstudents.blogspot.com/2012/03/announcing-2012-google-lime-scholars.html  http://google.about.com/b/2009/04/15/google-lime-scholarship.htm http://www.limeconnect.com/opportunities/page/google-lime-scholarship-program http://www.google.com/edu/students/scholarships.html
+Course Builder non-profit FLOSS https://code.google.com/p/course-builder/ program 11 September 2012 '"google course builder"' About 264,000 results  (19 September 2013) (sunsetted by Open edX)
+Open edX 10 September 2013;  '"Open edX"' About 18,900 results (19 September 2013) http://googleresearch.blogspot.com/2013/09/we-are-joining-open-edx-platform.html FLOSS? program? service?
+Bump start: 17 September 2013; acquisition: http://www.iol.co.za/scitech/technology/business/google-buys-bump-app-1.1578671 http://techcrunch.com/2013/09/16/bump-mobile-contact-sharing-app-acquired-by-google-will-stay-alive-for-now/ application non-profit non-FLOSS '"google bump"' About 116,000 results Dead: 31 January 2014 http://blog.bu.mp/post/71781606704/all-good-things http://www.hngn.com/articles/20977/20140102/google-shutting-down-bump-flock-apps-end-january.htm
+Flock start: 17 September 2013; acquisition: http://www.iol.co.za/scitech/technology/business/google-buys-bump-app-1.1578671 http://techcrunch.com/2013/09/16/bump-mobile-contact-sharing-app-acquired-by-google-will-stay-alive-for-now/ application non-profit non-FLOSS 'google flock' About 34,200,000 results Dead: 31 January 2014
+Google Web Designer: 30 September 2013 ' 1,790,000 results ' "google web designer"' https://news.ycombinator.com/item?id=6470426 for-profit program non-FLOSS (see https://support.google.com/webdesigner/answer/3413931?hl=en ) non-acquisition
+Google Shopping Express: 25 September 2013 service for-profit non-acquisition non-floss http://www.siliconbeat.com/2013/09/25/public-launch-of-google-shopping-express-a-challenge-to-amazon-ebay/  '"google shopping express"' 1,480,000 results  (1 October 2013)
+Flutter https://flutterapp.com/home/ http://arstechnica.com/gadgets/2013/10/hands-on-with-googles-latest-acquisition-flutter-a-webcam-gesture-app/ 2 October 2013  "Flutter users will be able to continue to use the app, and stay tuned for future updates." https://flutterapp.com/ closed-source non-profit? flutter,  18,800,000;  '"google flutter"'  3,980
+Google Tag Manager alive released Oct 1, 2012; http://www.google.com/tagmanager/ for-profit service non-acquisition  262,000 results  'google "tag manager"' 10 October 2013
+Google TV killed? '"google tv"' 7,860,000 17 Oct 2013 http://www.hngn.com/articles/14778/20131013/google-tv-shuts-down-three-years-shifting-focus-android.htm http://gigaom.com/2013/10/10/google-tv-rebranded-android-tv/
+Google WiFi Passport http://googlesystem.blogspot.com/2013/10/google-wifi-passport.html launched 16 October 2013 http://arstechnica.com/civis/viewtopic.php?f=9&t=1221867 for-profit service non-floss  'google "wifi passport"' 26 October 2013 1,090 results
+'google helpouts' 4 November 2013 http://blogs.wsj.com/digits/2013/11/04/google-to-launch-helpouts-on-monday/ service, for-profit non-acquisition '"google helpouts"' 140,000 results
+Ingress 14 December 2013 http://venturebeat.com/2013/11/04/googles-niantic-labs-to-formally-launch-massive-ingress-augmented-reality-game-on-dec-14/ application closed-source for-profit (sponsorship)
+Google Trader: dead 10 December 2013, google.com.ng; '"Google Trader"' 14 Nov 2013: 101k results http://niyitabiti.net/2013/11/google-trader-nigeria-shut-down-website/
+"Offer Extensions"  22 Feb 2013; 14 Nov 2013: 'google "Offer Extensions"' 35.6k hits dead 1 November 2013 http://searchengineland.com/adwords-offer-extensions-get-shut-down-in-favor-of-google-offers-176566
+Google Newsstand http://www.pcmag.com/article2/0,2817,2427413,00.asp http://play.google.com/about/newsstand/ Android app 20 Nov 2013 '"Google Newsstand"' 71500 for-profit closed-source
+Google Partners 28 November 2013 '"Google Partners"' 289k 3 December 2013;  http://articles.timesofindia.indiatimes.com/2013-11-28/services-apps/44545708_1_google-india-google-partners-agencies https://www.google.com/partners/ http://www.zdnet.com/in/launch-of-google-partners-to-help-smes-in-india-7000023740/ organization, for-profit
+Android Gallery, dead Dec 2013? http://www.androidcentral.com/stock-android-gallery-app-no-more-new-google-play-edition-devices http://www.techhive.com/article/2079353/google-is-killing-the-android-gallery-app-so-that-google-plus-may-live.html 'google "android gallery"' 13 Dec 2013 516,000 results
+Open Gallery, 10 December 2013 https://twitter.com/digitalfay/status/410361346522611712 http://www.google.com/opengallery https://support.google.com/opengallery/ closed-source service non-profit 'google "open gallery"' 1,110,000 17 Dec 2013
+LiquidFun 11 December 2013 FLOSS software non-profit http://google-opensource.blogspot.ca/2013/12/liquidfun-rigid-body-physics-library.html http://www.i-programmer.info/news/144-graphics-and-games/6711-googles-liquidfun-for-fluid-simulation-.html http://google.github.io/liquidfun/ https://github.com/google/liquidfun  'google liquidfun' 14 Dec 2013 174000 results
+Google+ Auto Backup ios/android application closed-source non-profit start: 24 June 2013? http://www.vlogg.com/10149/how-to-disable-auto-backup-of-photos-in-android/ https://support.google.com/plus/answer/1647509?hl=en http://www.techrepublic.com/blog/google-in-the-enterprise/quick-tip-back-up-your-photos-to-google-plus/ http://googlesystem.blogspot.com/2013/12/google-auto-backup-for-desktop.html http://www.gplusexpertise.com/2013/12/google-photos-auto-backup-now-in-picasa.html 'Google+ Auto Backup' 8,830,000 results  28 Dec 2013
+7 February 2014 Schemer http://googlesystem.blogspot.com/2013/12/schemer-to-be-discontinued.html to be shut down in 2014? confirmed: "All your schemes are available for download until February 7, 2014, after which all data will be permanently deleted." https://plus.google.com/+Schemer/posts/AhXkhvzRtek
+Google Talk Windows client? http://www.tbreak.ae/news/google-killing-google-talk-windows-client "Connections from the Google Talk client to Google Talk will continue to operate for the first two months of 2014. Users may continue to see the deprecation warning in the client during this time. After this period has elapsed the client will be unable to connect to the Google Talk service."
+Timely 2014-01-04 closed-source application Bitspin acquisition non-profit (since Google made the paid Android Timely app free) http://www.bitspin.ch/google http://www.pcworld.com/article/2084140/google-makes-timely-buy-of-swiss-app-maker.html "For new and existing users, Timely will continue to work as it always has." '"google timely"' 2014-01-08: 25,400 results
+Nest: "Nest Learning Thermostat", "Protect"  13 January 2013 https://investor.google.com/releases/2014/0113.html http://techcrunch.com/2014/01/13/google-just-bought-connected-device-company-nest-for-3-2b-in-cash/ https://nest.com/blog/2014/01/13/nest-google-and-you/ acquisition thing for-profit "google nest"  'About 87,300,000 results (0.42 seconds) '
+Google Currents: dead 19 February 2014 http://www.androidpolice.com/2014/02/19/google-currents-is-officially-dead-with-latest-update-transitions-users-to-play-newsstand-and-disappears-for-good/
+Wildfire 31 July 2012 http://wildfireapp.blogspot.com/2012/07/wildfire-is-joining-google.html acquisition social for-profit Maintenance stops 1 September 2014 "A source tells us that Wildfire has begun contacting its clients — which have included Cisco, Amazon, DQ, Gap, Jamba Juice, and McCann — to tell them that their business would no longer be serviced after the end of 2015."; shutdown: http://wildfireapp.blogspot.com/2014/03/accelerating-our-wildfire-integration.html
+Know Your Candidate http://www.google.co.in/elections/ed/in/districts http://www.businessinsider.in/Indian-Election-Fever-Has-Hit-Google-As-They-Launch-KnowYour-Candidate-Tool/articleshow/33444019.cms 8 April 2014 website nonprofit non-FLOSS 'google "know your candidate"' 25 April 2014: 2,190,000 results
+TODO: Hangout, Photo
+6 May 2014 http://www.digitaljournal.com/pr/1903697 for-profit acquisition service https://www.google.com/search?num=100&q=google%20ezanga 14 May 2014 '34,400 results'
+Google Zavers http://www.google.com/get/zavers/ coupon business for-profit acquisition service launched January 2013 death leaked 2 June 2014 http://recode.net/2014/06/02/google-will-kill-off-its-digital-coupon-business-zavers/ 'google zavers' 5 June 2014:  1,540 hits ('zavers': 51,500)
+followup window closed 4 June 2014: no more new entries unless they came into existence before then! too much work
+--></p>
+</section>
+<section id="附录" class="level1">
+<h1><a href="#附录" title="Link to section: § &#39;附录&#39;">附录</a></h1>
+<section id="源代码" class="level2">
+<h2><a href="#源代码" title="Link to section: § &#39;源代码&#39;">源代码</a></h2>
+<p>运行命令：<code>R --slave --file=google.r</code>:</p>
+<p>~~~{.R} set.seed(7777) # for reproducible numbers</p>
+<p>library(survival) library(randomForest) library(boot) library(randomForestSRC) library(prodlim) # for ‘sindex’ call library(rms)</p>
+</section>
+</section>
+<section id="generate-google-corpus-model-for-use-in-main-analysis" class="level1">
+<h1><a href="#generate-google-corpus-model-for-use-in-main-analysis" title="Link to section: § &#39;Generate Google corpus model for use in main analysis&#39;">Generate Google Corpus Model for Use in Main Analysis</a></h1>
+</section>
+<section id="load-the-data-fit-and-plot" class="level1">
+<h1><a href="#load-the-data-fit-and-plot" title="Link to section: § &#39;Load the data, fit, and plot:&#39;">Load the Data, Fit, and Plot:</a></h1>
+<p>index &lt;- read.csv(“http://www.gwern.net/docs/2013-google-index.csv”, colClasses=c(“Date”,“double”,“character”)) # an exponential doesn’t fit too badly: model1 &lt;- lm(log(Size) ~ Date, data=index); summary(model1) # plot logged size data and the fit: png(file=“~/wiki/images/google/www-index-model.png”, width = 3<em>480, height = 1</em>480) plot(log(index<span class="math inline">\(Size) ~ index\)</span>Date, ylab=“WWW index size”, xlab=“Date”) abline(model1) invisible(dev.off())</p>
+</section>
+<section id="begin-actual-data-analysis" class="level1">
+<h1><a href="#begin-actual-data-analysis" title="Link to section: § &#39;Begin actual data analysis&#39;">Begin Actual Data Analysis</a></h1>
+<p>google &lt;- read.csv(“http://www.gwern.net/docs/2013-google.csv”, colClasses=c(“character”,“logical”,“Date”,“Date”,“double”,“factor”, “logical”,“logical”,“logical”,“logical”, “integer”, “numeric”, “numeric”, “numeric”, “logical”, “numeric”, “numeric”, “numeric”, “numeric”)) # google<span class="math inline">\(Days &lt;- as.integer(google\)</span>Ended - google<span class="math inline">\(Started) # derive all the Google index-variables ## hits per day to the present # google\)</span>AvgHits &lt;- google<span class="math inline">\(Hits / as.integer(as.Date(&quot;2013-04-01&quot;) - google\)</span>Started) ## divide total hits for each product by total estimated size of Google index when that product started # google<span class="math inline">\(DeflatedHits &lt;- log(google\)</span>Hits / exp(predict(model1, newdata=data.frame(Date = google<span class="math inline">\(Started)))) ## Finally, let&#39;s combine the two strategies: deflate and then average. # google\)</span>AvgDeflatedHits &lt;- log(google<span class="math inline">\(AvgHits) / google\)</span>DeflatedHits # google<span class="math inline">\(DeflatedHits &lt;- log(google\)</span>DeflatedHits)</p>
+<p>cat(“of data:”) print(summary(google[-1]))</p>
+<p>dead &lt;- google[google$Dead,]</p>
+<p>png(file=“~/wiki/images/google/openedvslifespan.png”, width = 1.5<em>480, height = 1</em>480) plot(dead<span class="math inline">\(Days ~ dead\)</span>Ended, xlab=“Shutdown”, ylab=“Total lifespan”) invisible(dev.off())</p>
+<p>png(file=“~/wiki/images/google/shutdownsbyyear.png”, width = 1.5<em>480, height = 1</em>480) hist(dead<span class="math inline">\(Ended, breaks=seq.Date(as.Date(&quot;2005-01-01&quot;), as.Date(&quot;2014-01-01&quot;), &quot;years&quot;),  main=&quot;shutdowns per year&quot;, xlab=&quot;Year&quot;) invisible(dev.off()) png(file=&quot;~/wiki/images/google/shutdownsbyyear-kernel.png&quot;, width = 1*480, height = 1*480) plot(density(as.numeric(dead\)</span>Ended)), main=“Shutdown kernel density over time”) invisible(dev.off()) ***</p>
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr></hr>
+<ol>
+<li id="fn1"><p>Google Reader 在透明度上有很多问题，最明显是 Google 是否愿意持续支持 Reader（对用户很关键，也对依赖 Reader 的第三方服务和应用尤其重要）；摘自 BuzzFeed 的《<a href="http://www.buzzfeed.com/robf4/googles-lost-social-network" id="_Fwo_YPSr" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Google’s Lost Social Network: How Google accidentally built a truly beloved social network, only to steamroll it with Google+. The sad, surprising story of Google Reader</a>》：</p>
+<blockquote>
+<p>困难在于，Reader 的用户虽然与产品高度互动，但从未成长为数以千万计的规模。Brian Shih 在 <span class="date-range">2008<sub><span title="2008 was 18 years ago.">18ya</span></sub></span> 年秋季成了 Reader 的产品经理：“如果 Reader 是一款独立创业公司，按 Google 的逻辑它很值得收购。我们是 Google 员工时把它放进 Google 家庭，按规模看它小到不值得持续投资。” 他回忆道：有一段时间，工程师被抽离去做 OpenSocial，一个“半成品”开发平台，后来也没能成形。Shih 说，内部一直在争论是否要继续给这个小项目留人力。某时在 Reader 办公室挂过一块牌子：<br />
+“自上次停摆警告以来的天数”。数字几乎总是 0。与此同时，虽然绝对用户规模相比 Gmail 的几亿仍然很小，但在 Shih 任内用户增长还翻倍了。然而，Bellotta 说“上级”看重的是绝对用户数而非饱和度，所以 Reader 一直在“切割线”上打转。</p>
+<p>当消息传开，Shih 形容像海明威那句“先慢后快”：慢慢来，接着突然结束。到了春天他确认，Reader 的内部分享体系——非对称关注模型、内建评论与点赞机制、进阶隐私设置——都会被 Google+ 取代。而且他被明文禁止向用户解释这些变化。</p>
+</blockquote>
+<p><a href="http://www.marco.org/2013/07/03/lockdown" id="_M6QO5bBW" title="Lockdown">Marco Arment</a> 写道：“我从多个来源听到，它实际上长期运作时几乎是‘0 人状态’。”<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Shih 在 Quora 里又写道：<a href="https://www.quora.com/Google-Reader-Shut-Down-March-2013/Why-is-Google-killing-Google-Reader" id="_a79QeNVC" data-link-icon="Q" data-link-icon-type="text" data-link-icon-color="#b92b27">Why is Google killing Google Reader?</a>:</p>
+<blockquote>
+<p>要明确的是这跟收入和运营成本无关。Reader 并没直接变现（尽管 Feedburner 与 AdSense for Feeds 的使用可能算贡献），也不是“产品目标”的主要内容。Reader 在 Google 内部争取认可和生存很久了，比我做 PM 时早得多。我几乎可以确认，在它真正死亡前至少被威胁削减/撤资三次，而且每次都与“社交”有关：</p>
+<ul>
+<li><p>2008：把团队抽调去做 OpenSocial</p></li>
+<li><p>2009：把团队抽调去做 Buzz</p></li>
+<li><p>2010：把团队抽调去做 Google+</p></li>
+</ul>
+<p>结果是它 <span class="date-range">2010<sub><span title="2010 was 16 years ago.">16ya</span></sub></span> 年仍被砍掉，尽管多数工程师并不想转去 G+。我想 Google 之所以总是挪走 Reader 团队，是因为这支团队真正理解“社交”——他们多年来做了许多实验，后来都反馈到公司更大的社交架构里（见 Reader 的好友实现 v1、v2、v3、评论、隐私控制与分享功能；现在这些都没了）。Reader 的社交功能大多是围绕用户自然需求演化，而非像公司内部其他项目那样自上而下拍板设计。<a href="http://www.buzzfeed.com/robf4/googles-lost-social-network" id="_Fwo_YPSr" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Rob Fishman 的 BuzzFeed 文章对这一点有较好梳理：Google’s Lost Social Network</a>。我猜它得以存活一段时间，是因为公司仍希望从中为 Google+ 提供内容。Reader 用户常年大量消费内容并过滤、分享。然而在把分享能力转给 G+、并重构 UI 后，使用率开始下降，尤其是分享环节。我在重构后基本停止分享（参见<a href="http://www.brianshih.com/post/30194495552/reader-redesign-terrible-decision-or-worst-decision" id="_45zQmc6q">这篇 Reader 重构评论</a>——那时我比现在更生气，现在只是遗憾）。虽然 Google 最后修复了大量 UI 问题，分享能力（因此到 G+ 的内容流）却再也没恢复。所以在持续投入变为维护状态、价值递减、再加上 Google 近几年“聚焦”战略的压力下，收掉它几乎是必然。</p>
+</blockquote>
+<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn3"><p>另一个 Googler 的“关闭前兆”故事也得到印证： <a href="http://gigaom.com/2013/03/13/chris-wetherll-google-reader/" id="_AUZZUI7q" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">“Google Reader lived on borrowed time: creator Chris Wetherell reflects”</a>:</p>
+<blockquote>
+<p>“当他们把 Reader 的分享功能替换成 +1 时，就已经明摆着这一天会到来，”他写道。Wetherell 43 岁，惊讶 Reader 能活这么久。项目刚成立不久就不确定是否上线时，Google 高层就已经犹豫；甚至在项目刚起步前，管理层就曾威胁如果持续延期就取消它。“我们在一开始就有一块牌子写着‘<em>到上次取消已有多久</em>’，一直贴着。”他接着补充，这说明 Google 从未真正相信这个项目。Reader 诞生于 <span class="date-range">2005<sub><span title="2005 was 21 years ago.">21ya</span></sub></span> 年，那个时期正是 RSS、博客系统和新内容生态的黄金时代；当时的“巨头”是 <a href="https://en.wikipedia.org/wiki/Bloglines" id="_AV3TZ2hm" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bloglines#bodyContent">Bloglines</a>（后来被 Ask.com 收购），而 Reader 只是后来居上者之一。</p>
+</blockquote>
+<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn4"><p>官方声明称关闭是因为使用量太少，但第三方质疑这个说法：Reader 看起来驱动了比 Google+ 更多流量；Google+ 上线初期已有 <a href="http://allthingsd.com/20130324/another-reason-google-reader-died-increased-concern-about-privacy-and-compliance/" id="_lSqSsY3G" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">200 万名同时拥有 Reader 账号的用户</a>。仅替代方案 Feedly 在宣布关闭消息后新增了超过 <a href="http://blog.feedly.com/2013/04/02/announcing-the-new-feedly-mobile-and-welcoming-3-million-reader-refugees/" id="_Jvoe0UQR">300 万账号</a>（有时被说到 400 万），而且围绕该事件的最大公开请愿也收到了 <a href="https://www.change.org/petitions/google-keep-google-reader-running" id="_BiKGPKVV" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">14.8 万签名</a>。比较 Android 客户端超 100 万次下载量，Reader 的流量至少更高。鉴于少数用户会专门去 Feedly、签请愿、访问 BuzzFeed 或相关应用，我倾向认为其关闭时活跃用户更接近 <span class="date-range">2000<sub><span title="2000 was 26 years ago.">26ya</span></sub></span> 万而非 200 万。有一位 Google 工程师在 <span class="date-range">2010<sub><span title="2010 was 16 years ago.">16ya</span></sub></span> 年被引用为说过 Reader 月活可达“数千万”。<a href="http://www.forbes.com/sites/alexkantrowitz/2013/07/01/google-reader-founder-i-never-would-have-founded-reader-inside-todays-google/" id="_oyw1-p5K" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">前 Googler Jenna Bilotta</a><span>（<span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年 11 月离开 Google： </span><a href="http://www.thepinkestblack.com/2011/11/all-good-things.html" id="_24b6tAuX">The Pinkest Black</a>）回应道：</p>
+<blockquote>
+<p>“我认为大家为 Reader 叫嚣是因为它真的‘粘住’了用户，”她说，“所以大家对 Google 关停这样受欢迎的产品很吃惊。至少在我离开前，数字还在持续增长。”</p>
+</blockquote>
+<p>到 <span class="date-range">2013<sub><span title="2013 was 13 years ago.">13ya</span></sub></span> 年 3 月 Reader 中最热门的 feed 有 <a href="http://googlesystem.blogspot.com/2013/03/google-reader-data-points.html" id="_UQ9zssRg" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">2430 万订阅者</a>（基于<a href="http://googlereader.blogspot.com/2013/03/welcome-and-look-back.html" id="_D20Kwg6u" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">官方用户量曲线</a>和一张<a href="http://blogoscoped.com/forum/108194.html" id="_Mym6x5dE">被泄露视频</a><span>推算，Reader 全部用户在 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年 1 月或许已到 3600 万）。Jason Scott 在 <span class="date-range">2009<sub><span title="2009 was 17 years ago.">17ya</span></sub></span> 年也提醒了这一点：从历史上看，企业会雇人不断告诉你“公司很稳健”，直到这些人自己也被裁掉，因为公司倒闭了。</span><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>这对 <a href="https://en.wikipedia.org/wiki/Archive_Team" id="__OpBk7Iz" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Archive_Team#bodyContent">Archive Team</a> 的 <a href="http://ascii.textfiles.com/archives/1717" id="_Dg20Ryiu" data-link-icon="ASCI" data-link-icon-type="text,quad,mono" data-link-icon-color="#006309" title="FUCK THE CLOUD - January 16, 2009">Jason</a> 和 <a href="http://ascii.textfiles.com/archives/2229" id="_F5_e6ulh" data-link-icon="ASCI" data-link-icon-type="text,quad,mono" data-link-icon-color="#006309" title="Oh Boy, The Cloud - October 5, 2009">Scott</a> 来说也不是什么新奇话题；但 <a href="http://www.theatlantic.com/technology/archive/2013/03/finale-for-now-on-googles-self-inflicted-trust-problem/274286/" id="_5pua_lKZ" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4" title="Finale for Now on Google&#39;s Self-Inflicted Trust Problem">James Fallows</a> 指出，当一个云端服务消失，它就是彻底消失，这个对比很有意思：</p>
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Kevin_Drum" id="_1irBy7dk" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Kevin_Drum#bodyContent">Kevin Drum</a> 在 <em>Mother Jones</em> 的文章《<a href="http://www.motherjones.com/kevin-drum/2013/03/problem-google-and-cloud" id="_RNdPQZGI" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">Google 与云端的问题</a>》中写到，无法像以前那样依赖 Google 服务往往比传统的“本地程序被抛弃”更具破坏性。我的例子是 <a href="https://en.wikipedia.org/wiki/Lotus_Agenda" id="_kpOcbp9V" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Lotus_Agenda#bodyContent">Lotus Agenda</a>，它官方已经死掉近 20 年，但我现在还是能用（如果愿意，在 Mac 的 VMware Fusion Windows 虚拟机里开 DOS 会话——这就叫分层遗产）。当一个云服务像 Google Reader 那样消失时，它就是真的消失；你不能像处理本地“孤儿”软件那样保留一份旧版可用文件继续用。</p>
+</blockquote>
+<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn6"><p>来自 Gannes 的文章 <a href="http://allthingsd.com/20130324/another-reason-google-reader-died-increased-concern-about-privacy-and-compliance/" id="_lSqSsY3G" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">“Another Reason Google Reader Died: Increased Concern About Privacy and Compliance”</a></p>
+<blockquote>
+<p>但与此同时，Google Reader 与 Google Apps 的整合非常深入，Google 并不能像去年把 SketchUp 三维建模软件那样把它剥离并出售。</p>
+</blockquote>
+<p><a href="https://news.ycombinator.com/item?id=5373584" id="_71pqy5g6" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">mattbarrie</a> 在 <a href="https://en.wikipedia.org/wiki/Hacker_News" id="_NNioUzwg" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hacker_News#bodyContent">Hacker News</a> 上写道：</p>
+<blockquote>
+<p>我和在澳大利亚负责工程的 Alan Noble 谈过。Reader 项目我见过他负责直到大约 18 个月前。团队曾考虑过开源，但因为与 Google 基础设施绑定太紧而不现实。事实上它主要是由于长期使用量下滑才被砍掉的。</p>
+</blockquote>
+<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn7"><p>一些 Google 服务的规模和主导地位引发了与[自然垄断]相关的比较，例如《经济学人》专栏 <a href="http://www.economist.com/blogs/freeexchange/2013/03/utilities" id="_oWTV_bec" data-link-icon="E" data-link-icon-type="text,sans" data-link-icon-color="#e3120b">“Google 的 Google 问题”</a>。我看到这类比较时常被嘲讽，但值得注意的是至少已有 Googler 早年提出同样观点。来自 <a href="https://en.wikipedia.org/wiki/Steven_Levy" id="_dzDs5PK9" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Steven_Levy#bodyContent">Levy</a> 的 <em><a href="https://en.wikipedia.org/wiki/In_the_Plex" id="_6Msg4XZI" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/In_the_Plex#bodyContent">In the Plex</a></em> <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 中第 7 章第 2 节写到：</p>
+<blockquote>
+<p>一些 Googler 觉得自己被过度关注，遭受不公；但更审慎的人理解，这是 Google 持续增长的自然后果，尤其是在分发和存储海量信息方面。“这就像 Google 掌控了美国整个供水系统，”Mike Jones 说过，他当时负责 Google 一些政策问题，“社会让我们受点压力是公平的，以确保我们做得对。”</p>
+</blockquote>
+<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn8"><p><a href="http://www.blackcatpoems.com/t/the_mystic.html" id="_RgsL9JbB">“The Mystic”</a>, <em>Poems, Chiefly Lyrical</em>; <a href="https://en.wikipedia.org/wiki/Alfred,_Lord_Tennyson" id="_lJhlPrXS" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Alfred,_Lord_Tennyson#bodyContent">Lord Alfred Tennyson</a><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p> <a href="https://en.wikipedia.org/wiki/Yamabe_no_Akahito" id="_oTWosmRH" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Yamabe_no_Akahito#bodyContent">Yamabe no Akahito</a>, <a href="http://en.wikipedia.org/wiki/Man%27y%C5%8Dsh%C5%AB" id="_i7zekhZZ" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="http://en.m.wikipedia.org/wiki/Man%27y%C5%8Dsh%C5%AB#bodyContent"><em>万叶集</em></a> <a href="http://www.temcauley.staff.shef.ac.uk/waka0088.shtml" id="_GX_ztf8w">VIII: 1426</a><a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>有人辩解 Reader 关闭是理性的——Reader 没有直接盈利、Google 不是慈善机构。更可能的解释是 Google 对它始终兴趣不足；如果 Google 能盈利 Gmail，理论上也应能盈利 Reader，这在两位曾参与其中的 Googler 看法中更明确（见《Google Reader lived on borrowed time: creator Chris Wetherell reflects》）：</p>
+<blockquote>
+<p>我在想，Google 与更广泛生态是否错误解读了信号？更广泛的人群是否真看到的是 RSS/阅读器市场，而真实可盈利市场其实是“数据与情绪分析”？Wetherell 认可我的猜测。<br />
+“阅读器市场并未走出试验阶段，也没人持续迭代商业模式”，他说。“变现能力从未真正被测试过。”</p>
+<p>“我们积累了大量数据，也知道用户对内容的偏好程度，因此我们一直觉得它有变现潜力。” Dick Costolo（当时在 Google 工作，且售出了 Feedburner）当时想了很多变现思路，却都被忽视。Costolo 现在在 Twitter 上抓住“关系与上下文”信号，成效显著。Wetherell 在他的 <span class="date-range">2011<sub><span title="2011 was 15 years ago.">15ya</span></sub></span> 年博客《<a href="http://massless.org/?p=174" id="_2lvxDcfD">Dreams, discernment, and Google Reader</a>》里写道：</p>
+<blockquote>
+<p><strong><em>Reader 为内容生产者与消费者关系提供了我见过最好的“无偿表达》模型</em></strong>。你为 HBO 付费，就给出了非常明确的信号；在免费消费模式中 Reader 更像梦想：它让消费者免费获得“偏好信号”——也就是明确可计量的货币价值；并追踪用户跨源消费序列，同时把内容快速分发给目标受众，不会引入社交负罪感或博弈化机制；再加上通过常见 Web 技术搭建的可扩展平台，这对有视觉的产品负责人来说都很有吸引力。<strong><em>Reader（曾经）属于“信息猎人”而非“技术极客”</em></strong>。这种市场客观存在，但长期被供给不足，而且可能买单能力很强。</p>
+</blockquote>
+</blockquote>
+<p>就 PR 角度看，Google 也许更好的路线是将 Reader 转成订阅制，再逐步“以订阅不足为由”停掉。映入眼帘的三个费用上调案例是 Maps API、通话（最初免费）和 App Engine 费用；据我所知 Maps API 的调价后来被取消，后两者几乎无人记得（连 App Engine 开发者都不太记得）。<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p><a href="https://en.wikipedia.org/wiki/Mark_Pilgrim" id="_alingFEk" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Mark_Pilgrim#bodyContent">Mark Pilgrim</a>, <a href="http://web.archive.org/web/20110726001925/http://diveintomark.org/archives/2004/05/14/freedom-0" id="_N2jhCO2a" data-link-icon="internet-archive" data-link-icon-type="svg">“Freedom 0”</a><a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p> <a href="https://en.wikipedia.org/wiki/Hanshan_(poet)" id="_yB5O8aZa" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hanshan_(poet)#bodyContent">Han-Shan</a>; #18 in <a href="http://www.amazon.com/Collected-Mountain-Mandarin-Chinese-English/dp/1556591403/" id="_cAwVC0zx" data-link-icon="amazon" data-link-icon-type="svg" data-link-icon-color="#ffce53"><em>The Collected Songs of Cold Mountain</em></a>, Red <span class="cite"><span class="cite-author">Pine</span><span class="cite-date">2000</span></span>, ISBN 1-55659-140-3<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p><a href="https://en.wikipedia.org/wiki/Julius_Caesar_(play)" id="_g7Nv4AtB" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Julius_Caesar_(play)#bodyContent"><em>Google Reader</em></a> Act 1, scene 2, 15-19; with apologies.<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p>Xoogler <a href="http://rachelbythebay.com/" id="_VXFMNDex">Rachel Kroll</a> 在 <a href="https://news.ycombinator.com/item?id=5653934" id="_go4j1LkF" data-link-icon="hacker-news" data-link-icon-type="svg" data-link-icon-color="#f26522">这一峰值上的看法</a>：</p>
+<blockquote>
+<p>我对死亡日期这件事有些想法。</p>
+<p>九月：所有实习生都回学校了。这些位于系统边缘的人往往能做大量工作，可能因为他们没背负正式员工的各种行政负担。实习生离开后，轮到 FTE（全职员工）承担已建成项目的所有权，并不总是可行。能留住更多实习生是我的愿望吧。</p>
+<p>三月/四月：季度奖金期？那以前也常是这样。我本人 5 月离职也并非偶然。关键在于：人走了，相关计划也随之夭折。</p>
+</blockquote>
+<a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn15"><p>我保留 Voice 在列表中，即便我自己不使用，也未必不值得关注；因为关于 Voice 前景的<a href="http://www.wired.com/gadgetlab/2013/04/google-voice-future-uncertain/" id="_nEPfTkXH" data-link-icon="alphabet" data-link-icon-type="svg" data-link-icon-color="#4285f4">猜测</a>很多，而且我收到过人要求对其未来<a href="http://lesswrong.com/r/discussion/lw/h3w/open_thread_april_115_2013/8p2q" id="_VGXt2hxX">给出预测</a>的请求。<a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn16"><p><a href="https://en.wikipedia.org/wiki/Hanshan_(poet)" id="_yB5O8aZa" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hanshan_(poet)#bodyContent">韩山</a>, #50<a href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+
+      
+      <noscript><div id="noscript-warning-footer" class="admonition error" title="Warning to NoScript Users"><div class="admonition-title"><p>[<strong>Error</strong>: JavaScript disabled.]</p></div> <p>[Backlinks, similar links, and the bibliography require JS enabled to load.]</p></div></noscript>
+      
+      
+      
+      
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+    <!-- Footer (no SSI): injected by Hakyll from static/include/footer.html -->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction"></use></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center"></use></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction"></use></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Mako Shan">[ Send Anonymous Feedback ]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Mako Shan homepage" class="footer-logo dark-mode-invert" href="/index.html">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

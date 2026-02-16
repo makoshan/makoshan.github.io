@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inlined head (no SSI): injected by Hakyll from static/include/inlined-head.html -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #aaa;
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popins-popin-box-shadow-color: #aaa;
+
+    --GW-popins-popin-title-bar-background-color: #fff;
+    --GW-popins-popin-title-bar-button-color: #777;
+
+    --GW-popins-popin-scrollbar-thumb-color: #ccc;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #999;
+
+    --GW-popins-popin-stack-counter-text-color: #fff;
+    --GW-popins-popin-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #ccc;
+	--GW-back-to-top-link-hover-color: #999;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #7c7c7c;
+    --GW-popins-popin-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popins-popin-box-shadow-color: #7c7c7c;
+
+    --GW-popins-popin-title-bar-background-color: #000;
+    --GW-popins-popin-title-bar-button-color: #a6a6a6;
+
+    --GW-popins-popin-scrollbar-thumb-color: #5c5c5c;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popins-popin-stack-counter-text-color: #000;
+    --GW-popins-popin-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #5c5c5c;
+	--GW-back-to-top-link-hover-color: #8b8b8b;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popins-popin-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+div.poem span.caesura-mark {
+	opacity: 0.3;
+}
+@media all and (max-width: 649px) {
+	div.poem span.caesura-mark {
+		opacity: 0.4;
+	}
+}
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1770514858">
+<script src="/static/js/head.js?v=1770514858"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1768170615" as="image">
+
+
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="重新排序媒体评分 (Resorting Media Ratings)">
+  <meta name="citation_title" content="重新排序媒体评分 (Resorting Media Ratings)">
+  <meta name="og:title" content="重新排序媒体评分 (Resorting Media Ratings)">
+  <meta name="twitter:title" content="重新排序媒体评分 (Resorting Media Ratings)">
+<meta name="generator" content="https://github.com/makoshan/makoshan.github.io/">
+<meta name="creator" content="Mako Shan">
+  
+  <meta name="author" content="Mako Shan">
+  <meta name="citation_author" content="Mako Shan">
+  
+  <meta name="contact" content="/me#contact">
+  <link rel="index" title="Mako Shan homepage" href="/index.html">
+  <link href="https://v2eth.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Mako Shan newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="makoshan">
+  <meta name="twitter:site" content="makoshan.github.io">
+  <meta name="og:site" content="makoshan.github.io">
+  <meta name="og:type" content="article">
+  <meta name="description" content="提供交互式统计成对排名和项目排序的命令行工具">
+  <meta name="og:description" content="提供交互式统计成对排名和项目排序的命令行工具">
+  <meta property="og:image" content="https://makoshan.github.io/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail: site logo.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content="">
+  <meta name="keywords" content="cs/algorithm/sorting, reinforcement/learning/model, statistics/bayes, statistics/order/comparison">
+  <meta name="dc.date.issued" content="2015-09-07">
+  
+  <meta name="citation_publication_date" content="2015-09-07">
+  <meta name="dcterms.modified" content="2018-08-15">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://makoshan.github.io/resorter/index.html">
+  <meta name="citation_fulltext_html_url" content="https://makoshan.github.io/resorter/index.html">
+  <meta name="og:url" content="https://makoshan.github.io/resorter/index.html">
+  <link rel="alternate" type="text/markdown" href="https://makoshan.github.io/resorter/index.html.md" title="Markdown source of ‘重新排序媒体评分 (Resorting Media Ratings)’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-resorter dropcaps-yinit">
+  <meta name="citation_fulltext_world_readable" content="">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>重新排序媒体评分 (Resorting Media Ratings) · Mako Shan</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+
+  <!-- CSS for JS-disabled users: ensure that NoScripters know what they are missing even if they jump to a section & miss the warning at top/bottom. -->
+  <noscript>
+    <style>
+      #markdownBody #noscript-warning-header {
+          position: fixed; /* sticky */
+          top: 6px; /* at top */
+          width: 58%;
+          z-index: 99; /* Make sure it is on top */
+          background-color: #f8f8f8; /* Set a solid background color so legible while positioned over text */
+          border-color: var(--GW-abstract-border-color); /* Make look like theme-toggle/admonitions a bit more */
+          border-width: 6px 6px 6px 6px;
+          border-style: double;
+      }
+      #markdownBody #noscript-warning-header p { margin: 10px; }
+      nav#navbar { padding-top: 160px; } /* avoid overlap with page header */
+    </style>
+  </noscript>
+</head>
+
+<body class="page-resorter dropcaps-yinit">
+  <!-- Inlined asset links (no SSI): injected by Hakyll from static/include/inlined-asset-links.html -->
+  <link rel="stylesheet" href="/static/css/style.css?v=1770491984" media="print" onload="this.media=`all`">
+<script src="/static/js/script.js?v=1770491982" defer></script>
+
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <!-- Navbar (no SSI): injected by Hakyll from static/include/navbar.html -->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index.html" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewbox="0 0 64 75">
+      <use href="/static/img/logo/logo-smooth.svg#logo"></use></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about.html" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="design link-page link-annotated" href="/design.html" title="Design and implementation notes">Design</a>
+        <a class="new link-page link-annotated" href="/changelog.html" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page link-annotated" href="/blog/index.html" title="Blog index: short posts">Blog</a>
+        <a class="links link-page" href="/Links.html" title="Links page">Links</a>
+        <a class="patreon" href="https://www.patreon.com/makoshan" title="Link to Patreon donation profile to support my writing" rel="me">Patreon</a>
+        <a class="mail" href="https://v2eth.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+
+    <article>
+
+      <header>
+        <h1>重新排序媒体评分 (Resorting Media Ratings)</h1>
+      </header>
+
+      
+      <div class="markdownBody" id="page-metadata">
+         <div class="link-tags">
+<p><a href="/doc/cs/algorithm/sorting/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to cs/algorithm/sorting tag index">sorting</a>, <a href="/doc/reinforcement/learning/model/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to reinforcement/learning/model tag index">reinforcement/learning/model</a>, <a href="/doc/statistics/bayes/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to statistics/bayes tag index">Bayes</a>, <a href="/doc/statistics/order/comparison/index" class="link-tag link-page link-annotated icon-not" rel="tag" title="Link to statistics/order/comparison tag index">statistical comparison</a></p>
+</div> 
+        <div class="page-description"><p>提供交互式统计成对排名和项目排序的命令行工具</p></div>
+        <div class="page-metadata-fields">
+            
+            <span class="page-date-range">2015-09-07–2018-08-15</span>
+            <span class="page-status" title="Writing status of current page: ranges 'abandoned'/'notes'/'draft'/'in progress'/'finished'"><em><span class="completion-status" data-progress-percentage="100">finished</span></em></span>
+            <span class="page-confidence"><a href="/about.html#confidence-tags" title="Explanation of 'confidence' metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: 'certain'/'highly likely'/'likely'/'possible'/'unlikely'/'highly unlikely'/'remote'/'impossible')">certainty</a>: <em><span class="completion-status" data-progress-percentage="67">likely</span></em></span>
+            <span class="page-importance"><a href="/about.html#importance-tags" title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>3</em></span>
+            
+            
+            
+        </div>
+      </div>
+      
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#使用-use" id="toc-使用-use">使用 (Use)</a></li>
+<li><a href="#源代码-source-code" id="toc-源代码-source-code">源代码 (Source Code)</a></li>
+<li><a href="#背景-background" id="toc-背景-background">背景 (Background)</a>
+<ul>
+<li><a href="#评分膨胀-rating-inflation" id="toc-评分膨胀-rating-inflation">评分膨胀 (Rating Inflation)</a></li>
+<li><a href="#评分-应该-是什么分布" id="toc-评分-应该-是什么分布">评分 <em>应该</em> 是什么分布？</a></li>
+<li><a href="#重新缩放-rescaling" id="toc-重新缩放-rescaling">重新缩放 (Rescaling)</a>
+<ul>
+<li><a href="#通过排序进行交互式排名-interactive-ranking-through-sorting" id="toc-通过排序进行交互式排名-interactive-ranking-through-sorting">通过排序进行交互式排名 (Interactive Ranking Through Sorting)</a></li>
+<li><a href="#噪声排序-noisy-sorting" id="toc-噪声排序-noisy-sorting">噪声排序 (Noisy Sorting)</a></li>
+</ul></li>
+<li><a href="#实现-implementation" id="toc-实现-implementation">实现 (Implementation)</a>
+<ul>
+<li><a href="#为什么不是贝叶斯-why-not-bayes" id="toc-为什么不是贝叶斯-why-not-bayes">为什么不是贝叶斯？ (Why Not Bayes?)</a>
+<ul>
+<li><a href="#贝叶斯改进-bayesian-improvements" id="toc-贝叶斯改进-bayesian-improvements">贝叶斯改进 (Bayesian Improvements)</a></li>
+<li><a href="#最优探索-optimal-exploration" id="toc-最优探索-optimal-exploration">最优探索 (Optimal Exploration)</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#另请参阅-see-also" id="toc-另请参阅-see-also">另请参阅 (See Also)</a></li>
+<li><a href="#外部链接-external-links" id="toc-外部链接-external-links">外部链接 (External Links)</a></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><div class="abstract">
+<blockquote>
+<p>用户创建的基于序数尺度（如媒体评分）的数据集往往会向极端漂移或“结块”，且无法尽可能多地提供信息，容易受天花板效应的影响，难以区分平庸与优秀。</p>
+<p>这可以通过重新评估数据集来建立均匀（因此也是信息丰富的）评分分布来抵消——但这种人工重新评估是困难的。</p>
+<p>我提供了一个随时的 CLI 程序 <code>resorter</code>，用 R 编写（应该是跨平台的，但只在 Linux 上测试过），它跟踪比较，假设它们在类似于 ELO 的 <a href="https://en.wikipedia.org/wiki/Bradley-Terry_%E6%A8%A1%E5%9E%8B" id="_GCmvrDAl" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bradley-Terry_%E6%A8%A1%E5%9E%8B#bodyContent">Bradley-Terry 模型</a> 中存在噪声，从而推断潜在的评分，并以交互方式智能地向用户查询当前评分最不确定的媒体的比较，直到用户结束会话并输出一组完全重新调整的评分。</p>
+</blockquote>
+</div>
+<p><strong>Resorter</strong> 读取一个 CSV 文件，其中包含名称（可选的第二列评分），然后，通过一系列选项，将询问用户具体的比较，直到用户认为排名可能足够准确（与标准比较排序不同，比较允许有噪声！），并退出交互式会话，此时推断出潜在的排名，并打印或写出一组均匀分布的重新排名的评分。</p>
+<section id="使用-use" class="level1">
+<h1><a href="#使用-use" title="Link to section: § &#39;使用 (Use)&#39;">使用 (Use)</a></h1>
+<p class="dropcap-yinit"><span class="dropcap">可</span>用功能：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode Bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./resorter <span class="at">--help</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># usage: resorter [--help] [--verbose] [--no-scale] [--no-progress] [--opts OPTS] [--input INPUT] [--output OUTPUT] [--queries QUERIES]</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#                 [--levels LEVELS] [--quantiles QUANTILES]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># sort a list using comparative rankings under the Bradley-Terry statistical model; see https://gwern.net/resorter</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># flags:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   -h, --help            show this help message and exit</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   -v, --verbose         whether to print out intermediate statistics</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#   --no-scale           Do not discretize/bucket the final estimated latent ratings into 1-l levels/ratings; print out inferred latent scores.</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">#   --no-progress         Do not print out mean standard error of items</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># optional arguments:</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   -x, --opts OPTS           RDS file containing argument values</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">#   -i, --input INPUT         input file: a CSV file of items to sort: one per line, with up to two columns. (eg. both &#39;Akira\n&#39; and &#39;Akira, 10\n&#39; are valid).</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   -o, --output OUTPUT           output file: a file to write the final results to. Default: printing to stdout.</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#   -n, --queries QUERIES         Maximum number of questions to ask the user; if already rated, 𝒪(items) is a good max, but the more items and more levels in</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#                                 the scale, the more comparisons are needed. [default: 2147483647]</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">#   -l, --levels LEVELS            The highest level; rated items will be discretized into 1-l levels, so l=5 means items are bucketed into 5 levels: [1,2,3,4,5],</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">#                                  etc. [default: 5]</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">#   -q, --quantiles QUANTILES         What fraction to allocate to each level; space-separated; overrides `--levels`. This allows making one level of ratings</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">#                                     narrower (and more precise) than the others, at their expense; for example, one could make 3-star ratings rarer with quantiles</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">#                                      like `--quantiles &#39;0 0.25 0.8 1&#39;`. Default: uniform distribution (1--5 → &#39;0.0 0.2 0.4 0.6 0.8 1.0&#39;).</span></span></code></pre></div>
+<p>下面是一个示例，演示如何使用 <code>resorter</code> 让用户进行 10 次比较，将分数重新调整为 1–3 的评分（其中 3 是罕见的），并将新的排名写入文件：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode Bash collapse"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat anime.txt</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Cowboy Bebop&quot;, 10</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Monster&quot;, 10</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Neon Genesis Evangelion: The End of Evangelion&quot;, 10</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Gankutsuou&quot;, 10</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Serial Experiments Lain&quot;, 10</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Perfect Blue&quot;, 10</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Jin-Rou&quot;, 10</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Death Note&quot;, 10</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Last Exile&quot;, 9</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Fullmetal Alchemist&quot;, 9</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Gunslinger Girl&quot;, 9</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;RahXephon&quot;, 9</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Trigun&quot;, 9</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Fruits Basket&quot;, 9</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;FLCL&quot;, 9</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Witch Hunter Robin&quot;, 7</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;.hack//Sign&quot;, 7</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Chobits&quot;, 7</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Full Metal Panic!&quot;, 7</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Mobile Suit Gundam Wing&quot;, 7</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;El Hazard: The Wanderers&quot;, 7</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Mai-HiME&quot;, 6</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Kimi ga Nozomu Eien&quot;, 6</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./resorter.R <span class="at">--input</span> anime.txt <span class="at">--output</span> new-ratings.txt <span class="at">--queries</span> 10 <span class="at">--quantiles</span> <span class="st">&#39;0 0.33 0.9 1&#39;</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparison commands: 1=yes, 2=tied, 3=second is better, p=print estimates, s=skip, q=quit</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Mean stderr: 70182  | Do you like &#39;RahXephon&#39; better than &#39;Perfect Blue&#39;? 2</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Mean stderr: 21607  | Do you like &#39;Monster&#39; better than &#39;Death Note&#39;? 1</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Mean stderr: 13106  | Do you like &#39;Kimi ga Nozomu Eien&#39; better than &#39;Gunslinger Girl&#39;? 3</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Mean stderr: 13324  | Do you like &#39;Kimi ga Nozomu Eien&#39; better than &#39;Gankutsuou&#39;? p</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co">#                                           Media         Estimate              SE</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co">#                                        Mai-HiME −2.059917500e+01 18026.307910587</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co">#                             Kimi ga Nozomu Eien −2.059917500e+01 18026.308021536</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co">#                              Witch Hunter Robin −1.884110950e-15     2.828427125</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co">#                                     .hack//Sign −7.973125767e-16     2.000000000</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="co">#                                         Chobits  0.000000000e+00     0.000000000</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="co">#                               Full Metal Panic!  2.873961741e-15     2.000000000</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="co">#                         Mobile Suit Gundam Wing  5.846054261e-15     2.828427125</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="co">#                        El Hazard: The Wanderers  6.694628513e-15     3.464101615</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="co">#                                      Last Exile  1.911401531e+01 18026.308784841</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="co">#                             Fullmetal Alchemist  1.960906858e+01 18026.308743986</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="co">#                                 Gunslinger Girl  2.010412184e+01 18026.308672318</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="co">#                                            FLCL  2.059917511e+01 18026.308236990</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="co">#                                   Fruits Basket  2.059917511e+01 18026.308347939</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="co">#                                       RahXephon  2.059917511e+01 18026.308569837</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="co">#                                          Trigun  2.059917511e+01 18026.308458888</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="co">#                                         Jin-Rou  2.109422837e+01 18026.308740073</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="co">#                                      Death Note  2.109422837e+01 18026.308765943</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="co">#                                    Perfect Blue  2.109422837e+01 18026.308672318</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="co">#                         Serial Experiments Lain  2.158928163e+01 18026.308767629</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="co">#                                      Gankutsuou  2.208433490e+01 18026.308832127</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="co">#  Neon Genesis Evangelion: The End of Evangelion  2.257938816e+01 18026.308865814</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="co">#                                    Cowboy Bebop  2.307444143e+01 18026.308979636</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="co">#                                         Monster  2.307444143e+01 18026.308868687</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Mean stderr: 13324  | Do you like &#39;Monster&#39; better than &#39;Jin-Rou&#39;? s</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Mean stderr: 13324  | Do you like &#39;Last Exile&#39; better than &#39;Death Note&#39;? 3</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Mean stderr: 13362  | Do you like &#39;Mai-HiME&#39; better than &#39;Serial Experiments Lain&#39;? 3</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Mean stderr: 16653  | Do you like &#39;Trigun&#39; better than &#39;Kimi ga Nozomu Eien&#39;? 1</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Mean stderr: 14309  | Do you like &#39;Death Note&#39; better than &#39;Kimi ga Nozomu Eien&#39;? 1</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Mean stderr: 12644  | Do you like &#39;Trigun&#39; better than &#39;Monster&#39;? 3</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat new-ratings.txt</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Media&quot;,&quot;Quantile&quot;</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Cowboy Bebop&quot;,&quot;3&quot;</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Monster&quot;,&quot;3&quot;</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Neon Genesis Evangelion: The End of Evangelion&quot;,&quot;3&quot;</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Death Note&quot;,&quot;2&quot;</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;FLCL&quot;,&quot;2&quot;</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Fruits Basket&quot;,&quot;2&quot;</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Fullmetal Alchemist&quot;,&quot;2&quot;</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Gankutsuou&quot;,&quot;2&quot;</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Gunslinger Girl&quot;,&quot;2&quot;</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Jin-Rou&quot;,&quot;2&quot;</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Last Exile&quot;,&quot;2&quot;</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Perfect Blue&quot;,&quot;2&quot;</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;RahXephon&quot;,&quot;2&quot;</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Serial Experiments Lain&quot;,&quot;2&quot;</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Trigun&quot;,&quot;2&quot;</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Chobits&quot;,&quot;1&quot;</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;El Hazard: The Wanderers&quot;,&quot;1&quot;</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Full Metal Panic!&quot;,&quot;1&quot;</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;.hack//Sign&quot;,&quot;1&quot;</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Kimi ga Nozomu Eien&quot;,&quot;1&quot;</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Mai-HiME&quot;,&quot;1&quot;</span></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Mobile Suit Gundam Wing&quot;,&quot;1&quot;</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;Witch Hunter Robin&quot;,&quot;1&quot;</span></span></code></pre></div>
+</section>
+<section id="源代码-source-code" class="level1">
+<h1><a href="#源代码-source-code" title="Link to section: § &#39;源代码 (Source code)&#39;">源代码 (Source Code)</a></h1>
+<p>此 R 脚本需要 <a href="https://cran.r-project.org/web/packages/BradleyTerry2/index.html" id="_PDHPTs9l" class="link-live" data-link-icon="R" data-link-icon-type="text" data-link-icon-color="#1b61b1">BradleyTerry2</a> 和 <a href="https://bitbucket.org/djhshih/argparser" id="_p_I0_lae">argparser</a> 库可用或可安装。 (<a href="https://github.com/hiAndrewQuinn/resorter" id="_ID9b8ig6" data-link-icon="github" data-link-icon-type="svg">Andrew Quinn 的 Github 版本</a> 可能更容易安装。)</p>
+<div class="admonition warning">
+<div class="admonition-title">
+<p>Dependency Compile Errors: install packages</p>
+</div>
+<p>与任何用户安装的语言一样，您在安装依赖项时可能会遇到编译错误。</p>
+<p>寻找缺失的 C 库作为 root 进行系统范围的安装，或者查看您的包管理器是否已经提供了某个依赖项的预编译二进制文件，这样您就可以 <code>apt-get install r-cran-bradleyterry2</code> 或 <code>apt-get install r-cran-lme4</code> 来绕过任何编译错误。</p>
+</div>
+<p>将其作为脚本保存在您的 <code>$PATH</code> 中的某个位置，命名为 <code>resorter</code>，并使用 <code>chmod +x resorter</code> 使其可执行。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/Rscript</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># attempt to load a library implementing the Bradley-Terry model for inferring rankings based on</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># comparisons; if it doesn&#39;t load, try to install it through R&#39;s in-language package management;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># otherwise, abort and warn the user</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.jstatsoft.org/index.php/jss/article/download/v048i09/601</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>loaded <span class="ot">&lt;-</span> <span class="fu">library</span>(BradleyTerry2, <span class="at">quietly=</span><span class="cn">TRUE</span>, <span class="at">logical.return=</span><span class="cn">TRUE</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span>loaded) { <span class="fu">write</span>(<span class="st">&quot;warning: R library &#39;BradleyTerry2&#39; unavailable; attempting to install locally...&quot;</span>, <span class="fu">stderr</span>())</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>              <span class="fu">install.packages</span>(<span class="st">&quot;BradleyTerry2&quot;</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>              loadedAfterInstall <span class="ot">&lt;-</span> <span class="fu">library</span>(BradleyTerry2, <span class="at">quietly=</span><span class="cn">TRUE</span>, <span class="at">logical.return=</span><span class="cn">TRUE</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>              <span class="cf">if</span>(<span class="sc">!</span>loadedAfterInstall) { <span class="fu">write</span>(<span class="st">&quot;error: &#39;BradleyTerry2&#39; unavailable and cannot be installed. Aborting.&quot;</span>, <span class="fu">stderr</span>()); <span class="fu">quit</span>() }</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># similarly, but for the library to parse command line arguments:</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>loaded <span class="ot">&lt;-</span> <span class="fu">library</span>(argparser, <span class="at">quietly=</span><span class="cn">TRUE</span>, <span class="at">logical.return=</span><span class="cn">TRUE</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span>loaded) { <span class="fu">write</span>(<span class="st">&quot;warning: R library &#39;argparser&#39; unavailable; attempting to install locally...&quot;</span>, <span class="fu">stderr</span>())</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>              <span class="fu">install.packages</span>(<span class="st">&quot;argparser&quot;</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>              loadedAfterInstall <span class="ot">&lt;-</span> <span class="fu">library</span>(argparser, <span class="at">quietly=</span><span class="cn">TRUE</span>, <span class="at">logical.return=</span><span class="cn">TRUE</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>              <span class="cf">if</span>(<span class="sc">!</span>loadedAfterInstall) { <span class="fu">write</span>(<span class="st">&quot;error: &#39;argparser&#39; unavailable and cannot be installed. Aborting.&quot;</span>, <span class="fu">stderr</span>()); <span class="fu">quit</span>() }</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">arg_parser</span>(<span class="st">&quot;sort a list using comparative rankings under the Bradley-Terry statistical model; see https://gwern.net/resorter&quot;</span>, <span class="at">name=</span><span class="st">&quot;resorter&quot;</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">add_argument</span>(p, <span class="st">&quot;--input&quot;</span>, <span class="at">short=</span><span class="st">&quot;-i&quot;</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>                  <span class="st">&quot;input file: a CSV file of items to sort: one per line, with up to two columns. (eg. both &#39;Akira</span><span class="sc">\\</span><span class="st">n&#39; and &#39;Akira, 10</span><span class="sc">\\</span><span class="st">n&#39; are valid).&quot;</span>, <span class="at">type=</span><span class="st">&quot;character&quot;</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">add_argument</span>(p, <span class="st">&quot;--output&quot;</span>, <span class="st">&quot;output file: a file to write the final results to. Default: printing to stdout.&quot;</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">add_argument</span>(p, <span class="st">&quot;--verbose&quot;</span>, <span class="st">&quot;whether to print out intermediate statistics&quot;</span>, <span class="at">flag=</span><span class="cn">TRUE</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">add_argument</span>(p, <span class="st">&quot;--queries&quot;</span>, <span class="at">short=</span><span class="st">&quot;-n&quot;</span>, <span class="at">default=</span><span class="cn">NA</span>,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>                  <span class="st">&quot;Maximum number of questions to ask the user; defaults to N*log(N) comparisons. If already rated, 𝒪(n) is a good max, but the more items and more levels in the scale and more accuracy desired, the more comparisons are needed.&quot;</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">add_argument</span>(p, <span class="st">&quot;--levels&quot;</span>, <span class="at">short=</span><span class="st">&quot;-l&quot;</span>, <span class="at">default=</span><span class="dv">5</span>, <span class="st">&quot;The highest level; rated items will be discretized into 1–l levels, so l=5 means items are bucketed into 5 levels: [1,2,3,4,5], etc. Maps onto quantiles; valid values: 2–100.&quot;</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">add_argument</span>(p, <span class="st">&quot;--quantiles&quot;</span>, <span class="at">short=</span><span class="st">&quot;-q&quot;</span>, <span class="st">&quot;What fraction to allocate to each level; space-separated; overrides `--levels`. This allows making one level of ratings narrower (and more precise) than the others, at their expense; for example, one could make 3-star ratings rarer with quantiles like `--quantiles &#39;0 0.25 0.8 1&#39;`. Default: uniform distribution (1--5 → &#39;0.0 0.2 0.4 0.6 0.8 1.0&#39;).&quot;</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">add_argument</span>(p, <span class="st">&quot;--no-scale&quot;</span>, <span class="at">flag=</span><span class="cn">TRUE</span>, <span class="st">&quot;Do not discretize/bucket the final estimated latent ratings into 1-l levels/ratings; print out inferred latent scores.&quot;</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">add_argument</span>(p, <span class="st">&quot;--progress&quot;</span>, <span class="at">flag=</span><span class="cn">TRUE</span>, <span class="st">&quot;Print out mean standard error of items&quot;</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>argv <span class="ot">&lt;-</span> <span class="fu">parse_args</span>(p)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co"># read in the data from either the specified file or stdin:</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.na</span>(argv<span class="sc">$</span>input)) { ranking <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span>argv<span class="sc">$</span>input, <span class="at">stringsAsFactors=</span><span class="cn">TRUE</span>, <span class="at">header=</span><span class="cn">FALSE</span>); } <span class="cf">else</span> {</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    ranking <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span><span class="fu">file</span>(<span class="st">&#39;stdin&#39;</span>), <span class="at">stringsAsFactors=</span><span class="cn">TRUE</span>, <span class="at">header=</span><span class="cn">FALSE</span>); }</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="co"># turns out noisy sorting is fairly doable in 𝒪(n * log(n)), so do that plus 1 to round up:</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">is.na</span>(argv<span class="sc">$</span>queries)) { n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(ranking)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>                           argv<span class="sc">$</span>queries <span class="ot">&lt;-</span> <span class="fu">round</span>(n <span class="sc">*</span> <span class="fu">log</span>(n) <span class="sc">+</span> <span class="dv">1</span>) }</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="co"># if user did not specify a second column of initial ratings, then put in a default of &#39;1&#39;:</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">ncol</span>(ranking)<span class="sc">==</span><span class="dv">1</span>) { ranking<span class="sc">$</span>Rating <span class="ot">&lt;-</span> <span class="dv">1</span>; }</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(ranking) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Media&quot;</span>, <span class="st">&quot;Rating&quot;</span>)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="co"># A set of ratings like &#39;foo,1\nbar,2&#39; is not comparisons, though. We *could* throw out everything except the &#39;Media&#39; column</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="co"># but we would like to accelerate the interactive querying process by exploiting the valuable data the user has given us.</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="co"># So we &#39;seed&#39; the comparison dataset based on input data: higher rating means +1, lower means −1, same rating == tie (0.5 to both)</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>comparisons <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(<span class="fu">nrow</span>(ranking)<span class="sc">-</span><span class="dv">1</span>)) {</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a> rating1 <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(ranking[i,]<span class="sc">$</span>Rating) <span class="do">## </span><span class="al">HACK</span><span class="do">: crashes on reading its own output due to &quot;?&gt;? not meaningful for factors&quot; if we do not coerce from factor to number?</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a> media1 <span class="ot">&lt;-</span> ranking[i,]<span class="sc">$</span>Media</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a> rating2 <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(ranking[i<span class="sc">+</span><span class="dv">1</span>,]<span class="sc">$</span>Rating)</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a> media2 <span class="ot">&lt;-</span> ranking[i<span class="sc">+</span><span class="dv">1</span>,]<span class="sc">$</span>Media</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span> (rating1 <span class="sc">==</span> rating2)</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>     comparisons <span class="ot">&lt;-</span> <span class="fu">rbind</span>(comparisons, <span class="fu">data.frame</span>(<span class="st">&quot;Media.1&quot;</span><span class="ot">=</span>media1, <span class="st">&quot;Media.2&quot;</span><span class="ot">=</span>media2, <span class="st">&quot;win1&quot;</span><span class="ot">=</span><span class="fl">0.5</span>, <span class="st">&quot;win2&quot;</span><span class="ot">=</span><span class="fl">0.5</span>))</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> { <span class="cf">if</span> (rating1 <span class="sc">&gt;</span> rating2)</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>           {</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>            comparisons <span class="ot">&lt;-</span> <span class="fu">rbind</span>(comparisons, <span class="fu">data.frame</span>(<span class="st">&quot;Media.1&quot;</span><span class="ot">=</span>media1, <span class="st">&quot;Media.2&quot;</span><span class="ot">=</span>media2, <span class="st">&quot;win1&quot;</span><span class="ot">=</span><span class="dv">1</span>, <span class="st">&quot;win2&quot;</span><span class="ot">=</span><span class="dv">0</span>))</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>            } <span class="cf">else</span> {</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>              comparisons <span class="ot">&lt;-</span> <span class="fu">rbind</span>(comparisons, <span class="fu">data.frame</span>(<span class="st">&quot;Media.1&quot;</span><span class="ot">=</span>media1, <span class="st">&quot;Media.2&quot;</span><span class="ot">=</span>media2, <span class="st">&quot;win1&quot;</span><span class="ot">=</span><span class="dv">0</span>, <span class="st">&quot;win2&quot;</span><span class="ot">=</span><span class="dv">1</span>))</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>                   } } }</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a><span class="co"># the use of &#39;0.5&#39; is recommended by the BT2 paper, despite causing quasi-spurious warnings:</span></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; In several of the data examples (eg. `?CEMS`, `?springall`, `?sound.fields`), ties are handled by the crude but</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; simple device of adding half of a &#39;win&#39; to the tally for each player involved; in each of the examples where this</span></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; has been done it is found that the result is similar, after a simple re-scaling, to the more sophisticated</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; analyses that have appeared in the literature. Note that this device when used with `BTm` typically gives rise to</span></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; warnings produced by the back-end glm function, about non-integer &#39;binomial&#39; counts; such warnings are of no</span></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; consequence and can be safely ignored. It is likely that a future version of `BradleyTerry2` will have a more</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; general method for handling ties.</span></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressWarnings</span>(priorRankings <span class="ot">&lt;-</span> <span class="fu">BTm</span>(<span class="fu">cbind</span>(win1, win2), Media<span class="fl">.1</span>, Media<span class="fl">.2</span>, <span class="at">data =</span> comparisons))</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(argv<span class="sc">$</span>verbose) {</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;higher=better:&quot;</span>)</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">summary</span>(priorRankings))</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">sort</span>(<span class="fu">BTabilities</span>(priorRankings)[,<span class="dv">1</span>]))</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2015-09-10</span>)</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Comparison commands: 1=yes, 2=tied, 3=second is better, p=print estimates, s=skip, q=quit</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>argv<span class="sc">$</span>queries) {</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a> <span class="co"># with the current data, calculate and extract the new estimates:</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a> <span class="fu">suppressWarnings</span>(updatedRankings <span class="ot">&lt;-</span> <span class="fu">BTm</span>(<span class="fu">cbind</span>(win1, win2), Media<span class="fl">.1</span>, Media<span class="fl">.2</span>, <span class="at">br=</span><span class="cn">TRUE</span>, <span class="at">data =</span> comparisons))</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a> coefficients <span class="ot">&lt;-</span> <span class="fu">BTabilities</span>(updatedRankings)</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a> <span class="co"># sort by latent variable &#39;ability&#39;:</span></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a> coefficients <span class="ot">&lt;-</span> coefficients[<span class="fu">order</span>(coefficients[,<span class="dv">1</span>]),]</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span>(argv<span class="sc">$</span>verbose) { <span class="fu">print</span>(i); <span class="fu">print</span>(coefficients); }</span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a> <span class="co"># select two media to compare: pick the media with the highest standard error and the media above or below it with the highest standard error:</span></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a> <span class="co"># which is a heuristic for the most informative pairwise comparison. BT2 appears to get caught in some sort of a fixed point with greedy selection,</span></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a> <span class="co"># so every few rounds pick a random starting point:</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a> media1N <span class="ot">&lt;-</span> <span class="cf">if</span> (i <span class="sc">%%</span> <span class="dv">3</span> <span class="sc">==</span> <span class="dv">0</span>) { <span class="fu">which.max</span>(coefficients[,<span class="dv">2</span>]) } <span class="cf">else</span> { <span class="fu">sample.int</span>(<span class="fu">nrow</span>(coefficients), <span class="dv">1</span>) }</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a> media2N <span class="ot">&lt;-</span> <span class="cf">if</span> (media1N <span class="sc">==</span> <span class="fu">nrow</span>(coefficients)) { <span class="fu">nrow</span>(coefficients)<span class="sc">-</span><span class="dv">1</span>; } <span class="cf">else</span> { <span class="co"># if at the top &amp; 1st place, must compare to 2nd place</span></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> (media1N <span class="sc">==</span> <span class="dv">1</span>) { <span class="dv">2</span>; } <span class="cf">else</span> { <span class="co"># if at the bottom/last place, must compare to 2nd-to-last</span></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if neither at bottom nor top, then there are two choices, above &amp; below, and we want the one with highest SE; if equal, arbitrarily choose the better:</span></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ( (coefficients[,<span class="dv">2</span>][media1N<span class="sc">+</span><span class="dv">1</span>]) <span class="sc">&gt;</span> (coefficients[,<span class="dv">2</span>][media1N<span class="dv">-1</span>])  ) { media1N<span class="sc">+</span><span class="dv">1</span> } <span class="cf">else</span> { media1N<span class="dv">-1</span> } } }</span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a> targets <span class="ot">&lt;-</span> <span class="fu">row.names</span>(coefficients)</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a> media1 <span class="ot">&lt;-</span> targets[media1N]</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a> media2 <span class="ot">&lt;-</span> targets[media2N]</span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span> (argv<span class="sc">$</span><span class="st">`</span><span class="at">progress</span><span class="st">`</span>) { <span class="fu">cat</span>(<span class="fu">paste0</span>(<span class="st">&quot;Mean stderr: &quot;</span>, <span class="fu">round</span>(<span class="fu">mean</span>(coefficients[,<span class="dv">2</span>]))), <span class="st">&quot; | &quot;</span>); }</span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a> <span class="fu">cat</span>(<span class="fu">paste0</span>(<span class="st">&quot;Is &#39;&quot;</span>, <span class="fu">as.character</span>(media1), <span class="st">&quot;&#39; greater than &#39;&quot;</span>, <span class="fu">as.character</span>(media2), <span class="st">&quot;&#39;? &quot;</span>))</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a> rating <span class="ot">&lt;-</span> <span class="fu">scan</span>(<span class="st">&quot;stdin&quot;</span>, <span class="fu">character</span>(), <span class="at">n=</span><span class="dv">1</span>, <span class="at">quiet=</span><span class="cn">TRUE</span>)</span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a> <span class="cf">switch</span>(rating,</span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;1&quot;</span> <span class="ot">=</span> { comparisons <span class="ot">&lt;-</span> <span class="fu">rbind</span>(comparisons, <span class="fu">data.frame</span>(<span class="st">&quot;Media.1&quot;</span><span class="ot">=</span>media1, <span class="st">&quot;Media.2&quot;</span><span class="ot">=</span>media2, <span class="st">&quot;win1&quot;</span><span class="ot">=</span><span class="dv">1</span>, <span class="st">&quot;win2&quot;</span><span class="ot">=</span><span class="dv">0</span>)) },</span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;3&quot;</span> <span class="ot">=</span> { comparisons <span class="ot">&lt;-</span> <span class="fu">rbind</span>(comparisons, <span class="fu">data.frame</span>(<span class="st">&quot;Media.1&quot;</span><span class="ot">=</span>media1, <span class="st">&quot;Media.2&quot;</span><span class="ot">=</span>media2, <span class="st">&quot;win1&quot;</span><span class="ot">=</span><span class="dv">0</span>, <span class="st">&quot;win2&quot;</span><span class="ot">=</span><span class="dv">1</span>)) },</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;2&quot;</span> <span class="ot">=</span> { comparisons <span class="ot">&lt;-</span> <span class="fu">rbind</span>(comparisons, <span class="fu">data.frame</span>(<span class="st">&quot;Media.1&quot;</span><span class="ot">=</span>media1, <span class="st">&quot;Media.2&quot;</span><span class="ot">=</span>media2, <span class="st">&quot;win1&quot;</span><span class="ot">=</span><span class="fl">0.5</span>, <span class="st">&quot;win2&quot;</span><span class="ot">=</span><span class="fl">0.5</span>))},</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;p&quot;</span> <span class="ot">=</span> { estimates <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Media=</span><span class="fu">row.names</span>(coefficients), <span class="at">Estimate=</span>coefficients[,<span class="dv">1</span>], <span class="at">SE=</span>coefficients[,<span class="dv">2</span>]);</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span>(comparisons)</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span>(<span class="fu">warnings</span>())</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span>(<span class="fu">summary</span>(updatedRankings))</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span>(estimates[<span class="fu">order</span>(estimates<span class="sc">$</span>Estimate),], <span class="at">row.names=</span><span class="cn">FALSE</span>) },</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;s&quot;</span> <span class="ot">=</span> {},</span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;q&quot;</span> <span class="ot">=</span> { <span class="cf">break</span>; }</span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a><span class="co"># results of all the questioning:</span></span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(argv<span class="sc">$</span>verbose) { <span class="fu">print</span>(comparisons); }</span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressWarnings</span>(updatedRankings <span class="ot">&lt;-</span> <span class="fu">BTm</span>(<span class="fu">cbind</span>(win1, win2), Media<span class="fl">.1</span>, Media<span class="fl">.2</span>, <span class="sc">~</span> Media, <span class="at">id =</span> <span class="st">&quot;Media&quot;</span>, <span class="at">data =</span> comparisons))</span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>coefficients <span class="ot">&lt;-</span> <span class="fu">BTabilities</span>(updatedRankings)</span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(argv<span class="sc">$</span>verbose) { <span class="fu">print</span>(<span class="fu">rownames</span>(coefficients)[<span class="fu">which.max</span>(coefficients[<span class="dv">2</span>,])]);</span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">print</span>(<span class="fu">summary</span>(updatedRankings))</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">print</span>(<span class="fu">sort</span>(coefficients[,<span class="dv">1</span>])) }</span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>ranking2 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">BTabilities</span>(updatedRankings))</span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>ranking2<span class="sc">$</span>Media <span class="ot">&lt;-</span> <span class="fu">rownames</span>(ranking2)</span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(ranking2) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span>(argv<span class="sc">$</span><span class="st">`</span><span class="at">no_scale</span><span class="st">`</span>)) {</span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if the user specified a bunch of buckets using `--quantiles`, parse it and use it,</span></span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>    <span class="co"># otherwise, take `--levels` and make a uniform distribution</span></span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>    levels <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="dv">2</span>,<span class="fu">min</span>(<span class="dv">100</span>,argv<span class="sc">$</span>levels<span class="sc">+</span><span class="dv">1</span>)) <span class="do">## needs to be 2–100</span></span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>    quantiles <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(argv<span class="sc">$</span>quantiles)) { (<span class="fu">sapply</span>(<span class="fu">strsplit</span>(argv<span class="sc">$</span>quantiles, <span class="st">&quot; &quot;</span>), as.numeric))[,<span class="dv">1</span>]; } <span class="cf">else</span> {</span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>      <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out=</span>levels); }</span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>    ranking2<span class="sc">$</span>Quantile <span class="ot">&lt;-</span> <span class="fu">with</span>(ranking2, <span class="fu">cut</span>(ability,</span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">breaks=</span><span class="fu">quantile</span>(ability, <span class="at">probs=</span>quantiles),</span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">labels=</span><span class="dv">1</span><span class="sc">:</span>(<span class="fu">length</span>(quantiles)<span class="sc">-</span><span class="dv">1</span>),</span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">include.lowest=</span><span class="cn">TRUE</span>))</span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">&lt;-</span> <span class="fu">subset</span>(ranking2[<span class="fu">order</span>(ranking2<span class="sc">$</span>Quantile, <span class="at">decreasing=</span><span class="cn">TRUE</span>),], <span class="at">select=</span><span class="fu">c</span>(<span class="st">&quot;Media&quot;</span>, <span class="st">&quot;Quantile&quot;</span>));</span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(argv<span class="sc">$</span>output)) { <span class="fu">write.csv</span>(df, <span class="at">file=</span>argv<span class="sc">$</span>output, <span class="at">row.names=</span><span class="cn">FALSE</span>) } <span class="cf">else</span> { <span class="fu">print</span>(df); }</span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> { <span class="co"># return just the latent continuous scores:</span></span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>         df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Media=</span><span class="fu">rownames</span>(coefficients), <span class="at">Estimate=</span>coefficients[,<span class="dv">1</span>]);</span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>         <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(argv<span class="sc">$</span>output)) { <span class="fu">write.csv</span>(df[<span class="fu">order</span>(df<span class="sc">$</span>Estimate, <span class="at">decreasing=</span><span class="cn">TRUE</span>),], <span class="at">file=</span>argv<span class="sc">$</span>output, <span class="at">row.names=</span><span class="cn">FALSE</span>); } <span class="cf">else</span> {</span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>             <span class="fu">print</span>(finalReport); }</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>       }</span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">Resorting complete&quot;</span>)</span></code></pre></div>
+</section>
+<section id="背景-background" class="level1">
+<h1><a href="#背景-background" title="Link to section: § &#39;背景 (Background)&#39;">背景 (Background)</a></h1>
+<section id="评分膨胀-rating-inflation" class="level2">
+<h2><a href="#评分膨胀-rating-inflation" title="Link to section: § &#39;评分膨胀 (Rating Inflation)&#39;">评分膨胀 (Rating Inflation)</a></h2>
+<p>在像 <a href="https://en.wikipedia.org/wiki/Goodreads" id="_hgVJz_dF" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Goodreads#bodyContent">GoodReads</a>、亚马逊、<a href="https://myanimelist.net/" id="_kjE-EsxV" data-link-icon="MAL" data-link-icon-type="text,tri,sans" data-link-icon-color="#2b498e">MyAnimeList</a>、<a href="https://www.youtube.com/watch?v=iu6eWy7BKKI" id="_AxKmFEhq" data-link-icon="youtube" data-link-icon-type="svg" data-link-icon-color="#ff0033" title="&#39;吉格经济中的服务质量&#39;, Athey 等人 2018">Uber/Lyft</a>、<a href="https://gwern.net/doc/statistics/order/comparison/2022-filippas.pdf" id="等人-2018" class="link-live link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="&#39;声誉膨胀&#39;, Filippas 等人 2018">自由职业市场</a> 等评论网站上对数百种媒体进行评分时，分布往往会变得“结块”并集中在少数几个可能的最高评分上：如果是 10 分制，你通常不会看到很多低于 7 分的，或者如果是 5 星制，<a href="https://xkcd.com/325/" id="_9okiM9OK" class="link-live" data-link-icon="XKCD" data-link-icon-type="text,quad,sans">那么任何</a> <a href="https://xkcd.com/1098/" id="_m52kZ8ZD" class="link-live" data-link-icon="XKCD" data-link-icon-type="text,quad,sans">低于 4 星的都表示极度厌恶</a>，导致 J 形分布和互联网版本的 <a href="https://en.wikipedia.org/wiki/%E5%88%86%E6%95%B0%E8%86%A8%E8%83%80" id="_4eKxV2jC" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%88%86%E6%95%B0%E8%86%A8%E8%83%80#bodyContent">分数膨胀</a>。 经过足够长的时间和膨胀后，评级已经退化为无信息的二元评级量表，一些网站认识到了这一点，放弃了伪装，如 <a href="https://blog.youtube/news-and-events/five-stars-dominate-ratings/" id="_4jz86Tyx" class="link-live" title="五星主导评级">YouTube</a> 或 <a href="https://variety.com/2017/digital/news/netflix-thumbs-vs-stars-1202010492/" id="_vs9xBFpG" data-link-icon="𝓥" data-link-icon-type="text" title="Netflix 用拇指向上和拇指向下取代星级评级">Netflix 从 5 星切换到喜欢/不喜欢</a>。 现有评级中的自我选择和其他问题，如 <a href="https://datacolada.org/72" id="___U7BFeu" class="link-live" data-link-icon-color="#dd9933" title="Metacritic 有一个（抽屉）问题">发表偏差</a> 会产生一些反常的后果：例如，获奖实际上可能 <em>降低</em> 一本书的 Good<!-- -->Reads 平均评分，因为该奖项导致更广泛、更不包容的受众去阅读这本书 (<a href="https://gwern.net/doc/culture/2014-kovacs.pdf" id="_aydO2r3j" class="link-live link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="宣传的悖论：奖项如何负面影响质量评估"><span class="cite"><span class="cite-author">Kovács &amp; Sharkey</span><span class="cite-date">2014</span></span></a>)。</p>
+<p>如果你想向其他人提供评分和评论并表明你的真实偏好，这是不幸的；当我在 <a href="https://anime.plus/gwern/ratings,anime" id="_k9u0akvH">MALgraph</a> 上点赞并看到我的一半以上的动漫评分都在 8–10 范围内时，那么，我的评分已经退化为大约 1–3 的量表（垃圾/好/很棒），这使得很难看出哪些真正值得一看，以及哪些我可能想回去重看。 因此，评级所携带的信息比人们可能从量表中猜测的要少得多（10 分制在每个评级中有 3.32 位信息，但如果它实际上退化为 3 分制，那么信息量已减半至 1.58 位）。 如果相反，我的评分均匀分布在 1–10 的范围内，使得 10% 被评为 1，10% 被评为 2，依此类推，那么我的评分将包含更多信息，我的观点也会更清晰。 （也许是第一世界的问题，但仍然很烦人。）</p>
+</section>
+<section id="评分-应该-是什么分布" class="level2">
+<h2><a href="#评分-应该-是什么分布" title="Link to section: § &#39;评分 应该 是什么分布？&#39;">评分 <em>应该</em> 是什么分布？</a></h2>
+<p>如果 J 形分布不好，那么一个人的评分应该是什么分布？</p>
+<p>正态分布有一定的美感，也很常见，但这并不是理由。 首先，没有太多理由认为媒体本身应该正态分布。 正态分布的普遍性来自 <a href="https://en.wikipedia.org/wiki/Central_limit_theorem" id="_plyq3oiO" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Central_limit_theorem#bodyContent">中心极限定理</a>，以及许多变量相加往往会产生正态分布；然而，艺术作品仅仅是 <em>各部分的总和</em> 吗？ 我会说不：它们更像是各部分的乘积，而许多随机变量相乘往往会产生类似 <a href="https://en.wikipedia.org/wiki/%E5%AF%B9%E6%95%B0%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83" id="_vl2Ertpi" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%AF%B9%E6%95%B0%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83#bodyContent">对数正态分布</a> 的东西。 如果艺术真的是正态分布的，为什么我们经常看一部动漫并说，“那有着非常棒的艺术和音乐以及配音，但是… 情节 <em>太</em> 愚蠢了，我完全无法享受它，我不得不给它一个低分，并且永远不会再看它了”？毕竟，如果它们只是相加，所有其他变量都足以使整体分数变得很棒。同时，一部这就各方面都做得很好的作品可能会仅仅因为没有任何缺陷而实现伟大——这一切都以超过各部分之和的方式结合在一起。 其次，我们不是在观看从整体分布中抽取的随机样本，我们通常试图从质量的右尾抽取高度偏差的样本（即只看好的）。 如果我们做得很好，我们的评分样本看起来一点也不像整体分布，就像 NBA 的身高图表看起来一点也不像美国人口的身高图表一样。</p>
+<p>均匀分布也有类似的问题。 它的优势如上所述，在于它包含更多信息：正态分布将评分聚集在中间，大多数落在 5，只有少数达到 1 或 10，而均匀分布使信息最大化——最差的 10% 被评为 1，依此类推，最好的 10% 被评为 10。 如果你从均匀分布中得知某样东西是 5，你会学到更多（它在 50–60% 的范围内），而不是如果是正态分布（它是 50±??%）。</p>
+<p>但是，如果评论家使用正态分布而不是均匀分布，我想我宁愿看他们的评分。 为什么？因为，正如我所说，我们通常试图看 <em>好</em> 的东西，如果我看到某样东西被评为 10，我知道它在顶部的百分之一或二，而均匀分布的选择性要低 5–10 倍，那里的 10 只告诉我它在顶部十分位数，这并没有太大的选择性。 如果一位评论家认为某样东西在顶部的百分之一，我会注意；但顶部十分位数并没有太大用处帮助我找到我可能想要的东西。</p>
+<p>所以，我认为我们的目标分布应该最大化 <em>有用性</em>：这只是对其不可知的潜在分布的总结，我们将其实用地总结为评分，因此 <a href="/research-criticism" id="gwern-research-criticism" class="prefetch-not link-annotated link-page" title="&#39;How Should We Critique Research?&#39;, Gwern 2019">像评分这样的统计数据</a> 只有在它们定义的预期用途中才分对错。 在一个评分网站上，我们对在平庸或垃圾中进行细微区分不感兴趣。 我们正在寻找有趣的新候选者来考虑，我们正在寻找最好的。 偏斜最大化了在可能推荐的感兴趣区域向读者提供的信息。 所以我们的分布应该把大部分评分扔进一个无信息的“meh”桶里，并在右尾极端花更多时间：我们认为一部给定的作品是空前的杰作，还是例外的，或者仅仅是好的？</p>
+<p>我们要的是一个 <em>反 J 形分布</em>：其中大多数评分都是最低的，只有少数是最高的。 （对于较小的评分集，那么不那么极端的偏斜会有用：如果大多数评分几乎是空的，那就没用了。人们可能还会努力去，甚至使用成对评分，表达这样精确的百分位数，并回退到最小规模，比如 5%。）</p>
+<p>就百分位数而言，以我观看/放弃的约 458 部动漫为例，我可以这样划分：</p>
+<div class="columns">
+<ol>
+<li><p>0–50% (<em>n</em> = 231)</p></li>
+<li><p>51–75% (<em>n</em> = 112)</p></li>
+<li><p>76%–89% (<em>n</em> = 62)</p></li>
+<li><p>90–93% (<em>n</em> = 16)</p></li>
+<li><p>94–95% (<em>n</em> = 11)</p></li>
+<li><p>96% (<em>n</em> = 7)</p></li>
+<li><p>97% (<em>n</em> = 6)</p></li>
+<li><p>98% (<em>n</em> = 6)</p></li>
+<li><p>99% (<em>n</em> = 5)</p></li>
+<li><p>&gt;99.5% (<em>n</em> = 2)</p></li>
+</ol>
+</div>
+<p>那将对应于使用选项 <code>--quantiles '0 0.5 0.75 0.89 0.93 0.95 0.96 0.97 0.98 0.99 0.995'</code>。</p>
+</section>
+<section id="重新缩放-rescaling" class="level2">
+<h2><a href="#重新缩放-rescaling" title="Link to section: § &#39;重新缩放 (Rescaling)&#39;">重新缩放 (Rescaling)</a></h2>
+<section id="通过排序进行交互式排名-interactive-ranking-through-sorting" class="level3">
+<h3><a href="#通过排序进行交互式排名-interactive-ranking-through-sorting" title="Link to section: § &#39;通过排序进行交互式排名 (Interactive Ranking Through Sorting)&#39;">通过排序进行交互式排名 (Interactive Ranking Through Sorting)</a></h3>
+<p>对于只有 10 或 20 个评分，很容易手动审查和重新调整评分并解决歧义（哪个 ‘8’ 比其他 ‘8’ 差，应该被降到 7？），但由于判断是如此脆弱和主观，以及 <a href="https://en.wikipedia.org/wiki/Decision_fatigue" id="_-XV-0Tf1" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Decision_fatigue#bodyContent">‘选择疲劳’</a> 开始出现，我发现自己不得不反复扫描列表并问自己“X <em>真的</em> 比 Y 好吗…？嗯…”。 所以不出所料，对于像我的 408 部动漫或 2059 本书这样的大型语料库，我从来没有费心去尝试这样做——更不用说随着评分的漂移偶尔做一次了。</p>
+<p>如果我有某种程序可以反复询问我新的评分，存储结果，然后吐出一个关于究竟如何更改评分的综合列表，那么我可能能够，在极少数情况下，纠正我的评分。 这将帮助我们重新评估现有的媒体语料库，但它也可以帮助我们对其他事物进行排序：例如，我们可以尝试通过获取所有我们标记为“待读”的书籍或电影，然后进行比较来对每个项目进行优先排序，根据我们对它的兴奋程度或重要性或我们想多快阅读它来进行排名。 （如果我们有太多的事情要做，我们也可以通过这种方式对我们的整体待办事项列表进行排序，但很可能很容易手动排序。）</p>
+<p>但它不能要求我给出绝对评分，因为如果我能轻易地给出均匀分布的评分，我就不会有这个问题了！ 所以它应该计算排名，然后采取最终排名并将其分布在量表中的任何桶中：如果我为 MAL 的 1–10 排名对 100 部动漫进行评分，那么它将把底部的 10 部放入 ‘1’ 桶，第 10–20<sup>th</sup> 部放入 ‘2’ 桶，依此类推。 这不能自动完成。</p>
+<p>如何获得排名：如果有 1,000 种媒体，我不可能明确地将一本书排名为 ‘#952’ 或 ‘#501’。没有人有那么强的掌控力。 也许让它让我比较成对的媒体会更好？ 比较更自然，不那么疲劳，并通过提醒我还有什么其他媒体以及我是如何看待它们的来帮助我判断——当一部糟糕的电影与一部伟大的电影相提并论时，它会提醒你为什么一部糟糕而另一部伟大。 比较也立即暗示了一种实现，即经典的比较排序算法，如快速排序或归并排序，其中比较参数是一个 IO 函数，只是简单地调用用户；产生合理的 𝒪(n · log(<em>n</em>)) 数量的查询（如果我们要么拥有预先存在的评分并可以将其视为 <a href="https://en.wikipedia.org/wiki/%E8%87%AA%E9%80%82%E5%BA%94%E6%8E%92%E5%BA%8F" id="_ftIxw_FZ" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E8%87%AA%E9%80%82%E5%BA%94%E6%8E%92%E5%BA%8F#bodyContent">自适应排序</a>，则可能少得多，𝒪(<em>n</em>)）。 所以我们可以用任何像 Python 这样体面的编程语言编写一个简单的脚本来解决这个问题，这种重新排序由像 <a href="https://www.flickchart.com/Splash.aspx?return=%2f" id="_MB5G6osB">Flickchart</a> 这样的网站提供。</p>
+</section>
+<section id="噪声排序-noisy-sorting" class="level3">
+<h3><a href="#噪声排序-noisy-sorting" title="Link to section: § &#39;噪声排序 (Noisy Sorting)&#39;">噪声排序 (Noisy Sorting)</a></h3>
+<p>比较排序算法在这种情况下做出了一个极不现实的假设：它们假设比较是 100% 准确的。</p>
+<p>也就是说，假设你有两个排序列表，各 1,000 个元素，你将一个列表中的最低元素与另一个列表中的最高元素进行比较，如果第一个更高，那么第一个列表中的所有 1,000 个项目都高于第二个列表中的所有 1,000 个项目，即在 (<span class="subsup"><sub>2</sub><sup>1,000</sup></span>) = 499,500 可能的成对比较中，排序算法假设没有一个项目错位，没有一个成对比较是不正确的。 这种假设在编程中很好，因为 CPU 擅长比较位的相等性，并且可能会进行数万亿次操作而不会犯一个错误；但期望人类在任何任务中都有这种可靠性是荒谬的，更不用说在这个任务中，我们笨拙地感受着我们灵魂对伟大艺术家的反应。</p>
+<p>我们要对电影、书籍或音乐进行的比较 <em>是</em> 容易出错的，所以我们需要某种统计排序算法。 这有多大伤害？我们会得到某种更糟糕的样本效率吗？</p>
+<p>不。 事实证明，“噪声排序”设置与比较排序设置没有太大区别：那里的最佳渐近性能也是 𝒪(<em>n</em> · log(<em>n</em>))。 来自比较错误率 <em>p</em> 的惩罚只是被折叠到常数中（因为随着 <em>p</em> 接近 0，它变得更容易并转化为常规比较排序）。</p>
+<p>一些参考文献：</p>
+<ul>
+<li><p><span class="cite"><span class="cite-author">Slater</span><span class="cite-date">1961</span></span>, <a href="https://gwern.net/doc/statistics/order/comparison/1961-slater.pdf" id="_gsBXSh9T" class="link-live link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“Inconsistencies in a schedule of paired comparisons”</a></p></li>
+<li><p><span class="cite"><span class="cite-author">David</span><span class="cite-date">1963</span></span>, <a href="https://apps.dtic.mil/sti/pdfs/ADA417190.pdf#page=15" id="_AeA-qcsr" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“The method of paired comparisons”</a></p></li>
+<li><p><span class="cite"><span class="cite-author-plural" title="et al">Adler</span><span class="cite-joiner"> et al </span><span class="cite-date">1994</span></span>, <a href="http://www-cgi.cs.cmu.edu/afs/cs.cmu.edu/Web/People/harchol/Papers/SODA94-ranking.pdf" id="_s4GRpQKX" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“Selection in the presence of noise: The design of playoff systems”</a></p></li>
+<li><p><span class="cite"><span class="cite-author-plural" title="et al">Feige</span><span class="cite-joiner"> et al </span><span class="cite-date">1994</span></span>, <a href="https://cadmo.ethz.ch/education/lectures/HS18/SAADS/papers/computing_noisy_information.pdf" id="_EZMqVTxc" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“Computing with noisy information”</a></p></li>
+<li><p><span class="cite"><span class="cite-author">Glickman</span><span class="cite-date">1999</span></span>, <a href="https://math.bu.edu/individual/mg/research/glicko.pdf" id="_fd4Uz-pD" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“Parameter estimation in large dynamic paired comparison experiments”</a></p></li>
+<li><p><span class="cite"><span class="cite-author">Pelc</span><span class="cite-date">2002</span></span>, <a href="https://gwern.net/doc/statistics/order/comparison/2002-pelc.pdf" id="_QkMndh76" class="link-live link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“Searching games with errors—fifty years of coping with liars”</a></p></li>
+<li><p><span class="cite"><span class="cite-author">Chu &amp; Ghahramani</span><span class="cite-date">2005</span></span>, <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.437.20&amp;rep=rep1&amp;type=pdf" id="_Ze9xSrFM" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“Preference learning with Gaussian processes”</a></p></li>
+<li><p><span class="cite"><span class="cite-author">Karp &amp; Kleinberg</span><span class="cite-date">2007</span></span>, <a href="https://gwern.net/doc/statistics/order/comparison/2007-karp.pdf" id="karp-kleinberg-2007" class="link-live link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="‘Noisy binary search and its applications’, Karp &amp; Kleinberg 2007">“Noisy binary search and its application”</a></p></li>
+<li><p><span class="cite"><span class="cite-author">Radlinski &amp; Joachims</span><span class="cite-date">2007</span></span>, <a href="https://www.cs.cornell.edu/~tj/publications/radlinski_joachims_07a.pdf" id="_bwz3Zf2I" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“Active exploration for learning rankings from clickthrough data”</a></p></li>
+<li><p>Kenyon-<span class="cite"><span class="cite-author">Mathieu &amp; Schudy</span><span class="cite-date">2007</span></span>, <a href="https://cs.brown.edu/research/pubs/theses/masters/2007/schudy.pdf" id="_bDIISYYp" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“How to rank with few errors”</a></p></li>
+<li><p><span class="cite"><span class="cite-author-plural" title="et al">Ailon</span><span class="cite-joiner"> et al </span><span class="cite-date">2008</span></span>, <a href="https://gwern.net/doc/statistics/order/comparison/2008-ailon.pdf" id="ailon,-2008" class="link-live link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="&#39;Aggregating inconsistent information: Ranking and clustering&#39;, Ailon et al 2008">“Aggregating inconsistent information: ranking and clustering”</a></p></li>
+<li><p><span class="cite"><span class="cite-author">Braverman &amp; Mossel</span><span class="cite-date">2008</span></span>, <a href="https://arxiv.org/abs/0707.1051" id="_ZDZAn2OZ" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/0707.1051?fallback=original" title="&#39;Noisy Sorting Without Resampling&#39;, Braverman &amp; Mossel 2007">“Noisy sorting without resampling”</a><span> / <span class="cite"><span class="cite-author">Braverman &amp; Mossel</span><span class="cite-date">2009</span></span>, </span><a href="https://arxiv.org/abs/0910.1191" id="_ARrQevS_" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/0910.1191?fallback=original" title="&#39;Sorting from Noisy Information&#39;, Braverman &amp; Mossel 2009">“Sorting from noisy information”</a></p></li>
+<li><p><span class="cite"><span class="cite-author">Yue &amp; Joachims</span><span class="cite-date">2011</span></span>, <a href="http://www.yisongyue.com/publications/icml2011_beat_the_mean.pdf" id="_t4yanS0W" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“Beat the mean bandit”</a></p></li>
+<li><p><span class="cite"><span class="cite-author-plural" title="et al">Houlsby</span><span class="cite-joiner"> et al </span><span class="cite-date">2011</span></span>, <a href="https://arxiv.org/abs/1112.5745" id="_PLpMj-v7" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1112.5745?fallback=original">“Bayesian Active Learning for Classification and Preference Learning”</a></p></li>
+<li><p><span class="cite"><span class="cite-author-plural" title="et al">Yue</span><span class="cite-joiner"> et al </span><span class="cite-date">2012</span></span>, <a href="https://www.learningtheory.org/colt2009/papers/006.pdf" id="_YP8Or3Bd" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02">“The <em>K</em>-armed dueling bandits problem”</a></p></li>
+<li><p>Busa-<span class="cite"><span class="cite-author-plural" title="et al">Fekete</span><span class="cite-joiner"> et al </span><span class="cite-date">2014</span></span>, <a href="https://inria.hal.science/hal-01079369/document" id="_6MbcomtE">“Preference-based rank elicitation using statistical models: The case of Mallows”</a></p></li>
+<li><p><span class="cite"><span class="cite-author-plural" title="et al">Szorenyi</span><span class="cite-joiner"> et al </span><span class="cite-date">2015</span></span>, <a href="https://proceedings.neurips.cc/paper/2015/file/7eacb532570ff6858afd2723755ff790-Paper.pdf" id="_QaC9MkIS" data-link-icon="NIPS" data-link-icon-type="text,sans,quad" data-link-icon-color="#0d6efd">“Online Rank Elicitation for Plackett-Luce: A Dueling Bandits Approach”</a></p></li>
+<li><p><span class="cite"><span class="cite-author">Maystre &amp; Grossglauser</span><span class="cite-date">2015</span></span>, <a href="https://arxiv.org/abs/1502.05556" id="_VuVGPG41" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1502.05556?fallback=original">“Just Sort It! A Simple and Effective Approach to Active Preference Learning”</a></p></li>
+<li><p><span class="cite"><span class="cite-author-plural" title="et al">Christiano</span><span class="cite-joiner"> et al </span><span class="cite-date">2017</span></span>, <a href="https://arxiv.org/abs/1706.03741#openai" id="_DV2RgEtJ" data-link-icon="openai" data-link-icon-type="svg" data-href-mobile="https://arxiv.org/html/1706.03741?fallback=original#openai">“Deep reinforcement learning from human preferences”</a><span>; <span class="cite"><span class="cite-author-plural" title="et al">Henderson</span><span class="cite-joiner"> et al </span><span class="cite-date">2017</span></span>, </span><a href="https://arxiv.org/abs/1709.06683" id="_ReS_T5Tn" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1709.06683?fallback=original">“OptionGAN: Learning Joint Reward-Policy Options using Generative Adversarial Inverse Reinforcement Learning”</a></p></li>
+<li><p><span class="cite"><span class="cite-author-plural" title="et al">Le</span><span class="cite-joiner"> et al </span><span class="cite-date">2017</span></span>, <a href="https://arxiv.org/abs/1709.06390" id="_YwvstWW5" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1709.06390?fallback=original">“Analogical-based Bayesian Optimization”</a></p></li>
+<li><p><span class="cite"><span class="cite-author-plural" title="et al">Chen</span><span class="cite-joiner"> et al </span><span class="cite-date">2017</span></span>, <a href="https://arxiv.org/abs/1707.09971" id="_99lyDRlC" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1707.09971?fallback=original" title="&#39;Spectral Method and Regularized MLE Are Both Optimal for Top-&lt;em&gt;K&lt;/em&gt; Ranking&#39;, Chen et al 2017">“Spectral Method and Regularized MLE Are Both Optimal for Top-<em>K</em> Ranking”</a></p></li>
+<li><p><span class="cite"><span class="cite-author-plural" title="et al">Kazemi</span><span class="cite-joiner"> et al </span><span class="cite-date">2018</span></span>, <a href="https://arxiv.org/abs/1802.06942" id="_mJ_nj-Rq" data-link-icon="𝛘" data-link-icon-type="text" data-link-icon-color="#b31b1b" data-href-mobile="https://arxiv.org/html/1802.06942?fallback=original">“Comparison Based Learning from Weak Oracles”</a></p></li>
+<li><p><span class="cite"><span class="cite-author-plural" title="et al">Liu</span><span class="cite-joiner"> et al </span><span class="cite-date">2018</span></span>, <a href="https://hal.science/hal-01972948/document#pdf" id="_IIu91YSp">“Model-based learning from preference data”</a></p></li>
+</ul>
+</section>
+</section>
+<section id="实现-implementation" class="level2">
+<h2><a href="#实现-implementation" title="Link to section: § &#39;实现 (Implementation)&#39;">实现 (Implementation)</a></h2>
+<p>所以我们想要一个命令行工具，它使用成对的媒体和评分列表，然后用成对的媒体反复询问用户，以获得用户对哪个更好的评分，以某种方式对潜在得分进行建模，同时允许用户在多次比较中出错，理想情况下选择任何“信息最丰富”的下一对来询问，以便尽可能快地收敛到准确的排名，并在足够多的问题之后，对所有媒体的完整排名进行最终推断，并将其映射到特定评分量表上的均匀分布。</p>
+<p>看待这个问题的自然方式是将每个竞争者视为在一个基数尺度上具有未被观察到的 <a href="https://en.wikipedia.org/wiki/%E6%BD%9C%E5%9C%A8%E5%8F%98%E9%87%8F" id="_K1ip9wtr" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%BD%9C%E5%9C%A8%E5%8F%98%E9%87%8F#bodyContent">潜在变量</a> ‘质量’ 或 ‘能力’ 或 ‘技能’，该变量通过比较以误差来衡量，然后削弱传递性来连接我们的比较：如果 A 击败 B 且 B 击败 C，那么 <em>可能</em> A 击败 C，这取决于我们观察到的击败次数以及我们对 A-C 潜在变量估计的精确度。</p>
+<p>成对或基于比较的数据在竞争环境中经常出现，例如著名的 <a href="https://en.wikipedia.org/wiki/Elo_%E8%AF%84%E7%BA%A7%E7%B3%BB%E7%BB%9F" id="_HwBVsT9u" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Elo_%E8%AF%84%E7%BA%A7%E7%B3%BB%E7%BB%9F#bodyContent">Elo 评级系统</a> 或贝叶斯 <a href="https://en.wikipedia.org/wiki/TrueSkill" id="_8p_zZAAN" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/TrueSkill#bodyContent">TrueSkill</a>。 处理它的一个通用模型是 Bradley-Terry 模型。</p>
+<p>R 中至少有两个用于处理 Bradley-Terry 模型的包，<a href="https://www.jstatsoft.org/index.php/jss/article/download/v048i09/601" id="_j1Q0SfLE" data-link-icon-color="#2874ae" title="Bradley-Terry Models in R: The BradleyTerry2 Package"><code>BradleyTerry2</code></a> 和 <a href="https://www.jstatsoft.org/index.php/jss/article/download/v048i10/602" id="_PluKQWh9" data-link-icon-color="#2874ae" title="prefmod: An R Package for Modeling Preferences Based on Paired Comparisons, Rankings, or Ratings"><code>prefmod</code></a>。 后者支持比前者更复杂的分析，但它希望其数据格式不方便，而 <code>BradleyTerry2</code> 更容易增量更新。 （我想将我的数据以媒体/媒体/评级的长三元组列表的形式提供给库，这可以通过简单地向底部添加另一个三元组来轻松地使用用户输入进行更新；但 <code>prefmod</code> 希望为每种可能的媒体提供一列，这在一开始就很尴尬，如果有 1,000 多种媒体可供比较，情况会变得更糟。）</p>
+<p>我们从两个向量开始：媒体列表和原始评分列表。 原始评分虽然不够平滑且需要改进，但仍然是不容忽视的有用信息；如果 BT-2 是一个贝叶斯库，我们可以将它们用作信息先验，但它不是，所以我采用了一种黑客手段，即程序运行列表，将每部动漫与下一部动漫进行比较，如果相等，则视为平局，否则记录为胜/负——所以即使从一开始，我们在推断它们的潜在得分方面也取得了很大进展。</p>
+<p>然后一个循环询问用户 <em>n</em> 次比较；我们想询问估计最不确定的媒体，一种估计方法是查看哪些媒体具有最大的 <a href="https://en.wikipedia.org/wiki/%E6%A0%87%E5%87%86%E8%AF%AF%E5%B7%AE" id="_8SNatTXR" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%A0%87%E5%87%86%E8%AF%AF%E5%B7%AE#bodyContent">标准误差</a>。 你可能会认为只询问当前标准误差最大的两个媒体将是最好的探索策略（因为这对应于强化学习和多臂老虎机方法，你从探索最不确定的事情开始），但令人惊讶的是，这导致一次又一次地询问同一个媒体，即使标准误差直线下降。 我不确定为什么会发生这种情况，但我认为这与先验信息在所有媒体上创建排序或层次结构有关，然后最大似然估计导致一次又一次地重复相同的问题，以在基数尺度上下移动排序（无论估计如何上移或下移，我们离散化的评级都将是不变的）。 所以相反，我们在询问具有最大标准误差的媒体（选择最近的邻居，向上或向下，具有较大的标准误差）和偶尔随机选择之间交替，所以它通常专注于最不确定的媒体，但偶尔也会询问其他媒体。 （类似于 RL 中的固定 epsilon 探索。）</p>
+<p>在所有问题都问完之后，进行最终估计，媒体按排名排序，并映射回用户指定的评分量表。</p>
+<section id="为什么不是贝叶斯-why-not-bayes" class="level3">
+<h3><a href="#为什么不是贝叶斯-why-not-bayes" title="Link to section: § &#39;为什么不是贝叶斯？ (Why Not Bayes?)&#39;">为什么不是贝叶斯？ (Why Not Bayes?)</a></h3>
+<section id="贝叶斯改进-bayesian-improvements" class="level4">
+<h4><a href="#贝叶斯改进-bayesian-improvements" title="Link to section: § &#39;贝叶斯改进 (Bayesian Improvements)&#39;">贝叶斯改进 (Bayesian Improvements)</a></h4>
+<p>这种方法有两个问题：</p>
+<ol>
+<li><p>它没有任何原则性的不确定性指示，</p></li>
+<li><p>结果是，它可能并没有提出最佳问题。</p></li>
+</ol>
+<p>第一个是最大的问题，因为我们无法知道何时停止。 也许在 10 个问题之后，<em>真正的</em> 不确定性仍然很高，我们的最终评分仍然会错位；或者也许收益递减已经出现，需要更多的问题才能消除错误，以至于我们更愿意只是手动纠正少数错误的评分。 而且我们不想仅仅因为排序不足的可能性就将问题数量增加到像 200 这样繁重的程度。 相反，我们想要一些可理解的概率，即每个媒体都被分配到了正确的桶中，也许还有总体误差的界限：例如，如果我可以指定像“所有媒体至少在其正确的桶中的概率为 90%”之类的东西，我会很满意。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>由于 BF-2 本质上是一个频率主义库，它永远不会给我们这种答案；它在这方面所能提供的只有 <em>p</em> 值——这是对我从未问过的问题的回答——以及标准误差，这 <em>某种程度上</em> 是不确定性的指标，比没有好，但仍然不完美。 在我们对顺序试验方法的兴趣和我们对产生有意义的误差概率的兴趣（以及我自己对贝叶斯方法的偏好）之间，这激发了寻找贝叶斯实现的动力。</p>
+<p>Bradley-Terry 模型可以在 JAGS/Stan 中轻松拟合；两个较少和较详尽的例子分别在 <a href="https://web.archive.org/web/20160102165131/http://bayes.bgsu.edu/webinar.11.2012/R%20output/Rcode.part4.html" id="_1vdGFTyz" class="link-live" data-link-icon="internet-archive" data-link-icon-type="svg" data-url-iframe="https://web.archive.org/web/20160102165131if_/http://bayes.bgsu.edu/webinar.11.2012/R%20output/Rcode.part4.html" title="Part 4: Introduction to JAGS">Jim Albert 的实现</a> 和 <a href="https://gwern.net/doc/statistics/order/comparison/2005-hallinan.pdf" id="__eSq86VX" class="link-live link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="Paired Comparison Models for Ranking National Soccer Teams">Shawn E. Hallinan</a>，以及 <a href="https://github.com/nxskok/btstan/blob/master/R/btstan.R" id="_4U9LryR0" data-link-icon="github" data-link-icon-type="svg"><code>btstan</code></a> 中。 虽然它没有实现带有平局的扩展 B-T，但 Albert 的例子很容易修改，我们可以尝试像这样推断排名：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>comparisons2 <span class="ot">&lt;-</span> comparisons[<span class="sc">!</span>(comparisons<span class="sc">$</span>win1<span class="sc">==</span><span class="fl">0.5</span>),]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>teamH <span class="ot">=</span> <span class="fu">as.numeric</span>(comparisons2<span class="sc">$</span>Media<span class="fl">.1</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>teamA <span class="ot">=</span> <span class="fu">as.numeric</span>(comparisons2<span class="sc">$</span>Media<span class="fl">.2</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> comparisons2<span class="sc">$</span>win1</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> comparisons2<span class="sc">$</span>win1 <span class="sc">+</span> comparisons2<span class="sc">$</span>win2</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>N <span class="ot">=</span> <span class="fu">length</span>(y)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>J <span class="ot">=</span> <span class="fu">length</span>(<span class="fu">levels</span>(comparisons<span class="sc">$</span>Media<span class="fl">.1</span>))</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">list</span>(<span class="at">y =</span> y, <span class="at">n =</span> n, <span class="at">N =</span> N, <span class="at">J =</span> J, <span class="at">teamA =</span> teamA, <span class="at">teamH =</span> teamH)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>data <span class="do">## reusing the baseball data for this example:</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># $y</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">#  [1] 4 4 4 6 4 6 3 4 4 6 6 4 2 4 2 4 4 6 3 5 2 4 4 6 5 2 3 4 5 6 2 3 3 4 4 2 2 1 1 2 1 3</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># $n</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">#  [1] 7 6 7 7 6 6 6 6 7 6 7 7 7 7 6 7 6 6 6 6 7 7 6 7 6 7 6 6 7 6 7 6 7 7 6 6 7 6 7 6 7 7</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># $N</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 42</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co"># $J</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 7</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co"># $teamA</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co">#  [1] 4 7 6 2 3 1 5 7 6 2 3 1 5 4 6 2 3 1 5 4 7 2 3 1 5 4 7 6 3 1 5 4 7 6 2 1 5 4 7 6 2 3</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co"># $teamH</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="co">#  [1] 5 5 5 5 5 5 4 4 4 4 4 4 7 7 7 7 7 7 6 6 6 6 6 6 2 2 2 2 2 2 3 3 3 3 3 3 1 1 1 1 1 1</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="st">&quot;model {</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="st">    for (i in 1:N){</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="st">        logit(p[i]) &lt;- a[teamH[i]] - a[teamA[i]]</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="st">        y[i] ~ dbin (p[i], n[i])</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="st">    }</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="st">    for (j in 1:J){</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="st">        a[j] ~ dnorm(0, tau)</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="st">    }</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="st">    tau &lt;- pow(sigma, -2)</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="st">    sigma ~ dunif (0, 100)</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="st">}&quot;</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(runjags)</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>j1 <span class="ot">&lt;-</span> <span class="fu">autorun.jags</span>(<span class="at">model=</span>model1, <span class="at">monitor=</span><span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;y&quot;</span>), <span class="at">data=</span>data); j1</span></code></pre></div>
+<p>（这重用了之前的将先验转换为数据的技巧。） 这将产生合理的评分，但 <a href="https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo" id="_Bi7dHFwF" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Markov_chain_Monte_Carlo#bodyContent">MCMC</a> 与快速迭代的最大似然算法相比不可避免地有开销，后者只估计参数——在示例数据上运行大约需要 1 秒。 这种开销大部分来自 JAGS 的设置和解释模型，也许通过使用 Stan 可以减半（因为它缓存编译的模型），但无论如何，0.5 秒对于特别愉快的交互式使用来说太长了（从响应到下一个问题的总时间应 &lt;0.1 秒以获得最佳用户体验），但如果我们可以获得更好的问题，这就值得付出吗？ 可能会有加速的方法；这涉及到估计潜在的正态/高斯变量，这通常有快速的实现。 例如，如果发现贝叶斯推断可以通过解析解在 MCMC 之外完成，或者更有可能的是，通过拉普拉斯近似，例如在支持 <a href="https://gwern.net/doc/statistics/order/comparison/2010-martino.pdf" id="martino-rue-2010" class="link-live link-modified-recently" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="&#39;Case Studies in Bayesian Computation using INLA&#39;, Martino &amp; Rue 2010">潜在高斯</a> 的 <a href="https://www.r-inla.org/" id="_BlgfZ_23">INLA</a> 中实现的，我不会感到惊讶。 最近，Stan 支持基于优化的 <a href="https://en.wikipedia.org/wiki/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D" id="_Tkw9k5sB" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D#bodyContent">梯度下降</a> 贝叶斯推断（<a href="https://en.wikipedia.org/wiki/%E5%8F%98%E5%88%86%E6%8E%A8%E6%96%AD" id="_M1I8cB0F" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/%E5%8F%98%E5%88%86%E6%8E%A8%E6%96%AD#bodyContent">变分推断</a>），它提供了足够准确的后验，同时对于交互式使用来说足够快。</p>
+</section>
+<section id="最优探索-optimal-exploration" class="level4">
+<h4><a href="#最优探索-optimal-exploration" title="Link to section: § &#39;最优探索 (Optimal Exploration)&#39;">最优探索 (Optimal Exploration)</a></h4>
+<p>继续，通过 MCMC 实现，我们可以看看如何以最佳方式采样数据。 在这种情况下，因为我们正在收集数据，并且用户可以随时停止，所以我们并不太关心损失函数，而是最大化信息增益——弄清楚哪对媒体产生最高的“预期信息增益”。</p>
+<p>一种可能的方法是重复我们的启发式方法：估计每个媒体的熵，选择熵最高/后验分布最宽的那个，并选择一个随机比较。 更好的方法可能是改变这种做法：选择重叠最多的两个媒体（使用潜在变量的后验样本比仅使用置信区间更直截了当，因为置信区间毕竟并不意味着“真实变量以 95% 的概率在这个范围内”）。 这看起来好得多，但仍然可能不是最优的，因为它忽略了任何下游效应——我们可能会通过在一个大类的电影中间采样来减少不确定性，而不是采样彼此靠近的两个异常值。</p>
+<p>正式的 EI 在实现层面上没有太多文档记录，但算法的最一般形式似乎是：对于每个可能的动作（在本例中，每一对可能的媒体），从作为一个假设动作的后验中抽取一个样本（从 MCMC 对象，抽取两个媒体的分数估计并比较哪个更高），重新运行并更新分析（将比较结果添加到数据集并在其上再次运行 MCMC 以产生一个新的 MCMC 对象），在这两个旧的和新的 MCMC 对象上，计算分布的熵（在这种情况下，每个可能的媒体对中较高的概率的所有对数的总和？），并用新的减去旧的；对每个动作做大约 10 次，以便熵的估计变化相当稳定；然后找到熵变化最大的可能动作，并执行它。</p>
+<section id="计算要求-computational-requirement" class="level5">
+<h5><a href="#计算要求-computational-requirement" title="Link to section: § &#39;计算要求 (Computational Requirement)&#39;">计算要求 (Computational Requirement)</a></h5>
+<p>如果不实现它，这是不可行的。 从计算的角度来看：有 (<span class="subsup"><sub>2</sub><sup><em>media</em></sup></span>) 种可能的动作；每次 MCMC 运行大约需要 1 秒；必须有 10 次 MCMC 运行；并且熵计算需要一点时间。 对于仅 20 个媒体，那将需要 ((<span class="subsup"><sub>2</sub><sup>20</sup></span>) × 10 × 1) / 60 = (190 × 10) / 60 = 31 分钟。</p>
+<p>我们可以并行运行这些<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>，可以尝试进一步减少 MCMC 迭代并冒偶尔不收敛的风险，可以尝试仅计算有限数量的选择（也许是 20 个随机选择的选项）的 EI，或者寻找一些闭式解析解（也许假设正态分布？）——但很难看到如何将总运行时间降低到 0.5 秒——更不用说 ~0.1 秒了。 而且在打包方面，要求用户根本安装 JAGS（更不用说 Stan）会使 <code>resorter</code> 更难安装，并且更有可能出现不透明的运行时错误。</p>
+<p>如果要求用户比较两件事是罕见且昂贵的数据，如果我们绝对必须最大化每个问题的信息价值，如果我们正在进行硬核科学，如 <a href="https://hosting.astro.cornell.edu/~loredo/bayes/bae.pdf" id="_tP72sBY3" data-link-icon="pdf" data-link-icon-type="svg" data-link-icon-color="#f40f02" title="&#39;Bayesian Adaptive Exploration&#39;, Loredo &amp; Chernoff 2003">天文观测</a>，其中每一分钟的望远镜时间可能以数千美元来衡量，那么 1 小时的运行时间来优化问题选择是可以的。但我们不是。 如果用户需要被多问 5 个问题，因为标准误差探索启发式算法是次优的，那会花费他们几秒钟。没什么大不了的。 如果我们不利用贝叶斯方法的额外力量，为什么要从 BF-2 切换到 JAGS 呢？</p>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section id="另请参阅-see-also" class="level1">
+<h1><a href="#另请参阅-see-also" title="Link to section: § &#39;另请参阅 (See Also)&#39;">另请参阅 (See Also)</a></h1>
+<ul>
+<li><p><a href="/gpt-2-preference-learning" id="gwern-gpt-2-preference-learning" class="prefetch-not link-annotated link-page backlink-not" title="&#39;GPT-2 Preference Learning for Music Generation&#39;, Gwern 2019">使用 GPT-2 进行偏好学习</a></p></li>
+</ul>
+</section>
+<section id="外部链接-external-links" class="level1">
+<h1><a href="#外部链接-external-links" title="Link to section: § &#39;外部链接 (External Links)&#39;">外部链接 (External Links)</a></h1>
+<ul>
+<li><p><a href="https://forum.effectivealtruism.org/posts/9hQFfmbEiAoodstDA/simple-comparison-polling-to-create-utility-functions" id="_VhSgdWC5" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/9hQFfmbEiAoodstDA/simple-comparison-polling-to-create-utility-functions?format=preview&amp;theme=classic">效用函数提取器：简单的比较投票来创建效用函数</a></p></li>
+<li><p><a href="https://github.com/max-niederman/fullrank" id="_Na_rJo_J" data-link-icon="github" data-link-icon-type="svg" title="‘&lt;code&gt;fullrank&lt;/code&gt;: An interactive CLI tool and Python library for Bayesian inference of list rankings based on noisy comparisons’, Niederman 2025">“fullrank：一个基于噪声比较的列表排名贝叶斯推断的交互式 CLI 工具和 Python 库。”</a> (<a href="https://www.lesswrong.com/posts/ojZL2iSgFnASmRNnN/fullrank-bayesian-noisy-sorting-1" id="niederman-2025-blog" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/ojZL2iSgFnASmRNnN/fullrank-bayesian-noisy-sorting-1?format=preview&amp;theme=classic" title="‘Fullrank: Bayesian Noisy Sorting’, Niederman 2025">博客</a>)</p></li>
+</ul>
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>我认为这可以通过对后验进行采样来完成：从每个媒体的后验中抽取估计分数的随机样本并将它们全部离散化；这样做，比如说，100 次；比较 100 个离散化的结果，看看任何媒体改变类别的频率。如果每个媒体都在同一个桶里，比如说，在这些样本中的 95 个里——<em>教父</em> 在 100 个样本中的 95 个里都在 5 星桶里，在其他 5 个里都在 4 星桶里——那么估计分数的剩余不确定性一定很小。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>我们也可以在等待用户进行当前评分时推测性地执行，因为只有 3 种可能的选择（更好/更差/平局），我们最终必须计算其中之一；如果我们为通过所有 3 种假设选择计算最佳的下一个选择，那么我们已经知道接下来要问什么，那么就用户而言，它可能看起来是瞬间的，零延迟。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+
+      
+      <noscript><div id="noscript-warning-footer" class="admonition error" title="Warning to NoScript Users"><div class="admonition-title"><p>[<strong>Error</strong>: JavaScript disabled.]</p></div> <p>[Backlinks, similar links, and the bibliography require JS enabled to load.]</p></div></noscript>
+      
+      
+      
+      
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+    <!-- Footer (no SSI): injected by Hakyll from static/include/footer.html -->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"
+        ><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center" /></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Mako Shan">[&hairsp;Send Anonymous Feedback&hairsp;]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Mako Shan homepage" class="footer-logo dark-mode-invert" href="/index.html">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>

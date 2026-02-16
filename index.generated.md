@@ -59,56 +59,56 @@ li p { margin: 0em; }
 我写关于区块链、技术与经济学，以及每日科技情报。
 我最知名的内容包括：[加密经济学](#加密经济学)与公共物品融资；[每日Newsletter](#newsletter)的技术资讯精选；以及关于软件选择与统计实验的思考。
 
-<span class="smallcaps">导航</span>：关于本站的理念与方法，参见 *[About 页面](/About)*；
-关于网站的功能与实现，参见 *[设计说明](/design)*（如有）；
-关于我本人的信息与联系方式，参见 *[me 页面](/me)*；
-查看最新内容，参见 *[Changelog](/Changelog)*，或订阅 [<em>Newsletter</em>](https://v2eth.substack.com/) ([归档](/newsletter/))。
+<span class="smallcaps">导航</span>：关于本站的理念与方法，参见 *[About 页面](/about/)*；
+关于网站的功能与实现，参见 *[设计说明](/design/)*（如有）；
+关于我本人的信息与联系方式，参见 *[me 页面](/me/)*；
+查看最新内容，参见 *[Changelog](/changelog/)*，或订阅 [<em>Newsletter</em>](https://v2eth.substack.com/) ([归档](/newsletter/))。
 
-<span class="smallcaps">功能</span>：网站支持 *暗色模式* (<span class="dark-mode-selector-inline"></span>)、*阅读模式* (<span class="reader-mode-selector-inline"></span>)、*禁用弹窗* (<span class="extracts-mode-selector-inline"></span>) 以及 *搜索* (<span class="search-mode-selector-inline"></span>)，使用右上角的浮动工具栏 (<span class="toolbar-mode-selector-inline"></span>) 即可切换；更多信息请参见 [*帮助页面*](/help){.link-annotated-not}。
+<span class="smallcaps">功能</span>：网站支持 *暗色模式* (<span class="dark-mode-selector-inline"></span>)、*阅读模式* (<span class="reader-mode-selector-inline"></span>)、*禁用弹窗* (<span class="extracts-mode-selector-inline"></span>) 以及 *搜索* (<span class="search-mode-selector-inline"></span>)，使用右上角的浮动工具栏 (<span class="toolbar-mode-selector-inline"></span>) 即可切换；更多信息请参见 [*帮助页面*](/help/){.link-annotated-not}。
 <!-- NOTE: this </index> page rewrites titles to condense them and make them shorter, for more uniform solid blocks of text and to improve the layout of multi-column rendering. All the titles in a section should be similar lengths, and not be long enough to trigger wrapping! We want to put our best and most elegant foot forward to readers arriving at Gwern.net for the first time... -->
 </div>
 
 # Newsletter
 
-- [最新 (2026-02-09)](/2026/newsletter-2026-02-09)
+- [最新 (2026-02-09)](/newsletter/2026/newsletter-2026-02-09/)
 - [Newsletter 归档](/newsletter/)
 - [主题索引](/newsletter/topics)
 
 # 加密经济学
 
-- [货币的历史: 从金本位到区块链](/blockchain/sound-money)
-- [Gitcoin Grants: 公共物品融资机制](/blockchain/gitcoin-grants)
-- [当屠龙者成为恶龙](/blockchain/dragon-slayer-become-the-dragon)
-- [Social Money: 代币化你的时间和才能](/blockchain/uniswap-social-money)
+- [货币的历史: 从金本位到区块链](/blockchain/sound-money/)
+- [Gitcoin Grants: 公共物品融资机制](/blockchain/gitcoin-grants/)
+- [当屠龙者成为恶龙](/blockchain/dragon-slayer-become-the-dragon/)
+- [Social Money: 代币化你的时间和才能](/blockchain/uniswap-social-money/)
 
 # 计算机科学
 
-- [改进](/improvement)
-- [开源许可证演化](/Evolutionary-Licenses)
-- [匿名的死亡笔记](/death-note-anonymity)
+- [改进](/improvement/)
+- [开源许可证演化](/Evolutionary-License/)
+- [匿名的死亡笔记](/death-note-anonymity/)
 
 # 统计学
 
-- [Notes](/Notes)
-- [Google 产品关闭预测](/google-shutdowns)
-- [Google Alerts 统计](/Google-Alerts)
-- [HN 统计分析](/HN)
+- [Notes](/Notes/)
+- [Google 产品关闭预测](/google-shutdowns/)
+- [Google Alerts 统计](/google-alerts/)
+- [HN 统计分析](/HN/)
 
 # 文化哲学
 
-- [resorter](/resorter)
-- [间隔重复学习](/spaced-repetition-learning)
-- [沙](/Sand)
-- [版权](/Copyright)
+- [resorter](/resorter/)
+- [间隔重复学习](/spaced-repetition/)
+- [沙](/Sand/)
+- [版权](/Copyright/)
 
 
 # 站点导航
 
-- [关于](/About)
-- [变更日志](/Changelog)
-- [链接](/Links)
-- [设计](/design)
-- [个人信息](/me)
+- [关于](/about/)
+- [变更日志](/changelog/)
+- [链接](/Links/)
+- [设计](/design/)
+- [个人信息](/me/)
 
 
 
