@@ -21,7 +21,6 @@ import qualified Data.Map.Strict as M (empty, insert, lookup, Map)
 import Text.Read (readMaybe)
 
 import Data.Text.Titlecase (titlecase)
-import Debug.Trace (trace)
 
 import Text.Pandoc (Inline(..), Block(..), Pandoc(Pandoc), nullAttr, readerExtensions, runPure, readHtml, def, runPure, writeHtml5String, pandocExtensions, nullMeta, Format(..)) -- Caption(Caption),
 import Text.Pandoc.Walk (walk, walkM)
@@ -450,7 +449,6 @@ completionProgressSpan n s  = Span ("", ["completion-status"], [("progress-perce
 addDropCap :: String -> Pandoc -> Pandoc
 addDropCap cssExt doc@(Pandoc meta blocks)
   | "dropcaps-" `isPrefixOf` cssExt =
-      trace ("addDropCap called with: " ++ cssExt) $
       let style = if "dropcaps-" `isPrefixOf` cssExt
                   then T.replace "dropcaps-" "dropcap-" (T.pack cssExt)
                   else T.pack cssExt
@@ -460,7 +458,6 @@ addDropCap cssExt doc@(Pandoc meta blocks)
 addDropCapToBlocks :: T.Text -> [Block] -> [Block]
 addDropCapToBlocks style (Para (Str t : restInlines) : restBlocks)
   | not (T.null t) =
-    trace ("Matched Para with Str: " ++ show t) $
     let firstChar = T.head t
 
         restText = T.tail t
@@ -482,4 +479,3 @@ addDropCapToBlocks style (Para (Str t : restInlines) : restBlocks)
          Left _ -> Para (Str t : restInlines) : restBlocks
 addDropCapToBlocks style (block : restBlocks) = block : addDropCapToBlocks style restBlocks
 addDropCapToBlocks _ [] = []
-

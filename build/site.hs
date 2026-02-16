@@ -195,14 +195,6 @@ main =
                  route $ constRoute "design/index.html"
                  compile compileMarkdown
 
-             match "design-graveyard.md" $ do
-                 -- 保持原 URL /design-graveyard 继续可访问，同时兼容旧的 .html 链接
-                 route $ constRoute "design-graveyard/index.html"
-                 compile compileMarkdown
-             version "legacy-html" $ match "design-graveyard.md" $ do
-                 route $ constRoute "design-graveyard.html"
-                 compile compileMarkdown
-
              version "alias-changelog" $ match "Changelog copy.md" $ do
                  route $ constRoute "changelog/index.html"
                  compile compileMarkdown

@@ -92,14 +92,15 @@ require_dependency cabal "brew install ghc cabal-install  # 或通过 https://ww
 
 # 1. 转换格式 (如果不跳过)
 if [ "$SKIP_CONVERT" = false ]; then
-    CONVERTER="$PROJECT_ROOT/scripts/convert_to_page.py"
-    if [ ! -f "$CONVERTER" ]; then
-        echo "[1/4] 未找到转换脚本: $CONVERTER"
-        echo "跳过格式转换（可用 --skip-convert 显式跳过）"
-    elif [ ! -d "$PROJECT_ROOT/_posts" ]; then
-        echo "[1/4] 未找到 _posts/ 目录"
-        echo "跳过格式转换（当前仓库可能不包含 Markdown 输入源）"
+    if [ ! -d "$PROJECT_ROOT/_posts" ]; then
+        echo "[1/4] 未检测到 _posts/ 目录，跳过格式转换"
+        echo "      （当前仓库不使用 Daily Intel 输入源）"
     else
+        CONVERTER="$PROJECT_ROOT/scripts/convert_to_page.py"
+        if [ ! -f "$CONVERTER" ]; then
+            echo "[1/4] 检测到 _posts/，但未找到转换脚本: $CONVERTER"
+            echo "      跳过格式转换（如需转换，请恢复该脚本）"
+        else
         echo "[1/4] 转换日报格式..."
         cd "$PROJECT_ROOT"
 
@@ -121,6 +122,7 @@ if [ "$SKIP_CONVERT" = false ]; then
                 echo "警告: 未找到日报文件"
                 echo "跳过转换步骤"
             fi
+        fi
         fi
     fi
 else
