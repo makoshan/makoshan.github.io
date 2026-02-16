@@ -26,7 +26,7 @@ import Hakyll (compile, composeRoutes, constField, fromGlob, -- symlinkFileCompi
                defaultHakyllWriterOptions, getRoute, gsubRoute, hakyll, idRoute, itemIdentifier,
                loadAndApplyTemplate, match, modificationTimeField, mapContext,
                pandocCompilerWithTransformM, route, setExtension, pathField, preprocess, boolField, toFilePath,
-               templateCompiler, version, Compiler, Context, Item, unsafeCompiler, noResult, getUnderlying, escapeHtml, (.&&.), (.||.), complement, constRoute)
+               templateCompiler, version, customRoute, Compiler, Context, Item, unsafeCompiler, noResult, getUnderlying, escapeHtml, (.&&.), (.||.), complement, constRoute)
 import qualified Hakyll (Metadata)
 import Text.Pandoc (nullAttr, runPure, runWithDefaultPartials, compileTemplate,
                     def, pandocExtensions, readerExtensions, readMarkdown, writeHtml5String,
@@ -177,8 +177,13 @@ main =
                    gsubRoute " " (const "-") `composeRoutes`
                    setExtension "html"
 
-             let toIndexRoute =
-                   gsubRoute "\\.html$" (const "/index.html") `composeRoutes` pageRoute
+             let toIndexRoute = customRoute $ \ident ->
+                   let p0 = toFilePath ident
+                       p1 = replace "_posts/" "posts/" p0
+                       p2 = delete "," p1
+                       p3 = delete "'" p2
+                       p4 = replace " " "-" p3
+                   in dropExtension p4 ++ "/index.html"
 
              -- A few repo-local pages are referenced by the navbar/homepage using
              -- canonical, lowercase Gwern-style URLs. Provide those routes here
@@ -191,16 +196,29 @@ main =
                  route $ constRoute "changelog/index.html"
                  compile compileMarkdown
 
+             version "alias-about" $ match "about.md" $ do
+                 route $ constRoute "About/index.html"
+                 compile compileMarkdown
+
              if null args'
                  then do
                  match targetsMd $ do
+                   route pageRoute
+                   compile compileMarkdown
+                 version "dir-url" $ match targetsMd $ do
                    route toIndexRoute
                    compile compileMarkdown
                  match targetsPage $ do
+                   route pageRoute
+                   compile compileMarkdown
+                 version "dir-url" $ match targetsPage $ do
                    route toIndexRoute
                    compile compileMarkdown
                  else do
                  match targetsSingle $ do
+                   route pageRoute
+                   compile compileMarkdown
+                 version "dir-url" $ match targetsSingle $ do
                    route toIndexRoute
                    compile compileMarkdown
 
