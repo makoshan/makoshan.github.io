@@ -13,6 +13,33 @@ index: True
 ...
 
 ::: {#newest-list .columns}
+-   [`从天外之金到现代钢铁文明`{=html}](/blog/2026/steel-history-progress-studies-从天外之金到钢铁文明 "Original URL: <https://www.youtube.com/watch?v=SCf44d7txcA>"){.link-modified-recently-not
+    .icon-not}
+
+-   [`飞行汽车在哪里？进步、停滞与未来`{=html}](/blog/2026/where-is-my-flying-car-进步停滞与飞行汽车 "Original URL: <https://blog.rootsofprogress.org/where-is-my-flying-car>"){.link-modified-recently-not
+    .icon-not}
+
+-   [`为什么自行车来得这么晚？`{=html}](/blog/2026/why-did-we-wait-so-long-for-the-bicycle-为什么自行车来得这么晚 "Original URL: <https://blog.rootsofprogress.org/why-did-we-wait-so-long-for-the-bicycle>"){.link-modified-recently-not
+    .icon-not}
+
+-   [`铁：从神话到日常`{=html}](/blog/2026/iron-from-mythical-to-mundane-铁从神话到日常 "Original URL: <https://blog.rootsofprogress.org/iron-from-mythical-to-mundane>"){.link-modified-recently-not
+    .icon-not}
+
+-   [`即时石材：只需加水`{=html}](/blog/2026/instant-stone-just-add-water-即时石材只需加水 "Original URL: <https://blog.rootsofprogress.org/instant-stone-just-add-water>"){.link-modified-recently-not
+    .icon-not}
+
+-   [`我们需要一门进步科学：Progress Studies 议程`{=html}](/blog/2026/new-science-of-progress-我们需要一门进步科学 "Original URL: <https://www.theatlantic.com/science/archive/2019/07/we-need-new-science-progress/594946/>"){.link-modified-recently-not
+    .icon-not}
+
+-   [`进步研究资源导读：从理念到行动网络`{=html}](/blog/2026/progress-studies-resources-进步研究资源导读 "Original URL: <https://rootsofprogress.notion.site/Resources-on-Progress-Studies-182847fba3784db297d719b0831ca429>"){.link-modified-recently-not
+    .icon-not}
+
+-   [`科学进步如何发生：范式转移与革命`{=html}](/blog/2026/scientific-advancement-科学进步如何发生 "Original URL: <https://fs.blog/how-scientific-advancement-happens/>"){.link-modified-recently-not
+    .icon-not}
+
+-   [`聪明决策：不靠运气的判断系统`{=html}](/blog/2026/smart-decisions-决策不靠运气 "Original URL: <https://fs.blog/smart-decisions/>"){.link-modified-recently-not
+    .icon-not}
+
 -   [`加速学习：从输入到复利记忆`{=html}](/blog/2026/learning-加速学习与记忆 "Original URL: <https://fs.blog/learning/>"){.link-modified-recently-not
     .icon-not}
 

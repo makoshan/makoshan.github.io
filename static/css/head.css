@@ -1246,7 +1246,7 @@ p.empty-graf {
 }
 
 .markdownBody p:not(.first-graf) {
-    text-indent: var(--text-indent);
+    text-indent: 0;
 }
 
 /*  Prevent inheritance of indentation property.

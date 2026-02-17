@@ -1,4 +1,5 @@
 ---
+title: 加速学习：从“知道”到“会用”
 description: Farnam Street《Accelerated Learning》中文重构：学习障碍、学习来源、费曼技巧与间隔重复。
 tags: learning
 created: 17 Feb 2026

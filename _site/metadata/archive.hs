@@ -1015,6 +1015,9 @@
   )
 , ( "http://dee.su/liberte" , Left 61080 )
 , ( "http://dee.su/uploads/baal.html" , Left 61080 )
+, ( "http://deirdremccloskey.org/docs/pdf/ScandinavianEHR2016.pdf"
+  , Left 61088
+  )
 , ( "http://deming.org/index.cfm?content=653" , Left 61080 )
 , ( "http://dialnet.unirioja.es/servlet/articulo?codigo=3425319"
   , Left 61080
@@ -1226,6 +1229,9 @@
   )
 , ( "http://findarticles.com/p/articles/mi_m1200/is_21_157/ai_62685139/"
   , Left 61080
+  )
+, ( "http://firearmshistory.blogspot.com/2014/09/metals-used-in-firearms-i.html"
+  , Left 61088
   )
 , ( "http://firstmonday.org/htbin/cgiwrap/bin/ojs/index.php/fm/article/view/1765/1645"
   , Left 61080
@@ -4154,6 +4160,9 @@
 , ( "http://www.cell.com/current-biology/retrieve/pii/S0960982209011683"
   , Left 61080
   )
+, ( "http://www.cement.org/cement-concrete-applications"
+  , Left 61088
+  )
 , ( "http://www.channel4.com/news/drugs-dark-web-atlantis-silk-road-police-fbi"
   , Left 61080
   )
@@ -4401,6 +4410,7 @@
 , ( "http://www.e-ipi.net/isri/_media/publications:ag-09-01.pdf"
   , Left 61080
   )
+, ( "http://www.ecomodernism.org/manifesto-english" , Left 61088 )
 , ( "http://www.econ.ed.ac.uk/papers/Swiss_Iod_Educ.pdf"
   , Left 61080
   )
@@ -7175,6 +7185,12 @@
 , ( "https://80000hours.org/problem-profiles/preventing-catastrophic-pandemics/"
   , Left 61088
   )
+, ( "https://a16z.com/2020/04/18/its-time-to-build/" , Left 61088 )
+, ( "https://a16z.com/2022/01/14/building-american-dynamism-2/"
+  , Left 61088
+  )
+, ( "https://a16z.com/ai-will-save-the-world/" , Left 61088 )
+, ( "https://abundance.institute/" , Left 61088 )
 , ( "https://addons.mozilla.org/en-US/firefox/addon/aboutme/"
   , Left 61080
   )
@@ -7293,6 +7309,9 @@
   , Left 61088
   )
 , ( "https://asktog.com/atc/the-third-user/" , Left 61080 )
+, ( "https://asteriskmag.com/issues/01/how-to-prevent-the-next-pandemic"
+  , Left 61088
+  )
 , ( "https://augmentingcognition.com/ltm.html" , Left 61086 )
 , ( "https://aur.archlinux.org/packages/anki20-bin" , Left 61086 )
 , ( "https://aur.archlinux.org/packages/mnemosyne" , Left 61086 )
@@ -7302,6 +7321,7 @@
 , ( "https://baremetrics.com/blog/hacker-news-1500-recurring-revenue"
   , Left 61086
   )
+, ( "https://benjaminreinhardt.com/parpa" , Left 61088 )
 , ( "https://bentilly.blogspot.com/2009/09/teaching-linear-algebra.html"
   , Left 61086
   )
@@ -7335,6 +7355,9 @@
   , Left 61088
   )
 , ( "https://blockonomi.com/sound-money-bitcoin/" , Left 59618 )
+, ( "https://blog.boomsupersonic.com/why-the-world-needs-supersonic-flight-28b4b356c18b"
+  , Left 61088
+  )
 , ( "https://blog.datadive.net/which-topics-get-the-upvote-on-hacker-news/"
   , Left 61086
   )
@@ -7353,11 +7376,60 @@
 , ( "https://blog.rjmetrics.com/2012/10/24/how-to-get-on-the-front-page-of-hacker-news/"
   , Left 61086
   )
+, ( "https://blog.rootsofprogress.org/books/a-culture-of-growth"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/books/concrete-planet"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/books/steel-from-mine-to-mill"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/books/the-epic-of-steel"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/books/where-is-my-flying-car"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/cement-redux" , Left 61088 )
+, ( "https://blog.rootsofprogress.org/instant-stone-just-add-water"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/iron-from-mythical-to-mundane"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/nomad-life" , Left 61088 )
+, ( "https://blog.rootsofprogress.org/one-mans-junk" , Left 61088 )
+, ( "https://blog.rootsofprogress.org/out-of-whole-cloth"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/summary-the-rise-and-fall-of-american-growth"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/the-idea-of-progress"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/there-are-no-natural-resources"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/where-is-my-flying-car"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/why-ac-won" , Left 61088 )
+, ( "https://blog.rootsofprogress.org/why-did-we-wait-so-long-for-the-bicycle"
+  , Left 61088
+  )
+, ( "https://blog.rootsofprogress.org/why-did-we-wait-so-long-for-the-cotton-gin"
+  , Left 61088
+  )
 , ( "https://blog.waleedkhan.name/smash-training-retrospective/"
   , Left 61086
   )
 , ( "https://blog.wearewizards.io/the-hacker-news-effect-examined"
   , Left 61086
+  )
+, ( "https://blog.withedge.com/p/nytimes-openai-fair-use-training-ai"
+  , Left 61088
   )
 , ( "https://blog.youtube/news-and-events/five-stars-dominate-ratings/"
   , Left 61086
@@ -7374,6 +7446,9 @@
 , ( "https://book.douban.com/subject/35375504/" , Left 59618 )
 , ( "https://book.webtypography.net/" , Left 61080 )
 , ( "https://book.webtypography.net/Web-Typography_Numerals-and-tables.pdf"
+  , Left 61088
+  )
+, ( "https://bounded-regret.ghost.io/more-is-different-for-ai/"
   , Left 61088
   )
 , ( "https://brooksreview.net/2014/01/i-see-you/" , Left 61086 )
@@ -7397,6 +7472,7 @@
 , ( "https://catalog.caida.org/details/paper/2005_fingerprinting/"
   , Left 61086
   )
+, ( "https://cayimby.org/" , Left 61088 )
 , ( "https://cbmm.mit.edu/sites/default/files/publications/CBMM%20Memo%20068-On%20Forgetting%20-%20June%2018th%202017%20v2.pdf"
   , Left 61086
   )
@@ -7767,19 +7843,25 @@
   )
 , ( "https://f1000research.com/articles/3-82/v1" , Left 61086 )
 , ( "https://fatebook.io/" , Left 61088 )
+, ( "https://fee.org/articles/the-great-enrichment-was-built-on-ideas-not-capital/"
+  , Left 61088
+  )
 , ( "https://files.eric.ed.gov/fulltext/ED039222.pdf"
   , Left 61086
   )
 , ( "https://files.eric.ed.gov/fulltext/ED536925.pdf"
   , Left 61086
   )
+, ( "https://finmoorhouse.com/writing/clean-air/" , Left 61088 )
 , ( "https://firecracker-microvm.github.io/" , Left 61080 )
+, ( "https://foresight.org/" , Left 61088 )
 , ( "https://forum.quantifiedself.com/thread-zeo-shutting-down-export-your-data?pid=3373#pid3373"
   , Left 61080
   )
 , ( "https://forum.quantifiedself.com/thread-zeo-shutting-down-export-your-data?pid=3412#pid3412"
   , Left 61080
   )
+, ( "https://foundersfund.com/the-future/" , Left 61088 )
 , ( "https://frank.itlab.us/forgetting/mtsu_forgetting/#II.%20Decay%20Theory"
   , Left 61086
   )
@@ -7790,6 +7872,70 @@
   , Left 61080
   )
 , ( "https://fs.blog/" , Left 61088 )
+, ( "https://fs.blog/2009/07/an-introduction-to-decision-making/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2012/10/master-the-fundamentals/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2012/11/learning-from-reading/" , Left 61088 )
+, ( "https://fs.blog/2012/11/philosophy-of-responsibility/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2013/01/how-people-learn/" , Left 61088 )
+, ( "https://fs.blog/2013/04/a-two-step-process-for-making-effective-decisions/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2013/07/make-better-decisions/" , Left 61088 )
+, ( "https://fs.blog/2013/10/inversion/" , Left 61088 )
+, ( "https://fs.blog/2014/02/decision-journal/" , Left 61088 )
+, ( "https://fs.blog/2015/02/albert-einstein-learning/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2015/02/van-gogh-letters-paint/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2015/08/william-deresiewicz-learn-how-to-think/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2015/11/map-and-territory/" , Left 61088 )
+, ( "https://fs.blog/2015/12/knowledge-makes-everything-simpler/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2015/12/steven-pinker-broad-education/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2016/04/second-order-thinking/" , Left 61088 )
+, ( "https://fs.blog/2016/08/multiplicative-systems/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2016/10/charles-darwins-reflections-mind/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2016/10/iverson-cure-for-the-common-mba/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2017/01/richard-restak-mozarts-brain/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2017/03/nietzsche-on-mental-models/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2017/05/galilean-relativity-invasion-scotland/"
+  , Left 61088
+  )
+, ( "https://fs.blog/2018/09/decision-matrix/" , Left 61088 )
+, ( "https://fs.blog/2019/01/how-not-to-be-stupid/" , Left 61088 )
+, ( "https://fs.blog/2019/09/how-to-improve-your-judgment/"
+  , Left 61088
+  )
+, ( "https://fs.blog/asking-questions/" , Left 61088 )
+, ( "https://fs.blog/cognitive-biases/" , Left 61088 )
+, ( "https://fs.blog/deliberate-practice/" , Left 61088 )
+, ( "https://fs.blog/how-scientific-advancement-happens/"
+  , Left 61088
+  )
+, ( "https://fs.blog/learning/" , Left 61088 )
 , ( "https://fs.blog/mental-models/" , Left 61088 )
 , ( "https://fs.blog/mental-models/#general_thinking_concepts"
   , Left 61088
@@ -7806,6 +7952,11 @@
   , Left 61088
   )
 , ( "https://fs.blog/mental-models/#systems" , Left 61088 )
+, ( "https://fs.blog/positioning/" , Left 61088 )
+, ( "https://fs.blog/reflection/" , Left 61088 )
+, ( "https://fs.blog/smart-decisions/" , Left 61088 )
+, ( "https://fs.blog/the-knowledge-project/" , Left 61088 )
+, ( "https://fs.blog/thinking-in-bets/" , Left 61088 )
 , ( "https://gameprogrammingpatterns.com/" , Left 61088 )
 , ( "https://gameprogrammingpatterns.com/bytecode.html"
   , Left 61088
@@ -7837,6 +7988,7 @@
 , ( "https://genedan.com/no-126-four-years-of-spaced-repetition/"
   , Left 61086
   )
+, ( "https://geology.com/rocks/limestone.shtml" , Left 61088 )
 , ( "https://getd.libs.uga.edu/pdfs/sutherland_pierre_201212_ma.pdf"
   , Left 61086
   )
@@ -7938,6 +8090,10 @@
   , Left 61086
   )
 , ( "https://globalguerrillas.typepad.com/" , Left 61086 )
+, ( "https://goodscienceproject.org/" , Left 61088 )
+, ( "https://goodscienceproject.org/articles/a-progress-studies-history-of-early-mit-part-1-training-the-engineers-who-built-the-country/"
+  , Left 61088
+  )
 , ( "https://googlesystem.blogspot.com/2013/07/google-alerts-drops-rss-feeds.html"
   , Left 61086
   )
@@ -7996,6 +8152,9 @@
   )
 , ( "https://ieeexplore.ieee.org/ielx5/6/22144/01030991.pdf?tp=&arnumber=1030991&isnumber=22144"
   , Left 61080
+  )
+, ( "https://ifp.org/the-case-for-clinical-trial-abundance/"
+  , Left 61088
   )
 , ( "https://ignorethecode.net/blog/2010/04/20/footnotes/"
   , Left 61080
@@ -8108,7 +8267,14 @@
 , ( "https://jtauber.com/blog/2008/02/10/a_new_kind_of_graded_reader/"
   , Left 61086
   )
+, ( "https://juliadewahl.com/nuclear-energy-past-present-future"
+  , Left 61088
+  )
+, ( "https://karpathy.ai/zero-to-hero.html" , Left 61088 )
 , ( "https://kb.mozillazine.org/Browser.send_pings" , Left 61087 )
+, ( "https://kinetic.reviews/p/rejecting-our-faustian-bargain"
+  , Left 61088
+  )
 , ( "https://kpreid.github.io/mathquiz/mathquiz.html"
   , Left 61086
   )
@@ -8153,6 +8319,9 @@
   )
 , ( "https://lobste.rs/s/9wfpsd/my_ordinary_life_improvements_since"
   , Left 61086
+  )
+, ( "https://lukemuehlhauser.com/industrial-revolution/"
+  , Left 61088
   )
 , ( "https://luminous.elcenia.com/" , Left 61086 )
 , ( "https://luminous.elcenia.com/all2.shtml" , Left 61086 )
@@ -8206,6 +8375,7 @@
 , ( "https://market.android.com/details?id=quazar.BrainNBack"
   , Left 61080
   )
+, ( "https://marketurbanismreport.com/" , Left 61088 )
 , ( "https://mason.gmu.edu/~lsmithg/deathfugue.html" , Left 61088 )
 , ( "https://mason.gmu.edu/~rhanson/greatfilter.html"
   , Left 61088
@@ -8216,6 +8386,9 @@
   )
 , ( "https://medicalxpress.com/news/2012-03-neurobiology-superiority-spaced-massed.html"
   , Left 61086
+  )
+, ( "https://medium.com/@antonhowes/is-innovation-in-human-nature-48c2578e27ba"
+  , Left 61088
   )
 , ( "https://medium.com/galaxy-digital-research/on-sound-money-afc0619697b3"
   , Left 59618
@@ -8253,6 +8426,9 @@
 , ( "https://mikepower.pressfolios.com/" , Left 61080 )
 , ( "https://millercenter.org/the-presidency/presidential-speeches/march-23-1962-address-university-california-berkeley#dp-expandable-text"
   , Left 61086
+  )
+, ( "https://mineralseducationcoalition.org/minerals-database/cement/"
+  , Left 61088
   )
 , ( "https://minimaxir.com/2014/02/hacking-hacker-news/"
   , Left 61086
@@ -8373,6 +8549,7 @@
   , Left 61086
   )
 , ( "https://news.ycombinator.com/threads?id=gwern" , Left 61086 )
+, ( "https://newscience.org/nih/" , Left 61088 )
 , ( "https://newshacker.me/" , Left 61086 )
 , ( "https://newshacker.me/story?id=46885841" , Left 61080 )
 , ( "https://newshacker.me/story?id=46889710" , Left 61080 )
@@ -8392,6 +8569,7 @@
 , ( "https://newshacker.me/story?id=46943568" , Left 61080 )
 , ( "https://newshacker.me/story?id=46943752" , Left 61080 )
 , ( "https://newshacker.me/story?id=46944245" , Left 61080 )
+, ( "https://nickbostrom.com/fable/dragon" , Left 61088 )
 , ( "https://no-www.org/" , Left 61087 )
 , ( "https://normaldeviate.wordpress.com/2013/02/16/rise-of-the-machines/"
   , Left 61088
@@ -8453,6 +8631,7 @@
 , ( "https://patents.google.com/patent/US20150124107"
   , Left 61086
   )
+, ( "https://patrickcollison.com/fast" , Left 61088 )
 , ( "https://paulgraham.com/gh.html" , Left 61086 )
 , ( "https://pay.reddit.com/r/SheepMarketplace/comments/1o6wqq/everyones_opinion_on_smp_as_of_yet/ccplp3e"
   , Left 61080
@@ -8560,6 +8739,13 @@
 , ( "https://proceedings.neurips.cc/paper/2015/file/7eacb532570ff6858afd2723755ff790-Paper.pdf"
   , Left 61086
   )
+, ( "https://progress.institute/" , Left 61088 )
+, ( "https://progress.institute/progress-is-a-policy-choice/"
+  , Left 61088
+  )
+, ( "https://progressforum.org/posts/soKCPobaxvxoboCdn/one-process"
+  , Left 61088
+  )
 , ( "https://pshares.org/blog/writing-is-like-baseball/"
   , Left 61088
   )
@@ -8579,6 +8765,9 @@
   , Left 61086
   )
 , ( "https://publicdomainreview.org/" , Left 61080 )
+, ( "https://publicdomainreview.org/2018/01/24/the-dreams-of-an-inventor-in-1420/"
+  , Left 61088
+  )
 , ( "https://publishing.cdlib.org/ucpressebooks/view?docId=ft6489p0n6&brand=ucpress"
   , Left 61088
   )
@@ -8604,9 +8793,18 @@
 , ( "https://reactormag.com/the-colonel-peter-watts/"
   , Left 61088
   )
+, ( "https://read.readwise.io/search/read/01gywyk572j6rsj6b74fqd3rqt"
+  , Left 61088
+  )
+, ( "https://reason.com/2024/04/06/progress-rediscovered/"
+  , Left 61088
+  )
 , ( "https://reddragdiva.dreamwidth.org/556568.html" , Left 61086 )
 , ( "https://refubium.fu-berlin.de/bitstream/handle/fub188/4667/diss_joahnnaonken.pdf?sequence=1&isAllowed=y&save=y"
   , Left 61086
+  )
+, ( "https://regencyredingote.wordpress.com/2010/03/05/of-velocipedes-and-draisiennes-the-rise/"
+  , Left 61088
   )
 , ( "https://replicationindex.com/2016/04/18/is-replicability-report-ego-depletionreplicability-report-of-165-ego-depletion-articles/"
   , Left 61086
@@ -8643,6 +8841,64 @@
 , ( "https://ronnowpoetry.com/contents/anonymous/NamesoftheHare.html"
   , Left 61088
   )
+, ( "https://rootsofprogress.org/a-new-philosophy-of-progress"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/against-review-and-approval"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/books/a-culture-of-growth"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/books/enlightenment-now"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/books/progress-ten-reasons-to-look-forward-to-the-future"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/books/the-future-and-its-enemies"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/books/the-great-stagnation"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/books/where-is-my-flying-car"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/devanney-on-the-nuclear-flop"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/enlightenment-now" , Left 61088 )
+, ( "https://rootsofprogress.org/environment-as-infrastructure"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/four-lenses-on-ai-risks"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/history-of-factory-safety"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/how-to-end-stagnation"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/instant-stone-just-add-water"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/progress-humanism-agency"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/progress-studies-a-moral-imperative"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/solutionism-on-ai-safety"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/towards-a-philosophy-of-safety"
+  , Left 61088
+  )
+, ( "https://rootsofprogress.org/where-is-my-flying-car"
+  , Left 61088
+  )
 , ( "https://rs.io/anki-tips/" , Left 61086 )
 , ( "https://s3.documentcloud.org/documents/804396/some-thoughts-on-education-and-political.pdf"
   , Left 61088
@@ -8664,6 +8920,9 @@
   )
 , ( "https://scienceblogs.com/developingintelligence/2008/10/03/training-the-mind-transfer-acr"
   , Left 61086
+  )
+, ( "https://scienceplusplus.org/metascience/index.html"
+  , Left 61088
   )
 , ( "https://scottaaronson.blog/" , Left 61088 )
 , ( "https://scottaaronson.blog/?p=1438" , Left 61088 )
@@ -8762,6 +9021,9 @@
 , ( "https://slatestarcodex.com/2017/09/18/book-review-mastering-the-core-teachings-of-the-buddha/"
   , Left 61088
   )
+, ( "https://slatestarcodex.com/2018/11/26/is-science-slowing-down-2/"
+  , Left 61088
+  )
 , ( "https://slatestarcodex.com/Stuff/DDThird_Edition.pdf"
   , Left 61088
   )
@@ -8792,6 +9054,7 @@
 , ( "https://stackoverflow.com/questions/357560/sorting-multiple-keys-with-unix-sort"
   , Left 61080
   )
+, ( "https://standupfornuclear.org/about-1" , Left 61088 )
 , ( "https://starwars.fandom.com/wiki/The_Crystal_Star"
   , Left 61088
   )
@@ -8832,6 +9095,9 @@
   )
 , ( "https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly#w_current-page"
   , Left 61080
+  )
+, ( "https://thebreakthrough.org/journal/climate-change-banned-words/big-oil-villains-climate-change"
+  , Left 61088
   )
 , ( "https://theconversation.com/intelligence-inheritance-three-genes-that-add-to-your-iq-score-31397"
   , Left 61088
@@ -8914,7 +9180,13 @@
 , ( "https://twitter.com/LAGFF/status/79223226525429761"
   , Left 61080
   )
+, ( "https://twitter.com/Noahpinion/status/1372255117810880514"
+  , Left 61088
+  )
 , ( "https://twitter.com/gavinandresen" , Left 61080 )
+, ( "https://twitter.com/jasoncrawford/status/1143622870477791233"
+  , Left 61088
+  )
 , ( "https://twitter.com/theshawwn/lists/machine-learning"
   , Left 61080
   )
@@ -8922,6 +9194,18 @@
   , Left 61080
   )
 , ( "https://ubc-emotionlab.ca/wp-content/uploads/2012/09/Schimmack-2012-Effect-of-Significance-on-Article-Credibility.pdf"
+  , Left 61088
+  )
+, ( "https://unchartedterritories.tomaspueyo.com/p/ai-and-the-future-of-work"
+  , Left 61088
+  )
+, ( "https://unchartedterritories.tomaspueyo.com/p/how-starship-will-change-humanity"
+  , Left 61088
+  )
+, ( "https://unchartedterritories.tomaspueyo.com/p/seaflooding"
+  , Left 61088
+  )
+, ( "https://unchartedterritories.tomaspueyo.com/p/transportation-technology-shapes-cities"
   , Left 61088
   )
 , ( "https://unicode.org/versions/Unicode6.0.0/ch06.pdf#page=15"
@@ -8959,6 +9243,9 @@
 , ( "https://vividness.live/protestant-buddhism" , Left 61088 )
 , ( "https://wallstreetcn.com/articles/3765251" , Left 61080 )
 , ( "https://wallstreetcn.com/livenews/3051816" , Left 61080 )
+, ( "https://warontherocks.com/2024/01/the-militarys-insistence-on-owning-commercial-intellectual-property-is-limiting-innovation/"
+  , Left 61088
+  )
 , ( "https://wci.llnl.gov/fac/heaf/" , Left 61080 )
 , ( "https://wci.llnl.gov/fac/site300/cff/index.html"
   , Left 61080
@@ -9383,6 +9670,40 @@
 , ( "https://works.bepress.com/laura_stambaugh/6/download/"
   , Left 61086
   )
+, ( "https://worksinprogress.co/" , Left 61088 )
+, ( "https://worksinprogress.co/issue/building-back-faster"
+  , Left 61088
+  )
+, ( "https://worksinprogress.co/issue/how-polyester-bounced-back"
+  , Left 61088
+  )
+, ( "https://worksinprogress.co/issue/how-we-fixed-the-ozone-layer"
+  , Left 61088
+  )
+, ( "https://worksinprogress.co/issue/making-energy-too-cheap-to-meter"
+  , Left 61088
+  )
+, ( "https://worksinprogress.co/issue/nanotechnologys-spring"
+  , Left 61088
+  )
+, ( "https://worksinprogress.co/issue/pandemic-prevention-as-fire-fighting"
+  , Left 61088
+  )
+, ( "https://worksinprogress.co/issue/scientific-slowdown-is-not-inevitable"
+  , Left 61088
+  )
+, ( "https://worksinprogress.co/issue/securing-posterity"
+  , Left 61088
+  )
+, ( "https://worksinprogress.co/issue/the-housing-theory-of-everything"
+  , Left 61088
+  )
+, ( "https://worksinprogress.co/issue/we-dont-know-how-to-fix-science"
+  , Left 61088
+  )
+, ( "https://worksinprogress.co/issue/why-we-didnt-get-a-malaria-vaccine-sooner/"
+  , Left 61088
+  )
 , ( "https://wwiiafterwwii.wordpress.com/2017/02/20/cleaning-up-after-wwii/"
   , Left 61088
   )
@@ -9390,6 +9711,12 @@
   , Left 61086
   )
 , ( "https://www.123test.com/iq-tests/" , Left 61086 )
+, ( "https://www.3blue1brown.com/topics/neural-networks"
+  , Left 61088
+  )
+, ( "https://www.aeaweb.org/articles?id=10.1257%2Fjel.49.2.326"
+  , Left 61088
+  )
 , ( "https://www.alanbeangallery.com/howitfelt-story.html"
   , Left 61088
   )
@@ -9424,6 +9751,7 @@
 , ( "https://www.apa.org/pubs/journals/releases/neu-24-5-563.pdf"
   , Left 61086
   )
+, ( "https://www.arcadiascience.com/" , Left 61088 )
 , ( "https://www.astralcodexten.com/" , Left 61088 )
 , ( "https://www.astralcodexten.com/p/open-thread-220"
   , Left 61087
@@ -9452,6 +9780,9 @@
 , ( "https://www.bookandsword.com/2017/12/09/how-much-did-a-shirt-really-cost-in-the-middle-ages/"
   , Left 61086
   )
+, ( "https://www.britannica.com/technology/wrought-iron"
+  , Left 61088
+  )
 , ( "https://www.businessinsider.com/bill-maris-explains-why-gv-didnt-invest-in-theranos-2015-10"
   , Left 61088
   )
@@ -9464,6 +9795,7 @@
 , ( "https://www.cdzjesenik.cz/APA_Poster_Lucas_May_2008.pdf"
   , Left 61086
   )
+, ( "https://www.centerforbuilding.org/" , Left 61088 )
 , ( "https://www.change.org/petitions/google-keep-google-reader-running"
   , Left 61080
   )
@@ -9523,6 +9855,9 @@
 , ( "https://www.complang.tuwien.ac.at/andi/arnold.pdf"
   , Left 61080
   )
+, ( "https://www.construction-physics.com/p/where-are-the-robotic-bricklayers"
+  , Left 61088
+  )
 , ( "https://www.consumerlab.com/reviews/melatonin-supplements/melatonin/"
   , Left 61080
   )
@@ -9532,6 +9867,7 @@
 , ( "https://www.control.gatech.edu/wp-content/uploads/2015/09/Schwarb-Nail-Schumacher-2015-Psych-Res.pdf"
   , Left 61086
   )
+, ( "https://www.convergentresearch.org/" , Left 61088 )
 , ( "https://www.corningware411.com/2014/04/microwaves-and-madness-my-microwave.html"
   , Left 61086
   )
@@ -9556,7 +9892,13 @@
 , ( "https://www.dailykos.com/stories/2011/03/01/951432/-War-on-Whistleblowers-Escalating"
   , Left 61086
   )
+, ( "https://www.darioamodei.com/essay/machines-of-loving-grace"
+  , Left 61088
+  )
 , ( "https://www.dcscience.net/Sellke-Bayarri-Berger-calibration-of-P-2001.pdf"
+  , Left 61088
+  )
+, ( "https://www.deseret.com/magazine/2022/10/6/23361530/freedom-and-abundance-and-population-growth-and-inflation"
   , Left 61088
   )
 , ( "https://www.designboom.com/technology/evolution-desk-harvard-innovation-lab-09-30-2014/"
@@ -9567,6 +9909,15 @@
   )
 , ( "https://www.dhs.gov/news/2013/11/18/ice-statement-record-senate-committee-homeland-security-and-governmental-affairs"
   , Left 61080
+  )
+, ( "https://www.discoursemagazine.com/?post_series=abundance"
+  , Left 61088
+  )
+, ( "https://www.discoursemagazine.com/culture-and-society/2023/02/20/making-transportation-faster-cheaper-and-safer/"
+  , Left 61088
+  )
+, ( "https://www.discoursemagazine.com/ideas/2022/12/07/we-need-an-abundance-agenda/"
+  , Left 61088
   )
 , ( "https://www.douban.com/note/694996695/" , Left 59618 )
 , ( "https://www.dwarkesh.com/p/gwern-branwen#%C2%A7transcript"
@@ -9586,6 +9937,17 @@
   , Left 61086
   )
 , ( "https://www.elephantinthebrain.com/" , Left 61086 )
+, ( "https://www.elidourado.com/p/50-years-supersonic-ban"
+  , Left 61088
+  )
+, ( "https://www.elidourado.com/p/dawn-of-geoengineering"
+  , Left 61088
+  )
+, ( "https://www.elidourado.com/p/geothermal" , Left 61088 )
+, ( "https://www.elidourado.com/p/move-the-needle-on-progress"
+  , Left 61088
+  )
+, ( "https://www.energyimpactcenter.org/" , Left 61088 )
 , ( "https://www.epiqsociety.net/get" , Left 61086 )
 , ( "https://www.epoetry.org/issues/issue8/text/poems/troupes1.htm"
   , Left 61088
@@ -9613,6 +9975,7 @@
 , ( "https://www.fadedpage.com/link.php?file=20160325.html#Page_287"
   , Left 61088
   )
+, ( "https://www.fallingwater.org/" , Left 61088 )
 , ( "https://www.fanfiction.net/s/10360716/1/The-Metropolitan-Man"
   , Left 61088
   )
@@ -9636,10 +9999,16 @@
 , ( "https://www.freaktakes.com/p/how-did-places-like-bell-labs-know"
   , Left 61088
   )
+, ( "https://www.freaktakes.com/p/what-should-new-age-research-organizations"
+  , Left 61088
+  )
 , ( "https://www.freecodecamp.org/news/lossless-web-navigation-with-trails-9cd48c0abb56/"
   , Left 61087
   )
 , ( "https://www.frisbys.news/" , Left 61086 )
+, ( "https://www.ft.com/content/653bbb26-8a22-4db3-b43d-c34a0b774303"
+  , Left 61088
+  )
 , ( "https://www.fullstackeconomics.com/24-charts-that-show-were-mostly-living-better-than-our-parents/"
   , Left 61086
   )
@@ -9722,6 +10091,7 @@
 , ( "https://www.hsdl.org/?view&did=20646" , Left 61080 )
 , ( "https://www.hse.gov.uk/pubns/web34.pdf" , Left 61088 )
 , ( "https://www.html-tidy.org/" , Left 61086 )
+, ( "https://www.humanprogress.org/" , Left 61088 )
 , ( "https://www.hxa.name/books/ecog/Eckermann-ConversationsOfGoethe.html"
   , Left 61088
   )
@@ -9781,6 +10151,7 @@
 , ( "https://www.lambiek.net/artists/c/crumb_charles.htm"
   , Left 61086
   )
+, ( "https://www.ldeming.com/longevityfaq" , Left 61088 )
 , ( "https://www.learningmedicinebook.com/" , Left 61086 )
 , ( "https://www.learningtheory.org/colt2009/papers/006.pdf"
   , Left 61086
@@ -9790,6 +10161,9 @@
   )
 , ( "https://www.lesswrong.com/" , Left 61080 )
 , ( "https://www.lesswrong.com/codex" , Left 61088 )
+, ( "https://www.lesswrong.com/posts/2zmxYKKsSaWWjALg2/levers-for-biological-progress-a-response-to-machines-of"
+  , Left 61088
+  )
 , ( "https://www.lesswrong.com/posts/32g89o7o7g3PGsQ2S/on-caring"
   , Left 61088
   )
@@ -10278,8 +10652,14 @@
 , ( "https://www.lesswrong.com/w/value-of-information"
   , Left 61088
   )
+, ( "https://www.liberalcurrents.com/the-case-for-abolishing-the-national-environmental-policy-act/"
+  , Left 61088
+  )
 , ( "https://www.librarything.com/work/13068" , Left 61080 )
 , ( "https://www.lightspeedmagazine.com/fiction/exhalation/"
+  , Left 61088
+  )
+, ( "https://www.livescience.com/44765-who-invented-the-bicycle.html"
   , Left 61088
   )
 , ( "https://www.llnl.gov/str/Baker.html" , Left 61080 )
@@ -10356,6 +10736,7 @@
   )
 , ( "https://www.nature.com/articles/tp201481" , Left 61088 )
 , ( "https://www.nber.org/papers/w13711" , Left 61086 )
+, ( "https://www.nber.org/papers/w15466" , Left 61088 )
 , ( "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1284369/pdf/12102132.pdf"
   , Left 61086
   )
@@ -10364,6 +10745,9 @@
   )
 , ( "https://www.newsweek.com/can-you-build-better-brain-66769"
   , Left 61086
+  )
+, ( "https://www.newthingsunderthesun.com/pub/bvmu4ol2/release/10"
+  , Left 61088
   )
 , ( "https://www.newworldencyclopedia.org/entry/Info:Main_Page"
   , Left 61086
@@ -10383,6 +10767,9 @@
 , ( "https://www.newyorker.com/magazine/2010/03/01/the-deflationist"
   , Left 61088
   )
+, ( "https://www.newyorker.com/magazine/2022/08/22/africas-cold-rush-and-the-promise-of-refrigeration"
+  , Left 61088
+  )
 , ( "https://www.newyorker.com/magazine/2024/01/29/the-woman-who-spent-five-hundred-days-in-a-cave"
   , Left 61086
   )
@@ -10397,6 +10784,12 @@
   )
 , ( "https://www.nngroup.com/articles/aesthetic-usability-effect/"
   , Left 61080
+  )
+, ( "https://www.noahpinion.blog/p/a-new-industrialist-roundup"
+  , Left 61088
+  )
+, ( "https://www.noahpinion.blog/p/progressives-need-to-embrace-progress"
+  , Left 61088
   )
 , ( "https://www.noisebridge.net/wiki/Compass_Vibro_Anklet"
   , Left 61080
@@ -10415,6 +10808,9 @@
   )
 , ( "https://www.nytimes.com/2002/01/17/business/stung-by-security-flaws-microsoft-makes-software-safety-a-top-goal.html"
   , Left 61086
+  )
+, ( "https://www.nytimes.com/2005/01/30/books/chapters/bicycle.html"
+  , Left 61088
   )
 , ( "https://www.nytimes.com/2007/05/08/health/08fat.html"
   , Left 61088
@@ -10485,7 +10881,16 @@
 , ( "https://www.nytimes.com/2019/03/08/sports/mlb-atlantic-league-rule-changes.html"
   , Left 61088
   )
+, ( "https://www.nytimes.com/2021/08/11/opinion/politics/we-need-to-build-our-way-out-of-this-mess.html"
+  , Left 61088
+  )
+, ( "https://www.nytimes.com/2021/09/19/opinion/supply-side-progressivism.html"
+  , Left 61088
+  )
 , ( "https://www.nytimes.com/2022/04/27/magazine/sports-betting-ads.html"
+  , Left 61088
+  )
+, ( "https://www.nytimes.com/2022/05/29/opinion/biden-liberalism-infrastructure-building.html"
   , Left 61088
   )
 , ( "https://www.nytimes.com/2022/08/05/opinion/effective-altruism-longtermism.html"
@@ -10495,6 +10900,9 @@
   , Left 61088
   )
 , ( "https://www.nytimes.com/by/kevin-roose" , Left 61088 )
+, ( "https://www.nytimes.com/interactive/2023/05/22/magazine/peter-attia-interview.html"
+  , Left 61088
+  )
 , ( "https://www.ojisanseiuchi.com/2016/03/12/JavaScript-in-Anki-cards/"
   , Left 61086
   )
@@ -10510,6 +10918,9 @@
   )
 , ( "https://www.paritybit.ca/blog/styling-external-links.html/"
   , Left 61087
+  )
+, ( "https://www.penguinrandomhouse.com/books/299646/taste-of-war-by-lizzie-collingham/"
+  , Left 61088
   )
 , ( "https://www.pnas.org/doi/10.1073/pnas.0905307106"
   , Left 61086
@@ -10544,6 +10955,9 @@
 , ( "https://www.popsci.com/deadly-splinter-antibiotic-resistance/"
   , Left 61088
   )
+, ( "https://www.popularmechanics.com/technology/infrastructure/a20722505/history-of-steel/"
+  , Left 61088
+  )
 , ( "https://www.predictious.com/" , Left 61080 )
 , ( "https://www.princeton.edu/~aconway/pdf/Kane2007nback.pdf"
   , Left 61080
@@ -10562,6 +10976,9 @@
   )
 , ( "https://www.psychologicalscience.org/journals/pspi/PSPI_9_3.pdf"
   , Left 61086
+  )
+, ( "https://www.rachellaudan.com/wp-content/uploads/2007/12/plea-for-culinary-modernism.pdf"
+  , Left 61088
   )
 , ( "https://www.rand.org/content/dam/rand/pubs/monographs/2011/RAND_MG1120.pdf"
   , Left 61086
@@ -10697,6 +11114,10 @@
 , ( "https://www.sigcis.org/files/SIGCISMC2010_001.pdf"
   , Left 61088
   )
+, ( "https://www.slowboring.com/p/energy-abundance" , Left 61088 )
+, ( "https://www.slowboring.com/p/ten-years-of-yimbyism-have-accomplished"
+  , Left 61088
+  )
 , ( "https://www.smithsonianmag.com/arts-culture/teller-reveals-his-secrets-100744801/"
   , Left 61086
   )
@@ -10710,6 +11131,7 @@
 , ( "https://www.statnews.com/2016/01/15/chipotle-foodborne-illnesses-cdc/"
   , Left 61086
   )
+, ( "https://www.strongtowns.org/" , Left 61088 )
 , ( "https://www.studystack.com/" , Left 61086 )
 , ( "https://www.supermemo.com/en/blog/application-of-a-computer-to-improve-the-results-obtained-in-working-with-the-supermemo-method"
   , Left 61086
@@ -10729,13 +11151,30 @@
 , ( "https://www.technologyreview.com/2019/06/27/238884/the-pentagon-has-a-laser-that-can-identify-people-from-a-distanceby-their-heartbeat/"
   , Left 61086
   )
+, ( "https://www.tf.uni-kiel.de/matwis/amat/iss/" , Left 61088 )
+, ( "https://www.thecgo.org/benchmark/vetocracy-the-costs-of-vetos-and-inaction/"
+  , Left 61088
+  )
+, ( "https://www.thecgo.org/research/bringing-nepa-back-to-basics/"
+  , Left 61088
+  )
+, ( "https://www.thecgo.org/research/energy-superabundance/"
+  , Left 61088
+  )
+, ( "https://www.thefai.org/" , Left 61088 )
 , ( "https://www.thefreelibrary.com/E+unibus+pluram%3A+television+and+U.S.+fiction.-a013952319"
   , Left 61088
   )
 , ( "https://www.theguardian.com/science/2017/feb/08/total-recall-the-people-who-never-forget"
   , Left 61086
   )
+, ( "https://www.thenewatlantis.com/publications/how-agriculture-system-works"
+  , Left 61088
+  )
 , ( "https://www.thetimes03jan2009.com/" , Left 59618 )
+, ( "https://www.theurbanist.org/2021/12/20/seattles-lead-on-single-stair-buildings/"
+  , Left 61088
+  )
 , ( "https://www.thewhitereview.org/feature/celan-reads-japanese/"
   , Left 61088
   )
@@ -10750,6 +11189,9 @@
   , Left 61087
   )
 , ( "https://www.uclalawreview.org/pdf/57-6-3.pdf" , Left 61086 )
+, ( "https://www.understandingai.org/p/large-language-models-explained-with"
+  , Left 61088
+  )
 , ( "https://www.unqualified-reservations.org/2007/08/james-burnhams-dante-politics-as-wish/"
   , Left 61088
   )
