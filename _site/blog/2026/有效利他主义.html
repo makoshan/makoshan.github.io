@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inlined head (no SSI): injected by Hakyll from static/include/inlined-head.html -->
+  <style id="inlined-styles-colors">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #fff;
+    --GW-body-text-color: #000;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #333;
+    --GW-text-selection-color: #fff;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #333;
+    --GW-body-link-hover-color: #888;
+    --GW-body-link-visited-color: #666;
+    --GW-body-link-inverted-color: #eee;
+    --GW-body-link-inverted-hover-color: #ccc;
+    --GW-body-link-inverted-visited-color: #ddd;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #ccc;
+    --GW-blockquote-border-color-level-two: #c4c4c4;
+    --GW-blockquote-border-color-level-three: #b3b3b3;
+    --GW-blockquote-border-color-level-four: #a6a6a6;
+    --GW-blockquote-background-color-level-one: #f8f8f8;
+    --GW-blockquote-background-color-level-two: #e6e6e6;
+    --GW-blockquote-background-color-level-three: #d8d8d8;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #bbb;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #ddd;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #ccc;
+    --GW-TOC-background-color: #f8f8f8;
+    --GW-TOC-collapse-button-text-color: #ccc;
+    --GW-TOC-collapse-button-text-hover-color: #fff;
+    --GW-TOC-collapse-button-color: rgba(248, 248, 248, 0.8);
+    --GW-TOC-collapse-button-hover-color: #ddd;
+    --GW-TOC-collapse-button-border-hover-color: #000;
+    --GW-TOC-link-hover-background-color: #ececec;
+    --GW-TOC-link-hover-color: #000;
+    --GW-TOC-link-hover-indicator-bar-color: #ccc;
+    --GW-TOC-number-color: #909090;
+    --GW-TOC-number-hover-color: #313131;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #eee;
+	--GW-collapse-disclosure-button-color: #eee;
+	--GW-collapse-disclosure-button-hover-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-color: #ddd;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #ccc;
+	--GW-collapse-disclosure-button-text-color: #bbb;
+	--GW-collapse-disclosure-button-text-hover-color: #fff;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #999;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #888;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #555;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #999;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #c4c4c4;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #888;
+    --GW-H2-border-color: #888;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #999;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #808080;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #888;
+    --GW-figure-caption-outline-color: #888;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #ddd;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #808080;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #aaa;
+    --GW-footnote-highlighted-border-color: #aaa;
+    --GW-footnotes-section-top-rule-color: #ccc;
+    --GW-footnote-backlink-border-color: #000;
+    --GW-footnote-backlink-border-hover-color: #999;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #999;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #aaa;
+    --GW-sidenote-border-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-color: #aaa;
+    --GW-sidenote-scrollbar-thumb-hover-color: #999;
+    --GW-sidenote-self-link-border-color: #aaa;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #666;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #000;
+    --GW-table-caption-border-color: #000;
+    --GW-table-row-horizontal-border-color: #000;
+    --GW-table-scrollbar-thumb-color: #aaa;
+    --GW-table-scrollbar-thumb-hover-color: #999;
+    --GW-table-scrollbar-border-color: #000;
+    --GW-table-column-heading-hover-background-color: #e2f0f2;
+    --GW-table-sorted-column-heading-background-color: #8bd0ed;
+    --GW-table-sorted-column-heading-text-color: #fff;
+    --GW-table-sorted-column-heading-text-shadow-color: #000;
+    --GW-table-zebra-stripe-alternate-row-background-color: #f6f6f6;
+    --GW-table-row-hover-outline-color: #000;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #c8c8c8;
+    --GW-code-element-background-color: #fafafa;
+    --GW-pre-element-border-color: #c8c8c8;
+    --GW-pre-element-background-color: #fafafa;
+    --GW-pre-element-scrollbar-track-color: #fafafa;
+    --GW-pre-element-scrollbar-thumb-color: #ccc;
+    --GW-pre-element-scrollbar-thumb-hover-color: #999;
+    --GW-code-block-line-highlight-background-color: #ffd;
+    --GW-code-block-line-highlight-border-color: #ddd;
+    --GW-code-block-line-number-color: #aaa;
+    --GW-code-block-line-number-divider-color: #ccc;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #1f1c1b;
+    --GW-syntax-highlight-color-attribute: #002561;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #666666;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #777;
+    --GW-syntax-highlight-color-comment: #77947b;
+    --GW-syntax-highlight-color-control-flow: #003900;
+    --GW-syntax-highlight-color-keyword: #002561;
+    --GW-syntax-highlight-color-operator: #002561;
+    --GW-syntax-highlight-color-special-char: #607880;
+    --GW-syntax-highlight-color-built-in: #002561;
+    --GW-syntax-highlight-color-function: #002561;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #bf0303;
+    --GW-syntax-highlight-color-error: #ff0000;
+    --GW-syntax-highlight-color-import: #777777;
+    --GW-syntax-highlight-color-special-string: #666666;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #f6f6f6;
+    --GW-math-block-background-color-flash: #fff;
+    --GW-math-block-scrollbar-border-color: #ccc;
+    --GW-math-block-scrollbar-thumb-color: #ccc;
+    --GW-math-block-scrollbar-thumb-hover-color: #999;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #000;
+    --GW-dropcaps-yinit-color: #0d0d0d;
+    --GW-dropcaps-yinit-text-shadow-color: #777;
+    --GW-dropcaps-de-zs-color: #1b1b1b;
+    --GW-dropcaps-cheshire-color: #191919;
+    --GW-dropcaps-kanzlei-color: #191919;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #909090;
+    --GW-admonition-note-background-color: #d8d8d8;
+    --GW-admonition-tip-left-border-color: #d8d8d8;
+    --GW-admonition-tip-background-color: #f0f0f0;
+    --GW-admonition-warning-left-border-color: #5a5a5a;
+    --GW-admonition-warning-background-color: #9a9a9a;
+    --GW-admonition-warning-text-color: #fff;
+    --GW-admonition-error-left-border-color: #2d2d2d;
+    --GW-admonition-error-background-color: #5a5a5a;
+    --GW-admonition-error-text-color: #fff;
+    --GW-admonition-reversed-link-color: #ddd;
+    --GW-admonition-reversed-link-color-hover: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #ccc;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #bbb;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #000;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #fff;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(255, 255, 255, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #aaa;
+    --GW-extracts-options-dialog-box-shadow-color: #444;
+    --GW-extracts-options-dialog-horizontal-rule-color: #ccc;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #000;
+    --GW-extracts-options-dialog-button-border-color: #000;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #000;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #777;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #777;
+    --GW-extracts-options-dialog-radio-button-border-color: #000;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #ccc;
+    --GW-popups-popup-box-shadow-color: #ccc;
+    --GW-popups-popup-border-focused-color: #aaa;
+    --GW-popups-popup-box-shadow-focused-color: #aaa;
+
+    --GW-popups-popup-title-bar-background-color: #fff;
+    --GW-popups-popup-title-bar-button-color: #bbb;
+    --GW-popups-popup-title-bar-button-color-hover: #000;
+    --GW-popups-popup-title-bar-button-color-disabled: #eee;
+	--GW-popups-popup-title-color: #aaa;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #777;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #ddd;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+	--GW-popups-popup-title-focused-color: #000;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #ddd;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #aaa;
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.4);
+    --GW-popins-popin-box-shadow-color: #aaa;
+
+    --GW-popins-popin-title-bar-background-color: #fff;
+    --GW-popins-popin-title-bar-button-color: #777;
+
+    --GW-popins-popin-scrollbar-thumb-color: #ccc;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #999;
+
+    --GW-popins-popin-stack-counter-text-color: #fff;
+    --GW-popins-popin-stack-counter-background-color: #bbb;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #777;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #aaa;
+	--GW-page-toolbar-control-button-color: #aaa;
+	--GW-page-toolbar-control-button-active-color: #000;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #aaa;
+	--GW-page-toolbar-button-selectable-icon-color: #e4e4e4;
+	--GW-page-toolbar-button-selected-icon-color: #777;
+    --GW-page-toolbar-button-text-color: #666;
+    --GW-page-toolbar-button-disabled-text-color: #ccc;
+    --GW-page-toolbar-button-highlighted-text-color: #000;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0, 0, 0, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #ccc;
+	--GW-back-to-top-link-hover-color: #999;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #ccc;
+	--GW-floating-header-scroll-indicator-color: #999;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #fff;
+	--GW-skip-to-content-border-color: #fff;
+	--GW-skip-to-content-background-color: #bf1722;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #888;
+	--GW-nav-header-link-hover-color: #000;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #ccc;
+}
+:root {
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-e6e6e6-on-fff-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-fff-on-e6e6e6-2x-gif);
+
+	--GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-777-fff-2x-gif);
+	--GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-000-fff-2x-gif);
+}
+
+@media all and (max-width: 649px) {
+	.poem,
+	.editorial {
+		text-shadow: 0 0 0 currentColor;
+	}
+}
+</style>
+<style id="inlined-styles-colors-dark" media="all and (prefers-color-scheme: dark)">
+:root {
+    /*  General.
+     */
+    --GW-body-background-color: #000;
+    --GW-body-text-color: #fff;
+
+    /*  Selection.
+     */
+    --GW-text-selection-background-color: #dcdcdc;
+    --GW-text-selection-color: #000;
+
+	/*	Links.
+	 */
+    --GW-body-link-color: #dcdcdc;
+    --GW-body-link-hover-color: #999;
+    --GW-body-link-visited-color: #b4b4b4;
+    --GW-body-link-inverted-color: #333;
+    --GW-body-link-inverted-hover-color: #5c5c5c;
+    --GW-body-link-inverted-visited-color: #494949;
+
+    /*  Blockquotes.
+     */
+    --GW-blockquote-border-color-level-one: #5c5c5c;
+    --GW-blockquote-border-color-level-two: #646464;
+    --GW-blockquote-border-color-level-three: #747474;
+    --GW-blockquote-border-color-level-four: #7f7f7f;
+    --GW-blockquote-background-color-level-one: #212121;
+    --GW-blockquote-background-color-level-two: #3e3e3e;
+    --GW-blockquote-background-color-level-three: #4f4f4f;
+
+    /*  Abstracts.
+     */
+    --GW-abstract-border-color: #6c6c6c;
+
+	/*	Block context highlighting.
+	 */
+	--GW-block-context-span-highlight-color: #494949;
+
+    /*  Table of contents.
+     */
+    --GW-TOC-border-color: #5c5c5c;
+    --GW-TOC-background-color: #212121;
+    --GW-TOC-collapse-button-text-color: #5c5c5c;
+    --GW-TOC-collapse-button-text-hover-color: #000;
+    --GW-TOC-collapse-button-color: rgba(33, 33, 33, 0.8);
+    --GW-TOC-collapse-button-hover-color: #494949;
+    --GW-TOC-collapse-button-border-hover-color: #fff;
+    --GW-TOC-link-hover-background-color: #363636;
+    --GW-TOC-link-hover-color: #fff;
+    --GW-TOC-link-hover-indicator-bar-color: #5c5c5c;
+    --GW-TOC-number-color: #929292;
+    --GW-TOC-number-hover-color: #ddd;
+
+    /*  Collapse blocks.
+        */
+	--GW-collapse-abstract-blockquote-hover-color: #333;
+	--GW-collapse-disclosure-button-color: #333;
+	--GW-collapse-disclosure-button-hover-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-color: #494949;
+	--GW-collapse-in-blockquote-disclosure-button-hover-color: #5c5c5c;
+	--GW-collapse-disclosure-button-text-color: #6c6c6c;
+	--GW-collapse-disclosure-button-text-hover-color: #000;
+	--GW-collapse-in-blockquote-disclosure-button-text-color: #8b8b8b;
+	--GW-collapse-in-blockquote-disclosure-button-text-hover-color: #999;
+
+	/*	Inline collapses.
+	 */
+	--GW-collapse-inline-disclosure-button-text-color: #c1c1c1;
+	--GW-collapse-inline-disclosure-button-text-hover-color: #8b8b8b;
+
+	/*	Aux-links collapse blocks.
+	 */
+	--GW-aux-links-collapse-border-color: #646464;
+
+    /*  Headings.
+     */
+    --GW-H1-border-color: #999;
+    --GW-H2-border-color: #999;
+
+    /*  Comments.
+     */
+    --GW-comment-section-top-border-color: #8b8b8b;
+
+    /*  Lists.
+     */
+    --GW-bulleted-list-marker-color: #9f9f9f;
+
+    /*  Figures.
+     */
+    --GW-figure-outline-color: #999;
+    --GW-figure-caption-outline-color: #999;
+
+	/*	Embeds.
+	 */
+	--GW-embed-border-color: #494949;
+
+    /*  Epigraphs.
+     */
+    --GW-epigraph-quotation-mark-color: #9f9f9f;
+
+    /*  Footnotes.
+     */
+    --GW-footnote-border-color: #7c7c7c;
+    --GW-footnote-highlighted-border-color: #7c7c7c;
+    --GW-footnotes-section-top-rule-color: #5c5c5c;
+    --GW-footnote-backlink-border-color: #fff;
+    --GW-footnote-backlink-border-hover-color: #8b8b8b;
+
+    /*  Footnote references.
+     */
+    --GW-highlighted-link-outline-color: #8b8b8b;
+
+    /*  Sidenotes.
+     */
+    --GW-sidenote-highlight-box-shadow-color: #7c7c7c;
+    --GW-sidenote-border-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-color: #7c7c7c;
+    --GW-sidenote-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-sidenote-self-link-border-color: #7c7c7c;
+
+	/*	Annotations.
+	 */
+	--GW-section-highlighted-border-color: #b4b4b4;
+
+    /*  Tables.
+     */
+    --GW-table-border-color: #fff;
+    --GW-table-caption-border-color: #fff;
+    --GW-table-row-horizontal-border-color: #fff;
+    --GW-table-scrollbar-thumb-color: #7c7c7c;
+    --GW-table-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-table-scrollbar-border-color: #fff;
+    --GW-table-column-heading-hover-background-color: #2b3637;
+    --GW-table-sorted-column-heading-background-color: #216983;
+    --GW-table-sorted-column-heading-text-color: #000;
+    --GW-table-sorted-column-heading-text-shadow-color: #fff;
+    --GW-table-zebra-stripe-alternate-row-background-color: #252525;
+    --GW-table-row-hover-outline-color: #fff;
+
+    /*  Code blocks.
+     */
+    --GW-code-element-border-color: #606060;
+    --GW-code-element-background-color: #1d1d1d;
+    --GW-pre-element-border-color: #606060;
+    --GW-pre-element-background-color: #1d1d1d;
+    --GW-pre-element-scrollbar-track-color: #1d1d1d;
+    --GW-pre-element-scrollbar-thumb-color: #5c5c5c;
+    --GW-pre-element-scrollbar-thumb-hover-color: #8b8b8b;
+    --GW-code-block-line-highlight-background-color: #171600;
+    --GW-code-block-line-highlight-border-color: #494949;
+    --GW-code-block-line-number-color: #7c7c7c;
+    --GW-code-block-line-number-divider-color: #5c5c5c;
+
+
+    /*  Syntax highlight theme.
+     */
+    --GW-syntax-highlight-color-normal: #f1edec;
+    --GW-syntax-highlight-color-attribute: #b9e8ff;
+    --GW-syntax-highlight-color-data-type: inherit;
+    --GW-syntax-highlight-color-variable: #b4b4b4;
+    --GW-syntax-highlight-color-other: inherit;
+    --GW-syntax-highlight-color-preprocessor: inherit;
+    --GW-syntax-highlight-color-extension: #a6a6a6;
+    --GW-syntax-highlight-color-comment: #7f9c83;
+    --GW-syntax-highlight-color-control-flow: #b4edaf;
+    --GW-syntax-highlight-color-keyword: #b9e8ff;
+    --GW-syntax-highlight-color-operator: #b9e8ff;
+    --GW-syntax-highlight-color-special-char: #94adb6;
+    --GW-syntax-highlight-color-built-in: #b9e8ff;
+    --GW-syntax-highlight-color-function: #b9e8ff;
+    --GW-syntax-highlight-color-constant: inherit;
+    --GW-syntax-highlight-color-base-n: inherit;
+    --GW-syntax-highlight-color-dec-val: inherit;
+    --GW-syntax-highlight-color-float: inherit;
+    --GW-syntax-highlight-color-information: inherit;
+    --GW-syntax-highlight-color-char: inherit;
+    --GW-syntax-highlight-color-string: inherit;
+    --GW-syntax-highlight-color-verbatim-string: inherit;
+    --GW-syntax-highlight-color-alert: #ff8470;
+    --GW-syntax-highlight-color-error: #ff4a39;
+    --GW-syntax-highlight-color-import: #a6a6a6;
+    --GW-syntax-highlight-color-special-string: #b4b4b4;
+
+    /*  Math.
+     */
+    --GW-math-block-background-color: #252525;
+    --GW-math-block-background-color-flash: #000;
+    --GW-math-block-scrollbar-border-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-color: #5c5c5c;
+    --GW-math-block-scrollbar-thumb-hover-color: #8b8b8b;
+
+    /*  Dropcaps.
+     */
+    --GW-dropcaps-goudy-color: #fff;
+    --GW-dropcaps-yinit-color: #f9f9f9;
+    --GW-dropcaps-yinit-text-shadow-color: #a6a6a6;
+    --GW-dropcaps-de-zs-color: #efefef;
+    --GW-dropcaps-cheshire-color: #f1f1f1;
+    --GW-dropcaps-kanzlei-color: #f1f1f1;
+
+    /*  Admonitions.
+     */
+    --GW-admonition-note-left-border-color: #929292;
+    --GW-admonition-note-background-color: #4f4f4f;
+    --GW-admonition-tip-left-border-color: #4f4f4f;
+    --GW-admonition-tip-background-color: #303030;
+    --GW-admonition-warning-left-border-color: #bdbdbd;
+    --GW-admonition-warning-background-color: #8a8a8a;
+    --GW-admonition-warning-text-color: #000;
+    --GW-admonition-error-left-border-color: #e1e1e1;
+    --GW-admonition-error-background-color: #bdbdbd;
+    --GW-admonition-error-text-color: #000;
+    --GW-admonition-reversed-link-color: #494949;
+    --GW-admonition-reversed-link-color-hover: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color: #5c5c5c;
+    --GW-admonition-reversed-link-underline-gradient-line-color-hover: #6c6c6c;
+
+	/*	Footer.
+	 */
+    --GW-bottom-ornament-line-color: #fff;
+
+	/*	Pop-frames (popups or popins).
+	 */
+    --GW-popframes-object-popframe-background-color: #000;
+
+    --GW-extracts-options-dialog-backdrop-background-color: rgba(0, 0, 0, 0.95);
+    --GW-extracts-options-dialog-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-border-color: #7c7c7c;
+    --GW-extracts-options-dialog-box-shadow-color: #cecece;
+    --GW-extracts-options-dialog-horizontal-rule-color: #5c5c5c;
+    --GW-extracts-options-dialog-button-background-color: var(--GW-body-background-color);
+    --GW-extracts-options-dialog-button-text-color: #fff;
+    --GW-extracts-options-dialog-button-border-color: #fff;
+    --GW-extracts-options-dialog-button-hover-box-shadow-color: #fff;
+    --GW-extracts-options-dialog-option-button-explanation-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-option-button-hover-text-color: #a6a6a6;
+    --GW-extracts-options-dialog-radio-button-border-color: #fff;
+
+    /*  Popups.
+     */
+    --GW-popups-popup-background-color: var(--GW-body-background-color);
+
+    --GW-popups-popup-border-color: #5c5c5c;
+    --GW-popups-popup-box-shadow-color: #5c5c5c;
+    --GW-popups-popup-border-focused-color: #7c7c7c;
+    --GW-popups-popup-box-shadow-focused-color: #7c7c7c;
+
+    --GW-popups-popup-title-bar-background-color: #000;
+    --GW-popups-popup-title-bar-button-color: #6c6c6c;
+    --GW-popups-popup-title-bar-button-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-color-disabled: #333;
+	--GW-popups-popup-title-color: #7c7c7c;
+    --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+    --GW-popups-popup-title-bar-button-focused-color: #a6a6a6;
+    --GW-popups-popup-title-bar-button-focused-color-hover: #fff;
+    --GW-popups-popup-title-bar-button-focused-color-disabled: #494949;
+    --GW-popups-popup-title-bar-submenu-box-shadow-color: #494949;
+	--GW-popups-popup-title-focused-color: #fff;
+    --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+
+    --GW-popups-popup-scrollbar-thumb-color: #494949;
+    --GW-popups-popup-scrollbar-thumb-hover-color: #6c6c6c;
+    --GW-popups-popup-scrollbar-thumb-focused-color: #5c5c5c;
+    --GW-popups-popup-scrollbar-thumb-hover-focused-color: #8b8b8b;
+
+    /*  Popins.
+     */
+    --GW-popins-popin-background-color: var(--GW-body-background-color);
+
+    --GW-popins-popin-border-color: #7c7c7c;
+    --GW-popins-popin-backdrop-color: rgba(255, 255, 255, 0.4);
+    --GW-popins-popin-box-shadow-color: #7c7c7c;
+
+    --GW-popins-popin-title-bar-background-color: #000;
+    --GW-popins-popin-title-bar-button-color: #a6a6a6;
+
+    --GW-popins-popin-scrollbar-thumb-color: #5c5c5c;
+    --GW-popins-popin-scrollbar-thumb-hover-color: #8b8b8b;
+
+    --GW-popins-popin-stack-counter-text-color: #000;
+    --GW-popins-popin-stack-counter-background-color: #6c6c6c;
+
+    /*  Image focus.
+     */
+    --GW-image-focus-image-hover-drop-shadow-color: #a6a6a6;
+
+	/*	Page toolbar.
+	 */
+    --GW-page-toolbar-border-color: #7c7c7c;
+	--GW-page-toolbar-control-button-color: #7c7c7c;
+	--GW-page-toolbar-control-button-active-color: #fff;
+
+	/*	Page toolbar widgets.
+	 */
+	--GW-page-toolbar-button-icon-color: #7c7c7c;
+	--GW-page-toolbar-button-selectable-icon-color: #404040;
+	--GW-page-toolbar-button-selected-icon-color: #a6a6a6;
+    --GW-page-toolbar-button-text-color: #b4b4b4;
+    --GW-page-toolbar-button-disabled-text-color: #5c5c5c;
+    --GW-page-toolbar-button-highlighted-text-color: #fff;
+
+	/*	Reader mode.
+	 */
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(255, 255, 255, 0.8);
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #000;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #fff;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #6c6c6c;
+	--GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #cecece;
+
+	/*	“Back to top” link.
+	 */
+	--GW-back-to-top-link-color: #5c5c5c;
+	--GW-back-to-top-link-hover-color: #8b8b8b;
+
+	/*	Mobile floating header.
+	 */
+	--GW-floating-header-box-shadow-color: #5c5c5c;
+	--GW-floating-header-scroll-indicator-color: #8b8b8b;
+
+	/*	“Skip to content” accessibility link.
+	 */
+	--GW-skip-to-content-text-color: #000;
+	--GW-skip-to-content-border-color: #000;
+	--GW-skip-to-content-background-color: #ff847b;
+
+	/*	Nav header.
+	 */
+	--GW-nav-header-link-color: #999;
+	--GW-nav-header-link-hover-color: #fff;
+
+	/*	X of the day.
+	 */
+	--GW-x-of-the-day-border-color: #5c5c5c;
+}
+:root {
+    /*  Adjust background color to prevent pixels from turning off (contrary to 
+    	popular belief, pixels turning off saves trivial energy, like <1% in 
+    	measurements, and causes nasty scrolling/update jank due to delay in 
+    	pixels turning back on), and improve contrast with the white.
+     */
+    --GW-body-background-color: #161616;
+
+    /*  Dial back from pure white to keep contrast from being *too* high & 
+    	‘stark’ (#fff bg / #000 text seems to work in light mode, but not in 
+    	dark mode, perhaps because of differences in lighting environment?)
+     */
+    --GW-body-text-color: #f1f1f1;
+
+    --GW-popups-popup-title-bar-pattern: var(--GW-image-pattern-dotted-161616-on-252525-2x-gif);
+    --GW-popups-popup-title-bar-pattern-focused: var(--GW-image-pattern-dotted-161616-on-3e3e3e-2x-gif);
+
+    --GW-popins-popin-backdrop-color: rgba(0, 0, 0, 0.6);
+
+    --GW-popins-popin-title-bar-button-color: #bbb;
+
+    --GW-checkerboard-scrollbar-background-image: var(--GW-image-checkerboard-888-000-2x-gif);
+    --GW-checkerboard-scrollbar-hover-background-image: var(--GW-image-checkerboard-bfbfbf-000-2x-gif);
+}
+
+.dark-mode-invert,
+.dark-mode-invert::before,
+.dark-mode-invert::after {
+	filter: var(--dark-mode-invert-filter, none);
+}
+
+/*  Admonition icons.
+ */
+div.admonition.tip::before {
+    filter: invert(1);
+}
+div.admonition.note::before {
+    filter: none;
+}
+div.admonition.warning::before {
+    filter: none;
+}
+div.admonition.error::before {
+    filter: none;
+}
+
+/*  SVG icons in the two darker styles of admonitions.
+ */
+div.admonition.warning a[data-link-icon-type='svg'] .link-icon-hook::after,
+div.admonition.error a[data-link-icon-type='svg'] .link-icon-hook::after {
+    filter: none;
+}
+
+/*  For sortable table column headings, we use dark versions of the up/down/both
+    arrow icons.
+ */
+table th.tablesorter-header {
+    background-image: url('/static/img/tablesorter/tablesorter-bg-dark.gif');
+}
+table th.tablesorter-headerAsc {
+    background-image: url('/static/img/tablesorter/tablesorter-asc-dark.gif');
+}
+table th.tablesorter-headerDesc {
+    background-image: url('/static/img/tablesorter/tablesorter-desc-dark.gif');
+}
+
+/*  Images that are marked as '.invert' by the server are inverted,
+    hue-rotated, and desaturated. Other (non-invertible) images are merely
+    desaturated. Hovering over an image restores it to its original state.
+    Hierarchy: ‘.invert-not’/‘.invert-not-auto’: no inversion or grayscale;
+    ‘.invert’/‘.invert-auto’: inverted (uninverted upon mouse hover);
+    none: grayscaled (ungrayscaled on hover).
+ */
+figure img.invert,
+figure img.invert-auto {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+figure img:not(.invert):not(.invert-auto) {
+    filter: grayscale(50%);
+}
+figure img,
+figure img.invert,
+figure img.invert-auto {
+    transition: filter 0.25s ease;
+}
+figure img:not(.drop-filter-on-hover-not):hover,
+figure img:not(.drop-filter-on-hover-not).invert:hover,
+figure img:not(.drop-filter-on-hover-not).invert-auto:hover,
+figure img:not(.drop-filter-on-hover-not):not(.invert):not(.invert-auto):hover {
+    filter: none;
+    transition: filter 0s ease 0.25s;
+}
+
+figure img[src$=".svg"].invert:hover,
+figure img[src$=".svg"].invert-auto:hover {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}
+
+/*  Image alt-text.
+ */
+figure img.invert::before,
+figure img.invert-auto::before {
+    filter: invert(1);
+}
+figure img.invert:hover::before,
+figure img.invert-auto:hover::before {
+    filter: none;
+}
+/*  Styling the image alt-text interferes with the transitions in dark mode.
+    (We include non-class’d `img` in this selector for consistency.)
+
+    TEMPORARY until we transition to a color-based instead of filter-based
+    scheme for this. —SA 2022-07-29
+ */
+figure img,
+figure img:hover,
+figure img.invert,
+figure img.invert:hover,
+figure img.invert-auto,
+figure img.invert-auto:hover {
+    transition: none;
+}
+
+/*  For images which have been marked up (manually or automatically) with 
+	‘.invert-not’, we avoid any filtering at all. If they are manually marked up
+	(artwork, diagrams with multiple subtly-different colors matched to a 
+	legend/caption), the color is important and shouldn’t be faded out by 
+	default. (Or invertOrNot has judged the image to be non-invertible, which
+	presumably means something like the above also.)
+ */
+#markdownBody figure img.invert-not,
+#markdownBody figure img.invert-not-auto {
+    filter: none;
+}
+
+/*  The loading spinner for object popups (image, iframe, object) is inverted
+    and made more visible in dark mode.
+ */
+.popframe.loading::before {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+/*  “Loading failed” messages for object popups.
+ */
+.popframe.loading-failed::after {
+    opacity: 0.4;
+}
+
+/*  Masked links key toggle info alert panel.
+ */
+div#masked-links-key-toggle-info-alert img {
+    filter: drop-shadow(0 0 3px var(--GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color));
+}
+
+/*  Recently-modified icon, manicule.
+ */
+.has-recently-modified-icon .recently-modified-icon-hook::before,
+.manicule svg {
+    filter: invert(1);
+}
+
+/*	Poem caesura marks.
+ */
+div.poem span.caesura-mark {
+	opacity: 0.3;
+}
+@media all and (max-width: 649px) {
+	div.poem span.caesura-mark {
+		opacity: 0.4;
+	}
+}
+</style>
+<link rel="stylesheet" href="/static/css/head.css?v=1770514858">
+<script src="/static/js/head.js?v=1770514858"></script>
+<link rel="preload" href="/static/img/icon/icons.svg?v=1768170615" as="image">
+
+
+  
+  <!-- Hint at necessary third-party domains -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <meta name="title" content="有效利他主义手册">
+  <meta name="citation_title" content="有效利他主义手册">
+  <meta name="og:title" content="有效利他主义手册">
+  <meta name="twitter:title" content="有效利他主义手册">
+<meta name="generator" content="https://github.com/makoshan/makoshan.github.io/">
+<meta name="creator" content="Mako Shan">
+  
+  <meta name="author" content="Mako Shan">
+  <meta name="citation_author" content="Mako Shan">
+  
+  <meta name="contact" content="/me#contact">
+  <link rel="index" title="Mako Shan homepage" href="/index/">
+  <link href="https://v2eth.substack.com/feed" type="application/rss+xml" rel="alternate" title="ATOM/RSS feed of Mako Shan newsletters with additions and links.">
+
+  <meta name="twitter:creator" content="makoshan">
+  <meta name="twitter:site" content="makoshan.github.io">
+  <meta name="og:site" content="makoshan.github.io">
+  <meta name="og:type" content="article">
+  <meta name="description" content="一份对有效利他主义核心思想的结构化、深度解析，旨在寻找并实践最佳的行善方式。">
+  <meta name="og:description" content="一份对有效利他主义核心思想的结构化、深度解析，旨在寻找并实践最佳的行善方式。">
+  <meta property="og:image" content="https://makoshan.github.io/static/img/logo/logo-whitebg-large-border.png">
+  <meta property="og:image:alt" content="Default thumbnail: site logo.">
+  <meta property="og:image:height" content="530">
+  <meta property="og:image:width" content="441">
+  <meta property="gwern:thumbnail:css-classes" content="">
+  <meta name="keywords" content="">
+  <meta name="dc.date.issued" content="2026-02-17">
+  
+  <meta name="citation_publication_date" content="2026-02-17">
+  <meta name="dcterms.modified" content="">
+  <link rel="schema.dcterms" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
+  <meta name="dcterms.rights" content="CC PD-0">
+  <meta name="dc.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+  <link rel="canonical" href="https://makoshan.github.io/blog/2026/%E6%9C%89%E6%95%88%E5%88%A9%E4%BB%96%E4%B8%BB%E4%B9%89.html">
+  <meta name="citation_fulltext_html_url" content="https://makoshan.github.io/blog/2026/%E6%9C%89%E6%95%88%E5%88%A9%E4%BB%96%E4%B8%BB%E4%B9%89.html">
+  <meta name="og:url" content="https://makoshan.github.io/blog/2026/%E6%9C%89%E6%95%88%E5%88%A9%E4%BB%96%E4%B8%BB%E4%B9%89.html">
+  <link rel="alternate" type="text/markdown" href="https://makoshan.github.io/blog/2026/%E6%9C%89%E6%95%88%E5%88%A9%E4%BB%96%E4%B8%BB%E4%B9%89.html.md" title="Markdown source of ‘有效利他主义手册’ page"> <!-- Also available via Accept header -->
+  <meta name="page-body-classes" content="page-blog-2026-有效利他主义 dropcaps-kanzlei">
+  <meta name="citation_fulltext_world_readable" content="">
+  <meta name="color-scheme" content="light dark">
+
+  
+  <title>有效利他主义手册 · Mako Shan</title>
+  
+
+  <link id="favicon" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small.png">
+  <link id="favicon-dark" rel="icon" type="image/png" href="/static/img/logo/logo-favicon-small-dark.png" media="all and (prefers-color-scheme: dark)">
+  <link id="favicon-apple-touch" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch.png">
+  <link id="favicon-apple-touch-dark" rel="apple-touch-icon" type="image/png" href="/static/img/logo/logo-favicon-appletouch-dark.png" media="all and (prefers-color-scheme: dark)">
+
+  <!-- CSS for JS-disabled users: ensure that NoScripters know what they are missing even if they jump to a section & miss the warning at top/bottom. -->
+  <noscript>
+    <style>
+      #markdownBody #noscript-warning-header {
+          position: fixed; /* sticky */
+          top: 6px; /* at top */
+          width: 58%;
+          z-index: 99; /* Make sure it is on top */
+          background-color: #f8f8f8; /* Set a solid background color so legible while positioned over text */
+          border-color: var(--GW-abstract-border-color); /* Make look like theme-toggle/admonitions a bit more */
+          border-width: 6px 6px 6px 6px;
+          border-style: double;
+      }
+      #markdownBody #noscript-warning-header p { margin: 10px; }
+      nav#navbar { padding-top: 160px; } /* avoid overlap with page header */
+    </style>
+  </noscript>
+</head>
+
+<body class="page-blog-2026-有效利他主义 dropcaps-kanzlei page-created-recently">
+  <!-- Inlined asset links (no SSI): injected by Hakyll from static/include/inlined-asset-links.html -->
+  <link rel="stylesheet" href="/static/css/style.css?v=1770491984" media="print" onload="this.media=`all`">
+<script src="/static/js/script.js?v=1770491982" defer></script>
+
+
+  <main>
+    <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
+
+    <!-- Navbar (no SSI): injected by Hakyll from static/include/navbar.html -->
+        <nav id="navbar">
+      <a class="logo" rel="home me contents" href="/index/" accesskey="\" title="Homepage: categorized list of articles index"><svg class="logo-image" viewBox="0 0 64 75" role="img" aria-label="Makoshan logo">
+      <path fill="currentColor" d="M8 68V12h12l12 23 12-23h12v56H54V33L40 58h-4L22 33v35H8zM8 12l4-8h12l-4 8H8zM44 12l4-8h12l-4 8H44zM24 44h16v9H24z"></path></svg></a>
+      <div class="navbar-links">
+        <a class="site link-page link-annotated" href="/about/" title="Site ideals, source, content, traffic, examples, license" rel="author">Site</a>
+        <a class="design link-page link-annotated" href="/design/" title="Design and implementation notes">Design</a>
+        <a class="new link-page link-annotated" href="/changelog/" title="Changelog of what’s new or updated">New</a>
+        <a class="blog link-page link-annotated" href="/blog/index/" title="Blog index: short posts">Blog</a>
+        <a class="links link-page" href="/Links/" title="Links page">Links</a>
+        <a class="mail" href="https://v2eth.substack.com/" title="Monthly mailing list: newsletter signup form" rel="me">Substack</a>
+      </div>
+    </nav>
+
+
+    <article>
+
+      <header>
+        <h1>有效利他主义手册</h1>
+      </header>
+
+      
+      <div class="markdownBody" id="page-metadata">
+          
+        <div class="page-description"><p>一份对有效利他主义核心思想的结构化、深度解析，旨在寻找并实践最佳的行善方式。</p></div>
+        <div class="page-metadata-fields">
+            
+            
+            <span class="page-status" title="Writing status of current page: ranges 'abandoned'/'notes'/'draft'/'in progress'/'finished'"><em><span class="completion-status" data-progress-percentage="0">complete</span></em></span>
+            <span class="page-confidence"><a href="/about/#confidence-tags" title="Explanation of 'confidence' metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: 'certain'/'highly likely'/'likely'/'possible'/'unlikely'/'highly unlikely'/'remote'/'impossible')">certainty</a>: <em><span class="completion-status" data-progress-percentage="100">certain</span></em></span>
+            <span class="page-importance"><a href="/about/#importance-tags" title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>0</em></span>
+            
+            
+            
+        </div>
+      </div>
+      
+
+      <div id="TOC" class="TOC"><ul>
+<li><a href="#引言有效利他主义" id="toc-引言有效利他主义">引言：有效利他主义</a></li>
+<li><a href="#效能思维-the-effectiveness-mindset" id="toc-效能思维-the-effectiveness-mindset">1. 效能思维 (The Effectiveness Mindset)</a>
+<ul>
+<li><a href="#关于效能思维的核心读物" id="toc-关于效能思维的核心读物">关于效能思维的核心读物</a></li>
+</ul></li>
+<li><a href="#影响力的差异-differences-in-impact" id="toc-影响力的差异-differences-in-impact">2. 影响力的差异 (Differences in Impact)</a>
+<ul>
+<li><a href="#关于影响力差异的核心读物" id="toc-关于影响力差异的核心读物">关于影响力差异的核心读物</a></li>
+</ul></li>
+<li><a href="#激进同理心-radical-empathy" id="toc-激进同理心-radical-empathy">3. 激进同理心 (Radical Empathy)</a>
+<ul>
+<li><a href="#关于激进同理心的核心读物" id="toc-关于激进同理心的核心读物">关于激进同理心的核心读物</a></li>
+</ul></li>
+<li><a href="#我们的最后一个世纪-our-final-century" id="toc-我们的最后一个世纪-our-final-century">4. 我们的最后一个世纪？ (Our Final Century?)</a>
+<ul>
+<li><a href="#关于我们最后一个世纪的核心读物" id="toc-关于我们最后一个世纪的核心读物">关于我们最后一个世纪的核心读物</a></li>
+</ul></li>
+<li><a href="#未来可能怎样以及为何要关心-what-could-the-future-hold-and-why-care" id="toc-未来可能怎样以及为何要关心-what-could-the-future-hold-and-why-care">5. 未来可能怎样？以及为何要关心？ (What Could the Future Hold? And Why Care?)</a>
+<ul>
+<li><a href="#关于未来的核心读物" id="toc-关于未来的核心读物">关于未来的核心读物</a></li>
+</ul></li>
+<li><a href="#来自人工智能的风险-risks-from-artificial-intelligence-ai" id="toc-来自人工智能的风险-risks-from-artificial-intelligence-ai">6. 来自人工智能的风险 (Risks from Artificial Intelligence (AI))</a>
+<ul>
+<li><a href="#关于-ai-风险的核心读物" id="toc-关于-ai-风险的核心读物">关于 AI 风险的核心读物</a></li>
+</ul></li>
+<li><a href="#你的看法是-what-do-you-think" id="toc-你的看法是-what-do-you-think">7. 你的看法是？ (What Do You Think?)</a>
+<ul>
+<li><a href="#关于独立思考的核心读物" id="toc-关于独立思考的核心读物">关于独立思考的核心读物</a></li>
+</ul></li>
+<li><a href="#付诸实践-putting-it-into-practice" id="toc-付诸实践-putting-it-into-practice">8. 付诸实践 (Putting It into Practice)</a>
+<ul>
+<li><a href="#关于实践的核心读物" id="toc-关于实践的核心读物">关于实践的核心读物</a></li>
+</ul></li>
+<li><a href="#参考文献" id="toc-参考文献">参考文献</a></li>
+</ul></div> <div id="markdownBody" class="markdownBody"><div class="abstract">
+<blockquote>
+<p>本文是<strong>有效利他主义（Effective Altruism, EA）</strong> 的一份综合手册，旨在系统性地介绍其核心思维工具、关键论点以及个人实践路径。 它探讨了从“有效性思维”到“长期主义”等核心概念，分析了全球贫困、动物福利、以及人工智能带来的生存风险等关键问题领域。</p>
+<p>本手册旨在作为一个可供深入研究的起点，通过结构化的章节和反思练习，引导读者独立思考并找到最适合自己的、能产生最大积极影响的行善方式。 它不仅是理论的阐述，更是行动的指南，旨在帮助任何希望自己的时间和资源能帮助尽可能多的人的个体，将善意转化为可衡量的成果。</p>
+</blockquote>
+</div>
+<section id="引言有效利他主义" class="level1">
+<h1><a href="#引言有效利他主义" title="Link to section: § &#39;引言：有效利他主义&#39;">引言：有效利他主义</a></h1>
+<p><strong>有效利他主义（Effective Altruism, EA）</strong> 是一个持续进行的项目，旨在寻找最佳的行善方式，并将其付诸实践。</p>
+<p class="dropcap-kanzlei"><span
+class="dropcap">本</span>系列文章将向您介绍有效利他主义背后的一些核心思维工具，分享关于哪些全球性问题最为紧迫的论点，并帮助您反思个人如何能做出贡献。</p>
+<p>手册分为八个章节，并附有练习，以帮助您在整个阅读过程中进行反思。 如果您想与对改善他人生活感兴趣的其他人讨论这些想法，您可能会对我们基于本手册的<a href="https://www.effectivealtruism.org/intro-course" id="_GtZX7o3Q" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/intro-course?format=preview&amp;theme=classic">免费 EA 入门项目</a>感兴趣。</p>
+<div class="horizontal-rule-nth-1">
+<hr />
+</div>
+</section>
+<section id="效能思维-the-effectiveness-mindset" class="level1">
+<h1><a href="#效能思维-the-effectiveness-mindset" title="Link to section: § &#39;1. 效能思维 (The effectiveness mindset)&#39;">1. 效能思维 (The Effectiveness Mindset)</a></h1>
+<p>如果你想用你的时间或金钱去帮助他人，你可能希望能帮助到尽可能多的人。 但你的时间和资源是有限的，因此，如果你专注于那些能帮助更多人而非更少人的干预措施，你就能产生更大的影响。</p>
+<p>然而，找到这样的干预措施极其困难：它需要一种“<strong>侦察兵心态（scout mindset）</strong>”——寻求真相，而不是捍卫我们现有的观念。</p>
+<section id="关于效能思维的核心读物" class="level3 collapse">
+<h3><a href="#关于效能思维的核心读物" title="Link to section: § &#39;关于效能思维的核心读物&#39;">关于效能思维的核心读物</a></h3>
+<ul>
+<li><p><strong>关于有效利他主义</strong></p>
+<ul>
+<li><p><a href="https://www.effectivealtruism.org/articles/introduction-to-effective-altruism" id="_6Hu3rMIT" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/articles/introduction-to-effective-altruism?format=preview&amp;theme=classic">有效利他主义简介</a></p></li>
+<li><p><a href="https://www.effectivealtruism.org/articles/four-ideas-you-already-agree-with" id="_74mRejUu" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/articles/four-ideas-you-already-agree-with?format=preview&amp;theme=classic">你已认同的四个观点</a></p></li>
+<li><p><a href="https://ourworldindata.org/much-better-awful-can-be-better" id="_-vpErGU1" class="link-live" data-link-icon="OWID" data-link-icon-type="text,quad,mono">世界已大为改观。世界仍糟糕透顶。世界能变得更好。</a></p></li>
+</ul></li>
+<li><p><strong>关于范围敏感性 (Scope sensitivity)</strong></p>
+<ul>
+<li><p><a href="https://www.lesswrong.com/posts/32g89o7o7g3PGsQ2S/on-caring" id="_6Fr3WCXF" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/32g89o7o7g3PGsQ2S/on-caring?format=preview&amp;theme=classic">论关怀</a></p></li>
+<li><p><a href="https://www.givingwhatwecan.org/get-involved/videos-and-other-media/scope-insensitivity-failing-appreciate-numbers-those-who" id="_xAL6eja9">范围不敏感性：未能体会我们需要帮助的人数</a></p></li>
+</ul></li>
+<li><p><strong>关于侦察兵心态与清晰思考</strong></p>
+<ul>
+<li><p><a href="https://www.youtube.com/watch?v=w47_P-G_euk" id="_kEd0Bv8M" data-link-icon="youtube" data-link-icon-type="svg" data-link-icon-color="#ff0033">为何你认为自己是对的——即使你错了</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/N2Jmmq2p2aBvA9ag5/what-do-biases-feel-like-from-the-inside" id="_fUlC5HLq" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/N2Jmmq2p2aBvA9ag5/what-do-biases-feel-like-from-the-inside?format=preview&amp;theme=classic">认知偏见从内部感受是怎样的</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/p7x33M5B5A4gEw339/purchase-fuzzies-and-utilons-separately" id="_tOA64HPb" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/p7x33M5B5A4gEw339/purchase-fuzzies-and-utilons-separately?format=preview&amp;theme=classic">分开购买“模糊快感”和“效用单位”</a></p></li>
+</ul></li>
+<li><p><strong>关于权衡取舍 (Tradeoffs)</strong></p>
+<ul>
+<li><p><a href="https://www.cold-takes.com/we-are-in-triage-every-second-of-every-day/" id="_8C2Hwu0y">我们每时每刻都在进行分类检伤</a></p></li>
+</ul></li>
+<li><p><strong>关于影响力 (Impact)</strong></p>
+<ul>
+<li><p><a href="https://www.lesswrong.com/posts/kZ2g2YgXCTnQ2x5CR/500-million-but-not-a-single-one-more" id="_4gNyH_mY" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/kZ2g2YgXCTnQ2x5CR/500-million-but-not-a-single-one-more?format=preview&amp;theme=classic">五亿，但一个也不能多</a></p></li>
+</ul></li>
+</ul>
+</section>
+<div class="horizontal-rule-nth-2">
+<hr />
+</div>
+</section>
+<section id="影响力的差异-differences-in-impact" class="level1">
+<h1><a href="#影响力的差异-differences-in-impact" title="Link to section: § &#39;2. 影响力的差异 (Differences in impact)&#39;">2. 影响力的差异 (Differences in Impact)</a></h1>
+<p>全球仍有约七亿人生活在贫困之中，主要集中在低收入国家。 帮助他们的努力——通过政策改革、现金转移或提供医疗服务——可以极其有效。</p>
+<p>除了探讨这个问题，我们还讨论了不同干预措施在效能上的巨大差异，并介绍一个用于估算重要数据的简单工具。</p>
+<section id="关于影响力差异的核心读物" class="level3 collapse">
+<h3><a href="#关于影响力差异的核心读物" title="Link to section: § &#39;关于影响力差异的核心读物&#39;">关于影响力差异的核心读物</a></h3>
+<ul>
+<li><p><strong>ITN 框架</strong></p>
+<ul>
+<li><p><a href="https://www.effectivealtruism.org/impact-framework" id="_fLnzvUOw" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/impact-framework?format=preview&amp;theme=classic">一个用于按预期影响力比较全球问题的框架</a></p></li>
+</ul></li>
+<li><p><strong>影响力的差异</strong></p>
+<ul>
+<li><p><a href="https://www.givingwhatwecan.org/blog/how-big-are-the-differences-between-charities" id="_Zc25Ungb">比较慈善机构：差异有多大？</a></p></li>
+</ul></li>
+<li><p><strong>边际思考 (Thinking on the Margin)</strong></p>
+<ul>
+<li><p><a href="https://concepts.effectivealtruism.org/concepts/marginal-impact" id="_44d3v-80" data-url-iframe="https://ea.greaterwrong.com/concepts/marginal-impact?format=preview&amp;theme=classic">边际影响</a></p></li>
+</ul></li>
+<li><p><strong>费米估算 (Fermi estimation)</strong></p>
+<ul>
+<li><p><a href="https://concepts.effectivealtruism.org/concepts/fermi-estimate" id="_7SH2NrrC" data-url-iframe="https://ea.greaterwrong.com/concepts/fermi-estimate?format=preview&amp;theme=classic">费米估算</a></p></li>
+<li><p><a href="https://forum.effectivealtruism.org/posts/zFk2m3a2uLh3vJAsf/the-number-of-seabirds-and-sea-mammals-killed-by-marine" id="_bILixuic" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/zFk2m3a2uLh3vJAsf/the-number-of-seabirds-and-sea-mammals-killed-by-marine?format=preview&amp;theme=classic">海洋塑料污染致死的海鸟和海洋哺乳动物数量相对于鱼类捕捞量而言相当小</a></p></li>
+</ul></li>
+<li><p><strong>全球健康与贫困的背景数据</strong></p>
+<ul>
+<li><p><a href="https://ourworldindata.org/global-economic-inequality" id="_W6a-_af2" class="link-live" data-link-icon="OWID" data-link-icon-type="text,quad,mono">全球经济不平等</a></p></li>
+</ul></li>
+<li><p><strong>EA 解决全球贫困的策略</strong></p>
+<ul>
+<li><p><a href="https://www.givewell.org/giving101" id="_jVBGbWxd" class="link-live" data-link-icon="GW" data-link-icon-type="text" data-link-icon-color="#669bb5">GiveWell 的“捐赠 101”指南</a></p></li>
+<li><p><a href="https://www.givingwhatwecan.org/cause-areas/global-health-and-development" id="_9VisY5YN">全球健康</a></p></li>
+<li><p><a href="https://forum.effectivealtruism.org/posts/jFJH8hS9jGfD33mMi/introducing-leep-lead-exposure-elimination-project" id="_ShWYCrHy" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/jFJH8hS9jGfD33mMi/introducing-leep-lead-exposure-elimination-project?format=preview&amp;theme=classic">LEEP 简介：铅暴露消除项目</a></p></li>
+</ul></li>
+</ul>
+</section>
+<div class="horizontal-rule-nth-3">
+<hr />
+</div>
+</section>
+<section id="激进同理心-radical-empathy" class="level1">
+<h1><a href="#激进同理心-radical-empathy" title="Link to section: § &#39;3. 激进同理心 (Radical Empathy)&#39;">3. 激进同理心 (Radical Empathy)</a></h1>
+<p>我们是否应该关心非人类动物？ 我们将展示为何公正地关怀是重要的，而不是忽视那些奇怪的话题或不寻常的受益者。 我们还将提供一些关于如何改善在工厂化养殖中受苦的动物生活的想法。</p>
+<section id="关于激进同理心的核心读物" class="level3 collapse">
+<h3><a href="#关于激进同理心的核心读物" title="Link to section: § &#39;关于激进同理心的核心读物&#39;">关于激进同理心的核心读物</a></h3>
+<ul>
+<li><p><strong>公正性与激进同理心</strong></p>
+<ul>
+<li><p><a href="https://slatestarcodex.com/2014/05/23/radicalizing-the-romanceless/" id="_LnXsk58p" class="link-live" data-link-icon="SSC" data-link-icon-type="text,tri" data-link-icon-color="#5175c2">激进同理心</a></p></li>
+<li><p><a href="https://www.cold-takes.com/moral-progress-and-cause-x/" id="_FTgeCqME">道德进步与“事业 X”</a></p></li>
+<li><p><a href="https://forum.effectivealtruism.org/posts/w2iW5y4t2aQ2p5jQ2/the-possibility-of-an-ongoing-moral-catastrophe-summary" id="_asaO2ie3" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/w2iW5y4t2aQ2p5jQ2/the-possibility-of-an-ongoing-moral-catastrophe-summary?format=preview&amp;theme=classic">一场持续的道德灾难的可能性（摘要）</a></p></li>
+</ul></li>
+<li><p><strong>关于“边缘”思想</strong></p></li>
+<li><p><strong>关心动物福利的案例</strong></p>
+<ul>
+<li><p><a href="https://80000hours.org/problem-profiles/factory-farming/" id="_E-0h39Ss" class="link-live" data-link-icon="80k" data-link-icon-type="text,tri,sans" data-link-icon-color="#2ebdd1">工厂化养殖 – 80,000 Hours 问题简介</a></p></li>
+</ul></li>
+<li><p><strong>改善动物福利的策略</strong></p>
+<ul>
+<li><p><a href="https://animaladvocacycareers.org/" id="_oPeiFgoh">动物倡导职业</a></p></li>
+</ul></li>
+</ul>
+</section>
+<div class="horizontal-rule-nth-1">
+<hr />
+</div>
+</section>
+<section id="我们的最后一个世纪-our-final-century" class="level1">
+<h1><a href="#我们的最后一个世纪-our-final-century" title="Link to section: § &#39;4. 我们的最后一个世纪？ (Our final century?)&#39;">4. 我们的最后一个世纪？ (Our Final Century?)</a></h1>
+<p>人类似乎面临着<strong>生存风险（existential risks）</strong>：一个我们可能摧毁自身长远潜力的机会。 我们将审视为何生存风险可能是一个道德优先事项，并探讨为何它们被社会如此忽视。 我们还将研究我们可能面临的一个主要风险：一场比 COVID-19 更严重的人为大流行病。</p>
+<p>此外，我们将向您介绍“<strong>期望价值（expected value）</strong>”的概念，并探讨您是否可能因为错过一个关键考量而失去所有影响力。</p>
+<section id="关于我们最后一个世纪的核心读物" class="level3 collapse">
+<h3><a href="#关于我们最后一个世纪的核心读物" title="Link to section: § &#39;关于我们最后一个世纪的核心读物&#39;">关于我们最后一个世纪的核心读物</a></h3>
+<ul>
+<li><p><strong>生存风险</strong></p>
+<ul>
+<li><p><a href="https://www.effectivealtruism.org/articles/the-case-for-reducing-existential-risk" id="_LJo5H2WC" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/articles/the-case-for-reducing-existential-risk?format=preview&amp;theme=classic">降低生存风险的案例</a></p></li>
+</ul></li>
+<li><p><strong>来自大流行病的风险</strong></p>
+<ul>
+<li><p><a href="https://80000hours.org/problem-profiles/preventing-catastrophic-pandemics/" id="_GPph2LOF" class="link-live" data-link-icon="80k" data-link-icon-type="text,tri,sans" data-link-icon-color="#2ebdd1">预防灾难性大流行病 – 80,000 Hours</a></p></li>
+</ul></li>
+<li><p><strong>改善生物安全的策略</strong></p>
+<ul>
+<li><p><a href="https://forum.effectivealtruism.org/posts/Lp4aXQAsn6zN25g5F/concrete-biosecurity-projects-some-of-which-could-be-big" id="_b7JYWLZu" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/Lp4aXQAsn6zN25g5F/concrete-biosecurity-projects-some-of-which-could-be-big?format=preview&amp;theme=classic">具体的生物安全项目（其中一些可能规模巨大）</a></p></li>
+</ul></li>
+<li><p><strong>期望价值 &amp; 基于成功案例的捐赠 (Hits-based giving)</strong></p>
+<ul>
+<li><p><a href="https://concepts.effectivealtruism.org/concepts/expected-value" id="_nfei4ihP" data-url-iframe="https://ea.greaterwrong.com/concepts/expected-value?format=preview&amp;theme=classic">期望价值</a></p></li>
+<li><p><a href="https://www.givingwhatwecan.org/blog/donating-like-a-startup-investor-hits-based-giving-explained" id="_LUH5i4Pt">像初创公司投资者一样捐赠：基于成功案例的捐赠，解释</a></p></li>
+</ul></li>
+<li><p><strong>关键考量 (Crucial considerations)</strong></p>
+<ul>
+<li><p><a href="https://concepts.effectivealtruism.org/concepts/crucial-consideration" id="_43KIqinp" data-url-iframe="https://ea.greaterwrong.com/concepts/crucial-consideration?format=preview&amp;theme=classic">关键考量</a></p></li>
+</ul></li>
+</ul>
+</section>
+<div class="horizontal-rule-nth-2">
+<hr />
+</div>
+</section>
+<section id="未来可能怎样以及为何要关心-what-could-the-future-hold-and-why-care" class="level1">
+<h1><a href="#未来可能怎样以及为何要关心-what-could-the-future-hold-and-why-care" title="Link to section: § &#39;5. 未来可能怎样？以及为何要关心？ (What could the future hold? And why care?)&#39;">5. 未来可能怎样？以及为何要关心？ (What Could the Future Hold? And Why Care?)</a></h1>
+<p>“<strong>长期主义（Longtermism）</strong>”是这样一种观点：改善长远未来是我们时代的一个关键道德优先事项。 这可以支持我们在上一节中讨论的致力于减少某些灭绝风险的论点。</p>
+<p>我们还将探讨一些关于我们未来可能面貌的观点，以及为何它可能与现在大不相同。 并且，我们将介绍<strong>预测（forecasting）</strong>：一套用于改进和从我们预测未来的尝试中学习的方法。</p>
+<section id="关于未来的核心读物" class="level3 collapse">
+<h3><a href="#关于未来的核心读物" title="Link to section: § &#39;关于未来的核心读物&#39;">关于未来的核心读物</a></h3>
+<ul>
+<li><p><strong>长期主义的案例</strong></p>
+<ul>
+<li><p><a href="https://www.nytimes.com/2022/08/05/opinion/effective-altruism-longtermism.html" id="_3YoJJwi1" data-link-icon="new-york-times" data-link-icon-type="svg">我们欠未来什么，第一章</a></p></li>
+<li><p><a href="https://forum.effectivealtruism.org/posts/j5v2Gsc7wW2A6Dq5w/why-i-find-longtermism-hard-and-what-keeps-me-motivated" id="_gHSb4AyO" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/j5v2Gsc7wW2A6Dq5w/why-i-find-longtermism-hard-and-what-keeps-me-motivated?format=preview&amp;theme=classic">为何我发现长期主义很难，以及是什么让我保持动力</a></p></li>
+<li><p><a href="https://forum.effectivealtruism.org/posts/T9jg8w5BFC4i2j2tG/why-i-am-probably-not-a-longtermist" id="_tyxDOzbV" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/T9jg8w5BFC4i2j2tG/why-i-am-probably-not-a-longtermist?format=preview&amp;theme=classic">为何我可能不是一个长期主义者</a></p></li>
+</ul></li>
+<li><p><strong>历史的转折点 (Hinge of history)</strong></p>
+<ul>
+<li><p><a href="https://www.cold-takes.com/this-cant-go-on/" id="_UHzGGjjm">这不能再继续下去了</a></p></li>
+</ul></li>
+<li><p><strong>我们能在多大程度上预测未来？如何预测？</strong></p>
+<ul>
+<li><p><a href="https://www.lesswrong.com/posts/xxL3QkQvLqkDbbkkj/superforecasting-in-a-nutshell" id="_K9FGZW92" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/xxL3QkQvLqkDbbkkj/superforecasting-in-a-nutshell?format=preview&amp;theme=classic">超级预测精要</a></p></li>
+</ul></li>
+<li><p><strong>未来可能是什么样子？</strong></p>
+<ul>
+<li><p><a href="https://www.metaculus.com/questions/?order_by=-num_predictions&amp;has_group=false&amp;question_type=forecast" id="_O2nelPrW" data-link-icon="metaculus" data-link-icon-type="svg" data-link-icon-color="#001935">Metaculus 上的热门开放预测</a></p></li>
+<li><p><a href="https://forum.effectivealtruism.org/posts/Lwz5A2jN5qbsa5B3E/longtermism-and-animal-advocacy" id="_n6uIr3ud" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/Lwz5A2jN5qbsa5B3E/longtermism-and-animal-advocacy?format=preview&amp;theme=classic">长期主义与动物倡导</a></p></li>
+</ul></li>
+</ul>
+</section>
+<div class="horizontal-rule-nth-3">
+<hr />
+</div>
+</section>
+<section id="来自人工智能的风险-risks-from-artificial-intelligence-ai" class="level1">
+<h1><a href="#来自人工智能的风险-risks-from-artificial-intelligence-ai" title="Link to section: § &#39;6. 来自人工智能的风险 (Risks from artificial intelligence (AI))&#39;">6. 来自人工智能的风险 (Risks from Artificial Intelligence (AI))</a></h1>
+<p>变革性人工智能很可能在本世纪被开发出来。 如果成真，它可能会开始为我们做出许多重大决策，并迅速加速经济增长等变化。 我们是否准备好安全地应对这项新技术了？</p>
+<p>您还将了解到预防与 AI 相关的灾难的策略，以及所谓的“<strong>s-风险（s-risks）</strong>”的可能性。</p>
+<section id="关于-ai-风险的核心读物" class="level3 collapse">
+<h3><a href="#关于-ai-风险的核心读物" title="Link to section: § &#39;关于 AI 风险的核心读物&#39;">关于 AI 风险的核心读物</a></h3>
+<ul>
+<li><p><strong>担忧 AI 风险的案例</strong></p>
+<ul>
+<li><p><a href="https://www.cold-takes.com/the-case-for-taking-ai-seriously-as-a-threat-to-humanity/" id="_Sr4Y6jj6">认真对待 AI 作为对人类威胁的案例</a></p></li>
+<li><p><a href="https://ourworldindata.org/ai-timelines" id="_ke-T1BLD" class="link-live" data-link-icon="OWID" data-link-icon-type="text,quad,mono">[Our World in Data] AI 时间线：人工智能专家对未来的期望是什么？ (Roser, 2023)</a></p></li>
+</ul></li>
+<li><p><strong>降低来自未对齐人工智能风险的策略</strong></p>
+<ul>
+<li><p><a href="https://forum.effectivealtruism.org/posts/vDuGEcE3gX9g4qf3i/the-longtermist-ai-governance-landscape-a-basic-overview" id="_gajdlhyR" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/vDuGEcE3gX9g4qf3i/the-longtermist-ai-governance-landscape-a-basic-overview?format=preview&amp;theme=classic">长期主义 AI 治理格局：基本概述</a></p></li>
+<li><p><a href="https://80000hours.org/problem-profiles/preventing-an-ai-related-catastrophe/" id="_54n6i-4a" class="link-live" data-link-icon="80k" data-link-icon-type="text,tri,sans" data-link-icon-color="#2ebdd1">预防与 AI 相关的灾难 - 问题简介</a></p></li>
+</ul></li>
+<li><p><strong>苦难风险 (Suffering risks)</strong></p>
+<ul>
+<li><p><a href="https://forum.effectivealtruism.org/posts/5L22i2s5J5yXgDXLg/why-s-risks-are-the-worst-existential-risks-and-how-to" id="_uw7LDv4a" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/5L22i2s5J5yXgDXLg/why-s-risks-are-the-worst-existential-risks-and-how-to?format=preview&amp;theme=classic">为何 s-风险是最坏的生存风险，以及如何预防它们</a></p></li>
+</ul></li>
+</ul>
+</section>
+<div class="horizontal-rule-nth-1">
+<hr />
+</div>
+</section>
+<section id="你的看法是-what-do-you-think" class="level1">
+<h1><a href="#你的看法是-what-do-you-think" title="Link to section: § &#39;7. 你的看法是？ (What do you think?)&#39;">7. 你的看法是？ (What Do You Think?)</a></h1>
+<p>独立思考并反思您在前几周听到的论点非常重要：您可能会发现自己不同意的地方，或推理中的错误。 即使您没有，如果您思考过这些想法的最薄弱之处，您也可能会更深刻地理解它们。</p>
+<p>因此，本周我们鼓励您花些时间反思您对迄今为止的想法的困惑和担忧，并阅读一些最有力的反驳论点。</p>
+<section id="关于独立思考的核心读物" class="level3 collapse">
+<h3><a href="#关于独立思考的核心读物" title="Link to section: § &#39;关于独立思考的核心读物&#39;">关于独立思考的核心读物</a></h3>
+<ul>
+<li><p><strong>贝叶斯法则与证据 (<a href="https://en.wikipedia.org/wiki/Bayes%27_theorem" id="_QE8T_Z1U" class="link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Bayes%27_theorem#bodyContent">Bayes’ rule</a> and evidence)</strong></p>
+<ul>
+<li><p><a href="https://www.lesswrong.com/posts/w5LTw2z2g5mpq52s9/bayes-rule-guide" id="_spMj6zsJ" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/w5LTw2z2g5mpq52s9/bayes-rule-guide?format=preview&amp;theme=classic">贝叶斯法则：指南</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/aH2J8S222aP2T5hBf/making-beliefs-pay-rent-in-anticipated-experiences" id="_R_RJUILq" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/aH2J8S222aP2T5hBf/making-beliefs-pay-rent-in-anticipated-experiences?format=preview&amp;theme=classic">让信念付出代价</a></p></li>
+<li><p><a href="https://www.lesswrong.com/posts/fAizs2S5f7s2cW5v7/what-is-evidence" id="_DHflDYId" class="link-live" data-link-icon="LW" data-link-icon-type="text" data-link-icon-color="#7faf83" data-url-iframe="https://www.greaterwrong.com/posts/fAizs2S5f7s2cW5v7/what-is-evidence?format=preview&amp;theme=classic">什么是证据？</a></p></li>
+</ul></li>
+<li><p><strong>独立印象 (Independent impressions)</strong></p></li>
+<li><p><strong>从错误中学习</strong></p>
+<ul>
+<li><p><a href="https://forum.effectivealtruism.org/posts/wMAdE5aP2k9zJj22J/reflecting-on-the-last-year-lessons-for-ea-opening-keynote" id="_BLEI5omR" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/wMAdE5aP2k9zJj22J/reflecting-on-the-last-year-lessons-for-ea-opening-keynote?format=preview&amp;theme=classic">反思过去一年 — 对 EA 的教训（EAG 开幕主题演讲）</a></p></li>
+<li><p><a href="https://forum.effectivealtruism.org/posts/242mZ2pEaWJwm3t2A/ea-is-about-maximization-and-maximization-is-perilous" id="_LdNxX2gw" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/242mZ2pEaWJwm3t2A/ea-is-about-maximization-and-maximization-is-perilous?format=preview&amp;theme=classic">EA 是关于最大化，而最大化是危险的</a></p></li>
+</ul></li>
+<li><p><strong>不太常见的事业</strong></p>
+<ul>
+<li><p><a href="https://forum.effectivealtruism.org/posts/yA4f5vT3p52hsoLz5/big-list-of-cause-candidates" id="_XP-1pLDb" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/yA4f5vT3p52hsoLz5/big-list-of-cause-candidates?format=preview&amp;theme=classic">事业候选者大列表</a></p></li>
+</ul></li>
+</ul>
+</section>
+<div class="horizontal-rule-nth-2">
+<hr />
+</div>
+</section>
+<section id="付诸实践-putting-it-into-practice" class="level1">
+<h1><a href="#付诸实践-putting-it-into-practice" title="Link to section: § &#39;8. 付诸实践 (Putting it into practice)&#39;">8. 付诸实践 (Putting It into Practice)</a></h1>
+<p>在最后这一节，我们希望能帮助您将有效利他主义的原则应用到您自己的生活和职业中。</p>
+<p>您可能还未准备好立即做出重大改变——您可能想在行动前进行更多的阅读和反思。 因此，我们将帮助您思考一些关键的不确定性，为这些不确定性设计测试，并规划如何确保您能贯彻自己的意图。</p>
+<section id="关于实践的核心读物" class="level3 collapse">
+<h3><a href="#关于实践的核心读物" title="Link to section: § &#39;关于实践的核心读物&#39;">关于实践的核心读物</a></h3>
+<ul>
+<li><p><strong>行善的态度</strong></p>
+<ul>
+<li><p><a href="https://forum.effectivealtruism.org/posts/GfJ2p3rR8aM9dA2d9/a-call-to-vigilance" id="_QCjcgnJC" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/GfJ2p3rR8aM9dA2d9/a-call-to-vigilance?format=preview&amp;theme=classic">保持警惕的呼吁</a></p></li>
+<li><p><a href="https://forum.effectivealtruism.org/posts/K2i2aJ44R2f2kL3tJ/effective-altruism-as-the-most-exciting-cause-in-the-world" id="_fTCKOzrx" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/K2i2aJ44R2f2kL3tJ/effective-altruism-as-the-most-exciting-cause-in-the-world?format=preview&amp;theme=classic">有效利他主义作为世界上最激动人心的事业</a></p></li>
+</ul></li>
+<li><p><strong>职业选择</strong></p>
+<ul>
+<li><p><a href="https://80000hours.org/key-ideas/" id="_H8FC7lZ4" class="link-live" data-link-icon="80k" data-link-icon-type="text,tri,sans" data-link-icon-color="#2ebdd1">80,000 Hours 关键思想摘要</a></p></li>
+<li><p><a href="https://forum.effectivealtruism.org/posts/r9rWjEcj2A2YyXBkH/my-current-impressions-on-career-choice-for-longtermists" id="_5Eo3EAiT" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/r9rWjEcj2A2YyXBkH/my-current-impressions-on-career-choice-for-longtermists?format=preview&amp;theme=classic">我目前对长期主义者职业选择的印象</a></p></li>
+</ul></li>
+<li><p><strong>捐赠</strong></p>
+<ul>
+<li><p><a href="https://www.givewell.org/" id="_ELhwmgRc" class="link-live" data-link-icon="GW" data-link-icon-type="text" data-link-icon-color="#669bb5">GiveWell</a></p></li>
+<li><p><a href="https://www.givingwhatwecan.org/" id="_DaFqN58r">Giving What We Can</a></p></li>
+</ul></li>
+<li><p><strong>应对苛刻性 (Dealing with demandingness)</strong></p>
+<ul>
+<li><p><a href="https://forum.effectivealtruism.org/posts/w9eCgnsAb9FpX5kM8/you-have-more-than-one-goal-and-that-s-fine" id="_k8835xtO" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/posts/w9eCgnsAb9FpX5kM8/you-have-more-than-one-goal-and-that-s-fine?format=preview&amp;theme=classic">你有一个以上的目标，这没关系</a></p></li>
+</ul></li>
+</ul>
+</section>
+<div class="horizontal-rule-nth-3">
+<hr />
+</div>
+</section>
+<section id="参考文献" class="level1">
+<h1><a href="#参考文献" title="Link to section: § &#39;参考文献&#39;">参考文献</a></h1>
+<p>[1] Effective Altruism Forum. (2024). <em>The Introduction to Effective Altruism Handbook</em>. <a href="https://forum.effectivealtruism.org/handbook" id="_gcSOdiSH" class="link-live" data-link-icon="EA" data-link-icon-type="text" data-link-icon-color="#06819a" data-url-iframe="https://ea.greaterwrong.com/handbook?format=preview&amp;theme=classic">https://forum.effectivealtruism.org/handbook</a></p>
+</section>
+
+      
+      <noscript><div id="noscript-warning-footer" class="admonition error" title="Warning to NoScript Users"><div class="admonition-title"><p>[<strong>Error</strong>: JavaScript disabled.]</p></div> <p>[Backlinks, similar links, and the bibliography require JS enabled to load.]</p></div></noscript>
+      
+      
+      
+      
+      </div> <!-- NOTE: unmatched, because it closes the opening div from the hakyll.hs $body$ Pandoc template -->
+
+    </article>
+
+    
+    <!-- SSI: Footer -->
+    <!-- FOOTER-BEGIN-->
+    <!-- Footer (no SSI): injected by Hakyll from static/include/footer.html -->
+        <nav id="navigation">
+      <svg id="navigation-left"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+      <a id="navigation-center" class="link-page-not" title="Return to top of current page" href="#top"
+        ><svg><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#center" /></svg></a>
+      <svg id="navigation-right"><use href="/static/img/ornament/sequential-nav-icons-arabesque.svg#direction" /></svg>
+    </nav>
+    <div class="markdownBody" id="footer">
+      <p id="footer-anonymous-feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7uqL7B_l1HFIfXc8D_nZyumaOv58msK7jhl4XzQjWODWKdA/viewform" title="Google Docs web form for submitting anonymized feedback to Mako Shan">[&hairsp;Send Anonymous Feedback&hairsp;]</a>
+      </p>
+      <div id="x-of-the-day" class="dark-mode-invert">
+        <p><a id="qotd" class="include include-spinner-not" href="/metadata/today-quote.html">[Quote Of The Day]</a></p>
+        <p><a id="sotd" class="include include-spinner-not" href="/metadata/today-site.html">[Site Of The Day]</a></p>
+        <p><a id="atod" class="include include-spinner-not" href="/metadata/today-annotation.html">[Annotation Of The Day]</a></p>
+      </div>
+      <p><a id="psa-adblock" class="include adsense include-spinner-not" href="/metadata/psa-adblock.html">[adblock public service announcement]</a></p>
+    </div>
+
+    <!-- FOOTER-END -->
+    
+    <div id="footer-decoration-container"> <!-- Mandatory element for layout -->
+      <a rel="home me contents" title="Mako Shan homepage" class="footer-logo dark-mode-invert" href="/index/">​</a>
+    </div>
+
+  </main>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-18912926-1" onload="GW.googleAnalyticsLoaded = true;"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-18912926-1');
+  </script>
+  
+  
+</body>
+</html>
