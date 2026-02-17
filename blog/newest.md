@@ -13,6 +13,9 @@ index: True
 ...
 
 ::: {#newest-list .columns}
+-   [`在 AGI 前夜写作：Gwern x Dwarkesh 访谈整理`{=html}](/blog/2024/gwern-branwen-agi-writing "Original URL: <https://www.dwarkesh.com/p/gwern-branwen#%C2%A7transcript>"){.link-modified-recently-not
+    .icon-not}
+
 -   [`我的微波炉平行时间线之旅`{=html}](/blog/2016/microwave-alternate-timeline "Original URL: <https://www.lesswrong.com/posts/8m6AM5qtPMjgTkEeD/my-journey-to-the-microwave-alternate-timeline>"){.link-modified-recently-not
     .icon-not}
 

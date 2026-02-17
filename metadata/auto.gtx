@@ -63670,3 +63670,421 @@ Gwern
 </ul></li>
 </ul>
 </div>
+---
+/design#principles
+
+
+
+2026-02-16
+
+
+
+---
+/about#importance-tags
+
+
+
+2026-02-16
+
+
+
+---
+/static/js/transclude.js
+
+
+
+2026-02-16
+
+
+
+---
+/design#similar-links
+
+
+
+2026-02-16
+
+
+
+---
+/static/js/tablesorter.js
+
+
+
+2026-02-16
+
+
+
+---
+/about#confidence-tags
+
+
+
+2026-02-16
+
+
+
+---
+/static/build/Typography.hs
+
+
+
+2026-02-16
+
+
+
+---
+/design#link-bibliographies
+
+
+
+2026-02-16
+
+
+
+---
+/design-graveyard#djvu-files
+
+
+
+2026-02-16
+
+
+
+---
+/design-graveyard#fraction-slash
+
+
+
+2026-02-16
+
+
+
+---
+/design-graveyard#ordinal-word-counts
+
+
+
+2026-02-16
+
+
+
+---
+/design#backlink
+Design Of This Website § Backlink
+Gwern
+2010-10-01
+2023-04-20
+
+
+<figure><img class="float-right page-thumbnail  outline invert-not" height="0" width="0" src="/doc/design/2020-12-25-gwern-gwernnet-recursivepopups.png" title="Screenshot of Gwern.net demonstrating recursive popup functionality, allowing arbitrarily deep hypertext exploration of references and links." alt=""></figure><div class="page-description-annotation">
+<p>Meta page describing Gwern.net, the self-documenting website’s implementation and experiments for better ‘semantic zoom’ of hypertext; technical decisions using <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> and static hosting.</p>
+</div>
+<p>Gwern.net implements <a href="/doc/www/maggieappleton.com/345a8b4c553c965a0cc1a1c16e943eadc3ebc557.html" id="_KMXyP41y" class="link-live" data-link-icon="maggie-appleton" data-link-icon-type="svg" data-link-icon-color="#04a4ba" data-url-archive="/doc/www/maggieappleton.com/345a8b4c553c965a0cc1a1c16e943eadc3ebc557.html" data-url-original="https://maggieappleton.com/bidirectionals" data-filesize-bytes="2356915" data-filesize-percentage="65" title="A Short History of Bi-Directional Links">“bidirectional”</a> <a href="https://en.wikipedia.org/wiki/Hyperlink" id="_Tq0OzViG" class="link-annotated-partial link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hyperlink#bodyContent" title="Hyperlink">hyperlinks</a><a href="/design#fn6" class="footnote-ref" role="doc-noteref"><sup>6</sup></a> or <a href="https://en.wikipedia.org/wiki/Backlink" id="_2FStqRRq" class="link-annotated-partial link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Backlink#bodyContent" title="Backlink"><strong>backlinks</strong></a> (<a href="/design#backlinks" class="aux-links" data-link-icon="arrows-pointing-inwards-to-dot" data-link-icon-type="svg">eg. this page</a>): links are both forwards (the normal kind) from the current page outwards to another; but also <em>backwards</em>, showing where on other pages is the current page linked.</p>
+<p>Its backlinks are especially good because popups provide frictionless navigation; and our careful implementation means they can be provided in-context near the referenced content, and even between arbitrary URLs (via annotations).</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/design#benefit" id="toc-benefit">Benefit</a></li>
+<li><a href="/design#principles" id="toc-principles">Principles</a></li>
+<li><a href="/design#features" id="toc-features">Features</a>
+<ul>
+<li><a href="/design#backlink" id="toc-backlink">Backlink</a>
+<ul>
+<li><a href="/design#backlink-features" id="toc-backlink-features">Backlink Features</a>
+<ul>
+<li><a href="/design#in-context" id="toc-in-context">In-Context</a></li>
+<li><a href="/design#popups" id="toc-popups">Popups</a></li>
+</ul></li>
+<li><a href="/design#implementation" id="toc-implementation">Implementation</a>
+<ul>
+<li><a href="/design#other-uses" id="toc-other-uses">Other Uses</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#similar-links" id="toc-similar-links">Similar Links</a></li>
+<li><a href="/design#link-bibliographies" id="toc-link-bibliographies">Link Bibliographies</a></li>
+<li><a href="/design#tags" id="toc-tags">Tags</a>
+<ul>
+<li><a href="/design#properties" id="toc-properties">Properties</a></li>
+<li><a href="/design#use-appearance" id="toc-use-appearance">Use &amp; Appearance</a></li>
+<li><a href="/design#features-1" id="toc-features-1">Features</a>
+<ul>
+<li><a href="/design#future-tag-features" id="toc-future-tag-features">Future Tag Features</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#abandoned" id="toc-abandoned">Abandoned</a></li>
+<li><a href="/design#tools" id="toc-tools">Tools</a>
+<ul>
+<li><a href="/design#implementation-details" id="toc-implementation-details">Implementation Details</a></li>
+</ul></li>
+<li><a href="/design#external-links" id="toc-external-links">External Links</a></li>
+<li><a href="/design#appendix" id="toc-appendix">Appendix</a>
+<ul>
+<li><a href="/design#returns-to-design" id="toc-returns-to-design">Returns To Design?</a></li>
+</ul></li>
+</ul>
+</div>
+---
+/design#backlink
+Design Of This Website § Backlink
+Gwern
+2010-10-01
+2023-04-20
+
+
+<figure><img class="float-right page-thumbnail  outline invert-not" height="0" width="0" src="/doc/design/2020-12-25-gwern-gwernnet-recursivepopups.png" title="Screenshot of Gwern.net demonstrating recursive popup functionality, allowing arbitrarily deep hypertext exploration of references and links." alt=""></figure><div class="page-description-annotation">
+<p>Meta page describing Gwern.net, the self-documenting website’s implementation and experiments for better ‘semantic zoom’ of hypertext; technical decisions using <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> and static hosting.</p>
+</div>
+<p>Gwern.net implements <a href="/doc/www/maggieappleton.com/345a8b4c553c965a0cc1a1c16e943eadc3ebc557.html" id="_KMXyP41y" class="link-live" data-link-icon="maggie-appleton" data-link-icon-type="svg" data-link-icon-color="#04a4ba" data-url-archive="/doc/www/maggieappleton.com/345a8b4c553c965a0cc1a1c16e943eadc3ebc557.html" data-url-original="https://maggieappleton.com/bidirectionals" data-filesize-bytes="2356915" data-filesize-percentage="65" title="A Short History of Bi-Directional Links">“bidirectional”</a> <a href="https://en.wikipedia.org/wiki/Hyperlink" id="_Tq0OzViG" class="link-annotated-partial link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hyperlink#bodyContent" title="Hyperlink">hyperlinks</a><a href="/design#fn6" class="footnote-ref" role="doc-noteref"><sup>6</sup></a> or <a href="https://en.wikipedia.org/wiki/Backlink" id="_2FStqRRq" class="link-annotated-partial link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Backlink#bodyContent" title="Backlink"><strong>backlinks</strong></a> (<a href="/design#backlinks" class="aux-links" data-link-icon="arrows-pointing-inwards-to-dot" data-link-icon-type="svg">eg. this page</a>): links are both forwards (the normal kind) from the current page outwards to another; but also <em>backwards</em>, showing where on other pages is the current page linked.</p>
+<p>Its backlinks are especially good because popups provide frictionless navigation; and our careful implementation means they can be provided in-context near the referenced content, and even between arbitrary URLs (via annotations).</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/design#benefit" id="toc-benefit">Benefit</a></li>
+<li><a href="/design#principles" id="toc-principles">Principles</a></li>
+<li><a href="/design#features" id="toc-features">Features</a>
+<ul>
+<li><a href="/design#backlink" id="toc-backlink">Backlink</a>
+<ul>
+<li><a href="/design#backlink-features" id="toc-backlink-features">Backlink Features</a>
+<ul>
+<li><a href="/design#in-context" id="toc-in-context">In-Context</a></li>
+<li><a href="/design#popups" id="toc-popups">Popups</a></li>
+</ul></li>
+<li><a href="/design#implementation" id="toc-implementation">Implementation</a>
+<ul>
+<li><a href="/design#other-uses" id="toc-other-uses">Other Uses</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#similar-links" id="toc-similar-links">Similar Links</a></li>
+<li><a href="/design#link-bibliographies" id="toc-link-bibliographies">Link Bibliographies</a></li>
+<li><a href="/design#tags" id="toc-tags">Tags</a>
+<ul>
+<li><a href="/design#properties" id="toc-properties">Properties</a></li>
+<li><a href="/design#use-appearance" id="toc-use-appearance">Use &amp; Appearance</a></li>
+<li><a href="/design#features-1" id="toc-features-1">Features</a>
+<ul>
+<li><a href="/design#future-tag-features" id="toc-future-tag-features">Future Tag Features</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#abandoned" id="toc-abandoned">Abandoned</a></li>
+<li><a href="/design#tools" id="toc-tools">Tools</a>
+<ul>
+<li><a href="/design#implementation-details" id="toc-implementation-details">Implementation Details</a></li>
+</ul></li>
+<li><a href="/design#external-links" id="toc-external-links">External Links</a></li>
+<li><a href="/design#appendix" id="toc-appendix">Appendix</a>
+<ul>
+<li><a href="/design#returns-to-design" id="toc-returns-to-design">Returns To Design?</a></li>
+</ul></li>
+</ul>
+</div>
+---
+/static/build/Typography.hs
+
+
+
+2026-02-16
+
+
+
+---
+/static/js/transclude.js
+
+
+
+2026-02-16
+
+
+
+---
+/static/js/tablesorter.js
+
+
+
+2026-02-16
+
+
+
+---
+/design#principles
+
+
+
+2026-02-16
+
+
+
+---
+/about#importance-tags
+
+
+
+2026-02-16
+
+
+
+---
+/design#link-bibliographies
+
+
+
+2026-02-16
+
+
+
+---
+/about#confidence-tags
+
+
+
+2026-02-16
+
+
+
+---
+/design#similar-links
+
+
+
+2026-02-16
+
+
+
+---
+/design-graveyard#ordinal-word-counts
+
+
+
+2026-02-16
+
+
+
+---
+/design-graveyard#fraction-slash
+
+
+
+2026-02-16
+
+
+
+---
+/design-graveyard#djvu-files
+
+
+
+2026-02-16
+
+
+
+---
+/design#backlink
+Design Of This Website § Backlink
+Gwern
+2010-10-01
+2023-04-20
+
+
+<figure><img class="float-right page-thumbnail  outline invert-not" height="0" width="0" src="/doc/design/2020-12-25-gwern-gwernnet-recursivepopups.png" title="Screenshot of Gwern.net demonstrating recursive popup functionality, allowing arbitrarily deep hypertext exploration of references and links." alt=""></figure><div class="page-description-annotation">
+<p>Meta page describing Gwern.net, the self-documenting website’s implementation and experiments for better ‘semantic zoom’ of hypertext; technical decisions using <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> and static hosting.</p>
+</div>
+<p>Gwern.net implements <a href="/doc/www/maggieappleton.com/345a8b4c553c965a0cc1a1c16e943eadc3ebc557.html" id="_KMXyP41y" class="link-live" data-link-icon="maggie-appleton" data-link-icon-type="svg" data-link-icon-color="#04a4ba" data-url-archive="/doc/www/maggieappleton.com/345a8b4c553c965a0cc1a1c16e943eadc3ebc557.html" data-url-original="https://maggieappleton.com/bidirectionals" data-filesize-bytes="2356915" data-filesize-percentage="65" title="A Short History of Bi-Directional Links">“bidirectional”</a> <a href="https://en.wikipedia.org/wiki/Hyperlink" id="_Tq0OzViG" class="link-annotated-partial link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hyperlink#bodyContent" title="Hyperlink">hyperlinks</a><a href="/design#fn6" class="footnote-ref" role="doc-noteref"><sup>6</sup></a> or <a href="https://en.wikipedia.org/wiki/Backlink" id="_2FStqRRq" class="link-annotated-partial link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Backlink#bodyContent" title="Backlink"><strong>backlinks</strong></a> (<a href="/design#backlinks" class="aux-links" data-link-icon="arrows-pointing-inwards-to-dot" data-link-icon-type="svg">eg. this page</a>): links are both forwards (the normal kind) from the current page outwards to another; but also <em>backwards</em>, showing where on other pages is the current page linked.</p>
+<p>Its backlinks are especially good because popups provide frictionless navigation; and our careful implementation means they can be provided in-context near the referenced content, and even between arbitrary URLs (via annotations).</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/design#benefit" id="toc-benefit">Benefit</a></li>
+<li><a href="/design#principles" id="toc-principles">Principles</a></li>
+<li><a href="/design#features" id="toc-features">Features</a>
+<ul>
+<li><a href="/design#backlink" id="toc-backlink">Backlink</a>
+<ul>
+<li><a href="/design#backlink-features" id="toc-backlink-features">Backlink Features</a>
+<ul>
+<li><a href="/design#in-context" id="toc-in-context">In-Context</a></li>
+<li><a href="/design#popups" id="toc-popups">Popups</a></li>
+</ul></li>
+<li><a href="/design#implementation" id="toc-implementation">Implementation</a>
+<ul>
+<li><a href="/design#other-uses" id="toc-other-uses">Other Uses</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#similar-links" id="toc-similar-links">Similar Links</a></li>
+<li><a href="/design#link-bibliographies" id="toc-link-bibliographies">Link Bibliographies</a></li>
+<li><a href="/design#tags" id="toc-tags">Tags</a>
+<ul>
+<li><a href="/design#properties" id="toc-properties">Properties</a></li>
+<li><a href="/design#use-appearance" id="toc-use-appearance">Use &amp; Appearance</a></li>
+<li><a href="/design#features-1" id="toc-features-1">Features</a>
+<ul>
+<li><a href="/design#future-tag-features" id="toc-future-tag-features">Future Tag Features</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#abandoned" id="toc-abandoned">Abandoned</a></li>
+<li><a href="/design#tools" id="toc-tools">Tools</a>
+<ul>
+<li><a href="/design#implementation-details" id="toc-implementation-details">Implementation Details</a></li>
+</ul></li>
+<li><a href="/design#external-links" id="toc-external-links">External Links</a></li>
+<li><a href="/design#appendix" id="toc-appendix">Appendix</a>
+<ul>
+<li><a href="/design#returns-to-design" id="toc-returns-to-design">Returns To Design?</a></li>
+</ul></li>
+</ul>
+</div>
+---
+/design#backlink
+Design Of This Website § Backlink
+Gwern
+2010-10-01
+2023-04-20
+
+
+<figure><img class="float-right page-thumbnail  outline invert-not" height="0" width="0" src="/doc/design/2020-12-25-gwern-gwernnet-recursivepopups.png" title="Screenshot of Gwern.net demonstrating recursive popup functionality, allowing arbitrarily deep hypertext exploration of references and links." alt=""></figure><div class="page-description-annotation">
+<p>Meta page describing Gwern.net, the self-documenting website’s implementation and experiments for better ‘semantic zoom’ of hypertext; technical decisions using <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> and static hosting.</p>
+</div>
+<p>Gwern.net implements <a href="/doc/www/maggieappleton.com/345a8b4c553c965a0cc1a1c16e943eadc3ebc557.html" id="_KMXyP41y" class="link-live" data-link-icon="maggie-appleton" data-link-icon-type="svg" data-link-icon-color="#04a4ba" data-url-archive="/doc/www/maggieappleton.com/345a8b4c553c965a0cc1a1c16e943eadc3ebc557.html" data-url-original="https://maggieappleton.com/bidirectionals" data-filesize-bytes="2356915" data-filesize-percentage="65" title="A Short History of Bi-Directional Links">“bidirectional”</a> <a href="https://en.wikipedia.org/wiki/Hyperlink" id="_Tq0OzViG" class="link-annotated-partial link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Hyperlink#bodyContent" title="Hyperlink">hyperlinks</a><a href="/design#fn6" class="footnote-ref" role="doc-noteref"><sup>6</sup></a> or <a href="https://en.wikipedia.org/wiki/Backlink" id="_2FStqRRq" class="link-annotated-partial link-live" data-link-icon="wikipedia" data-link-icon-type="svg" data-url-iframe="https://en.m.wikipedia.org/wiki/Backlink#bodyContent" title="Backlink"><strong>backlinks</strong></a> (<a href="/design#backlinks" class="aux-links" data-link-icon="arrows-pointing-inwards-to-dot" data-link-icon-type="svg">eg. this page</a>): links are both forwards (the normal kind) from the current page outwards to another; but also <em>backwards</em>, showing where on other pages is the current page linked.</p>
+<p>Its backlinks are especially good because popups provide frictionless navigation; and our careful implementation means they can be provided in-context near the referenced content, and even between arbitrary URLs (via annotations).</p>
+<div class="columns TOC">
+<ul>
+<li><a href="/design#benefit" id="toc-benefit">Benefit</a></li>
+<li><a href="/design#principles" id="toc-principles">Principles</a></li>
+<li><a href="/design#features" id="toc-features">Features</a>
+<ul>
+<li><a href="/design#backlink" id="toc-backlink">Backlink</a>
+<ul>
+<li><a href="/design#backlink-features" id="toc-backlink-features">Backlink Features</a>
+<ul>
+<li><a href="/design#in-context" id="toc-in-context">In-Context</a></li>
+<li><a href="/design#popups" id="toc-popups">Popups</a></li>
+</ul></li>
+<li><a href="/design#implementation" id="toc-implementation">Implementation</a>
+<ul>
+<li><a href="/design#other-uses" id="toc-other-uses">Other Uses</a></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#similar-links" id="toc-similar-links">Similar Links</a></li>
+<li><a href="/design#link-bibliographies" id="toc-link-bibliographies">Link Bibliographies</a></li>
+<li><a href="/design#tags" id="toc-tags">Tags</a>
+<ul>
+<li><a href="/design#properties" id="toc-properties">Properties</a></li>
+<li><a href="/design#use-appearance" id="toc-use-appearance">Use &amp; Appearance</a></li>
+<li><a href="/design#features-1" id="toc-features-1">Features</a>
+<ul>
+<li><a href="/design#future-tag-features" id="toc-future-tag-features">Future Tag Features</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="/design#abandoned" id="toc-abandoned">Abandoned</a></li>
+<li><a href="/design#tools" id="toc-tools">Tools</a>
+<ul>
+<li><a href="/design#implementation-details" id="toc-implementation-details">Implementation Details</a></li>
+</ul></li>
+<li><a href="/design#external-links" id="toc-external-links">External Links</a></li>
+<li><a href="/design#appendix" id="toc-appendix">Appendix</a>
+<ul>
+<li><a href="/design#returns-to-design" id="toc-returns-to-design">Returns To Design?</a></li>
+</ul></li>
+</ul>
+</div>

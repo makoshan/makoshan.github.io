@@ -62,7 +62,7 @@ pageDescriptionMinLength = 20
 -- YAML METADATA --
 -------------------
 -- for documentation of valid metadata enumerations, see </style-guide#page-metadata>.
-yamlValidStatuses, yamlValidConfidences, yamlValidCssExtensions :: [String]
+yamlValidStatuses, yamlValidConfidences, yamlValidCssExtensions, yamlValidMetadataFields :: [String]
 yamlValidStatuses = setLike ["finished", "in progress", "draft", "notes", "abandoned", "obsolete"]
 -- Kesselman estimative words + custom extensions. See: <https://en.wikipedia.org/wiki/Words_of_estimative_probability>
 yamlValidConfidences = setLike ["certain", "highly likely", "likely", "possible", "unlikely"
@@ -70,12 +70,20 @@ yamlValidConfidences = setLike ["certain", "highly likely", "likely", "possible"
                        , "log", "emotional", "fiction"]
 -- site-specific extensions:
 yamlValidCssExtensions = setLike ["dark-mode", "dropcaps-not" -- "dropcap-not" is local, and "dropcaps-not" is the page-level
-                         , "dropcaps-cheshire", "dropcaps-de-zs"
-                         , "dropcaps-dropcat", "dropcaps-gene-wolfe", "dropcaps-goudy"
-                         , "dropcaps-kanzlei", "dropcaps-yinit", "extract-not", "index"
-                         , "reader-mode", "test-april-fools-2024", "test-april-fools-2025"
-                         , "test-april-fools-2026", "test-christmas", "test-easter"
-                         , "test-halloween", "toc-not"]
+                          , "dropcaps-cheshire", "dropcaps-de-zs"
+                          , "dropcaps-dropcat", "dropcaps-gene-wolfe", "dropcaps-goudy"
+                          , "dropcaps-kanzlei", "dropcaps-yinit", "extract-not", "index"
+                          , "reader-mode", "test-april-fools-2024", "test-april-fools-2025"
+                          , "test-april-fools-2026", "test-christmas", "test-easter"
+                          , "test-halloween", "toc-not"]
+
+-- strict key validation for YAML front-matter.
+-- Includes both style-guide keys and repository-local extensions currently in use.
+yamlValidMetadataFields = setLike ["title", "author", "description", "thumbnail", "thumbnail-text"
+                                 , "created", "modified", "thumbnail-css", "status", "confidence"
+                                 , "importance", "css-extension", "placeholder", "index", "error404"
+                                 , "backlink", "tags", "belief", "titlePlain", "previous", "next"
+                                 , "cssExtension"]
 
 -- NOTE: all time operations are done in the local timezone, unless otherwise specified.
 currentYear :: Int

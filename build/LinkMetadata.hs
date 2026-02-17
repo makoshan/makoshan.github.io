@@ -541,20 +541,19 @@ annotateLink md x@(Link (_,_,_) _ (targetT,_))
              if external && allowExternal /= Just "1"
                then return (Left Permanent)
                else do
-                 new <- linkDispatcher md x
-                 case new of
-                   -- some failures we don't want to cache because they may succeed when checked differently or later on or should be fixed:
-                   Left Temporary -> return (Left Temporary)
-                   -- cache the failures too, so we don't waste time rechecking the PDFs every build; return False because we didn't come up with any new useful annotations:
-                   Left Permanent -> do
-                     allowWrite <- lookupEnv "GWERN_WRITE_MISSING_ANNOTATIONS"
-                     when (allowWrite == Just "1") $
-                       appendLinkMetadata target'' ("", "", "", today, [], [], "")
-                     return (Left Permanent)
-                   Right y@(f,m) -> do
-                     printGreen (f ++ "; GTX:\n" ++ T.unpack (T.unlines (GTX.untupleize today y)) ++ "\nHaskell: " ++ show y)
-                     -- return true because we *did* change the database & need to rebuild:
-                     appendLinkMetadata f m >> return (Right y)
+                  new <- linkDispatcher md x
+                  case new of
+                    -- some failures we don't want to cache because they may succeed when checked differently or later on or should be fixed:
+                    Left Temporary -> return (Left Temporary)
+                    -- cache the failures too, so we don't waste time rechecking the PDFs every build; return False because we didn't come up with any new useful annotations:
+                    Left Permanent -> do
+                      allowWrite <- lookupEnv "GWERN_WRITE_MISSING_ANNOTATIONS"
+                      when (allowWrite == Just "1") $
+                        appendLinkMetadata target'' ("", "", "", today, [], [], "")
+                      return (Left Permanent)
+                    Right y@(f,m) -> do
+                      -- return true because we *did* change the database & need to rebuild:
+                      appendLinkMetadata f m >> return (Right y)
 annotateLink _ x = error ("LM.annotateLink was passed an Inline which was not a Link: " ++ show x)
 
 -- walk the page, and modify each URL to specify if it has an annotation available or not, and add its link ID:

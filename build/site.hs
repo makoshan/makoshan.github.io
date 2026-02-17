@@ -20,6 +20,8 @@ import Data.Char (toLower)
 import Data.List (intercalate, isInfixOf, isPrefixOf, isSuffixOf, group, sort)
 import qualified Data.Map.Strict as M (lookup)
 import Data.Maybe (isNothing, fromMaybe)
+import qualified Data.Aeson.Key as AK (toString)
+import qualified Data.Aeson.KeyMap as AKM (keys)
 import System.Environment (getArgs, withArgs, lookupEnv)
 import Hakyll (compile, composeRoutes, constField, fromGlob, -- symlinkFileCompiler,
                copyFileCompiler, defaultContext, defaultHakyllReaderOptions, field, getMetadata, getMetadataField, lookupString,
@@ -54,7 +56,7 @@ import Tags (tagsToLinksDiv)
 import Typography (linebreakingTransform, typographyTransformTemporary, titlecaseInline, completionProgressHTML, addDropCap)
 import Utils (printGreen, replace, deleteMany, replaceChecked, safeHtmlWriterOptions, simplifiedHTMLString, inlinesToText, flattenLinksInInlines, delete, toHTML, getMostRecentlyModifiedDir)
 import Test (testAll)
-import qualified Config.Misc as C (cd, currentYear, todayDayStringUnsafe, isOlderThan, isNewWithinNDays, pageMetadataFieldsMandatory, pageTitleMaxWords, pageDescriptionMaxLength, pageDescriptionMinLength, yamlValidStatuses, yamlValidConfidences, yamlValidCssExtensions, root)
+import qualified Config.Misc as C (cd, currentYear, todayDayStringUnsafe, isOlderThan, isNewWithinNDays, pageMetadataFieldsMandatory, pageTitleMaxWords, pageDescriptionMaxLength, pageDescriptionMinLength, yamlValidStatuses, yamlValidConfidences, yamlValidCssExtensions, yamlValidMetadataFields, root)
 import Metadata.Date (dateRangeDuration, isDate, isDatePossibleGwernnet)
 import LinkID ()
 -- import Blog (writeOutBlogEntries)
@@ -572,10 +574,11 @@ _validateYAMLMetadata :: Hakyll.Metadata -> FilePath -> IO ()
 _validateYAMLMetadata hakyllMeta filepath = do
   let getString :: String -> Maybe String
       getString = flip lookupString hakyllMeta
-
-      -- NOTE: unknown field checking not implemented; would require extracting keys from Hakyll.Metadata
-
+      unknownFields = filter (`notElem` C.yamlValidMetadataFields) (map AK.toString (AKM.keys hakyllMeta))
       missingMandatory = filter (isNothing . getString) C.pageMetadataFieldsMandatory
+
+  unless (null unknownFields || "/index.md" `isSuffixOf` filepath || "/abstract.md" `isSuffixOf` filepath || "newsletter/20"`isPrefixOf`filepath) $
+    error $ "hakyll.validateYAMLMetadata C.yamlValidMetadataFields (" ++ filepath ++ "): unknown metadata fields: " ++ show unknownFields ++ "; valid fields are: " ++ show C.yamlValidMetadataFields
 
   unless (null missingMandatory || "/index.md" `isSuffixOf` filepath || "/abstract.md" `isSuffixOf` filepath || "newsletter/20"`isPrefixOf`filepath) $
     error $ "hakyll.validateYAMLMetadata (" ++ filepath ++ "): missing mandatory fields: " ++ show missingMandatory ++ "; metadata was: " ++ show hakyllMeta

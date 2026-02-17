@@ -13,7 +13,7 @@ css-extension: dropcaps-de-zs
 ...
 
 <div class="abstract">
-> 本页面关于 Makoshan 内容；有关其实现 & 设计及其弹出范式的详细信息，请参阅 [设计](/design "'Design Of This Website', Gwern 2010"){.backlink-not}；有关我的信息，请参阅 [链接](/me "'About Gwern', Gwern 2009"){.backlink-not}。
+> 本页面关于 Gwern Branwen 内容；有关其实现 & 设计及其弹出范式的详细信息，请参阅 [设计](/design "'Design Of This Website', Gwern 2010"){.backlink-not}；有关我的信息，请参阅 [链接](/me "'About Gwern', Gwern 2009"){.backlink-not}。
 </div>
 
 # 内容

@@ -1,41 +1,41 @@
 [ ( "%22'The%20Last%20Man%20on%20the%20Moon',%20Cernan%20&%20Davis%201999%22"
-  , Left 61087
+  , Left 61088
   )
-, ( "2005%20Europe%20trip" , Left 61087 )
+, ( "2005%20Europe%20trip" , Left 61088 )
 , ( "2006%20Cornell%20TKD" , Left 61080 )
 , ( "2011%20San%20Francisco" , Left 61080 )
 , ( "2012%20election%20predictions" , Left 61086 )
 , ( "AB%20testing" , Left 61080 )
-, ( "AB%20testing#beeline-reader" , Left 61087 )
-, ( "AB%20testing#beeline-reader-text-highlighting" , Left 61087 )
-, ( "AB%20testing#blockquote-formatting" , Left 61087 )
-, ( "AB%20testing#covariate-impact-on-power" , Left 61087 )
-, ( "AB%20testing#font-size-toc-background" , Left 61087 )
-, ( "AB%20testing#max-width" , Left 61087 )
-, ( "AB%20testing#text-background-color" , Left 61087 )
+, ( "AB%20testing#beeline-reader" , Left 61088 )
+, ( "AB%20testing#beeline-reader-text-highlighting" , Left 61088 )
+, ( "AB%20testing#blockquote-formatting" , Left 61088 )
+, ( "AB%20testing#covariate-impact-on-power" , Left 61088 )
+, ( "AB%20testing#font-size-toc-background" , Left 61088 )
+, ( "AB%20testing#max-width" , Left 61088 )
+, ( "AB%20testing#text-background-color" , Left 61088 )
 , ( "About" , Left 61080 )
-, ( "About#anonymous-feedback" , Left 61087 )
+, ( "About#anonymous-feedback" , Left 61088 )
 , ( "About#fn26" , Left 61080 )
 , ( "About#long-content" , Left 61080 )
 , ( "Against%20The%20Miletians" , Left 61080 )
 , ( "An%20Abortion%20Dialogue" , Left 61080 )
 , ( "Anime%20criticism%20is%20not%20about%20quality" , Left 61080 )
 , ( "Archiving%20URLs" , Left 61086 )
-, ( "Archiving%20URLs#sort---key-compression-trick" , Left 61087 )
+, ( "Archiving%20URLs#sort---key-compression-trick" , Left 61088 )
 , ( "Aria%27s%20past,%20present,%20and%20future" , Left 61080 )
 , ( "Barratry" , Left 61080 )
 , ( "Bicycles%20and%20Rationality" , Left 61080 )
-, ( "Bitcoin%20is%20Worse%20is%20Better" , Left 61087 )
+, ( "Bitcoin%20is%20Worse%20is%20Better" , Left 61088 )
 , ( "Bitcoin%20is%20Worse%20is%20Better#irreversible-transactions-meta-scams"
   , Left 61080
   )
-, ( "Blackmail" , Left 61087 )
-, ( "Blackmail#fanfiction" , Left 61087 )
-, ( "Blackmail#march" , Left 61087 )
+, ( "Blackmail" , Left 61088 )
+, ( "Blackmail#fanfiction" , Left 61088 )
+, ( "Blackmail#march" , Left 61088 )
 , ( "Blackmail#september" , Left 61080 )
 , ( "Book%20reviews" , Left 61080 )
-, ( "Book%20reviews#umineko-no-naku-koro-ni" , Left 61087 )
-, ( "Charity%20is%20not%20about%20helping" , Left 61087 )
+, ( "Book%20reviews#umineko-no-naku-koro-ni" , Left 61088 )
+, ( "Charity%20is%20not%20about%20helping" , Left 61088 )
 , ( "Choosing%20Software" , Left 61080 )
 , ( "Colder%20Wars" , Left 61080 )
 , ( "Conscientiousness%20and%20online%20education" , Left 61080 )
@@ -44,7 +44,7 @@
   )
 , ( "Console%20Insurance" , Left 61080 )
 , ( "Copyright" , Left 61080 )
-, ( "Creatine" , Left 61087 )
+, ( "Creatine" , Left 61088 )
 , ( "Culture%20is%20not%20about%20Esthetics" , Left 61086 )
 , ( "DNB%20FAQ" , Left 61086 )
 , ( "DNB%20FAQ#aging" , Left 61080 )
@@ -64,22 +64,22 @@
 , ( "Death%20Note%20Ending" , Left 61086 )
 , ( "Death%20Note%20script" , Left 61086 )
 , ( "Drug%20heuristics" , Left 61080 )
-, ( "Ethical%20sperm%20donation" , Left 61087 )
+, ( "Ethical%20sperm%20donation" , Left 61088 )
 , ( "Evolutionary%20Licenses" , Left 61080 )
 , ( "FMP%20parody" , Left 61080 )
 , ( "Girl%20Scouts%20and%20good%20governance" , Left 61080 )
 , ( "Girl%20Scouts%20and%20good%20governance#cookie-prices-and-inflation"
-  , Left 61087
+  , Left 61088
   )
 , ( "Girl%20Scouts%20and%20good%20governance#fn1" , Left 61086 )
 , ( "Google%20Alerts" , Left 61086 )
 , ( "Google%20shutdowns" , Left 61086 )
 , ( "Haskell%20Summer%20of%20Code" , Left 61080 )
-, ( "Haskell%20Summer%20of%20Code#section-7" , Left 61087 )
+, ( "Haskell%20Summer%20of%20Code#section-7" , Left 61088 )
 , ( "ICON%202010" , Left 61080 )
 , ( "ICON%202011" , Left 61080 )
 , ( "ICON%202012" , Left 61080 )
-, ( "ICON%202012#sunday" , Left 61087 )
+, ( "ICON%202012#sunday" , Left 61088 )
 , ( "Immoral%20Books" , Left 61080 )
 , ( "In%20Defense%20Of%20Inclusionism" , Left 61080 )
 , ( "In%20Defense%20Of%20Inclusionism#new-regimes" , Left 61080 )
@@ -87,29 +87,29 @@
 , ( "Iodine#meta-analysis" , Left 61080 )
 , ( "Isomorphisms" , Left 61080 )
 , ( "Justifications" , Left 61080 )
-, ( "LLLT" , Left 61087 )
+, ( "LLLT" , Left 61088 )
 , ( "LSD%20microdosing" , Left 61080 )
-, ( "Lewis%20meditation" , Left 61087 )
+, ( "Lewis%20meditation" , Left 61088 )
 , ( "Life%20contract" , Left 61080 )
 , ( "Links" , Left 61080 )
 , ( "Links#contact" , Left 61080 )
 , ( "Links#websites" , Left 61086 )
-, ( "Links#wikis" , Left 61087 )
+, ( "Links#wikis" , Left 61088 )
 , ( "Lunar%20sleep" , Left 61080 )
 , ( "Melatonin" , Left 61080 )
 , ( "Melatonin#health-performance" , Left 61080 )
 , ( "Melatonin#roi" , Left 61080 )
 , ( "Mistakes" , Left 61080 )
-, ( "Mistakes#centralized-black-markets" , Left 61087 )
+, ( "Mistakes#centralized-black-markets" , Left 61088 )
 , ( "Mistakes#fn14" , Left 61080 )
 , ( "Modafinil" , Left 61086 )
 , ( "Modafinil#legal-risk" , Left 61080 )
-, ( "Modafinil#margins" , Left 61087 )
-, ( "Modafinil#modafinil-table" , Left 61087 )
+, ( "Modafinil#margins" , Left 61088 )
+, ( "Modafinil#modafinil-table" , Left 61088 )
 , ( "Modafinil#ordering-behavior" , Left 61080 )
 , ( "Modafinil#ordering-when-learning-isnt-free" , Left 61080 )
 , ( "Modafinil#ordering-with-learning" , Left 61080 )
-, ( "Modafinil#side-effects" , Left 61087 )
+, ( "Modafinil#side-effects" , Left 61088 )
 , ( "Nicotine" , Left 61080 )
 , ( "Nicotine#performance" , Left 61080 )
 , ( "Nootropics" , Left 61080 )
@@ -118,11 +118,11 @@
 , ( "Nootropics#armodafinil" , Left 61080 )
 , ( "Nootropics#caffeine" , Left 61080 )
 , ( "Nootropics#creatine" , Left 61080 )
-, ( "Nootropics#followup-experiment" , Left 61087 )
+, ( "Nootropics#followup-experiment" , Left 61088 )
 , ( "Nootropics#huperzine-a" , Left 61080 )
 , ( "Nootropics#iodine" , Left 61080 )
-, ( "Nootropics#iodine-eye-color-changes" , Left 61087 )
-, ( "Nootropics#lithium" , Left 61087 )
+, ( "Nootropics#iodine-eye-color-changes" , Left 61088 )
+, ( "Nootropics#lithium" , Left 61088 )
 , ( "Nootropics#modalert-blind-day-trial" , Left 61080 )
 , ( "Nootropics#piracetam" , Left 61080 )
 , ( "Nootropics#potassium" , Left 61080 )
@@ -130,14 +130,14 @@
 , ( "Nootropics#value-of-information-voi" , Left 61080 )
 , ( "Nootropics#vitamin-d" , Left 61080 )
 , ( "Notes" , Left 61080 )
-, ( "Notes#arthur-moulton" , Left 61087 )
-, ( "Notes#cicadas" , Left 61087 )
+, ( "Notes#arthur-moulton" , Left 61088 )
+, ( "Notes#cicadas" , Left 61088 )
 , ( "Notes#fermi-calculations" , Left 61080 )
-, ( "Notes#technology-epigrams" , Left 61087 )
+, ( "Notes#technology-epigrams" , Left 61088 )
 , ( "On%20Disrespect" , Left 61080 )
 , ( "On%20Stress" , Left 61080 )
 , ( "Ontological%20pantheism" , Left 61080 )
-, ( "Prediction%20markets" , Left 61087 )
+, ( "Prediction%20markets" , Left 61088 )
 , ( "Prediction%20markets#1001-predictionbook-nights"
   , Left 61080
   )
@@ -148,30 +148,30 @@
 , ( "Prediction%20markets#modus-tollens-vs-modus-ponens"
   , Left 61080
   )
-, ( "Prediction%20markets#personal-bets" , Left 61087 )
-, ( "Prediction%20markets#zerocoin" , Left 61087 )
+, ( "Prediction%20markets#personal-bets" , Left 61088 )
+, ( "Prediction%20markets#zerocoin" , Left 61088 )
 , ( "Resilient%20Haskell%20Software" , Left 61080 )
 , ( "Sand" , Left 61080 )
-, ( "Sand#scanners-live-in-vain-as-realistic-sf" , Left 61087 )
+, ( "Sand#scanners-live-in-vain-as-realistic-sf" , Left 61088 )
 , ( "Self-decrypting%20files" , Left 61080 )
 , ( "Self-decrypting%20files#fn3" , Left 61080 )
-, ( "Silk%20Road" , Left 61087 )
-, ( "Silk%20Road#a-mole" , Left 61087 )
-, ( "Silk%20Road#archives-of-sr-pages" , Left 61087 )
-, ( "Silk%20Road#basic-data" , Left 61087 )
-, ( "Silk%20Road#bitcoin-exchange-risk" , Left 61087 )
+, ( "Silk%20Road" , Left 61088 )
+, ( "Silk%20Road#a-mole" , Left 61088 )
+, ( "Silk%20Road#archives-of-sr-pages" , Left 61088 )
+, ( "Silk%20Road#basic-data" , Left 61088 )
+, ( "Silk%20Road#bitcoin-exchange-risk" , Left 61088 )
 , ( "Silk%20Road#estimating-dprs-fortune-minus-expenses-exchange-rate"
-  , Left 61087
+  , Left 61088
   )
-, ( "Silk%20Road#mike-power-questions" , Left 61087 )
-, ( "Silk%20Road#survival-analysis" , Left 61087 )
+, ( "Silk%20Road#mike-power-questions" , Left 61088 )
+, ( "Silk%20Road#survival-analysis" , Left 61088 )
 , ( "Silk%20Road#the-bet-bmr-or-sheep-to-die-in-a-year-by-oct-2014"
-  , Left 61087
+  , Left 61088
   )
-, ( "Simulation%20inferences" , Left 61087 )
+, ( "Simulation%20inferences" , Left 61088 )
 , ( "Slowing%20Moore%27s%20Law" , Left 61080 )
 , ( "Slowing%20Moore's%20Law" , Left 61086 )
-, ( "Spaced%20repetition" , Left 61087 )
+, ( "Spaced%20repetition" , Left 61088 )
 , ( "Sunk%20cost" , Left 61086 )
 , ( "Suzanne%20Delage" , Left 61080 )
 , ( "Tea" , Left 61080 )
@@ -188,14 +188,14 @@
 , ( "The%20Melancholy%20of%20Kyon#sequence" , Left 61080 )
 , ( "The%20Melancholy%20of%20Subculture%20Society" , Left 61080 )
 , ( "The%20Melancholy%20of%20Subculture%20Society#fn32"
-  , Left 61087
+  , Left 61088
   )
 , ( "The%20Narrowing%20Circle" , Left 61080 )
-, ( "The%20Narrowing%20Circle#the-fukuyama-thesis" , Left 61087 )
+, ( "The%20Narrowing%20Circle#the-fukuyama-thesis" , Left 61088 )
 , ( "Touhou" , Left 61080 )
-, ( "Touhou#growth-over-time" , Left 61087 )
+, ( "Touhou#growth-over-time" , Left 61088 )
 , ( "Treadmill#treadmill-effect-on-spaced-repetition-performance-randomized-experiment"
-  , Left 61087
+  , Left 61088
   )
 , ( "Treadmill#typing" , Left 61080 )
 , ( "Weather" , Left 61086 )
@@ -211,8 +211,8 @@
   )
 , ( "Zeo" , Left 61086 )
 , ( "Zeo#melatonin-analysis" , Left 61080 )
-, ( "Zeo#morning-caffeine-pills" , Left 61087 )
-, ( "Zeo#phases-of-the-moon" , Left 61087 )
+, ( "Zeo#morning-caffeine-pills" , Left 61088 )
+, ( "Zeo#phases-of-the-moon" , Left 61088 )
 , ( "Zeo#value-of-information-voi" , Left 61080 )
 , ( "Zeo#vitamin-d" , Left 61080 )
 , ( "Zeo#vitamin-d-analysis" , Left 61080 )
@@ -228,7 +228,7 @@
 , ( "fiction/Men%20of%20Iron" , Left 61080 )
 , ( "fiction/Menard" , Left 61080 )
 , ( "fiction/Missing%20Cities" , Left 61080 )
-, ( "fiction/Missing%20Cities#i" , Left 61087 )
+, ( "fiction/Missing%20Cities#i" , Left 61088 )
 , ( "fiction/Poems" , Left 61080 )
 , ( "fiction/Safecracker" , Left 61080 )
 , ( "fiction/The%20Buddha%27s%20Wheel" , Left 61080 )
@@ -253,7 +253,7 @@
 , ( "haskell/link-extractor.hs" , Left 61080 )
 , ( "hpmor" , Left 61086 )
 , ( "hpmor#analysis" , Left 61080 )
-, ( "hpmor#survival-analysis" , Left 61087 )
+, ( "hpmor#survival-analysis" , Left 61088 )
 , ( "http://10000yearclock.net/" , Left 61080 )
 , ( "http://128.32.86.250/rea/bayareastudy/pdf/science_magazine_article.pdf"
   , Left 61080
@@ -7160,6 +7160,9 @@
   )
 , ( "https://ansuz.sooke.bc.ca/entry/23" , Left 61086 )
 , ( "https://anymemo.org/" , Left 61086 )
+, ( "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.PP.CD?format=json"
+  , Left 61087
+  )
 , ( "https://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.html&r=1&f=G&l=50&s1=%2220070073681%22.PGNR.&OS=DN/20070073681&RS=DN/20070073681"
   , Left 61086
   )
@@ -7231,6 +7234,9 @@
   , Left 61080
   )
 , ( "https://ascii.textfiles.com/archives/3029" , Left 61086 )
+, ( "https://asksathvik.notion.site/Gwern-Branwen-How-an-Anonymous-Researcher-Predicted-AI-s-Trajectory-1ac562a038b280a5bd69ec1170910de7"
+  , Left 61088
+  )
 , ( "https://asktog.com/atc/the-third-user/" , Left 61080 )
 , ( "https://augmentingcognition.com/ltm.html" , Left 61086 )
 , ( "https://aur.archlinux.org/packages/anki20-bin" , Left 61086 )
@@ -7311,6 +7317,9 @@
 , ( "https://book.webtypography.net/" , Left 61080 )
 , ( "https://brooksreview.net/2014/01/i-see-you/" , Left 61086 )
 , ( "https://bugs.webkit.org/show_bug.cgi?id=27413" , Left 61087 )
+, ( "https://bugzilla.mozilla.org/show_bug.cgi?id=479829"
+  , Left 61087
+  )
 , ( "https://bugzilla.mozilla.org/show_bug.cgi?id=500293"
   , Left 61087
   )
@@ -7481,6 +7490,9 @@
 , ( "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver"
   , Left 61087
   )
+, ( "https://developer.mozilla.org/en-US/docs/Web/API/Popover_API"
+  , Left 61087
+  )
 , ( "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/OpenType_fonts_guide"
   , Left 61087
   )
@@ -7508,6 +7520,15 @@
 , ( "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table"
   , Left 61087
   )
+, ( "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details"
+  , Left 61087
+  )
+, ( "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Accept"
+  , Left 61087
+  )
 , ( "https://developer.mozilla.org/en-US/docs/Web/MathML/Element/mfrac"
   , Left 61087
   )
@@ -7519,6 +7540,9 @@
   )
 , ( "https://dfan.org/blog/2013/07/07/mnemosyne-part-3/"
   , Left 61086
+  )
+, ( "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+  , Left 61087
   )
 , ( "https://digitalcommons.lib.uconn.edu/dissertations/AAI3464319/"
   , Left 61086
@@ -7541,6 +7565,7 @@
 , ( "https://dl.dropboxusercontent.com/u/182368464/2013-couzinfrankel-mice.pdf"
   , Left 61080
   )
+, ( "https://docs.cursor.com/context/rules" , Left 61087 )
 , ( "https://dune.fandom.com/wiki/Distrans" , Left 61086 )
 , ( "https://eatlab.nl/publikaties/Houben%20et%20al%20Psychological%20Science.11.pdf"
   , Left 61086
@@ -7554,6 +7579,9 @@
   )
 , ( "https://edwardtufte.github.io/tufte-css/#sidenotes"
   , Left 61080
+  )
+, ( "https://ember-energy.org/latest-insights/global-electricity-review-2025/"
+  , Left 61087
   )
 , ( "https://empiria.io/blog/remembering-r-with-spaced-repetition/"
   , Left 61086
@@ -7697,6 +7725,7 @@
 , ( "https://github.com/gorhill/uBlock" , Left 61086 )
 , ( "https://github.com/gwern" , Left 61086 )
 , ( "https://github.com/hiAndrewQuinn/resorter" , Left 61086 )
+, ( "https://github.com/holman/spark" , Left 61087 )
 , ( "https://github.com/jaspervdj/Hakyll/" , Left 61080 )
 , ( "https://github.com/jbangert/trapcc#readme" , Left 61080 )
 , ( "https://github.com/jgm/citeproc" , Left 61087 )
@@ -7704,6 +7733,7 @@
 , ( "https://github.com/jgm/gitit/blob/master/plugins/Interwiki.hs"
   , Left 61080
   )
+, ( "https://github.com/jgm/pandoc/issues/10077" , Left 61087 )
 , ( "https://github.com/jgm/pandoc/issues/684" , Left 61087 )
 , ( "https://github.com/jgm/skylighting" , Left 61080 )
 , ( "https://github.com/jingkaihe/matchlock" , Left 61080 )
@@ -7713,7 +7743,9 @@
 , ( "https://github.com/localgpt-app/localgpt" , Left 61080 )
 , ( "https://github.com/max-niederman/fullrank" , Left 61086 )
 , ( "https://github.com/microsoft/litebox" , Left 61080 )
+, ( "https://github.com/mkaz/termgraph" , Left 61087 )
 , ( "https://github.com/mnater/Hyphenopoly" , Left 61087 )
+, ( "https://github.com/ndmitchell/hlint" , Left 61087 )
 , ( "https://github.com/nxskok/btstan/blob/master/R/btstan.R"
   , Left 61086
   )
@@ -8168,9 +8200,15 @@
 , ( "https://openai.com/blog/chatgpt/" , Left 61080 )
 , ( "https://openai.com/blog/openai-api/" , Left 61080 )
 , ( "https://openai.com/index/clip/" , Left 61080 )
+, ( "https://openai.com/index/dall-e-3/" , Left 61087 )
 , ( "https://openai.com/index/dall-e/" , Left 61086 )
 , ( "https://openai.com/index/gpt-4-research/" , Left 61087 )
+, ( "https://openai.com/index/hello-gpt-4o/" , Left 61087 )
 , ( "https://openai.com/index/introducing-chatgpt-pro/"
+  , Left 61087
+  )
+, ( "https://openai.com/index/introducing-gpt-4-5/" , Left 61087 )
+, ( "https://openai.com/research/language-unsupervised"
   , Left 61087
   )
 , ( "https://osf.io/preprints/psyarxiv/dnr9s/" , Left 61080 )
@@ -8524,6 +8562,7 @@
 , ( "https://users.ece.utexas.edu/~adnan/pop-05/lampson-system-design.pdf"
   , Left 61086
   )
+, ( "https://validator.w3.org/" , Left 61087 )
 , ( "https://vanemden.wordpress.com/2009/01/01/ventilated-prose/"
   , Left 61080
   )
@@ -8924,6 +8963,9 @@
 , ( "https://www.bilibili.com/video/av92353922?from=search&seid=17908897468074474697"
   , Left 59618
   )
+, ( "https://www.bls.gov/data/inflation_calculator.htm"
+  , Left 61087
+  )
 , ( "https://www.bls.gov/opub/mlr/2016/article/the-life-of-american-workers-in-1915.htm"
   , Left 61086
   )
@@ -9040,6 +9082,9 @@
 , ( "https://www.globethesis.com/?t=2155330335456903"
   , Left 61086
   )
+, ( "https://www.gnu.org/software/emacs/manual/html_node/emacs/Parentheses.html"
+  , Left 61087
+  )
 , ( "https://www.goodreads.com/review/show/369875300"
   , Left 61080
   )
@@ -9056,6 +9101,9 @@
   , Left 61086
   )
 , ( "https://www.google.com/about/company/history/" , Left 61080 )
+, ( "https://www.gov.uk/government/topical-events/ai-safety-summit-2023"
+  , Left 61087
+  )
 , ( "https://www.greaterwrong.com/" , Left 61080 )
 , ( "https://www.greig.cc/journal/2013/1/what-does-a-hacker-news-traffic-spike-look-like"
   , Left 61086
@@ -9135,6 +9183,9 @@
   )
 , ( "https://www.lesswrong.com/posts/4sAsygakd4oCpbEKs/lesswrong-help-desk-free-paper-downloads-and-more-2014"
   , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/5GnwjxbL3SQ7gjRn6/open-thread-july-16-22-2013#gFRKkcyXDTiKkug56"
+  , Left 61087
   )
 , ( "https://www.lesswrong.com/posts/5vogC4eJ4gXixX2KJ/should-i-believe-what-the-siai-claims#Mich92awM4J2htpqp"
   , Left 61086
@@ -9303,6 +9354,9 @@
   )
 , ( "https://www.lesswrong.com/posts/eKFHNmCcmuogQifQN/vulnerable-cyborgs-learning-to-live-with-our-dragons-mark"
   , Left 61086
+  )
+, ( "https://www.lesswrong.com/posts/eZa37pZtxsQirE84d/please-do-not-use-ai-to-write-for-you?commentId=atnhgZqDZC8Mef6LM"
+  , Left 61087
   )
 , ( "https://www.lesswrong.com/posts/evyBmPw9ZnzmoFmP6/experiment-a-good-researcher-is-hard-to-find"
   , Left 61086
@@ -9626,6 +9680,9 @@
 , ( "https://www.rand.org/content/dam/rand/pubs/monographs/2011/RAND_MG1120.pdf"
   , Left 61086
   )
+, ( "https://www.readthesequences.com/An-Intuitive-Explanation-Of-Bayess-Theorem"
+  , Left 61087
+  )
 , ( "https://www.reddit.com/r/Anki/comments/5ixzzx/anki_for_babies/"
   , Left 61086
   )
@@ -9707,6 +9764,7 @@
   , Left 61086
   )
 , ( "https://www.scss.tcd.ie/~clearm/bitcoin.html" , Left 61080 )
+, ( "https://www.shellcheck.net/" , Left 61087 )
 , ( "https://www.shortcutfoo.com/blog/introducing-interval-training-for-shortcuts"
   , Left 61086
   )
@@ -9750,10 +9808,14 @@
 , ( "https://www.trendingbuffalo.com/life/uncle-steves-buffalo/everything-from-1991-radio-shack-ad-now/"
   , Left 61086
   )
+, ( "https://www.tug.org/TUGboat/tb12-1/tb31hara.pdf#page=8"
+  , Left 61087
+  )
 , ( "https://www.uclalawreview.org/pdf/57-6-3.pdf" , Left 61086 )
 , ( "https://www.usenix.org/system/files/conference/usenixsecurity14/sec14-paper-bonneau.pdf"
   , Left 61086
   )
+, ( "https://www.vetta.org/2009/12/the-teenies/" , Left 61087 )
 , ( "https://www.w3.org/TR/2011/WD-html5-20110405/links.html#conversations"
   , Left 61087
   )
@@ -9838,7 +9900,7 @@
 , ( "markdown-lint.sh" , Left 61080 )
 , ( "otaku" , Left 61086 )
 , ( "otaku-essay" , Left 61086 )
-, ( "plastination" , Left 61087 )
+, ( "plastination" , Left 61088 )
 , ( "sicp/Chapter%201.1" , Left 61080 )
 , ( "sicp/Chapter%201.2" , Left 61080 )
 , ( "sicp/Chapter%201.3" , Left 61080 )
