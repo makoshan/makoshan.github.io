@@ -11,7 +11,7 @@ belief: log
 `Resources on Progress Studies 687e0018ae0782d396020152a609cb60.md`。
 
 
-# 为什么要做进步研究
+## 为什么要做进步研究
 
 过去几个世纪的人类进步，
 尤其是科学、技术、工业和经济进步，
@@ -29,7 +29,7 @@ belief: log
 正是这种默认悲观。
 
 
-# Progress Studies 101
+## Progress Studies 101
 
 ## 一、为什么要关心进步
 
@@ -104,7 +104,7 @@ Heike 这组更偏“行动导向”。
 共同特征是强调问题可解，
 并且给出可落地的制度或工程改造路径。
 
-# 议题地图：Cause Areas
+## 议题地图：Cause Areas
 
 原文把议题分成三层。
 
@@ -247,7 +247,7 @@ Heike 这组更偏“行动导向”。
 [Good Science Project](https://goodscienceproject.org/)、
 [Arcadia Science](https://www.arcadiascience.com/)。
 
-# Select Progress Bibliography（精选）
+## Select Progress Bibliography（精选）
 
 导出稿中书单图片较多，
 但核心文字条目可稳定提取为以下七本。
@@ -264,7 +264,7 @@ Heike 这组更偏“行动导向”。
 [Enlightenment Now: A summary](https://rootsofprogress.org/enlightenment-now)、
 [Progress, stagnation, and flying cars](https://rootsofprogress.org/where-is-my-flying-car)。
 
-# 进步运动与组织网络
+## 进步运动与组织网络
 
 原文对 “Progress movement” 的定义很有代表性：
 它是跨立场、跨机构的合作网络，

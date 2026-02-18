@@ -7,11 +7,13 @@ status: finished
 belief: log
 ...
 
-这篇文章整理自 [Progress, stagnation, and flying cars](https://blog.rootsofprogress.org/where-is-my-flying-car)。
+这篇文章整理自 [Progress, stagnation, and flying cars](https://blog.rootsofprogress.org/where-is-my-flying-car)。[^source-flying-car]
 作者：Jason Crawford · 2020-11-06 · 约 13 分钟阅读
 为满足你的要求，本文保留了原文图片与链接。
 
-# 进步、停滞与飞行汽车
+[^source-flying-car]: 原文作者与发布日期来自 Roots of Progress 对应页面；本文图片已本地化到 `/images/blog/2026/where-is-my-flying-car/`。
+
+## 进步、停滞与飞行汽车
 
 设想你把手伸进一个万物相反的镜像宇宙，
 拿出一本恰好与 [Robert Gordon 的《The Rise and Fall of American Growth》](https://blog.rootsofprogress.org/summary-the-rise-and-fall-of-american-growth) 完全反向的书。
@@ -158,7 +160,7 @@ Hall 甚至估计，
 他把“总能耗长期年增约 7%”这一历史趋势称为 “Henry Adams 曲线”。
 20 世纪后期，我们偏离了它：
 
-![图表](https://blog.rootsofprogress.org/img/wimfc-henry-adams-curve.png)
+![图表](/images/blog/2026/where-is-my-flying-car/wimfc-henry-adams-curve.png)
 
 一些技术乐观主义者（如 Andy McAfee）
 会把资源曲线趋平甚至见顶解读为“[more from less](https://www.amazon.com/More-Less-Surprising-Learned-Resources-ebook/dp/B07P5GPMTY?tag=jasocraw-20)”（以更少得到更多）。
@@ -311,12 +313,12 @@ Hall 引述一则留言：
 核能承受的监管负担更重。
 他据此解释美国核电站成本长期抬升：
 
-![图表](https://blog.rootsofprogress.org/img/wimfc-nuclear-costs.png)
+![图表](/images/blog/2026/where-is-my-flying-car/wimfc-nuclear-costs.png)
 
 监管不仅带来直接摩擦，
 还会持续抽走高端人力：
 
-![图表](https://blog.rootsofprogress.org/img/wimfc-lawyers.png)
+![图表](/images/blog/2026/where-is-my-flying-car/wimfc-lawyers.png)
 
 这种抽走的规模有多大？
 Hall 引用研究称，

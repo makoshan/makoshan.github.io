@@ -14,7 +14,7 @@ belief: log
 
 [^meta]: 日期来自页面 `application/ld+json` 的 `datePublished` 与 `dateModified` 字段。
 
-# 科学进步不是直线，而是断裂
+## 科学进步不是直线，而是断裂
 
 我们常把科学进步想象成“持续累加”。
 好像每个新发现都平滑地叠加在旧知识上。

@@ -13,7 +13,7 @@ belief: log
 
 [^meta]: 日期来自页面 `application/ld+json` 的 `datePublished` 与 `dateModified` 字段。
 
-# 决策的分水岭
+## 决策的分水岭
 
 你的人生轨迹，很大程度上由少数高杠杆决策决定。
 问题是，几乎没人系统教我们“如何稳定地做出高质量决策”。

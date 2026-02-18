@@ -15,7 +15,7 @@ css-extension: dropcaps-kanzlei
 > 它不仅是理论的阐述，更是行动的指南，旨在帮助任何希望自己的时间和资源能帮助尽可能多的人的个体，将善意转化为可衡量的成果。
 </div>
 
-# 引言：有效利他主义
+## 引言：有效利他主义
 
 **有效利他主义（Effective Altruism, EA）** 是一个持续进行的项目，旨在寻找最佳的行善方式，并将其付诸实践。
 
@@ -26,7 +26,7 @@ css-extension: dropcaps-kanzlei
 
 ---
 
-# 1. 效能思维 (The effectiveness mindset)
+## 1. 效能思维 (The effectiveness mindset)
 
 如果你想用你的时间或金钱去帮助他人，你可能希望能帮助到尽可能多的人。
 但你的时间和资源是有限的，因此，如果你专注于那些能帮助更多人而非更少人的干预措施，你就能产生更大的影响。
@@ -61,7 +61,7 @@ css-extension: dropcaps-kanzlei
 
 ---
 
-# 2. 影响力的差异 (Differences in impact)
+## 2. 影响力的差异 (Differences in impact)
 
 全球仍有约七亿人生活在贫困之中，主要集中在低收入国家。
 帮助他们的努力——通过政策改革、现金转移或提供医疗服务——可以极其有效。
@@ -97,7 +97,7 @@ css-extension: dropcaps-kanzlei
 
 ---
 
-# 3. 激进同理心 (Radical Empathy)
+## 3. 激进同理心 (Radical Empathy)
 
 我们是否应该关心非人类动物？
 我们将展示为何公正地关怀是重要的，而不是忽视那些奇怪的话题或不寻常的受益者。
@@ -124,7 +124,7 @@ css-extension: dropcaps-kanzlei
 
 ---
 
-# 4. 我们的最后一个世纪？ (Our final century?)
+## 4. 我们的最后一个世纪？ (Our final century?)
 
 人类似乎面临着**生存风险（existential risks）**：一个我们可能摧毁自身长远潜力的机会。
 我们将审视为何生存风险可能是一个道德优先事项，并探讨为何它们被社会如此忽视。
@@ -156,7 +156,7 @@ css-extension: dropcaps-kanzlei
 
 ---
 
-# 5. 未来可能怎样？以及为何要关心？ (What could the future hold? And why care?)
+## 5. 未来可能怎样？以及为何要关心？ (What could the future hold? And why care?)
 
 “**长期主义（Longtermism）**”是这样一种观点：改善长远未来是我们时代的一个关键道德优先事项。
 这可以支持我们在上一节中讨论的致力于减少某些灭绝风险的论点。
@@ -187,7 +187,7 @@ css-extension: dropcaps-kanzlei
 
 ---
 
-# 6. 来自人工智能的风险 (Risks from artificial intelligence (AI))
+## 6. 来自人工智能的风险 (Risks from artificial intelligence (AI))
 
 变革性人工智能很可能在本世纪被开发出来。
 如果成真，它可能会开始为我们做出许多重大决策，并迅速加速经济增长等变化。
@@ -214,7 +214,7 @@ css-extension: dropcaps-kanzlei
 
 ---
 
-# 7. 你的看法是？ (What do you think?)
+## 7. 你的看法是？ (What do you think?)
 
 独立思考并反思您在前几周听到的论点非常重要：您可能会发现自己不同意的地方，或推理中的错误。
 即使您没有，如果您思考过这些想法的最薄弱之处，您也可能会更深刻地理解它们。
@@ -243,7 +243,7 @@ css-extension: dropcaps-kanzlei
 
 ---
 
-# 8. 付诸实践 (Putting it into practice)
+## 8. 付诸实践 (Putting it into practice)
 
 在最后这一节，我们希望能帮助您将有效利他主义的原则应用到您自己的生活和职业中。
 
@@ -273,6 +273,6 @@ css-extension: dropcaps-kanzlei
 
 ---
 
-# 参考文献
+## 参考文献
 
 [1] Effective Altruism Forum. (2024). *The Introduction to Effective Altruism Handbook*. [https://forum.effectivealtruism.org/handbook](https://forum.effectivealtruism.org/handbook)

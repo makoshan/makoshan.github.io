@@ -14,7 +14,7 @@ belief: log
 
 [^meta]: 发布与更新日期来自页面内 `application/ld+json` 的 `datePublished` 与 `dateModified` 字段。
 
-# 加速学习：从“知道”到“会用”
+## 加速学习：从“知道”到“会用”
 
 ## 什么是学习
 

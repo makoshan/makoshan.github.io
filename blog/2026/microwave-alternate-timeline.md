@@ -25,7 +25,7 @@ thumbnail-css: "outline"
 
 我们都知道，技术进步的行军路线，最适合用这张来自社交网络的梗图来概括：
 
-![](/images/blog/2016/microwave-alternate-timeline/tech-tree-meme.jpg)
+![技术进步的“科技树分叉”梗图](/images/blog/2016/microwave-alternate-timeline/tech-tree-meme.jpg)
 
 发明家不断提出令人兴奋的新发明，每一个都可能“永远改变一切”。但真正成为文明长期组成部分的只有少数，大多数则从集体记忆中消失。不过，在彻底熄灭之前，那些技术树的分叉会留下些微痕迹：过度乐观的科幻故事、过时的科普动画，以及偶尔一些曾经短暂量产、随后悄然停产的古怪配件。
 
@@ -53,7 +53,7 @@ Marie T. Smith 的 *Microwave Cooking for One* 是一本 1980 年代的老食谱
 
 第一：这本书出版于 1985 年。对照一下微波炉普及率的 S 曲线：
 
-![](/images/blog/2016/microwave-alternate-timeline/microwave-adoption-curve.jpg)
+![美国家庭微波炉普及率 S 曲线](/images/blog/2016/microwave-alternate-timeline/microwave-adoption-curve.jpg)
 
 来源：[纽约时报专栏](https://www.nytimes.com/2008/02/10/opinion/10cox.html?ex=1360299600&en=9ef4be7de32e4b53&ei=5090)
 
