@@ -1249,6 +1249,13 @@ p.empty-graf {
     text-indent: 0;
 }
 
+/*  Add explicit spacing between consecutive paragraphs (no first-line
+    indentation), similar to modern editorial layouts.
+ */
+.markdownBody p.block + p.block {
+    margin-top: 1.25em;
+}
+
 /*  Prevent inheritance of indentation property.
  */
 .markdownBody p * {
